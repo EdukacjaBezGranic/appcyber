@@ -1146,6 +1146,12 @@ function timerBig() {
 function closeTimerBig() {
   document.getElementById('timerFull').classList.remove('active');
 }
+function openAgenda() {
+  document.getElementById('agendaFull')?.classList.add('active');
+}
+function closeAgenda() {
+  document.getElementById('agendaFull')?.classList.remove('active');
+}
 function renderQrImage(containerId, src) {
   const img = document.createElement('img');
   const container = document.getElementById(containerId);
@@ -1309,6 +1315,8 @@ function bindUiActions() {
     if (action === 'timer-reset') button.addEventListener('click', timerReset);
     if (action === 'timer-big') button.addEventListener('click', timerBig);
     if (action === 'timer-close') button.addEventListener('click', closeTimerBig);
+    if (action === 'agenda-open') button.addEventListener('click', openAgenda);
+    if (action === 'agenda-close') button.addEventListener('click', closeAgenda);
     if (action === 'check-version') button.addEventListener('click', checkForNewVersion);
   });
   document.getElementById('exerciseScreen')?.addEventListener('click', event => {
@@ -1325,6 +1333,10 @@ document.addEventListener('keydown', e => {
     }
     if (document.getElementById('timerFull').classList.contains('active')) {
       closeTimerBig();
+      return;
+    }
+    if (document.getElementById('agendaFull').classList.contains('active')) {
+      closeAgenda();
       return;
     }
     if (document.getElementById('qrFull').classList.contains('active')) {
