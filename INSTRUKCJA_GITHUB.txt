@@ -1,0 +1,15 @@
+Portal szkolen - paczka GitHub Pages
+
+Jak wrzucic:
+1. Wejdz do repozytorium GitHub.
+2. Wrzuc cala zawartosc tej paczki do glownego katalogu repozytorium.
+3. W GitHub Pages ustaw publikacje z galezi main oraz katalogu root.
+4. Strona glowna otworzy portal szkolen.
+5. Kafelek "AI w pracy urzedu" prowadzi do panelu AI w folderze panel-ai-ex7-probe.
+
+Zawartosc:
+- index.html - portal glowny szkolen,
+- assets/portal.css - styl portalu,
+- grafiki/ - obrazy portalu,
+- panel-ai-ex7-probe/ - gotowy panel szkolenia AI,
+- .nojekyll - plik pomocniczy dla GitHub Pages.
