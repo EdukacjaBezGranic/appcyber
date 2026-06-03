@@ -1134,6 +1134,27 @@ function canvasToJpegBytes(canvas) {
   return { bytes: bytes, width: canvas.width, height: canvas.height };
 }
 
+function canvasToRgbBytes(canvas) {
+  var ctx = canvas.getContext("2d");
+  var data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  var bytes = new Uint8Array(canvas.width * canvas.height * 3);
+  var target = 0;
+  for (var source = 0; source < data.length; source += 4) {
+    var alpha = data[source + 3] / 255;
+    bytes[target++] = Math.round(data[source] * alpha + 255 * (1 - alpha));
+    bytes[target++] = Math.round(data[source + 1] * alpha + 255 * (1 - alpha));
+    bytes[target++] = Math.round(data[source + 2] * alpha + 255 * (1 - alpha));
+  }
+  return { bytes: bytes, width: canvas.width, height: canvas.height };
+}
+
+async function deflatePdfBytes(bytes) {
+  if (!("CompressionStream" in window)) return null;
+  var stream = new Blob([bytes]).stream().pipeThrough(new CompressionStream("deflate"));
+  var buffer = await new Response(stream).arrayBuffer();
+  return new Uint8Array(buffer);
+}
+
 function textBytes(text) {
   return new TextEncoder().encode(text);
 }
@@ -1234,6 +1255,82 @@ function buildImagePdfWithPageSize(jpegs, pageWidthPt, pageHeightPt) {
     addObject([
       "<< /Type /XObject /Subtype /Image /Width " + jpeg.width + " /Height " + jpeg.height + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + jpeg.bytes.length + " >>\nstream\n",
       jpeg.bytes,
+      "\nendstream\n"
+    ]);
+
+    var content = "q\n" + pdfNumber(pageW) + " 0 0 " + pdfNumber(pageH) + " 0 0 cm\n/Im" + (idx + 1) + " Do\nQ\n";
+    addObject(["<< /Length " + textBytes(content).length + " >>\nstream\n" + content + "endstream\n"]);
+  });
+
+  var kids = pageObjects.map(function(n) { return n + " 0 R"; }).join(" ");
+  objects[1] = ["<< /Type /Pages /Kids [" + kids + "] /Count " + pageObjects.length + " >>\n"];
+
+  var chunks = [textBytes("%PDF-1.4\n%\xE2\xE3\xCF\xD3\n")];
+  var offsets = [0];
+  var currentOffset = chunks[0].length;
+
+  objects.forEach(function(parts, index) {
+    var objectNumber = index + 1;
+    offsets[objectNumber] = currentOffset;
+    var objectChunks = [textBytes(objectNumber + " 0 obj\n")];
+    parts.forEach(function(part) {
+      objectChunks.push(typeof part === "string" ? textBytes(part) : part);
+    });
+    objectChunks.push(textBytes("endobj\n"));
+    var objectBytes = concatBytes(objectChunks);
+    chunks.push(objectBytes);
+    currentOffset += objectBytes.length;
+  });
+
+  var xrefOffset = currentOffset;
+  chunks.push(textBytes("xref\n0 " + (objects.length + 1) + "\n0000000000 65535 f \n"));
+  for (var x = 1; x <= objects.length; x++) {
+    chunks.push(textBytes(String(offsets[x] || 0).padStart(10, "0") + " 00000 n \n"));
+  }
+  chunks.push(textBytes("trailer\n<< /Size " + (objects.length + 1) + " /Root 1 0 R >>\nstartxref\n" + xrefOffset + "\n%%EOF"));
+  return new Blob([concatBytes(chunks)], { type: "application/pdf" });
+}
+
+async function buildRgbImagePdf(canvases, pageWidthPt, pageHeightPt) {
+  var objects = [];
+  var pageObjects = [];
+  var pageW = Number(pageWidthPt || 595.28);
+  var pageH = Number(pageHeightPt || 841.89);
+  var images = [];
+
+  function pdfNumber(value) {
+    return Number(value).toFixed(2).replace(/\.?0+$/, "");
+  }
+
+  function addObject(parts) {
+    objects.push(parts);
+    return objects.length;
+  }
+
+  for (var i = 0; i < canvases.length; i++) {
+    var rgb = canvasToRgbBytes(canvases[i]);
+    var compressed = await deflatePdfBytes(rgb.bytes);
+    images.push({
+      bytes: compressed || rgb.bytes,
+      width: rgb.width,
+      height: rgb.height,
+      filter: compressed ? " /Filter /FlateDecode" : ""
+    });
+  }
+
+  addObject(["<< /Type /Catalog /Pages 2 0 R >>\n"]);
+  addObject([""]);
+
+  images.forEach(function(image, idx) {
+    var pageObj = objects.length + 1;
+    var imageObj = pageObj + 1;
+    var contentObj = pageObj + 2;
+    pageObjects.push(pageObj);
+
+    addObject(["<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + pdfNumber(pageW) + " " + pdfNumber(pageH) + "] /Resources << /ProcSet [/PDF /ImageC] /XObject << /Im" + (idx + 1) + " " + imageObj + " 0 R >> >> >> /Contents " + contentObj + " 0 R >>\n"]);
+    addObject([
+      "<< /Type /XObject /Subtype /Image /Width " + image.width + " /Height " + image.height + " /ColorSpace /DeviceRGB /BitsPerComponent 8" + image.filter + " /Length " + image.bytes.length + " >>\nstream\n",
+      image.bytes,
       "\nendstream\n"
     ]);
 
@@ -1373,6 +1470,10 @@ function saveLandscapePdfFile(fileName, jpegs) {
   downloadBlob(fileName, buildImagePdfWithPageSize(jpegs, 841.89, 595.28));
 }
 
+async function saveRgbPdfFile(fileName, canvases) {
+  downloadBlob(fileName, await buildRgbImagePdf(canvases, 595.28, 841.89));
+}
+
 async function generateCertificatePDF(separate) {
   try {
     var people = getPeople(false);
@@ -1391,11 +1492,11 @@ async function generateCertificatePDF(separate) {
       for (var i = 0; i < people.length; i++) {
         var c1 = await drawCertificatePageOne(people[i], i);
         var c2 = await drawCertificatePageTwo();
-        savePdfFile(
+        await saveRgbPdfFile(
           padNumber(i + 1, 3) + "_" + cleanForFileName(people[i]) + "_" + training + ".pdf",
-          [canvasToJpegBytes(c1), canvasToJpegBytes(c2)]
+          [c1, c2]
         );
-        await new Promise(function(resolve) { setTimeout(resolve, hasNativeSaveBridge() ? 700 : 180); });
+        await new Promise(function(resolve) { setTimeout(resolve, hasNativeSaveBridge() ? 700 : 260); });
       }
     } else {
       var pages = [];
