@@ -1668,9 +1668,17 @@ if (pdfPrintBtn) {
 }
 
 var pdfSeparateBtn = document.getElementById("btnPrintSeparate");
-if (pdfSeparateBtn && typeof window.__generatorSaveSeparatePDF !== "function") {
-  pdfSeparateBtn.addEventListener("click", function() {
-    alert("Ten przycisk obsługuje natywna część aplikacji. Jeżeli nie ruszy, zamknij i uruchom aplikację ponownie.");
+if (pdfSeparateBtn) {
+  pdfSeparateBtn.addEventListener("click", async function() {
+    pdfSeparateBtn.disabled = true;
+    var originalLabel = pdfSeparateBtn.textContent;
+    pdfSeparateBtn.textContent = "Generuję osobne PDF...";
+    try {
+      await generateCertificatePDF(true);
+    } finally {
+      pdfSeparateBtn.disabled = false;
+      pdfSeparateBtn.textContent = originalLabel;
+    }
   });
 }
 
