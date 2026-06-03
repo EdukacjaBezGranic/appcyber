@@ -14,8 +14,7 @@ Statyczny panel do prowadzenia szkolenia z praktycznego wykorzystania AI. Zawier
 - `assets/exercise-modern-07.js` - trzeci próbny układ ćwiczenia 7: wizualny pulpit pracy, mapa źródeł, oś procesu, rozwijane źródła i dwa warianty druku.
 - `assets/exercise-visual-all.js` - wspólna warstwa wizualnych pulpitów dla ćwiczeń, z mapą pracy, efektami, decyzjami i materiałami źródłowymi.
 - `assets/training-banner.png` - szeroki baner graficzny w nagłówku panelu.
-- `downloads/GeneratorZaswiadczenOfflineV27.zip` - generator zaświadczeń offline do pobrania z końca panelu.
-- `downloads/GeneratorZaswiadczenOfflineV27-Windows.zip` - wersja generatora dla Windows uruchamiana lokalnie w przeglądarce.
+- `../generator-zaswiadczen-html/` - uniwersalny generator zaświadczeń HTML działający w przeglądarce.
 - `prompts/` - osobne strony z gotowymi promptami.
 - `assets/prompt.css` i `assets/prompt.js` - wspólne pliki dla stron promptów.
 - `version.json` - aktualny numer wersji używany przez przycisk sprawdzania aktualizacji w stopce.
@@ -40,7 +39,7 @@ Statyczny panel do prowadzenia szkolenia z praktycznego wykorzystania AI. Zawier
 - Tytuły głównych sekcji mają własne kolory, a kafelki pozostają spokojne w stanie spoczynku.
 - Po najechaniu kursorem kafelki dostają kolorowy fade, lekkie uniesienie, świetlisty przebieg i kolorowy przycisk.
 - Wnętrza ćwiczeń mają subtelne pastelowe akcenty w zakładkach, kartach, sekcjach materiałów i scenariuszach prowadzącego.
-- Na końcu panelu, za timerem, znajduje się generator zaświadczeń offline V27 do pobrania w wersji macOS i Windows.
+- Na końcu panelu, za timerem, znajduje się jedna wersja generatora zaświadczeń HTML działająca w przeglądarce na różnych komputerach.
 - W oknie ćwiczenia pojawia się krótka sekcja `Narzędzia do wykonania ćwiczenia`, dobrana do typu zadania.
 - Pierwsze ćwiczenie ma osobno uporządkowaną treść dla uczestników, widok pełnoekranowy i scenariusz prowadzącego.
 - Drugie ćwiczenie ma osobno uporządkowaną treść dla uczestników, widok pełnoekranowy, wydruk i scenariusz prowadzącego.

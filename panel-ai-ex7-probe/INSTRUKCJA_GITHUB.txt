@@ -1,122 +1,42 @@
 AKTUALNA PACZKA PANELU AI
 
-Wersja: 2026-06-02 / 25 cwiczen / kolory sekcji i szare tla cwiczen / 20260602-06
+Wersja: panel szkolenia AI z wizualnymi cwiczeniami, agenda, timerem, QR i generatorem zaswiadczen HTML.
 
 Jak wgrac na GitHub:
 
-1. Rozpakuj ZIP na komputerze.
-2. Na GitHubie wejdz do repozytorium.
-3. Wgraj ZAWARTOSC rozpakowanego folderu, nie sam plik ZIP.
-4. Plik index.html musi lezec w glownym katalogu repozytorium.
-5. Katalogi assets i prompts tez musza byc w glownym katalogu repozytorium.
-   Katalog downloads tez musi byc wgrany, bo zawiera generator zaswiadczen.
-6. Nadpisz stare pliki, szczegolnie:
-   - index.html
-   - assets/app.js
-   - assets/exercises.js
-   - assets/exercise-variants-advanced.js
-   - assets/exercise-overrides-03-04.js
-   - assets/exercise-overrides-05-09.js
-   - assets/exercise-modern-07.js
-   - assets/exercise-visual-all.js
-   - assets/app.css
-   - assets/training-banner.png
-   - downloads/GeneratorZaswiadczenOfflineV27.zip
-   - downloads/GeneratorZaswiadczenOfflineV27-Windows.zip
-   - version.json
-   - manifest.json
-   - reset-cache.html
+1. Wgraj zawartosc calej paczki portalu szkolen do glownego katalogu repozytorium.
+2. Plik index.html portalu musi lezec w katalogu glownym repozytorium.
+3. Folder panel-ai-ex7-probe musi zostac wgrany razem z folderami:
+   - assets
+   - prompts
+   - training-panels
+   - generator-zaswiadczen-html
+4. Generator zaswiadczen jest teraz jedna wersja HTML uruchamiana w przegladarce.
+5. Nie trzeba wybierac osobnej wersji na macOS albo Windows.
 
 Po publikacji:
 
-1. Otworz strone:
-   https://ADRES-TWOJEJ-STRONY/reset-cache.html
-2. Wroc do strony glownej.
-3. Odswiez mocno:
+1. Otworz strone GitHub Pages.
+2. Jezeli przegladarka pokazuje stara wersje, odswiez mocno:
    - Mac: Cmd + Shift + R
    - Windows: Ctrl + F5
+3. W panelu AI mozna tez uzyc przycisku:
+   Sprawdz nowsza wersje
 
 Jak poznac, ze jest aktualna wersja:
 
-- Na dole panelu powinien byc tekst:
-  Panel szkolenia AI. Wersja GitHub 2026-06-02 / 25 cwiczen / baner bez ramki i subtelne kolory.
-
-- Na gorze strony powinien byc szeroki baner graficzny zamiast osobnego tytulu i malego logo.
-
-- Baner nie powinien miec dodatkowej ramki, obramowania ani cienia.
-
-- Baner powinien byc statyczny i nie powinien poruszac sie przy przewijaniu strony.
-
-- Tytuly glownych sekcji powinny miec kolorowe akcenty.
-
-- Kafelki na stronie glownej powinny byc spokojne w stanie spoczynku i kolorowe po najechaniu kursorem.
-
-- Po otwarciu cwiczenia sekcje, zakladki, karty materialow i elementy scenariusza powinny miec delikatne pastelowe akcenty.
-
-- Obok tekstu w stopce powinien byc maly przycisk:
-  Sprawdz nowsza wersje
-
-- W sekcji cwiczen powinny byc nowe pozycje 5-9:
-  Informacja o naborze
-  Ankieta ewaluacyjna
-  Prezentacja ze zrodel
-  Formularz zapisow
-  Plakat na wydarzenie
-
-- Kafelki cwiczen powinny ozywiac sie kolorem po najechaniu kursorem.
-
-- Za sekcja Timer powinien byc kafelek:
-  Generator zaswiadczen offline V27
-
-- W sekcji generatora powinny byc dwa przyciski:
-  Pobierz na macOS
-  Pobierz na Windows
-
-- Cwiczenie 7 powinno miec nowy widok z zakladkami:
+- W portalu jest sekcja Generator zaswiadczen z jednym przyciskiem:
+  Otworz generator
+- W panelu AI, za timerem, jest ta sama jedna wersja generatora.
+- Nie ma juz dwoch osobnych przyciskow pobierania generatora na macOS i Windows.
+- W panelu AI jest przycisk powrotu do portalu szkolen.
+- W panelu AI jest przycisk Agenda szkolenia.
+- Cwiczenia otwieraja sie w ukladzie:
   Pulpit pracy
   Materialy zrodlowe
   Dla prowadzacego
+- Timer znajduje sie na dole glownej strony panelu.
 
-- Kazde cwiczenie powinno otwierac sie w ukladzie z zakladkami:
-  Pulpit pracy
-  Materialy zrodlowe
-  Dla prowadzacego
+Uwaga:
 
-- W pierwszej zakladce kazdego cwiczenia powinny byc widoczne elementy wizualne:
-  mapa pracy, kafle efektow, decyzje, kroki pracy i checklista.
-
-- W cwiczeniu 7 pelne teksty zrodlowe powinny byc widoczne w zakladce:
-  Materialy zrodlowe
-
-- W cwiczeniu 7 widok Pulpit pracy powinien miec elementy graficzne:
-  mape zrodel, kafle efektow, os pracy, krotkie decyzje projektowe i boczny panel.
-
-- W cwiczeniu 7 powinny byc dwa przyciski druku:
-  Drukuj dla uczestnika
-  Drukuj dla prowadzacego
-
-- Dawne cwiczenia plikowe sa teraz dalej na liscie, jako pozycje 22-25:
-  Dokument roboczy
-  Instrukcja TXT/Markdown
-  Arkusz zgloszen
-  Szkielet Google Slides
-
-- Po otwarciu cwiczenia powinien byc przycisk:
-  Drukuj
-
-- W cwiczeniu "Dobry i zly prompt" tryb pelnoekranowy powinien pokazywac rozbudowane zadanie dla uczestnikow, a nie stara krotka wersje.
-
-- Po otwarciu cwiczenia powinna byc widoczna sekcja:
-  Narzedzia do wykonania cwiczenia
-
-- W cwiczeniu 1 nie powinno byc przycisku:
-  Losuj
-
-- W cwiczeniu 2 nie powinno byc przycisku:
-  Losuj
-
-- Wydruk cwiczenia powinien miec czytelny wyglad karty pracy bez automatycznie dodawanego pustego miejsca na notatki.
-
-- Podzial stron w wydruku powinien wypadac na granicach sekcji, a nie w srodku przypadkowego akapitu.
-
-- W trybie ekranowym cwiczenia nie powinno byc timera. Timer powinien zostac tylko na dole glownej strony panelu.
+Projekt jest statyczny i nie wymaga procesu budowania. Wystarczy wgrac pliki na GitHub Pages.

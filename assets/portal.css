@@ -616,6 +616,10 @@ body {
   transition: transform .24s cubic-bezier(.2, .8, .2, 1), box-shadow .24s ease, border-color .2s ease;
 }
 
+.generator-card-wide {
+  grid-column: 1 / -1;
+}
+
 .generator-card::before {
   content: "";
   position: absolute;
@@ -743,6 +747,155 @@ body {
 
   .card-content {
     min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .wrap {
+    padding: 16px 12px 32px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 84px;
+    gap: 10px;
+    padding-bottom: 14px;
+  }
+
+  .hero-copy {
+    min-height: 128px;
+    padding: 16px;
+  }
+
+  .hero h1 {
+    max-width: 240px;
+    margin: 6px 0 8px;
+    font-size: clamp(27px, 7.5vw, 32px);
+    line-height: 1.04;
+  }
+
+  .hero h1 .title-sub {
+    margin-top: 3px;
+    font-size: .66em;
+  }
+
+  .hero p {
+    max-width: 260px;
+    font-size: 14px;
+    line-height: 1.38;
+  }
+
+  .hero-visual {
+    place-items: center;
+  }
+
+  .hero-visual img {
+    width: 82px;
+  }
+
+  .section {
+    margin-top: 18px;
+  }
+
+  .section h2 {
+    margin-bottom: 10px;
+    font-size: 21px;
+  }
+
+  .section h2::before {
+    height: 24px;
+  }
+
+  .training-grid,
+  .generator-section {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+  }
+
+  .image-cover {
+    min-height: 168px;
+    padding: 14px;
+  }
+
+  .image-cover span {
+    max-width: 250px;
+    font-size: 21px;
+  }
+
+  .card-content,
+  .generator-card,
+  .training-info-card {
+    padding: 15px;
+  }
+
+  .training-card h3,
+  .training-info-card h3,
+  .generator-card h3 {
+    font-size: 18px;
+  }
+
+  .training-info-card h3 {
+    font-size: clamp(22px, 7vw, 28px);
+  }
+
+  .training-info-card p {
+    font-size: 14px;
+  }
+
+  .info-copy {
+    gap: 10px;
+  }
+
+  .info-copy div {
+    padding: 11px 12px;
+  }
+
+  .info-points {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .info-points span,
+  .meta span {
+    font-size: 11px;
+  }
+
+  .brand-strip {
+    margin-top: 18px;
+  }
+
+  .brand-strip img {
+    border-radius: 6px;
+  }
+
+  .generator-card p,
+  .portal-lead {
+    font-size: 14px;
+    line-height: 1.48;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 70px;
+    gap: 8px;
+  }
+
+  .hero-copy {
+    padding: 14px;
+  }
+
+  .hero h1 {
+    max-width: 220px;
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 13.5px;
+  }
+
+  .hero-visual img {
+    width: 70px;
   }
 }
 

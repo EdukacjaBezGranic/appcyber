@@ -79,6 +79,15 @@ function arrangeTrainingGrid(selectedCard, info) {
   if (!trainingGrid || !selectedCard || !info) return;
 
   const otherCards = trainingCards.filter(card => card !== selectedCard);
+  const isMobile = window.matchMedia('(max-width: 980px)').matches;
+
+  if (isMobile) {
+    [selectedCard, info, ...otherCards].forEach(item => {
+      trainingGrid.appendChild(item);
+    });
+    return;
+  }
+
   const beforeCards = otherCards.slice(0, 3);
   const afterCards = otherCards.slice(3);
 
@@ -138,3 +147,8 @@ const defaultCard = trainingCards.find(card => card.classList.contains('is-selec
 if (defaultCard) {
   renderTrainingInfo(defaultCard.dataset.training, defaultCard);
 }
+
+window.addEventListener('resize', () => {
+  const selectedCard = trainingCards.find(card => card.classList.contains('is-selected')) || trainingCards[0];
+  if (selectedCard) arrangeTrainingGrid(selectedCard, trainingInfo);
+});
