@@ -71,6 +71,51 @@ const TRAININGS = {
   }
 };
 
+const ACCESS_PASSWORD = '2662WUP';
+const ACCESS_SESSION_KEY = 'portalTrainerAccessGranted';
+
+function hasPortalAccess() {
+  try {
+    return sessionStorage.getItem(ACCESS_SESSION_KEY) === '1';
+  } catch (error) {
+    return false;
+  }
+}
+
+function rememberPortalAccess() {
+  try {
+    sessionStorage.setItem(ACCESS_SESSION_KEY, '1');
+  } catch (error) {
+    // Bramka nadal działa, tylko bez zapamiętywania w tej karcie.
+  }
+}
+
+function requestPortalAccess(label) {
+  if (hasPortalAccess()) return true;
+
+  const password = window.prompt(`Podaj hasło dostępu do ${label || 'tej sekcji'}:`);
+  if (password === null) return false;
+
+  if (password.trim() === ACCESS_PASSWORD) {
+    rememberPortalAccess();
+    return true;
+  }
+
+  window.alert('Nieprawidłowe hasło.');
+  return false;
+}
+
+document.addEventListener('click', event => {
+  const protectedLink = event.target.closest('a[data-access-protected]');
+  if (!protectedLink) return;
+
+  const allowed = requestPortalAccess(protectedLink.dataset.accessLabel);
+  if (!allowed) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+});
+
 const trainingGrid = document.querySelector('.training-grid');
 const trainingCards = Array.from(document.querySelectorAll('.training-card[data-training]'));
 const trainingInfo = document.getElementById('trainingInfo');
@@ -123,7 +168,7 @@ function renderTrainingInfo(key, card) {
       </div>
     </div>
     <div class="info-points">${data.points.map(point => `<span>${point}</span>`).join('')}</div>
-    ${data.href ? `<a class="btn" href="${data.href}">${data.cta || 'Otwórz panel'}</a>` : '<button class="btn ghost" type="button" disabled>Panel w przygotowaniu</button>'}
+    ${data.href ? `<a class="btn" href="${data.href}" data-access-protected="training" data-access-label="panelu szkolenia">${data.cta || 'Otwórz panel'}</a>` : '<button class="btn ghost" type="button" disabled>Panel w przygotowaniu</button>'}
   `;
 
   arrangeTrainingGrid(card, info);
