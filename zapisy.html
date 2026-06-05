@@ -195,24 +195,6 @@
     filter: drop-shadow(0 12px 28px rgba(0, 0, 0, .36));
   }
 
-  .signup-note {
-    padding: 14px;
-    color: rgba(255, 255, 255, .84);
-    background: rgba(255, 255, 255, .12);
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: 8px;
-    backdrop-filter: blur(16px);
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .signup-note strong {
-    display: block;
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 4px;
-  }
-
   .signup-intro {
     margin-top: 22px;
     padding: 24px;
@@ -237,13 +219,63 @@
     margin-top: 18px;
   }
 
+  .signup-group {
+    margin-top: 24px;
+  }
+
+  .signup-group + .signup-group {
+    margin-top: 28px;
+  }
+
+  .signup-group-head {
+    display: grid;
+    gap: 7px;
+    margin-bottom: 14px;
+    padding: 18px;
+    background: rgba(255, 255, 255, .94);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--accent, #475569);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .signup-group-head h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 23px;
+    line-height: 1.14;
+    letter-spacing: 0;
+  }
+
+  .signup-group-head p {
+    max-width: 900px;
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.52;
+  }
+
+  .signup-badge {
+    display: inline-flex;
+    width: fit-content;
+    padding: 6px 8px;
+    color: var(--accent, #475569);
+    background: rgba(var(--accent-rgb, 71, 85, 105), .08);
+    border: 1px solid rgba(var(--accent-rgb, 71, 85, 105), .18);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
   .signup-card {
     --accent: #475569;
     --accent-rgb: 71, 85, 105;
     position: relative;
     overflow: hidden;
-    display: grid;
-    grid-template-rows: 210px auto;
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     background: rgba(255, 255, 255, .94);
     border: 1px solid var(--line);
@@ -259,14 +291,139 @@
     box-shadow: 0 14px 38px rgba(15, 23, 42, .13), 0 18px 42px rgba(var(--accent-rgb), .12);
   }
 
+  .signup-request-card {
+    grid-column: span 2;
+    min-height: 100%;
+    border-top-width: 4px;
+    background:
+      radial-gradient(circle at 12% 16%, rgba(var(--accent-rgb), .2), transparent 34%),
+      linear-gradient(115deg, rgba(255, 255, 255, .98) 0%, rgba(236, 253, 245, .72) 42%, rgba(255, 255, 255, .98) 74%),
+      linear-gradient(135deg, rgba(255, 255, 255, .98), rgba(248, 250, 252, .94));
+    background-size: 190% 190%, 220% 220%, 100% 100%;
+    animation: requestCardGlow 6.8s ease-in-out infinite;
+    box-shadow: 0 16px 42px rgba(15, 23, 42, .11), 0 18px 46px rgba(var(--accent-rgb), .12);
+  }
+
+  .signup-request-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(110deg, transparent 16%, rgba(var(--accent-rgb), .16) 42%, rgba(255, 255, 255, .34) 52%, transparent 72%);
+    opacity: 0;
+    transform: translateX(-44%);
+    animation: requestCardSweep 6.8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .signup-request-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px rgba(var(--accent-rgb), .18), 0 18px 44px rgba(var(--accent-rgb), .1);
+    pointer-events: none;
+  }
+
+  @keyframes requestCardGlow {
+    0%, 100% {
+      background-position: 0% 48%, 0% 50%, 0 0;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, .1), 0 14px 34px rgba(var(--accent-rgb), .09);
+    }
+
+    50% {
+      background-position: 100% 52%, 100% 50%, 0 0;
+      box-shadow: 0 20px 54px rgba(15, 23, 42, .14), 0 18px 46px rgba(var(--accent-rgb), .17);
+    }
+  }
+
+  @keyframes requestCardSweep {
+    0%, 52% {
+      opacity: 0;
+      transform: translateX(-52%);
+    }
+
+    66% {
+      opacity: .9;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(52%);
+    }
+  }
+
+  .signup-request-card .signup-body {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, .72fr);
+    gap: 18px;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .signup-request-card h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 28px;
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .signup-request-card p {
+    max-width: 650px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .signup-contact {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    background: rgba(var(--accent-rgb), .07);
+    border: 1px solid rgba(var(--accent-rgb), .18);
+    border-radius: 8px;
+  }
+
+  .signup-contact a {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 850;
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .signup-contact a:hover {
+    color: var(--accent);
+  }
+
+  .signup-contact span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .signup-video-card {
+    cursor: zoom-in;
+  }
+
+  .signup-video-card .btn {
+    cursor: pointer;
+  }
+
   .signup-cover {
     position: relative;
     overflow: hidden;
+    flex: 0 0 210px;
     margin: 0;
     background: #cbd5e1;
   }
 
-  .signup-cover img {
+  .signup-cover img,
+  .signup-cover video {
     display: block;
     width: 100%;
     height: 100%;
@@ -275,7 +432,8 @@
     transition: transform .6s ease, filter .4s ease;
   }
 
-  .signup-card:hover .signup-cover img {
+  .signup-card:hover .signup-cover img,
+  .signup-card:hover .signup-cover video {
     transform: scale(1.055);
     filter: saturate(1.02) contrast(1);
   }
@@ -302,10 +460,35 @@
     text-wrap: balance;
   }
 
+  .signup-play-pill {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    padding: 7px 9px;
+    color: #fff;
+    background: rgba(15, 23, 42, .58);
+    border: 1px solid rgba(255, 255, 255, .28);
+    border-radius: 999px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, .2);
+    backdrop-filter: blur(14px);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    transition: background .22s ease, transform .22s ease;
+  }
+
+  .signup-video-card:hover .signup-play-pill {
+    background: rgba(var(--accent-rgb), .78);
+    transform: translateY(-1px);
+  }
+
   .signup-body {
-    display: grid;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     gap: 13px;
-    align-content: start;
     padding: 18px;
   }
 
@@ -320,6 +503,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+    margin-top: auto;
   }
 
   .signup-meta span {
@@ -334,8 +518,11 @@
   }
 
   .signup-body .btn {
-    width: fit-content;
-    margin-top: auto;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 2px;
+    text-align: center;
   }
 
   .signup-footer {
@@ -344,6 +531,94 @@
     font-size: 13px;
     line-height: 1.45;
     text-align: center;
+  }
+
+  .video-modal[hidden] {
+    display: none;
+  }
+
+  .video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+
+  .video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(178, 91, 114, .34), transparent 34%),
+      rgba(15, 23, 42, .78);
+    backdrop-filter: blur(18px);
+  }
+
+  .video-modal-panel {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: min(1040px, 94vw);
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 12px;
+    box-shadow: 0 34px 90px rgba(2, 6, 23, .52);
+  }
+
+  .video-modal-panel video {
+    display: block;
+    width: 100%;
+    max-height: min(72vh, 760px);
+    background: #020617;
+    object-fit: contain;
+  }
+
+  .video-modal-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 16px;
+    color: rgba(255, 255, 255, .86);
+    background: linear-gradient(90deg, rgba(178, 91, 114, .24), rgba(15, 23, 42, .96));
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .video-modal-caption strong {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .video-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    background: rgba(15, 23, 42, .72);
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 999px;
+    box-shadow: 0 12px 30px rgba(2, 6, 23, .3);
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    transition: background .2s ease, transform .2s ease;
+  }
+
+  .video-modal-close:hover {
+    background: rgba(178, 91, 114, .9);
+    transform: translateY(-1px);
+  }
+
+  body.video-modal-open {
+    overflow: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -355,6 +630,11 @@
       scroll-behavior: auto !important;
       transition-duration: .001ms !important;
     }
+
+    .signup-request-card,
+    .signup-request-card::before {
+      animation: none !important;
+    }
   }
 
   @media (max-width: 980px) {
@@ -365,6 +645,14 @@
 
     .signup-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .signup-request-card {
+      grid-column: 1 / -1;
+    }
+
+    .signup-request-card .signup-body {
+      grid-template-columns: 1fr;
     }
 
     .signup-topbar {
@@ -404,8 +692,24 @@
     }
 
     .signup-body .btn {
-      justify-content: center;
-      width: 100%;
+      min-height: 46px;
+    }
+
+    .signup-request-card h3 {
+      font-size: 24px;
+    }
+
+    .signup-request-card {
+      animation: none;
+    }
+
+    .video-modal {
+      padding: 12px;
+    }
+
+    .video-modal-caption {
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 </style>
@@ -425,91 +729,102 @@
 
   <section class="signup-hero">
     <div>
-      <span class="signup-kicker">zapisy na szkolenia / wrzesień 2026</span>
-      <h1>Nowy cykl szkoleń WUP w Katowicach</h1>
-      <p>Wojewódzki Urząd Pracy w Katowicach rozpoczyna we wrześniu 2026 roku cykl szkoleń poświęcony rozwojowi kompetencji zawodowych oraz funkcjonowaniu w dynamicznie zmieniającym się środowisku informacyjnym.</p>
+      <span class="signup-kicker">zapisy na szkolenia</span>
+      <h1>Programy szkoleniowe WUP w Katowicach</h1>
+      <p>W jednym miejscu znajdziesz szkolenia rozwijające kompetencje zawodowe, cyfrowe, komunikacyjne i edukacyjne. Część tematów powstała w projekcie Edukacja bez granic, a część pochodzi z wcześniejszych działań szkoleniowych.</p>
     </div>
     <aside class="signup-side" aria-label="Informacje o zapisach">
       <div class="signup-logo">
         <img src="grafiki/logo-projektu-wide.png" alt="Logo projektu Edukacja bez granic">
       </div>
-      <div class="signup-note">
-        <strong>Formularze zapisów</strong>
-        Każdy temat ma osobny formularz Google Forms. Linki są przygotowane jako miejsca do podmiany na właściwe formularze rekrutacyjne.
-      </div>
     </aside>
   </section>
 
   <section class="signup-intro">
-    <p>W ramach cyklu zaplanowano szkolenia odpowiadające na aktualne potrzeby pracy doradczej, edukacyjnej, organizacyjnej i cyfrowej. Uczestnicy mogą wybrać temat zgodny ze swoimi zadaniami zawodowymi, potrzebami zespołu oraz obszarem kompetencji, który chcą rozwijać.</p>
+    <p>Możesz wybrać temat najbliższy Twoim zadaniom zawodowym, potrzebom zespołu albo obszarowi kompetencji, który chcesz rozwijać. Trzy pierwsze szkolenia są nowymi programami projektu Edukacja bez granic. Szkolenia z AI i SEL powstały w ramach Kierunek Kompetencje 4.0, a Cyberbezpieczeństwo i Mindfulness pochodzą z innego programu mobilności.</p>
   </section>
 
   <section class="section" aria-label="Lista szkoleń i linki do zapisów">
-    <h2>Wybierz szkolenie i otwórz formularz</h2>
-    <div class="signup-grid">
-      <article class="signup-card" style="--accent:#0e7490;--accent-rgb:14,116,144;">
-        <figure class="signup-cover">
-          <img src="grafiki/ai.jpg" alt="">
-          <span>Wykorzystanie sztucznej inteligencji w pracy i w edukacji</span>
-        </figure>
-        <div class="signup-body">
-          <p>Szkolenie pokazuje, jak korzystać z AI w sposób praktyczny, świadomy i bezpieczny: przy tekstach, materiałach, notatkach, ćwiczeniach oraz zadaniach zawodowych.</p>
-          <div class="signup-meta">
-            <span>AI</span>
-            <span>praca</span>
-            <span>edukacja</span>
+    <h2>Dostępne szkolenia</h2>
+    <div class="signup-group" style="--accent:#0e7490;--accent-rgb:14,116,144;">
+      <div class="signup-group-head">
+        <span class="signup-badge">nowe programy projektu</span>
+        <h3>Nowe szkolenia wynikające z projektu Edukacja bez granic</h3>
+        <p>Te trzy tematy odpowiadają na ważne wyzwania współczesnej pracy: nadmiar informacji, jakość komunikacji oraz angażujące sposoby uczenia się dorosłych.</p>
+      </div>
+      <div class="signup-grid">
+        <article class="signup-card" style="--accent:#b25b72;--accent-rgb:178,91,114;">
+          <figure class="signup-cover">
+            <img src="grafiki/fake-news.jpg" alt="" loading="lazy">
+            <span>Fake newsy i krytyczne myślenie</span>
+          </figure>
+          <div class="signup-body">
+            <p>Szkolenie dotyczy rozpoznawania fałszywych informacji, oceny wiarygodności źródeł oraz rozwijania umiejętności spokojnej analizy informacji.</p>
+            <div class="signup-meta">
+              <span>nowe</span>
+              <span>Edukacja bez granic</span>
+              <span>informacja</span>
+            </div>
+            <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
-        </div>
-      </article>
+        </article>
 
-      <article class="signup-card" style="--accent:#b25b72;--accent-rgb:178,91,114;">
-        <figure class="signup-cover">
-          <img src="grafiki/fake-news.jpg" alt="">
-          <span>Fake newsy i krytyczne myślenie</span>
-        </figure>
-        <div class="signup-body">
-          <p>Szkolenie dotyczy rozpoznawania fałszywych informacji, oceny wiarygodności źródeł oraz rozwijania umiejętności spokojnej analizy informacji.</p>
-          <div class="signup-meta">
-            <span>informacja</span>
-            <span>źródła</span>
-            <span>analiza</span>
+        <article class="signup-card" style="--accent:#6d5bd0;--accent-rgb:109,91,208;">
+          <figure class="signup-cover">
+            <img src="grafiki/komunikacja.webp" alt="" loading="lazy">
+            <span>Komunikacja i wystąpienia</span>
+          </figure>
+          <div class="signup-body">
+            <p>Szkolenie rozwija kompetencje komunikacyjne, prosty język, strukturę wypowiedzi oraz umiejętność jasnego i skutecznego przekazywania informacji.</p>
+            <div class="signup-meta">
+              <span>nowe</span>
+              <span>Edukacja bez granic</span>
+              <span>relacja</span>
+            </div>
+            <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
-        </div>
-      </article>
+        </article>
 
-      <article class="signup-card" style="--accent:#6d5bd0;--accent-rgb:109,91,208;">
-        <figure class="signup-cover">
-          <img src="grafiki/komunikacja.webp" alt="">
-          <span>Komunikacja i wystąpienia</span>
-        </figure>
-        <div class="signup-body">
-          <p>Szkolenie rozwija kompetencje komunikacyjne, prosty język, strukturę wypowiedzi oraz umiejętność jasnego i skutecznego przekazywania informacji.</p>
-          <div class="signup-meta">
-            <span>komunikacja</span>
-            <span>wystąpienia</span>
-            <span>relacja</span>
+        <article class="signup-card" style="--accent:#c36a12;--accent-rgb:195,106,18;">
+          <figure class="signup-cover">
+            <img src="grafiki/gamifikacja.jpg" alt="" loading="lazy">
+            <span>Gamifikacja</span>
+          </figure>
+          <div class="signup-body">
+            <p>Szkolenie prezentuje nowoczesne metody uczenia się dorosłych oparte na elementach gier, doświadczeniu, informacji zwrotnej i mechanizmach motywacyjnych.</p>
+            <div class="signup-meta">
+              <span>nowe</span>
+              <span>Edukacja bez granic</span>
+              <span>edukacja dorosłych</span>
+            </div>
+            <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
-        </div>
-      </article>
+        </article>
+      </div>
+    </div>
 
-      <article class="signup-card" style="--accent:#c36a12;--accent-rgb:195,106,18;">
-        <figure class="signup-cover">
-          <img src="grafiki/gamifikacja.jpg" alt="">
-          <span>Gamifikacja</span>
-        </figure>
-        <div class="signup-body">
-          <p>Szkolenie prezentuje nowoczesne metody uczenia się dorosłych oparte na elementach gier, doświadczeniu, informacji zwrotnej i mechanizmach motywacyjnych.</p>
-          <div class="signup-meta">
-            <span>gry</span>
-            <span>motywacja</span>
-            <span>edukacja dorosłych</span>
+    <div class="signup-group" style="--accent:#475569;--accent-rgb:71,85,105;">
+      <div class="signup-group-head">
+        <span class="signup-badge">dostępne szkolenia</span>
+        <h3>Pozostałe szkolenia</h3>
+        <p>To tematy przygotowane w ramach wcześniejszych działań rozwojowych. AI oraz SEL pochodzą z projektu Kierunek Kompetencje 4.0. Cyberbezpieczeństwo i Mindfulness zostały opracowane w innym programie mobilności.</p>
+      </div>
+      <div class="signup-grid">
+        <article class="signup-card" style="--accent:#0e7490;--accent-rgb:14,116,144;">
+          <figure class="signup-cover">
+            <img src="grafiki/ai.jpg" alt="">
+            <span>Wykorzystanie sztucznej inteligencji w pracy i w edukacji</span>
+          </figure>
+          <div class="signup-body">
+            <p>Szkolenie pokazuje, jak korzystać z AI w sposób praktyczny, świadomy i bezpieczny: przy tekstach, materiałach, notatkach, ćwiczeniach oraz zadaniach zawodowych.</p>
+            <div class="signup-meta">
+              <span>Kierunek Kompetencje 4.0</span>
+              <span>AI</span>
+              <span>edukacja</span>
+            </div>
+            <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
-        </div>
-      </article>
+        </article>
 
       <article class="signup-card" style="--accent:#0f8f68;--accent-rgb:15,143,104;">
         <figure class="signup-cover">
@@ -519,11 +834,12 @@
         <div class="signup-body">
           <p>Szkolenie wspiera rozwój empatii, autorefleksji, regulacji emocji i współpracy, czyli kompetencji ważnych w pracy zespołowej i kontakcie z klientem.</p>
           <div class="signup-meta">
+            <span>Kierunek Kompetencje 4.0</span>
             <span>emocje</span>
             <span>relacje</span>
             <span>współpraca</span>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
+          <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
         </div>
       </article>
 
@@ -535,11 +851,12 @@
         <div class="signup-body">
           <p>Szkolenie pomaga rozpoznawać podstawowe zagrożenia cyfrowe: podejrzane linki, phishing, fałszywe wiadomości, załączniki i sytuacje ryzyka.</p>
           <div class="signup-meta">
+            <span>inny program mobilności</span>
             <span>phishing</span>
             <span>dane</span>
             <span>procedury</span>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
+          <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
         </div>
       </article>
 
@@ -551,13 +868,35 @@
         <div class="signup-body">
           <p>Szkolenie wprowadza proste praktyki uważności, które pomagają wracać do koncentracji, regulować napięcie i działać spokojniej w codziennej pracy.</p>
           <div class="signup-meta">
+            <span>inny program mobilności</span>
             <span>uważność</span>
             <span>koncentracja</span>
             <span>dobrostan</span>
           </div>
-          <a class="btn" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Otwórz formularz</a>
+          <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
         </div>
       </article>
+
+      <article class="signup-card signup-request-card" style="--accent:#0e7490;--accent-rgb:14,116,144;">
+        <div class="signup-body">
+          <div>
+            <span class="signup-badge">dla instytucji</span>
+            <h3>Zgłoszenie zapotrzebowania na szkolenie</h3>
+            <p>Powiatowe urzędy pracy zainteresowane organizacją szkolenia dla pracowników lub klientów mogą przekazać zapytanie do Wojewódzkiego Urzędu Pracy w Katowicach.</p>
+          </div>
+          <div class="signup-contact" aria-label="Kontakt w sprawie organizacji szkolenia">
+            <div>
+              <span>E-mail</span>
+              <a href="mailto:pr@wup-katowice.pl">pr@wup-katowice.pl</a>
+            </div>
+            <div>
+              <span>Telefon</span>
+              <a href="tel:+48327573384">32 757 33 84</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      </div>
     </div>
   </section>
 
@@ -565,7 +904,8 @@
     <img src="grafiki/logotypy-pasek.png" alt="Logotypy projektu Edukacja bez granic, Kierunek Kompetencje 4.0, Unii Europejskiej i WUP w Katowicach">
   </section>
 
-  <p class="signup-footer">Linki do formularzy są obecnie techniczne i można je podmienić na właściwe adresy Google Forms dla każdego szkolenia.</p>
+  <p class="signup-footer">Formularze zapisów zostaną udostępnione po uruchomieniu naboru.</p>
 </main>
+
 </body>
 </html>
