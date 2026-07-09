@@ -432,6 +432,21 @@
     transition: transform .6s ease, filter .4s ease;
   }
 
+  .signup-feature-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(118deg, rgba(var(--accent-rgb), .18), rgba(var(--accent-rgb), .62));
+    opacity: .48;
+    transition: opacity .45s ease;
+    pointer-events: none;
+  }
+
+  .signup-feature-card:hover .signup-feature-cover::before {
+    opacity: .78;
+  }
+
   .signup-card:hover .signup-cover img,
   .signup-card:hover .signup-cover video {
     transform: scale(1.055);
@@ -442,6 +457,7 @@
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
     background:
       linear-gradient(180deg, rgba(15, 23, 42, 0) 28%, rgba(15, 23, 42, .78) 100%),
       linear-gradient(90deg, rgba(var(--accent-rgb), .58), transparent 72%);
@@ -452,7 +468,7 @@
     left: 16px;
     right: 16px;
     bottom: 16px;
-    z-index: 1;
+    z-index: 2;
     color: #fff;
     font-weight: 850;
     font-size: 24px;
@@ -753,10 +769,10 @@
         <p>Te trzy tematy odpowiadają na ważne wyzwania współczesnej pracy: nadmiar informacji, jakość komunikacji oraz angażujące sposoby uczenia się dorosłych.</p>
       </div>
       <div class="signup-grid">
-        <article class="signup-card" style="--accent:#b25b72;--accent-rgb:178,91,114;">
-          <figure class="signup-cover">
+        <article class="signup-card signup-feature-card" style="--accent:#d4a017;--accent-rgb:212,160,23;">
+          <figure class="signup-cover signup-feature-cover">
             <img src="grafiki/fake-news.jpg" alt="" loading="lazy">
-            <span>Fake newsy i krytyczne myślenie</span>
+            <span>Myślenie krytyczne, dezinformacja i manipulacja</span>
           </figure>
           <div class="signup-body">
             <p>Szkolenie dotyczy rozpoznawania fałszywych informacji, oceny wiarygodności źródeł oraz rozwijania umiejętności spokojnej analizy informacji.</p>
@@ -765,14 +781,14 @@
               <span>Edukacja bez granic</span>
               <span>informacja</span>
             </div>
-            <button class="btn" type="button" disabled title="Zapisy zostaną udostępnione wkrótce">Zapisz się</button>
+            <a class="btn" href="https://forms.gle/KzJmaQr8hvH5dkGM8" target="_blank" rel="noopener noreferrer">Zapisz się - termin 1</a>
           </div>
         </article>
 
-        <article class="signup-card" style="--accent:#6d5bd0;--accent-rgb:109,91,208;">
-          <figure class="signup-cover">
+        <article class="signup-card signup-feature-card" style="--accent:#0f5132;--accent-rgb:15,81,50;">
+          <figure class="signup-cover signup-feature-cover">
             <img src="grafiki/komunikacja.webp" alt="" loading="lazy">
-            <span>Komunikacja i wystąpienia</span>
+            <span>Wystąpienia publiczne i storytelling</span>
           </figure>
           <div class="signup-body">
             <p>Szkolenie rozwija kompetencje komunikacyjne, prosty język, strukturę wypowiedzi oraz umiejętność jasnego i skutecznego przekazywania informacji.</p>
@@ -785,10 +801,10 @@
           </div>
         </article>
 
-        <article class="signup-card" style="--accent:#c36a12;--accent-rgb:195,106,18;">
-          <figure class="signup-cover">
+        <article class="signup-card signup-feature-card" style="--accent:#0b2e59;--accent-rgb:11,46,89;">
+          <figure class="signup-cover signup-feature-cover">
             <img src="grafiki/gamifikacja.jpg" alt="" loading="lazy">
-            <span>Gamifikacja</span>
+            <span>Grywalizacja, uczenie przez gry i doświadczenie</span>
           </figure>
           <div class="signup-body">
             <p>Szkolenie prezentuje nowoczesne metody uczenia się dorosłych oparte na elementach gier, doświadczeniu, informacji zwrotnej i mechanizmach motywacyjnych.</p>
@@ -904,7 +920,7 @@
     <img src="grafiki/logotypy-pasek.png" alt="Logotypy projektu Edukacja bez granic, Kierunek Kompetencje 4.0, Unii Europejskiej i WUP w Katowicach">
   </section>
 
-  <p class="signup-footer">Formularze zapisów zostaną udostępnione po uruchomieniu naboru.</p>
+  <p class="signup-footer">Formularze zapisów są udostępniane przy szkoleniach, dla których uruchomiono nabór.</p>
 </main>
 
 </body>

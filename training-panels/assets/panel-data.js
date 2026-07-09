@@ -3,6 +3,8 @@ window.TRAINING_PANELS = {
     number: '02',
     title: 'Fake newsy i krytyczne myślenie',
     subtitle: 'Roboczy panel do szkolenia z rozpoznawania manipulacji, sprawdzania źródeł i spokojnej weryfikacji informacji.',
+    banner: '../training-panels/assets/fake-news-banner.png',
+    bannerAlt: 'Myślenie krytyczne, dezinformacja i manipulacja - baner szkolenia',
     accent: '#b25b72',
     accentRgb: '178,91,114',
     accentSoft: '#fff1f4',

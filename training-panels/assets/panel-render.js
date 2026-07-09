@@ -43,20 +43,23 @@ function renderPanel(panel) {
     agendaNumber += 1;
     return renderAgendaItem(item, agendaNumber);
   }).join('');
-
-  root.innerHTML = `
-    <main class="wrap">
-      <section class="training-hero">
+  const heroHtml = panel.banner
+    ? `<section class="training-hero training-hero-image"><h1 class="sr-only">${escapeHtml(panel.title)}</h1><img src="${escapeHtml(panel.banner)}" alt="${escapeHtml(panel.bannerAlt || panel.title)}"></section>`
+    : `<section class="training-hero">
         <div class="hero-content">
           <span class="tag">panel szkolenia</span>
           <h1>${escapeHtml(panel.title)}</h1>
           <p>${escapeHtml(panel.subtitle)}</p>
         </div>
         <div class="hero-mark">${escapeHtml(panel.number)}</div>
-      </section>
+      </section>`;
+
+  root.innerHTML = `
+    <main class="wrap">
+      ${heroHtml}
 
       <div class="agenda-bar">
-        <a class="mini-link" href="../index.html">Portal szkoleń</a>
+        <a class="mini-link" href="../portal-szkolen/index.html">Portal szkoleń</a>
         <button class="agenda-btn" type="button" data-action="agenda-open">Agenda szkolenia</button>
       </div>
 
