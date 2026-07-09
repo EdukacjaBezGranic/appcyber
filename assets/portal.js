@@ -1,10 +1,13 @@
+const APP_PATH_PREFIX = window.location.pathname.includes('/portal-szkolen/') ? '../' : '';
+const appPath = path => `${APP_PATH_PREFIX}${path}`;
+
 const TRAININGS = {
   ai: {
     title: 'Wykorzystanie sztucznej inteligencji w pracy i w edukacji',
     why: 'AI coraz częściej trafia do codziennej pracy biurowej, ale bez dobrych zasad łatwo o ogólniki, błędy i niekontrolowane dopowiadanie faktów.',
     goal: 'Celem szkolenia jest nauczenie uczestników praktycznego, bezpiecznego i świadomego korzystania z AI przy tekstach, notatkach, materiałach i zadaniach urzędowych.',
     points: ['praktyczne prompty', 'teksty urzędowe', 'ćwiczenia warsztatowe', 'bezpieczna praca z AI'],
-    href: 'panel-ai-ex7-probe/index.html',
+    href: appPath('panel-ai-ex7-probe/index.html'),
     cta: 'Otwórz panel',
     accent: '#0e7490',
     accentRgb: '14,116,144'
@@ -14,7 +17,7 @@ const TRAININGS = {
     why: 'Wiele fałszywych lub zmanipulowanych treści wygląda wiarygodnie, szczególnie gdy odwołuje się do emocji, autorytetu albo presji czasu.',
     goal: 'Celem szkolenia jest rozwijanie nawyku spokojnego sprawdzania informacji: źródła, kontekstu, intencji przekazu i sygnałów manipulacji.',
     points: ['fact-checking', 'źródła informacji', 'manipulacje', 'myślenie krytyczne'],
-    href: 'panel-fake-news/index.html',
+    href: appPath('panel-fake-news/index.html'),
     cta: 'Otwórz panel',
     accent: '#b25b72',
     accentRgb: '178,91,114'
@@ -24,7 +27,7 @@ const TRAININGS = {
     why: 'Dobra komunikacja decyduje o tym, czy odbiorcy rozumieją sens działań, decyzji, zasad i informacji przekazywanych przez instytucję.',
     goal: 'Celem szkolenia jest ćwiczenie jasnej struktury wypowiedzi, prostego języka, wystąpień publicznych i reagowania na pytania bez chaosu i napięcia.',
     points: ['wystąpienia', 'struktura wypowiedzi', 'storytelling', 'feedback'],
-    href: 'panel-komunikacja/index.html',
+    href: appPath('panel-komunikacja/index.html'),
     cta: 'Otwórz panel',
     accent: '#6d5bd0',
     accentRgb: '109,91,208'
@@ -34,7 +37,7 @@ const TRAININGS = {
     why: 'Uczestnicy szybciej angażują się w naukę, gdy zadanie ma jasny cel, informację zwrotną, element wyboru i widoczny postęp.',
     goal: 'Celem szkolenia jest projektowanie aktywności szkoleniowych z użyciem mechanik gry tak, aby wspierały uczenie się, a nie były tylko ozdobą.',
     points: ['mechaniki gry', 'zaangażowanie', 'praca zespołowa', 'projekt ćwiczeń'],
-    href: 'panel-gamifikacja/index.html',
+    href: appPath('panel-gamifikacja/index.html'),
     cta: 'Otwórz panel',
     accent: '#c36a12',
     accentRgb: '195,106,18'
@@ -44,7 +47,7 @@ const TRAININGS = {
     why: 'Kompetencje społeczno-emocjonalne pomagają lepiej współpracować, rozumieć reakcje innych i działać spokojniej w trudnych sytuacjach.',
     goal: 'Celem szkolenia jest wzmacnianie empatii, autorefleksji, regulacji emocji i komunikacji, które wspierają pracę zespołową oraz relacje z odbiorcami.',
     points: ['emocje', 'empatia', 'relacje', 'współpraca'],
-    href: 'panel-sel/index.html',
+    href: appPath('panel-sel/index.html'),
     cta: 'Otwórz panel',
     accent: '#0f8f68',
     accentRgb: '15,143,104'
@@ -54,7 +57,7 @@ const TRAININGS = {
     why: 'Najczęstsze zagrożenia cyfrowe zaczynają się od zwykłej wiadomości, linku, załącznika albo pośpiesznej decyzji użytkownika.',
     goal: 'Celem szkolenia jest wyrobienie praktycznych nawyków: sprawdzania linków, rozpoznawania phishingu, ochrony danych i reagowania zgodnie z procedurą.',
     points: ['phishing', 'podejrzane linki', 'ochrona danych', 'procedury'],
-    href: 'panel-cyberbezpieczenstwo/index.html',
+    href: appPath('panel-cyberbezpieczenstwo/index.html'),
     cta: 'Otwórz panel',
     accent: '#2563eb',
     accentRgb: '37,99,235'
@@ -64,7 +67,7 @@ const TRAININGS = {
     why: 'Przeciążenie informacyjne, pośpiech i napięcie utrudniają koncentrację, podejmowanie decyzji oraz spokojną komunikację z innymi.',
     goal: 'Celem szkolenia jest poznanie prostych praktyk uważności, które pomagają wracać do koncentracji, regulować napięcie i pracować z większą świadomością.',
     points: ['uważność', 'koncentracja', 'mikropraktyki', 'dobrostan'],
-    href: 'panel-mindfulness/index.html',
+    href: appPath('panel-mindfulness/index.html'),
     cta: 'Otwórz panel',
     accent: '#475569',
     accentRgb: '71,85,105'
@@ -73,6 +76,10 @@ const TRAININGS = {
 
 const ACCESS_PASSWORD = '2662WUP';
 const ACCESS_SESSION_KEY = 'portalTrainerAccessGranted';
+
+document.querySelectorAll('[data-app-path]').forEach(link => {
+  link.href = appPath(link.dataset.appPath);
+});
 
 function hasPortalAccess() {
   try {

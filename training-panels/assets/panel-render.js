@@ -44,7 +44,7 @@ function renderPanel(panel) {
     return renderAgendaItem(item, agendaNumber);
   }).join('');
   const heroHtml = panel.banner
-    ? `<section class="training-hero training-hero-image"><h1 class="sr-only">${escapeHtml(panel.title)}</h1><img src="${escapeHtml(panel.banner)}" alt="${escapeHtml(panel.bannerAlt || panel.title)}"></section>`
+    ? `<section class="training-hero training-hero-image"><h1 class="sr-only">${escapeHtml(panel.title)}</h1><a href="../index.html?v=20260709-04" aria-label="Przejdź do strony głównej projektu Edukacja bez granic"><img src="${escapeHtml(panel.banner)}" alt="${escapeHtml(panel.bannerAlt || panel.title)}"></a></section>`
     : `<section class="training-hero">
         <div class="hero-content">
           <span class="tag">panel szkolenia</span>
@@ -59,7 +59,7 @@ function renderPanel(panel) {
       ${heroHtml}
 
       <div class="agenda-bar">
-        <a class="mini-link" href="../portal-szkolen/index.html">Portal szkoleń</a>
+        <a class="mini-link" href="../panel-trenera.html">Panel trenera</a>
         <button class="agenda-btn" type="button" data-action="agenda-open">Agenda szkolenia</button>
       </div>
 

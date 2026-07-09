@@ -44,6 +44,17 @@ body {
   overflow: hidden;
 }
 
+.hero-banner a {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.hero-banner a:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, .5);
+  outline-offset: 4px;
+}
+
 .hero-banner img {
   display: block;
   width: 100%;

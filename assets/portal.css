@@ -140,6 +140,22 @@ body {
   object-fit: contain;
 }
 
+.project-home-logo {
+  display: block;
+  line-height: 0;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.project-home-logo:hover {
+  opacity: .88;
+  transform: translateY(-2px);
+}
+
+.project-home-logo:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, .36);
+  outline-offset: 5px;
+}
+
 .section {
   margin-top: 24px;
 }
@@ -576,6 +592,7 @@ body {
 }
 
 .brand-strip {
+  position: relative;
   margin-top: 28px;
 }
 
@@ -584,6 +601,23 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.brand-strip-home {
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 0;
+  width: 22%;
+  border-radius: 8px 0 0 8px;
+}
+
+.brand-strip-home:hover {
+  background: rgba(255, 255, 255, .12);
+}
+
+.brand-strip-home:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, .45);
+  outline-offset: 3px;
 }
 
 .portal-lead {

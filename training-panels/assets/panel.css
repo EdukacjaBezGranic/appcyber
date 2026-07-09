@@ -81,6 +81,17 @@ body {
   display: none;
 }
 
+.training-hero-image a {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.training-hero-image a:focus-visible {
+  outline: 3px solid rgba(var(--accent-rgb), .5);
+  outline-offset: 4px;
+}
+
 .training-hero-image img {
   display: block;
   width: 100%;

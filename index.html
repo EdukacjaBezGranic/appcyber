@@ -3,201 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Centrum szkoleń - Panel trenera</title>
-<link rel="stylesheet" href="assets/portal.css">
-<script src="assets/portal.js" defer></script>
+<meta name="description" content="Edukacja bez granic - projekt rozwoju kompetencji pracowników publicznych służb zatrudnienia realizowany w ramach programu Erasmus+.">
+<title>Edukacja bez granic - strona główna</title>
+<link rel="icon" type="image/png" href="grafiki/logo-projektu.png">
+<link rel="stylesheet" href="assets/public.css?v=20260709-04">
+<script src="assets/public.js?v=20260709-04" defer></script>
 </head>
-<body>
-<main class="wrap">
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="tag">platforma szkoleń</span>
-      <h1><span class="title-main">Centrum szkoleń</span><span class="title-sub">Panel trenera</span></h1>
-      <p>Jedno miejsce dla paneli szkoleniowych, materiałów, ćwiczeń i narzędzi prowadzącego.</p>
-    </div>
-    <div class="hero-visual">
-      <img src="grafiki/logo-projektu.png" alt="Logo projektu">
-    </div>
-  </section>
+<body class="public-page">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="index.html" aria-label="Edukacja bez granic - strona główna">
+      <img src="grafiki/logo-projektu.png" alt="">
+      <span>Edukacja bez granic<small>nowe kompetencje i umiejętności</small></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" data-site-nav aria-label="Główna nawigacja">
+      <a href="index.html" aria-current="page">Strona główna</a>
+      <a href="o-projekcie.html">O projekcie</a>
+      <a href="szkolenia.html">Program szkoleń</a>
+      <a class="nav-signups" href="zapisy.html">Zapisy na szkolenia</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="nav-trainer" href="panel-trenera.html">Panel trenera</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="section">
-    <h2>Wybierz szkolenie</h2>
-    <div class="training-grid">
-      <article class="training-card is-ready is-selected" data-training="ai" tabindex="0" style="--accent:#0e7490;--accent-rgb:14,116,144;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/ai.jpg" alt="">
-          <span>Wykorzystanie sztucznej inteligencji w pracy i w edukacji</span>
-          <small>gotowy panel szkoleniowy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">gotowy panel</span>
-          <h3>Wykorzystanie sztucznej inteligencji w pracy i w edukacji</h3>
-          <div class="meta">
-            <span>25 ćwiczeń</span>
-            <span>materiały</span>
-            <span>wydruki</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-info-card" id="trainingInfo" style="--accent:#0e7490;--accent-rgb:14,116,144;">
-        <span class="tag">szczegóły szkolenia</span>
-        <h3>Wykorzystanie sztucznej inteligencji w pracy i w edukacji</h3>
-        <div class="info-copy">
-          <div>
-            <strong>Dlaczego ważne?</strong>
-            <p>AI coraz częściej trafia do codziennej pracy biurowej, ale bez dobrych zasad łatwo o ogólniki, błędy i niekontrolowane dopowiadanie faktów.</p>
-          </div>
-          <div>
-            <strong>Cel szkolenia</strong>
-            <p>Celem szkolenia jest nauczenie uczestników praktycznego, bezpiecznego i świadomego korzystania z AI przy tekstach, notatkach, materiałach i zadaniach urzędowych.</p>
-          </div>
-        </div>
-        <div class="info-points">
-          <span>praktyczne prompty</span>
-          <span>teksty urzędowe</span>
-          <span>ćwiczenia warsztatowe</span>
-          <span>bezpieczna praca z AI</span>
-        </div>
-        <a class="btn" href="panel-ai-ex7-probe/index.html" data-access-protected="training" data-access-label="panelu szkolenia">Otwórz panel</a>
-      </article>
-
-      <article class="training-card" data-training="fake-news" tabindex="0" style="--accent:#b25b72;--accent-rgb:178,91,114;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/fake-news.jpg" alt="">
-          <span>Fake newsy i krytyczne myślenie</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>Fake newsy i krytyczne myślenie</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>narzędzia</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-card" data-training="komunikacja" tabindex="0" style="--accent:#6d5bd0;--accent-rgb:109,91,208;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/komunikacja.webp" alt="">
-          <span>Komunikacja i wystąpienia</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>Komunikacja i wystąpienia</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>materiały</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-card" data-training="gamifikacja" tabindex="0" style="--accent:#c36a12;--accent-rgb:195,106,18;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/gamifikacja.jpg" alt="">
-          <span>Gamifikacja</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>Gamifikacja</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>materiały</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-card" data-training="sel" tabindex="0" style="--accent:#0f8f68;--accent-rgb:15,143,104;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/sel.jpg" alt="">
-          <span>SEL i kompetencje społeczno-emocjonalne</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>SEL i kompetencje społeczno-emocjonalne</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>materiały</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-card" data-training="cyber" tabindex="0" style="--accent:#2563eb;--accent-rgb:37,99,235;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/cyberbezpieczenstwo.jpg" alt="">
-          <span>Cyberbezpieczeństwo</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>Cyberbezpieczeństwo</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>narzędzia</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="training-card" data-training="mindfulness" tabindex="0" style="--accent:#475569;--accent-rgb:71,85,105;">
-        <div class="cover-slot image-cover">
-          <img class="cover-photo" src="grafiki/mindfulness.jpg" alt="">
-          <span>Mindfulness</span>
-          <small>panel roboczy</small>
-        </div>
-        <div class="card-content">
-          <span class="tag">panel roboczy</span>
-          <h3>Mindfulness</h3>
-          <div class="meta">
-            <span>8 ćwiczeń</span>
-            <span>materiały</span>
-            <span>QR / timer</span>
-          </div>
-        </div>
-      </article>
+<main class="public-main">
+  <section class="public-hero" style="background-image:url('grafiki/projekt-hero.png')">
+    <div class="public-hero-content">
+      <img class="public-hero-logo" src="grafiki/logo-projektu-wide.png" alt="Edukacja bez granic">
+      <h1>Edukacja bez granic <span>Nowe kompetencje dla pracy doradczej i edukacji dorosłych</span></h1>
+      <p>Projekt wspiera pracowników publicznych służb zatrudnienia w świecie cyfrowej zmiany, przeciążenia informacyjnego i nowych sposobów uczenia się dorosłych.</p>
+      <div class="public-actions">
+        <a class="public-btn" href="o-projekcie.html">Poznaj projekt</a>
+        <a class="public-btn light" href="szkolenia.html">Zobacz program szkoleń</a>
+      </div>
     </div>
   </section>
 
-  <section class="brand-strip" aria-label="Logotypy projektu i partnerów">
+  <section class="public-section reveal">
+    <div class="public-section-head">
+      <h2>Poznaj projekt i wybierz interesujący Cię temat</h2>
+      <p>Dowiedz się, dlaczego powstał projekt, jakie kompetencje rozwijają szkolenia oraz gdzie znaleźć aktualne informacje o zapisach.</p>
+    </div>
+    <div class="public-route-grid">
+      <a class="public-route" href="o-projekcie.html" style="--route-accent:#0e7490">
+        <strong>O projekcie</strong>
+        <p>Cel, kontekst, odbiorcy, mobilność Erasmus+ i znaczenie projektu dla pracy instytucji rynku pracy.</p>
+        <span>Przejdź do opisu</span>
+      </a>
+      <a class="public-route" href="szkolenia.html" style="--route-accent:#073a98">
+        <strong>Program szkoleń</strong>
+        <p>Trzy tematy projektu opisane przez potrzeby uczestników, cele szkolenia i praktyczne rezultaty.</p>
+        <span>Poznaj trzy programy</span>
+      </a>
+      <a class="public-route" href="zapisy.html" style="--route-accent:#d5a617">
+        <strong>Zapisy na szkolenia</strong>
+        <p>Dostępne nabory, terminy oraz bezpośrednie przejścia do formularzy zgłoszeniowych.</p>
+        <span>Sprawdź dostępne zapisy</span>
+      </a>
+      <a class="public-route" href="kontakt.html" style="--route-accent:#145c42">
+        <strong>Kontakt</strong>
+        <p>Dane kontaktowe oraz informacje dla instytucji zainteresowanych organizacją szkolenia.</p>
+        <span>Skontaktuj się z nami</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="public-section reveal">
+    <div class="public-meta-band">
+      <div><strong>Program Erasmus+</strong><span>Krótkoterminowe projekty mobilności w sektorze edukacji dorosłych KA122-ADU.</span></div>
+      <div><strong>Edycja 2025</strong><span>Projekt nr 2025-1-PL01-KA122-ADU-000333553.</span></div>
+      <div><strong>Praktyczny rezultat</strong><span>Metody i narzędzia możliwe do wykorzystania po powrocie w codziennej pracy.</span></div>
+    </div>
+  </section>
+
+  <section class="public-section reveal">
+    <div class="public-section-head">
+      <h2>Trzy obszary jednej zmiany</h2>
+      <p>Każdy temat odpowiada na inną potrzebę pracy doradczej: porządkowanie informacji, budowanie relacji oraz tworzenie angażującego procesu uczenia się.</p>
+    </div>
+    <div class="public-split">
+      <div class="public-media"><img src="grafiki/fake-news.jpg" alt="Sprawdzanie wiarygodności informacji"></div>
+      <div class="public-copy">
+        <h3>Informacja, relacja i doświadczenie</h3>
+        <p>Myślenie krytyczne pomaga oddzielać fakty od manipulacji. Efektywna komunikacja pozwala lepiej rozumieć potrzeby klienta i prowadzić rozmowę w sytuacji zmiany. Uczenie przez gry i doświadczenie wspiera motywację dorosłych, którzy rozwijają nowe kompetencje.</p>
+        <p>Te trzy obszary nie konkurują ze sobą. Razem tworzą zestaw kompetencji potrzebnych osobom wspierającym klientów rynku pracy.</p>
+        <div class="public-actions"><a class="public-btn" href="szkolenia.html">Przeczytaj szczegółowe opisy</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="public-section reveal">
+    <div class="public-cta">
+      <div>
+        <h2>Sprawdź aktualne nabory</h2>
+        <p>Formularze są udostępniane przy szkoleniach, dla których został uruchomiony nabór.</p>
+      </div>
+      <a class="public-btn light" href="zapisy.html">Zapisy na szkolenia</a>
+    </div>
+  </section>
+
+  <div class="brand-bar reveal">
     <img src="grafiki/logotypy-pasek.png" alt="Logotypy projektu Edukacja bez granic, Kierunek Kompetencje 4.0, Unii Europejskiej i WUP w Katowicach">
-  </section>
-
-  <section class="section generator-section">
-    <h2>Zapisy na szkolenia</h2>
-    <p class="portal-lead">Osobna strona z formularzami Google Forms dla wszystkich tematów szkoleniowych z panelu trenera.</p>
-    <div class="generator-grid">
-      <article class="generator-card generator-card-wide" style="--accent:#0e7490;--accent-rgb:14,116,144;">
-        <span class="tag">formularze</span>
-        <h3>Formularze zapisów na szkolenia</h3>
-        <p>Strona dzieli ofertę na nowe programy wynikające z projektu Edukacja bez granic oraz pozostałe szkolenia dostępne w panelu trenera, w tym materiały z projektu Kierunek Kompetencje 4.0 i innych programów mobilności.</p>
-        <a class="btn" href="zapisy.html">Przejdź do zapisów</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="section generator-section">
-    <h2>Generator zaświadczeń</h2>
-    <p class="portal-lead">Jedna wersja generatora działająca w przeglądarce na każdym komputerze.</p>
-    <div class="generator-grid">
-      <article class="generator-card generator-card-wide">
-        <span class="tag">HTML / przeglądarka</span>
-        <h3>Generator zaświadczeń</h3>
-        <p>Uniwersalna wersja generatora do przygotowania zaświadczeń, listy uczestników do podpisu, plików PDF i CSV. Działa lokalnie w Chrome, Edge lub Safari.</p>
-        <a class="btn" href="generator-zaswiadczen-html/index.html" target="_blank" rel="noopener noreferrer" data-access-protected="generator" data-access-label="generatora zaświadczeń">Otwórz generator</a>
-        <p class="small">Nie trzeba wybierać wersji Mac lub Windows. Wystarczy otworzyć generator w przeglądarce.</p>
-      </article>
-    </div>
-  </section>
-
-  <p class="footer">Projekt portalu szkoleń. Wersja robocza z miejscem na grafiki.</p>
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><strong>Edukacja bez granic</strong><p>Projekt Wojewódzkiego Urzędu Pracy w Katowicach realizowany w ramach programu Erasmus+.</p></div>
+    <nav class="site-footer-links" aria-label="Nawigacja w stopce">
+      <a href="o-projekcie.html">O projekcie</a>
+      <a href="szkolenia.html">Program szkoleń</a>
+      <a href="zapisy.html">Zapisy</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel-trenera.html">Panel trenera</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>

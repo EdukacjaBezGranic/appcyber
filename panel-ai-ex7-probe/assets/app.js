@@ -1,5 +1,5 @@
 const EXERCISES = window.EXERCISES || {};
-const APP_VERSION = '20260602-06';
+const APP_VERSION = '20260709-03';
 const TOOL_SETS = {
   default: {
     intro: 'Użyjcie narzędzia, do którego macie dostęp. Wystarczy jedno narzędzie tekstowe; nie trzeba testować wszystkich.',
