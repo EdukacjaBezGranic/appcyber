@@ -205,6 +205,10 @@ body.public-page a {
   min-height: 440px;
 }
 
+.public-hero.inner-hero.project-hero {
+  min-height: 370px;
+}
+
 .public-hero::after {
   content: "";
   position: absolute;
@@ -225,6 +229,41 @@ body.public-page a {
   width: min(310px, 68%);
   margin-bottom: 26px;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, .3));
+}
+
+.home-hero-logo {
+  width: min(360px, 70%);
+  margin-bottom: 22px;
+}
+
+.public-hero-logo-link {
+  display: inline-block;
+  max-width: min(310px, 68%);
+  margin-bottom: 26px;
+  line-height: 0;
+}
+
+.public-hero-logo-link .public-hero-logo {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.public-hero.inner-hero .public-hero-logo-link {
+  max-width: 132px;
+  margin-bottom: 16px;
+}
+
+.project-hero .public-hero-content {
+  padding: 38px 44px;
+}
+
+.project-hero .public-hero-logo-link {
+  max-width: 132px;
+  margin-bottom: 16px;
+}
+
+.project-hero .public-hero-logo {
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .32));
 }
 
 .public-hero h1 {
@@ -281,6 +320,14 @@ body.public-page a {
   transform: translateY(-2px);
 }
 
+.public-btn:not(.light):not(.signup-btn-disabled),
+.public-btn:not(.light):not(.signup-btn-disabled):visited,
+.public-btn:not(.light):not(.signup-btn-disabled):hover,
+.public-btn:not(.light):not(.signup-btn-disabled):focus,
+.public-btn:not(.light):not(.signup-btn-disabled):active {
+  color: #fff;
+}
+
 .public-btn.light {
   color: #15243a;
   background: rgba(255, 255, 255, .93);
@@ -322,6 +369,25 @@ body.public-page a {
   color: var(--public-muted);
   font-size: 17px;
   line-height: 1.68;
+}
+
+.project-intro-head {
+  grid-template-columns: minmax(0, .68fr) minmax(150px, 220px) minmax(0, 1.18fr);
+  align-items: center;
+}
+
+.project-intro-logo {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-intro-logo img {
+  display: block;
+  max-width: 190px;
+  max-height: 88px;
+  object-fit: contain;
 }
 
 .public-route-grid {
@@ -862,6 +928,32 @@ body.public-page a {
     width: min(270px, 82%);
   }
 
+  .home-hero-logo {
+    width: min(285px, 80%);
+  }
+
+  .public-hero-logo-link {
+    max-width: min(270px, 82%);
+  }
+
+  .public-hero.inner-hero .public-hero-logo-link {
+    max-width: 104px;
+    margin-bottom: 14px;
+  }
+
+  .project-hero {
+    min-height: 440px;
+  }
+
+  .project-hero .public-hero-content {
+    padding: 28px 22px;
+  }
+
+  .project-hero .public-hero-logo-link {
+    max-width: 104px;
+    margin-bottom: 14px;
+  }
+
   .public-hero h1 {
     font-size: 40px;
   }
@@ -885,6 +977,21 @@ body.public-page a {
 
   .public-section-head {
     gap: 14px;
+  }
+
+  .project-intro-head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-intro-logo {
+    min-height: 0;
+    justify-content: flex-start;
+  }
+
+  .project-intro-logo img {
+    max-width: 170px;
+    max-height: 84px;
   }
 
   .public-section h2,
@@ -941,6 +1048,23 @@ body.public-page a {
 .signup-public-hero {
   min-height: 460px;
   background-position: center 42%;
+}
+
+.signup-hero-actions {
+  margin-top: 24px;
+}
+
+.signup-calendar-btn {
+  min-width: 142px;
+  color: #fff;
+  background: #d4a017;
+  border-color: #d4a017;
+  box-shadow: 0 12px 28px rgba(212, 160, 23, .28);
+}
+
+.signup-calendar-btn:hover {
+  background: #b8860f;
+  border-color: #b8860f;
 }
 
 .signup-intro-section {
