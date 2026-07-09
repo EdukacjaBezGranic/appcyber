@@ -146,6 +146,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 380px;
   gap: 24px;
+  margin-top: 24px;
   align-items: start;
 }
 
@@ -674,6 +675,10 @@
 
   .calendar-hero-mark img {
     width: 118px;
+  }
+
+  .calendar-layout {
+    margin-top: 18px;
   }
 
   .calendar-strip {

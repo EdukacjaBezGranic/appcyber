@@ -193,7 +193,7 @@ body.public-page a {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 560px;
+  min-height: 370px;
   align-items: end;
   background-position: center;
   background-size: cover;
@@ -202,7 +202,7 @@ body.public-page a {
 }
 
 .public-hero.inner-hero {
-  min-height: 440px;
+  min-height: 370px;
 }
 
 .public-hero.inner-hero.project-hero {
@@ -219,27 +219,27 @@ body.public-page a {
 .public-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
-  padding: 48px;
+  max-width: 800px;
+  padding: 38px 44px;
   color: #fff;
 }
 
 .public-hero-logo {
   display: block;
-  width: min(310px, 68%);
-  margin-bottom: 26px;
+  width: min(240px, 58%);
+  margin-bottom: 18px;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, .3));
 }
 
 .home-hero-logo {
-  width: min(360px, 70%);
-  margin-bottom: 22px;
+  width: min(230px, 54%);
+  margin-bottom: 16px;
 }
 
 .public-hero-logo-link {
   display: inline-block;
-  max-width: min(310px, 68%);
-  margin-bottom: 26px;
+  max-width: min(240px, 58%);
+  margin-bottom: 18px;
   line-height: 0;
 }
 
@@ -249,8 +249,8 @@ body.public-page a {
 }
 
 .public-hero.inner-hero .public-hero-logo-link {
-  max-width: 132px;
-  margin-bottom: 16px;
+  max-width: 118px;
+  margin-bottom: 14px;
 }
 
 .project-hero .public-hero-content {
@@ -258,8 +258,8 @@ body.public-page a {
 }
 
 .project-hero .public-hero-logo-link {
-  max-width: 132px;
-  margin-bottom: 16px;
+  max-width: 118px;
+  margin-bottom: 14px;
 }
 
 .project-hero .public-hero-logo {
@@ -269,32 +269,32 @@ body.public-page a {
 .public-hero h1 {
   margin: 0;
   color: #fff;
-  font-size: 56px;
-  line-height: 1.02;
+  font-size: clamp(40px, 4.5vw, 48px);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
 .public-hero h1 span {
   display: block;
-  margin-top: 9px;
-  font-size: 26px;
+  margin-top: 7px;
+  font-size: 22px;
   font-weight: 650;
   line-height: 1.22;
 }
 
 .public-hero p {
   max-width: 680px;
-  margin: 20px 0 0;
+  margin: 14px 0 0;
   color: rgba(255, 255, 255, .9);
-  font-size: 18px;
-  line-height: 1.58;
+  font-size: 16.5px;
+  line-height: 1.52;
 }
 
 .public-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 26px;
+  margin-top: 18px;
 }
 
 .public-btn {
@@ -912,7 +912,7 @@ body.public-page a {
   }
 
   .public-hero {
-    min-height: 600px;
+    min-height: 480px;
     background-position: 62% center;
   }
 
@@ -921,28 +921,30 @@ body.public-page a {
   }
 
   .public-hero-content {
-    padding: 28px 22px;
+    padding: 30px 22px;
   }
 
   .public-hero-logo {
-    width: min(270px, 82%);
-  }
-
-  .home-hero-logo {
-    width: min(285px, 80%);
-  }
-
-  .public-hero-logo-link {
-    max-width: min(270px, 82%);
-  }
-
-  .public-hero.inner-hero .public-hero-logo-link {
-    max-width: 104px;
+    width: min(210px, 72%);
     margin-bottom: 14px;
   }
 
+  .home-hero-logo {
+    width: min(190px, 68%);
+    margin-bottom: 14px;
+  }
+
+  .public-hero-logo-link {
+    max-width: min(210px, 72%);
+  }
+
+  .public-hero.inner-hero .public-hero-logo-link {
+    max-width: 92px;
+    margin-bottom: 12px;
+  }
+
   .project-hero {
-    min-height: 440px;
+    min-height: 480px;
   }
 
   .project-hero .public-hero-content {
@@ -950,20 +952,21 @@ body.public-page a {
   }
 
   .project-hero .public-hero-logo-link {
-    max-width: 104px;
-    margin-bottom: 14px;
+    max-width: 92px;
+    margin-bottom: 12px;
   }
 
   .public-hero h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .public-hero h1 span {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .public-hero p {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .public-actions,
@@ -1046,7 +1049,7 @@ body.public-page a {
 }
 
 .signup-public-hero {
-  min-height: 460px;
+  min-height: 370px;
   background-position: center 42%;
 }
 
@@ -1306,7 +1309,7 @@ body.public-page a {
 
 @media (max-width: 720px) {
   .signup-public-hero {
-    min-height: 440px;
+    min-height: 480px;
     background-position: 58% center;
   }
 

@@ -34,9 +34,10 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(150px, 240px);
   gap: 24px;
-  align-items: center;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--line);
+  min-height: 370px;
+  align-items: stretch;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .hero-copy {
@@ -44,8 +45,8 @@ body {
   overflow: hidden;
   display: grid;
   align-content: center;
-  min-height: 205px;
-  padding: 24px 28px;
+  min-height: 370px;
+  padding: 38px 44px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, .92) 0%, rgba(248, 250, 252, .9) 58%, rgba(226, 232, 240, .72) 100%);
   border: 1px solid var(--line);
@@ -96,9 +97,9 @@ body {
 
 .hero h1 {
   max-width: 660px;
-  margin: 8px 0 10px;
+  margin: 6px 0 10px;
   color: #0f172a;
-  font-size: clamp(34px, 4.2vw, 52px);
+  font-size: clamp(38px, 4.2vw, 48px);
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -110,7 +111,7 @@ body {
 .hero h1 .title-sub {
   margin-top: 4px;
   color: #334155;
-  font-size: .64em;
+  font-size: .62em;
   font-weight: 650;
 }
 
@@ -118,14 +119,14 @@ body {
   max-width: 620px;
   margin: 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15.5px;
   line-height: 1.45;
 }
 
 .hero-visual {
   display: grid;
-  min-height: 0;
-  place-items: center end;
+  min-height: 370px;
+  place-items: center;
   padding: 0;
   background: transparent;
   border: 0;
@@ -135,7 +136,7 @@ body {
 
 .hero-visual img {
   display: block;
-  width: min(210px, 100%);
+  width: min(170px, 100%);
   height: auto;
   object-fit: contain;
 }
@@ -746,11 +747,12 @@ body {
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(96px, 150px);
     gap: 14px;
+    min-height: 300px;
   }
 
   .hero-copy {
-    min-height: 170px;
-    padding: 20px;
+    min-height: 300px;
+    padding: 28px;
   }
 
   .hero h1 {
@@ -762,7 +764,7 @@ body {
   }
 
   .hero-visual img {
-    width: min(132px, 100%);
+    width: min(118px, 100%);
   }
 
   .training-grid {
@@ -802,17 +804,18 @@ body {
     grid-template-columns: minmax(0, 1fr) 84px;
     gap: 10px;
     padding-bottom: 14px;
+    min-height: 250px;
   }
 
   .hero-copy {
-    min-height: 128px;
-    padding: 16px;
+    min-height: 250px;
+    padding: 20px;
   }
 
   .hero h1 {
-    max-width: 240px;
+    max-width: 270px;
     margin: 6px 0 8px;
-    font-size: clamp(27px, 7.5vw, 32px);
+    font-size: clamp(26px, 7.2vw, 31px);
     line-height: 1.04;
   }
 
@@ -822,7 +825,7 @@ body {
   }
 
   .hero p {
-    max-width: 260px;
+    max-width: 300px;
     font-size: 14px;
     line-height: 1.38;
   }
@@ -832,7 +835,7 @@ body {
   }
 
   .hero-visual img {
-    width: 82px;
+    width: 74px;
   }
 
   .section {
@@ -930,7 +933,7 @@ body {
 
   .hero h1 {
     max-width: 220px;
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .hero p {
@@ -938,7 +941,7 @@ body {
   }
 
   .hero-visual img {
-    width: 70px;
+    width: 64px;
   }
 }
 
