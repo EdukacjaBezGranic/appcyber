@@ -1,136 +1,28 @@
 const projectLogo = 'grafiki/logo-projektu-symbol-transparent.png';
 const competencesLogo = 'grafiki/kierunek-kompetencje.png';
+const portalData = window.portalSiteData || {};
 
-const trainingEvents = [
-  {
-    id: 'fake-news',
-    source: 'Projekt Edukacja bez granic',
-    title: 'Myślenie krytyczne, dezinformacja i manipulacja',
-    shortTitle: 'Myślenie krytyczne',
-    date: '2026-09-08',
-    time: '9:00-13:00',
-    place: 'Wojewódzki Urząd Pracy w Katowicach',
-    description: [
-      'Szkolenie pomaga rozpoznawać fałszywe i manipulacyjne treści, oceniać wiarygodność źródeł oraz odróżniać fakty od opinii i emocjonalnych przekazów.',
-      'Uczestnicy poznają praktyczne metody weryfikowania informacji, zdjęć i internetowych publikacji. Uczą się także, jak spokojnie reagować na niepewne treści i wspierać innych w podejmowaniu decyzji na podstawie sprawdzonych danych.'
-    ],
-    audience: 'Pracownicy instytucji publicznych, doradcy zawodowi, edukatorzy i osoby pracujące z informacją.',
-    color: '#d4a017',
-    tone: 'gold',
-    logo: projectLogo,
-    link: 'https://forms.gle/KzJmaQr8hvH5dkGM8',
-    button: 'Zapisz się - formularz Google',
-    open: true
-  },
-  {
-    id: 'komunikacja',
-    source: 'Projekt Edukacja bez granic',
-    title: 'Wystąpienia publiczne i storytelling',
-    shortTitle: 'Wystąpienia',
-    date: '2026-09-15',
-    time: '9:00-13:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie rozwija umiejętność jasnego, uporządkowanego i przekonującego przekazywania informacji podczas spotkań, prezentacji oraz pracy z grupą.',
-      'Uczestnicy uczą się budować strukturę wypowiedzi, wykorzystywać storytelling, pracować głosem i mową ciała, a także spokojnie reagować na pytania i dopasowywać przekaz do odbiorców.'
-    ],
-    audience: 'Osoby prowadzące spotkania, warsztaty, prezentacje i rozmowy z klientami lub partnerami.',
-    color: '#0f5132',
-    tone: 'green',
-    logo: projectLogo,
-    open: false
-  },
-  {
-    id: 'grywalizacja',
-    source: 'Projekt Edukacja bez granic',
-    title: 'Grywalizacja, uczenie przez gry i doświadczenie',
-    shortTitle: 'Grywalizacja',
-    date: '2026-09-22',
-    time: '9:00-13:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie pokazuje, jak wykorzystywać gry, wyzwania i mechanizmy motywacyjne w edukacji dorosłych, aby zwiększać zaangażowanie i ułatwiać naukę przez działanie.',
-      'Uczestnicy uczą się projektować praktyczne aktywności, jasno określać cele i zasady, wykorzystywać informację zwrotną oraz tworzyć bezpieczną przestrzeń do testowania nowych rozwiązań.'
-    ],
-    audience: 'Edukatorzy, trenerzy, doradcy zawodowi i osoby projektujące aktywności rozwojowe.',
-    color: '#0b2e59',
-    tone: 'blue',
-    logo: projectLogo,
-    open: false
-  },
-  {
-    id: 'ai',
-    source: 'Kierunek Kompetencje 4.0',
-    title: 'Praktyczne wykorzystanie sztucznej inteligencji',
-    shortTitle: 'AI w praktyce',
-    date: '2026-09-24',
-    time: '10:00-14:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie pokazuje, jak korzystać z narzędzi AI w pracy zawodowej i edukacyjnej.',
-      'Uczy tworzenia treści, przygotowywania materiałów, automatyzacji prostych zadań, pracy z promptami oraz bezpiecznego i odpowiedzialnego korzystania z AI.'
-    ],
-    audience: 'Pracownicy instytucji publicznych, edukatorzy, trenerzy oraz osoby zainteresowane praktycznym użyciem AI.',
-    color: '#0e7490',
-    tone: 'cyan',
-    logo: competencesLogo,
-    open: false
-  },
-  {
-    id: 'sel',
-    source: 'Kierunek Kompetencje 4.0',
-    title: 'Social and Emotional Learning',
-    shortTitle: 'SEL',
-    date: '2026-09-29',
-    time: '10:00-14:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie poświęcone jest rozwojowi kompetencji społecznych i emocjonalnych.',
-      'Uczy lepszej komunikacji, samoświadomości, empatii, współpracy, radzenia sobie z emocjami i budowania relacji w grupie.'
-    ],
-    audience: 'Osoby pracujące z grupami, klientami, uczącymi się dorosłymi oraz zespołami.',
-    color: '#0f8f68',
-    tone: 'green',
-    logo: competencesLogo,
-    open: false
-  },
-  {
-    id: 'cyber',
-    source: 'Program mobilności',
-    title: 'Cyberbezpieczeństwo',
-    shortTitle: 'Cyberbezpieczeństwo',
-    date: '2026-10-06',
-    time: '10:00-14:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie pomaga bezpieczniej korzystać z poczty elektronicznej, stron internetowych, urządzeń i usług cyfrowych wykorzystywanych w codziennej pracy.',
-      'Uczestnicy uczą się rozpoznawać phishing, podejrzane linki i załączniki, chronić dane oraz właściwie reagować na sytuacje, które mogą prowadzić do incydentu bezpieczeństwa.'
-    ],
-    audience: 'Pracownicy korzystający z narzędzi cyfrowych, poczty elektronicznej i systemów informacyjnych.',
-    color: '#2563eb',
-    tone: 'blue',
-    logo: projectLogo,
-    open: false
-  },
-  {
-    id: 'mindfulness',
-    source: 'Program mobilności',
-    title: 'Mindfulness',
-    shortTitle: 'Mindfulness',
-    date: '2026-10-13',
-    time: '10:00-14:00',
-    place: 'Termin i miejsce do potwierdzenia',
-    description: [
-      'Szkolenie pokazuje, jak świadomie zarządzać uwagą, napięciem i własnymi reakcjami w wymagającym środowisku pracy.',
-      'Uczestnicy poznają proste praktyki wspierające koncentrację, równowagę emocjonalną, spokojniejszą komunikację oraz lepsze rozpoznawanie własnych potrzeb i granic.'
-    ],
-    audience: 'Osoby zainteresowane spokojniejszą pracą, lepszą koncentracją i dbaniem o własne zasoby.',
-    color: '#64748b',
-    tone: 'slate',
-    logo: projectLogo,
-    open: false
-  }
-];
+const normalizeDescription = (description) => {
+  if (Array.isArray(description)) return description;
+  if (!description) return [];
+  return String(description).split('\n').map((line) => line.trim()).filter(Boolean);
+};
+
+const inferTone = (event) => {
+  if (event.tone) return event.tone;
+  if (event.id === 'fake-news') return 'gold';
+  if (event.id === 'komunikacja' || event.id === 'sel' || event.id === 'mindfulness') return 'green';
+  if (event.id === 'ai') return 'cyan';
+  return 'blue';
+};
+
+const trainingEvents = (portalData.trainings || []).map((event) => ({
+  ...event,
+  description: normalizeDescription(event.description),
+  logo: event.logo || (event.source === 'Kierunek Kompetencje 4.0' ? competencesLogo : projectLogo),
+  button: event.button || (event.open ? 'Zapisz się - formularz Google' : 'Zapisy wkrótce'),
+  tone: inferTone(event)
+}));
 
 const minMonth = { year: 2026, month: 8 };
 const maxMonth = { year: 2027, month: 11 };
@@ -151,8 +43,10 @@ const calendarModeButtons = document.querySelectorAll('[data-calendar-mode]');
 const calendarViews = document.querySelectorAll('[data-calendar-view]');
 
 function parseDate(value) {
+  if (!value) return null;
   const [year, month, day] = value.split('-').map(Number);
-  return new Date(year, month - 1, day);
+  const date = new Date(year, month - 1, day);
+  return Number.isNaN(date.getTime()) ? null : date;
 }
 
 function monthIndex(year, month) {
@@ -164,25 +58,27 @@ function formatMonth(year, month) {
 }
 
 function formatFullDate(value) {
+  const date = parseDate(value);
+  if (!date) return 'Termin wkrótce';
   return new Intl.DateTimeFormat('pl-PL', {
     weekday: 'long',
     day: 'numeric',
     month: 'long',
     year: 'numeric'
-  }).format(parseDate(value));
+  }).format(date);
 }
 
 function eventsInMonth(year, month) {
   return trainingEvents
     .filter(event => {
       const eventDate = parseDate(event.date);
-      return eventDate.getFullYear() === year && eventDate.getMonth() === month;
+      return eventDate && eventDate.getFullYear() === year && eventDate.getMonth() === month;
     })
     .sort((a, b) => parseDate(a.date) - parseDate(b.date));
 }
 
 function eventById(id) {
-  return trainingEvents.find(event => event.id === id) || trainingEvents[0];
+  return trainingEvents.find(event => event.id === id) || trainingEvents.find(event => parseDate(event.date)) || trainingEvents[0];
 }
 
 function setText(selector, value) {
@@ -220,10 +116,12 @@ function renderDetailLogo(event) {
 
   logo.src = event.logo || projectLogo;
   logoWrap.style.setProperty('--detail-color', event.color);
+  detailPanel?.style.setProperty('--detail-color', event.color || '#0b3fa8');
 }
 
 function selectEvent(id) {
   const event = eventById(id);
+  if (!event) return;
   selectedEventId = event.id;
 
   setText('[data-detail-source]', event.source);
@@ -246,6 +144,7 @@ function makeEventButton(event) {
   button.className = `calendar-event ${event.open ? 'is-open' : 'is-waiting'} is-${event.tone}`;
   button.type = 'button';
   button.dataset.eventId = event.id;
+  button.style.setProperty('--event-color', event.color || '#2563eb');
   button.innerHTML = `<small>${event.time}</small>${event.shortTitle}`;
   return button;
 }
@@ -275,7 +174,7 @@ function renderMonth() {
 
     const events = monthEvents.filter(event => {
       const eventDate = parseDate(event.date);
-      return eventDate.toDateString() === cellDate.toDateString();
+      return eventDate && eventDate.toDateString() === cellDate.toDateString();
     });
 
     events.forEach(event => day.append(makeEventButton(event)));
@@ -304,6 +203,7 @@ function renderList(monthEvents) {
     button.className = 'calendar-list-item';
     button.type = 'button';
     button.dataset.eventId = event.id;
+    button.style.setProperty('--event-color', event.color || '#2563eb');
     button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small></span><b>${event.title}</b>`;
     calendarList.append(button);
   });
@@ -335,10 +235,13 @@ function changeMonth(delta) {
 }
 
 function goToNearestEvent() {
-  const firstEvent = trainingEvents[0];
+  const firstEvent = trainingEvents.find(event => parseDate(event.date)) || trainingEvents[0];
+  if (!firstEvent) return;
   const date = parseDate(firstEvent.date);
-  currentYear = date.getFullYear();
-  currentMonth = date.getMonth();
+  if (date) {
+    currentYear = date.getFullYear();
+    currentMonth = date.getMonth();
+  }
   selectedEventId = firstEvent.id;
   renderMonth();
 }

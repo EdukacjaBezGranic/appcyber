@@ -193,7 +193,7 @@ body.public-page a {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 370px;
+  min-height: 390px;
   align-items: end;
   background-position: center;
   background-size: cover;
@@ -202,11 +202,11 @@ body.public-page a {
 }
 
 .public-hero.inner-hero {
-  min-height: 370px;
+  min-height: 390px;
 }
 
 .public-hero.inner-hero.project-hero {
-  min-height: 370px;
+  min-height: 390px;
 }
 
 .public-hero::after {
@@ -219,47 +219,83 @@ body.public-page a {
 .public-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  padding: 38px 44px;
+  max-width: 780px;
+  padding: 34px 42px 36px;
   color: #fff;
 }
 
 .public-hero-logo {
   display: block;
-  width: min(240px, 58%);
-  margin-bottom: 18px;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, .3));
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, .28));
 }
 
 .home-hero-logo {
-  width: min(230px, 54%);
-  margin-bottom: 16px;
+  width: clamp(220px, 22vw, 280px);
+  max-width: 72%;
+  margin-bottom: 20px;
 }
 
 .public-hero-logo-link {
-  display: inline-block;
-  max-width: min(240px, 58%);
-  margin-bottom: 18px;
+  display: inline-flex;
+  width: clamp(220px, 22vw, 280px);
+  max-width: 72%;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-start;
   line-height: 0;
 }
 
 .public-hero-logo-link .public-hero-logo {
   width: 100%;
-  margin-bottom: 0;
+}
+
+.public-hero-eu {
+  position: absolute;
+  z-index: 1;
+  right: clamp(18px, 3vw, 40px);
+  top: clamp(16px, 2.8vw, 34px);
+  width: clamp(165px, 13vw, 220px);
+  max-width: 20%;
+  padding: clamp(6px, .8vw, 10px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .28));
+}
+
+.public-hero-eu::before {
+  content: "";
+  position: absolute;
+  inset: -54% -48%;
+  z-index: -1;
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at 52% 48%, rgba(5, 14, 28, .54) 0%, rgba(5, 14, 28, .36) 34%, rgba(5, 14, 28, .16) 58%, rgba(5, 14, 28, 0) 82%);
+  filter: blur(24px);
+  opacity: .88;
+}
+
+.public-hero-eu img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .public-hero.inner-hero .public-hero-logo-link {
-  max-width: 118px;
-  margin-bottom: 14px;
+  width: clamp(220px, 22vw, 280px);
+  max-width: 72%;
+  margin-bottom: 20px;
 }
 
 .project-hero .public-hero-content {
-  padding: 38px 44px;
+  padding: 32px 40px;
 }
 
 .project-hero .public-hero-logo-link {
-  max-width: 118px;
-  margin-bottom: 14px;
+  width: clamp(220px, 22vw, 280px);
+  max-width: 72%;
+  margin-bottom: 20px;
 }
 
 .project-hero .public-hero-logo {
@@ -269,32 +305,32 @@ body.public-page a {
 .public-hero h1 {
   margin: 0;
   color: #fff;
-  font-size: clamp(40px, 4.5vw, 48px);
+  font-size: clamp(38px, 4.1vw, 44px);
   line-height: 1.04;
   letter-spacing: 0;
 }
 
 .public-hero h1 span {
   display: block;
-  margin-top: 7px;
-  font-size: 22px;
+  margin-top: 6px;
+  font-size: 20px;
   font-weight: 650;
   line-height: 1.22;
 }
 
 .public-hero p {
   max-width: 680px;
-  margin: 14px 0 0;
+  margin: 12px 0 0;
   color: rgba(255, 255, 255, .9);
-  font-size: 16.5px;
-  line-height: 1.52;
+  font-size: 15.5px;
+  line-height: 1.5;
 }
 
 .public-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .public-btn {
@@ -921,26 +957,38 @@ body.public-page a {
   }
 
   .public-hero-content {
-    padding: 30px 22px;
+    padding: 28px 22px 30px;
   }
 
   .public-hero-logo {
-    width: min(210px, 72%);
-    margin-bottom: 14px;
+    width: 100%;
   }
 
   .home-hero-logo {
-    width: min(190px, 68%);
-    margin-bottom: 14px;
+    width: min(250px, 76%);
+    max-width: 76%;
+    margin-bottom: 18px;
   }
 
   .public-hero-logo-link {
-    max-width: min(210px, 72%);
+    width: min(250px, 76%);
+    max-width: 76%;
+    margin-bottom: 18px;
+  }
+
+  .public-hero-eu {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: min(210px, 68%);
+    margin: -4px 0 30px 22px;
+    max-width: calc(100% - 44px);
   }
 
   .public-hero.inner-hero .public-hero-logo-link {
-    max-width: 92px;
-    margin-bottom: 12px;
+    width: min(250px, 76%);
+    max-width: 76%;
+    margin-bottom: 18px;
   }
 
   .project-hero {
@@ -952,8 +1000,9 @@ body.public-page a {
   }
 
   .project-hero .public-hero-logo-link {
-    max-width: 92px;
-    margin-bottom: 12px;
+    width: min(250px, 76%);
+    max-width: 76%;
+    margin-bottom: 18px;
   }
 
   .public-hero h1 {
@@ -1049,7 +1098,7 @@ body.public-page a {
 }
 
 .signup-public-hero {
-  min-height: 370px;
+  min-height: 390px;
   background-position: center 42%;
 }
 
@@ -1168,6 +1217,14 @@ body.public-page a {
   font-size: 23px;
   line-height: 1.18;
   letter-spacing: 0;
+}
+
+.signup-training-meta {
+  margin: -6px 0 16px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.45;
 }
 
 .signup-training-copy {

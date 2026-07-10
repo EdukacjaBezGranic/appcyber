@@ -34,7 +34,7 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(150px, 240px);
   gap: 24px;
-  min-height: 370px;
+  min-height: 390px;
   align-items: stretch;
   padding-bottom: 0;
   border-bottom: 0;
@@ -45,8 +45,8 @@ body {
   overflow: hidden;
   display: grid;
   align-content: center;
-  min-height: 370px;
-  padding: 38px 44px;
+  min-height: 390px;
+  padding: 32px 40px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, .92) 0%, rgba(248, 250, 252, .9) 58%, rgba(226, 232, 240, .72) 100%);
   border: 1px solid var(--line);
@@ -99,7 +99,7 @@ body {
   max-width: 660px;
   margin: 6px 0 10px;
   color: #0f172a;
-  font-size: clamp(38px, 4.2vw, 48px);
+  font-size: clamp(38px, 4.1vw, 44px);
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -111,7 +111,7 @@ body {
 .hero h1 .title-sub {
   margin-top: 4px;
   color: #334155;
-  font-size: .62em;
+  font-size: .6em;
   font-weight: 650;
 }
 
@@ -119,13 +119,13 @@ body {
   max-width: 620px;
   margin: 0;
   color: var(--muted);
-  font-size: 15.5px;
+  font-size: 15px;
   line-height: 1.45;
 }
 
 .hero-visual {
   display: grid;
-  min-height: 370px;
+  min-height: 390px;
   place-items: center;
   padding: 0;
   background: transparent;
@@ -136,7 +136,7 @@ body {
 
 .hero-visual img {
   display: block;
-  width: min(170px, 100%);
+  width: min(150px, 100%);
   height: auto;
   object-fit: contain;
 }
