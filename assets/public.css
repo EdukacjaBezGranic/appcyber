@@ -555,6 +555,22 @@ body.public-page a {
   object-fit: cover;
 }
 
+.public-media-poster {
+  min-height: 520px;
+  padding: clamp(10px, 1.6vw, 18px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(246, 248, 251, .92)),
+    radial-gradient(circle at 18% 12%, rgba(14, 116, 144, .12), transparent 36%);
+}
+
+.public-media-poster img {
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, .12);
+}
+
 .public-list {
   display: grid;
   gap: 10px;
