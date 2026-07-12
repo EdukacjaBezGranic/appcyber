@@ -2112,3 +2112,59 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 760px) {
   .public-hero.contact-hero { background-position: 57% center; }
 }
+
+/* Krótkie zapowiedzi filmowe na stronie nowych tematów szkoleń */
+.training-video-card { overflow: hidden; }
+.training-video-trigger {
+  position: relative; display: block; width: 100%; padding: 0; border: 0;
+  background: #0b1d33; cursor: pointer; overflow: hidden; text-align: left;
+}
+.training-video-trigger img {
+  display: block; width: 100%; height: 100%; min-height: 310px; object-fit: cover;
+  transition: transform .4s ease, filter .3s ease;
+}
+.training-video-trigger::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(7,23,43,.04) 35%, rgba(7,23,43,.68) 100%);
+}
+.training-video-trigger:hover img { transform: scale(1.025); filter: saturate(1.04); }
+.training-video-play {
+  position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  display: grid; place-items: center; width: 72px; height: 72px; padding-left: 5px;
+  border-radius: 50%; color: #fff; background: rgba(255,255,255,.2);
+  border: 2px solid rgba(255,255,255,.9); backdrop-filter: blur(8px);
+  font-size: 28px; box-shadow: 0 14px 36px rgba(0,0,0,.28); transition: .22s ease;
+}
+.training-video-trigger:hover .training-video-play { transform: translate(-50%,-50%) scale(1.08); background: rgba(255,255,255,.3); }
+.training-video-label {
+  position: absolute; z-index: 2; left: 18px; bottom: 16px; color: #fff;
+  font-size: 13px; font-weight: 800; letter-spacing: .02em;
+}
+body.video-modal-open { overflow: hidden; }
+.training-video-modal {
+  position: fixed; inset: 0; z-index: 4000; display: grid; place-items: center;
+  padding: clamp(16px,4vw,52px); background: rgba(5,14,27,.76);
+  backdrop-filter: blur(9px); opacity: 0; visibility: hidden; transition: .22s ease;
+}
+.training-video-modal.is-open { opacity: 1; visibility: visible; }
+.training-video-dialog {
+  position: relative; width: min(1040px,92vw); border-radius: 18px; overflow: hidden;
+  background: #000; box-shadow: 0 30px 100px rgba(0,0,0,.5);
+  transform: translateY(10px) scale(.985); transition: transform .25s ease;
+}
+.training-video-modal.is-open .training-video-dialog { transform: none; }
+.training-video-player { display: block; width: 100%; max-height: 82vh; background: #000; }
+.training-video-close {
+  position: absolute; z-index: 3; top: 12px; right: 12px; width: 42px; height: 42px;
+  border: 0; border-radius: 50%; color: #fff; background: rgba(8,18,32,.72);
+  font-size: 30px; line-height: 1; cursor: pointer; backdrop-filter: blur(6px);
+}
+@media (max-width: 680px) {
+  .training-video-trigger img { min-height: 230px; }
+  .training-video-play { width: 62px; height: 62px; font-size: 24px; }
+  .training-video-modal { padding: 12px; }
+  .training-video-dialog { width: 96vw; border-radius: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .training-video-trigger img, .training-video-play, .training-video-modal, .training-video-dialog { transition: none; }
+}
