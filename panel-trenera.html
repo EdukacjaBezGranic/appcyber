@@ -4,10 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Centrum szkoleń - Panel trenera</title>
-<link rel="stylesheet" href="assets/portal.css?v=20260711-panel-gate-light">
-<script src="assets/portal.js?v=20260711-panel-gate" defer></script>
+<link rel="icon" type="image/png" href="grafiki/logo-projektu-symbol-transparent.png">
+<link rel="stylesheet" href="assets/public.css?v=20260712-visual-v3">
+<link rel="stylesheet" href="assets/portal.css?v=20260712-panel-integrated">
+<link rel="stylesheet" href="assets/trainer-integration.css?v=20260712-white-buttons-final">
+<script src="assets/public.js?v=20260709-04" defer></script>
+<script src="assets/portal.js?v=20260712-panel-integrated" defer></script>
 </head>
-<body class="trainer-gate-pending" data-panel-gate="trainer">
+<body class="public-page trainer-page trainer-gate-pending" data-panel-gate="trainer">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="index.html" aria-label="Edukacja bez granic - strona główna">
+      <img src="grafiki/logo-projektu-symbol-transparent.png" alt="">
+      <span>Edukacja bez granic<small>nowe kompetencje i umiejętności</small></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="siteNav" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" data-site-nav aria-label="Główna nawigacja">
+      <a href="index.html">Strona główna</a>
+      <a href="o-projekcie.html">O projekcie</a>
+      <a href="nasze-szkolenia.html">Nasze szkolenia</a>
+      <a href="szkolenia.html">Nowe tematy szkoleń</a>
+      <a class="nav-signups" href="zapisy.html">Zapisy na szkolenia</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="nav-trainer" href="panel-trenera.html" aria-current="page">Panel trenera</a>
+    </nav>
+  </div>
+</header>
 <div class="trainer-access-overlay" data-trainer-gate role="dialog" aria-modal="true" aria-labelledby="trainerGateTitle">
   <form class="trainer-access-box" data-trainer-gate-form>
     <span class="tag">dostęp chroniony</span>
@@ -16,22 +40,17 @@
     <label for="trainerPassword">Hasło</label>
     <div class="trainer-password-row">
       <input id="trainerPassword" name="trainerPassword" type="password" autocomplete="current-password" data-trainer-password>
-      <button class="btn" type="submit">Otwórz panel</button>
+      <button class="btn open-panel-btn" type="submit" style="color:#fff">Otwórz panel</button>
     </div>
     <p class="trainer-access-error" data-trainer-error aria-live="polite"></p>
   </form>
 </div>
-<main class="wrap">
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="tag">platforma szkoleń</span>
-      <h1><span class="title-main">Centrum szkoleń</span><span class="title-sub">Panel trenera</span></h1>
+<main class="wrap trainer-main">
+  <section class="public-hero inner-hero trainer-public-hero">
+    <div class="public-hero-content">
+      <span class="trainer-hero-kicker">platforma szkoleń</span>
+      <h1>Centrum szkoleń<span>Panel trenera</span></h1>
       <p>Jedno miejsce dla paneli szkoleniowych, materiałów, ćwiczeń i narzędzi prowadzącego.</p>
-    </div>
-    <div class="hero-visual">
-      <a class="project-home-logo" href="index.html" aria-label="Przejdź do strony głównej projektu Edukacja bez granic">
-        <img src="grafiki/logo-projektu-symbol-transparent.png" alt="Logo projektu Edukacja bez granic">
-      </a>
     </div>
   </section>
 
@@ -74,7 +93,7 @@
           <span>ćwiczenia warsztatowe</span>
           <span>bezpieczna praca z AI</span>
         </div>
-        <a class="btn" href="panel-ai-ex7-probe/index.html" data-app-path="panel-ai-ex7-probe/index.html" data-access-protected="training" data-access-label="panelu szkolenia">Otwórz panel</a>
+        <a class="btn open-panel-btn" href="panel-ai-ex7-probe/index.html" data-app-path="panel-ai-ex7-probe/index.html" data-access-protected="training" data-access-label="panelu szkolenia" style="color:#fff">Otwórz panel</a>
       </article>
 
       <article class="training-card" data-training="fake-news" tabindex="0" style="--accent:#b25b72;--accent-rgb:178,91,114;">
@@ -213,13 +232,25 @@
         <span class="tag">HTML / przeglądarka</span>
         <h3>Generator zaświadczeń</h3>
         <p>Uniwersalna wersja generatora do przygotowania zaświadczeń, listy uczestników do podpisu, plików PDF i CSV. Działa lokalnie w Chrome, Edge lub Safari.</p>
-        <a class="btn" href="generator-zaswiadczen-html/index.html" data-app-path="generator-zaswiadczen-html/index.html" target="_blank" rel="noopener noreferrer" data-access-protected="generator" data-access-label="generatora zaświadczeń">Otwórz generator</a>
+        <a class="btn open-generator-btn" href="generator-zaswiadczen-html/index.html" data-app-path="generator-zaswiadczen-html/index.html" target="_blank" rel="noopener noreferrer" data-access-protected="generator" data-access-label="generatora zaświadczeń" style="color:#fff">Otwórz generator</a>
         <p class="small">Nie trzeba wybierać wersji Mac lub Windows. Wystarczy otworzyć generator w przeglądarce.</p>
       </article>
     </div>
   </section>
-
-  <p class="footer">Projekt portalu szkoleń. Wersja robocza z miejscem na grafiki.</p>
 </main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><strong>Edukacja bez granic</strong><p>Projekt Wojewódzkiego Urzędu Pracy w Katowicach realizowany w ramach programu Erasmus+.</p></div>
+    <nav class="site-footer-links" aria-label="Nawigacja w stopce">
+      <a href="o-projekcie.html">O projekcie</a>
+      <a href="nasze-szkolenia.html">Nasze szkolenia</a>
+      <a href="szkolenia.html">Nowe tematy szkoleń</a>
+      <a href="zapisy.html">Zapisy</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel-trenera.html">Panel trenera</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>

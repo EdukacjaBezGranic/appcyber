@@ -1,0 +1,298 @@
+/* Integracja Panelu trenera z publiczną częścią portalu */
+body.public-page.trainer-page {
+  color: var(--public-text);
+  background: var(--public-bg);
+}
+
+.trainer-page .site-header,
+.trainer-page .site-footer {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body.trainer-gate-pending .site-header,
+body.trainer-gate-pending .site-footer,
+body.trainer-gate-pending .trainer-main {
+  pointer-events: none;
+  user-select: none;
+}
+
+body.trainer-gate-pending .trainer-main {
+  filter: blur(7px) saturate(.9);
+  transform: scale(.992);
+}
+
+.trainer-page .trainer-main {
+  width: min(var(--public-max), calc(100% - 40px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 24px 0 50px;
+}
+
+.trainer-page .hero {
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+  min-height: 330px;
+  gap: 18px;
+}
+
+.trainer-page .hero-copy {
+  min-height: 330px;
+  padding: 30px 36px;
+  border: 1px solid var(--public-line);
+  border-radius: 8px;
+  box-shadow: var(--public-shadow);
+}
+
+.trainer-page .hero-visual {
+  min-height: 330px;
+  border: 1px solid var(--public-line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.78);
+  box-shadow: var(--public-shadow);
+}
+
+.trainer-page .hero h1 {
+  color: var(--public-text);
+  font-size: clamp(36px, 4vw, 44px);
+}
+
+.trainer-page .hero h1 .title-sub,
+.trainer-page .hero p {
+  color: var(--public-muted);
+}
+
+.trainer-page .section {
+  margin-top: 22px;
+}
+
+.trainer-page .section h2 {
+  color: var(--public-text);
+  font-size: 23px;
+}
+
+.trainer-page .section h2::before {
+  background: linear-gradient(180deg, var(--public-teal), var(--public-blue));
+  box-shadow: 0 8px 18px rgba(14,116,144,.15);
+}
+
+.trainer-page .training-grid,
+.trainer-page .generator-section {
+  margin-inline: 0;
+  padding: 18px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid var(--public-line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.045);
+}
+
+.trainer-page .training-card,
+.trainer-page .training-info-card,
+.trainer-page .generator-card {
+  border-color: var(--public-line);
+  border-radius: 8px;
+  box-shadow: 0 7px 20px rgba(15,23,42,.055);
+}
+
+.trainer-page .training-card:hover,
+.trainer-page .training-card.is-selected {
+  box-shadow: 0 12px 28px rgba(15,23,42,.09);
+}
+
+.trainer-page .brand-strip {
+  margin-top: 22px;
+  border-radius: 8px;
+}
+
+.trainer-page .btn {
+  border-radius: 7px;
+}
+
+.trainer-page .trainer-access-overlay {
+  z-index: 1200;
+  background: rgba(232,236,241,.58);
+  backdrop-filter: blur(12px);
+}
+
+.trainer-page .trainer-access-box {
+  border-color: var(--public-line);
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(15,23,42,.2);
+}
+
+@media (min-width: 1280px) {
+  .trainer-page .trainer-main { padding-top: 20px; }
+  .trainer-page .hero { min-height: 305px; }
+  .trainer-page .hero-copy,
+  .trainer-page .hero-visual { min-height: 305px; }
+  .trainer-page .section { margin-top: 20px; }
+}
+
+@media (max-width: 900px) {
+  .trainer-page .trainer-main {
+    width: min(100% - 28px, var(--public-max));
+    padding-top: 18px;
+  }
+  .trainer-page .hero {
+    grid-template-columns: minmax(0,1fr) 130px;
+    min-height: 285px;
+  }
+  .trainer-page .hero-copy,
+  .trainer-page .hero-visual { min-height: 285px; }
+  .trainer-page .training-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 620px) {
+  .trainer-page .trainer-main {
+    width: min(100% - 24px, var(--public-max));
+    padding: 14px 0 34px;
+  }
+  .trainer-page .hero {
+    grid-template-columns: minmax(0,1fr) 84px;
+    min-height: 240px;
+    gap: 10px;
+  }
+  .trainer-page .hero-copy,
+  .trainer-page .hero-visual { min-height: 240px; }
+  .trainer-page .hero-copy { padding: 18px; }
+  .trainer-page .training-grid,
+  .trainer-page .generator-section { padding: 12px; }
+  .trainer-page .training-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Spójny nagłówek Panelu trenera i poprawiony przycisk dostępu */
+.trainer-page .trainer-public-hero {
+  min-height: 330px;
+  align-items: end;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(29, 128, 149, .34), transparent 31%),
+    radial-gradient(circle at 12% 86%, rgba(46, 91, 154, .26), transparent 35%),
+    linear-gradient(118deg, #07162b 0%, #0c2941 57%, #0b5364 100%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  box-shadow: var(--public-shadow);
+}
+
+.trainer-page .trainer-public-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(90deg, rgba(0,0,0,.72), transparent 82%);
+  pointer-events: none;
+}
+
+.trainer-page .trainer-public-hero::after {
+  background: linear-gradient(90deg, rgba(4,13,27,.35) 0%, rgba(4,13,27,.12) 65%, rgba(4,13,27,.04) 100%);
+}
+
+.trainer-page .trainer-public-hero .public-hero-content {
+  max-width: 850px;
+  padding: 38px 44px 40px;
+}
+
+.trainer-page .trainer-public-hero h1,
+.trainer-page .trainer-public-hero h1 span,
+.trainer-page .trainer-public-hero p {
+  color: #fff;
+}
+
+.trainer-page .trainer-public-hero h1 span {
+  color: rgba(255,255,255,.84);
+}
+
+.trainer-page .trainer-public-hero p {
+  color: rgba(255,255,255,.88);
+}
+
+.trainer-hero-kicker {
+  display: inline-flex;
+  margin-bottom: 13px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.trainer-page .trainer-password-row .btn {
+  min-width: 142px;
+  border: 1px solid #0e7490;
+  background: linear-gradient(135deg, #0e7490, #155e75);
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(14,116,144,.22);
+}
+
+.trainer-page .trainer-password-row .btn:hover,
+.trainer-page .trainer-password-row .btn:focus-visible {
+  border-color: #0b6179;
+  background: linear-gradient(135deg, #0b6a83, #124e62);
+  color: #fff !important;
+}
+
+@media (min-width:1280px) {
+  .trainer-page .trainer-public-hero { min-height: 305px; }
+}
+
+@media (max-width:900px) {
+  .trainer-page .trainer-public-hero { min-height: 285px; }
+  .trainer-page .trainer-public-hero .public-hero-content { padding: 34px 36px 36px; }
+}
+
+@media (max-width:620px) {
+  .trainer-page .trainer-public-hero { min-height: 260px; }
+  .trainer-page .trainer-public-hero .public-hero-content { padding: 64px 20px 24px; }
+  .trainer-page .trainer-password-row { grid-template-columns: 1fr; }
+  .trainer-page .trainer-password-row .btn { width: 100%; }
+}
+
+
+/* Force white text on trainer buttons */
+.open-panel-btn,
+.open-generator-btn,
+.btn-open,
+.btn-primary,
+a.btn-primary{
+ color:#fff !important;
+}
+.open-panel-btn:hover,
+.open-generator-btn:hover,
+.btn-open:hover,
+.btn-primary:hover,
+a.btn-primary:hover,
+.open-panel-btn:focus,
+.open-generator-btn:focus,
+.btn-open:focus,
+.btn-primary:focus{
+ color:#fff !important;
+}
+
+/* Final correction: white labels on dark trainer action buttons. */
+body.public-page.trainer-page a.btn:not(.ghost),
+body.public-page.trainer-page button.btn:not(.ghost),
+body.public-page.trainer-page .training-info-card a.btn,
+body.public-page.trainer-page .generator-card a.btn,
+body.public-page.trainer-page .organizer-card a.btn,
+body.public-page.trainer-page .trainer-password-row button.btn {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body.public-page.trainer-page a.btn:not(.ghost):hover,
+body.public-page.trainer-page a.btn:not(.ghost):focus,
+body.public-page.trainer-page a.btn:not(.ghost):focus-visible,
+body.public-page.trainer-page a.btn:not(.ghost):active,
+body.public-page.trainer-page button.btn:not(.ghost):hover,
+body.public-page.trainer-page button.btn:not(.ghost):focus,
+body.public-page.trainer-page button.btn:not(.ghost):focus-visible,
+body.public-page.trainer-page button.btn:not(.ghost):active {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
