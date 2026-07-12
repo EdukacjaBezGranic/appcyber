@@ -827,3 +827,27 @@
     gap: 3px;
   }
 }
+
+/* Visual refresh — kalendarz */
+.calendar-main { width: min(1380px, calc(100% - 40px)); padding-top: 30px; }
+.calendar-hero { border-radius: 26px; border-color: rgba(112, 132, 160, .16); box-shadow: 0 30px 80px rgba(15, 35, 65, .13); }
+.calendar-hero h1 { letter-spacing: -.045em; }
+.calendar-strip,
+.calendar-board,
+.calendar-details,
+.calendar-contact { border-radius: 21px; border-color: rgba(112, 132, 160, .16); box-shadow: 0 20px 55px rgba(15, 35, 65, .09); }
+.calendar-mini-btn,
+.calendar-arrow-btn,
+.calendar-mode-switch button { border-radius: 11px; }
+.calendar-day { border-radius: 14px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.calendar-day:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(15,35,65,.09); }
+.calendar-event { border-radius: 10px; box-shadow: 0 6px 16px rgba(15,35,65,.08); }
+.calendar-details { overflow: hidden; }
+@media (max-width: 680px) {
+  .calendar-main { width: calc(100% - 24px); padding-top: 16px; }
+  .calendar-hero { border-radius: 18px; padding: 30px 23px; }
+  .calendar-strip,
+  .calendar-board,
+  .calendar-details,
+  .calendar-contact { border-radius: 17px; }
+}
