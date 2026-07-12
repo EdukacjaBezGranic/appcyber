@@ -2615,3 +2615,71 @@ a.btn-primary:hover,
     max-height: 92px;
   }
 }
+
+
+
+/* COMPACT HERO FINAL — mniejsze pola nagłówkowe, zachowana oryginalna skala tekstu */
+.public-hero,
+.public-hero.inner-hero,
+.public-hero.inner-hero.project-hero {
+  min-height: 300px;
+}
+
+.public-hero-content {
+  max-width: 800px;
+  padding: 28px 40px 30px;
+}
+
+.public-hero h1 {
+  font-size: clamp(38px, 4.1vw, 44px);
+  line-height: 1.16;
+  letter-spacing: .012em;
+  max-width: 760px;
+  margin: 0;
+}
+
+.public-hero p {
+  max-width: 720px;
+  margin-top: 16px;
+  font-size: 15.5px;
+  line-height: 1.58;
+}
+
+@media (max-width: 1199px) {
+  .public-hero,
+  .public-hero.inner-hero,
+  .public-hero.inner-hero.project-hero {
+    min-height: 290px;
+  }
+
+  .public-hero-content {
+    padding: 26px 34px 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .public-hero,
+  .public-hero.inner-hero,
+  .public-hero.inner-hero.project-hero {
+    min-height: 330px;
+  }
+
+  .public-hero-content {
+    max-width: 100%;
+    padding: 72px 22px 24px;
+  }
+
+  .public-hero h1 {
+    max-width: 100%;
+    font-size: clamp(30px, 8.5vw, 40px);
+    line-height: 1.14;
+    letter-spacing: .008em;
+  }
+
+  .public-hero p {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.58;
+  }
+}
