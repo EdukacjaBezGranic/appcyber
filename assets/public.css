@@ -2572,3 +2572,46 @@ a.btn-primary:hover,
 .btn-primary:focus{
  color:#fff !important;
 }
+
+
+/* Kontakt: oficjalne logo WUP bez modyfikacji typografii */
+.contact-wup-brand {
+  display: inline-flex;
+  align-items: center;
+  width: min(520px, 100%);
+  margin: 0 0 26px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 20px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 14px 34px rgba(15,23,42,.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.contact-wup-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 148px;
+  object-fit: contain;
+  object-position: left center;
+}
+@media (max-width: 700px) {
+  .contact-wup-brand {
+    width: min(430px, 100%);
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+  .contact-wup-brand img {
+    max-height: 112px;
+  }
+}
+@media (max-width: 410px) {
+  .contact-wup-brand {
+    padding: 10px 12px;
+  }
+  .contact-wup-brand img {
+    max-height: 92px;
+  }
+}
