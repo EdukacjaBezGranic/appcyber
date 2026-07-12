@@ -2487,3 +2487,67 @@ body.public-page video { height: auto; }
   }
   .public-section { padding: 50px 0; }
 }
+
+/* ============================================================
+   Visual polish v3 — wyraźniejsze, delikatnie ciemniejsze tło
+   Added 2026-07-12
+   ============================================================ */
+:root {
+  --public-bg: #e8edf3;
+  --public-surface-soft: #f3f6f9;
+  --public-line: rgba(113, 132, 158, .28);
+}
+
+body.public-page {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(10, 66, 143, .09), transparent 30rem),
+    radial-gradient(circle at 94% 18%, rgba(8, 123, 132, .075), transparent 28rem),
+    linear-gradient(180deg, #edf1f5 0%, #e6ebf1 48%, #edf1f5 100%);
+}
+
+/* Na większych ekranach sekcje są widocznie oddzielone od tła,
+   ale nadal pozostają jasne i lekkie. */
+@media (min-width: 1025px) {
+  .public-section {
+    position: relative;
+    margin-top: 22px;
+    padding: 38px 34px;
+    border: 1px solid rgba(113, 132, 158, .18);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .68);
+    box-shadow: 0 10px 28px rgba(28, 45, 72, .045);
+  }
+
+  .public-section:nth-of-type(even) {
+    background: rgba(246, 249, 252, .88);
+  }
+
+  .public-section + .public-section {
+    border-top: 1px solid rgba(113, 132, 158, .18);
+  }
+
+  .brand-bar {
+    margin-top: 22px;
+    border: 1px solid rgba(113, 132, 158, .18);
+    background: rgba(255,255,255,.72);
+  }
+}
+
+/* Na tabletach i telefonach pozostaje prostszy układ, ale tło jest
+   nieco ciemniejsze i białe karty odcinają się wyraźniej. */
+@media (max-width: 1024px) {
+  body.public-page {
+    background: linear-gradient(180deg, #edf1f5 0%, #e8edf3 100%);
+  }
+
+  .public-card,
+  .public-route,
+  .public-step,
+  .signup-training-card,
+  .training-values-grid article,
+  .story-process article,
+  .contact-card,
+  .mobility-card {
+    border-color: rgba(113, 132, 158, .24);
+  }
+}
