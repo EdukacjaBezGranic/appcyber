@@ -2812,3 +2812,672 @@ a.btn-primary:hover,
     gap:5px;
   }
 }
+
+
+
+/* =========================================================
+   PORTAL 2.0 — PIXEL PERFECT UI / ETAP 1
+   Siatka, odstępy, typografia, karty, przyciski, menu,
+   responsywność oraz subtelne animacje.
+   ========================================================= */
+
+:root{
+  --public-max: 1200px;
+  --pp-radius-sm: 12px;
+  --pp-radius-md: 16px;
+  --pp-radius-lg: 20px;
+  --pp-shadow-card: 0 10px 28px rgba(15,23,42,.065);
+  --pp-shadow-card-hover: 0 20px 44px rgba(15,23,42,.115);
+  --pp-transition: 220ms cubic-bezier(.2,.7,.2,1);
+}
+
+/* Główna siatka */
+.site-header-inner,
+.public-main,
+.site-footer-inner{
+  width:min(var(--public-max), calc(100% - 48px));
+}
+
+.public-main{
+  padding-top:22px;
+  padding-bottom:46px;
+}
+
+/* Menu — spokojniejsze i bardziej precyzyjne */
+.site-header{
+  background:rgba(255,255,255,.965);
+  border-bottom-color:rgba(205,214,224,.88);
+  box-shadow:0 4px 18px rgba(15,23,42,.045);
+}
+
+.site-header-inner{
+  min-height:70px;
+}
+
+.site-nav{
+  gap:2px;
+}
+
+.site-nav a{
+  padding:10px 12px 9px;
+  border-radius:10px;
+  letter-spacing:.002em;
+  transition:
+    color var(--pp-transition),
+    background var(--pp-transition),
+    transform var(--pp-transition);
+}
+
+.site-nav a:not(.nav-signups)::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:4px;
+  height:2px;
+  border-radius:999px;
+  background:var(--public-blue);
+  opacity:0;
+  transform:scaleX(.35);
+  transition:opacity var(--pp-transition),transform var(--pp-transition);
+}
+
+.site-nav a:not(.nav-signups):hover::after,
+.site-nav a:not(.nav-signups)[aria-current="page"]::after{
+  opacity:1;
+  transform:scaleX(1);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"]{
+  background:#f2f6fc;
+}
+
+.nav-toggle{
+  border-radius:11px;
+}
+
+/* Hero — zwarte, eleganckie proporcje */
+.public-hero,
+.public-hero.inner-hero,
+.public-hero.inner-hero.project-hero{
+  min-height:350px;
+  border-radius:var(--pp-radius-lg);
+  box-shadow:0 16px 42px rgba(15,23,42,.12);
+}
+
+.public-hero::after{
+  background:linear-gradient(
+    90deg,
+    rgba(7,17,32,.88) 0%,
+    rgba(10,25,45,.72) 48%,
+    rgba(10,25,45,.16) 100%
+  );
+}
+
+.public-hero-content{
+  max-width:790px;
+  padding:34px 42px 38px;
+}
+
+.public-hero h1{
+  max-width:760px;
+  margin:0;
+  font-size:clamp(38px,4vw,48px);
+  line-height:1.14;
+  letter-spacing:.004em;
+  text-wrap:balance;
+}
+
+.public-hero p{
+  max-width:720px;
+  margin-top:17px;
+  line-height:1.62;
+  text-wrap:pretty;
+}
+
+/* Sekcje — spójny rytm */
+.public-section{
+  padding:58px 0;
+}
+
+.public-section + .public-section{
+  border-top-color:rgba(137,154,179,.16);
+}
+
+.public-section-head{
+  gap:36px;
+  margin-bottom:30px;
+  align-items:end;
+}
+
+.public-section h2,
+.public-section-head h2{
+  margin-bottom:0;
+  font-size:clamp(30px,3.1vw,40px);
+  line-height:1.16;
+  letter-spacing:-.018em;
+  text-wrap:balance;
+}
+
+.public-section-head p,
+.public-section > p{
+  line-height:1.68;
+  text-wrap:pretty;
+}
+
+/* Uniwersalne karty */
+.signup-training-card,
+.contact-panel,
+.public-card,
+.info-card,
+.stat-card,
+.timeline-card,
+.gallery-card,
+.calendar-shell,
+.project-card,
+.training-card{
+  border-radius:var(--pp-radius-lg)!important;
+  border-color:rgba(207,216,226,.92)!important;
+  box-shadow:var(--pp-shadow-card)!important;
+}
+
+.signup-training-card,
+.public-card,
+.info-card,
+.timeline-card,
+.project-card,
+.training-card{
+  transition:
+    transform var(--pp-transition),
+    box-shadow var(--pp-transition),
+    border-color var(--pp-transition);
+}
+
+.signup-training-card:hover,
+.public-card:hover,
+.info-card:hover,
+.timeline-card:hover,
+.project-card:hover,
+.training-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(174,190,208,.95)!important;
+  box-shadow:var(--pp-shadow-card-hover)!important;
+}
+
+/* Media w kartach */
+.signup-training-media,
+.training-card-media,
+.gallery-card{
+  overflow:hidden;
+}
+
+.signup-training-media img,
+.training-card-media img,
+.gallery-card img{
+  transition:transform 500ms cubic-bezier(.2,.7,.2,1);
+}
+
+.signup-training-card:hover .signup-training-media img,
+.training-card:hover .training-card-media img,
+.gallery-card:hover img{
+  transform:scale(1.035);
+}
+
+/* Przyciski */
+.public-btn{
+  min-height:46px;
+  padding:12px 18px;
+  border-radius:13px;
+  font-size:13.5px;
+  letter-spacing:.008em;
+  box-shadow:0 9px 22px rgba(8,123,132,.17);
+  transition:
+    transform var(--pp-transition),
+    box-shadow var(--pp-transition),
+    filter var(--pp-transition);
+}
+
+.public-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(8,123,132,.23);
+}
+
+.public-btn:active{
+  transform:translateY(0);
+}
+
+.public-btn.light{
+  box-shadow:0 8px 20px rgba(5,17,38,.10);
+}
+
+/* Formularze i pola */
+input,
+select,
+textarea{
+  border-radius:12px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline:none;
+  border-color:rgba(14,116,144,.58);
+  box-shadow:0 0 0 4px rgba(14,116,144,.10);
+}
+
+/* Kontakt */
+.contact-grid{
+  gap:22px;
+}
+
+.contact-panel{
+  padding:26px;
+}
+
+/* Stopka */
+.site-footer-inner{
+  padding-top:34px;
+  padding-bottom:34px;
+}
+
+.site-footer-links{
+  gap:15px;
+}
+
+/* Animacje wejścia */
+.reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:
+    opacity 560ms ease,
+    transform 560ms cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+[data-stagger] > *{
+  opacity:0;
+  transform:translateY(14px);
+}
+
+[data-stagger].is-visible > *{
+  opacity:1;
+  transform:none;
+  transition:
+    opacity 480ms ease,
+    transform 480ms cubic-bezier(.2,.7,.2,1);
+}
+
+[data-stagger].is-visible > *:nth-child(2){transition-delay:70ms}
+[data-stagger].is-visible > *:nth-child(3){transition-delay:140ms}
+[data-stagger].is-visible > *:nth-child(4){transition-delay:210ms}
+[data-stagger].is-visible > *:nth-child(5){transition-delay:280ms}
+[data-stagger].is-visible > *:nth-child(6){transition-delay:350ms}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1199px){
+  .site-header-inner,
+  .public-main,
+  .site-footer-inner{
+    width:min(100% - 36px, 1080px);
+  }
+
+  .site-header-inner{
+    min-height:68px;
+  }
+
+  .site-nav a{
+    padding:9px 9px 8px;
+    font-size:12.5px;
+  }
+
+  .public-hero,
+  .public-hero.inner-hero,
+  .public-hero.inner-hero.project-hero{
+    min-height:330px;
+  }
+
+  .public-hero-content{
+    max-width:730px;
+    padding:30px 34px 34px;
+  }
+
+  .public-hero h1{
+    font-size:clamp(35px,5vw,44px);
+  }
+
+  .public-section{
+    padding:50px 0;
+  }
+
+  .public-section-head{
+    gap:26px;
+    margin-bottom:26px;
+  }
+}
+
+/* Telefon */
+@media (max-width:767px){
+  .site-header-inner,
+  .public-main,
+  .site-footer-inner{
+    width:calc(100% - 28px);
+  }
+
+  .site-header-inner{
+    min-height:64px;
+  }
+
+  .site-logo img{
+    width:42px;
+    height:42px;
+  }
+
+  .site-logo span{
+    font-size:14px;
+  }
+
+  .site-nav{
+    border-radius:0 0 16px 16px;
+    box-shadow:0 16px 34px rgba(15,23,42,.13);
+  }
+
+  .site-nav a{
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    padding:11px 14px;
+    border-radius:10px;
+  }
+
+  .public-main{
+    padding-top:14px;
+    padding-bottom:34px;
+  }
+
+  .public-hero,
+  .public-hero.inner-hero,
+  .public-hero.inner-hero.project-hero{
+    min-height:330px;
+    border-radius:16px;
+  }
+
+  .public-hero-content{
+    max-width:100%;
+    padding:72px 22px 25px;
+  }
+
+  .public-hero h1{
+    font-size:clamp(29px,8.8vw,38px);
+    line-height:1.15;
+  }
+
+  .public-hero p{
+    margin-top:14px;
+    font-size:15px;
+    line-height:1.58;
+  }
+
+  .public-section{
+    padding:42px 0;
+  }
+
+  .public-section-head{
+    gap:13px;
+    margin-bottom:22px;
+    align-items:start;
+  }
+
+  .public-section h2,
+  .public-section-head h2{
+    font-size:clamp(27px,8vw,34px);
+  }
+
+  .signup-training-card,
+  .contact-panel,
+  .public-card,
+  .info-card,
+  .timeline-card,
+  .project-card,
+  .training-card{
+    border-radius:17px!important;
+  }
+
+  .contact-panel{
+    padding:21px;
+  }
+
+  .public-btn{
+    min-height:48px;
+  }
+
+  .site-footer-inner{
+    padding-top:28px;
+    padding-bottom:28px;
+  }
+}
+
+/* Bardzo duże ekrany — bez niepotrzebnego rozciągania */
+@media (min-width:1600px){
+  :root{--public-max:1240px}
+
+  .public-section{
+    padding:62px 0;
+  }
+}
+
+/* Dostępność i oszczędzanie animacji */
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+
+  .reveal,
+  [data-stagger] > *{
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+
+
+
+/* =========================================================
+   PIXEL PERFECT UI — POPRAWKA ODSTĘPÓW SEKCYJNYCH
+   Przywraca bezpieczne marginesy i paddingi we wszystkich sekcjach.
+   ========================================================= */
+
+/* Główne kontenery treści */
+.public-main,
+.public-section,
+.public-section > .container,
+.public-section > .public-container,
+.public-section > .section-inner,
+.public-section-head,
+.signup-program-section,
+.contact-grid,
+.training-grid,
+.signup-training-grid,
+.timeline-grid,
+.gallery-grid,
+.project-grid,
+.stats-grid,
+.calendar-layout,
+.calendar-shell,
+.contact-section,
+.project-section,
+.training-section {
+  box-sizing: border-box;
+}
+
+/* Sekcje nigdy nie mogą przyklejać treści do krawędzi */
+.public-section,
+.signup-program-section,
+.contact-section,
+.project-section,
+.training-section,
+.calendar-section {
+  padding-left: clamp(20px, 3vw, 40px) !important;
+  padding-right: clamp(20px, 3vw, 40px) !important;
+}
+
+/* Wewnętrzne kontenery sekcji */
+.public-section > .container,
+.public-section > .public-container,
+.public-section > .section-inner,
+.signup-program-section > .container,
+.signup-program-section > .public-container,
+.contact-section > .container,
+.project-section > .container,
+.training-section > .container,
+.calendar-section > .container {
+  width: min(100%, var(--public-max)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Karty i bloki treści mają własny oddech */
+.public-card,
+.info-card,
+.project-card,
+.training-card,
+.signup-training-card,
+.contact-panel,
+.timeline-card,
+.stat-card,
+.calendar-shell,
+.gallery-card {
+  padding-left: clamp(18px, 2vw, 26px);
+  padding-right: clamp(18px, 2vw, 26px);
+}
+
+/* Karty z mediami zachowują pełną szerokość zdjęcia */
+.signup-training-card,
+.training-card,
+.gallery-card {
+  overflow: hidden;
+}
+
+.signup-training-media,
+.training-card-media,
+.gallery-card > img,
+.gallery-card > a > img {
+  margin-left: calc(-1 * clamp(18px, 2vw, 26px));
+  margin-right: calc(-1 * clamp(18px, 2vw, 26px));
+  width: calc(100% + 2 * clamp(18px, 2vw, 26px));
+  max-width: none;
+}
+
+/* Nagłówki sekcji */
+.public-section-head {
+  width: min(100%, var(--public-max));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Teksty sekcyjne nie przyklejają się do krawędzi */
+.public-section > p,
+.public-section > h2,
+.public-section > h3,
+.signup-program-section > p,
+.signup-program-section > h2,
+.contact-section > p,
+.project-section > p,
+.training-section > p {
+  width: min(100%, var(--public-max));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .public-section,
+  .signup-program-section,
+  .contact-section,
+  .project-section,
+  .training-section,
+  .calendar-section {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .public-section,
+  .signup-program-section,
+  .contact-section,
+  .project-section,
+  .training-section,
+  .calendar-section {
+    padding-left: 26px !important;
+    padding-right: 26px !important;
+  }
+}
+
+/* Telefon */
+@media (max-width: 767px) {
+  .public-section,
+  .signup-program-section,
+  .contact-section,
+  .project-section,
+  .training-section,
+  .calendar-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .public-card,
+  .info-card,
+  .project-card,
+  .training-card,
+  .signup-training-card,
+  .contact-panel,
+  .timeline-card,
+  .stat-card,
+  .calendar-shell,
+  .gallery-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+
+
+/* Komunikat o terminach na stronie zapisów — właściwa hierarchia i odstępy */
+.signup-program-section .schedule-draft-notice{
+  margin: 34px 0 24px !important;
+  padding: 12px 15px !important;
+  border-radius: 13px !important;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.signup-program-section .schedule-draft-notice strong{
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+
+.signup-program-section .schedule-draft-notice span{
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px){
+  .signup-program-section .schedule-draft-notice{
+    margin: 26px 0 20px !important;
+    padding: 12px 14px !important;
+  }
+}

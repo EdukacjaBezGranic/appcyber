@@ -14,7 +14,7 @@ if (navToggle && siteNav) {
   });
 }
 
-const revealItems = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal, [data-stagger]');
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
