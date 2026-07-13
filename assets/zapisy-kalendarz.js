@@ -106,7 +106,7 @@ function renderAction(event) {
     return;
   }
 
-  action.innerHTML = '<span class="public-btn signup-btn-disabled" aria-disabled="true">Zapisy wkrótce</span>';
+  action.innerHTML = '<span class="public-btn signup-btn-disabled" aria-disabled="true">Zapisy nieaktywne</span>';
 }
 
 function renderDetailLogo(event) {
@@ -141,11 +141,11 @@ function selectEvent(id) {
 
 function makeEventButton(event) {
   const button = document.createElement('button');
-  button.className = `calendar-event ${event.open ? 'is-open' : 'is-waiting'} is-${event.tone}`;
+  button.className = `calendar-event is-waiting is-${event.tone}`;
   button.type = 'button';
   button.dataset.eventId = event.id;
   button.style.setProperty('--event-color', event.color || '#2563eb');
-  button.innerHTML = `<small>${event.time}</small>${event.shortTitle}`;
+  button.innerHTML = `<small>${event.time} · termin przykładowy</small>${event.shortTitle}`;
   return button;
 }
 

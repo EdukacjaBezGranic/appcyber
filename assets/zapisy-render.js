@@ -44,7 +44,7 @@
   };
 
   const renderAction = (training) => {
-    const label = training.open ? 'Zapisz się' : 'Termin zostanie ogłoszony';
+    const label = training.open ? 'Zapisz się' : 'Zapisy nieaktywne';
     if (training.open && training.link) {
       return `
         <span class="signup-status is-open">Zapisy otwarte</span>
@@ -52,7 +52,7 @@
       `;
     }
     return `
-      <span class="signup-status">Zapisy wkrótce</span>
+      <span class="signup-status is-tentative">Termin przykładowy</span>
       <span class="signup-soon-note" aria-disabled="true">${escapeHtml(label)}</span>
     `;
   };

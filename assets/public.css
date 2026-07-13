@@ -2763,3 +2763,52 @@ a.btn-primary:hover,
     min-height: 48px;
   }
 }
+
+/* Terminy przykładowe – niepotwierdzone */
+.schedule-draft-notice{
+  max-width:1180px;
+  margin:0 auto 28px;
+  padding:16px 18px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  background:#fff8e8;
+  border:1px solid #ead49a;
+  border-radius:14px;
+  color:#5f4a12;
+  box-shadow:0 8px 22px rgba(77,57,10,.06);
+}
+.schedule-draft-notice strong{
+  flex:0 0 auto;
+  font-size:13px;
+  font-weight:850;
+}
+.schedule-draft-notice span{
+  font-size:13.5px;
+  line-height:1.55;
+}
+.calendar-draft-notice{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.signup-status.is-tentative{
+  color:#7a5b08;
+  background:#fff8e8;
+  border-color:#ead49a;
+}
+.signup-status.is-tentative::before{
+  background:#c79a20;
+}
+.signup-btn-disabled,
+.signup-soon-note{
+  cursor:not-allowed!important;
+  opacity:.78;
+}
+@media(max-width:767px){
+  .schedule-draft-notice{
+    margin-left:18px;
+    margin-right:18px;
+    flex-direction:column;
+    gap:5px;
+  }
+}

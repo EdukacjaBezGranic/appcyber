@@ -10,9 +10,9 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Myślenie krytyczne, dezinformacja i manipulacja",
       "shortTitle": "Myślenie krytyczne",
-      "date": "2026-09-01",
-      "time": "09:30 - 14:00",
-      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29, sala duża - 1 piętro",
+      "date": "2026-09-15",
+      "time": "10:00 - 14:00",
+      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
       "audience": "Pracownicy instytucji publicznych, doradcy zawodowi, trenerzy i osoby pracujące z informacją.",
       "description": [
         "Szkolenie pomaga rozpoznawać fałszywe informacje, manipulację i treści tworzone po to, aby wywołać szybką reakcję odbiorcy.",
@@ -21,9 +21,10 @@ window.portalSiteData = {
       "color": "#d4a017",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "link": "https://forms.gle/KzJmaQr8hvH5dkGM8",
-      "button": "Zapisz się"
+      "open": false,
+      "link": "",
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "komunikacja",
@@ -44,7 +45,8 @@ window.portalSiteData = {
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "grywalizacja",
@@ -52,7 +54,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Grywalizacja, uczenie przez gry i doświadczenie",
       "shortTitle": "Grywalizacja",
-      "date": "2026-09-24",
+      "date": "2026-09-22",
       "time": "10:00 - 15:00",
       "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
       "audience": "Edukatorzy, trenerzy, doradcy zawodowi i osoby projektujące działania rozwojowe dla dorosłych.",
@@ -65,7 +67,8 @@ window.portalSiteData = {
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "ai",
@@ -86,7 +89,8 @@ window.portalSiteData = {
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "sel",
@@ -94,7 +98,7 @@ window.portalSiteData = {
       "source": "Kierunek Kompetencje 4.0",
       "title": "Social and Emotional Learning",
       "shortTitle": "SEL",
-      "date": "2026-10-01",
+      "date": "2026-09-29",
       "time": "10:00 - 14:00",
       "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
       "audience": "Osoby pracujące z grupami, edukatorzy, trenerzy, doradcy zawodowi i pracownicy instytucji publicznych.",
@@ -107,7 +111,8 @@ window.portalSiteData = {
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "cyber",
@@ -128,7 +133,8 @@ window.portalSiteData = {
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     },
     {
       "id": "mindfulness",
@@ -136,7 +142,7 @@ window.portalSiteData = {
       "source": "Program mobilności",
       "title": "Mindfulness i dobrostan w pracy",
       "shortTitle": "Mindfulness",
-      "date": "2026-10-08",
+      "date": "2026-10-06",
       "time": "10:00 - 14:00",
       "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
       "audience": "Osoby pracujące z ludźmi, zespoły obsługujące klientów oraz pracownicy narażeni na obciążenie emocjonalne.",
@@ -149,7 +155,8 @@ window.portalSiteData = {
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Zapisy wkrótce"
+      "button": "Zapisy nieaktywne",
+      "tentative": true
     }
   ]
 };
