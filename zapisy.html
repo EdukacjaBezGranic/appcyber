@@ -6,8 +6,8 @@
 <meta name="description" content="Zapisy na szkolenia Wojewódzkiego Urzędu Pracy w Katowicach rozwijające kompetencje cyfrowe, komunikacyjne, społeczne i edukacyjne.">
 <title>Zapisy na szkolenia - Edukacja bez granic</title>
 <link rel="icon" type="image/png" href="grafiki/logo-projektu-symbol-transparent.png">
-<link rel="stylesheet" href="assets/public.css?v=20260713-draft-dates">
-<script src="assets/public.js?v=20260709-04" defer></script>
+<link rel="stylesheet" href="assets/public.css?v=20260713-notice-inside-section">
+<script src="assets/public.js?v=20260713-pixel-perfect-ui-1" defer></script>
 <script src="assets/site-data.js?v=20260713-draft-dates" defer></script>
 <script src="assets/contact-render.js?v=20260710-cms01" defer></script>
 <script src="assets/zapisy-render.js?v=20260713-draft-dates" defer></script>
@@ -51,21 +51,21 @@
       <h2>Wybierz szkolenie dla siebie</h2>
       <p>Program obejmuje tematy związane z informacją, komunikacją, nowymi technologiami, bezpieczeństwem i dobrostanem. Każde szkolenie ma praktyczny charakter i pokazuje rozwiązania, które można wykorzystać w codziennej pracy.</p>
     </div>
-  </section>
-
-  
-    <div class="schedule-draft-notice" role="note">
-      <strong>Terminy przykładowe – niepotwierdzone</strong>
-      <span>Daty prezentują planowany układ szkoleń we wtorki i piątki. Ostateczne terminy zostaną potwierdzone przed uruchomieniem zapisów.</span>
-    </div>
-
-  <section class="public-section signup-program-section reveal" aria-labelledby="newTrainingsTitle">
+  </section><section class="public-section signup-program-section reveal" aria-labelledby="newTrainingsTitle">
     <div class="public-section-head">
       <h2 id="newTrainingsTitle">Nowe programy projektu</h2>
       <p>Trzy szkolenia przygotowane w ramach projektu Edukacja bez granic odpowiadają na ważne wyzwania współczesnej pracy: ocenę informacji, skuteczną komunikację oraz angażujące sposoby uczenia się dorosłych.</p>
     </div>
 
-    <div class="signup-training-grid" data-training-group="new">
+      <div class="schedule-draft-notice signup-inline-notice" role="note">
+        <span class="schedule-draft-notice__icon" aria-hidden="true">ⓘ</span>
+        <div>
+          <strong>Terminy mają charakter orientacyjny.</strong>
+          <span>Zapisy zostaną uruchomione po potwierdzeniu harmonogramu szkoleń.</span>
+        </div>
+      </div>
+
+<div class="signup-training-grid" data-stagger data-stagger data-training-group="new">
       <article class="signup-training-card" style="--signup-accent:#d4a017;--signup-accent-rgb:212,160,23;">
         <figure class="signup-training-media">
           <img src="grafiki/fake-news.jpg" alt="Analiza informacji i wiarygodności źródeł" loading="lazy">
