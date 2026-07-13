@@ -3481,3 +3481,56 @@ textarea:focus{
     padding: 12px 14px !important;
   }
 }
+
+
+/* Komunikat o orientacyjnych terminach — wewnątrz sekcji „Nowe programy projektu” */
+.signup-program-section .signup-inline-notice{
+  max-width: 780px;
+  margin: 24px 0 24px !important;
+  padding: 12px 15px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  background: #fffaf0;
+  border: 1px solid #ead7a6;
+  border-radius: 13px;
+  box-shadow: none;
+  color: #5f4a12;
+}
+
+.signup-inline-notice .schedule-draft-notice__icon{
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2dfab;
+  color: #6e5512;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.signup-inline-notice > div{
+  display: grid;
+  gap: 2px;
+}
+
+.signup-inline-notice strong{
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.signup-inline-notice span:not(.schedule-draft-notice__icon){
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px){
+  .signup-program-section .signup-inline-notice{
+    max-width: 100%;
+    margin: 20px 0 20px !important;
+    padding: 12px 13px !important;
+  }
+}
