@@ -11,7 +11,7 @@ window.portalSiteData = {
       "title": "Myślenie krytyczne, dezinformacja i manipulacja",
       "shortTitle": "Myślenie krytyczne",
       "date": "2026-09-01",
-      "time": "09:00 - 14:00",
+      "time": "09:30 - 14:00",
       "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29, sala duża - 1 piętro,
       "audience": "Pracownicy instytucji publicznych, doradcy zawodowi, trenerzy i osoby pracujące z informacją.",
       "description": [
