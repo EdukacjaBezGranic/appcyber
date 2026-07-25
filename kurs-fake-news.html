@@ -6403,6 +6403,53 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
 .registration-actions .btn{min-width:230px;justify-content:center}
 @media(max-width:640px){.registration-actions{flex-direction:column}.registration-actions .btn{width:100%;min-width:0}}
 </style>
+
+<style id="hero-registration-request-style">
+.hero-registration-request{
+  margin:24px 0 20px;
+  padding:clamp(20px,2.4vw,28px);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(13,34,49,.90),rgba(28,64,82,.88));
+  box-shadow:0 18px 40px rgba(5,18,29,.24);
+  backdrop-filter:blur(14px);
+}
+.hero-registration-request h2{
+  margin:0 0 10px;
+  color:#f2d9a8;
+  font-size:clamp(1.35rem,2vw,1.72rem);
+  line-height:1.2;
+}
+.hero-registration-request p,
+.hero-registration-request li{color:#f4f7f8!important;line-height:1.62}
+.hero-registration-request>p{margin:0 0 12px!important}
+.hero-registration-request .hero-registration-lead{margin-top:14px!important}
+.hero-registration-request ul{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px 24px;
+  margin:10px 0 14px;
+  padding-left:1.2rem;
+}
+.hero-registration-request li{margin:0}
+.hero-registration-request .hero-registration-time{color:#fff8e8!important}
+.hero-registration-request .hero-registration-note{
+  margin-top:14px!important;
+  padding:13px 15px;
+  border:1px solid rgba(242,217,168,.20);
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+}
+.hero-registration-request .hero-actions{margin-top:18px}
+@media(max-width:820px){
+  .hero-registration-request ul{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .hero-registration-request{margin-top:20px;padding:18px;border-radius:18px}
+  .hero-registration-request .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-registration-request .hero-actions .btn{width:100%;justify-content:center;text-align:center}
+}
+</style>
 </head>
 <body class="public-page online-course-page">
 <header class="site-header">
@@ -6433,11 +6480,23 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
               rozpoznawać manipulację, sprawdzać źródła i bezpiecznie korzystać z treści
               publikowanych w internecie.
             </p>
+<div class="hero-registration-request" aria-labelledby="heroRegistrationTitle">
+<h2 id="heroRegistrationTitle">Zanim rozpoczniesz kurs</h2>
+<p>Prosimy o wypełnienie krótkiego formularza rejestracyjnego, który zawiera również ankietę oraz test wstępny.</p>
+<p class="hero-registration-lead"><strong>Zebrane informacje pozwolą nam:</strong></p>
+<ul>
+<li>ocenić poziom wiedzy uczestników przed rozpoczęciem szkolenia,</li>
+<li>porównać wyniki przed i po ukończeniu kursu,</li>
+<li>ocenić jakość i skuteczność przygotowanych materiałów,</li>
+<li>doskonalić kolejne edycje szkolenia,</li>
+<li>udokumentować rezultaty projektu „Edukacja bez granic” realizowanego w ramach programu Erasmus+.</li>
+</ul>
+<p class="hero-registration-time"><strong>Wypełnienie formularza zajmuje około 5 minut.</strong></p>
+<p class="hero-registration-note">Kurs jest dostępny bez kodu dostępu, jednak będziemy wdzięczni za wcześniejsze wypełnienie formularza. Dzięki temu możemy rzetelnie ocenić efekty szkolenia, rozwijać materiały edukacyjne oraz prawidłowo dokumentować rezultaty projektu.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="https://forms.gle/7rJ6Q3eMgx7XBsLw6" rel="noopener noreferrer" target="_blank">
-                Wypełnij formularz rejestracyjny
-              </a>
+<a class="btn btn-primary" href="https://forms.gle/7rJ6Q3eMgx7XBsLw6" rel="noopener noreferrer" target="_blank">Wypełnij formularz rejestracyjny</a>
 <button class="btn btn-secondary" onclick="startCourse()">Rozpocznij kurs</button>
+</div>
 </div>
 <div class="hero-meta">
 <div class="meta-item">
@@ -6473,53 +6532,29 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
 <section class="section section-tight" id="o-kursie">
 <div class="container">
 <div class="section-heading">
-<h2>Jedna przejrzysta ścieżka od rejestracji do ukończenia</h2>
-<p>Kurs prowadzi uczestnika krok po kroku: od rejestracji i testu początkowego, przez pięć rozbudowanych modułów, aż do sprawdzenia wiedzy i podsumowania szkolenia.</p>
+<h2>Jak przebiega kurs?</h2>
+<p>Po rekomendowanym wypełnieniu formularza możesz od razu rozpocząć naukę. Kurs składa się z pięciu modułów, krótkich sprawdzeń wiedzy oraz podsumowania szkolenia.</p>
 </div>
 <div class="path" id="jak-dziala">
 <div class="path-step">
 <div class="number">1</div>
-<strong>Rejestracja</strong>
-<span>Uczestnik wypełnia formularz i test początkowy w Google Forms.</span>
+<strong>Formularz przed kursem</strong>
+<span>Wypełnij formularz rejestracyjny zawierający ankietę i test wstępny. Kurs pozostaje dostępny również bez jego uzupełnienia.</span>
 </div>
 <div class="path-step">
 <div class="number">2</div>
-<strong>Rozpoczęcie kursu</strong>
-<span>Po wypełnieniu formularza uczestnik może od razu przejść do pięciu modułów szkolenia.</span>
+<strong>Pięć modułów</strong>
+<span>Przejdź przez filmy, teksty, przykłady, ćwiczenia i krótkie sprawdzenia wiedzy.</span>
 </div>
 <div class="path-step">
 <div class="number">3</div>
-<strong>Pięć modułów</strong>
-<span>Filmy, teksty, przykłady, ćwiczenia i krótkie sprawdzenie wiedzy.</span>
+<strong>Samodzielna nauka</strong>
+<span>Ucz się we własnym tempie na komputerze, tablecie lub telefonie.</span>
 </div>
 <div class="path-step">
 <div class="number">4</div>
 <strong>Zakończenie</strong>
-<span>Test końcowy, ankieta motywacji i ocena szkolenia oraz materiałów.</span>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="dostep">
-<div class="container">
-<div class="access-panel registration-request-panel">
-<div class="access-copy">
-<h2>Zanim rozpoczniesz kurs</h2>
-<p>Prosimy o wypełnienie krótkiego formularza rejestracyjnego, który zawiera również ankietę oraz test wstępny.</p>
-<p><strong>Zebrane informacje pozwolą nam:</strong></p>
-<ul class="registration-benefits">
-<li>ocenić poziom wiedzy uczestników przed rozpoczęciem szkolenia,</li>
-<li>porównać wyniki przed i po ukończeniu kursu,</li>
-<li>ocenić jakość i skuteczność przygotowanych materiałów,</li>
-<li>doskonalić kolejne edycje szkolenia,</li>
-<li>udokumentować rezultaty projektu „Edukacja bez granic” realizowanego w ramach programu Erasmus+.</li>
-</ul>
-<p class="registration-time"><strong>Wypełnienie formularza zajmuje około 5 minut.</strong></p>
-<div class="access-note">Kurs jest dostępny bez kodu dostępu, jednak będziemy wdzięczni za wcześniejsze wypełnienie formularza. Dzięki temu możemy rzetelnie ocenić efekty szkolenia, rozwijać materiały edukacyjne oraz prawidłowo dokumentować rezultaty projektu.</div>
-<div class="registration-actions">
-<a class="btn btn-primary" href="https://forms.gle/7rJ6Q3eMgx7XBsLw6" rel="noopener noreferrer" target="_blank">Wypełnij formularz rejestracyjny</a>
-<button class="btn btn-secondary" type="button" onclick="startCourse()">Rozpocznij kurs</button>
-</div>
+<span>Wypełnij test końcowy oraz ankietę oceniającą szkolenie i przygotowane materiały.</span>
 </div>
 </div>
 </div>
