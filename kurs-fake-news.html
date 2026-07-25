@@ -6449,6 +6449,136 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
   .hero-registration-request .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
   .hero-registration-request .hero-actions .btn{width:100%;justify-content:center;text-align:center}
 }
+
+
+/* Uporządkowany hero kursu: prośba widoczna, ale nie dominuje strony */
+.online-course-page .hero{
+  min-height:0!important;
+  padding:34px 38px!important;
+}
+.online-course-page .hero-glass{
+  max-width:1120px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr)!important;
+  gap:30px!important;
+  align-items:center!important;
+  padding:30px!important;
+}
+.online-course-page .hero-main-copy{min-width:0}
+.online-course-page .hero-main-copy>p{
+  color:#dce2e5!important;
+  max-width:620px!important;
+  font-size:1.03rem!important;
+  line-height:1.65!important;
+}
+.online-course-page .hero-main-copy .hero-meta{
+  margin-top:26px!important;
+  padding-top:18px!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+.hero-registration-request{
+  margin:0!important;
+  padding:24px!important;
+  border-radius:20px!important;
+  background:linear-gradient(145deg,rgba(9,26,38,.92),rgba(28,58,73,.90))!important;
+  box-shadow:0 16px 34px rgba(5,18,29,.22)!important;
+}
+.hero-registration-kicker{
+  display:inline-flex;
+  margin-bottom:8px;
+  color:#f2d9a8;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.hero-registration-request h2{
+  margin-bottom:9px!important;
+  font-size:clamp(1.28rem,1.8vw,1.58rem)!important;
+}
+.hero-registration-request>p{
+  margin:0!important;
+  font-size:.96rem!important;
+  line-height:1.55!important;
+}
+.hero-registration-facts{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:17px 0 0;
+}
+.hero-registration-facts span{
+  padding:11px 12px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+  background:rgba(255,255,255,.07);
+}
+.hero-registration-facts strong,.hero-registration-facts small{display:block}
+.hero-registration-facts strong{color:#fff;font-size:.95rem}
+.hero-registration-facts small{margin-top:2px;color:#cbd6dc;font-size:.76rem}
+.hero-registration-request .hero-actions{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+  margin-top:16px!important;
+}
+.hero-registration-request .hero-actions .btn{
+  width:100%;
+  min-width:0;
+  padding:12px 14px!important;
+  text-align:center;
+  justify-content:center;
+}
+.hero-registration-details{
+  margin-top:14px;
+  border-top:1px solid rgba(255,255,255,.13);
+  padding-top:12px;
+}
+.hero-registration-details summary{
+  cursor:pointer;
+  color:#f2d9a8;
+  font-weight:750;
+  font-size:.9rem;
+  list-style:none;
+}
+.hero-registration-details summary::-webkit-details-marker{display:none}
+.hero-registration-details summary::after{content:"+";float:right;font-size:1.2rem;line-height:1}
+.hero-registration-details[open] summary::after{content:"−"}
+.hero-registration-details-body{
+  margin-top:12px;
+  padding:13px 14px;
+  border-radius:13px;
+  background:rgba(255,255,255,.06);
+}
+.hero-registration-details-body p,
+.hero-registration-details-body li{
+  color:#edf3f5!important;
+  font-size:.88rem!important;
+  line-height:1.55!important;
+}
+.hero-registration-details-body p{margin:0 0 9px!important}
+.hero-registration-details-body p:last-child{margin-bottom:0!important}
+.hero-registration-details-body ul{
+  display:block!important;
+  margin:7px 0 11px!important;
+  padding-left:1.15rem!important;
+}
+.hero-registration-details-body li{margin:.28rem 0!important}
+@media(max-width:980px){
+  .online-course-page .hero-glass{
+    grid-template-columns:1fr!important;
+    max-width:760px!important;
+    gap:24px!important;
+  }
+}
+@media(max-width:620px){
+  .online-course-page .hero{padding:18px!important}
+  .online-course-page .hero-glass{padding:20px!important;gap:20px!important}
+  .online-course-page .hero-main-copy .hero-meta{grid-template-columns:1fr!important;gap:8px!important}
+  .hero-registration-facts{grid-template-columns:1fr 1fr}
+  .hero-registration-request .hero-actions{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body class="public-page online-course-page">
@@ -6473,6 +6603,7 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
 <div aria-hidden="true" class="hero-background"></div>
 <div class="container hero">
 <div class="hero-glass">
+<div class="hero-main-copy">
 <a class="course-back-link" href="kursy-online.html">← Wróć do kursów online</a>
 <h1>Fake news, dezinformacja i krytyczne myślenie</h1>
 <p>
@@ -6480,24 +6611,6 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
               rozpoznawać manipulację, sprawdzać źródła i bezpiecznie korzystać z treści
               publikowanych w internecie.
             </p>
-<div class="hero-registration-request" aria-labelledby="heroRegistrationTitle">
-<h2 id="heroRegistrationTitle">Zanim rozpoczniesz kurs</h2>
-<p>Prosimy o wypełnienie krótkiego formularza rejestracyjnego, który zawiera również ankietę oraz test wstępny.</p>
-<p class="hero-registration-lead"><strong>Zebrane informacje pozwolą nam:</strong></p>
-<ul>
-<li>ocenić poziom wiedzy uczestników przed rozpoczęciem szkolenia,</li>
-<li>porównać wyniki przed i po ukończeniu kursu,</li>
-<li>ocenić jakość i skuteczność przygotowanych materiałów,</li>
-<li>doskonalić kolejne edycje szkolenia,</li>
-<li>udokumentować rezultaty projektu „Edukacja bez granic” realizowanego w ramach programu Erasmus+.</li>
-</ul>
-<p class="hero-registration-time"><strong>Wypełnienie formularza zajmuje około 5 minut.</strong></p>
-<p class="hero-registration-note">Kurs jest dostępny bez kodu dostępu, jednak będziemy wdzięczni za wcześniejsze wypełnienie formularza. Dzięki temu możemy rzetelnie ocenić efekty szkolenia, rozwijać materiały edukacyjne oraz prawidłowo dokumentować rezultaty projektu.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="https://forms.gle/7rJ6Q3eMgx7XBsLw6" rel="noopener noreferrer" target="_blank">Wypełnij formularz rejestracyjny</a>
-<button class="btn btn-secondary" onclick="startCourse()">Rozpocznij kurs</button>
-</div>
-</div>
 <div class="hero-meta">
 <div class="meta-item">
 <strong>5 modułów</strong>
@@ -6513,19 +6626,32 @@ body.online-course-page #moduleView .side-card{background:#e8e4dc!important;bord
 </div>
 </div>
 </div>
-<div aria-hidden="true" class="hero-visual">
-<div class="visual-orbit">
-<div class="visual-core">
-<svg fill="none" viewbox="0 0 120 120">
-<path d="M60 19 94 33v22c0 22-14.2 39.6-34 47-19.8-7.4-34-25-34-47V33l34-14Z" stroke="white" stroke-width="6"></path>
-<path d="m43 60 11 11 24-26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
-</svg>
+<div class="hero-registration-request" aria-labelledby="heroRegistrationTitle">
+<span class="hero-registration-kicker">Przed rozpoczęciem</span>
+<h2 id="heroRegistrationTitle">Zanim rozpoczniesz kurs</h2>
+<p>Prosimy o wypełnienie krótkiego formularza rejestracyjnego, który zawiera również ankietę oraz test wstępny.</p>
+<div class="hero-registration-facts" aria-label="Najważniejsze informacje">
+<span><strong>około 5 minut</strong><small>czas wypełnienia</small></span>
+<span><strong>bez kodu</strong><small>kurs pozostaje otwarty</small></span>
 </div>
-<span class="orbit-label">Źródła</span>
-<span class="orbit-label">Fact-checking</span>
-<span class="orbit-label">Media literacy</span>
-<span class="orbit-label">AI i deepfake</span>
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://forms.gle/7rJ6Q3eMgx7XBsLw6" rel="noopener noreferrer" target="_blank">Wypełnij formularz rejestracyjny</a>
+<button class="btn btn-secondary" onclick="startCourse()">Rozpocznij kurs</button>
 </div>
+<details class="hero-registration-details">
+<summary>Dlaczego prosimy o wypełnienie formularza?</summary>
+<div class="hero-registration-details-body">
+<p><strong>Zebrane informacje pozwolą nam:</strong></p>
+<ul>
+<li>ocenić poziom wiedzy uczestników przed rozpoczęciem szkolenia,</li>
+<li>porównać wyniki przed i po ukończeniu kursu,</li>
+<li>ocenić jakość i skuteczność przygotowanych materiałów,</li>
+<li>doskonalić kolejne edycje szkolenia,</li>
+<li>prawidłowo dokumentować realizację celów i rezultatów projektu „Edukacja bez granic” w ramach programu Erasmus+.</li>
+</ul>
+<p>Kurs jest dostępny bez kodu dostępu. Będziemy jednak wdzięczni za wcześniejsze wypełnienie formularza, ponieważ zebrane odpowiedzi są niezbędne do rzetelnej oceny efektów szkolenia oraz potwierdzenia realizacji założeń projektu.</p>
+</div>
+</details>
 </div>
 </div>
 </section>
