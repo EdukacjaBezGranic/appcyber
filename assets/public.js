@@ -14,7 +14,7 @@ if (navToggle && siteNav) {
   });
 }
 
-const revealItems = document.querySelectorAll('.reveal, [data-stagger]');
+const revealItems = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
@@ -65,4 +65,21 @@ trainingVideoModal?.addEventListener('click', event => {
 });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && trainingVideoModal?.classList.contains('is-open')) closeTrainingVideo();
+});
+
+
+// Linki do kursów używają natywnej nawigacji przeglądarki.
+document.querySelectorAll('a[data-course-open]').forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.defaultPrevented) return;
+    // Bez nakładki i opóźnienia: zapobiega zawieszeniu ekranu po użyciu przycisku Wstecz.
+  });
+});
+
+// Po przywróceniu strony z pamięci przeglądarki usuń ewentualną starą nakładkę.
+window.addEventListener('pageshow', () => {
+  document.querySelectorAll('.course-opening-overlay').forEach(overlay => {
+    overlay.classList.remove('is-visible');
+    overlay.setAttribute('aria-hidden', 'true');
+  });
 });
