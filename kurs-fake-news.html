@@ -7156,6 +7156,186 @@ img,video,iframe{max-width:100%}
 }
 </style>
 <link href="assets/site-shell-unified.css?v=20260727-01" rel="stylesheet"/>
+
+<style id="course-frames-readability-fix-20260729">
+/* Korekta czytelności pilotażu Modułów 1 i 5 — bez zmiany treści */
+body.module-1-active #moduleView .content-column,
+body.module-5-active #moduleView .content-column{
+  color:#1d2b36!important;
+}
+
+/* Główne sekcje znów mają czytelną jasną powierzchnię, ale tylko jedną ramę */
+body.module-1-active #moduleView :is(
+  #m1IntroVideo,
+  #m1LessonContentBlock,
+  #exampleSection,
+  #m1FinalTestStatic,
+  .information-disorder-section,
+  .glossary-section,
+  .lesson-section
+),
+body.module-5-active #moduleView :is(
+  .m5-intro,
+  .m5-section
+){
+  color:#1d2b36!important;
+  background:linear-gradient(145deg,#f4f1ea,#ebe7de)!important;
+  border:1px solid rgba(180,151,99,.28)!important;
+  border-radius:18px!important;
+  box-shadow:0 12px 30px rgba(14,24,31,.11)!important;
+}
+
+body.module-1-active #moduleView :is(
+  .information-disorder-section,
+  .glossary-section,
+  .lesson-section
+){
+  padding:clamp(24px,3vw,36px)!important;
+  margin:0 0 18px!important;
+}
+
+/* Wszystkie teksty na jasnych powierzchniach mają właściwy kontrast */
+body.module-1-active #moduleView :is(
+  .information-disorder-section,
+  .glossary-section,
+  .lesson-section,
+  #m1IntroVideo,
+  #m1LessonContentBlock,
+  #exampleSection,
+  #m1FinalTestStatic
+) :is(h2,h3,h4,strong,summary){color:#1a2b38!important}
+body.module-1-active #moduleView :is(
+  .information-disorder-section,
+  .glossary-section,
+  .lesson-section,
+  #m1IntroVideo,
+  #m1LessonContentBlock,
+  #exampleSection,
+  #m1FinalTestStatic
+) :is(p,li,dd,span,small){color:#566673!important}
+
+body.module-5-active #moduleView .m5-section :is(h3,h4,strong),
+body.module-5-active #moduleView .m5-intro strong{color:#1a2b38!important}
+body.module-5-active #moduleView .m5-section :is(p,li,span),
+body.module-5-active #moduleView .m5-intro p{color:#566673!important}
+
+/* Akordeony jako jasne wiersze z jednym separatorem */
+body.module-1-active #moduleView .course-accordion{
+  margin:0!important;
+  border:0!important;
+  border-top:1px solid rgba(82,103,117,.18)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.module-1-active #moduleView .course-accordion:last-of-type{
+  border-bottom:1px solid rgba(82,103,117,.18)!important;
+}
+body.module-1-active #moduleView .course-accordion>summary{
+  min-height:72px!important;
+  padding:16px 4px!important;
+  background:transparent!important;
+  border:0!important;
+  color:#1c3343!important;
+  box-shadow:none!important;
+}
+body.module-1-active #moduleView .course-accordion[open]>summary{
+  color:#294f68!important;
+  background:rgba(255,255,255,.24)!important;
+}
+body.module-1-active #moduleView .course-accordion .accordion-content{
+  padding:6px 4px 26px!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* Jeden system oznaczeń: granat + mosiężne złoto */
+body.module-1-active #moduleView .course-accordion,
+body.module-1-active #moduleView .lesson-section{
+  --accent:#b39158!important;
+}
+body.module-1-active #moduleView .accordion-number,
+body.module-1-active #moduleView .lesson-number{
+  color:#fff!important;
+  background:#3d6178!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  box-shadow:none!important;
+}
+body.module-1-active #moduleView .course-accordion:nth-of-type(even) .accordion-number,
+body.module-1-active #moduleView .lesson-section:nth-of-type(even) .lesson-number{
+  color:#263640!important;
+  background:#d9c39b!important;
+  border-color:#c5a870!important;
+}
+
+/* Plus/minus dopasowany do tej samej palety */
+body.module-1-active #moduleView .course-accordion>summary::after,
+body.module-1-active #moduleView .lesson-section>summary::after{
+  color:#fff!important;
+  background:#3d6178!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body.module-1-active #moduleView .course-accordion[open]>summary::after,
+body.module-1-active #moduleView .lesson-section[open]>summary::after{
+  color:#263640!important;
+  background:#d9c39b!important;
+}
+
+/* Nagłówek słownika nie ginie na ciemnym tle */
+body.module-1-active #moduleView .glossary-section>header,
+body.module-1-active #moduleView .glossary-section .section-heading{
+  margin-bottom:24px!important;
+}
+body.module-1-active #moduleView .glossary-section h2,
+body.module-1-active #moduleView .glossary-section h3{
+  color:#182b39!important;
+}
+body.module-1-active #moduleView .glossary-section .section-kicker{
+  color:#70562e!important;
+  background:#e8dcc6!important;
+}
+
+/* Moduł 5: jeden spokojny akcent, bez przypadkowych kolorów */
+body.module-5-active #moduleView .m5-head{
+  background:#344f60!important;
+  border:0!important;
+  border-radius:16px 16px 0 0!important;
+}
+body.module-5-active #moduleView .m5-head h3{color:#fff!important}
+body.module-5-active #moduleView .m5-head small{color:#e3cda4!important}
+body.module-5-active #moduleView .m5-body{
+  background:transparent!important;
+  border:0!important;
+}
+body.module-5-active #moduleView .m5-option{
+  color:#22343f!important;
+  background:#f8f6f1!important;
+  border-color:#cfc7ba!important;
+}
+body.module-5-active #moduleView .m5-option:hover{
+  border-color:#7894a5!important;
+  background:#fff!important;
+}
+
+/* Multimedia pozostają wyraźne, ale bez dodatkowej ciężkiej ramy */
+body.module-1-active #moduleView :is(.course-infographic,.module-infographic),
+body.module-5-active #moduleView :is(.m5-case-image,.m5-case-video){
+  border:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+@media(max-width:680px){
+  body.module-1-active #moduleView :is(.information-disorder-section,.glossary-section,.lesson-section){
+    padding:22px 17px!important;
+    border-radius:16px!important;
+  }
+  body.module-1-active #moduleView .course-accordion>summary{padding:15px 2px!important}
+}
+</style>
+
 </head>
 <body class="public-page online-course-page">
 <header class="site-header">
