@@ -114,6 +114,7 @@
     }
     sections.forEach(s => s.classList.toggle('is-complete', completed.has(s.dataset.courseSection)));
     sectionLinks.forEach(a => a.classList.toggle('is-complete', completed.has(a.dataset.sectionLink)));
+    document.dispatchEvent(new CustomEvent('ebg:course-progress-updated', { detail: { done, total, percent: pct } }));
   }
 
   function setActiveSection(id) {

@@ -60,8 +60,8 @@ części kursu.
 4. POTWIERDZENIE UKOŃCZENIA CZĘŚCI E-LEARNINGOWEJ
 --------------------------------------------------
 
-Po osiągnięciu 100% ukończenia wszystkich modułów uczestnik powinien otrzymać możliwość
-wygenerowania pliku PDF:
+Po ukończeniu wszystkich pięciu modułów w 100% oraz oznaczeniu czterech formularzy jako
+wykonanych portal automatycznie odblokowuje przycisk do wygenerowania pliku PDF:
 
 „Potwierdzenie ukończenia części e-learningowej”
 
@@ -75,6 +75,8 @@ Dokument powinien zawierać:
 - listę pięciu modułów ze statusem 100%,
 - ogólny poziom ukończenia kursu: 100%,
 - indywidualny numer potwierdzenia,
+- oświadczenie o ukończeniu 111 tematów w pięciu modułach,
+- oświadczenie o wypełnieniu formularza uczestnika, testu wstępnego, testu końcowego i ankiety,
 - informację, że dokument nie jest certyfikatem.
 
 Zalecana treść zastrzeżenia w PDF:
@@ -86,7 +88,8 @@ końcowego oraz wypełnienia ankiety ewaluacyjnej.”
 5. WYSŁANIE DOKUMENTU DO WERYFIKACJI
 ------------------------------------
 
-Uczestnik powinien wysłać wygenerowany plik PDF na adres:
+Po pobraniu PDF uczestnik korzysta z przycisku „Przygotuj wiadomość e-mail” i wysyła
+wygenerowany dokument na adres:
 
 lmalinowski@wup-katowice.pl
 

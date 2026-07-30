@@ -117,7 +117,7 @@
     });
     document.querySelectorAll('[data-certificate-status]').forEach(node => {
       if (formsDone === 4 && modulesDone === 5) {
-        node.textContent = 'Wszystkie etapy zostały oznaczone jako wykonane';
+        node.textContent = 'Możesz pobrać potwierdzenie do weryfikacji';
       } else if (doneSteps >= 5) {
         node.textContent = 'Jesteś blisko ukończenia wszystkich warunków';
       } else {
@@ -128,6 +128,9 @@
     document.querySelectorAll('[data-form-card]').forEach(card => {
       card.classList.toggle('is-complete', Boolean(state[card.dataset.formCard]));
     });
+    document.dispatchEvent(new CustomEvent('ebg:certificate-requirements-updated', {
+      detail: { formsDone, modulesDone, eligible: formsDone === 4 && modulesDone === 5, percent }
+    }));
   }
 
   document.querySelectorAll('[data-form-complete]').forEach(input => {
