@@ -1,0 +1,298 @@
+/* =========================================================
+   WSPÓLNY, LEKKI SYSTEM NAGŁÓWKÓW PODSTRON
+   Edukacja bez granic — 2026-07-29
+   ========================================================= */
+
+.subpage-hero-modern{
+  --sph-ink:#172635;
+  --sph-muted:#5d6b76;
+  --sph-line:rgba(52,76,91,.14);
+  --sph-gold:#b69155;
+  --sph-blue:#426f8d;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);
+  gap:clamp(28px,4vw,56px);
+  align-items:center;
+  width:100%;
+  min-height:350px;
+  margin:0 0 24px;
+  padding:clamp(34px,5vw,60px);
+  color:var(--sph-ink);
+  background:
+    radial-gradient(circle at 92% 4%,rgba(182,145,85,.11),transparent 35%),
+    linear-gradient(135deg,#f7f4ee 0%,#f1f3f3 58%,#e8eef1 100%);
+  border:1px solid var(--sph-line);
+  border-radius:24px;
+  box-shadow:0 18px 48px rgba(18,32,42,.10);
+}
+
+.subpage-hero-modern::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:clamp(34px,5vw,60px);
+  top:0;
+  width:74px;
+  height:4px;
+  background:linear-gradient(90deg,var(--sph-gold),rgba(182,145,85,.25));
+}
+
+.subpage-hero-modern__copy{
+  min-width:0;
+  max-width:760px;
+}
+
+.subpage-hero-modern h1{
+  margin:0;
+  max-width:760px;
+  color:var(--sph-ink);
+  font-size:clamp(38px,4.6vw,60px);
+  font-weight:780;
+  line-height:1.04;
+  letter-spacing:-.042em;
+  text-wrap:balance;
+}
+
+.subpage-hero-modern h1 span{
+  display:block;
+  max-width:680px;
+  margin-top:12px;
+  color:#456070;
+  font-size:clamp(19px,2vw,27px);
+  font-weight:610;
+  line-height:1.28;
+  letter-spacing:-.018em;
+}
+
+.subpage-hero-modern p{
+  max-width:720px;
+  margin:22px 0 0;
+  color:var(--sph-muted);
+  font-size:16px;
+  line-height:1.72;
+}
+
+.subpage-hero-modern__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.subpage-hero-modern .public-btn{
+  min-height:46px;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:800;
+  box-shadow:none;
+  transform:none;
+}
+
+.subpage-hero-modern .public-btn.primary,
+.subpage-hero-modern .public-btn:not(.light):not(.public-btn-ghost){
+  color:#fff;
+  background:#365f7a;
+  border-color:#365f7a;
+}
+
+.subpage-hero-modern .public-btn.primary:hover,
+.subpage-hero-modern .public-btn:not(.light):not(.public-btn-ghost):hover{
+  color:#fff;
+  background:#294f68;
+  border-color:#294f68;
+  transform:translateY(-1px);
+}
+
+.subpage-hero-modern .public-btn.light,
+.subpage-hero-modern .public-btn.public-btn-ghost{
+  color:#425461;
+  background:rgba(255,255,255,.58);
+  border-color:rgba(66,84,97,.20);
+}
+
+.subpage-hero-modern .public-btn.light:hover,
+.subpage-hero-modern .public-btn.public-btn-ghost:hover{
+  color:#253947;
+  background:#fff;
+  border-color:rgba(66,84,97,.30);
+  transform:translateY(-1px);
+}
+
+.subpage-hero-modern__media{
+  position:relative;
+  min-width:0;
+  aspect-ratio:4 / 3;
+  overflow:hidden;
+  border-radius:18px;
+  background:#dbe3e6;
+  box-shadow:0 14px 34px rgba(20,35,44,.15);
+}
+
+.subpage-hero-modern__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border:1px solid rgba(255,255,255,.54);
+  border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(26,48,60,.06);
+}
+
+.subpage-hero-modern__media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .65s cubic-bezier(.2,.7,.2,1);
+}
+
+.subpage-hero-modern:hover .subpage-hero-modern__media img{
+  transform:scale(1.018);
+}
+
+.subpage-hero-modern__mark{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:230px;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 50% 35%,rgba(255,255,255,.92),rgba(255,255,255,.48) 52%,rgba(255,255,255,.20)),
+    linear-gradient(145deg,#e7ecee,#dbe4e7);
+  border:1px solid rgba(52,76,91,.10);
+}
+
+.subpage-hero-modern__mark img{
+  width:min(170px,58%);
+  height:auto;
+  opacity:.84;
+  filter:drop-shadow(0 14px 24px rgba(27,47,59,.10));
+}
+
+.subpage-hero-modern__institution{
+  display:flex;
+  align-items:center;
+  margin-top:26px;
+}
+
+.subpage-hero-modern__institution img{
+  display:block;
+  width:auto;
+  max-width:250px;
+  max-height:56px;
+  object-fit:contain;
+  filter:none;
+}
+
+/* Kadry dopasowane do poszczególnych istniejących zdjęć. */
+.subpage-hero-modern--training .subpage-hero-modern__media img{object-position:center 42%}
+.subpage-hero-modern--courses .subpage-hero-modern__media img{object-position:center}
+.subpage-hero-modern--signup .subpage-hero-modern__media img{object-position:center}
+.subpage-hero-modern--contact .subpage-hero-modern__media img{object-position:center 46%}
+
+/* Normalizacja szerokości na podstronach o różnych kontenerach. */
+.training-showcase-page .training-showcase-main,
+.online-catalog-page .online-catalog-main,
+.public-page .public-main,
+.calendar-signup-page .calendar-main,
+.trainer-page .trainer-main{
+  width:min(1240px,calc(100% - 48px));
+  margin-inline:auto;
+}
+
+.training-showcase-page .training-showcase-main,
+.online-catalog-page .online-catalog-main,
+.public-page .public-main,
+.calendar-signup-page .calendar-main{
+  padding-top:26px;
+}
+
+.trainer-page .trainer-main{
+  padding-top:26px;
+}
+
+/* Stare reguły hero nie powinny wpływać na nowy wspólny komponent. */
+.subpage-hero-modern::after{content:none!important}
+.subpage-hero-modern .public-hero-content{all:unset}
+
+@media(max-width:980px){
+  .subpage-hero-modern{
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+  .subpage-hero-modern__copy{max-width:none}
+  .subpage-hero-modern__media{aspect-ratio:16 / 8.5}
+  .subpage-hero-modern__mark{min-height:190px}
+}
+
+@media(max-width:700px){
+  .training-showcase-page .training-showcase-main,
+  .online-catalog-page .online-catalog-main,
+  .public-page .public-main,
+  .calendar-signup-page .calendar-main,
+  .trainer-page .trainer-main{
+    width:calc(100% - 20px);
+    padding-top:14px;
+  }
+
+  .subpage-hero-modern{
+    gap:24px;
+    margin-bottom:18px;
+    padding:30px 20px 20px;
+    border-radius:19px;
+  }
+
+  .subpage-hero-modern::before{
+    left:20px;
+    width:58px;
+  }
+
+  .subpage-hero-modern h1{
+    font-size:clamp(34px,10.5vw,46px);
+  }
+
+  .subpage-hero-modern h1 span{
+    font-size:clamp(18px,5.5vw,23px);
+  }
+
+  .subpage-hero-modern p{
+    margin-top:18px;
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  .subpage-hero-modern__actions{
+    display:grid;
+    grid-template-columns:1fr;
+    margin-top:23px;
+  }
+
+  .subpage-hero-modern .public-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .subpage-hero-modern__media{
+    aspect-ratio:4 / 3;
+    border-radius:15px;
+  }
+
+  .subpage-hero-modern__mark{
+    min-height:150px;
+    border-radius:15px;
+  }
+
+  .subpage-hero-modern__mark img{
+    width:min(130px,48%);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .subpage-hero-modern__media img{transition:none}
+  .subpage-hero-modern:hover .subpage-hero-modern__media img{transform:none}
+}
