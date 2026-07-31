@@ -76,3 +76,15 @@
 .micro-log select{min-width:135px;width:100%}
 @media(max-width:900px){.compact-grid.three{grid-template-columns:1fr 1fr}.classification-select-list .compact-field{grid-template-columns:1fr}.compact-assessment{min-width:680px}}
 @media(max-width:700px){.compact-grid.two,.compact-grid.three,.headline-pair{grid-template-columns:1fr}.exercise-compact{padding:.9rem}.choice-grid{grid-template-columns:1fr}.assessment-dot span{width:32px;height:32px}.compact-assessment th[scope="row"]{min-width:210px}}
+
+/* Moduł 1 – interaktywna samoocena nawyków medialnych */
+.choice-card > span{display:grid;gap:.18rem;line-height:1.35}
+.choice-card > span strong{color:#174f73}
+.choice-card > span small{color:#607888;font-weight:500;line-height:1.4}
+.habit-result{margin-top:1rem}
+.habit-result strong{font-size:1.05rem}
+.habit-plan-grid .choice-card{align-items:center}
+.habit-selection-note{margin:.55rem 0 0;color:#526f80;font-weight:700}
+.choice-card.is-limit-warning{animation:habit-limit-shake .32s ease 2;border-color:#aa553e;background:#fff5f1}
+.choice-card input:disabled + span{opacity:.55}
+@keyframes habit-limit-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
