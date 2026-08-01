@@ -93,3 +93,9 @@
   .course-banner-mobile-title{position:static!important;width:auto!important;height:auto!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;border:0!important;font-size:clamp(1.75rem,8vw,2.25rem)!important;line-height:1.04!important}
   .intro-copy--compact>p:not(.intro-kicker){font-size:.98rem}
 }
+
+
+.course-infographic-figure{margin:0 0 1.35rem;padding:1rem;border:1px solid #d8e3ea;border-radius:18px;background:linear-gradient(180deg,#f8fafc 0%,#eef4f7 100%);box-shadow:0 10px 26px rgba(20,43,68,.06)}
+.course-infographic-image{display:block;width:100%;height:auto;border-radius:14px;background:#fff;box-shadow:0 4px 16px rgba(20,43,68,.07)}
+.course-infographic-figure figcaption{margin:.85rem auto 0;max-width:78ch;color:#4d687a;font-size:.94rem;line-height:1.55;text-align:center}
+@media (max-width:640px){.course-infographic-figure{padding:.5rem;border-radius:14px}.course-infographic-image{border-radius:10px}.course-infographic-figure figcaption{padding:0 .35rem;font-size:.9rem}}
