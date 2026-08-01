@@ -187,3 +187,7 @@
   .m1v3-row,.m1v3-row.is-triple{grid-template-columns:1fr}
   .m1v3-row > label{width:100%}
 }
+
+.m1v3-infographic{margin:0 0 1.15rem!important;padding:1rem!important;border:1px solid #d9e4eb;border-radius:18px;background:linear-gradient(180deg,#f8fafc 0%,#f1f6f9 100%);box-shadow:0 10px 24px rgba(20,43,68,.05)}
+.m1v3-infographic-image{display:block;width:100%;height:auto;border-radius:14px;background:#fff;box-shadow:0 4px 16px rgba(20,43,68,.06)}
+.m1v3-infographic figcaption{margin-top:.85rem;color:#506b7d;font-size:.93rem;line-height:1.55;text-align:center}

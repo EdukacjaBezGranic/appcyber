@@ -64,13 +64,14 @@
     },
     '1.3': {
       steps: [
-        'Ułóż pięć wersji wiadomości od najbliższej źródłu do najbardziej skróconej lub uogólnionej.',
-        'Numer 1 oznacza pełny materiał najbliższy źródłu. Numer 5 oznacza wersję najbardziej oddaloną od źródła.',
-        'Każdego numeru od 1 do 5 użyj dokładnie raz.',
-        'Następnie wskaż, między którymi wersjami znika link, zakres, autor oraz dokładna data.',
-        'Kliknij „Sprawdź łańcuch”.'
+        'Wyobraź sobie, że jedna wiadomość jest skracana i przesyłana dalej przez kolejne osoby.',
+        'Najpierw przeczytaj wszystkie pięć wersji. Każda dotyczy tego samego czasowego zamknięcia jednego urzędu.',
+        'Przy każdej wersji wybierz jej miejsce w kolejności: 1 to pełny komunikat oficjalny, a 5 to najbardziej zniekształcona i uogólniona wersja.',
+        'Każdego numeru od 1 do 5 użyj tylko raz.',
+        'W drugiej części wskaż, po którym kroku znika konkretna informacja, na przykład link, godziny albo fakt, że chodzi tylko o jeden urząd.',
+        'Kliknij „Sprawdź kolejność i utratę informacji”.'
       ],
-      note: 'Najpierw ułóż kolejność, a dopiero potem oceniaj moment utraty informacji.'
+      note: 'To działa jak zabawa w głuchy telefon: im dalej wiadomość jest od źródła, tym więcej szczegółów może zniknąć albo zmienić znaczenie.'
     },
     '1.4': {
       steps: [
@@ -234,11 +235,53 @@
       host.querySelector('[data-skip]').addEventListener('click',()=>finish(host,form,null,null,'Refleksja została świadomie pominięta.'));
     },
     '1.3'(host) {
-      const cards=['Pełny komunikat instytucji','Omówienie lokalnego portalu','Zrzut nagłówka bez linku','Wiadomość w komunikatorze','Uogólniona informacja o całym urzędzie'];
-      const moments=['2-3','2-3','3-4','4-5'];
-      const body=`<form><p><strong>Ułóż kolejność:</strong> 1 oznacza pełny materiał najbliższy źródłu, a 5 — wersję najbardziej skróconą lub uogólnioną. Każdego numeru użyj dokładnie raz.</p>${cards.map((c,i)=>`<label class="m1v3-row"><p><strong>Wersja ${i+1}.</strong> ${c}</p><select name="pos${i}" required><option value="">Pozycja</option>${[1,2,3,4,5].map(n=>`<option>${n}</option>`).join('')}</select></label>`).join('')}<fieldset class="m1v3-fieldset"><legend>Kiedy po raz pierwszy znika informacja?</legend>${['Link do źródła pierwotnego','Pełny zakres zmiany','Autor lub odpowiedzialna instytucja','Precyzyjna data i warunki'].map((x,i)=>`<label class="m1v3-row"><p>${x}</p><select name="loss${i}" required><option value="">Wybierz moment</option><option value="1-2">między 1 i 2</option><option value="2-3">między 2 i 3</option><option value="3-4">między 3 i 4</option><option value="4-5">między 4 i 5</option></select></label>`).join('')}</fieldset><div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź łańcuch</button></div></form>`;
-      host.innerHTML=activityShell('1.3','1.3','Łańcuch utraty kontekstu','Ułóż obieg wiadomości i wskaż moment utraty danych.',body);const form=host.querySelector('form');restoreRecord(host);
-      form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const pos=cards.map((_,i)=>Number(form[`pos${i}`].value));if(new Set(pos).size!==5){setFeedback(host,'Każdej pozycji 1–5 użyj dokładnie raz.','warning');return;}const order=pos.map((p,i)=>[p,i]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);let score=0;for(let i=0;i<4;i++)if(order[i]===i&&order[i+1]===i+1)score++;moments.forEach((m,i)=>{if(form[`loss${i}`].value===m)score++;});finish(host,form,score,8,'Zniekształcenie może powstać przez skrócenie, zrzut ekranu i utratę zakresu nawet bez świadomego zamiaru oszustwa.',score===8?'success':'warning');});
+      const cards=[
+        {position:4, text:'Wiadomość w komunikatorze: „Słyszałem, że urząd pracy w Woli jest zamykany”. Nie ma daty, linku ani wyjaśnienia, że chodzi o krótką przerwę.'},
+        {position:1, text:'Oficjalny komunikat PUP Wola: „14 sierpnia od 12:00 do 14:00 budynek będzie zamknięty z powodu prac technicznych. Usługi online działają bez zmian”. Podano datę, godziny i link do źródła.'},
+        {position:5, text:'Post w mediach społecznościowych: „Zamykają urzędy pracy. Media milczą”. Informacja o jednym urzędzie została przedstawiona tak, jakby dotyczyła wszystkich urzędów.'},
+        {position:2, text:'Informacja lokalnego portalu: „PUP Wola będzie zamknięty 14 sierpnia przez dwie godziny z powodu prac technicznych”. Pod tekstem nadal znajduje się link do komunikatu urzędu.'},
+        {position:3, text:'Zrzut samego nagłówka: „PUP Wola zamknięty 14 sierpnia”. Nie widać linku, godzin, powodu ani informacji o usługach online.'}
+      ];
+      const losses=[
+        {label:'Link do oficjalnego komunikatu', moment:'2-3'},
+        {label:'Dokładne godziny i powód zamknięcia', moment:'2-3'},
+        {label:'Informacja, że zamknięcie jest tylko czasowe', moment:'3-4'},
+        {label:'Informacja, że chodzi o jeden konkretny urząd, a nie o wszystkie urzędy pracy', moment:'4-5'}
+      ];
+      const positionOptions=[
+        ['1','1 — początek: pełny komunikat oficjalny'],
+        ['2','2 — pierwsze, jeszcze rzetelne skrócenie'],
+        ['3','3 — sam nagłówek lub zrzut bez pełnego źródła'],
+        ['4','4 — wiadomość przekazana bez źródła i ważnych szczegółów'],
+        ['5','5 — końcowe uogólnienie zmieniające znaczenie']
+      ];
+      const momentOptions=[
+        ['1-2','między wersją 1 i 2'],['2-3','między wersją 2 i 3'],['3-4','między wersją 3 i 4'],['4-5','między wersją 4 i 5']
+      ];
+      const body=`<form><div class="m1v3-reference"><p><strong>Najpierw ułóż historię wiadomości.</strong> Przeczytaj wszystkie wersje i zdecyduj, która była pierwsza, druga, trzecia, czwarta i piąta.</p><p><strong>Prosty sposób:</strong> zacznij od wersji, która ma autora, datę, godziny i link. Na końcu ustaw wersję, która mówi już o wszystkich urzędach, chociaż źródło dotyczyło tylko jednego.</p></div>${cards.map((c,i)=>`<label class="m1v3-row"><p><strong>Tekst ${String.fromCharCode(65+i)}.</strong> ${c.text}</p><select name="pos${i}" required><option value="">Wybierz miejsce w kolejności</option>${positionOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select><span class="m1v3-item-feedback" data-order-feedback="${i}"></span></label>`).join('')}<fieldset class="m1v3-fieldset"><legend>Teraz sprawdź, kiedy znikają ważne szczegóły</legend><p>Przykład: jeśli wersja 2 ma jeszcze link, a wersja 3 już go nie ma, wybierz „między wersją 2 i 3”.</p>${losses.map((x,i)=>`<label class="m1v3-row"><p>${x.label}</p><select name="loss${i}" required><option value="">Wybierz moment</option>${momentOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select><span class="m1v3-item-feedback" data-loss-feedback="${i}"></span></label>`).join('')}</fieldset><div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź kolejność i utratę informacji</button></div></form>`;
+      host.innerHTML=activityShell('1.3','1.3','Jak wiadomość zmienia się po drodze?','Ułóż pięć wersji tej samej wiadomości — od pełnego komunikatu do zniekształconego uogólnienia.',body);const form=host.querySelector('form');restoreRecord(host);
+      form.addEventListener('submit',e=>{
+        e.preventDefault();
+        if(!form.reportValidity())return;
+        const pos=cards.map((_,i)=>Number(form[`pos${i}`].value));
+        if(new Set(pos).size!==5){setFeedback(host,'Każde miejsce od 1 do 5 może być użyte tylko raz. Sprawdź, czy dwa teksty nie mają tego samego numeru.','warning');return;}
+        let score=0;
+        cards.forEach((card,i)=>{
+          const ok=pos[i]===card.position;
+          if(ok)score++;
+          const fb=host.querySelector(`[data-order-feedback="${i}"]`);
+          fb.className=`m1v3-item-feedback ${ok?'is-correct':'is-incorrect'}`;
+          fb.textContent=ok?`Dobrze — to krok ${card.position}.`:'Sprawdź, ile szczegółów i jaki zakres ma ta wersja.';
+        });
+        losses.forEach((loss,i)=>{
+          const ok=form[`loss${i}`].value===loss.moment;
+          if(ok)score++;
+          const fb=host.querySelector(`[data-loss-feedback="${i}"]`);
+          fb.className=`m1v3-item-feedback ${ok?'is-correct':'is-incorrect'}`;
+          fb.textContent=ok?'Dobrze wskazany moment.':'Porównaj dwie sąsiednie wersje i znajdź pierwszą, w której tej informacji już nie ma.';
+        });
+        finish(host,form,score,9,'Pełny komunikat dotyczył krótkiego zamknięcia jednego urzędu. Po kilku skrótach i przekazaniach zmienił się w nieprawdziwe uogólnienie o zamykaniu wszystkich urzędów pracy.',score===9?'success':'warning');
+      });
     },
     '1.4'(host) {
       const actors=['Instytucja publiczna','Redakcja lub portal','Platforma','System rekomendacyjny','Użytkownik','Fact-checker'];
