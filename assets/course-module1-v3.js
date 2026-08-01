@@ -47,11 +47,11 @@
     '1.1': {
       steps: [
         'Przeczytaj pierwszą sytuację.',
-        'Wybierz, w jaki sposób informacja pojawiła się bezpośrednio przed Tobą: przez wyszukiwanie, inną osobę, platformę albo AI.',
-        'Tak samo odpowiedz na pozostałe cztery sytuacje.',
+        'Odpowiedz na trzy pytania: jak informacja do Ciebie dotarła, czy widzisz jej źródło pierwotne i co warto zrobić najpierw.',
+        'Tak samo przeanalizuj drugą sytuację.',
         'Kliknij „Sprawdź odpowiedzi”.'
       ],
-      note: 'Nie oceniasz, czy treść jest prawdziwa. Wskazujesz tylko drogę, którą do Ciebie dotarła.'
+      note: 'Nie musisz rozstrzygać, czy wiadomość jest prawdziwa. Twoim zadaniem jest odróżnić drogę dotarcia od źródła i wybrać rozsądny pierwszy krok.'
     },
     '1.2': {
       steps: [
@@ -208,22 +208,122 @@
 
   const renderers = {
     '1.1'(host) {
-      const cases = [
-        ['Wpisujesz w wyszukiwarce „termin składania wniosków szkoleniowych” i otwierasz oficjalny komunikat.','search'],
-        ['Koleżanka przesyła w komunikatorze zrzut ekranu z informacją o zmianie godzin pracy urzędu.','person'],
-        ['Po obejrzeniu kilku filmów platforma automatycznie uruchamia kolejny materiał o tym samym temacie.','platform'],
-        ['Prosisz narzędzie AI o podsumowanie długiego raportu i czytasz przygotowaną odpowiedź.','ai'],
-        ['Na stronie głównej serwisu pojawia się materiał dobrany na podstawie wcześniejszych wyszukiwań.','platform']
+      const scenarios = [
+        {
+          title: 'Sytuacja 1. Zrzut ekranu od koleżanki',
+          text: 'Koleżanka przesyła Ci w komunikatorze zrzut ekranu z informacją: „Od poniedziałku urząd będzie zamknięty”. Na zrzucie nie widać autora, daty ani adresu strony.',
+          questions: [
+            {
+              name: 's1_route',
+              prompt: '1. Jak ta informacja dotarła do Ciebie?',
+              options: [
+                ['search', 'przez wyszukiwarkę'],
+                ['person', 'przez inną osobę'],
+                ['platform', 'przez rekomendację platformy'],
+                ['ai', 'przez narzędzie AI']
+              ],
+              correct: 'person'
+            },
+            {
+              name: 's1_source',
+              prompt: '2. Co w tej chwili naprawdę wiesz?',
+              options: [
+                ['official', 'To na pewno oficjalny komunikat urzędu.'],
+                ['closed', 'Urząd na pewno będzie zamknięty.'],
+                ['unknown', 'Ktoś przesłał mi zrzut, ale nie widzę źródła pierwotnego.'],
+                ['false', 'Wiadomość na pewno jest fałszywa.']
+              ],
+              correct: 'unknown'
+            },
+            {
+              name: 's1_action',
+              prompt: '3. Co warto zrobić jako pierwsze?',
+              options: [
+                ['share', 'Przesłać zrzut innym osobom.'],
+                ['ask', 'Zapytać koleżankę, czy jej zdaniem to prawda.'],
+                ['official', 'Poszukać komunikatu na oficjalnej stronie urzędu.'],
+                ['reactions', 'Sprawdzić, ile osób zareagowało na tę wiadomość.']
+              ],
+              correct: 'official'
+            }
+          ],
+          explanation: 'Informacja dotarła przez inną osobę, ale zrzut ekranu nie pokazuje źródła pierwotnego. Najpierw trzeba odnaleźć oficjalny komunikat.'
+        },
+        {
+          title: 'Sytuacja 2. Streszczenie przygotowane przez AI',
+          text: 'Pytasz narzędzie AI, czy nowe badanie dowodzi, że praca zdalna obniża produktywność. Otrzymujesz krótką odpowiedź: „Badanie potwierdza wyraźny spadek produktywności”, ale narzędzie nie podaje linku ani tytułu raportu.',
+          questions: [
+            {
+              name: 's2_route',
+              prompt: '1. Jak ta informacja dotarła do Ciebie?',
+              options: [
+                ['search', 'przez wyszukiwarkę'],
+                ['person', 'przez inną osobę'],
+                ['platform', 'przez rekomendację platformy'],
+                ['ai', 'przez narzędzie AI']
+              ],
+              correct: 'ai'
+            },
+            {
+              name: 's2_source',
+              prompt: '2. Co w tej chwili naprawdę wiesz?',
+              options: [
+                ['proof', 'Badanie na pewno potwierdza tę tezę.'],
+                ['summary', 'Widzę streszczenie AI, ale nie widzę raportu, na którym je oparto.'],
+                ['false', 'Odpowiedź AI na pewno jest fałszywa.'],
+                ['majority', 'Większość ekspertów zgadza się z tą tezą.']
+              ],
+              correct: 'summary'
+            },
+            {
+              name: 's2_action',
+              prompt: '3. Co warto zrobić jako pierwsze?',
+              options: [
+                ['repeat', 'Powtórzyć tę informację w rozmowie lub prezentacji.'],
+                ['prompt', 'Zapytać AI jeszcze raz innymi słowami.'],
+                ['source', 'Odnaleźć wskazane badanie lub raport i sprawdzić jego treść.'],
+                ['popular', 'Sprawdzić, czy podobne stwierdzenie jest popularne w mediach społecznościowych.']
+              ],
+              correct: 'source'
+            }
+          ],
+          explanation: 'AI jest tutaj pośrednikiem i interpretatorem. Zanim uznasz odpowiedź za wiarygodną, trzeba odnaleźć raport i sprawdzić, czy rzeczywiście mówi to samo.'
+        }
       ];
-      const body = `<form novalidate><p><strong>Polecenie:</strong> wskaż bezpośrednią drogę dotarcia. Nie oceniasz prawdziwości treści.</p>${cases.map((c,i)=>`<fieldset class="m1v3-fieldset"><legend>Sytuacja ${i+1}</legend><p>${c[0]}</p><div class="m1v3-options is-grid">${categoryOptions.map(o=>option(o[0],o[1],`q${i+1}`)).join('')}</div><span class="m1v3-item-feedback" data-item-feedback="${i}"></span></fieldset>`).join('')}<div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź odpowiedzi</button></div></form>`;
-      host.innerHTML = activityShell('1.1','1.1','Jak dotarła informacja?','Klasyfikacja pięciu dróg dotarcia informacji.',body);
-      const form=host.querySelector('form'); restoreRecord(host);
-      form.addEventListener('submit',e=>{
+
+      const body = `<form novalidate><p><strong>Co masz zrobić?</strong> W każdej z dwóch sytuacji odpowiedz na trzy pytania. Nie zgaduj, czy wiadomość jest prawdziwa. Zwróć uwagę na drogę dotarcia, widoczne źródło i pierwszy rozsądny krok weryfikacji.</p>${scenarios.map((scenario,scenarioIndex)=>`<fieldset class="m1v3-fieldset"><legend>${scenario.title}</legend><p>${scenario.text}</p>${scenario.questions.map((question)=>`<div class="m1v3-question-block"><p><strong>${question.prompt}</strong></p><div class="m1v3-options is-grid">${question.options.map(opt=>option(opt[0],opt[1],question.name)).join('')}</div></div>`).join('')}<span class="m1v3-item-feedback" data-item-feedback="${scenarioIndex}"></span></fieldset>`).join('')}<div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź odpowiedzi</button></div></form>`;
+
+      host.innerHTML = activityShell('1.1','1.1','Droga dotarcia to nie źródło','Dwie krótkie sytuacje: rozpoznaj kanał, źródło i pierwszy krok weryfikacji.',body);
+      const form = host.querySelector('form');
+      const previousRecord = state.activities['1.1'];
+      if (previousRecord?.values && Object.keys(previousRecord.values).some(key => /^q[1-5]$/.test(key))) {
+        delete state.activities['1.1'];
+        save();
+      }
+      restoreRecord(host);
+      form.addEventListener('submit', e => {
         e.preventDefault();
-        const names=cases.map((_,i)=>`q${i+1}`); if(!requireRadios(form,names)){setFeedback(host,'Uzupełnij odpowiedź w każdej sytuacji.','warning');return;}
-        let score=0;
-        cases.forEach((c,i)=>{const selected=form.querySelector(`[name="q${i+1}"]:checked`).value; const ok=selected===c[1]; if(ok)score++; const fb=host.querySelector(`[data-item-feedback="${i}"]`); fb.className=`m1v3-item-feedback ${ok?'is-correct':'is-incorrect'}`; fb.textContent=ok?'Trafnie rozpoznana droga.':'Spójrz na ostatni etap przed pojawieniem się treści na ekranie.';});
-        finish(host,form,score,5,'Kanał może dostarczyć materiał rzetelny albo nierzetelny. Droga dotarcia nie przesądza o prawdziwości.',score===5?'success':'warning');
+        const names = scenarios.flatMap(s => s.questions.map(q => q.name));
+        if (!requireRadios(form, names)) {
+          setFeedback(host, 'Odpowiedz na wszystkie trzy pytania w obu sytuacjach.', 'warning');
+          return;
+        }
+        let score = 0;
+        scenarios.forEach((scenario, scenarioIndex) => {
+          let scenarioScore = 0;
+          scenario.questions.forEach(question => {
+            const selected = form.querySelector(`[name="${question.name}"]:checked`)?.value;
+            if (selected === question.correct) {
+              score += 1;
+              scenarioScore += 1;
+            }
+          });
+          const feedback = host.querySelector(`[data-item-feedback="${scenarioIndex}"]`);
+          const complete = scenarioScore === scenario.questions.length;
+          feedback.className = `m1v3-item-feedback ${complete ? 'is-correct' : 'is-incorrect'}`;
+          feedback.textContent = complete ? `Dobrze. ${scenario.explanation}` : `Sprawdź jeszcze raz. ${scenario.explanation}`;
+        });
+        finish(host, form, score, 6, 'Droga, którą informacja trafia na ekran, nie jest tym samym co jej źródło. Przed uznaniem treści za wiarygodną znajdź materiał pierwotny.', score === 6 ? 'success' : 'warning');
       });
     },
     '1.2'(host) {
