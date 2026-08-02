@@ -10,7 +10,7 @@
 <link href="assets/course-v2.css?v=20260801-11" rel="stylesheet"/>
 <link href="assets/course-workbook.css?v=20260801-2" rel="stylesheet"/>
 <link href="assets/course-exercise-refinement.css?v=20260731-2" rel="stylesheet"/>
-<link href="assets/course-forms.css?v=20260730-3" rel="stylesheet"/>
+<link href="assets/course-forms.css?v=20260802-5" rel="stylesheet"/>
 <link href="assets/course-self-assessment.css?v=20260730-1" rel="stylesheet"/>
 <meta content="2026-08-01-doomscrolling-short-v1" name="course-editorial-version"/>
 <link href="assets/course-module1-v3.css?v=20260801-6" rel="stylesheet"/><link href="assets/course-instructions-v1.css?v=20260801-1" rel="stylesheet"/><link href="assets/responsive-20260731.css?v=20260731-2" rel="stylesheet"/>
@@ -57,6 +57,16 @@
 </div>
 <div class="course-requirements-badge"><span aria-hidden="true">01</span><strong>Etap obowiązkowy</strong><small>dla osób ubiegających się o certyfikat</small></div>
 </div>
+<section class="course-privacy-consent" aria-labelledby="privacyConsentTitle">
+<div class="course-privacy-consent__icon" aria-hidden="true">✓</div>
+<div class="course-privacy-consent__copy">
+<p class="course-privacy-consent__kicker">OCHRONA DANYCH OSOBOWYCH</p>
+<h3 id="privacyConsentTitle">Zapoznaj się z klauzulą informacyjną</h3>
+<button class="course-privacy-open" data-privacy-open type="button">Przeczytaj pełną klauzulę informacyjną</button>
+<label class="course-privacy-confirm"><input data-privacy-accepted type="checkbox"/><span>Oświadczam, że zapoznałam się/zapoznałem się z klauzulą informacyjną dotyczącą przetwarzania danych osobowych.</span></label>
+<p class="course-privacy-status" data-privacy-status aria-live="polite">Potwierdzenie jest wymagane przed przejściem do kursu.</p>
+</div>
+</section>
 <div class="course-form-cards course-form-cards--start">
 <article class="course-form-card" data-form-card="registration">
 <div class="course-form-number">1</div>
@@ -79,19 +89,13 @@
 </div>
 </article>
 </div>
-<aside aria-labelledby="certificateRuleTitle" class="course-certificate-rule">
+<aside aria-labelledby="certificateRuleTitle" class="course-certificate-rule course-certificate-rule--compact">
 <div aria-hidden="true" class="course-certificate-icon">✓</div>
 <div>
 <p class="course-certificate-label">CERTYFIKAT UKOŃCZENIA KURSU</p>
-<h3 id="certificateRuleTitle">Warunki otrzymania certyfikatu</h3>
-<p>Certyfikat zostanie wystawiony po potwierdzeniu wszystkich wymaganych etapów:</p>
-<ol>
-<li>wypełnienie formularza uczestnika i testu wstępnego;</li>
-<li>ukończenie wszystkich pięciu modułów kursu;</li>
-<li>zaliczenie testu końcowego zgodnie z progiem wskazanym w formularzu;</li>
-<li>wypełnienie ankiety ewaluacyjnej po kursie.</li>
-</ol>
-<p class="course-certificate-note"><strong>Ważne:</strong> w każdym formularzu Google należy podać ten sam adres e-mail. Zaznaczenia w portalu są prywatną listą kontrolną uczestnika. Organizator potwierdza spełnienie warunków na podstawie odpowiedzi zapisanych w Google Forms.</p>
+<h3 id="certificateRuleTitle">Sprawdź warunki otrzymania certyfikatu</h3>
+<p>Certyfikat zostanie wystawiony po weryfikacji pełnej ścieżki kursu przez organizatora.</p>
+<button class="course-certificate-rules-open" data-certificate-rules-open type="button">Zobacz wszystkie warunki</button>
 </div>
 </aside>
 <div class="course-requirements-actions">
@@ -1752,13 +1756,82 @@ Chroń swój dobrostan.</p></aside></div>
 <img alt="Logotypy finansowania i instytucji" src="grafiki/logotypy-pasek.png"/>
 <p>Szkolenie przygotowano dzięki dofinansowaniu projektu Wojewódzkiego Urzędu Pracy w Katowicach ze środków Unii Europejskiej w ramach programu Erasmus+. Poglądy i opinie są wyłącznie poglądami autora/autorów i nie muszą odzwierciedlać stanowiska Unii Europejskiej ani FRSE.</p>
 </footer>
+
+
+<div class="course-privacy-modal course-certificate-rules-modal" data-certificate-rules-modal hidden>
+<div class="course-privacy-modal__backdrop" data-certificate-rules-close></div>
+<section class="course-privacy-modal__panel" role="dialog" aria-modal="true" aria-labelledby="certificateRulesModalTitle" tabindex="-1">
+<header class="course-privacy-modal__header">
+<div><p>CERTYFIKAT UKOŃCZENIA KURSU</p><h2 id="certificateRulesModalTitle">Warunki otrzymania certyfikatu</h2></div>
+<button type="button" class="course-privacy-modal__close" data-certificate-rules-close aria-label="Zamknij warunki otrzymania certyfikatu">×</button>
+</header>
+<div class="course-privacy-modal__content course-certificate-rules-modal__content">
+<p>Certyfikat zostanie wystawiony po potwierdzeniu spełnienia wszystkich wymaganych warunków:</p>
+<ol>
+<li>zapoznanie się z klauzulą informacyjną dotyczącą przetwarzania danych osobowych i zaznaczenie obowiązkowego oświadczenia;</li>
+<li>wypełnienie formularza uczestnika;</li>
+<li>wykonanie testu wstępnego;</li>
+<li>ukończenie w 100% wszystkich pięciu modułów kursu;</li>
+<li>wykonanie obowiązkowych aktywności przewidzianych w kursie;</li>
+<li>zaliczenie testu końcowego zgodnie z progiem wskazanym w formularzu;</li>
+<li>wypełnienie ankiety ewaluacyjnej po zakończeniu kursu;</li>
+<li>przygotowanie i pobranie końcowego PDF potwierdzającego ukończenie pełnej ścieżki kursu;</li>
+<li>przesłanie pobranego PDF na adres <strong>lmalinowski@wup-katowice.pl</strong>;</li>
+<li>podanie we wszystkich formularzach Google Forms tego samego adresu e-mail, aby organizator mógł przypisać odpowiedzi do jednego uczestnika.</li>
+</ol>
+<h3>Ważne</h3>
+<p>Zaznaczenia wykonane w portalu są prywatną listą kontrolną uczestnika i pozostają na jego urządzeniu. Nie są automatycznie przekazywane organizatorowi.</p>
+<p>Organizator weryfikuje spełnienie warunków na podstawie odpowiedzi zapisanych w Google Forms, wyniku testu końcowego, danych uczestnika oraz przesłanego końcowego PDF.</p>
+<p>Certyfikat nie jest generowany automatycznie przez stronę kursu. Zostaje wystawiony po weryfikacji wszystkich warunków przez Wojewódzki Urząd Pracy w Katowicach.</p>
+</div>
+<footer class="course-privacy-modal__footer"><button type="button" class="primary-action" data-certificate-rules-close>Zamknij</button></footer>
+</section>
+</div>
+
+<div class="course-privacy-modal" data-privacy-modal hidden>
+<div class="course-privacy-modal__backdrop" data-privacy-close></div>
+<section class="course-privacy-modal__panel" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" tabindex="-1">
+<header class="course-privacy-modal__header">
+<div><p>OCHRONA DANYCH OSOBOWYCH</p><h2 id="privacyModalTitle">Klauzula informacyjna</h2></div>
+<button type="button" class="course-privacy-modal__close" data-privacy-close aria-label="Zamknij klauzulę informacyjną">×</button>
+</header>
+<div class="course-privacy-modal__content" data-privacy-scroll>
+<p>Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych, zwanego dalej „RODO”, informujemy, że:</p>
+<h3>1. Administrator danych osobowych</h3>
+<p>Administratorem Pani/Pana danych osobowych jest <strong>Wojewódzki Urząd Pracy w Katowicach</strong>, ul. Sokolska 29, 40-086 Katowice.</p>
+<h3>2. Inspektor Ochrony Danych</h3>
+<p>Funkcję Inspektora Ochrony Danych w Wojewódzkim Urzędzie Pracy w Katowicach pełni <strong>pani Justyna Nowak</strong>.</p>
+<p>Z Inspektorem Ochrony Danych można skontaktować się za pośrednictwem poczty elektronicznej: <strong>iod@wup-katowice.pl</strong> lub pisemnie na adres siedziby Urzędu.</p>
+<h3>3. Zakres przetwarzanych danych</h3>
+<p>W związku z udziałem w kursie online mogą być przetwarzane w szczególności: imię i nazwisko, adres poczty elektronicznej, odpowiedzi udzielone w formularzu uczestnika, teście wiedzy i ankiecie ewaluacyjnej, informacje dotyczące ukończenia kursu oraz data przesłania formularza.</p>
+<h3>4. Cele przetwarzania danych</h3>
+<p>Dane osobowe będą przetwarzane w celu rejestracji uczestnictwa, identyfikacji uczestnika, przeprowadzenia testu wiedzy i ankiety ewaluacyjnej, weryfikacji spełnienia warunków ukończenia kursu, przygotowania dokumentacji szkoleniowej i projektowej, monitorowania rezultatów projektu „Edukacja bez granic”, kontaktu z uczestnikiem oraz rozliczenia, kontroli i archiwizacji dokumentacji projektu.</p>
+<h3>5. Podstawa prawna przetwarzania</h3>
+<p>Podstawę prawną przetwarzania danych stanowią przepisy RODO, przepisy z zakresu postępowania administracyjnego, przepisy z zakresu polityki rynku pracy oraz inne przepisy związane z działalnością Wojewódzkiego Urzędu Pracy w Katowicach.</p>
+<h3>6. Sposób zbierania i przechowywania danych na stronie kursu</h3>
+<p>Strona kursu nie przesyła do Wojewódzkiego Urzędu Pracy w Katowicach odpowiedzi udzielanych w ćwiczeniach ani informacji o postępie uczestnika. Postęp, odpowiedzi w ćwiczeniach oraz dane wpisywane w celu utworzenia dokumentów PDF są przechowywane lokalnie w przeglądarce na urządzeniu użytkownika.</p>
+<p>Dane osobowe są przekazywane Wojewódzkiemu Urzędowi Pracy w Katowicach dopiero po ich wpisaniu i wysłaniu przez uczestnika w formularzu Google Forms.</p>
+<h3>7. Odbiorcy danych</h3>
+<p>Odbiorcami danych mogą być pracownicy i osoby upoważnione przez Wojewódzki Urząd Pracy w Katowicach, instytucje uprawnione do kontroli lub audytu projektu, organy uprawnione na podstawie przepisów prawa oraz podmioty świadczące usługi informatyczne niezbędne do obsługi formularzy elektronicznych.</p>
+<h3>8. Okres przechowywania danych</h3>
+<p>Dane osobowe będą przechowywane przez okres realizacji projektu <strong>„Edukacja bez granic”</strong>, a następnie przez okres niezbędny do rozliczenia, kontroli i archiwizacji dokumentacji projektu, zgodnie z obowiązującymi przepisami prawa oraz zasadami archiwizacji obowiązującymi w Wojewódzkim Urzędzie Pracy w Katowicach.</p>
+<h3>9. Prawa osoby, której dane dotyczą</h3>
+<p>Przysługuje Pani/Panu prawo dostępu do danych osobowych, ich sprostowania, ograniczenia przetwarzania oraz wniesienia sprzeciwu wobec przetwarzania na zasadach określonych w RODO. Przysługuje również prawo wniesienia skargi do organu nadzorczego.</p>
+<h3>10. Dobrowolność podania danych</h3>
+<p>Podanie danych osobowych jest dobrowolne, jednak niezbędne do rejestracji udziału, weryfikacji ukończenia kursu i przygotowania dokumentacji potwierdzającej ukończenie kursu. Z samej strony szkoleniowej można korzystać bez przekazywania danych osobowych organizatorowi.</p>
+<h3>11. Zautomatyzowane podejmowanie decyzji</h3>
+<p>Dane osobowe nie będą wykorzystywane do podejmowania decyzji w sposób wyłącznie zautomatyzowany ani do profilowania w rozumieniu art. 22 RODO.</p>
+</div>
+<footer class="course-privacy-modal__footer"><button type="button" class="primary-action" data-privacy-close>Zamknij i wróć do oświadczenia</button></footer>
+</section>
+</div>
 <div aria-busy="true" aria-live="polite" class="course-pdf-busy" data-pdf-busy="" hidden=""><div class="course-pdf-busy-card"><div aria-hidden="true" class="course-pdf-spinner"></div><strong>Przygotowywanie dokumentu</strong><span data-pdf-busy-text="">Tworzenie pliku PDF…</span></div></div>
 <script defer="" src="assets/course-forms-config.js?v=20260730-1"></script>
 <script defer="" src="assets/course-v2.js?v=20260731-4"></script><script defer="True" src="assets/course-module1-v3.js?v=20260802-2"></script>
 <script defer="" src="assets/course-instructions-v1.js?v=20260801-1"></script>
 <script defer="" src="assets/course-workbook.js?v=20260802-2"></script>
 <script defer="" src="assets/course-self-assessment.js?v=20260730-1"></script>
-<script defer="" src="assets/course-exercises-compact.js?v=20260730-1"></script><script defer="" src="assets/course-forms.js?v=20260730-2"></script>
+<script defer="" src="assets/course-exercises-compact.js?v=20260730-1"></script><script defer="" src="assets/course-forms.js?v=20260802-5"></script>
 <script defer="" src="assets/course-certificate.js?v=20260730-4"></script>
 </body>
 </html>
