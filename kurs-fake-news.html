@@ -93,7 +93,7 @@
 <div aria-hidden="true" class="course-certificate-icon">✓</div>
 <div>
 <p class="course-certificate-label">CERTYFIKAT UKOŃCZENIA KURSU</p>
-<h3 id="certificateRuleTitle">Sprawdź warunki otrzymania certyfikatu</h3>
+<h3 id="certificateRuleTitle">Warunki otrzymania certyfikatu</h3>
 <p>Certyfikat zostanie wystawiony po weryfikacji pełnej ścieżki kursu przez organizatora.</p>
 <button class="course-certificate-rules-open" data-certificate-rules-open type="button">Zobacz wszystkie warunki</button>
 </div>
@@ -105,7 +105,7 @@
 </section>
 <section aria-labelledby="courseWorkspaceTitle" class="course-workspace">
 <div class="course-workspace-head">
-<div><p class="course-workspace-kicker">PRYWATNY ZESZYT UCZESTNIKA</p><h2 id="courseWorkspaceTitle">Twoje odpowiedzi i postęp bez zakładania konta</h2><p class="course-workspace-intro">Kurs zapisuje odpowiedzi z ćwiczeń i samoocen w tej przeglądarce. Możesz pobrać kartę pracy wybranego modułu, utworzyć zbiorczy PDF oraz przenieść zapis postępu na inne urządzenie.</p></div>
+<div><p class="course-workspace-kicker">PRYWATNY ZESZYT UCZESTNIKA</p><h2 id="courseWorkspaceTitle">Twoje odpowiedzi i postęp bez zakładania konta</h2><p class="course-workspace-intro">Kurs zapisuje odpowiedzi z ćwiczeń, samooceny i postęp lokalnie w tej przeglądarce. Po ukończeniu każdego modułu możesz pobrać kartę osiągnięcia modułu.</p><p class="course-workspace-intro">Możesz również zapisać swój postęp jako niewielki plik kopii zapasowej w formacie JSON. Taki plik pozwala później odtworzyć odpowiedzi i postęp w kursie, na przykład po zmianie przeglądarki lub przejściu na inne urządzenie. Wystarczy wybrać opcję „Wczytaj postęp” i wskazać wcześniej zapisany plik.</p></div>
 <div class="course-privacy-note"><span aria-hidden="true">✓</span><div><strong>Prywatność</strong><br/>Treści pozostają na urządzeniu uczestnika i nie są wysyłane do organizatora ani zapisywane na serwerze.</div></div>
 </div>
 <div class="course-workspace-grid">
@@ -1757,8 +1757,7 @@ Chroń swój dobrostan.</p></aside></div>
 <p>Szkolenie przygotowano dzięki dofinansowaniu projektu Wojewódzkiego Urzędu Pracy w Katowicach ze środków Unii Europejskiej w ramach programu Erasmus+. Poglądy i opinie są wyłącznie poglądami autora/autorów i nie muszą odzwierciedlać stanowiska Unii Europejskiej ani FRSE.</p>
 </footer>
 
-
-<div class="course-privacy-modal course-certificate-rules-modal" data-certificate-rules-modal hidden>
+<div class="course-privacy-modal" data-certificate-rules-modal hidden>
 <div class="course-privacy-modal__backdrop" data-certificate-rules-close></div>
 <section class="course-privacy-modal__panel" role="dialog" aria-modal="true" aria-labelledby="certificateRulesModalTitle" tabindex="-1">
 <header class="course-privacy-modal__header">
@@ -1777,17 +1776,16 @@ Chroń swój dobrostan.</p></aside></div>
 <li>wypełnienie ankiety ewaluacyjnej po zakończeniu kursu;</li>
 <li>przygotowanie i pobranie końcowego PDF potwierdzającego ukończenie pełnej ścieżki kursu;</li>
 <li>przesłanie pobranego PDF na adres <strong>lmalinowski@wup-katowice.pl</strong>;</li>
-<li>podanie we wszystkich formularzach Google Forms tego samego adresu e-mail, aby organizator mógł przypisać odpowiedzi do jednego uczestnika.</li>
+<li>podanie we wszystkich formularzach Google Forms tego samego adresu e-mail, umożliwiającego przypisanie odpowiedzi do jednego uczestnika.</li>
 </ol>
 <h3>Ważne</h3>
-<p>Zaznaczenia wykonane w portalu są prywatną listą kontrolną uczestnika i pozostają na jego urządzeniu. Nie są automatycznie przekazywane organizatorowi.</p>
-<p>Organizator weryfikuje spełnienie warunków na podstawie odpowiedzi zapisanych w Google Forms, wyniku testu końcowego, danych uczestnika oraz przesłanego końcowego PDF.</p>
+<p>Zaznaczenia wykonane w portalu stanowią prywatną listę kontrolną uczestnika i są przechowywane lokalnie na jego urządzeniu. Nie są automatycznie przesyłane do organizatora.</p>
+<p>Organizator potwierdza spełnienie warunków na podstawie odpowiedzi zapisanych w formularzach Google Forms, wyniku testu końcowego, danych przekazanych przez uczestnika oraz przesłanego końcowego PDF.</p>
 <p>Certyfikat nie jest generowany automatycznie przez stronę kursu. Zostaje wystawiony po weryfikacji wszystkich warunków przez Wojewódzki Urząd Pracy w Katowicach.</p>
 </div>
-<footer class="course-privacy-modal__footer"><button type="button" class="primary-action" data-certificate-rules-close>Zamknij</button></footer>
+<footer class="course-privacy-modal__footer"><button type="button" class="primary-action" data-certificate-rules-close>Zamknij i wróć do kursu</button></footer>
 </section>
 </div>
-
 <div class="course-privacy-modal" data-privacy-modal hidden>
 <div class="course-privacy-modal__backdrop" data-privacy-close></div>
 <section class="course-privacy-modal__panel" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" tabindex="-1">
