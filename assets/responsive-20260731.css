@@ -88,3 +88,54 @@ html,body{max-width:100%;overflow-x:hidden}img,svg,video,canvas,iframe{max-width
   .course-page .course-app{grid-template-columns:280px minmax(0,1fr)}
   .course-page .course-sidebar{width:100%}
 }
+
+/* 2026-07-31: wspólna szerokość pól wprowadzających kurs */
+.course-page{
+  --course-onboarding-max:1320px;
+  --course-onboarding-gutter:18px;
+}
+.course-page .course-intro{
+  padding-left:var(--course-onboarding-gutter);
+  padding-right:var(--course-onboarding-gutter);
+}
+.course-page .course-intro-content,
+.course-page .overview-modules{
+  width:100%;
+  max-width:var(--course-onboarding-max);
+  margin-left:auto;
+  margin-right:auto;
+}
+.course-page .course-preface,
+.course-page .course-requirements,
+.course-page .course-workspace{
+  width:calc(100% - 36px);
+  max-width:var(--course-onboarding-max);
+  margin-left:auto;
+  margin-right:auto;
+}
+.course-page .course-preface{
+  padding-left:0;
+  padding-right:0;
+}
+
+@media(max-width:900px){
+  .course-page{
+    --course-onboarding-gutter:14px;
+  }
+  .course-page .course-preface,
+  .course-page .course-requirements,
+  .course-page .course-workspace{
+    width:calc(100% - 28px);
+  }
+}
+
+@media(max-width:620px){
+  .course-page{
+    --course-onboarding-gutter:10px;
+  }
+  .course-page .course-preface,
+  .course-page .course-requirements,
+  .course-page .course-workspace{
+    width:calc(100% - 20px);
+  }
+}
