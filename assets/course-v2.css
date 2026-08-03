@@ -107,3 +107,42 @@
   line-height: 1.6 !important;
   color: rgba(230, 238, 242, 0.82) !important;
 }
+
+/* 2026-08-03 — ikona przy informacji o pomocniczym wykorzystaniu AI */
+.course-ai-disclosure {
+  margin-top: 14px !important;
+  display: grid !important;
+  grid-template-columns: 54px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 14px !important;
+  max-width: 760px;
+}
+.course-ai-disclosure-icon {
+  display: block;
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.course-ai-disclosure p {
+  margin: 0 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: rgba(230, 238, 242, 0.82) !important;
+}
+@media (max-width: 620px) {
+  .course-ai-disclosure {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: 11px !important;
+    align-items: start !important;
+  }
+  .course-ai-disclosure-icon {
+    width: 42px;
+    height: 42px;
+    margin-top: 2px;
+  }
+  .course-ai-disclosure p {
+    font-size: 0.88rem !important;
+    line-height: 1.52 !important;
+  }
+}
