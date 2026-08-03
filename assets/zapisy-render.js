@@ -52,8 +52,7 @@
       `;
     }
     return `
-      <span class="signup-status">Zapisy wkrótce</span>
-      <span class="signup-soon-note" aria-disabled="true">${escapeHtml(label)}</span>
+      <span class="signup-status">Wkrótce</span>
     `;
   };
 
