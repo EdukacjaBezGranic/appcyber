@@ -4923,3 +4923,4 @@ img,video,iframe{max-width:100%}
     max-height:none;
   }
 }
+.signup-contact-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:800;color:#183b52;background:#eef4f7;border:1px solid #d5e0e6}.signup-contact-link:hover{background:#e4edf2}.signup-training-action{display:flex;flex-wrap:wrap;gap:8px;align-items:center}

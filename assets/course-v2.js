@@ -36,6 +36,7 @@
   const moduleSidebarButtons = [...document.querySelectorAll('.sidebar-module-button')];
   const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
   const sections = [...document.querySelectorAll('[data-course-section]')];
+  const progressSections = sections.filter(section => section.dataset.quizRequired !== 'false');
   const sidebar = document.getElementById('courseSidebar');
   const sidebarBackdrop = document.querySelector('[data-sidebar-backdrop]');
   const sidebarOpen = document.querySelector('[data-sidebar-open]');
@@ -50,7 +51,12 @@
   const state = loadJSON(STORAGE_KEY, { completed: [], activeModule: 1, activeSection: null });
   const answers = loadJSON(ANSWERS_KEY, {});
   state.completed = Array.isArray(state.completed) ? state.completed : [];
-  const completed = new Set(state.completed);
+  const currentSectionIds = new Set(sections.map(section => section.dataset.courseSection).filter(Boolean));
+  const completed = new Set(state.completed.filter(id => currentSectionIds.has(id)));
+  if (completed.size !== state.completed.length) {
+    state.completed = [...completed];
+    safeStorage.setItem(STORAGE_KEY, JSON.stringify({ completed:[...completed], activeModule: state.activeModule || 1, activeSection: state.activeSection || null }));
+  }
 
   function saveState() {
     safeStorage.setItem(STORAGE_KEY, JSON.stringify({ completed:[...completed], activeModule, activeSection }));
@@ -115,16 +121,16 @@
   });
 
   function updateProgress() {
-    const total = sections.length;
-    const done = completed.size;
-    const pct = total ? Math.round(done / total * 100) : 0;
+    const total = progressSections.length;
+    const done = progressSections.filter(section => completed.has(section.dataset.courseSection)).length;
+    const pct = total ? Math.min(100, Math.round(done / total * 100)) : 0;
     document.querySelector('[data-overall-percent]').textContent = `${pct}%`;
     document.querySelector('[data-overall-bar]').style.width = `${pct}%`;
     document.querySelector('[data-progress-copy]').textContent = `${done} z ${total} tematów ukończonych`;
     for (let m = 1; m <= 5; m++) {
-      const moduleSections = sections.filter(s => Number(s.dataset.moduleNumber) === m);
+      const moduleSections = progressSections.filter(s => Number(s.dataset.moduleNumber) === m);
       const moduleDone = moduleSections.filter(s => completed.has(s.dataset.courseSection)).length;
-      const modulePct = moduleSections.length ? Math.round(moduleDone / moduleSections.length * 100) : 0;
+      const modulePct = moduleSections.length ? Math.min(100, Math.round(moduleDone / moduleSections.length * 100)) : 0;
       document.querySelector(`[data-module-percent="${m}"]`).textContent = `${modulePct}%`;
       const bar = document.querySelector(`[data-module-progress-bar="${m}"]`);
       if (bar) bar.style.width = `${modulePct}%`;

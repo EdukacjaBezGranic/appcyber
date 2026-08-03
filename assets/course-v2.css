@@ -146,3 +146,15 @@
     line-height: 1.52 !important;
   }
 }
+
+
+/* ETAP 6B.68 — pełna szerokość zwykłych pól tekstowych */
+.course-section-body > p,
+.course-section-body > ul,
+.course-section-body > ol,
+.course-section--v3 .course-section-body > p,
+.course-section--v3 .course-section-body > ul,
+.course-section--v3 .course-section-body > ol {
+  width: 100% !important;
+  max-width: 100% !important;
+}
