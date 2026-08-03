@@ -99,3 +99,11 @@
 .course-infographic-image{display:block;width:100%;height:auto;border-radius:14px;background:#fff;box-shadow:0 4px 16px rgba(20,43,68,.07)}
 .course-infographic-figure figcaption{margin:.85rem auto 0;max-width:78ch;color:#4d687a;font-size:.94rem;line-height:1.55;text-align:center}
 @media (max-width:640px){.course-infographic-figure{padding:.5rem;border-radius:14px}.course-infographic-image{border-radius:10px}.course-infographic-figure figcaption{padding:0 .35rem;font-size:.9rem}}
+
+/* 2026-08-03 — informacja o pomocniczym wykorzystaniu narzędzi AI */
+.course-ai-disclosure {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: rgba(230, 238, 242, 0.82) !important;
+}

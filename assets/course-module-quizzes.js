@@ -54,7 +54,18 @@ const quizzes={
 ['Gdy nie można szybko zweryfikować alarmującej informacji, odpowiedzialne działanie to:',['udostępnić ją z dopiskiem „nie wiem, czy prawda”','wstrzymać rozpowszechnianie do czasu uzyskania potwierdzenia','usunąć datę i źródło','zapytać wyłącznie osoby o podobnych poglądach'],1],
 ['Zdrowa rutyna medialna powinna być:',['identyczna dla wszystkich użytkowników','realistyczna, regularna i dopasowana do własnych obowiązków oraz reakcji','oparta na całkowitym odcięciu od informacji','mierzona wyłącznie liczbą przeczytanych artykułów'],1]
 ]};
-function moduleProgress(m){const state=read(STATE,{completed:[]}),done=new Set(state.completed||[]),secs=$$(`.course-section[data-module-number="${m}"]`).filter(s=>s.dataset.quizRequired!=="false");return{done:secs.filter(s=>done.has(s.dataset.courseSection)).length,total:secs.length}}
+function moduleProgress(m){
+ const state=read(STATE,{completed:[]});
+ const stored=new Set(Array.isArray(state.completed)?state.completed:[]);
+ const secs=$$(`.course-section[data-module-number="${m}"]`).filter(s=>s.dataset.quizRequired!=="false");
+ const isDone=section=>{
+  const id=section.dataset.courseSection;
+  const nav=id?$(`[data-section-link="${CSS.escape(id)}"]`):null;
+  return Boolean(id&&(stored.has(id)||section.classList.contains('is-complete')||nav?.classList.contains('is-complete')));
+ };
+ const completed=secs.filter(isDone);
+ return{done:completed.length,total:secs.length,missing:secs.filter(s=>!isDone(s)).map(s=>s.dataset.courseSection)};
+}
 function quizState(){return read(KEY,{})}
 function passed(m){return Boolean(quizState()[m]?.passed)}
 function render(panel,m){
