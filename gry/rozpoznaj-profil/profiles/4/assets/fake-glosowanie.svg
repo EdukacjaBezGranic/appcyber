@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#13181d"/>
+<rect x="35" y="35" width="1130" height="605" rx="20" fill="#222b31" stroke="#4d5d66" stroke-width="4"/>
+<rect x="70" y="75" width="330" height="55" rx="6" fill="#d21e39"/><text x="94" y="113" fill="white" font-size="27" font-family="Arial" font-weight="900">NAGRANIE Z TELEFONU</text>
+<g transform="translate(90 170) rotate(-3)">
+<rect width="450" height="310" rx="12" fill="#e8e4d8"/><rect x="30" y="28" width="120" height="140" fill="#59646b"/><circle cx="90" cy="76" r="32" fill="#aab4b9"/><path d="M44 158c13-46 82-46 95 0" fill="#aab4b9"/>
+<rect x="185" y="45" width="220" height="20" fill="#717b80"/><rect x="185" y="85" width="180" height="16" fill="#a2aaae"/><rect x="185" y="120" width="205" height="16" fill="#a2aaae"/><rect x="30" y="215" width="360" height="16" fill="#979fa3"/><rect x="30" y="250" width="280" height="16" fill="#979fa3"/>
+</g>
+<g transform="translate(610 160) rotate(4)">
+<rect width="450" height="310" rx="12" fill="#e8e4d8"/><rect x="30" y="28" width="120" height="140" fill="#59646b"/><circle cx="90" cy="76" r="32" fill="#aab4b9"/><path d="M44 158c13-46 82-46 95 0" fill="#aab4b9"/>
+<rect x="185" y="45" width="220" height="20" fill="#717b80"/><rect x="185" y="85" width="180" height="16" fill="#a2aaae"/><rect x="185" y="120" width="205" height="16" fill="#a2aaae"/><rect x="30" y="215" width="360" height="16" fill="#979fa3"/><rect x="30" y="250" width="280" height="16" fill="#979fa3"/>
+</g>
+<rect x="215" y="525" width="770" height="75" rx="12" fill="#050708" opacity=".88"/>
+<text x="600" y="572" text-anchor="middle" fill="white" font-size="35" font-family="Arial" font-weight="900">„TE SAME ZDJĘCIA NA RÓŻNYCH DOKUMENTACH?”</text>
+<circle cx="1100" cy="565" r="42" fill="#f30072"/><polygon points="1087,542 1087,588 1122,565" fill="white"/>
+</svg>

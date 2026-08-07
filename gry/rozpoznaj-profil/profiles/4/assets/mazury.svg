@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffc38a"/><stop offset=".58" stop-color="#f66f78"/><stop offset="1" stop-color="#6d3d73"/></linearGradient><linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4c5e82"/><stop offset="1" stop-color="#14273c"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#sky)"/><circle cx="890" cy="190" r="70" fill="#ffdca0"/>
+<path d="M0 355c190-80 330-40 500 10 210 65 420-30 700-55v365H0z" fill="url(#water)"/>
+<path d="M0 355c170-100 300-90 430-25 120 60 200 35 330-10 135-47 300-38 440-10v65H0z" fill="#1d403e"/>
+<path d="M200 465h345l-35 95H245z" fill="#11181b"/><rect x="360" y="330" width="15" height="150" fill="#161d21"/><path d="M375 342l170 90H375z" fill="#f4eee4" opacity=".92"/>
+<rect x="55" y="50" width="430" height="105" rx="16" fill="#0d1217" opacity=".72"/>
+<text x="85" y="105" fill="white" font-size="43" font-family="Arial" font-weight="900">TAK SIĘ ŻYJE.</text><text x="85" y="140" fill="#c5d6df" font-size="24" font-family="Arial">Mazury • cisza • zero ekspertów z telewizji</text>
+</svg>

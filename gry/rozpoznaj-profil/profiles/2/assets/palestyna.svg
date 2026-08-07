@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#f7f7f5"/>
+  <rect x="0" y="0" width="1200" height="225" fill="#111"/>
+  <rect x="0" y="225" width="1200" height="225" fill="#fff"/>
+  <rect x="0" y="450" width="1200" height="225" fill="#1d8b4d"/>
+  <path d="M0 0L430 337.5 0 675Z" fill="#d9343a"/>
+  <rect x="420" y="95" width="700" height="485" rx="24" fill="rgba(255,255,255,.92)"/>
+  <text x="770" y="190" fill="#151515" font-family="Arial" font-size="50" font-weight="900" text-anchor="middle">POLSKA POWINNA</text>
+  <text x="770" y="255" fill="#151515" font-family="Arial" font-size="50" font-weight="900" text-anchor="middle">UZNAĆ PAŃSTWO</text>
+  <text x="770" y="320" fill="#d9343a" font-family="Arial" font-size="60" font-weight="900" text-anchor="middle">PALESTYŃSKIE</text>
+  <line x1="520" y1="365" x2="1020" y2="365" stroke="#ccc" stroke-width="4"/>
+  <text x="770" y="430" fill="#333" font-family="Arial" font-size="31" font-weight="700" text-anchor="middle">I ZAWIESIĆ WSPÓŁPRACĘ WOJSKOWĄ</text>
+  <text x="770" y="475" fill="#333" font-family="Arial" font-size="31" font-weight="700" text-anchor="middle">Z IZRAELEM DO CZASU ZAWIESZENIA BRONI</text>
+  <rect x="590" y="515" width="360" height="58" rx="29" fill="#151515"/>
+  <text x="770" y="553" fill="white" font-family="Arial" font-size="26" font-weight="800" text-anchor="middle">KTO SIĘ ZGADZA?</text>
+</svg>

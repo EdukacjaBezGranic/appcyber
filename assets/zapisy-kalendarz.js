@@ -101,12 +101,9 @@ function renderAction(event) {
   const action = detailPanel?.querySelector('[data-detail-action]');
   if (!action) return;
 
-  if (event.open && event.link) {
-    action.innerHTML = `<a class="public-btn calendar-form-btn" href="${event.link}" target="_blank" rel="noopener noreferrer">${event.button || 'Zapisz się'}</a>`;
-    return;
-  }
-
-  action.innerHTML = '<span class="public-btn signup-btn-disabled" aria-disabled="true">Zapisy wkrótce</span>';
+  action.innerHTML = `
+    <a class="public-btn calendar-form-btn" href="mailto:pr@wup-katowice.pl">Napisz e-mail</a>
+    <a class="public-btn public-btn-ghost" href="tel:+48327573384">Zadzwoń: 32 757 33 84</a>`;
 }
 
 function renderDetailLogo(event) {
@@ -127,8 +124,8 @@ function selectEvent(id) {
   setText('[data-detail-source]', event.source);
   setText('[data-detail-title]', event.title);
   setText('[data-detail-date]', formatFullDate(event.date));
-  setText('[data-detail-time]', event.time);
-  setText('[data-detail-place]', event.place);
+  setText('[data-detail-time]', event.time || 'Wkrótce');
+  setText('[data-detail-place]', event.place || 'Wkrótce');
   setText('[data-detail-audience]', event.audience);
   setDescription(event.description);
   renderDetailLogo(event);

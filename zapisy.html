@@ -7,15 +7,15 @@
 <meta content="Zapisy na szkolenia Wojewódzkiego Urzędu Pracy w Katowicach rozwijające kompetencje cyfrowe, komunikacyjne, społeczne i edukacyjne." name="description"/>
 <title>Zapisy na szkolenia - Edukacja bez granic</title>
 <link href="grafiki/logo-projektu-symbol-transparent.png" rel="icon" type="image/png"/>
-<link href="assets/public.css?v=20260727-footer-unified-01" rel="stylesheet"/>
+<link href="assets/public.css?v=20260806-signup-hero-game-01" rel="stylesheet"/>
 <script defer="" src="assets/public.js?v=20260726-nav-unified-03"></script>
 <script defer="" src="assets/site-data.js?v=20260803-all-dates-soon"></script>
 <script defer="" src="assets/contact-render.js?v=20260710-cms01"></script>
 <script defer="" src="assets/zapisy-render.js?v=20260712-signup-action-polish"></script>
 <link href="assets/site-shell-unified.css?v=20260727-01" rel="stylesheet"/>
 <link href="assets/portal-redesign.css?v=20260729-final-polish-05" rel="stylesheet"/>
-<link href="assets/responsive-20260731.css?v=20260731-1" rel="stylesheet">
-</link></head>
+<link href="assets/zapisy-kalendarz.css?v=20260805-embedded-01" rel="stylesheet"/><link href="assets/responsive-20260731.css?v=20260731-1" rel="stylesheet"/>
+<script defer="" src="assets/zapisy-kalendarz.js?v=20260805-contact-only-01"></script></head>
 <body class="public-page">
 <header class="site-header">
 <div class="site-header-inner">
@@ -35,16 +35,14 @@
 </div>
 </header>
 <main class="public-main">
-<section class="public-hero inner-hero signup-public-hero" style="background-image:url('grafiki/projekt-hero.png')">
+<section class="public-hero inner-hero signup-public-hero signup-public-hero--light" style="background-image:url('grafiki/siedziba-wup-sokolska-29.webp')">
 <div class="public-hero-content">
 <a aria-label="Edukacja bez granic - strona główna" class="public-hero-logo-link" href="index.html">
 <img alt="Edukacja bez granic" class="public-hero-logo" src="grafiki/logo-projektu-wide-mono-white.png"/>
 </a>
 <h1>Zapisy na szkolenia <span>Rozwijaj kompetencje przydatne w pracy, edukacji i codziennej komunikacji</span></h1>
 <p>Wybierz interesujący Cię temat. Nie prowadzimy zapisów przez formularze internetowe. W sprawie udziału lub organizacji szkolenia skontaktuj się z nami telefonicznie albo mailowo.</p>
-<div class="public-actions signup-hero-actions">
-<a class="public-btn signup-calendar-btn" href="zapisy-kalendarz.html">Terminarz</a>
-</div>
+
 </div>
 </section>
 <section class="public-section signup-intro-section reveal">
@@ -102,7 +100,75 @@
 </div>
 </article>
 </div>
-</section>
+</section><section aria-labelledby="signupCalendarTitle" class="public-section signup-calendar-section reveal"><div class="public-section-head"><h2 id="signupCalendarTitle">Terminarz szkoleń</h2><p>Terminy będą publikowane na bieżąco. Zapisy prowadzimy telefonicznie lub mailowo - bez formularzy internetowych.</p></div><section aria-labelledby="calendarTitle" class="calendar-layout signup-calendar-embedded" id="terminarz">
+<div class="calendar-board">
+<div class="calendar-board-head">
+<div>
+<h2 id="calendarTitle">Kalendarz szkoleń</h2>
+<p>Sprawdź opublikowane terminy. Gdy termin zostanie uruchomiony, skontaktuj się z nami telefonicznie lub mailowo.</p>
+</div>
+<div aria-label="Widok terminów" class="calendar-controls">
+<button class="calendar-mini-btn" data-calendar-nearest="" type="button">Najbliższy termin</button>
+<button aria-label="Poprzedni miesiąc" class="calendar-arrow-btn" data-calendar-prev="" type="button">
+<svg viewbox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg>
+</button>
+<button aria-label="Następny miesiąc" class="calendar-arrow-btn" data-calendar-next="" type="button">
+<svg viewbox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg>
+</button>
+</div>
+</div>
+<div class="calendar-mode-row">
+<h3 data-calendar-title="">Terminy szkoleń</h3>
+<div aria-label="Przełącz widok" class="calendar-mode-switch" role="tablist">
+<button aria-selected="true" class="is-active" data-calendar-mode="month" role="tab" type="button">Miesiąc</button>
+<button aria-selected="false" data-calendar-mode="list" role="tab" type="button">Lista</button>
+</div>
+</div>
+<div class="calendar-month is-active" data-calendar-view="month">
+<div aria-hidden="true" class="calendar-weekdays">
+<span>Poniedziałek</span><span>Wtorek</span><span>Środa</span><span>Czwartek</span><span>Piątek</span><span>Sobota</span><span>Niedziela</span>
+</div>
+<div class="calendar-grid" data-calendar-grid=""></div>
+</div>
+<div class="calendar-list" data-calendar-list="" data-calendar-view="list"></div>
+<div aria-label="Legenda" class="calendar-legend">
+<span><i class="legend-gold"></i>Nowe programy projektu</span>
+<span><i class="legend-blue"></i>Pozostałe szkolenia</span>
+<span><i class="legend-green"></i>Kompetencje społeczne</span>
+</div>
+</div>
+<aside aria-live="polite" class="calendar-details">
+<button aria-label="Wyczyść wybór" class="calendar-close" type="button">
+<svg viewbox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+</button>
+<div class="calendar-details-head">
+<span aria-hidden="true" class="calendar-details-icon calendar-details-logo" data-detail-icon="">
+<img alt="" data-detail-logo="" src="grafiki/logo-projektu-symbol-transparent.png"/>
+</span>
+<div>
+<p data-detail-source="">Projekt Edukacja bez granic</p>
+<h2 data-detail-title="">Myślenie krytyczne, dezinformacja i manipulacja</h2>
+</div>
+</div>
+<dl class="calendar-detail-meta">
+<div><dt>Data</dt><dd data-detail-date="">Wkrótce</dd></div>
+<div><dt>Godzina</dt><dd data-detail-time="">Wkrótce</dd></div>
+<div><dt>Miejsce</dt><dd data-detail-place="">Wkrótce</dd></div>
+</dl>
+<div class="calendar-detail-section">
+<h3>Opis szkolenia</h3>
+<div class="calendar-detail-description" data-detail-description="">
+<p>Szkolenie pomaga rozpoznawać fałszywe i manipulacyjne treści, oceniać wiarygodność źródeł oraz odróżniać fakty od opinii i emocjonalnych przekazów.</p>
+<p>Uczestnicy poznają praktyczne metody weryfikowania informacji, zdjęć i internetowych publikacji. Uczą się także, jak spokojnie reagować na niepewne treści i wspierać innych w podejmowaniu decyzji na podstawie sprawdzonych danych.</p>
+</div>
+</div>
+<div class="calendar-detail-section">
+<h3>Dla kogo?</h3>
+<p data-detail-audience="">Pracownicy instytucji publicznych, doradcy zawodowi, edukatorzy i osoby pracujące z informacją.</p>
+</div>
+<div class="calendar-detail-action" data-detail-action=""><a class="public-btn calendar-form-btn" href="mailto:pr@wup-katowice.pl">Napisz e-mail</a><a class="public-btn public-btn-ghost" href="tel:+48327573384">Zadzwoń: 32 757 33 84</a></div>
+</aside>
+</section></section>
 <section aria-labelledby="otherTrainingsTitle" class="public-section signup-program-section reveal">
 <div class="public-section-head">
 <h2 id="otherTrainingsTitle">Pozostałe szkolenia</h2>
