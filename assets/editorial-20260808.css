@@ -3350,3 +3350,154 @@ body.editorial-2026.training-showcase-page .training-method-grid{
     max-width:none!important;
   }
 }
+
+/* ==========================================================
+   2026-08-10 / PASS 35 — LINE SPACING + FEEDBACK RULE CLEANUP
+   More breathing room around separators and no doubled rules.
+   ========================================================== */
+
+/* Nasze szkolenia — intro copy should not sit on separator lines. */
+body.editorial-2026.training-showcase-page .training-showcase-intro .training-showcase-copy{
+  margin-top:0!important;
+  padding-top:30px!important;
+  padding-bottom:30px!important;
+  align-items:start!important;
+  gap:clamp(32px,4vw,52px)!important;
+}
+body.editorial-2026.training-showcase-page .training-showcase-intro .training-showcase-copy p{
+  margin:0!important;
+  line-height:1.72!important;
+}
+
+/* Feedback list — one separator per row, never two stacked lines. */
+body.editorial-2026.training-showcase-page .training-feedback-points{
+  display:grid!important;
+  gap:0!important;
+  margin-top:8px!important;
+  border-top:0!important;
+  border-bottom:0!important;
+}
+body.editorial-2026.training-showcase-page .training-feedback-points p{
+  margin:0!important;
+  padding:26px 0 24px!important;
+  border:0!important;
+  border-top:1px solid rgba(16,33,48,.22)!important;
+  line-height:1.58!important;
+}
+body.editorial-2026.training-showcase-page .training-feedback-points p:first-child{
+  border-top:1px solid rgba(16,33,48,.30)!important;
+}
+body.editorial-2026.training-showcase-page .training-feedback-points p strong{
+  color:#102130!important;
+}
+
+@media(max-width:900px){
+  body.editorial-2026.training-showcase-page .training-showcase-intro .training-showcase-copy{
+    padding-top:22px!important;
+    padding-bottom:22px!important;
+    gap:20px!important;
+  }
+  body.editorial-2026.training-showcase-page .training-feedback-points p{
+    padding:20px 0 18px!important;
+  }
+}
+
+/* ==========================================================
+   2026-08-10 / PASS 36 — LOGO LOCKUPS
+   Full-package correction for hero logos on Start, Zapisy and Kontakt.
+   ========================================================== */
+
+/* Start: two independent black monochrome marks on the light hero. */
+body.public-page.home-rd.editorial-2026 .home-rd-brand-lockup{
+  display:flex!important;
+  align-items:center!important;
+  gap:clamp(18px,2.4vw,34px)!important;
+  width:min(100%,620px)!important;
+  margin:0 0 clamp(28px,4vw,52px)!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-brand-project{
+  display:block!important;
+  width:clamp(170px,18vw,270px)!important;
+  height:auto!important;
+  max-height:150px!important;
+  object-fit:contain!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-brand-divider{
+  flex:0 0 1px!important;
+  width:1px!important;
+  height:clamp(64px,7vw,94px)!important;
+  background:rgba(16,33,48,.28)!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-brand-eu{
+  display:block!important;
+  width:clamp(180px,20vw,290px)!important;
+  height:auto!important;
+  max-height:94px!important;
+  object-fit:contain!important;
+}
+
+/* Zapisy: WUP black monochrome mark, no inherited inversion. */
+body.editorial-2026 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono,
+body.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--light .public-hero-logo-link.hero-wup-mono{
+  width:clamp(260px,27vw,420px)!important;
+  max-width:72%!important;
+  margin:0 0 34px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  opacity:1!important;
+}
+body.editorial-2026 .public-hero.inner-hero.signup-public-hero .hero-wup-mono .public-hero-logo{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:112px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+
+/* Kontakt: the same black WUP monochrome mark in the hero. */
+body.editorial-2026 .public-hero.inner-hero.contact-hero .contact-wup-brand.contact-wup-brand--mono{
+  width:clamp(260px,27vw,420px)!important;
+  max-width:72%!important;
+  margin:0 0 34px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.editorial-2026 .public-hero.inner-hero.contact-hero .contact-wup-brand.contact-wup-brand--mono img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:112px!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+
+@media(max-width:760px){
+  body.public-page.home-rd.editorial-2026 .home-rd-brand-lockup{
+    gap:16px!important;
+    margin-bottom:30px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-brand-project{
+    width:min(45vw,210px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-brand-eu{
+    width:min(46vw,220px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-brand-divider{
+    height:58px!important;
+  }
+  body.editorial-2026 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono,
+  body.editorial-2026 .public-hero.inner-hero.contact-hero .contact-wup-brand.contact-wup-brand--mono{
+    width:min(86%,340px)!important;
+    max-width:86%!important;
+    margin-bottom:24px!important;
+  }
+}
