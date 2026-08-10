@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#102a43"/><stop offset="1" stop-color="#07131f"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="80" fill="#56c4ff" font-family="Arial" font-size="28" font-weight="700">GOSPODARKA • 02.07.2026</text>
+  <text x="70" y="145" fill="white" font-family="Arial" font-size="55" font-weight="800">WZROST PKB SŁABSZY</text>
+  <text x="70" y="205" fill="white" font-family="Arial" font-size="55" font-weight="800">NIŻ ZAPOWIADANO</text>
+  <line x1="100" y1="540" x2="1090" y2="540" stroke="#7292a8" stroke-width="4"/>
+  <line x1="100" y1="280" x2="100" y2="540" stroke="#7292a8" stroke-width="4"/>
+  <rect x="280" y="315" width="210" height="225" rx="8" fill="#2d9cdb"/>
+  <rect x="700" y="410" width="210" height="130" rx="8" fill="#ef5350"/>
+  <text x="385" y="295" fill="white" font-family="Arial" font-size="58" font-weight="800" text-anchor="middle">3,1%</text>
+  <text x="805" y="390" fill="white" font-family="Arial" font-size="58" font-weight="800" text-anchor="middle">1,8%</text>
+  <text x="385" y="585" fill="#b8c8d2" font-family="Arial" font-size="28" text-anchor="middle">PROGNOZA</text>
+  <text x="805" y="585" fill="#b8c8d2" font-family="Arial" font-size="28" text-anchor="middle">ODCZYT</text>
+</svg>

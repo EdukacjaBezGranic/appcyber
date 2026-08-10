@@ -10,14 +10,57 @@
   <link rel="stylesheet" href="assets/portal-redesign.css?v=20260729-final-polish-05">
 
 <link href="assets/responsive-20260731.css?v=20260731-1" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/editorial-20260808.css?v=20260808-05">
+<style>
+/* V35 — precyzyjne poprawki sekcji na stronie „Nasze szkolenia” */
+body.training-showcase-page .training-showcase-intro .training-showcase-copy{
+  margin-top: 0 !important;
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+  align-items: start !important;
+  gap: 36px !important;
+}
+body.training-showcase-page .training-showcase-intro .training-showcase-copy p{
+  margin: 0 !important;
+  line-height: 1.7 !important;
+}
+body.training-showcase-page .training-feedback-points{
+  display: grid !important;
+  gap: 0 !important;
+  margin-top: 10px !important;
+}
+body.training-showcase-page .training-feedback-points p{
+  margin: 0 !important;
+  padding: 26px 0 24px !important;
+  border-top: 1px solid rgba(16, 33, 48, 0.22) !important;
+  border-bottom: 0 !important;
+  line-height: 1.55 !important;
+}
+body.training-showcase-page .training-feedback-points p:last-child{
+  border-bottom: 0 !important;
+}
+body.training-showcase-page .training-feedback-points p strong{
+  color: #102130 !important;
+}
+@media (max-width: 900px){
+  body.training-showcase-page .training-showcase-intro .training-showcase-copy{
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+    gap: 22px !important;
+  }
+  body.training-showcase-page .training-feedback-points p{
+    padding: 20px 0 18px !important;
+  }
+}
+</style>
+
 </head>
-<body class="public-page training-showcase-page">
+<body class="public-page training-showcase-page editorial-2026">
 <header class="site-header">
 <div class="site-header-inner">
 <div class="site-branding">
-<a aria-label="Edukacja bez granic - strona główna" class="site-logo" href="index.html">
-<img alt="" src="grafiki/logo-projektu-symbol-transparent.png"/>
-<span>Edukacja bez granic<small>nowe kompetencje i umiejętności</small></span>
+<a aria-label="Edukacja bez granic - strona główna" class="site-logo site-logo-project" href="index.html">
+<img alt="Edukacja bez granic" class="site-project-wordmark" src="grafiki/logo-projektu-wide-mono-black.png"/>
 </a>
 <div aria-label="Instytucje i finansowanie projektu" class="site-funding-logos">
 <span aria-hidden="true" class="site-brand-separator"></span>
@@ -101,4 +144,5 @@
 <footer class="site-footer"><div class="site-footer-inner"><div><strong>Edukacja bez granic</strong><p>Portal Wojewódzkiego Urzędu Pracy w Katowicach rozwijany na podstawie doświadczeń projektów Erasmus+.</p></div><nav aria-label="Nawigacja w stopce" class="site-footer-links"><a href="index.html">Strona główna</a><a href="nasze-szkolenia.html">Nasze szkolenia</a><a href="zapisy.html">Zapisy na szkolenia</a><a class="nav-online" href="kursy-online.html">Kursy online</a><a href="kontakt.html">Kontakt</a><a class="footer-trainer-link" href="panel-trenera.html">Panel trenera</a></nav></div></footer>
 <script src="assets/public.js?v=20260726-nav-unified-03"></script>
   <script src="assets/portal-redesign.js?v=20260728-unified-01" defer></script>
+  <script src="assets/editorial-motion-20260808.js?v=20260808-02" defer></script>
 </body></html>

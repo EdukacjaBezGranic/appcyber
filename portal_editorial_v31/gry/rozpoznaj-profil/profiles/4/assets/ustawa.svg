@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#eceff1"/>
+<rect x="105" y="80" width="990" height="515" rx="28" fill="white" stroke="#cbd3d8" stroke-width="5"/>
+<text x="600" y="170" text-anchor="middle" fill="#20272d" font-size="43" font-family="Arial" font-weight="900">WYMIEŃ COŚ MĄDRZEJSZEGO</text>
+<text x="600" y="225" text-anchor="middle" fill="#20272d" font-size="43" font-family="Arial" font-weight="900">NIŻ NAJNOWSZY POMYSŁ POSŁÓW</text>
+<rect x="390" y="300" width="420" height="200" fill="#f8f4e9" stroke="#9b8c6b" stroke-width="4"/>
+<text x="600" y="355" text-anchor="middle" font-size="30" font-family="monospace" fill="#39352d">PARAGON NR 00428</text>
+<text x="600" y="410" text-anchor="middle" font-size="24" font-family="monospace" fill="#39352d">KAWA ........ 8,50</text>
+<text x="600" y="450" text-anchor="middle" font-size="24" font-family="monospace" fill="#39352d">PODATEK ...... ???</text>
+<text x="600" y="555" text-anchor="middle" fill="#f30072" font-size="33" font-family="Arial" font-weight="900">JA ZACZYNAM: TEN PARAGON</text>
+</svg>
