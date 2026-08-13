@@ -3501,3 +3501,334 @@ body.editorial-2026 .public-hero.inner-hero.contact-hero .contact-wup-brand.cont
     margin-bottom:24px!important;
   }
 }
+
+/* ==========================================================
+   PASS 42 — CONTACT MAP HERO: lighter fade, more visible city plan
+   ========================================================== */
+body.editorial-2026 .public-hero.inner-hero.contact-hero::before{
+  background:linear-gradient(
+    90deg,
+    rgba(246,245,240,.88) 0%,
+    rgba(246,245,240,.78) 30%,
+    rgba(246,245,240,.46) 48%,
+    rgba(246,245,240,.18) 66%,
+    rgba(246,245,240,.03) 100%
+  )!important;
+  opacity:1!important;
+}
+
+@media(max-width:700px){
+  body.editorial-2026 .public-hero.inner-hero.contact-hero::before{
+    background:linear-gradient(
+      0deg,
+      rgba(246,245,240,.91) 0%,
+      rgba(246,245,240,.82) 42%,
+      rgba(246,245,240,.38) 68%,
+      rgba(246,245,240,.08) 100%
+    )!important;
+  }
+}
+
+/* ==========================================================
+   PASS 54 — HOME / O PROJEKCIE: TRUE SYMMETRIC GRID
+   Remove legacy nested grid constraints that squeezed the copy.
+   ========================================================== */
+body.public-page.home-rd.editorial-2026 #o-projekcie.home-eu-origin{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  padding:clamp(64px,6vw,88px) var(--g)!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy{
+  display:grid!important;
+  width:100%!important;
+  max-width:none!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-areas:"overline overline" "title copy"!important;
+  column-gap:clamp(36px,4vw,68px)!important;
+  row-gap:24px!important;
+  align-items:start!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy .home-rd-overline{
+  grid-area:overline!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2{
+  grid-area:title!important;
+  width:100%!important;
+  max-width:11.5ch!important;
+  margin:0!important;
+  font-size:clamp(52px,4.25vw,76px)!important;
+  line-height:.97!important;
+  letter-spacing:-.052em!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2 .eu-title-line{
+  display:block!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy>p{
+  grid-area:copy!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  margin:3px 0 0!important;
+  color:#5d6c79!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:clamp(18px,1.08vw,20px)!important;
+  line-height:1.72!important;
+  text-wrap:pretty!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points{
+  display:grid!important;
+  width:100%!important;
+  max-width:none!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:0!important;
+  margin-top:clamp(48px,6vw,82px)!important;
+  border-top:1px solid var(--line2)!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article{
+  min-width:0!important;
+  padding:24px 28px 26px 0!important;
+  border:0!important;
+  border-right:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article+article{
+  padding-left:28px!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article:last-child{
+  padding-right:0!important;
+  border-right:0!important;
+}
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article p{
+  max-width:none!important;
+}
+@media(max-width:1180px){
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy{
+    column-gap:36px!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2{
+    max-width:12ch!important;
+    font-size:clamp(48px,5.2vw,62px)!important;
+  }
+}
+@media(max-width:900px){
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"overline" "title" "copy"!important;
+    row-gap:16px!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2{
+    max-width:13ch!important;
+    font-size:clamp(46px,10vw,72px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2 .eu-title-line{
+    display:inline!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2 .eu-title-line + .eu-title-line::before{
+    content:" "!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy>p{
+    max-width:68ch!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points{
+    grid-template-columns:1fr!important;
+  }
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article,
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-points article+article{
+    padding:20px 0 22px!important;
+    border-right:0!important;
+  }
+}
+
+/* PASS 54.1 — keep the three authored title lines intact */
+body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2{
+  max-width:none!important;
+  font-size:clamp(48px,4.2vw,72px)!important;
+}
+@media(max-width:1180px) and (min-width:901px){
+  body.public-page.home-rd.editorial-2026 #o-projekcie .home-eu-origin-copy h2{
+    max-width:none!important;
+    font-size:clamp(46px,4.2vw,52px)!important;
+  }
+}
+
+
+/* ==========================================================
+   PASS 59 — BALANCED PUBLIC HERO IMAGERY
+   One grid system for Start / Nasze szkolenia / Zapisy.
+   Images share the same top and bottom axes as their copy blocks.
+   ========================================================== */
+
+/* START — image fills the complete grid row instead of ending early. */
+body.public-page.home-rd.editorial-2026 .home-rd-hero{
+  align-items:stretch!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero-copy{
+  align-self:stretch!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero-visual{
+  align-self:stretch!important;
+  display:flex!important;
+  min-height:0!important;
+  height:auto!important;
+  justify-content:stretch!important;
+  overflow:hidden!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero-visual > img{
+  flex:1 1 auto!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:43% 56%!important;
+  border-radius:0!important;
+}
+
+/* NASZE SZKOLENIA — same editorial split as Start. */
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-main{
+  padding-top:0!important;
+}
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero.training-showcase-hero--balanced{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr)!important;
+  gap:clamp(36px,5vw,82px)!important;
+  align-items:stretch!important;
+  width:100%!important;
+  max-width:none!important;
+  min-height:0!important;
+  padding:clamp(64px,6.5vw,104px) var(--g) clamp(54px,5.5vw,88px)!important;
+  background:var(--paper)!important;
+}
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-copy{
+  order:1!important;
+  min-height:0!important;
+  padding:0!important;
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media{
+  order:2!important;
+  min-height:0!important;
+  height:auto!important;
+  align-self:stretch!important;
+  overflow:hidden!important;
+  background:#e7e3dc!important;
+}
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  object-fit:cover!important;
+  object-position:52% 50%!important;
+  filter:saturate(.88) contrast(1.02)!important;
+}
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced h1{
+  max-width:11ch!important;
+}
+
+/* ZAPISY — replace the building background with a genuine training scene. */
+body.public-page.signup-page.editorial-2026 .public-main{
+  padding-top:0!important;
+}
+body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr)!important;
+  gap:clamp(36px,5vw,82px)!important;
+  align-items:stretch!important;
+  width:100%!important;
+  max-width:none!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:clamp(64px,6.5vw,104px) var(--g) clamp(54px,5.5vw,88px)!important;
+  background:var(--paper)!important;
+  background-image:none!important;
+  overflow:visible!important;
+}
+body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split::before,
+body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split::after{
+  display:none!important;
+}
+body.public-page.editorial-2026 .signup-public-hero--split .public-hero-content{
+  position:relative!important;
+  z-index:1!important;
+  width:100%!important;
+  max-width:none!important;
+  min-height:0!important;
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  margin:0!important;
+  padding:0!important;
+}
+body.public-page.editorial-2026 .signup-public-hero--split .public-hero-logo-link.hero-wup-mono{
+  margin-top:0!important;
+  margin-bottom:30px!important;
+}
+body.public-page.editorial-2026 .signup-public-hero--split h1{
+  max-width:9.5ch!important;
+  font-size:clamp(58px,7.2vw,112px)!important;
+  line-height:.94!important;
+}
+body.public-page.editorial-2026 .signup-public-hero--split h1 span{
+  max-width:38ch!important;
+}
+body.public-page.editorial-2026 .signup-public-hero--split p{
+  max-width:58ch!important;
+}
+body.public-page.editorial-2026 .signup-public-hero-media{
+  align-self:stretch!important;
+  min-height:560px!important;
+  overflow:hidden!important;
+  background:#e7e3dc!important;
+}
+body.public-page.editorial-2026 .signup-public-hero-media img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  object-fit:cover!important;
+  object-position:52% 54%!important;
+  filter:saturate(.9) contrast(1.02)!important;
+}
+
+@media(max-width:1050px){
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero.training-showcase-hero--balanced,
+  body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split{
+    grid-template-columns:1fr!important;
+    gap:34px!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-copy,
+  body.public-page.editorial-2026 .signup-public-hero--split .public-hero-content{
+    min-height:0!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media,
+  body.public-page.editorial-2026 .signup-public-hero-media{
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+  }
+}
+@media(max-width:700px){
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-visual{
+    aspect-ratio:4/3!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero.training-showcase-hero--balanced,
+  body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split{
+    padding:48px 20px 44px!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media,
+  body.public-page.editorial-2026 .signup-public-hero-media{
+    aspect-ratio:4/3!important;
+  }
+}
+
+/* PASS 60 — remove decorative 01 from Start hero */
+body.editorial-2026 .home-rd-hero::before{
+  content:none!important;
+  display:none!important;
+}

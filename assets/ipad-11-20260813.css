@@ -1,0 +1,558 @@
+/* ==========================================================
+   V61 — iPad 11-inch optimization
+   Targeted tablet layer only. Desktop and phone layouts stay intact.
+   Representative viewports: 820/834 portrait, 1180/1194 landscape.
+   ========================================================== */
+
+/* Touch comfort on iPad / coarse pointers. */
+@media (pointer:coarse) and (min-width:768px) and (max-width:1280px){
+  body.public-page :where(a,button),
+  body.course-page :where(a,button){
+    touch-action:manipulation;
+  }
+  body.public-page .nav-toggle,
+  body.course-page .sidebar-open,
+  body.course-page .section-check,
+  body.course-page .module-bottom-nav button,
+  body.course-page .course-workspace-actions button{
+    min-height:44px!important;
+  }
+  body.course-page .course-table-wrap,
+  body.course-page .course-audio-infographic__media,
+  body.course-page .legacy-media{
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+/* ==========================================================
+   PORTRAIT — iPad 11-inch family (820–834 CSS px typical)
+   ========================================================== */
+@media (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+  body.public-page.editorial-2026{
+    --g:32px!important;
+    --sec:84px!important;
+    --display:clamp(58px,7.8vw,68px)!important;
+    --h2:clamp(44px,6.4vw,58px)!important;
+  }
+
+  /* Public header: one compact brand row instead of two stacked rows. */
+  body.public-page.editorial-2026 .site-header-inner{
+    width:100%!important;
+    min-height:88px!important;
+    padding:8px 28px!important;
+    gap:16px!important;
+    flex-wrap:nowrap!important;
+    align-items:center!important;
+  }
+  body.public-page.editorial-2026 .site-branding{
+    display:flex!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:14px!important;
+  }
+  body.public-page.editorial-2026 .site-logo.site-logo-project{
+    min-height:64px!important;
+    height:64px!important;
+    padding:8px 12px!important;
+    border-radius:16px!important;
+  }
+  body.public-page.editorial-2026 .site-logo.site-logo-project .site-project-wordmark{
+    width:122px!important;
+    max-width:122px!important;
+    height:46px!important;
+  }
+  body.public-page.editorial-2026 .site-funding-logos{
+    display:flex!important;
+    align-items:center!important;
+    gap:12px!important;
+    flex:0 1 auto!important;
+  }
+  body.public-page.editorial-2026 .site-brand-separator{height:32px!important;}
+  body.public-page.editorial-2026 .site-funding-logo-eu{height:27px!important;max-width:120px!important;}
+  body.public-page.editorial-2026 .site-funding-logo-wup{height:27px!important;max-width:108px!important;}
+  body.public-page.editorial-2026 .nav-toggle{
+    display:block!important;
+    flex:0 0 48px!important;
+    width:48px!important;
+    height:48px!important;
+    padding:11px!important;
+    margin-left:auto!important;
+  }
+  body.public-page.editorial-2026 .site-nav{
+    top:calc(100% + 6px)!important;
+    left:28px!important;
+    right:28px!important;
+    max-height:calc(100svh - 110px)!important;
+  }
+  body.public-page.editorial-2026 .site-nav a,
+  body.public-page.editorial-2026 .site-nav a:not(.nav-signups),
+  body.public-page.editorial-2026 .site-nav .nav-signups,
+  body.public-page.editorial-2026 .site-nav .nav-online{
+    min-height:54px!important;
+    font-size:14px!important;
+  }
+
+  /* START — remove vertical centering and give the photo a real tablet frame. */
+  body.public-page.home-rd.editorial-2026 .home-rd-hero{
+    grid-template-columns:1fr!important;
+    gap:34px!important;
+    min-height:0!important;
+    padding:52px 32px 58px!important;
+    align-items:start!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-copy{
+    justify-content:flex-start!important;
+    align-self:auto!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-wordmark{
+    width:235px!important;
+    margin:0 0 28px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero h1{
+    max-width:10ch!important;
+    font-size:clamp(58px,8vw,67px)!important;
+    line-height:.94!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-copy>p{
+    max-width:67ch!important;
+    margin-top:24px!important;
+    font-size:18px!important;
+    line-height:1.58!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-actions{margin-top:26px!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-meta{
+    margin-top:32px!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-visual{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+    overflow:hidden!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-visual>img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+    object-fit:cover!important;
+    object-position:43% 62%!important;
+  }
+
+  /* NASZE SZKOLENIA + ZAPISY — compact stacked tablet hero. */
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero.training-showcase-hero--balanced,
+  body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+    min-height:0!important;
+    padding:50px 32px 56px!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-copy,
+  body.public-page.editorial-2026 .signup-public-hero--split .public-hero-content{
+    justify-content:flex-start!important;
+    min-height:0!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced h1{
+    max-width:12ch!important;
+    font-size:clamp(56px,7.6vw,65px)!important;
+    line-height:.95!important;
+  }
+  body.public-page.editorial-2026 .signup-public-hero--split h1{
+    max-width:10ch!important;
+    font-size:clamp(58px,7.8vw,68px)!important;
+    line-height:.95!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media,
+  body.public-page.editorial-2026 .signup-public-hero-media{
+    width:100%!important;
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced .training-showcase-hero-media img,
+  body.public-page.editorial-2026 .signup-public-hero-media img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  body.public-page.editorial-2026 .signup-public-hero--split .public-hero-logo-link.hero-wup-mono{
+    width:280px!important;
+    max-width:45%!important;
+    margin:0 0 24px!important;
+  }
+
+  /* Catalog cards — less vertical waste, easier scanning. */
+  body.public-page.online-catalog-page.editorial-2026 .online-catalog-main{padding-top:22px!important;}
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover{
+    grid-template-columns:70px minmax(0,1fr) auto!important;
+    grid-template-areas:"number title actions"!important;
+    align-items:center!important;
+    gap:18px!important;
+    min-height:0!important;
+    padding:34px 32px!important;
+  }
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover__title{
+    max-width:18ch!important;
+    font-size:clamp(34px,5.3vw,44px)!important;
+    line-height:.98!important;
+  }
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover__actions{
+    align-self:center!important;
+    justify-self:end!important;
+    margin:0!important;
+  }
+
+  /* Contact map hero: avoid an unnecessarily tall first viewport. */
+  body.public-page.editorial-2026 .public-hero.inner-hero.contact-hero{
+    min-height:620px!important;
+    padding:0 32px 58px!important;
+  }
+  body.public-page.editorial-2026 .public-hero.inner-hero.contact-hero h1{
+    font-size:clamp(64px,9vw,76px)!important;
+  }
+
+  /* Public grids: keep two-column tablet rhythm where it improves scanning. */
+  body.public-page.editorial-2026 :where(.training-audience-grid,.training-method-grid,.training-proof-strip,.public-step-grid){
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+
+  /* COURSE HEADER — brand + Plan kursu in first row, portal links in second. */
+  body.course-page.course-portal-aligned .course-topbar.course-topbar--portal{
+    min-height:0!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-topbar-inner{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-areas:"brand plan" "nav nav"!important;
+    align-items:center!important;
+    width:calc(100% - 40px)!important;
+    min-height:0!important;
+    padding:8px 0 10px!important;
+    gap:6px 14px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-branding{
+    grid-area:brand!important;
+    display:flex!important;
+    width:auto!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:12px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{
+    width:132px!important;
+    height:58px!important;
+    padding:8px 10px!important;
+    border-radius:15px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logos{gap:10px!important;flex-wrap:nowrap!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-brand-separator{height:30px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logo-eu{height:24px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logo-wup{height:25px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
+    grid-area:plan!important;
+    min-height:46px!important;
+    margin:0!important;
+    padding:0 16px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav{
+    grid-area:nav!important;
+    display:flex!important;
+    width:100%!important;
+    justify-content:flex-start!important;
+    flex-wrap:nowrap!important;
+    overflow-x:auto!important;
+    padding:2px 0 0!important;
+    gap:0!important;
+    scrollbar-width:none;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav::-webkit-scrollbar{display:none;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{
+    flex:0 0 auto!important;
+    min-height:44px!important;
+    padding:0 14px!important;
+    font-size:12px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a::after{bottom:5px!important;}
+
+  /* COURSE OPENING — readable tablet scale and full-width video. */
+  body.course-page.course-portal-aligned .course-intro.course-intro--classic{
+    padding:46px 32px 42px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro-content.course-intro-content--classic{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+    max-width:900px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy h1{
+    max-width:11.5ch!important;
+    font-size:clamp(58px,8vw,68px)!important;
+    line-height:.95!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy>p:not(.intro-kicker){
+    max-width:68ch!important;
+    font-size:18px!important;
+    line-height:1.58!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-actions.intro-actions--stacked,
+  body.course-page.course-portal-aligned .course-intro--classic .course-video-inline--hero{
+    max-width:none!important;
+    width:100%!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .course-video-inline--hero{
+    border-radius:14px!important;
+  }
+  body.course-page.course-portal-aligned .course-hero-partnership{padding:18px 20px!important;}
+
+  /* Course shell and reading width. */
+  body.course-page.course-portal-aligned .course-app{display:block!important;}
+  body.course-page.course-portal-aligned .course-main{padding:36px 32px 84px!important;}
+  body.course-page.course-portal-aligned .course-module{max-width:none!important;}
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"copy" "visual" "meta"!important;
+    gap:28px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    max-width:15ch!important;
+    font-size:clamp(52px,7vw,64px)!important;
+  }
+  body.course-page.course-portal-aligned .module-hero-visual{
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+  }
+  body.course-page.course-portal-aligned .module-hero-visual img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    object-fit:contain!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header{
+    grid-template-columns:46px minmax(0,1fr) auto!important;
+    gap:14px!important;
+  }
+  body.course-page.course-portal-aligned .course-section h2{max-width:30ch!important;}
+  body.course-page.course-portal-aligned .section-check{min-width:148px!important;padding:0 14px!important;}
+  body.course-page.course-portal-aligned .course-section-body{padding-left:60px!important;}
+  body.course-page.course-portal-aligned .course-section-body>p,
+  body.course-page.course-portal-aligned .course-section-body>ul,
+  body.course-page.course-portal-aligned .course-section-body>ol{max-width:none!important;}
+  body.course-page.course-portal-aligned .course-table-wrap{overflow-x:auto!important;}
+  body.course-page.course-portal-aligned .course-table{min-width:680px;}
+}
+
+/* ==========================================================
+   LANDSCAPE — iPad 11-inch family (1180–1194 CSS px typical)
+   ========================================================== */
+@media (min-width:1024px) and (max-width:1280px) and (orientation:landscape){
+  body.public-page.editorial-2026{
+    --g:54px!important;
+    --display:clamp(64px,6vw,76px)!important;
+    --h2:clamp(46px,4.5vw,60px)!important;
+  }
+
+  /* Use the available width: show full portal navigation on iPad landscape. */
+  body.public-page.editorial-2026 .site-header-inner{
+    width:100%!important;
+    min-height:80px!important;
+    padding:6px 42px!important;
+    gap:15px!important;
+    flex-wrap:nowrap!important;
+  }
+  body.public-page.editorial-2026 .site-branding{gap:12px!important;flex:0 1 auto!important;}
+  body.public-page.editorial-2026 .site-logo.site-logo-project{
+    min-height:66px!important;
+    height:66px!important;
+    padding:8px 12px!important;
+    border-radius:16px!important;
+  }
+  body.public-page.editorial-2026 .site-logo.site-logo-project .site-project-wordmark{
+    width:120px!important;
+    max-width:120px!important;
+    height:46px!important;
+  }
+  body.public-page.editorial-2026 .site-funding-logos{gap:10px!important;}
+  body.public-page.editorial-2026 .site-brand-separator{height:31px!important;}
+  body.public-page.editorial-2026 .site-funding-logo-eu{height:26px!important;max-width:114px!important;}
+  body.public-page.editorial-2026 .site-funding-logo-wup{height:26px!important;max-width:102px!important;}
+  body.public-page.editorial-2026 .nav-toggle{display:none!important;}
+  body.public-page.editorial-2026 .site-nav{
+    position:static!important;
+    display:flex!important;
+    flex:1 1 auto!important;
+    justify-content:flex-end!important;
+    align-items:stretch!important;
+    flex-direction:row!important;
+    min-width:0!important;
+    max-height:none!important;
+    padding:0!important;
+    gap:0!important;
+    overflow:visible!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+  body.public-page.editorial-2026 .site-nav a,
+  body.public-page.editorial-2026 .site-nav a:not(.nav-signups),
+  body.public-page.editorial-2026 .site-nav .nav-signups,
+  body.public-page.editorial-2026 .site-nav .nav-online{
+    width:auto!important;
+    min-height:68px!important;
+    padding:0 9px!important;
+    justify-content:center!important;
+    font-size:11.5px!important;
+    white-space:nowrap!important;
+  }
+
+  /* Compact first viewport, retaining equal text/image axes. */
+  body.public-page.home-rd.editorial-2026 .home-rd-hero{
+    grid-template-columns:minmax(0,1.06fr) minmax(400px,.94fr)!important;
+    gap:42px!important;
+    min-height:0!important;
+    padding:46px 54px 50px!important;
+    align-items:stretch!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-copy{justify-content:flex-start!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-wordmark{width:205px!important;margin-bottom:26px!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-hero h1{
+    max-width:9.5ch!important;
+    font-size:clamp(66px,5.9vw,74px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-copy>p{
+    margin-top:24px!important;
+    font-size:17px!important;
+    line-height:1.54!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-actions{margin-top:24px!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-meta{margin-top:28px!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-visual{min-height:0!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-hero-visual>img{height:100%!important;min-height:100%!important;}
+
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero.training-showcase-hero--balanced,
+  body.public-page.editorial-2026 .public-hero.inner-hero.signup-public-hero.signup-public-hero--split{
+    grid-template-columns:minmax(0,1.04fr) minmax(400px,.96fr)!important;
+    gap:42px!important;
+    padding:46px 54px 50px!important;
+  }
+  body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero--balanced h1{
+    font-size:clamp(62px,5.7vw,72px)!important;
+  }
+  body.public-page.editorial-2026 .signup-public-hero--split h1{
+    font-size:clamp(68px,6vw,76px)!important;
+  }
+  body.public-page.editorial-2026 .signup-public-hero-media{min-height:0!important;}
+
+  /* Catalog: denser cards fit landscape better. */
+  body.public-page.online-catalog-page.editorial-2026 .online-catalog-main{padding-top:18px!important;}
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover{
+    grid-template-columns:72px minmax(0,1fr) auto!important;
+    grid-template-areas:"number title actions"!important;
+    align-items:center!important;
+    min-height:0!important;
+    gap:20px!important;
+    padding:30px 54px!important;
+  }
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover__title{
+    max-width:22ch!important;
+    font-size:clamp(34px,3.5vw,44px)!important;
+  }
+
+  body.public-page.editorial-2026 .public-hero.inner-hero.contact-hero{
+    min-height:600px!important;
+    padding:0 54px 54px!important;
+  }
+
+  /* COURSE LANDSCAPE — keep portal nav and give reading pane more room. */
+  body.course-page.course-portal-aligned .course-topbar.course-topbar--portal{min-height:80px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-topbar-inner{
+    width:calc(100% - 44px)!important;
+    min-height:80px!important;
+    padding:0!important;
+    gap:14px!important;
+    flex-wrap:nowrap!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{
+    width:128px!important;
+    height:58px!important;
+    padding:8px 10px!important;
+    border-radius:15px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logos{gap:10px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-brand-separator{height:30px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logo-eu{height:24px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logo-wup{height:25px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav{gap:0!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{
+    min-height:80px!important;
+    padding:0 9px!important;
+    font-size:11.5px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{display:none!important;}
+
+  body.course-page.course-portal-aligned .course-intro.course-intro--classic{
+    padding:42px 54px 38px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro-content.course-intro-content--classic{
+    grid-template-columns:minmax(0,.9fr) minmax(500px,1.1fr)!important;
+    gap:42px!important;
+    max-width:1500px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy h1{
+    max-width:10ch!important;
+    font-size:clamp(58px,5vw,66px)!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy>p:not(.intro-kicker){
+    margin-top:20px!important;
+    font-size:17px!important;
+    line-height:1.55!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-actions.intro-actions--stacked,
+  body.course-page.course-portal-aligned .course-intro--classic .course-video-inline--hero{max-width:none!important;}
+  body.course-page.course-portal-aligned .course-intro--classic .course-video-inline--hero{border-radius:14px!important;}
+
+  body.course-page.course-portal-aligned .course-app{
+    grid-template-columns:282px minmax(0,1fr)!important;
+  }
+  body.course-page.course-portal-aligned .sidebar-inner{top:80px!important;max-height:calc(100vh - 80px)!important;}
+  body.course-page.course-portal-aligned .course-main{padding:34px 34px 90px!important;}
+  body.course-page.course-portal-aligned .course-module{max-width:none!important;}
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:minmax(0,.95fr) minmax(360px,1.05fr)!important;
+    gap:34px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    font-size:clamp(48px,4.5vw,60px)!important;
+    max-width:13ch!important;
+  }
+  body.course-page.course-portal-aligned .module-hero-visual{min-height:0!important;}
+  body.course-page.course-portal-aligned .module-hero-visual img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    object-fit:contain!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body{padding-left:58px!important;}
+  body.course-page.course-portal-aligned .course-section-body>p,
+  body.course-page.course-portal-aligned .course-section-body>ul,
+  body.course-page.course-portal-aligned .course-section-body>ol{max-width:none!important;}
+  body.course-page.course-portal-aligned .course-section h2{max-width:28ch!important;}
+  body.course-page.course-portal-aligned .section-check{min-width:145px!important;}
+  body.course-page.course-portal-aligned .course-table-wrap{overflow-x:auto!important;}
+}
+
+/* V61.1 — portrait public header: force funding marks into the same row. */
+@media (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+  body.public-page.editorial-2026 .site-branding{
+    flex-wrap:nowrap!important;
+    width:auto!important;
+  }
+  body.public-page.editorial-2026 .site-funding-logos{
+    flex-wrap:nowrap!important;
+    width:auto!important;
+  }
+}

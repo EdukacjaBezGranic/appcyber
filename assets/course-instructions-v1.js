@@ -85,14 +85,14 @@
       note: 'Samo zdjęcie zwykle nie potwierdza miejsca, daty ani opisu wydarzenia.'
     },
     'm2-18-zadanie-refleksyjne': {
-      intro: 'Podsumuj, na co chcesz zwracać większą uwagę po tym module.',
+      intro: 'Podsumuj, które mechanizmy najszybciej uruchamiają Twoją reakcję na informacje.',
       steps: [
-        'Wybierz rodzaj manipulacji, który rozpoznajesz najlepiej.',
+        'Wybierz mechanizm podatności, który najłatwiej rozpoznajesz u siebie.',
         'Wybierz emocję, przy której chcesz częściej robić pauzę.',
-        'Wybierz pierwszy krok weryfikacji, którego chcesz używać.',
-        'Na końcu zapisz własną krótką zasadę przed udostępnieniem.'
+        'Wybierz sposób, który pomoże Ci zatrzymać automatyczną reakcję.',
+        'Na końcu zapisz własną krótką zasadę przed szybką oceną lub udostępnieniem.'
       ],
-      note: 'To refleksja, nie test. Wybierz odpowiedzi zgodne z Twoim doświadczeniem.'
+      note: 'To refleksja, nie test. Nie oceniasz jeszcze narzędzi fact-checkingowych — skupiasz się na własnej reakcji i podatności na wpływ.'
     },
     'm2-19-krotka-samoocena': {
       intro: 'Oceń pięć zdań na skali od 1 do 5.',

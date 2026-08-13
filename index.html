@@ -13,7 +13,199 @@
   <link rel="stylesheet" href="assets/portal-redesign.css?v=20260729-final-polish-05">
 
 <link href="assets/responsive-20260731.css?v=20260731-1" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/editorial-20260808.css?v=20260808-05">
+<link rel="stylesheet" href="assets/editorial-20260808.css?v=20260813-60">
+
+<style id="home-photo-balance-overrides">
+body.editorial-2026 .home-rd-hero{
+  align-items:stretch!important;
+  gap:36px!important;
+}
+body.editorial-2026 .home-rd-hero-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+body.editorial-2026 .home-rd-hero-visual{
+  display:grid!important;
+  grid-template-rows:minmax(520px,1fr);
+  gap:0!important;
+  align-self:stretch!important;
+}
+body.editorial-2026 .home-rd-hero-visual > img{
+  width:100%!important;
+  height:100%!important;
+  min-height:560px!important;
+  object-fit:cover!important;
+  object-position:38% 68%!important;
+  border-radius:28px!important;
+  display:block!important;
+}
+body.editorial-2026 .home-rd-photo-note{
+  max-width:430px!important;
+  margin:0 0 0 auto!important;
+}
+body.editorial-2026 .home-eu-origin{
+  display:block!important;
+  padding-top:clamp(64px,6vw,88px)!important;
+  padding-bottom:clamp(64px,6vw,88px)!important;
+}
+body.editorial-2026 .home-eu-origin-copy{
+  display:grid!important;
+  width:100%!important;
+  max-width:none!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-areas:"overline overline" "title copy"!important;
+  column-gap:clamp(36px,4vw,68px)!important;
+  row-gap:24px!important;
+  align-items:start!important;
+}
+body.editorial-2026 .home-eu-origin-copy .home-rd-overline{
+  grid-area:overline!important;
+}
+body.editorial-2026 .home-eu-origin-copy h2{
+  grid-area:title!important;
+  width:100%!important;
+  max-width:11.5ch!important;
+  margin:0!important;
+  font-size:clamp(52px,4.25vw,76px)!important;
+  line-height:.97!important;
+  letter-spacing:-.052em!important;
+}
+body.editorial-2026 .home-eu-origin-copy h2 .eu-title-line{
+  display:block!important;
+}
+body.editorial-2026 .home-eu-origin-copy>p{
+  grid-area:copy!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  margin:3px 0 0!important;
+  font-size:clamp(18px,1.08vw,20px)!important;
+  line-height:1.72!important;
+  text-wrap:pretty!important;
+}
+body.editorial-2026 .home-eu-origin-media{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:16px!important;
+  align-self:stretch!important;
+}
+body.editorial-2026 .home-eu-origin-media img{
+  width:100%!important;
+  aspect-ratio:4 / 3!important;
+  min-height:280px!important;
+  object-fit:cover!important;
+  object-position:center 35%!important;
+  border-radius:24px!important;
+  display:block!important;
+}
+body.editorial-2026 .home-eu-origin-media-note{
+  background:#fff!important;
+  border:1px solid rgba(15,32,47,.10)!important;
+  border-radius:20px!important;
+  padding:18px 20px!important;
+}
+body.editorial-2026 .home-eu-origin-media-note span{
+  display:block!important;
+  font-size:12px!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+  color:#1f6b57!important;
+  margin-bottom:8px!important;
+  font-weight:700!important;
+}
+body.editorial-2026 .home-eu-origin-media-note strong{
+  display:block!important;
+  color:#102130!important;
+  font-size:16px!important;
+  line-height:1.55!important;
+}
+body.editorial-2026 .home-eu-origin-points{
+  grid-column:1 / -1!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:20px!important;
+  margin-top:clamp(48px,6vw,82px)!important;
+}
+body.editorial-2026 .home-eu-origin-points article{
+  height:100%!important;
+}
+body.editorial-2026 .home-rd-story{
+  align-items:center!important;
+  gap:34px!important;
+}
+body.editorial-2026 .home-rd-story-media img{
+  width:100%!important;
+  aspect-ratio:4 / 5!important;
+  object-fit:cover!important;
+  object-position:center 28%!important;
+  border-radius:28px!important;
+  display:block!important;
+}
+body.editorial-2026 .home-rd-story-badge{
+  max-width:340px!important;
+}
+body.editorial-2026 .training-photo-gallery .gallery-photo img,
+body.editorial-2026 .home-one-topic-card img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+body.editorial-2026 .home-one-topic-card img{
+  aspect-ratio:5 / 4!important;
+  border-radius:18px!important;
+}
+@media (max-width: 1180px){
+  body.editorial-2026 .home-eu-origin-copy{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    column-gap:36px!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy h2{
+    max-width:12ch!important;
+    font-size:clamp(48px,5.2vw,62px)!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy>p{
+    font-size:18px!important;
+    line-height:1.68!important;
+  }
+}
+@media (max-width: 900px){
+  body.editorial-2026 .home-rd-hero-visual{
+    grid-template-rows:auto auto!important;
+  }
+  body.editorial-2026 .home-rd-hero-visual > img{
+    min-height:380px!important;
+  }
+  body.editorial-2026 .home-rd-photo-note{
+    margin:0!important;
+    max-width:none!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"overline" "title" "copy"!important;
+    row-gap:16px!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy h2{
+    max-width:13ch!important;
+    font-size:clamp(46px,10vw,72px)!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy h2 .eu-title-line{
+    display:inline!important;
+  }
+  body.editorial-2026 .home-eu-origin-copy h2 .eu-title-line + .eu-title-line::before{
+    content:" "!important;
+  }
+  body.editorial-2026 .home-eu-origin-points{
+    grid-column:auto!important;
+    grid-template-columns:1fr!important;
+  }
+  body.editorial-2026 .home-rd-story-media img{
+    aspect-ratio:16 / 10!important;
+  }
+}
+</style>
+
+<link href="assets/ipad-11-20260813.css?v=20260813-61" rel="stylesheet"/>
 </head>
 <body class="public-page home-rd home-onepage editorial-2026">
 <header class="site-header">
@@ -43,11 +235,11 @@
 </div>
 <div class="home-rd-hero-visual">
 <img alt="Uczestnicy podczas szkolenia dla osób dorosłych" src="grafiki/head-strona-glowna.webp"/>
-<div class="home-rd-photo-note"><span>Od projektu do praktyki</span><strong>Zdobyte kompetencje są rozwijane w programy, warsztaty i materiały dostępne dla odbiorców w regionie.</strong></div>
+
 </div>
 </section>
 <section aria-labelledby="eu-origin-title" class="home-eu-origin" id="o-projekcie">
-<div class="home-eu-origin-copy"><span class="home-rd-overline">Program Erasmus+ i finansowanie Unii Europejskiej</span><h2 id="eu-origin-title">Mobilność, która przekłada się na konkretne działania</h2><p>Rezultaty mobilności zostały przełożone na trwałe rozwiązania edukacyjne. Wiedza i dobre praktyki zdobyte podczas zagranicznych mobilności zostały poddane analizie, dostosowane do potrzeb regionalnego rynku pracy oraz specyfiki funkcjonowania publicznych służb zatrudnienia, a następnie wykorzystane do opracowania autorskich programów szkoleniowych, kursów online, scenariuszy zajęć, ćwiczeń, infografik i materiałów edukacyjnych. Takie podejście zapewnia trwałość rezultatów projektu oraz umożliwia ich wykorzystanie przez szerokie grono odbiorców także po zakończeniu jego realizacji.</p></div>
+<div class="home-eu-origin-copy"><span class="home-rd-overline">Program Erasmus+ i finansowanie Unii Europejskiej</span><h2 id="eu-origin-title"><span class="eu-title-line">Mobilność, która</span><span class="eu-title-line">przekłada się na</span><span class="eu-title-line">konkretne działania</span></h2><p>Rezultaty mobilności zostały przełożone na trwałe rozwiązania edukacyjne. Wiedza i dobre praktyki zdobyte podczas zagranicznych mobilności zostały poddane analizie, dostosowane do potrzeb regionalnego rynku pracy oraz specyfiki funkcjonowania publicznych służb zatrudnienia, a następnie wykorzystane do opracowania autorskich programów szkoleniowych, kursów online, scenariuszy zajęć, ćwiczeń, infografik i materiałów edukacyjnych. Takie podejście zapewnia trwałość rezultatów projektu oraz umożliwia ich wykorzystanie przez szerokie grono odbiorców także po zakończeniu jego realizacji.</p></div>
 <div class="home-eu-origin-points"><article><strong>Rozwój kadry</strong><p>Pracownicy zdobywają aktualną wiedzę i praktyczne metody możliwe do zastosowania w edukacji dorosłych, doradztwie i pracy informacyjnej.</p></article><article><strong>Adaptacja do potrzeb regionu</strong><p>Rozwiązania poznane podczas szkoleń są porządkowane, testowane i dostosowywane do potrzeb publicznych służb zatrudnienia oraz ich odbiorców.</p></article><article><strong>Upowszechnianie rezultatów</strong><p>Efektem są szkolenia, kursy i materiały, które pozwalają przekazywać zdobyte kompetencje kolejnym pracownikom, instytucjom i osobom dorosłym.</p></article></div>
 </section>
 <section aria-labelledby="programs-title" class="home-rd-programs home-one-offer" id="najnowsze-programy">
