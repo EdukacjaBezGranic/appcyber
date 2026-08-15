@@ -1,0 +1,51 @@
+PORTAL EDUKACJA BEZ GRANIC — V68.11 WERSJA TELEFONICZNA
+
+Korekta V68.11: wszystkie publiczne strony portalu otrzymały spójny układ
+telefoniczny. Uporządkowano nawigację, skalę nagłówków, marginesy, obrazy,
+siatki, przyciski, terminarz, kontakt, kursy online i stopkę. Usunięto ryzyko
+poziomego przewijania, a opisy tematów pozostają widoczne również na telefonie.
+
+Korekta V68.10: w wybranych dużych nagłówkach zastosowano umiarkowane
+pogrubienie 600 wyłącznie na słowach-kluczach. Pozostała typografia nadal
+zachowuje lekki, redakcyjny charakter.
+
+Korekta V68.9: zdjęcie w nagłówku strony zapisów zostało przesunięte bliżej
+bloku tekstowego przez zmniejszenie odstępu między kolumnami. Prawa kolumna
+ze zdjęciem jest jednocześnie nieznacznie szersza. Logo, teksty i typografia
+pozostają bez zmian. Na stronie kursów online zmniejszono szerokość i wysokość
+głównej ilustracji, aby nie dominowała nad tytułem kursu.
+
+Korekta V68.8: w trzech sekcjach strony startowej zwykły opis po prawej
+rozpoczyna się na osi dużego nagłówka, a nie nad nim. Zmniejszono nadmierne
+odstępy pionowe i zróżnicowano rytm sekcji „Dotychczasowe rezultaty”, „Oferta
+rozwijana etapami” oraz „Dla kogo”. Hero strony zapisów został odciążony
+typograficznie bez zmiany wielkości logo WUP i bez zmian w treści.
+Data przygotowania: 2026-08-15
+
+Wersja przeznaczona do GitHub Pages.
+Główna zmiana: spójna struktura strony głównej i publicznych podstron,
+większa typografia, dopracowane proporcje zdjęć i pełna responsywność.
+Oryginalne pliki logotypów projektu, UE i WUP pozostają bez zmian.
+
+Korekta V68.3: spokojniejsze zdjęcia stockowe w hero strony szkoleń i zapisów,
+etykiety sekcji bezpośrednio nad głównymi nagłówkami, łagodniejsze wejście mapy
+kontaktowej bez szarej poświaty oraz poprawiony rytm pierwszych ekranów.
+
+Korekta V68.4: białe napisy na wypełnionych przyciskach, symetryczny układ
+programów i stopki oraz pełnoekranowa czarna mapa w nagłówku kontaktu z białą
+typografią. Treść stron pozostaje bez zmian.
+
+Korekta V68.5: większy blok logotypów na stronie startowej, logo projektu w
+sekcji mobilności, wyrównane pola „Jak pracujemy”, białe logotypy UE i WUP w
+panelu trenera oraz bardziej zwarty rytm górnych odstępów sekcji.
+
+Korekta V68.6: oznaczenia „Wkrótce” w kartach szkoleń zastąpiono odnośnikami
+„Sprawdź terminarz”, prowadzącymi bezpośrednio do terminarza na stronie zapisów.
+
+Korekta V68.7: blok informacyjny z logotypami na stronie startowej wykorzystuje
+niemal całą szerokość sekcji i ma większą wysokość na komputerach, tabletach i
+telefonach. Wyrównano także cztery pola cech oferty do jednej górnej linii.
+Zmniejszono nagłówek sekcji doświadczenia, aby odpowiadał wysokości dwóch pól
+tekstowych umieszczonych obok.
+Wyrównano również cztery pola odbiorców: nagłówki i opisy zaczynają się na
+wspólnych liniach.

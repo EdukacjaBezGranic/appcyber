@@ -52,7 +52,7 @@
       `;
     }
     return `
-      <span class="signup-status">Wkrótce</span>
+      <a class="signup-status signup-calendar-link" href="#terminarz">Sprawdź terminarz</a>
     `;
   };
 
