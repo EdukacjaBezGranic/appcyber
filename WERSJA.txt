@@ -1,4 +1,36 @@
-PORTAL EDUKACJA BEZ GRANIC — V68.11 WERSJA TELEFONICZNA
+PORTAL EDUKACJA BEZ GRANIC — V69.6 Z ROZBUDOWANYM CMS
+
+Nowość V69: dodano niezależny edytor cms/index.html. Narzędzie umożliwia
+wizualną edycję treści, wyglądu, wymiarów i odstępów elementów, podmianę
+oraz dodawanie zdjęć, zarządzanie terminami szkoleń, podgląd responsywny,
+cofanie zmian i eksport całej paczki ZIP gotowej do GitHub Pages.
+
+Nowość V69.1: dodano tryb nawigacyjnego podglądu stron, edycję tła całej
+strony i sekcji, rozszerzone formatowanie tekstu oraz precyzyjne skalowanie,
+kadrowanie, jasność i warianty kolorystyczne zdjęć i logotypów.
+
+Nowość V69.2: podgląd laptopa 1440 × 900 px automatycznie dopasowuje się do
+okna CMS. Historia cofa i ponawia pojedyncze działania. Zdjęcia i logotypy
+można ręcznie wyrównywać, przesuwać oraz kadrować suwakami osi X i Y.
+
+Nowość V69.3: ilustracje, zdjęcia i logotypy można chwytać bezpośrednio
+w podglądzie i przeciągać myszką albo palcem. Pozycja zapisuje się w stronie,
+suwaki X/Y aktualizują się na bieżąco, a całe przeciągnięcie stanowi jedno
+działanie możliwe do cofnięcia i ponowienia.
+
+Nowość V69.4: nagłówki, akapity, elementy list i podpisy można przesuwać
+bezpośrednio w podglądzie myszką albo palcem. Zakładka „Odstępy” zawiera
+dodatkowe suwaki X/Y do precyzyjnego ustawiania pól tekstowych.
+
+Nowość V69.5: zdjęcia, ilustracje, logotypy i przyciski mają bezpośrednie
+uchwyty zmiany szerokości oraz wysokości. Przyciski otrzymały własny panel
+tekstu, linku, kolorów, obramowania, zaokrąglenia i odstępów. Podwójne
+kliknięcie tekstu włącza zaznaczanie pojedynczych słów lub liter, dzięki czemu
+bold, kursywa, podkreślenie i przekreślenie działają tylko na wybrany fragment.
+
+Nowość V69.6: kontrolka koloru tekstu respektuje aktywne zaznaczenie. Kolor
+można nadać pojedynczemu słowu, literom lub dowolnemu fragmentowi nagłówka,
+akapitu, podpisu albo tekstu przycisku bez zmiany pozostałej części tekstu.
 
 Korekta V68.11: wszystkie publiczne strony portalu otrzymały spójny układ
 telefoniczny. Uporządkowano nawigację, skalę nagłówków, marginesy, obrazy,
@@ -20,7 +52,7 @@ rozpoczyna się na osi dużego nagłówka, a nie nad nim. Zmniejszono nadmierne
 odstępy pionowe i zróżnicowano rytm sekcji „Dotychczasowe rezultaty”, „Oferta
 rozwijana etapami” oraz „Dla kogo”. Hero strony zapisów został odciążony
 typograficznie bez zmiany wielkości logo WUP i bez zmian w treści.
-Data przygotowania: 2026-08-15
+Data przygotowania: 2026-08-16
 
 Wersja przeznaczona do GitHub Pages.
 Główna zmiana: spójna struktura strony głównej i publicznych podstron,

@@ -1,4 +1,4 @@
-# Edukacja bez granic — Portal V68.11
+# Edukacja bez granic — Portal V69.6 z rozbudowanym CMS
 
 Kompletny, statyczny portal przygotowany do publikacji przez GitHub Pages.
 
