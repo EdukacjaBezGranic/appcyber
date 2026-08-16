@@ -22,6 +22,7 @@
       <button class="preview-mode-btn" id="previewModeBtn" disabled>▶ <span>Podgląd strony</span></button>
       <div class="save-state" id="saveState"><i></i> Gotowy</div>
       <button class="secondary top-action" id="openZipBtn">Otwórz paczkę</button>
+      <button class="secondary top-action save-draft" id="saveDraftBtn" disabled>Zapisz roboczo</button>
       <button class="primary top-action" id="exportBtn" disabled>Eksportuj paczkę GitHub</button>
       <input id="zipInput" type="file" accept=".zip,application/zip" hidden>
     </header>
@@ -33,6 +34,8 @@
           <strong>Otwórz paczkę portalu</strong>
           <span>Przeciągnij ZIP tutaj lub wybierz plik</span>
           <button class="secondary" id="chooseZipBtn">Wybierz paczkę ZIP</button>
+          <button class="secondary draft-restore" id="restoreDraftBtn" hidden>Wczytaj ostatni zapis</button>
+          <small class="draft-meta" id="draftMeta" hidden></small>
         </div>
         <div class="project-loaded" id="projectLoaded" hidden>
           <span class="project-dot"></span>
@@ -59,6 +62,7 @@
     <main class="workspace">
       <div class="workspace-toolbar">
         <div class="crumb" id="breadcrumb">Brak otwartego projektu</div>
+        <output class="viewport-scope" id="viewportScope">Układ: KOMPUTER · położenie i rozmiar tylko dla tego widoku</output>
         <div class="zoom-control"><button id="zoomOut" title="Pomniejsz podgląd">−</button><output id="zoomValue">100%</output><button id="zoomIn" title="Powiększ podgląd">＋</button><button class="fit-button is-active" id="fitViewportBtn" title="Dopasuj cały podgląd do dostępnego miejsca">Dopasuj</button></div>
       </div>
       <div class="canvas-stage" id="canvasStage">
@@ -66,7 +70,8 @@
           <div class="welcome-symbol">✦</div>
           <h1>Pełny edytor portalu</h1>
           <p>Otwórz paczkę ZIP, kliknij dowolny element strony i zmieniaj tekst, rozmiar, odstępy, kolory oraz zdjęcia bez edycji kodu.</p>
-          <button class="primary" id="welcomeOpenBtn">Otwórz paczkę portalu</button>
+          <div class="welcome-actions"><button class="primary" id="welcomeOpenBtn">Otwórz paczkę portalu</button><button class="secondary draft-restore" id="welcomeRestoreBtn" hidden>Wczytaj ostatni zapis</button></div>
+          <small class="welcome-draft-meta" id="welcomeDraftMeta" hidden></small>
           <ul><li>Podgląd komputer, tablet i telefon</li><li>Edycja terminów w kalendarzu</li><li>Eksport kompletnej paczki GitHub</li></ul>
         </div>
         <div class="device-frame desktop" id="deviceFrame" hidden>

@@ -1,4 +1,4 @@
-PORTAL EDUKACJA BEZ GRANIC — V69.6 Z ROZBUDOWANYM CMS
+PORTAL EDUKACJA BEZ GRANIC — V69.8 Z ROZBUDOWANYM CMS
 
 Nowość V69: dodano niezależny edytor cms/index.html. Narzędzie umożliwia
 wizualną edycję treści, wyglądu, wymiarów i odstępów elementów, podmianę
@@ -31,6 +31,14 @@ bold, kursywa, podkreślenie i przekreślenie działają tylko na wybrany fragme
 Nowość V69.6: kontrolka koloru tekstu respektuje aktywne zaznaczenie. Kolor
 można nadać pojedynczemu słowu, literom lub dowolnemu fragmentowi nagłówka,
 akapitu, podpisu albo tekstu przycisku bez zmiany pozostałej części tekstu.
+
+Nowość V69.7: niezależna edycja responsywna. Położenie, rozmiar, marginesy,
+odstępy, rozmiar tekstu i kadrowanie są zapisywane osobno dla widoków
+Komputer, Tablet i Telefon. Poprawka telefonu nie zmienia układu laptopa.
+
+Nowość V69.8: przycisk „Zapisz roboczo” zachowuje cały stan edycji lokalnie
+w przeglądarce bez tworzenia paczki ZIP. Ostatni zapis można wczytać po
+ponownym otwarciu CMS-u. Dostępny jest także skrót Ctrl+S / Cmd+S.
 
 Korekta V68.11: wszystkie publiczne strony portalu otrzymały spójny układ
 telefoniczny. Uporządkowano nawigację, skalę nagłówków, marginesy, obrazy,

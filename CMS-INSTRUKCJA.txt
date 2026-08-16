@@ -10,6 +10,9 @@ URUCHOMIENIE
 
 EDYCJA STRONY
 
+- Najpierw wybierz u góry widok Komputer, Tablet lub Telefon. Położenie,
+  rozmiar, marginesy, odstępy, rozmiar tekstu i kadrowanie zapisują się
+  oddzielnie dla każdego widoku. Poprawka telefonu nie zmienia laptopa.
 - Kliknij tekst, zdjęcie, przycisk lub sekcję bezpośrednio w podglądzie.
 - Po prawej stronie pojawią się właściwości wybranego elementu.
 - Przycisk „Podgląd strony” uruchamia działające menu i linki. Przejdź
@@ -18,6 +21,10 @@ EDYCJA STRONY
   „Dopasuj” skaluje cały ekran strony do dostępnego miejsca w CMS-ie.
 - Przyciski „Cofnij” i „Ponów” działają krok po kroku. Można także użyć
   Ctrl+Z / Cmd+Z oraz Ctrl+Shift+Z / Cmd+Shift+Z.
+- Przycisk „Zapisz roboczo” albo skrót Ctrl+S / Cmd+S zachowuje bieżący
+  projekt lokalnie w tej przeglądarce bez tworzenia ZIP-u. Po ponownym
+  otwarciu CMS-u użyj „Wczytaj ostatni zapis”. Końcową paczkę GitHub
+  eksportuj dopiero po zakończeniu pracy.
 - Nagłówki, akapity, elementy list i podpisy można chwycić bezpośrednio
   w podglądzie i przeciągnąć myszką albo palcem. W zakładce „Odstępy”
   znajdują się suwaki X/Y do dokładnego ustawienia położenia tekstu.

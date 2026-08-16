@@ -10,20 +10,20 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Myślenie krytyczne, dezinformacja i manipulacja",
       "shortTitle": "Myślenie krytyczne",
-      "date": "",
-      "time": "",
-      "place": "",
+      "date": "2026-09-15",
+      "time": "09:00 - 14:00",
+      "place": "WUP ",
       "audience": "Pracownicy instytucji publicznych, doradcy zawodowi, trenerzy i osoby pracujące z informacją.",
       "description": [
         "Szkolenie pomaga rozpoznawać fałszywe informacje, manipulację i treści tworzone po to, aby wywołać szybką reakcję odbiorcy.",
         "Uczestnicy uczą się oceniać wiarygodność źródeł, oddzielać fakty od opinii i spokojnie sprawdzać informacje przed ich dalszym wykorzystaniem."
       ],
-      "color": "#d4a017",
+      "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "",
-      "button": "Wkrótce"
+      "button": "Zapisz się"
     },
     {
       "id": "komunikacja",
@@ -31,41 +31,20 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "",
-      "time": "",
-      "place": "",
+      "date": "2026-09-22",
+      "time": "09:00 - 14:00",
+      "place": "WUP",
       "audience": "Pracownicy prowadzący spotkania, szkolenia, konsultacje i prezentacje dla odbiorców.",
       "description": [
         "Szkolenie wzmacnia umiejętność jasnego, spokojnego i angażującego przekazywania informacji.",
         "Uczestnicy pracują nad strukturą wypowiedzi, kontaktem z grupą, opowiadaniem przykładów i budowaniem komunikatu, który jest zrozumiały dla odbiorcy."
       ],
-      "color": "#1f6f54",
+      "color": "#1100ff",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Wkrótce"
-    },
-    {
-      "id": "grywalizacja",
-      "group": "new",
-      "source": "Projekt Edukacja bez granic",
-      "title": "Grywalizacja, uczenie przez gry i doświadczenie",
-      "shortTitle": "Grywalizacja",
-      "date": "",
-      "time": "",
-      "place": "",
-      "audience": "Edukatorzy, trenerzy, doradcy zawodowi i osoby projektujące działania rozwojowe dla dorosłych.",
-      "description": [
-        "Szkolenie pokazuje, jak wykorzystywać elementy gier, zadania, wyzwania i mechanizmy motywacyjne w edukacji dorosłych.",
-        "Celem jest tworzenie zajęć, które bardziej angażują uczestników i pomagają im bezpiecznie ćwiczyć nowe sposoby działania."
-      ],
-      "color": "#0d4f96",
-      "image": "grafiki/gamifikacja.jpg",
-      "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
-      "link": "",
-      "button": "Wkrótce"
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "ai",
@@ -150,6 +129,44 @@ window.portalSiteData = {
       "open": false,
       "link": "",
       "button": "Wkrótce"
+    },
+    {
+      "id": "nowe-szkolenie",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Nowe szkolenie",
+      "shortTitle": "Nowe szkolenie",
+      "date": "",
+      "time": "",
+      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
+      "audience": "",
+      "description": [
+        ""
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "link": "",
+      "button": "Sprawdź terminarz"
+    },
+    {
+      "id": "nowe-szkolenie",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja ",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-09-18",
+      "time": "09:00 - 14:00",
+      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
+      "audience": "szkolenie wewnętrzne dla pracowników WUP",
+      "description": [],
+      "color": "#a7ece7",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "link": "",
+      "button": "Sprawdź terminarz"
     }
   ]
 };
