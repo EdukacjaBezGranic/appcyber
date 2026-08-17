@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
-<rect width="1200" height="675" fill="#101418"/>
-<path d="M0 0h1200v225H0z" fill="#ce2939"/><path d="M0 225h1200v225H0z" fill="#fff"/><path d="M0 450h1200v225H0z" fill="#477050"/>
-<rect x="120" y="155" width="960" height="365" rx="24" fill="#0a0d10" opacity=".82"/>
-<text x="600" y="260" fill="white" text-anchor="middle" font-size="42" font-family="Arial" font-weight="900">„NORMALNOŚĆ”</text>
-<text x="600" y="335" fill="#ffd150" text-anchor="middle" font-size="69" font-family="Arial" font-weight="900">BEZ PRZEPRASZANIA</text>
-<text x="600" y="405" fill="white" text-anchor="middle" font-size="31" font-family="Arial">Tak powinno być wszędzie?</text>
-<text x="600" y="470" fill="#9db0ba" text-anchor="middle" font-size="24" font-family="Arial">UDOSTĘPNIJ, JEŚLI MASZ DOŚĆ</text>
-</svg>
