@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const COURSE_KEY='ebgCourseV2State';
-  const QUIZ_KEY='ebgCourseModuleQuizV3';
+  const QUIZ_KEY='ebgCourseModuleQuizV4';
   const read=(k,f={})=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
   const sections=()=>[...document.querySelectorAll('.course-section[data-course-section]')].filter(s=>s.dataset.quizRequired!=='false');
   function status(){
@@ -23,7 +23,7 @@
     document.querySelectorAll('[data-certificate-quizzes]').forEach(n=>n.textContent=`${s.passed} z 5`);
     document.querySelectorAll('[data-certificate-progress-text]').forEach(n=>n.textContent=`${s.overall}%`);
     document.querySelectorAll('[data-certificate-bar]').forEach(n=>n.style.width=`${s.overall}%`);
-    document.querySelectorAll('[data-certificate-status]').forEach(n=>n.textContent=s.eligible?'Dyplom ukończenia kursu jest odblokowany':s.passed===5?'Zaliczono testy – ukończ wszystkie treści kursu':s.sectionPercent===100?'Ukończono treści – zalicz wszystkie testy modułowe':'Dyplom nie jest jeszcze odblokowany');
+    document.querySelectorAll('[data-certificate-status]').forEach(n=>n.textContent=s.eligible?'Dyplom ukończenia kursu jest odblokowany':s.passed===5?'Zaliczono testy – ukończ wszystkie tematy modułów':s.sectionPercent===100?'Ukończono wszystkie tematy – zalicz testy modułowe':'Dyplom nie jest jeszcze odblokowany');
     document.dispatchEvent(new CustomEvent('ebg:certificate-requirements-updated',{detail:s}));
   }
   document.querySelector('[data-enter-course]')?.addEventListener('click',()=>document.querySelector('.course-app')?.scrollIntoView({behavior:'smooth',block:'start'}));

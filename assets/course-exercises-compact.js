@@ -10,7 +10,7 @@
     },
     critical: {
       area: 'krytyczne myślenie, źródła i decyzje',
-      low: 'Wróć do pytań o źródło, dowody, kontekst i cel decyzji. Przed działaniem doprecyzuj, czego naprawdę próbujesz się dowiedzieć i czego nadal nie wiesz.',
+    low: 'Wróć do pytań o źródło, dowody, kontekst i cel decyzji. Przed działaniem doprecyzuj, czego próbujesz się dowiedzieć i czego nadal nie wiesz.',
       mid: 'Potrafisz stosować część zasad krytycznej oceny, lecz nie wszystkie są jeszcze jednakowo utrwalone. Najwięcej korzyści da regularne porównywanie niezależnych źródeł i sprawdzanie związku między dowodem a wnioskiem.',
       high: 'Twoje odpowiedzi wskazują na dobrze rozwiniętą ocenę źródeł i dowodów oraz świadome podejmowanie decyzji. Utrzymuj ten standard również przy odpowiedziach AI i informacjach zgodnych z Twoim pierwszym przekonaniem.'
     },

@@ -12,11 +12,11 @@ window.portalSiteData = {
       "shortTitle": "Myślenie krytyczne",
       "date": "2026-09-15",
       "time": "09:00 - 14:00",
-      "place": "WUP ",
-      "audience": "Pracownicy instytucji publicznych, doradcy zawodowi, trenerzy i osoby pracujące z informacją.",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice ",
       "description": [
-        "Szkolenie pomaga rozpoznawać fałszywe informacje, manipulację i treści tworzone po to, aby wywołać szybką reakcję odbiorcy.",
-        "Uczestnicy uczą się oceniać wiarygodność źródeł, oddzielać fakty od opinii i spokojnie sprawdzać informacje przed ich dalszym wykorzystaniem."
+        "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
+        "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
       ],
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
@@ -31,20 +31,41 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "2026-09-22",
-      "time": "09:00 - 14:00",
-      "place": "WUP",
+      "date": "",
+      "time": "",
+      "place": "",
       "audience": "Pracownicy prowadzący spotkania, szkolenia, konsultacje i prezentacje dla odbiorców.",
       "description": [
-        "Szkolenie wzmacnia umiejętność jasnego, spokojnego i angażującego przekazywania informacji.",
-        "Uczestnicy pracują nad strukturą wypowiedzi, kontaktem z grupą, opowiadaniem przykładów i budowaniem komunikatu, który jest zrozumiały dla odbiorcy."
+        "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
+        "Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy."
       ],
-      "color": "#1100ff",
+      "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": false,
       "link": "",
-      "button": "Sprawdź terminarz"
+      "button": "Wkrótce"
+    },
+    {
+      "id": "grywalizacja",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja, uczenie przez gry i doświadczenie",
+      "shortTitle": "Grywalizacja",
+      "date": "",
+      "time": "",
+      "place": "",
+      "audience": "Edukatorzy, trenerzy, doradcy zawodowi i osoby projektujące działania rozwojowe dla dorosłych.",
+      "description": [
+        "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
+        "Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "link": "",
+      "button": "Wkrótce"
     },
     {
       "id": "ai",
@@ -57,8 +78,8 @@ window.portalSiteData = {
       "place": "",
       "audience": "Pracownicy instytucji publicznych, edukatorzy, trenerzy, doradcy zawodowi oraz osoby zainteresowane AI.",
       "description": [
-        "Szkolenie pokazuje, jak korzystać z narzędzi AI w pracy zawodowej i edukacyjnej.",
-        "Uczy tworzenia treści, przygotowywania materiałów, automatyzacji prostych zadań, pracy z promptami oraz bezpiecznego i odpowiedzialnego korzystania z AI."
+        "Sprawdzasz, jak używać narzędzi AI w pracy i edukacji, a gdzie lepiej nie oddawać im decyzji.",
+        "Tworzysz treści i materiały, automatyzujesz proste zadania, ćwiczysz pisanie promptów oraz kontrolujesz bezpieczeństwo danych i jakość odpowiedzi."
       ],
       "color": "#7c3aed",
       "image": "grafiki/ai.jpg",
@@ -78,8 +99,8 @@ window.portalSiteData = {
       "place": "",
       "audience": "Osoby pracujące z grupami, edukatorzy, trenerzy, doradcy zawodowi i pracownicy instytucji publicznych.",
       "description": [
-        "Szkolenie poświęcone jest rozwojowi kompetencji społecznych i emocjonalnych.",
-        "Uczy lepszej komunikacji, samoświadomości, empatii, współpracy, radzenia sobie z emocjami i budowania relacji w grupie."
+        "Pracujesz nad kompetencjami społecznymi i emocjonalnymi potrzebnymi w relacjach zawodowych.",
+        "Ćwiczysz komunikację, samoświadomość, empatię, współpracę, regulowanie emocji i budowanie relacji w grupie."
       ],
       "color": "#9acd32",
       "image": "grafiki/sel.jpg",
@@ -99,8 +120,8 @@ window.portalSiteData = {
       "place": "",
       "audience": "Pracownicy administracji, osoby korzystające z narzędzi cyfrowych i prowadzące komunikację elektroniczną.",
       "description": [
-        "Szkolenie porządkuje podstawowe zasady bezpiecznej pracy z pocztą, linkami, dokumentami i danymi.",
-        "Uczestnicy uczą się rozpoznawać typowe zagrożenia oraz reagować w sposób spokojny i zgodny z procedurami."
+        "Pracujesz z pocztą, linkami, dokumentami i danymi tak, aby rozpoznać zagrożenie zanim dojdzie do incydentu.",
+        "Rozpoznajesz typowe zagrożenia i ćwiczysz reakcję zgodną z procedurą."
       ],
       "color": "#1f4e79",
       "image": "grafiki/cyberbezpieczenstwo.jpg",
@@ -120,8 +141,8 @@ window.portalSiteData = {
       "place": "",
       "audience": "Osoby pracujące z ludźmi, zespoły obsługujące klientów oraz pracownicy narażeni na obciążenie emocjonalne.",
       "description": [
-        "Szkolenie pokazuje proste sposoby dbania o uwagę, koncentrację i odporność psychiczną w codziennej pracy.",
-        "Uczestnicy poznają praktyki wspierające regulację napięcia, spokojniejszą komunikację i lepsze zarządzanie energią."
+        "Poznajesz proste sposoby ochrony uwagi, koncentracji i odporności psychicznej podczas pracy.",
+        "Ćwiczysz regulowanie napięcia, spokojniejszą komunikację i świadome gospodarowanie energią."
       ],
       "color": "#4f9d69",
       "image": "grafiki/mindfulness.jpg",
@@ -129,44 +150,6 @@ window.portalSiteData = {
       "open": false,
       "link": "",
       "button": "Wkrótce"
-    },
-    {
-      "id": "nowe-szkolenie",
-      "group": "new",
-      "source": "Projekt Edukacja bez granic",
-      "title": "Nowe szkolenie",
-      "shortTitle": "Nowe szkolenie",
-      "date": "",
-      "time": "",
-      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
-      "audience": "",
-      "description": [
-        ""
-      ],
-      "color": "#16877f",
-      "image": "grafiki/fake-news.jpg",
-      "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
-      "link": "",
-      "button": "Sprawdź terminarz"
-    },
-    {
-      "id": "nowe-szkolenie",
-      "group": "new",
-      "source": "Projekt Edukacja bez granic",
-      "title": "Grywalizacja ",
-      "shortTitle": "Grywalizacja",
-      "date": "2026-09-18",
-      "time": "09:00 - 14:00",
-      "place": "Wojewódzki Urząd Pracy w Katowicach, ul. Sokolska 29",
-      "audience": "szkolenie wewnętrzne dla pracowników WUP",
-      "description": [],
-      "color": "#a7ece7",
-      "image": "grafiki/fake-news.jpg",
-      "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
-      "link": "",
-      "button": "Sprawdź terminarz"
     }
   ]
 };

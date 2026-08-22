@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const update = () => {
       const playing = !video.paused && !video.ended;
+      if (playing) figure.classList.add('has-started');
       figure.classList.toggle('is-playing', playing);
       label.textContent = playing ? 'Wstrzymaj' : 'Odtwórz komentarz';
       button.setAttribute('aria-label', playing ? 'Wstrzymaj komentarz do infografiki' : 'Odtwórz komentarz do infografiki');

@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const COURSE_KEY='ebgCourseV2State',QUIZ_KEY='ebgCourseModuleQuizV3',PROFILE_KEY='ebgCourseV2Profile';
+const COURSE_KEY='ebgCourseV2State',QUIZ_KEY='ebgCourseModuleQuizV4',PROFILE_KEY='ebgCourseV2Profile';
 const TITLES={1:'Informacja jako produkt i zmiana środowiska informacyjnego',2:'Dlaczego jesteśmy podatni na manipulację?',3:'Jak działa dezinformacja i manipulacja?',4:'Jak sprawdzać informacje w praktyce?',5:'Jak reagować i budować odporność informacyjną?'};
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const read=(k,f={})=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};

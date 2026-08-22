@@ -1382,3 +1382,24 @@ body.course-page .course-audio-infographic:not(.is-playing) .course-audio-infogr
     background:#f3eadf;
   }
 }
+
+/* 2026-08-18 — bonusowa gra „Cyfrowy Detektyw” */
+.course-bonus-game--detective{margin-top:30px;background:linear-gradient(135deg,#f7f4ed 0%,#eef4f2 58%,#e8f0f3 100%)}
+.course-bonus-game--detective .course-bonus-game__eyebrow{color:#17644c}
+.course-bonus-game--detective .course-bonus-game__visual img{width:100%;max-width:520px;border:1px solid #d6d2c9;border-radius:18px;box-shadow:0 18px 34px rgba(20,55,78,.12)}
+.course-bonus-game--detective .small-note{font-size:.92rem;line-height:1.55;color:#596975}
+@media(max-width:620px){.course-bonus-game--detective .course-bonus-game__visual img{border-radius:14px}}
+
+
+/* Pytania prowadzące i przejścia narracyjne */
+.course-guide-question,.course-guide-bridge,.course-perspective-note{border-radius:12px;padding:14px 16px;margin:0 0 18px;border:1px solid #d9e2e8;background:#f7fafb;color:#344b5e}
+.course-guide-question{border-left:4px solid var(--module-accent);background:color-mix(in srgb,var(--module-accent) 5%,white)}
+.course-guide-question strong,.course-guide-bridge strong,.course-perspective-note strong{display:block;margin-bottom:5px;color:#173b5d;font-size:.76rem;letter-spacing:.035em;text-transform:uppercase}
+.course-guide-question p,.course-guide-bridge p,.course-perspective-note p{margin:0;line-height:1.55}
+.course-guide-bridge{margin:22px 0 0;border-left:4px solid var(--module-accent-2);background:#fff}
+.course-perspective-note{border-left:4px solid #9a7a42;background:#fbf8f0}
+.course-perspective-note strong{color:#775d30}
+.course-process-steps{display:grid;gap:9px;margin:18px 0;padding:0;list-style:none}
+.course-process-steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;padding:11px 12px;border:1px solid #dce5eb;border-radius:10px;background:#fff}
+.course-process-step-no{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--module-accent);color:#fff;font-weight:900;font-size:.76rem}
+@media(max-width:700px){.course-guide-question,.course-guide-bridge,.course-perspective-note{padding:12px 13px}.course-process-steps li{grid-template-columns:27px 1fr}.course-process-step-no{width:25px;height:25px}}

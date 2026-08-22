@@ -1,91 +1,124 @@
-PORTAL EDUKACJA BEZ GRANIC — V69.8 Z ROZBUDOWANYM CMS
+V90 — ŁĄCZNA DIAGNOZA PO TRZECH ĆWICZENIACH
 
-Nowość V69: dodano niezależny edytor cms/index.html. Narzędzie umożliwia
-wizualną edycję treści, wyglądu, wymiarów i odstępów elementów, podmianę
-oraz dodawanie zdjęć, zarządzanie terminami szkoleń, podgląd responsywny,
-cofanie zmian i eksport całej paczki ZIP gotowej do GitHub Pages.
+Najważniejsze zmiany:
+- usunięto osobne wyniki wyświetlane po Ćwiczeniu 1.1 i 1.2,
+- po dwóch pierwszych ćwiczeniach pojawia się jedynie jasny status ukończenia kroku lub informacja, ile odpowiedzi pozostało,
+- jedna pełna diagnoza pojawia się dopiero pod Ćwiczeniem 1.3, po uzupełnieniu wszystkich trzech ćwiczeń,
+- diagnoza łączy sposób docierania informacji, różnorodność źródeł, poziom weryfikacji, wskazane ryzyko oraz wybrany plan działania,
+- wynik zawiera wspólny wniosek, mocną stronę, obszar uwagi i konkretną podpowiedź, od czego zacząć,
+- łączna diagnoza jest zapisywana lokalnie i może zostać wykorzystana w karcie pracy uczestnika.
 
-Nowość V69.1: dodano tryb nawigacyjnego podglądu stron, edycję tła całej
-strony i sekcji, rozszerzone formatowanie tekstu oraz precyzyjne skalowanie,
-kadrowanie, jasność i warianty kolorystyczne zdjęć i logotypów.
+V89 — WSTĘPNY PROFIL KONTAKTU Z INFORMACJĄ
 
-Nowość V69.2: podgląd laptopa 1440 × 900 px automatycznie dopasowuje się do
-okna CMS. Historia cofa i ponawia pojedyncze działania. Zdjęcia i logotypy
-można ręcznie wyrównywać, przesuwać oraz kadrować suwakami osi X i Y.
+Najważniejsze zmiany:
+- naprawiono brak reakcji ćwiczenia „Jak docierały do mnie informacje?” — jego skrypt jest teraz prawidłowo dołączony do kursu,
+- już po zaznaczeniu kanałów pojawia się wstępny obraz oraz jasna informacja, czego brakuje do pełnego wyniku,
+- po udzieleniu dwóch odpowiedzi ćwiczenie pokazuje nazwany profil, mocną stronę, możliwe ryzyko i jeden praktyczny następny krok,
+- zaznaczenie wszystkich kanałów prowadzi do profilu wielokanałowego z wyjaśnieniem, że wiele kanałów nie musi oznaczać wielu niezależnych źródeł,
+- wynik wyraźnie zaznacza, że opisuje ostatnie 24 godziny i nie jest oceną uczestnika.
 
-Nowość V69.3: ilustracje, zdjęcia i logotypy można chwytać bezpośrednio
-w podglądzie i przeciągać myszką albo palcem. Pozycja zapisuje się w stronie,
-suwaki X/Y aktualizują się na bieżąco, a całe przeciągnięcie stanowi jedno
-działanie możliwe do cofnięcia i ponowienia.
+V88 — BIBLIOGRAFIA JAKO MATERIAŁ INFORMACYJNY
 
-Nowość V69.4: nagłówki, akapity, elementy list i podpisy można przesuwać
-bezpośrednio w podglądzie myszką albo palcem. Zakładka „Odstępy” zawiera
-dodatkowe suwaki X/Y do precyzyjnego ustawiania pól tekstowych.
+Najważniejsze zmiany:
+- bibliografia nie ma już przycisku „Oznacz jako ukończone”,
+- bibliografia nie jest wliczana do postępu, warunku odblokowania testu Modułu 5 ani dyplomu,
+- w nagłówku bibliografii dodano etykietę „Materiał informacyjny”,
+- dotychczasowe zapisane oznaczenie bibliografii jest automatycznie pomijane podczas porządkowania postępu.
 
-Nowość V69.5: zdjęcia, ilustracje, logotypy i przyciski mają bezpośrednie
-uchwyty zmiany szerokości oraz wysokości. Przyciski otrzymały własny panel
-tekstu, linku, kolorów, obramowania, zaokrąglenia i odstępów. Podwójne
-kliknięcie tekstu włącza zaznaczanie pojedynczych słów lub liter, dzięki czemu
-bold, kursywa, podkreślenie i przekreślenie działają tylko na wybrany fragment.
+V87 — POPRAWIONA EKSPOZYCJA BANERU KURSU ONLINE
 
-Nowość V69.6: kontrolka koloru tekstu respektuje aktywne zaznaczenie. Kolor
-można nadać pojedynczemu słowu, literom lub dowolnemu fragmentowi nagłówka,
-akapitu, podpisu albo tekstu przycisku bez zmiany pozostałej części tekstu.
+Najważniejsze zmiany:
+- baner w zakładce „Kursy online” zajmuje teraz pełną szerokość sekcji i zachowuje naturalną proporcję 16:9,
+- usunięto widoczny, powtarzający treść baneru nagłówek z prawej kolumny,
+- krótki opis i przycisk „Otwórz kurs online” znajdują się w jednym, uporządkowanym wierszu bezpośrednio pod ilustracją,
+- na telefonie opis i przycisk układają się pionowo, a przycisk zajmuje całą dostępną szerokość,
+- przycisk otrzymał subtelny puls cienia i obramowania; animacja zatrzymuje się przy interakcji i jest wyłączona przy ograniczeniu ruchu,
+- puls przycisków „Odtwórz komentarz” w kursie zmieniono z żółtego na zielono-turkusowy, zgodny z kolorystyką portalu.
 
-Nowość V69.7: niezależna edycja responsywna. Położenie, rozmiar, marginesy,
-odstępy, rozmiar tekstu i kadrowanie są zapisywane osobno dla widoków
-Komputer, Tablet i Telefon. Poprawka telefonu nie zmienia układu laptopa.
+V86 — JEDNA BIBLIOGRAFIA, GRY W RÓŻNYCH MODUŁACH I WIDOCZNY KOMENTARZ
 
-Nowość V69.8: przycisk „Zapisz roboczo” zachowuje cały stan edycji lokalnie
-w przeglądarce bez tworzenia paczki ZIP. Ostatni zapis można wczytać po
-ponownym otwarciu CMS-u. Dostępny jest także skrót Ctrl+S / Cmd+S.
+Najważniejsze zmiany:
+- usunięto rozproszone listy „Źródła i materiały do dalszej lektury” z poszczególnych modułów kursu online,
+- ostatni ekran kursu zawiera teraz jedną „Bibliografię kursu” podzieloną na pięć kategorii i obejmującą 33 pozycje główne oraz wskazane rozdziały,
+- gra „Rozpoznaj profil” jest samodzielnym tematem podsumowującym Moduł 3,
+- gra „Cyfrowy Detektyw” jest samodzielnym tematem podsumowującym Moduł 4,
+- dawny blok źródeł w środku Modułu 5 zastąpiono pełnym przejściem od reakcji doraźnej do długofalowej odporności,
+- przycisk „Odtwórz komentarz” na infografikach otrzymał delikatny puls koloru i obramowania zachęcający do kliknięcia,
+- animacja przycisku zatrzymuje się po pierwszym uruchomieniu komentarza i jest wyłączona przy ustawieniu ograniczającym ruch,
+- w zakładce „Kursy online” podmieniono grafikę kursu na pełny baner; układ zachowuje proporcje 16:9 i pokazuje cały obraz bez kadrowania na komputerze i urządzeniach mobilnych,
+- stronę „Zapisy na szkolenia” uproszczono do wprowadzenia, terminarza z danymi wybranego szkolenia i kontaktu dla instytucji; rozbudowane karty ofertowe ukryto jako powtórzenie strony „Nasze szkolenia”,
+- usunięto powtórzone końcowe wezwania do zapisu ze stron „Nasze szkolenia” i „Kontakt”; pozostawiono CTA tylko tam, gdzie zamyka ono odrębną ścieżkę użytkownika.
 
-Korekta V68.11: wszystkie publiczne strony portalu otrzymały spójny układ
-telefoniczny. Uporządkowano nawigację, skalę nagłówków, marginesy, obrazy,
-siatki, przyciski, terminarz, kontakt, kursy online i stopkę. Usunięto ryzyko
-poziomego przewijania, a opisy tematów pozostają widoczne również na telefonie.
+V85 — USUNIĘTY FILM WPROWADZAJĄCY Z MODUŁU 1
 
-Korekta V68.10: w wybranych dużych nagłówkach zastosowano umiarkowane
-pogrubienie 600 wyłącznie na słowach-kluczach. Pozostała typografia nadal
-zachowuje lekki, redakcyjny charakter.
+Najważniejsza zmiana:
+- usunięto z pierwszego tematu Modułu 1 kartę „Film wprowadzający” wraz z filmem i opisem; kolejnym elementem po infografice jest teraz bezpośrednio pytanie otwierające,
+- usunięto także odpowiadające jej odsyłacze z materiałów do druku, bez kasowania pliku źródłowego z pakietu.
 
-Korekta V68.9: zdjęcie w nagłówku strony zapisów zostało przesunięte bliżej
-bloku tekstowego przez zmniejszenie odstępu między kolumnami. Prawa kolumna
-ze zdjęciem jest jednocześnie nieznacznie szersza. Logo, teksty i typografia
-pozostają bez zmian. Na stronie kursów online zmniejszono szerokość i wysokość
-głównej ilustracji, aby nie dominowała nad tytułem kursu.
+V84 — KONTEKST W ĆWICZENIU I WYBÓR PO BŁĘDZIE
 
-Korekta V68.8: w trzech sekcjach strony startowej zwykły opis po prawej
-rozpoczyna się na osi dużego nagłówka, a nie nad nim. Zmniejszono nadmierne
-odstępy pionowe i zróżnicowano rytm sekcji „Dotychczasowe rezultaty”, „Oferta
-rozwijana etapami” oraz „Dla kogo”. Hero strony zapisów został odciążony
-typograficznie bez zmiany wielkości logo WUP i bez zmian w treści.
-Data przygotowania: 2026-08-16
+Najważniejsze zmiany:
+- w ćwiczeniu „Dwie osoby, dwa internety” opisy osoby A i osoby B znajdują się teraz bezpośrednio nad odpowiedziami,
+- profile opisują konkretne zachowania z ostatniej aktywności i wyjaśniają, że nie są oceną całej osoby,
+- błędna odpowiedź najpierw pokazuje, dlaczego tok rozumowania nie pasuje, ale nie odsłania od razu rozwiązania,
+- po błędzie uczestnik wybiera: „Spróbuję jeszcze raz” albo „Pokaż poprawne odpowiedzi”,
+- ten sam model drugiej szansy zastosowano we wszystkich zamkniętych ćwiczeniach kursu, w których istnieje poprawna odpowiedź,
+- odsłonięcie rozwiązania nie zmienia automatycznie zaznaczeń i pozwala ponownie wykonać zadanie,
+- refleksje, samooceny, plany działania i ćwiczenia bez jednej prawidłowej odpowiedzi pozostają bez sztucznej punktacji.
 
-Wersja przeznaczona do GitHub Pages.
-Główna zmiana: spójna struktura strony głównej i publicznych podstron,
-większa typografia, dopracowane proporcje zdjęć i pełna responsywność.
-Oryginalne pliki logotypów projektu, UE i WUP pozostają bez zmian.
+V83 — AUDYT I HUMANIZACJA ĆWICZEŃ
 
-Korekta V68.3: spokojniejsze zdjęcia stockowe w hero strony szkoleń i zapisów,
-etykiety sekcji bezpośrednio nad głównymi nagłówkami, łagodniejsze wejście mapy
-kontaktowej bez szarej poświaty oraz poprawiony rytm pierwszych ekranów.
+Najważniejsze zmiany:
+- usunięto dwie zbędne aktywności z Modułu 1, które powtarzały treść ekranu lub późniejszą diagnozę,
+- ćwiczenie o odpowiedzialności w ekosystemie zastąpiono jedną historią fałszywego profilu i trzema konkretnymi decyzjami,
+- ćwiczenie o rolach AI zastąpiono trzema sytuacjami wymagającymi wyboru właściwej kontroli człowieka,
+- abstrakcyjne ćwiczenie o heurystykach oparto na konkretnym fikcyjnym poście o wyniku badania i jego pozornych sygnałach wiarygodności,
+- sześć oderwanych zdań do klasyfikowania zastąpiono jednym spójnym postem łączącym fakt, interpretację, opinię i przewidywanie,
+- rozbudowany dzienniczek trzech kontaktów z mediami zastąpiono analizą jednej rzeczywistej sytuacji z ostatnich 24 godzin,
+- checklisty narracji, kontekstu, krytycznego myślenia i SHARE wymagają teraz wskazania konkretnego analizowanego materiału,
+- zachowano ćwiczenia oparte na realnej decyzji, analizie przykładu albo zastosowaniu narzędzia.
+- zamknięte zadania analityczne otrzymały sprawdzanie każdej odpowiedzi osobno: oznaczenie kolorem, wskazanie wybranej odpowiedzi, poprawną odpowiedź i wyjaśnienie mechanizmu,
+- ćwiczenia refleksyjne pozostają bez sztucznej punktacji i bez czerwono-zielonej oceny; prowadzą do osobistego wniosku lub małej zmiany zachowania,
+- poprawiono instrukcje, które po przebudowie ćwiczeń nadal opisywały ich wcześniejsze wersje.
+- w Module 1 rozbudowano informację zwrotną dla każdej decyzji w ćwiczeniach 1.1, 1.3, 1.4, 1.5 i 1.7; odpowiedź pokazuje teraz wybór uczestnika, właściwe rozwiązanie i przyczynę,
+- dodano szczegółowe objaśnienia do pytań wielokrotnego wyboru o język emocjonalny, sygnały pozornej wiarygodności i kontekst statystyki,
+- ćwiczenie SIFT otrzymało aktualną instrukcję i informację zwrotną dla każdego z pięciu etapów,
+- na stronie głównej dopisano wprost, że materiały edukacyjne są trwałym rezultatem projektu i mogą być dalej aktualizowane, wykorzystywane oraz rozwijane.
 
-Korekta V68.4: białe napisy na wypełnionych przyciskach, symetryczny układ
-programów i stopki oraz pełnoekranowa czarna mapa w nagłówku kontaktu z białą
-typografią. Treść stron pozostaje bez zmian.
+V82 — NATURALNY JĘZYK CELÓW I UPROSZCZONE ĆWICZENIE 1.3
 
-Korekta V68.5: większy blok logotypów na stronie startowej, logo projektu w
-sekcji mobilności, wyrównane pola „Jak pracujemy”, białe logotypy UE i WUP w
-panelu trenera oraz bardziej zwarty rytm górnych odstępów sekcji.
+Najważniejsze zmiany:
+- komunikat „Po ukończeniu modułu potrafisz” zastąpiono naturalniejszym „W tym module poznasz”,
+- przeredagowano listy wprowadzające do Modułów 2, 4 i 5, aby były zgodne z nowym nagłówkiem,
+- z ćwiczenia 1.3 usunięto mechaniczne wskazywanie momentu, w którym znika każdy szczegół,
+- pozostawiono główne zadanie: ułożenie pięciu wersji wiadomości od komunikatu pierwotnego do nieprawdziwego uogólnienia,
+- uproszczono instrukcję, przycisk, informację zwrotną i punktację ćwiczenia.
 
-Korekta V68.6: oznaczenia „Wkrótce” w kartach szkoleń zastąpiono odnośnikami
-„Sprawdź terminarz”, prowadzącymi bezpośrednio do terminarza na stronie zapisów.
+V81 — JEDNOLITA STRUKTURA KURSU I HUMANIZACJA PORTALU
 
-Korekta V68.7: blok informacyjny z logotypami na stronie startowej wykorzystuje
-niemal całą szerokość sekcji i ma większą wysokość na komputerach, tabletach i
-telefonach. Wyrównano także cztery pola cech oferty do jednej górnej linii.
-Zmniejszono nagłówek sekcji doświadczenia, aby odpowiadał wysokości dwóch pól
-tekstowych umieszczonych obok.
-Wyrównano również cztery pola odbiorców: nagłówki i opisy zaczynają się na
-wspólnych liniach.
+Najważniejsze zmiany:
+- wszystkie 125 tematów tworzy jedną logiczną ścieżkę kursu: 10 tematów w Module 1, 16 w Module 2, 21 w Module 3, 34 w Module 4 i 44 w Module 5,
+- usunięto podział na poziom podstawowy i materiały rozszerzone,
+- usunięto z treści uczestnika wszystkie odniesienia do szkolenia stacjonarnego oraz roboczej mapy scenariusza,
+- tematy przeniesiono do właściwych miejsc dydaktycznych, a podsumowania i zamknięcia ustawiono po ostatnich tematach danego modułu,
+- przebudowano plan kursu, numerację ekranów, postęp, odblokowanie testów, karty osiągnięć i warunki dyplomu,
+- każdy z 125 tematów ma ten sam status i może zostać oznaczony jako ukończony,
+- zachowano treści, ćwiczenia, formularze, multimedia, diagramy i gry z poprzedniej wersji,
+- zachowano import wcześniejszych plików postępu oraz zaliczonych testów,
+- usunięto komunikaty „rdzeń”, „rozszerzenie online” i „ścieżka podstawowa”,
+- zredagowano kurs i publiczne strony projektu według jednego standardu: strona czynna, mocne otwarcia, konkretne korzyści, naturalny rytm i brak pustego języka projektowego,
+- zachowano formalną precyzję nazw programu, finansowania, instytucji, danych projektowych, definicji i źródeł.
+
+Logiczna kolejność modułów:
+- Moduł 1: środowisko informacyjne, obieg sieciowy, algorytmy, bańki, AI, ramy kompetencji i diagnoza,
+- Moduł 2: emocja, negatywność, gniew, niepewność, błąd potwierdzenia, społeczny dowód słuszności, powtarzanie i pozostałe heurystyki,
+- Moduł 3: rodzaje nieładu informacyjnego, techniki manipulacji, narracje, tematy wrażliwe, zdrowie, ćwiczenia i wnioski,
+- Moduł 4: krytyczne myślenie, dziesięć kroków weryfikacji, SIFT, CLEAR, AI, decyzje, ćwiczenia i podsumowanie,
+- Moduł 5: odpowiedzialna reakcja, debunking, prebunking, zgłaszanie, komunikacja instytucji, tematy wrażliwe, odporność, dobrostan i zamknięcie kursu.
+
+V80 — punkt wyjścia:
+- wykonano audyt statycznych ilustracji,
+- pozostawiono grafiki zgodne z treścią,
+- usunięto grafiki mylące lub nadmiarowe,
+- wprowadzono pięć responsywnych diagramów HTML/CSS,
+- w Module 3 pozostawiono ilustrację zgodną z trzema kategoriami nieładu informacyjnego.

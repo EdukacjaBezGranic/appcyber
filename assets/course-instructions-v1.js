@@ -22,25 +22,27 @@
       ],
       note: 'Nie ma jednej „właściwej emocji”. Sprawdzamy, czy emocja uruchamia pauzę i weryfikację.'
     },
-    'm2-7-bledy-poznawcze-a-ocena-informacji': {
-      intro: 'Sprawdź, co mogło wpłynąć na Twoją pierwszą ocenę informacji.',
+    'm2-extension-inne-heurystyki': {
+      intro: 'Przeczytaj fikcyjny post o badaniu dotyczącym AI. Potraktuj go jak materiał, który właśnie pojawił się w Twoim kanale aktualności.',
       steps: [
-        'Zaznacz wszystkie sytuacje, które mogłyby wpłynąć na Twoją ocenę. Możesz wybrać kilka.',
-        'Wybierz działanie, które najlepiej pomaga skorygować pierwsze wrażenie.',
-        'Na końcu wybierz, co sprawdzisz przed udostępnieniem.'
+        'Najpierw zaznacz elementy, które mogą sprawić, że post wyda się wiarygodny jeszcze przed sprawdzeniem źródła.',
+        'Następnie zdecyduj, od czego rozpoczniesz weryfikację deklarowanego wyniku „40% szybciej”.',
+        'Na końcu wskaż informacje o metodzie badania, bez których nie da się uczciwie ocenić tego wyniku.',
+        'Po sprawdzeniu odpowiedzi przeczytaj uzasadnienia — pokazują różnicę między sygnałem wiarygodności a dowodem.'
       ],
-      note: 'Zaznaczenie mechanizmu nie oznacza błędu ani słabości. Każdy człowiek korzysta ze skrótów myślowych.'
+      note: 'Dokładna liczba, tytuł eksperta i duża liczba udostępnień mogą uruchamiać skróty myślowe. Nie są jednak informacją o próbie, metodzie ani jakości badania.'
     },
-    'm2-9-fact-checking-i-weryfikacja-podejscie-praktyczne': {
-      intro: 'Przejdź przez metodę SIFT krok po kroku. Nie przeskakuj od razu do końcowej decyzji.',
+    'm4-extension-sift': {
+      intro: 'Potraktuj fikcyjny komunikat o rzekomej likwidacji urzędów pracy jak wiadomość, którą właśnie zobaczyłeś w mediach społecznościowych. Przejdź przez SIFT bez dopowiadania faktów, których jeszcze nie sprawdziłeś.',
       steps: [
-        'S — najpierw zdecyduj, czy zatrzymujesz reakcję i nie przekazujesz treści dalej.',
-        'I — oceń, co wiesz o autorze, koncie lub stronie.',
-        'F — sprawdź, czy lepsze i niezależne źródła potwierdzają informację.',
-        'T — spróbuj dotrzeć do pierwszego komunikatu, pełnego nagrania albo pierwotnego kontekstu.',
-        'Dopiero na końcu wybierz decyzję. Pole z nazwą pierwszego źródła jest opcjonalne.'
+        'S — zatrzymaj reakcję wywołaną słowami „PILNE” i „udostępnij, zanim usuną”.',
+        'I — określ, co naprawdę wiesz o autorze i domenie, a czego dopiero musisz się dowiedzieć.',
+        'F — zaznacz wynik sprawdzenia lepszych źródeł. Jeżeli jeszcze tego nie zrobiłeś, nie zgaduj.',
+        'T — wskaż, czy dotarłeś do pierwotnego komunikatu lub pełnego kontekstu.',
+        'Dopiero na końcu wybierz decyzję i nazwij pierwsze źródło, które sprawdzisz.',
+        'Kliknij „Sprawdź odpowiedzi i wyjaśnienia”, aby zobaczyć uzasadnienie każdego etapu.'
       ],
-      note: 'Jeżeli jeszcze czegoś nie sprawdziłeś, wybierz odpowiedź „jeszcze nie sprawdziłem”. Nie zgaduj.'
+      note: 'W tym ćwiczeniu „jeszcze nie sprawdziłem” jest pełnoprawną, uczciwą odpowiedzią. Metoda nie wymaga szybkiego werdyktu, tylko rozdzielenia tego, co wiadomo, od tego, co dopiero trzeba ustalić.'
     },
     'm2-10-lista-kontrolna-weryfikacji': {
       intro: 'Użyj checklisty do jednego konkretnego materiału, który chcesz ocenić.',
@@ -106,14 +108,14 @@
     },
 
     'm3-6-fakty-opinie-interpretacje-i-zalozenia': {
-      intro: 'Przeczytaj każde zdanie osobno i wybierz jego główny rodzaj.',
+      intro: 'Przeczytaj cały fikcyjny post o obsłudze mieszkańców. Cztery zdania tworzą jeden przekaz, ale każde pełni w nim inną funkcję.',
       steps: [
-        'Przy pierwszym zdaniu wybierz jedną kategorię: fakt, opinia, interpretacja, założenie, przewidywanie albo sąd wartościujący.',
-        'Tak samo oceń pozostałe pięć zdań.',
-        'Jeżeli jedno zdanie wydaje Ci się niejednoznaczne, możesz wyjaśnić dlaczego w polu opcjonalnym.',
-        'Rozwiń „Sprawdź odpowiedzi”, aby zobaczyć wyjaśnienie.'
+        'Przy każdym z czterech zdań wybierz jego dominującą funkcję: fakt, interpretacja, opinia albo przewidywanie.',
+        'Nie oceniaj zdań w oderwaniu od siebie. Zwróć uwagę, w którym miejscu autor przechodzi od liczby do wyjaśnienia, oceny i prognozy.',
+        'Zapisz, jakiej informacji brakuje, aby ocenić wniosek o rezygnacji z obsługi stacjonarnej.',
+        'Sprawdź odpowiedzi i przeczytaj wyjaśnienie pod każdym zdaniem, także wtedy, gdy zaznaczyłeś poprawną kategorię.'
       ],
-      note: 'Wybierasz kategorię dominującą. Jedno zdanie może zawierać więcej niż jedną warstwę.'
+      note: 'Prawdziwa liczba nie sprawia automatycznie, że zbudowana na niej interpretacja, opinia lub prognoza także są uzasadnione.'
     },
     'm3-7-ocena-zrodel': {
       intro: 'Wybierz jeden konkretny artykuł, post, film albo komunikat i oceń jego źródło.',
@@ -130,7 +132,7 @@
       steps: [
         'Zaznacz wszystkie informacje, których potrzebujesz, aby zrozumieć ten procent.',
         'Wybierz możliwe wyjaśnienie zmiany. Pamiętaj, że przyczyn może być kilka.',
-        'Na końcu wskaż, co naprawdę można stwierdzić na podstawie samego procentu.'
+    'Na końcu wskaż, co można stwierdzić na podstawie samego procentu.'
       ],
       note: 'Procent bez wartości początkowej, liczby użytkowników, okresu i metody może być prawdziwy, ale nadal mylący.'
     },
@@ -180,7 +182,7 @@
     'm3-20-checklista-krytycznego-myslenia': {
       intro: 'Zastosuj checklistę do jednej konkretnej informacji albo decyzji.',
       steps: [
-        'Zaznacz tylko te kroki, które naprawdę wykonałeś.',
+    'Zaznacz wyłącznie te kroki, które wykonałeś.',
         'Jeżeli któregoś kroku brakuje, zostaw go niezaznaczonego.',
         'Po przejściu całej listy wybierz, czy masz wystarczające dane do decyzji.',
         'Opcjonalnie zapisz najważniejszą brakującą informację.'
@@ -188,7 +190,7 @@
       note: 'Nie trzeba zaznaczyć wszystkiego. Czasem najlepszą decyzją jest: „potrzebuję więcej danych”.'
     },
     'm3-21-praktyczny-przyklad-do-analizy': {
-      intro: 'Przeczytaj opis badania i oceń, czy przedstawione dane naprawdę wspierają wniosek.',
+    intro: 'Przeczytaj opis badania i oceń, czy przedstawione dane wspierają wniosek.',
       steps: [
         'Ustal, kto przeprowadził badanie i kto mógł mieć interes w jego wyniku.',
         'Sprawdź, co wiadomo o próbie i sposobie zadania pytań.',
@@ -253,7 +255,7 @@
     'm4-8-wojna-konflikt-i-wiarygodnosc-informacji': {
       intro: 'Oceń nagranie tak, jakby miało zostać opublikowane podczas trwającego konfliktu.',
       steps: [
-        'Najpierw wskaż tylko to, co naprawdę wiadomo na pewno.',
+    'Najpierw wskaż wyłącznie to, co wiadomo na pewno.',
         'Wybierz metody sprawdzenia miejsca i daty.',
         'Oceń, czy nagranie może ujawnić ludzi, pojazdy albo lokalizację.',
         'Sprawdź, czy tę samą informację można przekazać bezpieczniejszym źródłem.',
@@ -316,14 +318,14 @@
       note: 'To nie jest diagnoza. Jeżeli nie rozpoznajesz żadnego sygnału, nie musisz go zaznaczać.'
     },
     'm5-7-zdrowe-nawyki-korzystania-z-mediow': {
-      intro: 'Przyjrzyj się trzem zwykłym momentom, w których korzystasz z informacji.',
+      intro: 'Wybierz jeden rzeczywisty kontakt z informacją z ostatnich 24 godzin — taki, który trwał dłużej, niż planowałeś, albo wyraźnie wpłynął na Twoje samopoczucie.',
       steps: [
-        'Dla momentu 1 wybierz źródło, cel i odczucie po zakończeniu.',
-        'Tak samo uzupełnij moment 2 i moment 3.',
-        'Na końcu wybierz zdanie, które najlepiej podsumowuje zauważony wzorzec.',
-        'Nie szukaj idealnego wyniku. Opisz swój zwykły sposób korzystania.'
+        'Wskaż, gdzie rozpoczął się ten kontakt i po co sięgnąłeś po informację.',
+        'Zastanów się, co przedłużyło korzystanie: kolejne rekomendacje, powiadomienia, emocje, dyskusja czy świadoma potrzeba.',
+        'Nazwij swoje odczucie po zakończeniu i oceń, czy osiągnąłeś pierwotny cel.',
+        'Zapisz jedną niewielką zmianę, która w podobnej sytuacji pozwoli zachować większą kontrolę nad czasem i uwagą.'
       ],
-      note: 'Odpowiedzi zapisują się automatycznie na tym urządzeniu.'
+      note: 'To analiza własnego doświadczenia, a nie test dobrych nawyków. Nie otrzymasz czerwonej ani zielonej oceny — ważne jest zauważenie związku między celem, mechanizmem zatrzymującym uwagę i skutkiem.'
     },
     'm5-8-od-reakcji-do-odpowiedzi': {
       intro: 'Przeczytaj wiadomość i przejdź od pierwszego impulsu do spokojnej odpowiedzi.',
@@ -346,7 +348,7 @@
       note: 'Stanowcza odpowiedź może być spokojna. Nie musisz zgadzać się z rozmówcą.'
     },
     'm5-16-narzedzie-zdrowa-rutyna-medialna': {
-      intro: 'Ułóż prostą rutynę, którą naprawdę możesz zastosować w zwykłym tygodniu.',
+    intro: 'Ułóż prostą rutynę, którą możesz stosować w zwykłym tygodniu.',
       steps: [
         'Wybierz sposób korzystania ze źródeł.',
         'Ustal pory sprawdzania wiadomości.',

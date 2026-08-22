@@ -137,7 +137,7 @@
     const pct = total ? Math.min(100, Math.round(done / total * 100)) : 0;
     document.querySelector('[data-overall-percent]').textContent = `${pct}%`;
     document.querySelector('[data-overall-bar]').style.width = `${pct}%`;
-    document.querySelector('[data-progress-copy]').textContent = `${done} z ${total} tematów ukończonych`;
+    document.querySelector('[data-progress-copy]').textContent = `${done} z ${total} tematów kursu ukończonych`;
     for (let m = 1; m <= 5; m++) {
       const moduleSections = progressSections.filter(s => Number(s.dataset.moduleNumber) === m);
       const moduleDone = moduleSections.filter(s => completed.has(s.dataset.courseSection)).length;
@@ -154,8 +154,7 @@
     });
     sectionLinks.forEach(a => {
       const target = document.getElementById(a.dataset.sectionLink);
-      const optional = target?.dataset?.quizRequired === 'false';
-      a.classList.toggle('is-complete', !optional && completed.has(a.dataset.sectionLink));
+      a.classList.toggle('is-complete', completed.has(a.dataset.sectionLink));
     });
     document.dispatchEvent(new CustomEvent('ebg:course-progress-updated', { detail: { done, total, percent: pct } }));
   }
@@ -235,7 +234,7 @@
   });
   document.querySelector('[data-reset-course]')?.addEventListener('click', () => {
     if (!confirm('Usunąć zapisany postęp i odpowiedzi w tym kursie?')) return;
-    safeStorage.removeItem(STORAGE_KEY); safeStorage.removeItem(ANSWERS_KEY); safeStorage.removeItem(FORMS_KEY); safeStorage.removeItem('ebgCourseM1V3'); safeStorage.removeItem('ebgCourseModuleQuizV3'); safeStorage.removeItem('ebgCourseModuleQuizV2'); safeStorage.removeItem('ebgCourseModuleQuizV1'); safeStorage.removeItem('ebgModuleQuizStateV1'); location.reload();
+    safeStorage.removeItem(STORAGE_KEY); safeStorage.removeItem(ANSWERS_KEY); safeStorage.removeItem(FORMS_KEY); safeStorage.removeItem('ebgCourseM1V3'); safeStorage.removeItem('ebgCourseModuleQuizV4'); safeStorage.removeItem('ebgCourseModuleQuizV3'); safeStorage.removeItem('ebgCourseModuleQuizV2'); safeStorage.removeItem('ebgCourseModuleQuizV1'); safeStorage.removeItem('ebgModuleQuizStateV1'); location.reload();
   });
   document.querySelectorAll('[data-scroll-top]').forEach(button => button.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'})));
   const backToTop = document.querySelector('.back-to-top');

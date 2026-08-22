@@ -7,7 +7,7 @@ const TRAININGS = {
   ai: {
     title: 'Wykorzystanie sztucznej inteligencji w pracy i w edukacji',
     why: 'AI coraz częściej trafia do codziennej pracy biurowej, ale bez dobrych zasad łatwo o ogólniki, błędy i niekontrolowane dopowiadanie faktów.',
-    goal: 'Celem szkolenia jest nauczenie uczestników praktycznego, bezpiecznego i świadomego korzystania z AI przy tekstach, notatkach, materiałach i zadaniach urzędowych.',
+    goal: 'Uczestnicy korzystają z AI przy tekstach, notatkach, materiałach i zadaniach urzędowych, a jednocześnie kontrolują dane, fakty i odpowiedzialność za wynik.',
     points: ['praktyczne prompty', 'teksty urzędowe', 'ćwiczenia warsztatowe', 'bezpieczna praca z AI'],
     href: appPath('panel-ai-ex7-probe/index.html'),
     cta: 'Otwórz panel',
@@ -17,7 +17,7 @@ const TRAININGS = {
   'fake-news': {
     title: 'Fake newsy i krytyczne myślenie',
     why: 'Wiele fałszywych lub zmanipulowanych treści wygląda wiarygodnie, szczególnie gdy odwołuje się do emocji, autorytetu albo presji czasu.',
-    goal: 'Celem szkolenia jest rozwijanie nawyku spokojnego sprawdzania informacji: źródła, kontekstu, intencji przekazu i sygnałów manipulacji.',
+    goal: 'Uczestnicy ćwiczą spokojne sprawdzanie źródła, kontekstu, intencji przekazu i sygnałów manipulacji przed reakcją lub udostępnieniem.',
     points: ['fact-checking', 'źródła informacji', 'manipulacje', 'myślenie krytyczne'],
     href: appPath('panel-fake-news/index.html'),
     cta: 'Otwórz panel',
@@ -27,7 +27,7 @@ const TRAININGS = {
   komunikacja: {
     title: 'Komunikacja i wystąpienia',
     why: 'Dobra komunikacja decyduje o tym, czy odbiorcy rozumieją sens działań, decyzji, zasad i informacji przekazywanych przez instytucję.',
-    goal: 'Celem szkolenia jest ćwiczenie jasnej struktury wypowiedzi, prostego języka, wystąpień publicznych i reagowania na pytania bez chaosu i napięcia.',
+    goal: 'Uczestnicy porządkują strukturę wypowiedzi, upraszczają język, występują przed grupą i reagują na pytania bez chaosu.',
     points: ['wystąpienia', 'struktura wypowiedzi', 'storytelling', 'feedback'],
     href: appPath('panel-komunikacja/index.html'),
     cta: 'Otwórz panel',
@@ -37,7 +37,7 @@ const TRAININGS = {
   gamifikacja: {
     title: 'Gamifikacja',
     why: 'Uczestnicy szybciej angażują się w naukę, gdy zadanie ma jasny cel, informację zwrotną, element wyboru i widoczny postęp.',
-    goal: 'Celem szkolenia jest projektowanie aktywności szkoleniowych z użyciem mechanik gry tak, aby wspierały uczenie się, a nie były tylko ozdobą.',
+    goal: 'Uczestnicy projektują aktywności z mechanikami gry, które wspierają konkretny efekt uczenia się zamiast pełnić funkcję ozdobnika.',
     points: ['mechaniki gry', 'zaangażowanie', 'praca zespołowa', 'projekt ćwiczeń'],
     href: appPath('panel-gamifikacja/index.html'),
     cta: 'Otwórz panel',
@@ -47,7 +47,7 @@ const TRAININGS = {
   sel: {
     title: 'SEL i kompetencje społeczno-emocjonalne',
     why: 'Kompetencje społeczno-emocjonalne pomagają lepiej współpracować, rozumieć reakcje innych i działać spokojniej w trudnych sytuacjach.',
-    goal: 'Celem szkolenia jest wzmacnianie empatii, autorefleksji, regulacji emocji i komunikacji, które wspierają pracę zespołową oraz relacje z odbiorcami.',
+    goal: 'Uczestnicy ćwiczą empatię, autorefleksję, regulowanie emocji i komunikację potrzebną w pracy zespołowej oraz relacjach z odbiorcami.',
     points: ['emocje', 'empatia', 'relacje', 'współpraca'],
     href: appPath('panel-sel/index.html'),
     cta: 'Otwórz panel',
@@ -57,7 +57,7 @@ const TRAININGS = {
   cyber: {
     title: 'Cyberbezpieczeństwo',
     why: 'Najczęstsze zagrożenia cyfrowe zaczynają się od zwykłej wiadomości, linku, załącznika albo pośpiesznej decyzji użytkownika.',
-    goal: 'Celem szkolenia jest wyrobienie praktycznych nawyków: sprawdzania linków, rozpoznawania phishingu, ochrony danych i reagowania zgodnie z procedurą.',
+    goal: 'Uczestnicy sprawdzają linki, rozpoznają phishing, chronią dane i ćwiczą reakcję zgodną z procedurą.',
     points: ['phishing', 'podejrzane linki', 'ochrona danych', 'procedury'],
     href: appPath('panel-cyberbezpieczenstwo/index.html'),
     cta: 'Otwórz panel',
@@ -67,7 +67,7 @@ const TRAININGS = {
   mindfulness: {
     title: 'Mindfulness',
     why: 'Przeciążenie informacyjne, pośpiech i napięcie utrudniają koncentrację, podejmowanie decyzji oraz spokojną komunikację z innymi.',
-    goal: 'Celem szkolenia jest poznanie prostych praktyk uważności, które pomagają wracać do koncentracji, regulować napięcie i pracować z większą świadomością.',
+    goal: 'Uczestnicy poznają proste praktyki uważności, wracają do koncentracji i uczą się regulować napięcie podczas pracy.',
     points: ['uważność', 'koncentracja', 'mikropraktyki', 'dobrostan'],
     href: appPath('panel-mindfulness/index.html'),
     cta: 'Otwórz panel',
@@ -210,7 +210,7 @@ function renderTrainingInfo(key, card) {
     <h3>${data.title}</h3>
     <div class="info-copy">
       <div>
-        <strong>Dlaczego ważne?</strong>
+        <strong>Po co ten temat?</strong>
         <p>${data.why}</p>
       </div>
       <div>
