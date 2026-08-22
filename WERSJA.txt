@@ -1,3 +1,33 @@
+V93 — OZNACZENIE MATERIAŁÓW WIDEO AI
+
+Najważniejsze zmiany:
+- pod każdym z trzech filmów zapraszających dodano dyskretną informację „Materiał wideo wygenerowany przy użyciu AI”,
+- podpis jest mały, czytelny i nie konkuruje wizualnie z opisem szkolenia,
+- zachowano prawidłowe proporcje filmów i układ responsywny.
+
+V92 — FILMY ZAPRASZAJĄCE NA STRONIE GŁÓWNEJ
+
+Najważniejsze zmiany:
+- w sekcji trzech nowych programów dodano trzy odpowiadające im filmy zapraszające na szkolenia,
+- każdy film ma własny plakat, sterowanie i nie uruchamia się automatycznie,
+- zachowano pełne proporcje obrazu 16:9 oraz czytelne dopasowanie do treści programu,
+- na laptopie film, opis i rezultat tworzą uporządkowany układ redakcyjny,
+- na tablecie i telefonie elementy przechodzą w jedną kolumnę bez przycinania materiału.
+
+V91 — AUDYT BŁĘDÓW I RESPONSYWNOŚCI CAŁEGO PORTALU
+
+Najważniejsze zmiany:
+- sprawdzono 44 dokumenty HTML, wszystkie lokalne linki, skrypty, obrazy i pozostałe zasoby,
+- dodano jedną końcową warstwę responsywną do wszystkich stron, kursów, gier i paneli,
+- usunięto skutki konfliktu starych i nowych ustawień responsywnych zapisanych przez CMS,
+- na tablecie i telefonie wadliwe ręczne przesunięcia nie wypychają już tekstów, logotypów ani sekcji poza ekran,
+- teksty z ręcznie ustawioną szerokością i wysokością odzyskują płynne wymiary,
+- logotypy, zdjęcia, filmy, iframe i pozostałe multimedia nie przekraczają szerokości kontenera,
+- uporządkowano składanie nagłówków, sekcji dwukolumnowych, siatek szkoleniowych, terminarza i stopki,
+- poprawiono układ kursu i ćwiczeń na telefonie, w tym przyciski, pola formularzy i przewijane tabele,
+- dodano zabezpieczenia dla ekranów 390 px i węższych oraz dla osób ograniczających animacje,
+- zachowano wygląd i rozmieszczenie elementów na laptopie.
+
 V90 — ŁĄCZNA DIAGNOZA PO TRZECH ĆWICZENIACH
 
 Najważniejsze zmiany:
