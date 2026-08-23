@@ -1,18 +1,57 @@
-V93 — OZNACZENIE MATERIAŁÓW WIDEO AI
+V99 — KURS DWUJĘZYCZNY PL / EN
 
 Najważniejsze zmiany:
-- pod każdym z trzech filmów zapraszających dodano dyskretną informację „Materiał wideo wygenerowany przy użyciu AI”,
-- podpis jest mały, czytelny i nie konkuruje wizualnie z opisem szkolenia,
-- zachowano prawidłowe proporcje filmów i układ responsywny.
+- dodano przełącznik języka PL / EN w górnym pasku kursu,
+- przetłumaczono treści pięciu modułów, ćwiczenia, testy i komunikaty zwrotne,
+- wybór języka jest zapamiętywany lokalnie w przeglądarce,
+- postęp kursu pozostaje wspólny dla wersji polskiej i angielskiej,
+- tłumaczenie obejmuje również komunikaty tworzone dynamicznie oraz tekst generowany w PDF-ach i dyplomie,
+- zachowano poprawki responsywności telefonu i tabletu z V98 oraz układ V97 na desktopie.
 
-V92 — FILMY ZAPRASZAJĄCE NA STRONIE GŁÓWNEJ
+V98 — RESPONSYWNOŚĆ TELEFONU I TABLETU
 
 Najważniejsze zmiany:
-- w sekcji trzech nowych programów dodano trzy odpowiadające im filmy zapraszające na szkolenia,
-- każdy film ma własny plakat, sterowanie i nie uruchamia się automatycznie,
-- zachowano pełne proporcje obrazu 16:9 oraz czytelne dopasowanie do treści programu,
-- na laptopie film, opis i rezultat tworzą uporządkowany układ redakcyjny,
-- na tablecie i telefonie elementy przechodzą w jedną kolumnę bez przycinania materiału.
+- wyłączono stare przesunięcia CMS powodujące wychodzenie elementów poza ekran,
+- rozdzielono reguły dla telefonu i tabletu,
+- poprawiono menu, media, karty, formularze, przyciski i terminarz,
+- zachowano wygląd desktopowy V97.
+
+V97 — WIĘCEJ ODDECHU W PASKU CECH
+
+Najważniejsze zmiany:
+- zwiększono wewnętrzne marginesy ciemnej ramki z czterema cechami szkoleń,
+- odsunięto pierwszy i ostatni blok od krawędzi,
+- ujednolicono odstępy między nagłówkami i opisami,
+- poprawiono wysokość linii oraz czytelność tekstu,
+- na telefonie każdy blok otrzymuje osobny pionowy oddech.
+
+V96 — DOPRACOWANIE PODSTRON I WIĘKSZE FILMY
+
+Najważniejsze zmiany:
+- zwiększono ekspozycję trzech filmów na stronie głównej,
+- ujednolicono stronę kontaktową z grafitowo-limonkowym motywem i usunięto boczne beżowe pasy z ciemnego banera,
+- dopracowano ramę i ekspozycję kursu online,
+- panel logowania trenera otrzymał przycisk i oznaczenia zgodne z nową paletą,
+- zachowano responsywne przejście filmów do jednej kolumny na mniejszych ekranach.
+- wszystkie limonkowe przyciski i aktywne pola mają grafitową, a nie białą czcionkę.
+
+V95 — CZYSTE PODŚWIETLENIE NAWIGACJI
+
+Najważniejsze zmiany:
+- usunięto dawną animowaną linię i podkreślenie z napisów w menu,
+- aktywna zakładka jest oznaczana wyłącznie limonkowym polem,
+- wyśrodkowanie i kompaktowe wymiary podświetlenia pozostały bez zmian.
+
+V94 — MOTYW DEEP GRAPHITE + LIME COMPUTE
+
+Najważniejsze zmiany:
+- portal publiczny otrzymał nową paletę: grafit #1F2329 i limonka #B6FF2E,
+- grafit porządkuje nagłówki, menu, hero, sekcje CTA i stopkę,
+- limonka wskazuje przyciski, aktywne elementy, numery oraz najważniejsze akcenty,
+- dłuższe treści pozostają na jasnym tle, aby zachować wysoką czytelność,
+- nie zmieniono treści, filmów ani funkcji portalu.
+- zachowano trzy filmy zapraszające oraz ich oznaczenia dotyczące wykorzystania AI,
+- aktywna zakładka menu ma kompaktowe limonkowe pole, a pozostałe zakładki nie udają bieżącej strony.
 
 V91 — AUDYT BŁĘDÓW I RESPONSYWNOŚCI CAŁEGO PORTALU
 

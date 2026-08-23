@@ -1,0 +1,7 @@
+V102 – angielskie objaśnienia grafik
+
+- Polski wariant kursu pozostaje wizualnie bez zmian.
+- W wariancie EN pod 26 infografikami, diagramami i polskimi przykładami dodano zwijany panel z angielskim objaśnieniem.
+- Diagramy mają uproszczone angielskie schematy tekstowe.
+- Polskie posty/screenshoty pozostają oryginalne i otrzymują angielskie streszczenie, punkty analizy i kluczowy wniosek.
+- Panele są responsywne i domyślnie zwinięte.
