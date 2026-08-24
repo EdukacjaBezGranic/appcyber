@@ -1,0 +1,10 @@
+V103 — PORZĄDEK KONTAKTU, TABLET PION/POZIOM I CIEMNE POWIERZCHNIE
+
+Najważniejsze zmiany:
+- ograniczono powtarzanie danych e-mail i telefonu na stronie zapisów; bezpośrednie dane pozostają przy wybranym terminie, a dolny blok instytucjonalny prowadzi do strony Kontakt,
+- dodano osobne dopracowanie tabletu w orientacji pionowej i poziomej, w tym układy 768–1024 px oraz szerokie tablety do 1366 px,
+- wyzerowano ręczne przesunięcia CMS również w poziomym widoku tabletu,
+- poprawiono proporcje hero, nagłówków sekcji, kart szkoleń, terminarza i układów kursu na tabletach,
+- duże turkusowo-zielone powierzchnie zastąpiono grafitem #1F2329 z motywu otwierającego portal; zieleń/limonka pozostaje akcentem,
+- zachowano funkcje V102, pełny kurs PL/EN i angielskie objaśnienia grafik.
+

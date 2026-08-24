@@ -1,0 +1,9 @@
+V106 — balans pierwszego ekranu
+
+- tytuł strony głównej ma kontrolowane łamanie; fraza „w praktyce” nie rozdziela się między wiersze,
+- poszerzono użyteczny blok tytułu,
+- zmniejszono pustą przestrzeń między tekstem i zdjęciem,
+- zwiększono udział zdjęcia w kompozycji pierwszego ekranu,
+- ustawiono symetryczne zewnętrzne marginesy,
+- osobne reguły dla desktopu, tabletu poziomego, tabletu pionowego i telefonu,
+- zachowano paletę V105: Jet #282B2B, Orange #EE6C29, Moonstone #7AA6B3.

@@ -1,0 +1,8 @@
+V105 — Jet / Orange / Moonstone
+
+Paleta:
+- Jet #282B2B — ciemna baza, naglowki, header, footer
+- Orange #EE6C29 — CTA, aktywne elementy, kluczowe akcenty
+- Moonstone #7AA6B3 — drugoplanowe powierzchnie, obramowania, kontrolki pomocnicze
+
+Zasada: pomarancz nie jest duzym tlem; sluzy do kierowania uwagi. Moonstone uspokaja i rownowazy kontrast. Semantyczne kolory poprawnej/blednej odpowiedzi w kursie pozostawiono bez zmian.

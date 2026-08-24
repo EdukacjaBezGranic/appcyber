@@ -1,0 +1,7 @@
+V107 — poprawa łamania nagłówków i szerokości hero
+
+- strona główna: trzy kontrolowane linie tytułu; fraza „w praktyce” nie dzieli się wewnątrz;
+- kurs: zakaz łamania słów w tytułach modułów, w tym „informacyjnego”;
+- kurs: szersza kolumna tekstowa, mniejszy odstęp do ilustracji i lepsze wykorzystanie prawej części ekranu;
+- osobne reguły desktop / tablet poziomy / tablet pionowy / telefon;
+- paleta Jet / Orange / Moonstone, PL/EN, grafiki i mechanika kursu bez zmian.
