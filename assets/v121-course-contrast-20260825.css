@@ -1,0 +1,34 @@
+/* V121 — course contrast and readability audit */
+body.course-page .course-certificate-progress{
+  background:#173f5b!important;
+  color:#f7fbfd!important;
+}
+body.course-page .course-certificate-progress .course-certificate-label{
+  color:#7fd9c3!important;
+  opacity:1!important;
+}
+body.course-page .course-certificate-progress h3,
+body.course-page .course-certificate-progress h2,
+body.course-page .course-certificate-progress strong{
+  color:#ffffff!important;
+}
+body.course-page .course-certificate-progress p,
+body.course-page .course-certificate-progress small,
+body.course-page .course-certificate-progress .course-certificate-helper,
+body.course-page .course-certificate-progress .course-certificate-disclaimer{
+  color:#dceaf0!important;
+  opacity:1!important;
+}
+body.course-page .course-certificate-progress-visual>span{
+  color:#ffffff!important;
+}
+body.course-page .course-certificate-progress-visual>div{
+  background:rgba(255,255,255,.25)!important;
+}
+body.course-page .course-certificate-progress-visual i{
+  background:#72ccb5!important;
+}
+/* Defensive contrast for other dark course cards */
+body.course-page :is(.course-certificate-progress,.course-pdf-busy,.course-pdf-busy-card.is-dark) :is(h1,h2,h3,h4,strong){
+  text-shadow:none!important;
+}
