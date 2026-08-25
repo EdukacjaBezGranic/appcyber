@@ -10,10 +10,10 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Myślenie krytyczne, dezinformacja i manipulacja",
       "shortTitle": "Myślenie krytyczne",
-      "date": "2026-09-15",
-      "time": "09:00 - 14:00",
+      "date": "2026-09-16",
+      "time": "09:00 - 14:25",
       "place": "WUP Katowice",
-      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice ",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
         "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
@@ -23,7 +23,51 @@ window.portalSiteData = {
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
       "link": "",
-      "button": "Zapisz się"
+      "button": "Sprawdź terminarz"
+    },
+    {
+      "id": "fake-news-2026-09-23",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Myślenie krytyczne, dezinformacja i manipulacja",
+      "shortTitle": "Myślenie krytyczne",
+      "date": "2026-09-23",
+      "time": "09:00 - 14:25",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
+        "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "",
+      "button": "Sprawdź terminarz",
+      "calendarOnly": true
+    },
+    {
+      "id": "fake-news-2026-09-29",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Myślenie krytyczne, dezinformacja i manipulacja",
+      "shortTitle": "Myślenie krytyczne",
+      "date": "2026-09-29",
+      "time": "09:00 - 14:25",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
+        "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "",
+      "button": "Sprawdź terminarz",
+      "calendarOnly": true
     },
     {
       "id": "komunikacja",
@@ -31,10 +75,10 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "",
-      "time": "",
-      "place": "",
-      "audience": "Pracownicy prowadzący spotkania, szkolenia, konsultacje i prezentacje dla odbiorców.",
+      "date": "2026-09-25",
+      "time": "09:00 - 14:25",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
         "Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy."
@@ -42,9 +86,9 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "",
-      "button": "Wkrótce"
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "grywalizacja",
@@ -52,10 +96,10 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Grywalizacja, uczenie przez gry i doświadczenie",
       "shortTitle": "Grywalizacja",
-      "date": "",
-      "time": "",
-      "place": "",
-      "audience": "Edukatorzy, trenerzy, doradcy zawodowi i osoby projektujące działania rozwojowe dla dorosłych.",
+      "date": "2026-09-18",
+      "time": "09:00 - 14:25",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
         "Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania."
@@ -63,9 +107,9 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "",
-      "button": "Wkrótce"
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "ai",
