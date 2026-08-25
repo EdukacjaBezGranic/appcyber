@@ -30,7 +30,7 @@
         'Na końcu wskaż informacje o metodzie badania, bez których nie da się uczciwie ocenić tego wyniku.',
         'Po sprawdzeniu odpowiedzi przeczytaj uzasadnienia — pokazują różnicę między sygnałem wiarygodności a dowodem.'
       ],
-      note: 'Dokładna liczba, tytuł eksperta i duża liczba udostępnień mogą uruchamiać skróty myślowe. Nie są jednak informacją o próbie, metodzie ani jakości badania.'
+      note: 'Na tym etapie nie oceniaj jeszcze, czy post jest prawdziwy. Zwróć uwagę na to, co sprawia, że może brzmieć wiarygodnie.'
     },
     'm4-extension-sift': {
       intro: 'Potraktuj fikcyjny komunikat o rzekomej likwidacji urzędów pracy jak wiadomość, którą właśnie zobaczyłeś w mediach społecznościowych. Przejdź przez SIFT bez dopowiadania faktów, których jeszcze nie sprawdziłeś.',

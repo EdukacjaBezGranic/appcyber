@@ -1,0 +1,84 @@
+/* ======================================================================
+   V113 — MOBILE AUDIT / FINAL FIXES 2026-08-24
+   Baza: V112. Zakres wyłącznie mobile <=700px.
+   - domknięcie kalendarza (jeden rząd sterowania)
+   - stabilniejsze media i nagłówki
+   - bez naruszania hero laptop/desktop z V112
+   ====================================================================== */
+
+@media (max-width:700px){
+  /* Media nie mogą wyjść poza viewport niezależnie od starszych reguł. */
+  body.public-page :where(img,video,iframe,canvas),
+  body.course-page :where(img,video,iframe,canvas){
+    max-width:100%!important;
+  }
+
+  /* Nie pozwalamy starym stylom wymusić rozwiniętego menu. Widoczność
+     kontroluje wyłącznie klasa .is-open dodawana przez JS. */
+  body.public-page .site-nav:not(.is-open){
+    display:none!important;
+  }
+
+  /* TERMINARZ: V91 ustawiał pierwszemu przyciskowi grid-column:1/-1.
+     V113 jawnie to resetuje, dzięki czemu 3 kontrolki są w jednym rzędzie. */
+  body.public-page .calendar-controls{
+    grid-template-columns:minmax(0,1fr) 48px 48px!important;
+    gap:8px!important;
+    align-items:stretch!important;
+  }
+  body.public-page .calendar-controls > *:first-child{
+    grid-column:auto!important;
+  }
+  body.public-page .calendar-controls .calendar-mini-btn{
+    width:100%!important;
+    min-width:0!important;
+    padding-inline:10px!important;
+    white-space:nowrap!important;
+    font-size:13px!important;
+  }
+  body.public-page .calendar-controls .calendar-arrow-btn{
+    width:48px!important;
+    min-width:48px!important;
+    max-width:48px!important;
+    padding:0!important;
+  }
+
+  /* Karty wydarzeń: długie nazwy mają zawijać się naturalnie. */
+  body.public-page :where(.calendar-event-card,.calendar-list-item) :where(h2,h3,strong,p,span){
+    min-width:0!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    hyphens:none!important;
+  }
+
+  /* CTA publiczne — pełna szerokość bez przypadkowych minimalnych szerokości. */
+  body.public-page :where(.public-btn,.home-rd-btn,.calendar-form-btn,.signup-calendar-btn){
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  /* Kurs: dodatkowy bezpieczny zapas pod stałą belkę na dole. */
+  body.course-page .course-main{
+    padding-bottom:120px!important;
+  }
+  body.course-page .m1v3-choice,
+  body.course-page .m1v3-choice > span,
+  body.course-page .m1v3-fieldset,
+  body.course-page .m1v3-options{
+    min-width:0!important;
+  }
+}
+
+@media (max-width:370px){
+  body.public-page .calendar-controls{
+    grid-template-columns:minmax(0,1fr) 44px 44px!important;
+  }
+  body.public-page .calendar-controls .calendar-arrow-btn{
+    width:44px!important;
+    min-width:44px!important;
+    max-width:44px!important;
+  }
+  body.public-page .calendar-controls .calendar-mini-btn{
+    font-size:12px!important;
+  }
+}
