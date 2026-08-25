@@ -1,0 +1,34 @@
+001	Kontakt - Edukacja bez granic
+002	Start
+003	Nasze szkolenia
+004	Zapisy na szkolenia
+005	Kursy online
+006	Kontakt
+007	Informacje o szkoleniach i współpracy
+008	Masz grupę, temat albo problem, nad którym chcesz pracować? Skontaktuj się z nami w sprawie dostępnych szkoleń, zajęć dla pracowników lub klientów oraz działań rozwijających kompetencje zawodowe.
+009	Skontaktuj się z nami
+010	W sprawie organizacji szkolenia napisz lub zadzwoń do Wojewódzkiego Urzędu Pracy w Katowicach.
+011	E-mail
+012	pr@wup-katowice.pl
+013	Telefon
+014	32 757 33 84
+015	Zapytanie o organizację szkolenia
+016	Powiatowe urzędy pracy i inne instytucje mogą zgłosić potrzebę szkolenia dla pracowników lub klientów mailowo albo telefonicznie.
+017	W wiadomości podaj temat, grupę odbiorców, orientacyjną liczbę uczestników i preferowany okres realizacji. Te informacje pozwolą nam szybciej sprawdzić możliwości.
+018	W czym możemy pomóc?
+019	Możesz zapytać o bieżący nabór albo omówić potrzeby szkoleniowe swojej instytucji.
+020	1
+021	Dostępne terminy
+022	Informacja o uruchomionych naborach i planowanych terminach szkoleń.
+023	2
+024	Dobór tematu
+025	Rozmowa o tym, który program najlepiej odpowiada potrzebom pracowników lub klientów.
+026	3
+027	Organizacja szkolenia
+028	Ustalenie grupy odbiorców, zakresu, formy i możliwego terminu realizacji.
+029	Chcesz zapisać się na szkolenie?
+030	Sprawdź dostępne nabory, wybierz temat i skontaktuj się z nami.
+031	Edukacja bez granic
+032	Projekt Wojewódzkiego Urzędu Pracy w Katowicach realizowany w ramach programu Erasmus+.
+033	Strona główna
+034	Panel trenera

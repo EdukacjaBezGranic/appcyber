@@ -1,0 +1,108 @@
+001	Zapisy na szkolenia - Edukacja bez granic
+002	Start
+003	Nasze szkolenia
+004	Zapisy na szkolenia
+005	Kursy online
+006	Kontakt
+007	Zapisy na
+008	szkolenia
+009	Rozwijaj kompetencje przydatne w pracy, edukacji i codziennej komunikacji
+010	Sprawdź aktualne terminy w kalendarzu, a następnie skontaktuj się z nami telefonicznie lub mailowo. Pełne opisy programów znajdziesz na stronie
+011	. Nie prowadzimy zapisów przez formularze internetowe.
+012	Wybierz szkolenie dla siebie
+013	Wybierasz spośród tematów dotyczących informacji, komunikacji, nowych technologii, bezpieczeństwa i dobrostanu. Podczas każdego szkolenia pracujesz na przykładach i poznajesz rozwiązania do wykorzystania w codziennych zadaniach.
+014	Nowe programy projektu
+015	Trzy nowe programy odpowiadają na problemy, które pojawiają się w pracy każdego dnia: jak sprawdzić informację, jak jasno mówić do ludzi i jak prowadzić zajęcia, podczas których dorośli rzeczywiście pracują.
+016	Projekt Edukacja bez granic
+017	Myślenie krytyczne, dezinformacja i manipulacja
+018	Termin wkrótce
+019	Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.
+020	Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku.
+021	Sprawdź terminarz
+022	Wystąpienia publiczne i storytelling
+023	Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.
+024	Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy.
+025	Grywalizacja, uczenie przez gry i doświadczenie
+026	Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.
+027	Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania.
+028	Terminarz szkoleń
+029	Wybierz termin, aby zobaczyć datę, godzinę, miejsce i dane do zapisu. Pełne opisy wszystkich programów są dostępne na stronie
+030	.
+031	Kalendarz szkoleń
+032	Sprawdź opublikowane terminy. Gdy termin zostanie uruchomiony, skontaktuj się z nami telefonicznie lub mailowo.
+033	Najbliższy termin
+034	Wrzesień 2026
+035	Miesiąc
+036	Lista
+037	Poniedziałek
+038	Wtorek
+039	Środa
+040	Czwartek
+041	Piątek
+042	Sobota
+043	Niedziela
+044	31
+045	1
+046	2
+047	3
+048	4
+049	5
+050	6
+051	7
+052	8
+053	9
+054	10
+055	11
+056	12
+057	13
+058	14
+059	15
+060	16
+061	17
+062	18
+063	19
+064	20
+065	21
+066	22
+067	23
+068	24
+069	25
+070	26
+071	27
+072	28
+073	29
+074	30
+075	W tym miesiącu nie ma jeszcze opublikowanych terminów szkoleń.
+076	Pozostałe szkolenia
+077	Kompetencje społeczne
+078	Data
+079	Godzina
+080	Wkrótce
+081	Miejsce
+082	Opis szkolenia
+083	Dla kogo?
+084	Pracownicy instytucji publicznych, doradcy zawodowi, trenerzy i osoby pracujące z informacją.
+085	Napisz e-mail
+086	Zadzwoń: 32 757 33 84
+087	Możesz też wybrać programy powstałe po wcześniejszych działaniach rozwojowych: sztuczną inteligencję, kompetencje społeczno-emocjonalne, cyberbezpieczeństwo i uważność.
+088	Kierunek Kompetencje 4.0
+089	Praktyczne wykorzystanie sztucznej inteligencji
+090	Sprawdzasz, jak używać narzędzi AI w pracy i edukacji, a gdzie lepiej nie oddawać im decyzji.
+091	Tworzysz treści i materiały, automatyzujesz proste zadania, ćwiczysz pisanie promptów oraz kontrolujesz bezpieczeństwo danych i jakość odpowiedzi.
+092	Social and Emotional Learning
+093	Pracujesz nad kompetencjami społecznymi i emocjonalnymi potrzebnymi w relacjach zawodowych.
+094	Ćwiczysz komunikację, samoświadomość, empatię, współpracę, regulowanie emocji i budowanie relacji w grupie.
+095	Program mobilności
+096	Cyberbezpieczeństwo w pracy i komunikacji
+097	Pracujesz z pocztą, linkami, dokumentami i danymi tak, aby rozpoznać zagrożenie zanim dojdzie do incydentu.
+098	Rozpoznajesz typowe zagrożenia i ćwiczysz reakcję zgodną z procedurą.
+099	Mindfulness i dobrostan w pracy
+100	Poznajesz proste sposoby ochrony uwagi, koncentracji i odporności psychicznej podczas pracy.
+101	Ćwiczysz regulowanie napięcia, spokojniejszą komunikację i świadome gospodarowanie energią.
+102	Szkolenie dla pracowników lub klientów instytucji
+103	Powiatowy urząd pracy może zgłosić potrzebę organizacji szkolenia do Wojewódzkiego Urzędu Pracy w Katowicach. W odpowiedzi przedstawimy dostępne możliwości i omówimy zadania oraz potrzeby grupy.
+104	Kontakt dla instytucji
+105	Edukacja bez granic
+106	Projekt Wojewódzkiego Urzędu Pracy w Katowicach realizowany w ramach programu Erasmus+.
+107	Strona główna
+108	Panel trenera
