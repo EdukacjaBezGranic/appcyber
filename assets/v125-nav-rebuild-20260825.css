@@ -1,0 +1,336 @@
+/* V125 — clean navigation rebuild. One source of truth for the public header. */
+:root{
+  --v125-nav-bg:#282B2B;
+  --v125-nav-text:#FFFFFF;
+  --v125-nav-muted:rgba(255,255,255,.82);
+  --v125-nav-line:rgba(255,255,255,.16);
+  --v125-nav-active:#df5258;
+  --v125-nav-hover:#7ac4b7;
+  --v125-nav-soft:#eee5c8;
+}
+
+/* PUBLIC HEADER — completely reset inherited layout decisions */
+body.public-page .site-header-v125{
+  position:relative!important;
+  z-index:100!important;
+  width:100%!important;
+  min-height:78px!important;
+  background:var(--v125-nav-bg)!important;
+  color:var(--v125-nav-text)!important;
+  border:0!important;
+  border-bottom:1px solid var(--v125-nav-line)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.10)!important;
+}
+body.public-page .site-header-v125 .site-header-inner{
+  box-sizing:border-box!important;
+  width:min(1760px,calc(100% - 40px))!important;
+  max-width:none!important;
+  min-height:78px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  overflow:visible!important;
+}
+body.public-page .site-header-v125 .site-branding{
+  order:1!important;
+  display:flex!important;
+  align-items:center!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  gap:14px!important;
+  margin:0!important;
+}
+body.public-page .site-header-v125 .site-logo,
+body.public-page .site-header-v125 .site-logo-project,
+body.public-page .site-header-v125 .site-brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:auto!important;
+  min-width:0!important;
+  height:auto!important;
+  padding:0!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.public-page .site-header-v125 .site-project-wordmark{
+  display:block!important;
+  width:112px!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:54px!important;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:1!important;
+}
+body.public-page .site-header-v125 .site-funding-logos{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+}
+body.public-page .site-header-v125 .site-brand-separator{
+  display:block!important;
+  width:1px!important;
+  height:36px!important;
+  background:rgba(255,255,255,.25)!important;
+}
+body.public-page .site-header-v125 .site-funding-logo{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:.92!important;
+}
+body.public-page .site-header-v125 .site-funding-logo-eu{max-width:112px!important;max-height:33px!important;}
+body.public-page .site-header-v125 .site-funding-logo-wup{max-width:118px!important;max-height:32px!important;}
+
+body.public-page .site-header-v125 .site-nav{
+  order:2!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:max-content!important;
+  max-width:none!important;
+  margin:0 0 0 auto!important;
+  padding:0!important;
+  gap:6px!important;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body.public-page .site-header-v125 .site-nav a,
+body.public-page .site-header-v125 .site-nav a:link,
+body.public-page .site-header-v125 .site-nav a:visited{
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 auto!important;
+  min-width:0!important;
+  min-height:38px!important;
+  height:38px!important;
+  margin:0!important;
+  padding:0 9px!important;
+  white-space:nowrap!important;
+  color:var(--v125-nav-muted)!important;
+  -webkit-text-fill-color:var(--v125-nav-muted)!important;
+  background:transparent!important;
+  border:1px solid transparent!important;
+  border-radius:7px!important;
+  box-shadow:none!important;
+  text-decoration:none!important;
+  font:700 12.2px/1.05 Arial,sans-serif!important;
+  letter-spacing:0!important;
+  opacity:1!important;
+  visibility:visible!important;
+  position:relative!important;
+}
+body.public-page .site-header-v125 .site-nav a::before,
+body.public-page .site-header-v125 .site-nav a::after{display:none!important;content:none!important;}
+body.public-page .site-header-v125 .site-nav a:hover,
+body.public-page .site-header-v125 .site-nav a:focus-visible{
+  color:var(--v125-nav-hover)!important;
+  -webkit-text-fill-color:var(--v125-nav-hover)!important;
+  border-color:rgba(122,196,183,.45)!important;
+  background:rgba(255,255,255,.035)!important;
+  outline:none!important;
+}
+body.public-page .site-header-v125 .site-nav a[aria-current="page"]{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:var(--v125-nav-active)!important;
+  border-color:var(--v125-nav-active)!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]){
+  color:#f39f97!important;
+  -webkit-text-fill-color:#f39f97!important;
+  border-color:rgba(243,159,151,.55)!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-trainer{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  flex:0 0 auto!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border-color:rgba(255,255,255,.30)!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-trainer[aria-current="page"]{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  border-color:var(--v125-nav-active)!important;
+}
+
+/* language switch injected by site-i18n-v116.js */
+body.public-page .site-header-v125 .site-language-switch{
+  order:3!important;
+  display:flex!important;
+  align-items:center!important;
+  flex:0 0 auto!important;
+  gap:3px!important;
+  margin:0 0 0 4px!important;
+  color:rgba(255,255,255,.75)!important;
+  font:800 11.5px/1 Arial,sans-serif!important;
+}
+body.public-page .site-header-v125 .site-language-switch button{
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:6px!important;
+  padding:7px 5px!important;
+}
+body.public-page .site-header-v125 .site-language-switch button.is-active{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:var(--v125-nav-soft)!important;
+}
+body.public-page .site-header-v125 .nav-toggle{
+  order:4!important;
+  display:none!important;
+  flex:0 0 auto!important;
+  width:44px!important;
+  height:44px!important;
+  padding:10px!important;
+  margin:0!important;
+  background:transparent!important;
+  border:1px solid rgba(255,255,255,.30)!important;
+  border-radius:8px!important;
+}
+body.public-page .site-header-v125 .nav-toggle span{
+  display:block!important;
+  width:100%!important;
+  height:2px!important;
+  margin:4px 0!important;
+  background:#fff!important;
+}
+
+/* On standard laptop widths, prioritise the project logo + complete navigation. */
+@media (min-width:981px) and (max-width:1450px){
+  body.public-page .site-header-v125 .site-funding-logos{display:none!important;}
+  body.public-page .site-header-v125 .site-header-inner{width:calc(100% - 28px)!important;gap:8px!important;}
+  body.public-page .site-header-v125 .site-project-wordmark{width:106px!important;}
+  body.public-page .site-header-v125 .site-nav{gap:4px!important;}
+  body.public-page .site-header-v125 .site-nav a,
+  body.public-page .site-header-v125 .site-nav a:link,
+  body.public-page .site-header-v125 .site-nav a:visited{font-size:11.5px!important;padding-left:7px!important;padding-right:7px!important;}
+  body.public-page .site-header-v125 .site-language-switch{font-size:11px!important;margin-left:2px!important;}
+}
+@media (min-width:981px) and (max-width:1080px){
+  body.public-page .site-header-v125 .site-project-wordmark{width:94px!important;}
+  body.public-page .site-header-v125 .site-nav{gap:2px!important;}
+  body.public-page .site-header-v125 .site-nav a,
+  body.public-page .site-header-v125 .site-nav a:link,
+  body.public-page .site-header-v125 .site-nav a:visited{font-size:10.8px!important;padding-left:5px!important;padding-right:5px!important;}
+}
+
+/* Mobile/tablet dropdown */
+@media (max-width:980px){
+  body.public-page .site-header-v125{min-height:70px!important;}
+  body.public-page .site-header-v125 .site-header-inner{
+    width:100%!important;
+    min-height:70px!important;
+    padding:0 16px!important;
+    gap:8px!important;
+    position:relative!important;
+  }
+  body.public-page .site-header-v125 .site-branding{flex:1 1 auto!important;min-width:0!important;}
+  body.public-page .site-header-v125 .site-project-wordmark{width:102px!important;max-height:48px!important;}
+  body.public-page .site-header-v125 .site-funding-logos{display:none!important;}
+  body.public-page .site-header-v125 .site-language-switch{order:2!important;margin-left:auto!important;margin-right:2px!important;}
+  body.public-page .site-header-v125 .nav-toggle{order:3!important;display:block!important;}
+  body.public-page .site-header-v125 .site-nav{
+    order:4!important;
+    display:none!important;
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    top:100%!important;
+    z-index:120!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:10px 16px 16px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:4px!important;
+    background:var(--v125-nav-bg)!important;
+    border-top:1px solid rgba(255,255,255,.10)!important;
+    border-bottom:1px solid rgba(255,255,255,.14)!important;
+    box-shadow:0 14px 28px rgba(0,0,0,.18)!important;
+  }
+  body.public-page .site-header-v125 .site-nav.is-open{display:flex!important;}
+  body.public-page .site-header-v125 .site-nav a,
+  body.public-page .site-header-v125 .site-nav a:link,
+  body.public-page .site-header-v125 .site-nav a:visited{
+    width:100%!important;
+    min-height:45px!important;
+    height:auto!important;
+    justify-content:flex-start!important;
+    padding:11px 12px!important;
+    font-size:14px!important;
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+    border-color:transparent!important;
+  }
+  body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-trainer:not([aria-current="page"]){
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+    border-color:transparent!important;
+  }
+  body.public-page .site-header-v125 .site-nav a[aria-current="page"]{
+    color:#000!important;
+    -webkit-text-fill-color:#000!important;
+    background:var(--v125-nav-active)!important;
+  }
+}
+@media (max-width:420px){
+  body.public-page .site-header-v125 .site-header-inner{padding-left:12px!important;padding-right:12px!important;}
+  body.public-page .site-header-v125 .site-project-wordmark{width:92px!important;}
+  body.public-page .site-header-v125 .site-language-switch{font-size:10.5px!important;}
+}
+
+/* COURSE TOP BAR: same white project mark and guaranteed Trainer panel link. */
+body.course-page.course-portal-aligned .course-topbar--portal{
+  background:var(--v125-nav-bg)!important;
+  border-bottom-color:var(--v125-nav-line)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-logo{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{
+  width:108px!important;
+  height:auto!important;
+  filter:none!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav .nav-trainer{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+}
+
+/* box sizing hardening for the rebuilt header */
+body.public-page .site-header-v125,
+body.public-page .site-header-v125 *,
+body.public-page .site-header-v125 *::before,
+body.public-page .site-header-v125 *::after{box-sizing:border-box!important;}

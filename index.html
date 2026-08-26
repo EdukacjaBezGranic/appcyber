@@ -9,7 +9,7 @@
 <link href="assets/portal-v66.css?v=20260813-66" rel="stylesheet"/>
 <link href="assets/portal-v67.css?v=20260814-67" rel="stylesheet"/>
 <link href="assets/portal-v68.css?v=20260815-6811" rel="stylesheet"/>
-<script defer="" src="assets/public.js?v=20260814-nav-v67"></script>
+<script defer="" src="assets/public.js?v=20260825-v127-nav-trainer"></script>
 <style id="cms-responsive-layout-styles">/* V98: stare przesunięcia mobilne/tabletowe CMS wyłączone */</style><style id="cms-responsive-styles">/* V98: dodatkowe historyczne przesunięcia CMS dla telefonu/tabletu wyłączone */</style> <link href="assets/responsive-v91.css?v=20260822-91" rel="stylesheet"/>
 <link href="assets/theme-graphite-lime-v94.css?v=20260822-99" rel="stylesheet"/>
 <link href="assets/v98-responsive-20260823.css?v=20260823-v98" rel="stylesheet"/>
@@ -18,13 +18,13 @@
 <link href="assets/v106-home-hero-balance-20260823.css?v=20260823-v106" rel="stylesheet"/>
 <link href="assets/v107-title-layout-20260823.css?v=20260823-v107" rel="stylesheet"/>
 <link href="assets/v111-mobile-fixes-20260824.css?v=20260824-v111" rel="stylesheet"/>
-<link href="assets/v112-laptop-hero-balance-20260824.css?v=20260824-v112" rel="stylesheet"/><link href="assets/v113-mobile-audit-20260824.css?v=20260824-v113" rel="stylesheet"/><link href="assets/v114-laptop-hero-tighten-20260825.css?v=20260825-v114" rel="stylesheet"/><link href="assets/site-i18n-v116.css?v=20260825-v115" rel="stylesheet"/></head>
+<link href="assets/v112-laptop-hero-balance-20260824.css?v=20260824-v112" rel="stylesheet"/><link href="assets/v113-mobile-audit-20260824.css?v=20260824-v113" rel="stylesheet"/><link href="assets/v114-laptop-hero-tighten-20260825.css?v=20260825-v114" rel="stylesheet"/><link href="assets/site-i18n-v116.css?v=20260825-v115" rel="stylesheet"/><link href="assets/v122-ui-polish-20260825.css?v=20260825-v122" rel="stylesheet"/><link href="assets/v123-palette-refresh-20260825.css?v=20260825-v123" rel="stylesheet"/><link href="assets/v124-nav-restore-and-trainer-20260825.css?v=20260825-v124" rel="stylesheet"/><link href="assets/v125-nav-rebuild-20260825.css?v=20260825-v125" rel="stylesheet"/><link href="assets/v126-header-and-fullbleed-program-hover-20260825.css?v=20260825-v126" rel="stylesheet"/><link href="assets/v128-home-hero-like-training-20260825.css?v=20260825-v128" rel="stylesheet"/><link href="assets/v129-white-nav-light-hero-20260825.css?v=20260825-v129" rel="stylesheet"/><link href="assets/v130-light-hero-contrast-fix-20260825.css?v=20260825-v130" rel="stylesheet"/><link href="assets/v131-light-ui-and-spacing-20260826.css?v=20260826-v131" rel="stylesheet"/></head>
 <body class="public-page home-rd home-onepage portal-v66 portal-v67 portal-v68">
-<header class="site-header">
+<header class="site-header site-header-v125">
 <div class="site-header-inner">
 <div class="site-branding">
 <a aria-label="Edukacja bez granic — strona główna" class="site-logo site-logo-project" href="index.html">
-<img alt="Edukacja bez granic" class="site-project-wordmark" src="grafiki/logo-projektu-wide-mono-black.png" style="width: 105px; height: 46px; max-width: none;"/>
+<img alt="Edukacja bez granic" class="site-project-wordmark" src="grafiki/logo-projektu-wide-mono-black.png"/>
 </a>
 <div aria-label="Instytucje i finansowanie projektu" class="site-funding-logos">
 <span aria-hidden="true" class="site-brand-separator"></span>
@@ -32,10 +32,8 @@
 <img alt="Wojewódzki Urząd Pracy w Katowicach" class="site-funding-logo site-funding-logo-wup" src="grafiki/logo-wup-mono-black.png"/>
 </div>
 </div>
-<button aria-controls="siteNav" aria-expanded="false" aria-label="Otwórz menu" class="nav-toggle" data-nav-toggle="" type="button">
-<span></span><span></span><span></span>
-</button>
-<nav aria-label="Główna nawigacja" class="site-nav" data-site-nav="" id="siteNav"><a href="index.html">Start</a><a href="nasze-szkolenia.html">Nasze szkolenia</a><a class="nav-signups" href="zapisy.html">Zapisy na szkolenia</a><a class="nav-online" href="kursy-online.html">Kursy online</a><a href="kontakt.html">Kontakt</a></nav>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Otwórz menu" class="nav-toggle" data-nav-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Główna nawigacja" class="site-nav" data-site-nav="" id="siteNav"><a aria-current="page" href="index.html">Start</a><a href="nasze-szkolenia.html">Nasze szkolenia</a><a class="nav-signups" href="zapisy.html">Zapisy na szkolenia</a><a class="nav-online" href="kursy-online.html">Kursy online</a><a href="kontakt.html">Kontakt</a><a class="nav-trainer" href="panel-trenera.html">Panel trenera</a></nav>
 </div>
 </header>
 <main class="home-rd-main" style="translate: 0px; font-weight: 700;">
@@ -49,7 +47,7 @@
 <div class="home-rd-hero-actions"><a class="home-rd-btn home-rd-btn-primary" href="#najnowsze-programy" style="background-color: rgb(189, 137, 104);">Poznaj najnowsze programy</a><a class="home-rd-btn home-rd-btn-secondary" href="kursy-online.html" style="background-color: rgb(22, 135, 127); color: rgb(255, 255, 255);">Zobacz kursy online</a></div>
 </div>
 <div class="home-rd-hero-visual">
-<img alt="Uczestnicy podczas szkolenia dla osób dorosłych" src="grafiki/head-strona-glowna.webp"/>
+<img alt="Prowadzący rozmawia z uczestniczką podczas pracy szkoleniowej" src="grafiki/projekt-hero.webp"/>
 </div>
 <dl class="home-rd-meta"><div><dt>Numer projektu</dt><dd>2025-1-PL01-KA122-ADU-000333553</dd></div><div><dt>Beneficjent</dt><dd>Wojewódzki Urząd Pracy w Katowicach</dd></div><div><dt>Akcja</dt><dd>KA122-ADU – projekt krótkoterminowy w sektorze Edukacja dorosłych</dd></div><div aria-label="Logo projektu Edukacja bez granic" class="home-rd-meta-logo"><img alt="Logo projektu Edukacja bez granic" src="grafiki/logo-projektu-wide-mono-black.png"/></div></dl>
 <details class="home-rd-meta-mobile">
@@ -174,9 +172,8 @@
 <a href="zapisy.html">Zapisy na szkolenia</a>
 <a href="kursy-online.html">Kursy online</a>
 <a href="kontakt.html">Kontakt</a>
-<a href="panel-trenera.html">Panel trenera</a>
 <a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="polityka-cookies.html">Polityka cookies</a></nav>
 </div>
 </div>
 </footer>
-<script defer="True" src="assets/site-i18n-v116.js?v=20260825-v116"></script></body></html>
+<script defer="True" src="assets/site-i18n-v116.js?v=20260825-v116"></script><script defer="True" src="assets/v122-i18n-patch-20260825.js?v=20260825-v122"></script></body></html>

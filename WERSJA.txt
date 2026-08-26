@@ -1,3 +1,9 @@
+V131 — lżejsze akcenty, jasny kalendarz i spacing — 2026-08-26
+V130 — jasny hero, poprawiony kontrast tekstu
+V129 — biały pasek nawigacji + jasny hero + czysta paczka GitHub
+V127 — naprawiona nawigacja: Panel trenera generowany przez public.js
+V126 - jasny kremowy pasek nawigacji + pełnoszeroki hover rezultatów projektu
+V122
 V120 - przykłady rzeczywistych przekazów w kursie (case studies PL/EN)
 V116 - audyt angielskiej wersji + poprawione logotypy stron polityk
 V115 — pełny portal PL/EN + polityka prywatności i cookies

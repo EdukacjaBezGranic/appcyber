@@ -1,0 +1,385 @@
+/* V123 — pełne odświeżenie palety bez zmiany treści i układu.
+   Palette supplied by user:
+   Coral red  #df5258
+   Blush      #f39f97
+   Cream      #eee5c8
+   Amber      #f1b55d
+   Green      #3b8f73
+   Mint       #7ac4b7
+   + white / black
+*/
+:root{
+  --p-red:#df5258;
+  --p-pink:#f39f97;
+  --p-cream:#eee5c8;
+  --p-amber:#f1b55d;
+  --p-green:#3b8f73;
+  --p-mint:#7ac4b7;
+  --p-white:#ffffff;
+  --p-black:#090b0b;
+  --p-ink:#171919;
+  --p-muted:#5b6662;
+  --p-line:rgba(59,143,115,.28);
+  --p-soft-mint:rgba(122,196,183,.13);
+  --p-soft-pink:rgba(243,159,151,.15);
+  --p-soft-cream:rgba(238,229,200,.55);
+
+  /* retarget established project tokens */
+  --brand-jet:var(--p-black);
+  --brand-orange:var(--p-red);
+  --brand-moonstone:var(--p-mint);
+  --brand-paper:var(--p-white);
+  --brand-white:var(--p-white);
+  --brand-ink:var(--p-ink);
+  --brand-muted:var(--p-muted);
+  --brand-line:var(--p-line);
+  --brand-moonstone-soft:var(--p-soft-mint);
+  --brand-orange-soft:var(--p-soft-pink);
+  --v94-graphite:var(--p-black);
+  --v94-graphite-2:#161919;
+  --v94-lime:var(--p-red);
+  --v94-lime-dark:#8e2e33;
+  --v94-paper:var(--p-white);
+  --v94-text:var(--p-ink);
+  --v94-muted:var(--p-muted);
+  --v94-line:var(--p-line);
+  --v103-dark:var(--p-black);
+  --v103-dark-2:#161919;
+  --v103-lime:var(--p-red);
+  --v103-paper:var(--p-white);
+}
+
+/* ---------- FOUNDATION ---------- */
+body.public-page{background:var(--p-white)!important;color:var(--p-ink)!important;}
+body.public-page ::selection{background:var(--p-pink)!important;color:var(--p-black)!important;}
+body.public-page :where(h1,h2,h3,h4,h5,h6,strong,b){color:var(--p-ink);}
+body.public-page :where(a,button,input,select,textarea,summary):focus-visible{
+  outline:3px solid var(--p-green)!important;
+  outline-offset:3px!important;
+}
+
+/* ---------- HEADER / NAV ---------- */
+body.public-page .site-header{
+  background:rgba(255,255,255,.97)!important;
+  color:var(--p-black)!important;
+  border-bottom:1px solid rgba(59,143,115,.25)!important;
+  box-shadow:0 1px 0 rgba(0,0,0,.035)!important;
+}
+body.public-page .site-brand-separator{background:rgba(23,25,25,.22)!important;}
+body.public-page .site-nav{flex:0 1 auto!important;min-width:0!important;}
+body.public-page .site-nav a,
+body.public-page .site-nav a:link,
+body.public-page .site-nav a:visited{
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+}
+body.public-page .site-nav a::after{background:var(--p-red)!important;}
+body.public-page .site-nav a:hover{
+  color:var(--p-green)!important;
+  -webkit-text-fill-color:var(--p-green)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+}
+body.public-page .site-nav a[aria-current="page"]{
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+  background:var(--p-cream)!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+body.public-page .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-nav .nav-online:not([aria-current="page"]){
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+  border-color:transparent!important;
+  background:transparent!important;
+}
+body.public-page .site-language-switch{color:#37403d!important;}
+body.public-page .site-language-switch button.is-active{
+  color:var(--p-black)!important;
+  background:var(--p-cream)!important;
+}
+body.public-page .site-language-switch button:focus-visible{outline-color:var(--p-green)!important;}
+body.public-page .nav-toggle{background:var(--p-white)!important;border-color:var(--p-green)!important;color:var(--p-black)!important;}
+body.public-page .nav-toggle span{background:var(--p-black)!important;}
+
+/* Fit the full desktop navigation including Panel trenera. No row wrap. */
+@media (min-width:901px){
+  body.public-page .site-header-inner{gap:clamp(10px,1.25vw,20px)!important;}
+  body.public-page .site-branding{gap:clamp(8px,1vw,16px)!important;flex:0 1 auto!important;}
+  body.public-page .site-funding-logos{gap:clamp(8px,.9vw,15px)!important;}
+  body.public-page .site-nav{gap:clamp(8px,1.1vw,18px)!important;}
+  body.public-page .site-nav a{font-size:clamp(11.2px,.93vw,12.5px)!important;white-space:nowrap!important;}
+  body.public-page .site-language-switch{margin-left:0!important;margin-right:0!important;flex:0 0 auto!important;}
+}
+@media (min-width:901px) and (max-width:1280px){
+  body.public-page .site-header-inner{width:calc(100% - 36px)!important;}
+  body.public-page .site-logo{width:88px!important;}
+  body.public-page .site-project-wordmark{width:84px!important;}
+  body.public-page .site-funding-logo-eu{width:104px!important;}
+  body.public-page .site-funding-logo-wup{width:98px!important;}
+  body.public-page .site-brand-separator{height:32px!important;}
+  body.public-page .site-nav{gap:8px!important;}
+  body.public-page .site-nav a{font-size:11px!important;}
+}
+
+/* ---------- HERO + DARK SURFACES ---------- */
+body.public-page.home-rd .home-rd-hero,
+body.public-page .contact-hero,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip,.training-topics-section,.home-rd-final,.dark-section),
+body.public-page :is(.signup-intro-section,.calendar-board)[style*="background-color"]{
+  background:var(--p-black)!important;
+}
+body.public-page.home-rd .home-rd-hero :where(h1,h2,h3),
+body.public-page .contact-hero :where(h1,h2,h3),
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip,.training-topics-section,.home-rd-final,.dark-section) :where(h1,h2,h3){
+  color:var(--p-white)!important;
+  -webkit-text-fill-color:var(--p-white)!important;
+}
+body.public-page.home-rd .home-rd-hero .home-hero-title-line--accent,
+body.public-page.home-rd .home-rd-hero .editorial-emphasis,
+body.public-page .contact-hero h1,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip,.training-topics-section,.home-rd-final,.dark-section) :where(.accent,.editorial-emphasis){
+  color:var(--p-red)!important;
+  -webkit-text-fill-color:var(--p-red)!important;
+}
+body.public-page.home-rd .home-rd-hero :where(p,dd,dt),
+body.public-page .contact-hero p,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip,.training-topics-section,.home-rd-final,.dark-section) p{
+  color:rgba(255,255,255,.78)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.78)!important;
+}
+body.public-page.home-rd .home-rd-meta{border-color:rgba(122,196,183,.45)!important;}
+
+/* Dark-section kickers/overlines must remain readable. */
+body.training-showcase-page .training-topics-section .training-showcase-heading > span,
+body.training-showcase-page .training-topics-section .training-showcase-heading > div > span,
+body.training-showcase-page .training-topics-section .training-showcase-overline,
+body.training-showcase-page .training-topics-section :is(.section-kicker,.eyebrow,.overline),
+body.public-page :is(.training-topics-section,.training-cta-section,.home-rd-final,.dark-section) :is(.section-kicker,.eyebrow,.overline),
+body.public-page :is(.training-topics-section,.training-cta-section,.home-rd-final,.dark-section) :where(.training-showcase-overline,.home-rd-overline){
+  color:rgba(255,255,255,.78)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.78)!important;
+}
+body.training-showcase-page .training-topics-section .training-showcase-heading > span::before,
+body.public-page :is(.training-topics-section,.training-cta-section,.home-rd-final,.dark-section) :where(.section-kicker,.eyebrow,.overline)::before{
+  background:var(--p-red)!important;
+}
+
+/* ---------- BUTTONS / CTA ---------- */
+body.public-page :is(.public-btn.primary,.home-rd-btn-primary,.calendar-form-btn,.trainer-access-box button,.signup-institution-contact a:first-child,.training-cta a:first-of-type){
+  background:var(--p-red)!important;
+  border-color:var(--p-red)!important;
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+  box-shadow:none!important;
+}
+body.public-page :is(.public-btn.primary,.home-rd-btn-primary,.calendar-form-btn,.trainer-access-box button,.signup-institution-contact a:first-child,.training-cta a:first-of-type):hover{
+  background:var(--p-pink)!important;
+  border-color:var(--p-pink)!important;
+  color:var(--p-black)!important;
+}
+body.public-page :is(.public-btn.primary,.home-rd-btn-primary,.calendar-form-btn,.trainer-access-box button,.signup-institution-contact a:first-child,.training-cta a:first-of-type) :where(span,small,strong,b){
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+}
+body.public-page :is(.home-rd-btn-secondary,.public-btn.secondary,.signup-institution-contact a:last-child,.training-cta a:last-of-type){
+  background:var(--p-mint)!important;
+  border-color:var(--p-mint)!important;
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+}
+body.public-page :is(.home-rd-btn-secondary,.public-btn.secondary,.signup-institution-contact a:last-child,.training-cta a:last-of-type):hover{
+  background:var(--p-cream)!important;
+  border-color:var(--p-cream)!important;
+  color:var(--p-black)!important;
+}
+
+/* ---------- LIGHT SECTIONS / CARDS ---------- */
+body.public-page :where(.home-rd-section,.public-section,.training-programs-section,.online-catalog-section,.signup-overview-section){background-color:var(--p-white);}
+body.public-page :where(.home-eu-origin,.home-rd-method,.training-method-section,.contact-help-section){background-color:var(--p-cream)!important;}
+body.public-page :where(.home-rd-program,.home-eu-origin-points article,.public-step,.training-topic-grid article,.contact-panel,.signup-training-card,.online-course-cover,.calendar-card,.trainer-card){
+  border-color:var(--p-line)!important;
+}
+body.public-page :where(.home-rd-program,.home-eu-origin-points article,.public-step,.training-topic-grid article):hover{
+  border-color:var(--p-green)!important;
+  background:var(--p-soft-mint)!important;
+}
+body.public-page.online-catalog-page .online-course-cover{border-top-color:var(--p-red)!important;}
+
+/* light editorial labels */
+body.public-page :where(.home-rd-overline,.home-rd-section-heading>div>span,.public-eyebrow){
+  color:var(--p-green)!important;
+  -webkit-text-fill-color:var(--p-green)!important;
+  border-left-color:var(--p-red)!important;
+}
+
+/* Contact step numbering: no blocks; number + subtle line. */
+body.public-page .public-step > span{
+  color:var(--p-green)!important;
+  -webkit-text-fill-color:var(--p-green)!important;
+  background:transparent!important;
+  background-image:none!important;
+}
+body.public-page .public-step > span::after{background:rgba(59,143,115,.38)!important;}
+
+/* Training topics: numbers support the palette without lowering text contrast. */
+body.training-showcase-page .training-topic-number,
+body.public-page .training-topic-number{
+  color:var(--p-mint)!important;
+  -webkit-text-fill-color:var(--p-mint)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+}
+body.training-showcase-page .training-topics-section .training-topic-grid article :where(h3,h4){
+  color:var(--p-white)!important;
+  -webkit-text-fill-color:var(--p-white)!important;
+}
+body.training-showcase-page .training-topics-section .training-topic-grid article p{
+  color:rgba(255,255,255,.68)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.68)!important;
+}
+
+/* Calendar controls */
+body.public-page .calendar-board[style*="background-color"] :is(.calendar-mini-btn,.calendar-arrow-btn,.calendar-mode-switch button){
+  background:var(--p-mint)!important;
+  border-color:var(--p-mint)!important;
+  color:var(--p-black)!important;
+}
+body.public-page .calendar-board[style*="background-color"] :is(.calendar-mini-btn,.calendar-arrow-btn,.calendar-mode-switch button):hover,
+body.public-page .calendar-board[style*="background-color"] .calendar-mode-switch button.is-active{
+  background:var(--p-amber)!important;
+  border-color:var(--p-amber)!important;
+  color:var(--p-black)!important;
+}
+
+/* Trainer gate */
+body.trainer-page .trainer-access-feature{border-color:rgba(59,143,115,.28)!important;background:var(--p-soft-mint)!important;}
+body.trainer-page .trainer-access-feature-mark{background:var(--p-red)!important;color:var(--p-black)!important;}
+body.trainer-page .trainer-access-note{border-left-color:var(--p-green)!important;background:var(--p-soft-cream)!important;color:#3f4945!important;}
+body.trainer-page .trainer-access-box .tag{background:var(--p-amber)!important;color:var(--p-black)!important;}
+
+/* ---------- FOOTER ---------- */
+body.public-page .v67-footer,
+body.public-page .site-footer{
+  background:var(--p-black)!important;
+  border-top-color:var(--p-red)!important;
+  color:rgba(255,255,255,.78)!important;
+}
+body.public-page .v67-footer :where(strong,h2,h3),
+body.public-page .site-footer :where(strong,h2,h3){color:var(--p-white)!important;-webkit-text-fill-color:var(--p-white)!important;}
+body.public-page .v67-footer a,
+body.public-page .site-footer a{color:rgba(255,255,255,.86)!important;}
+body.public-page .v67-footer a:hover,
+body.public-page .site-footer a:hover{color:var(--p-mint)!important;}
+
+/* ---------- COURSE ---------- */
+body.course-page{
+  --brand-jet:var(--p-black);
+  --brand-orange:var(--p-red);
+  --brand-moonstone:var(--p-mint);
+  --brand-line:rgba(59,143,115,.30);
+}
+body.course-page.course-portal-aligned .course-topbar,
+body.course-page .course-sidebar{background:var(--p-black)!important;}
+body.course-page.course-portal-aligned .course-topbar{border-bottom-color:rgba(122,196,183,.28)!important;}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{color:rgba(255,255,255,.82)!important;}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a::after{background:var(--p-red)!important;}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:hover,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:focus-visible{color:var(--p-mint)!important;}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a[aria-current="page"]{color:var(--p-pink)!important;}
+body.course-page .course-language-switch{border-color:rgba(122,196,183,.48)!important;background:rgba(122,196,183,.09)!important;}
+body.course-page .course-language-switch button.is-active{background:var(--p-amber)!important;color:var(--p-black)!important;}
+body.course-page .course-language-switch button:hover{background:var(--p-mint)!important;color:var(--p-black)!important;}
+body.course-page .overall-progress{border-color:rgba(122,196,183,.25)!important;background:rgba(122,196,183,.08)!important;}
+body.course-page .overall-progress strong{color:var(--p-pink)!important;}
+
+/* diploma progress panel — preserve V121 high contrast */
+body.course-page :is(.certificate-progress,.diploma-progress,.course-diploma-progress,.final-progress-card,.course-final-progress){
+  background:var(--p-black)!important;
+  border-color:rgba(122,196,183,.38)!important;
+}
+body.course-page :is(.certificate-progress,.diploma-progress,.course-diploma-progress,.final-progress-card,.course-final-progress) :where(h2,h3,strong,b,.progress-value){
+  color:var(--p-white)!important;
+  -webkit-text-fill-color:var(--p-white)!important;
+}
+body.course-page :is(.certificate-progress,.diploma-progress,.course-diploma-progress,.final-progress-card,.course-final-progress) p{
+  color:rgba(255,255,255,.78)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.78)!important;
+}
+
+/* broad course accent retargeting, excluding semantic success/error feedback */
+body.course-page :where(.module-kicker,.section-kicker,.course-eyebrow,.topic-number,.module-number){color:var(--p-green)!important;}
+body.course-page :where(.course-btn-primary,.module-cta,.next-topic-btn):not(.is-correct):not(.is-wrong){
+  background:var(--p-red)!important;border-color:var(--p-red)!important;color:var(--p-black)!important;
+}
+body.course-page :where(.course-btn-secondary,.tool-link):not(.is-correct):not(.is-wrong){
+  background:var(--p-mint)!important;border-color:var(--p-mint)!important;color:var(--p-black)!important;
+}
+
+/* policy pages */
+body.policy-page :where(.policy-hero,.policy-callout){border-color:var(--p-line)!important;}
+body.policy-page .policy-kicker{color:var(--p-green)!important;}
+
+@media (max-width:900px){
+  body.public-page .site-nav.is-open{background:var(--p-black)!important;border-color:rgba(122,196,183,.28)!important;}
+  body.public-page .site-nav.is-open a,
+  body.public-page .site-nav.is-open a:link,
+  body.public-page .site-nav.is-open a:visited{color:var(--p-white)!important;-webkit-text-fill-color:var(--p-white)!important;}
+  body.public-page .site-nav.is-open a:hover{color:var(--p-mint)!important;-webkit-text-fill-color:var(--p-mint)!important;}
+  body.public-page .site-nav.is-open a[aria-current="page"]{background:var(--p-cream)!important;color:var(--p-black)!important;-webkit-text-fill-color:var(--p-black)!important;}
+}
+
+/* Final specificity locks: remove the last legacy orange/teal/off-white leaks. */
+body.public-page.home-rd .home-rd-hero--refined h1 .home-hero-title-line--accent{
+  color:var(--p-red)!important;
+  -webkit-text-fill-color:var(--p-red)!important;
+}
+body.public-page div[style*="color: rgb(22, 135, 127)"],
+body.public-page :is(p,span,small)[style*="color: rgb(22, 135, 127)"]{
+  color:var(--p-green)!important;
+  -webkit-text-fill-color:var(--p-green)!important;
+}
+body.public-page [style*="background-color: rgb(22, 135, 127)"]{
+  background-color:var(--p-black)!important;
+}
+body.public-page .public-btn.light,
+body.public-page a.public-btn.light[style*="background-color: rgb(22, 135, 127)"]{
+  background:var(--p-mint)!important;
+  border-color:var(--p-mint)!important;
+  color:var(--p-black)!important;
+  -webkit-text-fill-color:var(--p-black)!important;
+}
+body.public-page .public-btn.light:hover{
+  background:var(--p-cream)!important;
+  border-color:var(--p-cream)!important;
+  color:var(--p-black)!important;
+}
+body.public-page .home-project-note[style*="background-color: rgb(22, 135, 127)"],
+body.public-page .home-rd-final[style*="background-color: rgb(22, 135, 127)"],
+body.public-page .contact-panel[style*="background-color: rgb(22, 135, 127)"],
+body.public-page .calendar-board[style*="background-color: rgb(22, 135, 127)"],
+body.public-page .signup-intro-section[style*="background-color: rgb(22, 135, 127)"]{
+  background:var(--p-black)!important;
+}
+body.public-page .home-rd-story-badge[style*="background-color: rgb(22, 135, 127)"]{
+  background:var(--p-green)!important;
+  color:var(--p-black)!important;
+}
+body.public-page .home-rd-story-badge :where(strong,span){color:var(--p-black)!important;-webkit-text-fill-color:var(--p-black)!important;}
+
+body.course-page.course-portal-aligned{
+  --course-paper:var(--p-white)!important;
+  --course-ink:var(--p-ink)!important;
+  --course-muted:var(--p-muted)!important;
+  --course-line:rgba(59,143,115,.24)!important;
+  background:var(--p-white)!important;
+  color:var(--p-ink)!important;
+}
+body.course-page.course-portal-aligned .course-main,
+body.course-page.course-portal-aligned .course-intro,
+body.course-page.course-portal-aligned .course-app{
+  background-color:var(--p-white)!important;
+}
