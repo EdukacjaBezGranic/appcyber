@@ -1,0 +1,58 @@
+/* ==========================================================
+   2026-08-26 / V138 — Home final CTA refresh
+   Fixes the swapped button/text color impression by replacing
+   the dark banner with a lighter editorial panel and a clear,
+   high-contrast dark button.
+   ========================================================== */
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"]{
+  background:#eee5c8!important;
+  border:1px solid rgba(23,33,43,.14)!important;
+  border-radius:24px!important;
+  box-shadow:none!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > div > span{
+  color:#3b8f73!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] h2{
+  color:#17212b!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] p{
+  color:#44515d!important;
+  max-width:64ch!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a{
+  background:#17212b!important;
+  color:#ffffff!important;
+  border:1px solid #17212b!important;
+  box-shadow:0 10px 24px rgba(23,33,43,.16)!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a span,
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a:link span,
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a:visited span{
+  color:inherit!important;
+}
+
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a:hover,
+body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a:focus-visible{
+  background:#df5258!important;
+  border-color:#df5258!important;
+  color:#ffffff!important;
+  transform:translateY(-2px)!important;
+  box-shadow:0 14px 28px rgba(223,82,88,.18)!important;
+}
+
+@media (max-width:700px){
+  body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"]{
+    padding:32px 24px!important;
+  }
+  body.public-page.home-rd .home-rd-final[style*="background-color: rgb(22, 135, 127)"] > a{
+    width:100%!important;
+    justify-content:center!important;
+  }
+}

@@ -1,0 +1,9 @@
+/* V139 — hard contrast lock for the final home CTA. */
+body.public-page.home-rd .home-rd-final{background:#eee5c8!important;}
+body.public-page.home-rd .home-rd-final h2{color:#17212b!important;-webkit-text-fill-color:#17212b!important;}
+body.public-page.home-rd .home-rd-final p{color:#44515d!important;-webkit-text-fill-color:#44515d!important;}
+body.public-page.home-rd .home-rd-final>div>span{color:#3b8f73!important;-webkit-text-fill-color:#3b8f73!important;}
+body.public-page.home-rd .home-rd-final>a,
+body.public-page.home-rd .home-rd-final>a:link,
+body.public-page.home-rd .home-rd-final>a:visited{background:#17212b!important;color:#fff!important;-webkit-text-fill-color:#fff!important;}
+body.public-page.home-rd .home-rd-final>a span{color:inherit!important;-webkit-text-fill-color:inherit!important;}
