@@ -25,7 +25,7 @@ function render(panel,m){
  const box=$('.module-quiz__questions',section);
  quizzes[m].forEach((q,i)=>{const item=document.createElement('fieldset');item.innerHTML=`<legend><span>${i+1}</span>${q[0]}</legend><div>${q[1].map((a,j)=>`<label><input type="radio" name="quiz-${m}-${i}" value="${j}"><span>${a}</span></label>`).join('')}</div>`;box.append(item)});
  nav.before(section);
- if(m===5){const finalization=document.getElementById('courseFinalization');if(finalization)section.after(finalization);}
+ if(m===5){const evaluation=document.getElementById('courseEvaluation');const finalization=document.getElementById('courseFinalization');if(evaluation)section.after(evaluation);if(finalization)(evaluation||section).after(finalization);}
  const saved=quizState()[m]; if(saved?.answers) Object.entries(saved.answers).forEach(([i,v])=>{const f=$(`input[name="quiz-${m}-${i}"][value="${v}"]`,section);if(f)f.checked=true});
  const update=()=>{const p=moduleProgress(m),btn=$('button[type="submit"]',section),status=$('[data-quiz-status]',section),result=$('[data-quiz-result]',section);btn.disabled=!p.total||p.done<p.total;if(saved?.passed||passed(m)){status.textContent='Zaliczony';section.classList.add('is-passed');result.textContent=`Test zaliczony: ${quizState()[m].score}/8. Karta osiągnięcia jest odblokowana.`}else if(btn.disabled){result.textContent=`Test odblokuje się po ukończeniu wszystkich tematów modułu (${p.done}/${p.total}).`}else{result.textContent='Możesz rozpocząć test.'}};update();
  section.addEventListener('change',()=>{const st=quizState(),answers={};quizzes[m].forEach((_,i)=>{const c=$(`input[name="quiz-${m}-${i}"]:checked`,section);if(c)answers[i]=Number(c.value)});st[m]={...(st[m]||{}),answers};write(KEY,st)});

@@ -1,4 +1,4 @@
-V152
-Moduł 1: wyraźny podział sekcji „Informacja jako produkt” na uwagę i rekomendacje + wyrównanie tekstu hero na stronie startowej
+V154
+Aktywne linki do anonimowej ankiety ewaluacyjnej Google Forms PL/EN
 Data: 2026-08-27
-Baza: V151
+Baza: V153
