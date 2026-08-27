@@ -1,2 +1,2 @@
-V139 - jasne tło = ciemny tekst w końcowym CTA
-Baza: V138
+V159 - 2026-08-27
+Rozszerzenie słownika kontekstowego: krótkie tooltipy przy najważniejszych terminach specjalistycznych, bez usuwania ani skracania treści kursu; hover na laptopie oraz focus/klik na urządzeniach dotykowych i klawiaturze.

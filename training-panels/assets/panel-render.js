@@ -43,6 +43,13 @@ function renderPanel(panel) {
     agendaNumber += 1;
     return renderAgendaItem(item, agendaNumber);
   }).join('');
+  const presentationAction = panel.presentationUrl
+    ? `<a class="btn" target="_blank" rel="noopener noreferrer" href="${escapeHtml(panel.presentationUrl)}">Otwórz prezentację</a>`
+    : '<button class="btn ghost" type="button" disabled>Link do uzupełnienia</button>';
+  const presentationText = panel.presentationUrl
+    ? 'Prezentacja szkoleniowa w serwisie Canva.'
+    : 'Miejsce na link do prezentacji szkoleniowej.';
+
   const heroHtml = panel.banner
     ? `<section class="training-hero training-hero-image"><h1 class="sr-only">${escapeHtml(panel.title)}</h1><a href="../index.html?v=20260709-04" aria-label="Przejdź do strony głównej projektu Edukacja bez granic"><img src="${escapeHtml(panel.banner)}" alt="${escapeHtml(panel.bannerAlt || panel.title)}"></a></section>`
     : `<section class="training-hero">
@@ -66,7 +73,7 @@ function renderPanel(panel) {
       <section class="section materials">
         <h2>Materiały</h2>
         <div class="grid">
-          <article class="card"><span class="tag">prezentacja</span><h3>Prezentacja główna</h3><p>Miejsce na link do prezentacji szkoleniowej.</p><button class="btn ghost" type="button" disabled>Link do uzupełnienia</button></article>
+          <article class="card"><span class="tag">prezentacja</span><h3>Prezentacja główna</h3><p>${escapeHtml(presentationText)}</p>${presentationAction}</article>
           <article class="card"><span class="tag">materiały</span><h3>Materiały szkoleniowe</h3><p>Miejsce na folder z kartami pracy, przykładami i materiałami dla uczestników.</p><button class="btn ghost" type="button" disabled>Folder do uzupełnienia</button></article>
         </div>
       </section>

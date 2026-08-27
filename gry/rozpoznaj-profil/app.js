@@ -132,7 +132,7 @@
     if(!correct && button) button.classList.add('wrong');
     els.scoreValue.textContent=`${state.score} pkt`;
     els.feedback.hidden=false; els.feedback.className=`feedback ${correct?'good':'bad'}`;
-    els.feedback.innerHTML=`<strong>${correct ? `Dobra odpowiedź — ${points} ${points === 1 ? 'punkt' : 'punkty'}.` : 'To nie jest najlepsza kategoria.'}</strong><span>Poprawna odpowiedź: <b>${escapeHtml(categories[profile.answer])}</b>. ${escapeHtml(profile.explanation)}</span>`;
+    els.feedback.innerHTML=`<strong>${correct ? `Dobra odpowiedź - ${points} ${points === 1 ? 'punkt' : 'punkty'}.` : 'To nie jest najlepsza kategoria.'}</strong><span>Poprawna odpowiedź: <b>${escapeHtml(categories[profile.answer])}</b>. ${escapeHtml(profile.explanation)}</span>`;
     els.roundActions.hidden=false; els.analysisAccordion.open=false; els.hintButton.hidden=true; els.submitAnswer.disabled=true; els.submitAnswer.className='submit-button';
     loadAnalysis(profile); save(); els.feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
   }
@@ -182,7 +182,7 @@
     else if(state.score>=3) level='Dostrzegasz część sygnałów, ale emocjonalna treść lub profesjonalny wygląd profilu mogą odciągać uwagę od mechanizmu działania.';
     else level='To dobry moment, by przejść profile ponownie i korzystać ze wskazówek. Celem jest trening, nie sam wynik.';
     els.resultLevel.textContent=level;
-    els.resultGrid.innerHTML = state.results.map(result=>{ const profile=profiles.find(item=>item.id===result.profileId); return `<article class="result-card ${result.correct?'correct':'incorrect'}"><span class="result-icon" aria-hidden="true">${profile.icon}</span><div><h3>${escapeHtml(result.name)} — ${result.correct?'poprawnie':'do ponownej analizy'}</h3><p>Twoja odpowiedź: ${escapeHtml(categories[result.chosen])}. Poprawna kategoria: ${escapeHtml(categories[result.correctCategory])}. Punkty: ${result.points}/2.</p></div></article>`; }).join('');
+    els.resultGrid.innerHTML = state.results.map(result=>{ const profile=profiles.find(item=>item.id===result.profileId); return `<article class="result-card ${result.correct?'correct':'incorrect'}"><span class="result-icon" aria-hidden="true">${profile.icon}</span><div><h3>${escapeHtml(result.name)} - ${result.correct?'poprawnie':'do ponownej analizy'}</h3><p>Twoja odpowiedź: ${escapeHtml(categories[result.chosen])}. Poprawna kategoria: ${escapeHtml(categories[result.correctCategory])}. Punkty: ${result.points}/2.</p></div></article>`; }).join('');
   }
   function reviewMistakes(){ const firstWrong=state.results.findIndex(result=>!result.correct); const index=firstWrong>=0?firstWrong:0; state.current=index; state.score=state.results.slice(0,index).reduce((sum,result)=>sum+result.points,0); state.results=state.results.slice(0,index); state.hintsUsed=0; state.answered=false; state.selected=null; save(); setScreen('game'); renderRound(); }
   function escapeHtml(value){ return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'})[char]); }

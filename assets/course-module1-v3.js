@@ -74,7 +74,7 @@
     },
     '1.4': {
       steps: [
-        'Przeczytaj całą historię fałszywego profilu — od pojawienia się błędnego terminu do zgłoszenia konta.',
+        'Przeczytaj całą historię fałszywego profilu - od pojawienia się błędnego terminu do zgłoszenia konta.',
         'W pierwszej sytuacji wskaż, gdzie odbiorca powinien sprawdzić informację.',
         'W drugiej rozpoznaj, co bezpośrednio zwiększa widoczność fałszywego posta.',
         'W trzeciej wskaż podmiot, który może technicznie ograniczyć konto po zgłoszeniu.',
@@ -123,19 +123,19 @@
     '1.9': {
       steps: [
         'Ćwiczenie ma pięć krótkich części. Przejdź je po kolei od A do E.',
-        'A — zaznacz co najmniej jeden kanał, z którego korzystałeś w ostatnich 24 godzinach.',
-        'B — przy czterech drogach wybierz częstotliwość.',
-        'C — zaznacz co najmniej jedną grupę źródeł.',
-        'D — oceń sześć nawyków w skali od 1 do 5.',
-        'E — wybierz jeden możliwy punkt, na który chcesz uważać.',
+        'A - zaznacz co najmniej jeden kanał, z którego korzystałeś w ostatnich 24 godzinach.',
+        'B - przy czterech drogach wybierz częstotliwość.',
+        'C - zaznacz co najmniej jedną grupę źródeł.',
+        'D - oceń sześć nawyków w skali od 1 do 5.',
+        'E - wybierz jeden możliwy punkt, na który chcesz uważać.',
         'Kliknij „Pokaż mój punkt wyjścia” albo wybierz „Pomiń diagnozę”.'
       ],
-      note: 'To nie jest test ani ocena. Ćwiczenie zajmuje około 5–8 minut i opisuje tylko punkt startowy.'
+      note: 'To nie jest test ani ocena. Ćwiczenie zajmuje około 5-8 minut i opisuje tylko punkt startowy.'
     },
     '1.10': {
       steps: [
         'Dokończ zdanie własnymi słowami.',
-        'Napisz co najmniej 20 znaków — zwykle wystarczy jedno lub dwa zdania.',
+        'Napisz co najmniej 20 znaków - zwykle wystarczy jedno lub dwa zdania.',
         'Gdy nie wiesz, od czego zacząć, rozwiń „Potrzebuję inspiracji”.',
         'Kliknij „Zapisz refleksję” albo wybierz „Pomiń”.'
       ],
@@ -179,7 +179,7 @@
     panel.querySelector('[data-second-reveal]').addEventListener('click', () => {
       onReveal?.();
       panel.hidden = true;
-      setFeedback(host, '<strong>Poprawne odpowiedzi zostały odsłonięte</strong>Porównaj je ze swoimi wyborami. Odsłonięcie rozwiązania nie zmienia zaznaczeń — możesz je poprawić i wykonać zadanie ponownie.', 'warning');
+      setFeedback(host, '<strong>Poprawne odpowiedzi zostały odsłonięte</strong>Porównaj je ze swoimi wyborami. Odsłonięcie rozwiązania nie zmienia zaznaczeń - możesz je poprawić i wykonać zadanie ponownie.', 'warning');
     });
     form.addEventListener('change', () => { panel.hidden = true; });
     return {
@@ -257,7 +257,7 @@
                 ['false', 'Wiadomość na pewno jest fałszywa.']
               ],
               correct: 'unknown',
-              rationale: 'Zrzut ekranu nie pokazuje autora, daty ani adresu strony. Można potwierdzić jedynie, że otrzymałeś taki obraz — nie że urząd opublikował tę informację.'
+              rationale: 'Zrzut ekranu nie pokazuje autora, daty ani adresu strony. Można potwierdzić jedynie, że otrzymałeś taki obraz - nie że urząd opublikował tę informację.'
             },
             {
               name: 's1_action',
@@ -382,7 +382,7 @@
     '1.2'(host) {
       const questions=['Kto stworzył tę wiadomość?','Dlaczego powstała?','Jakie dowody potwierdzają tezę?','Jaką emocję przekaz próbuje wywołać?','Jakich informacji brakuje?','Kto zyskuje, gdy uwierzę lub udostępnię?','W jaki sposób treść do mnie dotarła?','Czy AI mogła ją wygenerować, zmienić, streścić lub polecić?'];
       const reasons=['Zwykle brakuje mi czasu.','Treść pochodzi od osoby lub źródła, któremu ufam.','Informacja potwierdza to, co już sądzę.','Nie wiem, jak znaleźć odpowiedź.','Skupiam się na treści, a nie na drodze jej dotarcia.','Inny powód.'];
-      const body=`<form><label class="m1v3-control">Pytanie, które zadaję najrzadziej<select name="question" required><option value="">Wybierz pytanie</option>${questions.map((q,i)=>`<option value="${i}">${q}</option>`).join('')}</select></label><label class="m1v3-control">Najbliższy powód<select name="reason" required><option value="">Wybierz powód</option>${reasons.map((q,i)=>`<option value="${i}">${q}</option>`).join('')}</select></label><label class="m1v3-control">Własna notatka – opcjonalnie<textarea name="note" maxlength="250"></textarea></label><div class="m1v3-actions"><button class="m1v3-button" type="submit">Zapisz refleksję</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń</button></div></form>`;
+      const body=`<form><label class="m1v3-control">Pytanie, które zadaję najrzadziej<select name="question" required><option value="">Wybierz pytanie</option>${questions.map((q,i)=>`<option value="${i}">${q}</option>`).join('')}</select></label><label class="m1v3-control">Najbliższy powód<select name="reason" required><option value="">Wybierz powód</option>${reasons.map((q,i)=>`<option value="${i}">${q}</option>`).join('')}</select></label><label class="m1v3-control">Własna notatka - opcjonalnie<textarea name="note" maxlength="250"></textarea></label><div class="m1v3-actions"><button class="m1v3-button" type="submit">Zapisz refleksję</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń</button></div></form>`;
       host.innerHTML=activityShell('1.2','1.2','Które pytanie zadaję najrzadziej?','Refleksja bez punktacji.',body); const form=host.querySelector('form'); restoreRecord(host);
       form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const q=questions[Number(form.question.value)];const prompts=['Przy ważnej wiadomości ustal autora i cel przed oceną nagłówka.','Nie chodzi tylko o korzyść finansową: może nią być zasięg, wpływ lub chaos.','Zapytaj, jaki dokument, dane albo pełne nagranie pozwoliłyby to potwierdzić.'];const tip=q.includes('dowody')?prompts[2]:q.includes('zyskuje')?prompts[1]:'Spróbuj użyć tego pytania przy następnej ważnej wiadomości.';finish(host,form,null,null,`${esc(q)} ${tip}`);});
       host.querySelector('[data-skip]').addEventListener('click',()=>finish(host,form,null,null,'Refleksja została świadomie pominięta.'));
@@ -396,14 +396,14 @@
         {position:3, text:'Zrzut samego nagłówka: „PUP Wola zamknięty 14 sierpnia”. Nie widać linku, godzin, powodu ani informacji o usługach online.', rationale:'Zrzut zachowuje nazwę urzędu i datę, lecz usuwa link, godziny, powód i informację o działających usługach online.'}
       ];
       const positionOptions=[
-        ['1','1 — początek: pełny komunikat oficjalny'],
-        ['2','2 — pierwsze, jeszcze rzetelne skrócenie'],
-        ['3','3 — sam nagłówek lub zrzut bez pełnego źródła'],
-        ['4','4 — wiadomość przekazana bez źródła i ważnych szczegółów'],
-        ['5','5 — końcowe uogólnienie zmieniające znaczenie']
+        ['1','1 - początek: pełny komunikat oficjalny'],
+        ['2','2 - pierwsze, jeszcze rzetelne skrócenie'],
+        ['3','3 - sam nagłówek lub zrzut bez pełnego źródła'],
+        ['4','4 - wiadomość przekazana bez źródła i ważnych szczegółów'],
+        ['5','5 - końcowe uogólnienie zmieniające znaczenie']
       ];
       const body=`<form><div class="m1v3-reference"><p><strong>Ułóż historię wiadomości.</strong> Przeczytaj pięć wersji i ustaw je od pełnego komunikatu do zniekształconego uogólnienia.</p><p><strong>Wskazówka:</strong> zacznij od wersji, która ma autora, datę, godziny i link. Na końcu ustaw wersję, która mówi o wszystkich urzędach, chociaż źródło dotyczyło tylko jednego.</p></div>${cards.map((c,i)=>`<label class="m1v3-row"><p><strong>Tekst ${String.fromCharCode(65+i)}.</strong> ${c.text}</p><select name="pos${i}" required><option value="">Wybierz miejsce w kolejności</option>${positionOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select><span class="m1v3-item-feedback" data-order-feedback="${i}"></span></label>`).join('')}<div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź kolejność</button></div></form>`;
-      host.innerHTML=activityShell('1.3','1.3','Jak wiadomość zmienia się po drodze?','Ułóż pięć wersji tej samej wiadomości — od pełnego komunikatu do zniekształconego uogólnienia.',body);const form=host.querySelector('form');restoreRecord(host);
+      host.innerHTML=activityShell('1.3','1.3','Jak wiadomość zmienia się po drodze?','Ułóż pięć wersji tej samej wiadomości - od pełnego komunikatu do zniekształconego uogólnienia.',body);const form=host.querySelector('form');restoreRecord(host);
       let wrongOrder=[];
       const secondChance=setupSecondChance(host,{
         onRetryFocus:()=>host.querySelector('.m1v3-row.is-incorrect select')?.focus(),
@@ -460,8 +460,8 @@
     },
     '1.5'(host) {
       const people=[
-        {id:'A',title:'Osoba A — szuka praktycznych informacji',text:'W ostatnim tygodniu otwierała dłuższe poradniki o bezpiecznym korzystaniu z AI, zapisała oficjalny przewodnik o ochronie danych i poświęcała więcej czasu materiałom pokazującym konkretne zastosowania. Alarmujące krótkie filmy zwykle szybko pomijała.'},
-        {id:'B',title:'Osoba B — zatrzymuje się przy alarmujących materiałach',text:'W ostatnim tygodniu oglądała do końca krótkie filmy o zagrożeniach związanych z AI, reagowała na materiały o utracie miejsc pracy i otwierała kolejne nagrania o błędach systemów. Rzadko przechodziła do dokumentów podanych w opisach.'}
+        {id:'A',title:'Osoba A - szuka praktycznych informacji',text:'W ostatnim tygodniu otwierała dłuższe poradniki o bezpiecznym korzystaniu z AI, zapisała oficjalny przewodnik o ochronie danych i poświęcała więcej czasu materiałom pokazującym konkretne zastosowania. Alarmujące krótkie filmy zwykle szybko pomijała.'},
+        {id:'B',title:'Osoba B - zatrzymuje się przy alarmujących materiałach',text:'W ostatnim tygodniu oglądała do końca krótkie filmy o zagrożeniach związanych z AI, reagowała na materiały o utracie miejsc pracy i otwierała kolejne nagrania o błędach systemów. Rzadko przechodziła do dokumentów podanych w opisach.'}
       ];
       const cards=[
         {text:'Długi poradnik: „Jak sprawdzać odpowiedzi AI w pracy urzędowej?”',correct:'A',wrong:'To spokojny materiał instruktażowy. Porównaj go z tym, jak każda osoba korzystała z poradników i krótkich filmów.',rationale:'Osoba A otwierała dłuższe poradniki i poświęcała czas konkretnym zastosowaniom, dlatego ten materiał lepiej odpowiada sygnałom z jej ostatniej aktywności.'},
@@ -544,7 +544,7 @@
           conclusionFeedback.className='m1v3-item-feedback is-revealed';
         }
         retryChoice.hidden=true;
-        setFeedback(host,'<strong>Poprawne odpowiedzi zostały odsłonięte</strong>Porównaj je ze swoimi wyborami. Odsłonięcie rozwiązania nie zmienia zaznaczonych odpowiedzi — możesz je poprawić i wykonać zadanie ponownie.','warning');
+        setFeedback(host,'<strong>Poprawne odpowiedzi zostały odsłonięte</strong>Porównaj je ze swoimi wyborami. Odsłonięcie rozwiązania nie zmienia zaznaczonych odpowiedzi - możesz je poprawić i wykonać zadanie ponownie.','warning');
       });
       form.addEventListener('change',()=>{retryChoice.hidden=true;});
     },
@@ -636,7 +636,7 @@
     },
     '1.8'(host) {
       const stages=[['search','Wyszukiwanie','Sformułuję drugie zapytanie i otworzę materiał pierwotny.'],['selection','Wybór','Porównam źródło spoza mojego zwykłego strumienia.'],['summary','Streszczenie','Sprawdzę w oryginale ważne twierdzenie i zastrzeżenie.'],['interpretation','Interpretacja','Oddzielę odpowiedź narzędzia od dowodów.'],['creation','Tworzenie','Przeczytam, poprawię i zweryfikuję materiał przed publikacją.'],['sharing','Udostępnienie','Zachowam ręczne zatwierdzenie przed wysłaniem.']];
-      const body=`<form><label class="m1v3-control">Etap, na którym najczęściej korzystam z pomocy narzędzia<select name="stage" required><option value="">Wybierz etap</option>${stages.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join('')}</select></label><label class="m1v3-control">Proponowany krok — pojawi się po wyborze etapu<select name="step" required><option value="">Najpierw wybierz etap</option></select></label><label class="m1v3-control">Własna notatka – opcjonalnie<textarea name="note" maxlength="300"></textarea></label><div class="m1v3-actions"><button class="m1v3-button" type="submit">Zapisz refleksję</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń</button></div></form>`;
+      const body=`<form><label class="m1v3-control">Etap, na którym najczęściej korzystam z pomocy narzędzia<select name="stage" required><option value="">Wybierz etap</option>${stages.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join('')}</select></label><label class="m1v3-control">Proponowany krok - pojawi się po wyborze etapu<select name="step" required><option value="">Najpierw wybierz etap</option></select></label><label class="m1v3-control">Własna notatka - opcjonalnie<textarea name="note" maxlength="300"></textarea></label><div class="m1v3-actions"><button class="m1v3-button" type="submit">Zapisz refleksję</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń</button></div></form>`;
       host.innerHTML=activityShell('1.8','1.8','Na którym etapie polegam na narzędziu?','Refleksja MAIL/AILit bez punktacji.',body);const form=host.querySelector('form');
       const update=()=>{const found=stages.find(x=>x[0]===form.stage.value);form.step.innerHTML=found?`<option value="${esc(found[2])}">${found[2]}</option>`:'<option value="">Najpierw wybierz etap</option>';};
       form.stage.addEventListener('change',update); restoreRecord(host); update(); const rec=state.activities['1.8']; if(rec?.values?.step)form.step.value=rec.values.step;
@@ -650,9 +650,9 @@
       const blind=['Treść przesłana przez zaufaną osobę','Treść zgodna z moimi przekonaniami','Treść wywołująca strach lub oburzenie','Profesjonalny wygląd materiału','Wysoka liczba reakcji','Pewna i konkretna odpowiedź AI','Nie potrafię jeszcze wskazać'];
       const freqOpts='<option value="">Wybierz</option><option value="0">ani razu</option><option value="1">sporadycznie</option><option value="2">kilka razy</option><option value="3">często</option>';
       const scaleOpts='<option value="">Wybierz</option>'+[1,2,3,4,5].map(n=>`<option value="${n}">${n}</option>`).join('');
-      const body=`<form><fieldset class="m1v3-fieldset"><legend>A. Kanały z ostatnich 24 godzin</legend><div class="m1v3-options is-grid">${channels.map((x,i)=>option(String(i),x,'channels','checkbox')).join('')}</div></fieldset><fieldset class="m1v3-fieldset"><legend>B. Kto najczęściej decydował o widoczności?</legend>${[['self','Ja – aktywny wybór'],['person','Inna osoba'],['platform','Platforma'],['ai','AI']].map(x=>`<label class="m1v3-row"><p>${x[1]}</p><select name="freq_${x[0]}" required>${freqOpts}</select></label>`).join('')}</fieldset><fieldset class="m1v3-fieldset"><legend>C. Mój ekosystem źródeł</legend><div class="m1v3-options is-grid">${sources.map((x,i)=>option(String(i),x,'sources','checkbox')).join('')}</div></fieldset><fieldset class="m1v3-fieldset"><legend>D. Nawyki weryfikacyjne (1 – prawie nigdy, 5 – prawie zawsze)</legend>${habits.map((x,i)=>`<label class="m1v3-row"><p>${x}</p><select name="habit${i}" required>${scaleOpts}</select></label>`).join('')}</fieldset><fieldset class="m1v3-fieldset"><legend>E. Możliwa ślepa plamka</legend><div class="m1v3-options">${blind.map((x,i)=>option(String(i),x,'blind')).join('')}</div></fieldset><div class="m1v3-actions"><button class="m1v3-button" type="submit">Pokaż mój punkt wyjścia</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń diagnozę</button></div></form>`;
+      const body=`<form><fieldset class="m1v3-fieldset"><legend>A. Kanały z ostatnich 24 godzin</legend><div class="m1v3-options is-grid">${channels.map((x,i)=>option(String(i),x,'channels','checkbox')).join('')}</div></fieldset><fieldset class="m1v3-fieldset"><legend>B. Kto najczęściej decydował o widoczności?</legend>${[['self','Ja - aktywny wybór'],['person','Inna osoba'],['platform','Platforma'],['ai','AI']].map(x=>`<label class="m1v3-row"><p>${x[1]}</p><select name="freq_${x[0]}" required>${freqOpts}</select></label>`).join('')}</fieldset><fieldset class="m1v3-fieldset"><legend>C. Mój ekosystem źródeł</legend><div class="m1v3-options is-grid">${sources.map((x,i)=>option(String(i),x,'sources','checkbox')).join('')}</div></fieldset><fieldset class="m1v3-fieldset"><legend>D. Nawyki weryfikacyjne (1 - prawie nigdy, 5 - prawie zawsze)</legend>${habits.map((x,i)=>`<label class="m1v3-row"><p>${x}</p><select name="habit${i}" required>${scaleOpts}</select></label>`).join('')}</fieldset><fieldset class="m1v3-fieldset"><legend>E. Możliwa ślepa plamka</legend><div class="m1v3-options">${blind.map((x,i)=>option(String(i),x,'blind')).join('')}</div></fieldset><div class="m1v3-actions"><button class="m1v3-button" type="submit">Pokaż mój punkt wyjścia</button><button class="m1v3-button is-secondary" type="button" data-skip>Pomiń diagnozę</button></div></form>`;
       host.innerHTML=activityShell('1.9','1.9','Mój punkt wyjścia','Neutralna diagnoza kanałów, źródeł i nawyków.',body);const form=host.querySelector('form');restoreRecord(host);
-      form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity()||!requireRadios(form,['blind'])){setFeedback(host,'Uzupełnij pola albo wybierz „Pomiń diagnozę”.','warning');return;}const ch=[...form.querySelectorAll('[name="channels"]:checked')];const src=[...form.querySelectorAll('[name="sources"]:checked')];if(!ch.length||!src.length){setFeedback(host,'Zaznacz co najmniej jeden kanał i jedną grupę źródeł.','warning');return;}const active=Number(form.freq_self.value);const passive=Number(form.freq_person.value)+Number(form.freq_platform.value)+Number(form.freq_ai.value);const avg=habits.reduce((sum,_,i)=>sum+Number(form[`habit${i}`].value),0)/habits.length;const blindText=blind[Number(form.querySelector('[name="blind"]:checked').value)];let route=active>passive/3?'Często samodzielnie wybierasz temat lub źródło.':'Wiele informacji dociera przez osoby, platformy lub AI; warto zauważać drogę dotarcia.';let diversity=src.length<=2?'Twój zestaw typów źródeł jest dość wąski.':src.length<=4?'Korzystasz z kilku grup źródeł.':'Korzystasz z wielu grup źródeł; sprawdzaj ich niezależność.';let habitsText=avg>=4?'Większość nawyków weryfikacyjnych deklarujesz jako częste.':avg>=2.7?'Nawyki stosujesz nieregularnie – wybierz jeden krok do utrwalenia.':'Największą przestrzeń do praktyki stanowi regularne docieranie do źródła i porównanie.';const summary=`${route} ${diversity} ${habitsText} Punkt obserwacji: ${blindText}.`;finish(host,form,null,null,summary,'success',{diagnosis:{channels:ch.map(x=>x.value),sources:src.map(x=>x.value),average:avg,blind:blindText}});});
+      form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity()||!requireRadios(form,['blind'])){setFeedback(host,'Uzupełnij pola albo wybierz „Pomiń diagnozę”.','warning');return;}const ch=[...form.querySelectorAll('[name="channels"]:checked')];const src=[...form.querySelectorAll('[name="sources"]:checked')];if(!ch.length||!src.length){setFeedback(host,'Zaznacz co najmniej jeden kanał i jedną grupę źródeł.','warning');return;}const active=Number(form.freq_self.value);const passive=Number(form.freq_person.value)+Number(form.freq_platform.value)+Number(form.freq_ai.value);const avg=habits.reduce((sum,_,i)=>sum+Number(form[`habit${i}`].value),0)/habits.length;const blindText=blind[Number(form.querySelector('[name="blind"]:checked').value)];let route=active>passive/3?'Często samodzielnie wybierasz temat lub źródło.':'Wiele informacji dociera przez osoby, platformy lub AI; warto zauważać drogę dotarcia.';let diversity=src.length<=2?'Twój zestaw typów źródeł jest dość wąski.':src.length<=4?'Korzystasz z kilku grup źródeł.':'Korzystasz z wielu grup źródeł; sprawdzaj ich niezależność.';let habitsText=avg>=4?'Większość nawyków weryfikacyjnych deklarujesz jako częste.':avg>=2.7?'Nawyki stosujesz nieregularnie - wybierz jeden krok do utrwalenia.':'Największą przestrzeń do praktyki stanowi regularne docieranie do źródła i porównanie.';const summary=`${route} ${diversity} ${habitsText} Punkt obserwacji: ${blindText}.`;finish(host,form,null,null,summary,'success',{diagnosis:{channels:ch.map(x=>x.value),sources:src.map(x=>x.value),average:avg,blind:blindText}});});
       host.querySelector('[data-skip]').addEventListener('click',()=>finish(host,form,null,null,'Diagnoza została świadomie pominięta. Możesz wrócić do niej później.'));
     },
     '1.10'(host) {

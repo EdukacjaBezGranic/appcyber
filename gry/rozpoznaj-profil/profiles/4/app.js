@@ -10,7 +10,7 @@
   const messages = {
     bot: {
       className: 'incorrect',
-      title: 'Nie tym razem — za kontem stoi prawdziwa osoba.',
+      title: 'Nie tym razem - za kontem stoi prawdziwa osoba.',
       body: 'Anonimowość, agresywny język i publikowanie fałszu nie oznaczają automatycznie, że konto jest botem. Ten profil zarabia na zasięgu i oburzeniu.'
     },
     creator: {

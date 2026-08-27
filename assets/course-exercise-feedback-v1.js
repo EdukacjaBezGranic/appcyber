@@ -52,7 +52,7 @@
     ],
     'm4-extension-sift': [
       ['m2-e3-stop', 'pause', 'Presja słów „PILNE” i „udostępnij, zanim usuną” jest powodem do zatrzymania reakcji. Udostępnienie „ostrzegawcze” nadal zwiększyłoby zasięg niezweryfikowanego twierdzenia.'],
-      ['m2-e3-investigate', 'check', 'Z samego tekstu nie wiadomo, kto prowadzi konto ani jaka jest domena. Nie można jeszcze uznać kanału za oficjalny ani przesądzić, że się podszywa — trzeba to sprawdzić.'],
+      ['m2-e3-investigate', 'check', 'Z samego tekstu nie wiadomo, kto prowadzi konto ani jaka jest domena. Nie można jeszcze uznać kanału za oficjalny ani przesądzić, że się podszywa - trzeba to sprawdzić.'],
       ['m2-e3-find', 'todo', 'Opis ćwiczenia nie informuje, że wykonano już wyszukiwanie w innych źródłach. Uczciwa odpowiedź na tym etapie brzmi: jeszcze nie sprawdzono.'],
       ['m2-e3-trace', 'todo', 'Nie podano pierwotnego dokumentu ani pełnego komunikatu. Najpierw trzeba go poszukać, zamiast zgadywać, czy istnieje.'],
       ['m2-e3-decision', ['verify', 'ignore'], 'Bez potwierdzenia nie należy rozpowszechniać komunikatu. Można kontynuować sprawdzanie albo świadomie go nie przekazywać; sprostowanie wymagałoby już wiarygodnego źródła.']
@@ -269,7 +269,7 @@
       retryChoice.hidden = true;
       const summary = actions.querySelector('[data-exercise-feedback-summary]');
       summary.className = 'exercise-review-summary is-warning';
-      summary.textContent = 'Poprawne odpowiedzi zostały odsłonięte. Zaznaczenia nie zostały zmienione — możesz je poprawić i wykonać zadanie ponownie.';
+      summary.textContent = 'Poprawne odpowiedzi zostały odsłonięte. Zaznaczenia nie zostały zmienione - możesz je poprawić i wykonać zadanie ponownie.';
     });
   });
 })();

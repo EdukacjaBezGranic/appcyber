@@ -1,5 +1,5 @@
 /*
-  EDUKACJA BEZ GRANIC — subtelne ujawnianie sekcji.
+  EDUKACJA BEZ GRANIC - subtelne ujawnianie sekcji.
   Skrypt jest wyłącznie warstwą prezentacyjną i nie ingeruje w logikę portalu.
 */
 (() => {

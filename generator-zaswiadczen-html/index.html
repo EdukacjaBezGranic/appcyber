@@ -19,19 +19,19 @@
 <label>Rodzaj certyfikatu
         <select id="templateSelect">
 <option value="ebg">Edukacja bez granic</option>
-<option value="k40">Kierunek – Kompetencje 4.0</option>
-<option value="wup">WUP Katowice – Fundusze Europejskie</option>
+<option value="k40">Kierunek - Kompetencje 4.0</option>
+<option value="wup">WUP Katowice - Fundusze Europejskie</option>
 </select>
 </label>
 <div class="segmented"><button class="active" data-side="front">Przód</button><button data-side="back">Tył</button></div>
 </section>
 <section class="card">
 <h2>2. Treść certyfikatu</h2>
-<label>Lista uczestników — jedna osoba w wierszu<textarea id="peopleList" placeholder="Jan Kowalski
+<label>Lista uczestników - jedna osoba w wierszu<textarea id="peopleList" placeholder="Jan Kowalski
 Anna Nowak" rows="7">Jan Kowalski
 Anna Nowak</textarea></label>
 <p class="hint"><strong id="peopleCount">2 osoby</strong> · Podgląd pokazuje pierwszą osobę z listy.</p>
-<label>Numer certyfikatu — wzór z symbolem {N}<input id="certPattern" type="text" value="WUP/2026/{N}"/></label>
+<label>Numer certyfikatu - wzór z symbolem {N}<input id="certPattern" type="text" value="WUP/2026/{N}"/></label>
 <div class="grid2">
 <label>Numer początkowy<input id="startN" min="0" type="number" value="1"/></label>
 <label>Liczba cyfr<input id="padN" max="8" min="1" type="number" value="3"/></label>
@@ -43,7 +43,7 @@ Anna Nowak</textarea></label>
 </div>
 <label>Miejsce<input id="place" type="text" value="Katowice"/></label>
 <label>Tekst dodatkowy<textarea id="extraText" rows="3">Zaświadczenie potwierdza ukończenie szkolenia.</textarea></label>
-<label>Osoby prowadzące — każda w nowym wierszu<textarea id="trainersList" placeholder="Imię i nazwisko prowadzącego" rows="3"></textarea></label>
+<label>Osoby prowadzące - każda w nowym wierszu<textarea id="trainersList" placeholder="Imię i nazwisko prowadzącego" rows="3"></textarea></label>
 <label>Program / treść na odwrocie<textarea id="programText" rows="8">Program szkolenia:
 1. Edukacja medialna i informacyjna
 2. Mechanizmy dezinformacji
@@ -85,9 +85,9 @@ w Katowicach</textarea></label>
 </section>
 <section class="card actions">
 <h2>6. Generowanie seryjne</h2>
-<button class="primary" id="pdfCombined">PDF zbiorczy — wszystkie osoby</button>
-<button class="secondary" id="pdfSeparate">Osobne PDF-y — każda osoba</button>
-<button class="secondary" id="attendancePdf">Lista obecności PDF — tło projektu</button>
+<button class="primary" id="pdfCombined">PDF zbiorczy - wszystkie osoby</button>
+<button class="secondary" id="pdfSeparate">Osobne PDF-y - każda osoba</button>
+<button class="secondary" id="attendancePdf">Lista obecności PDF - tło projektu</button>
 <button class="light" id="csvExport">Wykaz certyfikatów CSV</button>
 <button class="primary" id="trainingPackage">Przygotuj paczkę dokumentacji szkolenia</button>
 <p class="hint" id="batchStatus">Gotowy do generowania.</p>
