@@ -43,19 +43,12 @@
       ['m4-e43-known', 'video', 'Na tym etapie wiemy tylko, że istnieje nagranie przedstawiające niejasne zdarzenie. Atak, miejsce, data i autor nie zostały potwierdzone.'],
       ['m4-e43-verify', 'all', 'Metadane, analiza kadrów, wyszukiwanie wsteczne i wiarygodne źródła wzajemnie się uzupełniają. Żadna pojedyncza metoda nie daje tu pełnej pewności.'],
       ['m4-e43-harm', 'yes', 'Widoczne twarze, tablice i otoczenie mogą ujawnić tożsamość lub lokalizację ludzi, dlatego ryzyko szkody jest realne.'],
-      ['m4-e43-alternative', 'notchecked', 'Opis nie mówi, czy sprawdzono bezpieczniejsze, zweryfikowane źródło. Uczciwa odpowiedź brzmi więc: jeszcze tego nie sprawdzono.'],
+      ['m4-e43-alternative', 'safer', 'Jeśli materiał może ujawniać tożsamość lub lokalizację osób, samo pytanie „czy to prawda?” nie wystarcza. Trzeba również poszukać zweryfikowanego źródła, które nie zwiększa niepotrzebnie ryzyka szkody.'],
       ['m4-e43-decision', 'verify', 'Przed potwierdzeniem miejsca, czasu i zdarzenia nie należy zwiększać zasięgu nagrania. Najpierw potrzebna jest weryfikacja i ocena ryzyka dla widocznych osób.']
     ],
     'm3-9-dane-i-statystyki': [
       ['m3-e33-alt', 'several', 'Wzrost liczby skarg może wynikać z pogorszenia usługi, łatwiejszego zgłaszania, większej liczby użytkowników albo zmiany sposobu liczenia. Sam procent nie rozstrzyga przyczyny.'],
       ['m3-e33-conclusion', 'unknown', 'Bez wartości początkowej, liczby użytkowników, okresu i metody nie można ocenić, czy system działa lepiej lub gorzej. Nie ma też podstaw, aby uznać dane za fałszywe.']
-    ],
-    'm4-extension-sift': [
-      ['m2-e3-stop', 'pause', 'Presja słów „PILNE” i „udostępnij, zanim usuną” jest powodem do zatrzymania reakcji. Udostępnienie „ostrzegawcze” nadal zwiększyłoby zasięg niezweryfikowanego twierdzenia.'],
-      ['m2-e3-investigate', 'check', 'Z samego tekstu nie wiadomo, kto prowadzi konto ani jaka jest domena. Nie można jeszcze uznać kanału za oficjalny ani przesądzić, że się podszywa - trzeba to sprawdzić.'],
-      ['m2-e3-find', 'todo', 'Opis ćwiczenia nie informuje, że wykonano już wyszukiwanie w innych źródłach. Uczciwa odpowiedź na tym etapie brzmi: jeszcze nie sprawdzono.'],
-      ['m2-e3-trace', 'todo', 'Nie podano pierwotnego dokumentu ani pełnego komunikatu. Najpierw trzeba go poszukać, zamiast zgadywać, czy istnieje.'],
-      ['m2-e3-decision', ['verify', 'ignore'], 'Bez potwierdzenia nie należy rozpowszechniać komunikatu. Można kontynuować sprawdzanie albo świadomie go nie przekazywać; sprostowanie wymagałoby już wiarygodnego źródła.']
     ],
     'm2-16-praktyczny-przyklad-do-analizy': [
       ['m2-p16-source', 'no', 'Post nie podaje autora fotografii, dokładnego miejsca ani daty wykonania zdjęcia.'],

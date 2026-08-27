@@ -112,6 +112,7 @@
   }
 
   function setComplete(id, value = true) {
+    if (!currentSectionIds.has(id)) return;
     if (value) completed.add(id); else completed.delete(id);
     document.querySelector(`[data-course-section="${CSS.escape(id)}"]`)?.classList.toggle('is-complete', value);
     document.querySelector(`[data-section-link="${CSS.escape(id)}"]`)?.classList.toggle('is-complete', value);

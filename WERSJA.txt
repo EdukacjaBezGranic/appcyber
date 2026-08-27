@@ -1,2 +1,2 @@
-V159 - 2026-08-27
-Rozszerzenie słownika kontekstowego: krótkie tooltipy przy najważniejszych terminach specjalistycznych, bez usuwania ani skracania treści kursu; hover na laptopie oraz focus/klik na urządzeniach dotykowych i klawiaturze.
+V164 - 2026-08-27
+Pełny audyt responsywności kursu online na telefonach i tabletach. Zmniejszono i ujednolicono boczne marginesy, usunięto historyczne jednostronne wcięcia iPad, przebudowano tabletowy nagłówek i zachowanie planu kursu, wyrównano szerokości kart, ćwiczeń, formularzy i bloków informacyjnych oraz zabezpieczono tabele i tooltipy przed poziomym overflow. Zweryfikowano szerokości 360, 390, 430, 768, 820, 1024 i 1194 px.
