@@ -1,0 +1,99 @@
+001	Nasze szkolenia - Edukacja bez granic
+002	Start
+003	Nasze szkolenia
+004	Zapisy na szkolenia
+005	Kursy online
+006	Kontakt
+007	Sprawdzone działania Wojewódzkiego Urzędu Pracy w Katowicach
+008	Szkolenia, za którymi stoją doświadczenie i
+009	realna praktyka
+010	Szkolenie ma zmieniać sposób działania — samo zapełnienie kalendarza niczego nie rozwiązuje. Prowadzimy bezpłatne zajęcia dla pracowników publicznych służb zatrudnienia, instytucji, organizacji i osób dorosłych. Łączymy doświadczenie zespołu, potrzeby uczestników i rezultaty projektów Erasmus+, aby po zajęciach można było od razu wykorzystać poznane metody.
+011	Zobacz aktualne zapisy
+012	Porozmawiajmy o szkoleniu
+013	Bezpłatnie
+014	Udział w organizowanych szkoleniach nie wymaga opłat od uczestników.
+015	Praktycznie
+016	Ćwiczenia, przykłady i narzędzia są dobierane do rzeczywistych sytuacji zawodowych.
+017	Dla różnych grup
+018	Szkolimy pracowników PSZ, jednostek samorządu, instytucji, organizacji i osoby dorosłe.
+019	Wysoko oceniane
+020	Uczestnicy doceniają przygotowanie prowadzących, użyteczność materiałów i praktyczny charakter zajęć.
+021	Sprawdzone doświadczenie
+022	Nie zaczynamy od teorii.
+023	Programy wyrastają z przeprowadzonych szkoleń i pracy z różnymi środowiskami.
+024	Prowadziliśmy zajęcia dla pracowników Wojewódzkiego Urzędu Pracy, powiatowych urzędów pracy, samorządów, instytucji i organizacji. Pracujemy z zespołami wewnętrznymi oraz grupami zewnętrznymi.
+025	Najpierw rozpoznajemy potrzeby grupy. Następnie łączymy je z doświadczeniami z projektów Erasmus+ i informacjami zwrotnymi z wcześniejszych zajęć. Po każdej edycji aktualizujemy materiały i dopasowujemy przykłady do pracy uczestników.
+026	Dla kogo
+027	Szkolenia dopasowane
+028	do środowiska i zadań uczestników
+029	01
+030	Publiczne służby zatrudnienia
+031	Pracownicy WUP i PUP, doradcy, pośrednicy pracy, kadra kierownicza i zespoły projektowe.
+032	02
+033	Instytucje publiczne i samorząd
+034	Jednostki samorządu terytorialnego oraz instytucje realizujące zadania społeczne, edukacyjne i rozwojowe.
+035	03
+036	Organizacje i zespoły
+037	Podmioty, które chcą rozwijać kompetencje cyfrowe, komunikacyjne, społeczne i edukacyjne swoich pracowników.
+038	04
+039	Osoby dorosłe
+040	Uczestnicy rozwijający kompetencje potrzebne w pracy, uczeniu się i świadomym funkcjonowaniu w środowisku cyfrowym.
+041	Zakres tematyczny
+042	Kompetencje potrzebne dziś i w przyszłości
+043	Rozwijamy ofertę etapami, reagując na problemy zgłaszane przez pracowników i instytucje. Każdy temat łączy wiedzę z zadaniem, przykładem lub narzędziem do użycia w pracy.
+044	Sztuczna inteligencja
+045	Bezpieczne i praktyczne wykorzystanie narzędzi AI w pracy, edukacji i przygotowywaniu materiałów.
+046	Media literacy i fake news
+047	Krytyczne myślenie, rozpoznawanie manipulacji, fact-checking, deepfake i ocena źródeł.
+048	Cyberbezpieczeństwo
+049	Rozpoznawanie zagrożeń, ochrona danych i bezpieczne zachowania w środowisku cyfrowym.
+050	SEL i kompetencje społeczne
+051	Samoświadomość, relacje, regulacja emocji i budowanie bezpiecznego środowiska współpracy.
+052	05
+053	Komunikacja i wystąpienia publiczne
+054	Struktura wypowiedzi, praca z głosem, storytelling i świadome reagowanie na napięcie.
+055	06
+056	Gamifikacja i game-based learning
+057	Projektowanie angażujących szkoleń, ćwiczeń i aktywnych metod uczenia się dorosłych.
+058	07
+059	Mindfulness
+060	Uważność, zarządzanie napięciem i wzmacnianie dobrostanu w pracy zawodowej.
+061	08
+062	Kompetencje 4C
+063	Krytyczne myślenie, komunikacja, współpraca i kreatywność w rozwiązywaniu problemów.
+064	Jak pracujemy
+065	Prezentacja to początek.
+066	Szkolenie kończy się konkretnym działaniem
+067	Rozpoznajemy potrzeby
+068	Pytamy o zadania grupy, jej doświadczenia i sytuacje z codziennej pracy. Na tej podstawie dobieramy zakres i przykłady.
+069	Angażujemy uczestników
+070	Uczestnicy rozwiązują zadania, analizują studia przypadków, dyskutują i pracują w grupach.
+071	Dajemy gotowe materiały
+072	Po zajęciach uczestnicy zachowują materiały i narzędzia, z których mogą korzystać w swojej pracy.
+073	Oceniamy i doskonalimy
+074	Sprawdzamy wyniki testów, analizujemy ankiety i czytamy uwagi uczestników. Na tej podstawie poprawiamy kolejne edycje.
+075	Szkolenia w praktyce
+076	Praca z grupą, ćwiczenia i wymiana doświadczeń
+077	Rozwój oferty szkoleniowej w ramach działań projektowych
+078	Szkolenia z praktycznego wykorzystania sztucznej inteligencji
+079	Ćwiczenia i praca z narzędziami cyfrowymi
+080	Warsztatowa praca nad komunikacją i współpracą
+081	Co uczestnicy doceniają
+082	Przygotowanie, praktyczne przykłady i możliwość zastosowania wiedzy od razu
+083	Jasne wyjaśnienia
+084	nawet w przypadku złożonych i nowych zagadnień.
+085	Przydatne narzędzia
+086	możliwe do wykorzystania po zakończeniu zajęć.
+087	Aktywną formę
+088	opartą na ćwiczeniach, przykładach i rozmowie.
+089	Dostosowanie do grupy
+090	zamiast jednego, niezmiennego scenariusza.
+091	Współpraca
+092	Chcesz zorganizować szkolenie dla swojej instytucji lub zespołu?
+093	Napisz lub zadzwoń. Porozmawiamy o potrzebach grupy, zakresie szkolenia i możliwych terminach.
+094	Skontaktuj się z nami
+095	Sprawdź zapisy
+096	Edukacja bez granic
+097	Portal Wojewódzkiego Urzędu Pracy w Katowicach rozwijany na podstawie doświadczeń projektów Erasmus+.
+098	Strona główna
+099	Panel trenera

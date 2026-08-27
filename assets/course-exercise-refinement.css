@@ -83,8 +83,19 @@
 .choice-card > span small{color:#607888;font-weight:500;line-height:1.4}
 .habit-result{margin-top:1rem}
 .habit-result strong{font-size:1.05rem}
+.habit-result.is-partial{border-color:#d7bd79;background:#fffaf0}
+.habit-step-status{margin:.85rem 0 0;padding:.72rem .85rem;border:1px solid #d7e1e7;border-radius:11px;background:#f6f9fb;color:#526f80;font-weight:750;line-height:1.4}
+.habit-step-status.is-partial{border-color:#d7bd79;background:#fffaf0;color:#725817}
+.habit-step-status.is-complete{border-color:#9bcdbd;background:#eff9f5;color:#17634d}
+.habit-diagnosis{margin-top:1.25rem;padding:1.2rem 1.25rem;border-width:2px;box-shadow:0 12px 28px rgba(23,79,115,.08)}
+.habit-diagnosis-kicker{margin:0;color:#17634d;font-size:.76rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.habit-profile-intro{margin:0;line-height:1.55}
+.habit-profile-details{display:grid;grid-template-columns:minmax(125px,.32fr) 1fr;gap:.55rem .9rem;margin:.75rem 0 0;padding-top:.75rem;border-top:1px solid rgba(23,79,115,.16)}
+.habit-profile-details dt{color:#174f73;font-weight:800}
+.habit-profile-details dd{margin:0;line-height:1.5}
 .habit-plan-grid .choice-card{align-items:center}
 .habit-selection-note{margin:.55rem 0 0;color:#526f80;font-weight:700}
 .choice-card.is-limit-warning{animation:habit-limit-shake .32s ease 2;border-color:#aa553e;background:#fff5f1}
 .choice-card input:disabled + span{opacity:.55}
 @keyframes habit-limit-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+@media(max-width:620px){.habit-profile-details{grid-template-columns:1fr;gap:.18rem}.habit-profile-details dd{margin-bottom:.5rem}}

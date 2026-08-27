@@ -1,0 +1,100 @@
+.course-section--bibliography .course-section-body{
+  padding-bottom:clamp(34px,5vw,58px);
+}
+.course-bibliography__intro{
+  max-width:88ch!important;
+  margin-bottom:1.5rem!important;
+  padding:1rem 1.1rem;
+  border-left:4px solid var(--module-accent);
+  border-radius:0 12px 12px 0;
+  background:#f1f7f5;
+  color:#294a45;
+}
+.course-bibliography__group{
+  max-width:98ch;
+  margin-top:1.25rem;
+  padding:clamp(18px,3vw,28px);
+  border:1px solid #dce6e2;
+  border-radius:16px;
+  background:#fff;
+}
+.course-bibliography__group h3{
+  margin:0 0 1rem!important;
+  padding:0 0 .75rem!important;
+  border-bottom:1px solid #dce6e2;
+  color:#245f54!important;
+  font-size:clamp(1.08rem,2vw,1.32rem)!important;
+}
+.course-bibliography__group>ol{
+  margin:0;
+  padding-left:1.55rem;
+}
+.course-bibliography__group>ol>li{
+  margin:.8rem 0;
+  padding-left:.25rem;
+  line-height:1.62;
+}
+.course-bibliography__group cite{
+  color:#233e4d;
+}
+.course-bibliography__subheading{
+  display:block;
+  margin:.7rem 0 .3rem;
+  font-weight:800;
+  color:#47605e;
+}
+.course-bibliography__sublist{
+  margin:.35rem 0 .4rem!important;
+  padding-left:1.25rem!important;
+}
+.course-bibliography__note{
+  color:#5b6d75;
+  font-size:.92em;
+}
+.course-bibliography a{
+  overflow-wrap:anywhere;
+  font-weight:750;
+}
+
+.course-section-info-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:.42rem .78rem;
+  border:1px solid rgba(22,135,127,.3);
+  border-radius:999px;
+  background:#e8f7f4;
+  color:#0d5e59;
+  font-size:.78rem;
+  font-weight:800;
+  line-height:1.2;
+  text-align:center;
+}
+.course-audio-infographic:not(.has-started):not(.is-playing) .course-audio-infographic__toggle{
+  border-color:rgba(22,135,127,.55);
+  background:rgba(232,247,244,.97);
+  color:#0d5e59;
+  animation:courseAudioInvite 2.8s ease-in-out infinite;
+}
+.course-audio-infographic:not(.has-started):not(.is-playing) .course-audio-infographic__toggle:hover,
+.course-audio-infographic:not(.has-started):not(.is-playing) .course-audio-infographic__toggle:focus-visible{
+  animation-play-state:paused;
+  background:#dcf3ee;
+}
+@keyframes courseAudioInvite{
+  0%,100%{box-shadow:0 8px 24px rgba(13,94,89,.13),0 0 0 0 rgba(22,135,127,0)}
+  50%{box-shadow:0 10px 28px rgba(13,94,89,.22),0 0 0 8px rgba(22,135,127,.17)}
+}
+@media(max-width:620px){
+  .course-bibliography__group{padding:17px 15px;border-radius:13px}
+  .course-bibliography__group>ol{padding-left:1.25rem}
+  .course-section-info-badge{width:100%;margin-top:.35rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .course-audio-infographic__toggle{animation:none!important}
+}
+@media print{
+  .course-bibliography__group{break-inside:avoid;box-shadow:none}
+  .course-audio-infographic__toggle{animation:none!important}
+}

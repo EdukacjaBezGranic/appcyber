@@ -1,0 +1,14 @@
+/* V115 — global PL/EN switch */
+.site-language-switch{display:flex;align-items:center;gap:5px;margin-left:auto;margin-right:12px;font:800 12px/1 Arial,sans-serif;letter-spacing:.04em;color:#65717a;white-space:nowrap}
+.site-language-switch button{appearance:none;border:0;background:transparent;color:inherit;padding:7px 5px;cursor:pointer;font:inherit;border-radius:6px}
+.site-language-switch button.is-active{color:#EE6C29;background:rgba(238,108,41,.10)}
+.site-language-switch button:focus-visible{outline:2px solid #7AA6B3;outline-offset:2px}
+@media(max-width:900px){.site-language-switch{order:2;margin-left:auto;margin-right:8px}.site-header-inner .nav-toggle{order:3}.site-header-inner .site-branding{order:1}}
+@media(max-width:480px){.site-language-switch{gap:2px;margin-right:4px;font-size:11px}.site-language-switch button{padding:6px 4px}}
+html[lang="en"] .site-nav a{letter-spacing:-.01em}
+html[lang="en"] .home-rd-btn,html[lang="en"] .training-cta a,html[lang="en"] .contact-action{white-space:normal;text-align:center}
+@media(max-width:700px){html[lang="en"] .home-rd-hero h1{font-size:clamp(38px,10.8vw,52px)!important}html[lang="en"] .training-scope h2,html[lang="en"] .contact-collab h2{font-size:clamp(36px,10vw,48px)!important}}
+
+/* V115 privacy/cookie footer links */
+.course-footer-policy-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:.88rem}.course-footer-policy-links a{color:inherit;text-decoration:underline;text-underline-offset:3px}.v67-footer-links,.site-footer-links{flex-wrap:wrap}
+@media(max-width:700px){.course-footer-policy-links{gap:10px 16px;margin-top:14px}.v67-footer-links,.site-footer-links{row-gap:10px}}

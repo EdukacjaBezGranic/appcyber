@@ -1,0 +1,38 @@
+/* V143 — Module 3 narrative flow. Light surfaces always use dark typography. */
+body.course-page.course-portal-aligned .m3-module-opening{margin:0 0 28px;padding:26px 28px;border:1px solid rgba(59,143,115,.18);border-radius:20px;background:#eef6f2;color:#17212b}
+body.course-page.course-portal-aligned .m3-module-opening>span{display:block;font-size:11px;font-weight:850;letter-spacing:.12em;color:#3b8f73}
+body.course-page.course-portal-aligned .m3-module-opening h2{margin:8px 0 10px;color:#17212b;font-size:clamp(25px,3vw,38px);line-height:1.08}
+body.course-page.course-portal-aligned .m3-module-opening p{max-width:78ch;margin:0;color:#3f4c58;line-height:1.7}
+body.course-page.course-portal-aligned .m3-opening-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+body.course-page.course-portal-aligned .m3-opening-flow b{padding:8px 11px;border-radius:10px;background:#fff;color:#17212b;font-size:13px}
+body.course-page.course-portal-aligned .m3-opening-flow i{font-style:normal;color:#df5258;font-weight:900}
+body.course-page.course-portal-aligned .m3-concept-map,body.course-page.course-portal-aligned .m3-proof-note,body.course-page.course-portal-aligned .m3-source-path,body.course-page.course-portal-aligned .m3-grain-truth,body.course-page.course-portal-aligned .m3-language-toolkit,body.course-page.course-portal-aligned .m3-model-4d{margin:20px 0;padding:21px 22px;border:1px solid rgba(23,33,43,.12);border-radius:17px;color:#17212b}
+body.course-page.course-portal-aligned .m3-concept-map{background:#f4f1e8}
+body.course-page.course-portal-aligned .m3-proof-note{background:#deeee8}
+body.course-page.course-portal-aligned .m3-source-path{background:#fff5f3;border-color:rgba(223,82,88,.2)}
+body.course-page.course-portal-aligned .m3-grain-truth{background:#f5e6c9}
+body.course-page.course-portal-aligned .m3-language-toolkit{background:#f4f1e8}
+body.course-page.course-portal-aligned .m3-model-4d{background:#deeee8}
+body.course-page.course-portal-aligned :is(.m3-concept-map,.m3-proof-note,.m3-source-path,.m3-grain-truth,.m3-language-toolkit,.m3-model-4d)>strong{display:block;margin-bottom:8px;color:#17212b;font-size:17px}
+body.course-page.course-portal-aligned :is(.m3-concept-map,.m3-proof-note,.m3-source-path,.m3-grain-truth,.m3-language-toolkit,.m3-model-4d) p{color:#3f4c58;line-height:1.65}
+body.course-page.course-portal-aligned .m3-concept-map>div{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+body.course-page.course-portal-aligned .m3-concept-map>div span{padding:8px 10px;border-radius:999px;background:#fff;color:#17212b;font-size:12px;font-weight:800}
+body.course-page.course-portal-aligned .m3-concept-rule{padding-top:12px;border-top:1px solid rgba(23,33,43,.1)}
+body.course-page.course-portal-aligned .m3-source-path>div,body.course-page.course-portal-aligned .m3-grain-truth>div,body.course-page.course-portal-aligned .m3-language-toolkit>div,body.course-page.course-portal-aligned .m3-model-4d>div{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+body.course-page.course-portal-aligned .m3-language-toolkit>div,body.course-page.course-portal-aligned .m3-model-4d>div{grid-template-columns:repeat(4,1fr)}
+body.course-page.course-portal-aligned :is(.m3-source-path,.m3-grain-truth,.m3-language-toolkit,.m3-model-4d)>div span{display:flex;flex-direction:column;gap:5px;padding:13px;border-radius:12px;background:#fff;color:#17212b;line-height:1.4}
+body.course-page.course-portal-aligned :is(.m3-source-path,.m3-grain-truth,.m3-language-toolkit,.m3-model-4d)>div b{color:#17212b}
+body.course-page.course-portal-aligned :is(.m3-grain-truth,.m3-language-toolkit,.m3-model-4d)>div small{color:#56626d;font-size:12px;line-height:1.45}
+body.course-page.course-portal-aligned .m3-source-path>div span>b{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:#df5258;color:#fff}
+body.course-page.course-portal-aligned .m3-visual-rule{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;padding:20px;border-radius:18px;background:#f4f1e8;color:#17212b;border:1px solid rgba(23,33,43,.12)}
+body.course-page.course-portal-aligned .m3-visual-rule>div{padding:17px;border-radius:13px;background:#fff}
+body.course-page.course-portal-aligned .m3-visual-rule>div strong{display:block;color:#17212b;font-size:17px}
+body.course-page.course-portal-aligned .m3-visual-rule>div p{color:#3f4c58;line-height:1.6}
+body.course-page.course-portal-aligned .m3-visual-rule aside{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:15px 17px;border-left:5px solid #df5258;background:#fff5f3;color:#17212b}
+body.course-page.course-portal-aligned .m3-visual-rule aside b{color:#17212b;white-space:nowrap}
+body.course-page.course-portal-aligned .m3-visual-rule aside span{color:#3f4c58;line-height:1.55}
+body.course-page.course-portal-aligned .m3-flow-summary{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:22px 0;padding:17px 18px;border-radius:16px;background:#eee5c8;color:#17212b}
+body.course-page.course-portal-aligned .m3-flow-summary span{padding:8px 10px;border-radius:10px;background:#fff;color:#17212b;font-weight:760;font-size:13px}
+body.course-page.course-portal-aligned .m3-flow-summary b{color:#df5258}
+@media(max-width:900px){body.course-page.course-portal-aligned .m3-source-path>div,body.course-page.course-portal-aligned .m3-grain-truth>div,body.course-page.course-portal-aligned .m3-language-toolkit>div,body.course-page.course-portal-aligned .m3-model-4d>div{grid-template-columns:1fr 1fr}body.course-page.course-portal-aligned .m3-visual-rule{grid-template-columns:1fr}}
+@media(max-width:620px){body.course-page.course-portal-aligned .m3-module-opening{padding:21px 18px}body.course-page.course-portal-aligned .m3-source-path>div,body.course-page.course-portal-aligned .m3-grain-truth>div,body.course-page.course-portal-aligned .m3-language-toolkit>div,body.course-page.course-portal-aligned .m3-model-4d>div{grid-template-columns:1fr}body.course-page.course-portal-aligned .m3-visual-rule{padding:16px}body.course-page.course-portal-aligned .m3-visual-rule aside{display:block}body.course-page.course-portal-aligned .m3-visual-rule aside b{display:block;margin-bottom:6px;white-space:normal}}

@@ -1,32 +1,26 @@
 (() => {
   'use strict';
 
-  const MODULE_COPY = {
-    1: {
-      area: 'nawyki korzystania ze źródeł',
-      low: 'Twoje odpowiedzi pokazują, że podstawowe nawyki weryfikacji wymagają jeszcze uporządkowania. W kolejnych modułach zwróć szczególną uwagę na porównywanie źródeł, rozpoznawanie wpływu algorytmów i sprawdzanie treści przed udostępnieniem.',
-      mid: 'Masz już część świadomych nawyków informacyjnych, lecz nie stosujesz ich jeszcze jednakowo często. Najwięcej korzyści przyniesie regularne ćwiczenie najsłabiej ocenionego obszaru.',
-      high: 'Twoje odpowiedzi wskazują na dobrze rozwiniętą świadomość źródeł, algorytmów i odpowiedzialnego udostępniania. Utrwalaj te nawyki w sytuacjach, które wywołują silną emocję lub presję czasu.'
+  const ASSESSMENT_COPY = {
+    susceptibility: {
+      area: 'podatność na manipulację',
+      low: 'Warto ćwiczyć rozpoznawanie momentu, w którym emocja, presja czasu, popularność albo zgodność z wcześniejszym przekonaniem przyspieszają ocenę. Najważniejszym nawykiem jest świadoma pauza przed reakcją.',
+      mid: 'Rozpoznajesz część mechanizmów podatności, ale nie wszystkie uruchamiają u Ciebie równie wyraźny sygnał ostrzegawczy. Wybierz jeden najsłabiej oceniony obszar i obserwuj go podczas codziennego korzystania z informacji.',
+      high: 'Twoje odpowiedzi wskazują na dobrą świadomość emocji, błędów poznawczych, efektu powtarzania i społecznego dowodu słuszności. Utrzymuj ten nawyk szczególnie wtedy, gdy treść wywołuje silny gniew, strach lub presję szybkiej reakcji.'
     },
-    2: {
-      area: 'rozpoznawanie manipulacji i weryfikacja',
-      low: 'Warto wrócić do różnicy między błędną informacją a dezinformacją, sygnałów emocjonalnego języka oraz podstaw metody SIFT. Traktuj podejrzaną treść jako sygnał do zatrzymania się, a nie do szybkiej reakcji.',
-      mid: 'Rozpoznajesz część mechanizmów dezinformacji i znasz podstawy weryfikacji. Skup się na regularnym stosowaniu SIFT oraz sprawdzaniu, jak emocje i błędy poznawcze wpływają na Twoją ocenę.',
-      high: 'Twoje odpowiedzi wskazują na dobrą orientację w mechanizmach dezinformacji i praktykach weryfikacyjnych. Zwracaj uwagę na sytuacje, w których presja czasu lub zgodność treści z Twoimi poglądami osłabia czujność.'
+    critical: {
+      area: 'krytyczne myślenie, źródła i decyzje',
+    low: 'Wróć do pytań o źródło, dowody, kontekst i cel decyzji. Przed działaniem doprecyzuj, czego próbujesz się dowiedzieć i czego nadal nie wiesz.',
+      mid: 'Potrafisz stosować część zasad krytycznej oceny, lecz nie wszystkie są jeszcze jednakowo utrwalone. Najwięcej korzyści da regularne porównywanie niezależnych źródeł i sprawdzanie związku między dowodem a wnioskiem.',
+      high: 'Twoje odpowiedzi wskazują na dobrze rozwiniętą ocenę źródeł i dowodów oraz świadome podejmowanie decyzji. Utrzymuj ten standard również przy odpowiedziach AI i informacjach zgodnych z Twoim pierwszym przekonaniem.'
     },
-    3: {
-      area: 'krytyczna ocena źródeł i dowodów',
-      low: 'Wróć do rozróżnienia faktu, opinii i interpretacji oraz do pytań o źródło, dowody i kontekst danych. Przed podjęciem decyzji ustal, czego jeszcze nie wiesz.',
-      mid: 'Potrafisz oceniać część źródeł i argumentów, lecz nie wszystkie elementy analizy są jeszcze utrwalone. Najwięcej uwagi poświęć najsłabiej ocenionej umiejętności.',
-      high: 'Twoje odpowiedzi wskazują na dobrze rozwiniętą ocenę źródeł, danych i argumentów. Utrzymuj ten standard także wtedy, gdy informacja potwierdza Twoje wcześniejsze przekonanie.'
-    },
-    4: {
-      area: 'analiza tematów społecznie wrażliwych',
-      low: 'W tematach wrażliwych wracaj do źródła, kontekstu i języka użytego wobec ludzi. Przed udostępnieniem oceń możliwą szkodę oraz sprawdź, czy przekaz nie opiera się na stereotypie lub pojedynczym przypadku.',
+    sensitive: {
+      area: 'odpowiedzialna komunikacja w tematach wrażliwych',
+      low: 'W tematach wrażliwych wracaj do źródła, kontekstu i języka użytego wobec ludzi. Przed udostępnieniem oceń możliwą szkodę oraz sprawdź, czy przekaz nie opiera się na stereotypie, dehumanizacji lub pojedynczym przypadku.',
       mid: 'Rozpoznajesz część ram interpretacyjnych i zagrożeń etycznych. Utrwalaj analizę języka, obrazów, kontekstu oraz możliwych skutków udostępnienia.',
       high: 'Twoje odpowiedzi wskazują na świadome podejście do tematów społecznie wrażliwych. Zachowuj tę ostrożność szczególnie przy drastycznych nagraniach, treściach o grupach społecznych i materiałach generowanych przez AI.'
     },
-    5: {
+    resilience: {
       area: 'odporność informacyjna i dobrostan',
       low: 'Warto zacząć od prostych granic: ograniczyć częstotliwość sprawdzania wiadomości, rozpoznawać sygnały przeciążenia i robić przerwę przed reakcją na emocjonalną treść.',
       mid: 'Masz część nawyków wspierających odporność informacyjną, lecz nie są jeszcze stabilne. Wybierz jeden obszar do ćwiczenia przez najbliższy tydzień.',
@@ -43,8 +37,9 @@
   const dispatchSave = field => field.dispatchEvent(new Event('input', { bubbles: true }));
 
   document.querySelectorAll('[data-compact-assessment]').forEach(table => {
-    const moduleNumber = Number(table.dataset.compactAssessment || table.closest('[data-module-number]')?.dataset.moduleNumber || 0);
-    const config = MODULE_COPY[moduleNumber] || MODULE_COPY[1];
+    const moduleNumber = Number(table.closest('[data-module-number]')?.dataset.moduleNumber || table.dataset.compactAssessment || 0);
+    const profileKey = table.dataset.assessmentProfile || 'resilience';
+    const config = ASSESSMENT_COPY[profileKey] || ASSESSMENT_COPY.resilience;
     const result = table.closest('.course-section-body')?.querySelector('[data-assessment-result]') || table.parentElement?.nextElementSibling;
     if (!result) return;
 
@@ -54,13 +49,15 @@
     const focus = result.querySelector('[data-assessment-focus]');
     const section = table.closest('.course-section');
 
-    let summaryField = section?.querySelector(`[data-save-key="m${moduleNumber}-self-assessment-summary"]`);
+    const sectionId = section?.dataset.courseSection || `m${moduleNumber}-self-assessment`;
+    let summaryField = section?.querySelector('[data-assessment-summary-field]');
     if (!summaryField && section) {
       summaryField = document.createElement('input');
       summaryField.type = 'hidden';
       summaryField.className = 'course-answer';
-      summaryField.dataset.saveKey = `m${moduleNumber}-self-assessment-summary`;
-      summaryField.dataset.workbookLabel = `Wynik samooceny – Moduł ${moduleNumber}`;
+      summaryField.dataset.assessmentSummaryField = '';
+      summaryField.dataset.saveKey = `${sectionId}-summary-v57`;
+      summaryField.dataset.workbookLabel = `Samoocena – ${section.querySelector('h2')?.textContent.trim() || `Moduł ${moduleNumber}`}`;
       section.querySelector('.course-section-body')?.append(summaryField);
     }
 

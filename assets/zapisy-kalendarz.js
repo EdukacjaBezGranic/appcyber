@@ -1,6 +1,12 @@
 const projectLogo = 'grafiki/logo-projektu-symbol-transparent.png';
 const competencesLogo = 'grafiki/kierunek-kompetencje.png';
 const portalData = window.portalSiteData || {};
+const siteLang = () => localStorage.getItem('ebgSiteLanguageV115') === 'en' ? 'en' : 'pl';
+const siteT = (value) => {
+  const text = String(value ?? '').trim();
+  if (siteLang() !== 'en') return value;
+  return window.EBG_SITE_I18N?.dict?.[text] || window.EBG_SITE_I18N?.t?.(text) || value;
+};
 
 const normalizeDescription = (description) => {
   if (Array.isArray(description)) return description;
@@ -54,13 +60,14 @@ function monthIndex(year, month) {
 }
 
 function formatMonth(year, month) {
+  if (siteLang() === 'en') return new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric' }).format(new Date(year, month, 1));
   return `${monthNames[month][0].toUpperCase()}${monthNames[month].slice(1)} ${year}`;
 }
 
 function formatFullDate(value) {
   const date = parseDate(value);
-  if (!date) return 'Termin wkrótce';
-  return new Intl.DateTimeFormat('pl-PL', {
+  if (!date) return siteT('Termin wkrótce');
+  return new Intl.DateTimeFormat(siteLang() === 'en' ? 'en-GB' : 'pl-PL', {
     weekday: 'long',
     day: 'numeric',
     month: 'long',
@@ -101,12 +108,9 @@ function renderAction(event) {
   const action = detailPanel?.querySelector('[data-detail-action]');
   if (!action) return;
 
-  if (event.open && event.link) {
-    action.innerHTML = `<a class="public-btn calendar-form-btn" href="${event.link}" target="_blank" rel="noopener noreferrer">${event.button || 'Zapisz się'}</a>`;
-    return;
-  }
-
-  action.innerHTML = '<span class="public-btn signup-btn-disabled" aria-disabled="true">Zapisy wkrótce</span>';
+  action.innerHTML = `
+    <a class="public-btn calendar-form-btn" href="mailto:pr@wup-katowice.pl">${siteT('Napisz e-mail')}</a>
+    <a class="public-btn public-btn-ghost" href="tel:+48327573384">${siteT('Zadzwoń: 32 757 33 84')}</a>`;
 }
 
 function renderDetailLogo(event) {
@@ -124,13 +128,13 @@ function selectEvent(id) {
   if (!event) return;
   selectedEventId = event.id;
 
-  setText('[data-detail-source]', event.source);
-  setText('[data-detail-title]', event.title);
+  setText('[data-detail-source]', siteT(event.source));
+  setText('[data-detail-title]', siteT(event.title));
   setText('[data-detail-date]', formatFullDate(event.date));
-  setText('[data-detail-time]', event.time);
-  setText('[data-detail-place]', event.place);
-  setText('[data-detail-audience]', event.audience);
-  setDescription(event.description);
+  setText('[data-detail-time]', event.time || siteT('Wkrótce'));
+  setText('[data-detail-place]', event.place || siteT('Wkrótce'));
+  setText('[data-detail-audience]', siteT(event.audience));
+  setDescription(event.description.map(siteT));
   renderDetailLogo(event);
   renderAction(event);
 
@@ -145,7 +149,7 @@ function makeEventButton(event) {
   button.type = 'button';
   button.dataset.eventId = event.id;
   button.style.setProperty('--event-color', event.color || '#2563eb');
-  button.innerHTML = `<small>${event.time}</small>${event.shortTitle}`;
+  button.innerHTML = `<small>${event.time}</small>${siteT(event.shortTitle)}`;
   return button;
 }
 
@@ -193,7 +197,7 @@ function renderList(monthEvents) {
   if (!monthEvents.length) {
     const empty = document.createElement('p');
     empty.className = 'calendar-empty';
-    empty.textContent = 'W tym miesiącu nie ma jeszcze opublikowanych terminów szkoleń.';
+    empty.textContent = siteT('W tym miesiącu nie ma jeszcze opublikowanych terminów szkoleń.');
     calendarList.append(empty);
     return;
   }
@@ -204,7 +208,7 @@ function renderList(monthEvents) {
     button.type = 'button';
     button.dataset.eventId = event.id;
     button.style.setProperty('--event-color', event.color || '#2563eb');
-    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small></span><b>${event.title}</b>`;
+    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small></span><b>${siteT(event.title)}</b>`;
     calendarList.append(button);
   });
 }
@@ -275,5 +279,7 @@ calendarModeButtons.forEach(button => {
 document.querySelector('.calendar-close')?.addEventListener('click', () => {
   selectEvent(selectedEventId);
 });
+
+document.addEventListener('ebg:site-language-changed', () => renderMonth());
 
 renderMonth();

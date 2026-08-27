@@ -36,6 +36,7 @@
   const moduleSidebarButtons = [...document.querySelectorAll('.sidebar-module-button')];
   const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
   const sections = [...document.querySelectorAll('[data-course-section]')];
+  const progressSections = sections.filter(section => section.dataset.quizRequired !== 'false');
   const sidebar = document.getElementById('courseSidebar');
   const sidebarBackdrop = document.querySelector('[data-sidebar-backdrop]');
   const sidebarOpen = document.querySelector('[data-sidebar-open]');
@@ -50,7 +51,12 @@
   const state = loadJSON(STORAGE_KEY, { completed: [], activeModule: 1, activeSection: null });
   const answers = loadJSON(ANSWERS_KEY, {});
   state.completed = Array.isArray(state.completed) ? state.completed : [];
-  const completed = new Set(state.completed);
+  const currentSectionIds = new Set(progressSections.map(section => section.dataset.courseSection).filter(Boolean));
+  const completed = new Set(state.completed.filter(id => currentSectionIds.has(id)));
+  if (completed.size !== state.completed.length) {
+    state.completed = [...completed];
+    safeStorage.setItem(STORAGE_KEY, JSON.stringify({ completed:[...completed], activeModule: state.activeModule || 1, activeSection: state.activeSection || null }));
+  }
 
   function saveState() {
     safeStorage.setItem(STORAGE_KEY, JSON.stringify({ completed:[...completed], activeModule, activeSection }));
@@ -95,10 +101,21 @@
 
   moduleButtons.forEach(button => button.addEventListener('click', () => activateModule(button.dataset.moduleTarget)));
 
+  function syncCompletionButton(id, value) {
+    const button = document.querySelector(`[data-toggle-complete="${CSS.escape(id)}"]`);
+    const section = document.querySelector(`[data-course-section="${CSS.escape(id)}"]`);
+    if (!button) return;
+    const heading = section?.querySelector('h2')?.textContent?.trim() || 'sekcję';
+    button.setAttribute('aria-pressed', value ? 'true' : 'false');
+    button.setAttribute('aria-label', value ? `Oznacz jako nieukończone: ${heading}` : `Oznacz jako ukończone: ${heading}`);
+    button.setAttribute('title', value ? 'Kliknij, aby cofnąć oznaczenie ukończenia' : 'Oznacz tę sekcję jako ukończoną');
+  }
+
   function setComplete(id, value = true) {
     if (value) completed.add(id); else completed.delete(id);
     document.querySelector(`[data-course-section="${CSS.escape(id)}"]`)?.classList.toggle('is-complete', value);
     document.querySelector(`[data-section-link="${CSS.escape(id)}"]`)?.classList.toggle('is-complete', value);
+    syncCompletionButton(id, value);
     updateProgress();
     saveState();
   }
@@ -115,22 +132,30 @@
   });
 
   function updateProgress() {
-    const total = sections.length;
-    const done = completed.size;
-    const pct = total ? Math.round(done / total * 100) : 0;
+    const total = progressSections.length;
+    const done = progressSections.filter(section => completed.has(section.dataset.courseSection)).length;
+    const pct = total ? Math.min(100, Math.round(done / total * 100)) : 0;
     document.querySelector('[data-overall-percent]').textContent = `${pct}%`;
     document.querySelector('[data-overall-bar]').style.width = `${pct}%`;
-    document.querySelector('[data-progress-copy]').textContent = `${done} z ${total} tematów ukończonych`;
+    document.querySelector('[data-progress-copy]').textContent = `${done} z ${total} tematów kursu ukończonych`;
     for (let m = 1; m <= 5; m++) {
-      const moduleSections = sections.filter(s => Number(s.dataset.moduleNumber) === m);
+      const moduleSections = progressSections.filter(s => Number(s.dataset.moduleNumber) === m);
       const moduleDone = moduleSections.filter(s => completed.has(s.dataset.courseSection)).length;
-      const modulePct = moduleSections.length ? Math.round(moduleDone / moduleSections.length * 100) : 0;
+      const modulePct = moduleSections.length ? Math.min(100, Math.round(moduleDone / moduleSections.length * 100)) : 0;
       document.querySelector(`[data-module-percent="${m}"]`).textContent = `${modulePct}%`;
       const bar = document.querySelector(`[data-module-progress-bar="${m}"]`);
       if (bar) bar.style.width = `${modulePct}%`;
     }
-    sections.forEach(s => s.classList.toggle('is-complete', completed.has(s.dataset.courseSection)));
-    sectionLinks.forEach(a => a.classList.toggle('is-complete', completed.has(a.dataset.sectionLink)));
+    sections.forEach(s => {
+      const id = s.dataset.courseSection;
+      const value = completed.has(id);
+      s.classList.toggle('is-complete', value);
+      syncCompletionButton(id, value);
+    });
+    sectionLinks.forEach(a => {
+      const target = document.getElementById(a.dataset.sectionLink);
+      a.classList.toggle('is-complete', completed.has(a.dataset.sectionLink));
+    });
     document.dispatchEvent(new CustomEvent('ebg:course-progress-updated', { detail: { done, total, percent: pct } }));
   }
 
@@ -149,12 +174,10 @@
     for (const entry of entries) {
       const id = entry.target.dataset.courseSection;
       ratios.set(id, entry.isIntersecting ? entry.intersectionRatio : 0);
-      if (entry.isIntersecting && entry.intersectionRatio >= .42 && !completed.has(id) && entry.target.dataset.completionMode !== 'activity') {
-        clearTimeout(completionTimers.get(id));
-        completionTimers.set(id, setTimeout(() => setComplete(id, true), 900));
-      } else {
-        clearTimeout(completionTimers.get(id));
-      }
+      // Completion is intentionally manual. Merely viewing/scrolling a section
+      // must not mark it as finished; activity-driven sections can still emit
+      // ebg:activity-complete and the explicit button remains reversible.
+      clearTimeout(completionTimers.get(id));
     }
     const visible = [...ratios.entries()].filter(([,ratio]) => ratio > 0).sort((a,b) => b[1]-a[1]);
     if (visible[0]) setActiveSection(visible[0][0]);
@@ -211,7 +234,7 @@
   });
   document.querySelector('[data-reset-course]')?.addEventListener('click', () => {
     if (!confirm('Usunąć zapisany postęp i odpowiedzi w tym kursie?')) return;
-    safeStorage.removeItem(STORAGE_KEY); safeStorage.removeItem(ANSWERS_KEY); safeStorage.removeItem(FORMS_KEY); safeStorage.removeItem('ebgCourseM1V3'); location.reload();
+    safeStorage.removeItem(STORAGE_KEY); safeStorage.removeItem(ANSWERS_KEY); safeStorage.removeItem(FORMS_KEY); safeStorage.removeItem('ebgCourseM1V3'); safeStorage.removeItem('ebgCourseModuleQuizV4'); safeStorage.removeItem('ebgCourseModuleQuizV3'); safeStorage.removeItem('ebgCourseModuleQuizV2'); safeStorage.removeItem('ebgCourseModuleQuizV1'); safeStorage.removeItem('ebgModuleQuizStateV1'); location.reload();
   });
   document.querySelectorAll('[data-scroll-top]').forEach(button => button.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'})));
   const backToTop = document.querySelector('.back-to-top');
@@ -225,6 +248,8 @@
     activateModule(hashSection.dataset.moduleNumber, {scroll:false});
     requestAnimationFrame(() => hashSection.scrollIntoView({behavior:'auto',block:'start'}));
   } else {
-    activateModule(state.activeModule || 1, {scroll:false});
+    const savedSection = state.activeSection ? document.getElementById(state.activeSection) : null;
+    const resolvedModule = savedSection?.dataset?.moduleNumber ? Number(savedSection.dataset.moduleNumber) : (state.activeModule || 1);
+    activateModule(resolvedModule, {scroll:false});
   }
 })();

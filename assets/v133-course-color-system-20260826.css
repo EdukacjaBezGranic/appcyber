@@ -1,0 +1,331 @@
+/* V133 — subtelny system kolorów w kursie, spójny ze stronami głównymi.
+   Zasada kontrastu: ciemne powierzchnie = jasna typografia; jasne powierzchnie = ciemna typografia.
+   Palette: coral #df5258, blush #f39f97, cream #eee5c8, amber #f1b55d,
+            green #3b8f73, mint #7ac4b7, black #111111, white #ffffff. */
+
+body.course-page.course-portal-aligned{
+  --v133-coral:#df5258;
+  --v133-blush:#f39f97;
+  --v133-cream:#eee5c8;
+  --v133-amber:#f1b55d;
+  --v133-green:#3b8f73;
+  --v133-mint:#7ac4b7;
+  --v133-black:#111111;
+  --v133-ink:#1b1e1d;
+  --v133-muted:#59625e;
+  --v133-white:#ffffff;
+  --v133-soft-coral:#fff0ef;
+  --v133-soft-blush:#fff5f3;
+  --v133-soft-cream:#f8f4e7;
+  --v133-soft-amber:#fff7e8;
+  --v133-soft-green:#edf7f2;
+  --v133-soft-mint:#edf8f5;
+  background:#fff!important;
+  color:var(--v133-ink)!important;
+}
+
+/* ---------- MODUŁY: indywidualny kolor, ale jasne powierzchnie ---------- */
+body.course-page.course-portal-aligned .course-module[data-module-panel="1"]{
+  --v133-module-accent:var(--v133-mint);
+  --v133-module-strong:var(--v133-green);
+  --v133-module-soft:var(--v133-soft-mint);
+  --module-accent:var(--v133-green)!important;
+  --module-accent-2:var(--v133-mint)!important;
+}
+body.course-page.course-portal-aligned .course-module[data-module-panel="2"]{
+  --v133-module-accent:var(--v133-amber);
+  --v133-module-strong:#9b651c;
+  --v133-module-soft:var(--v133-soft-amber);
+  --module-accent:#9b651c!important;
+  --module-accent-2:var(--v133-amber)!important;
+}
+body.course-page.course-portal-aligned .course-module[data-module-panel="3"]{
+  --v133-module-accent:var(--v133-coral);
+  --v133-module-strong:#a8343a;
+  --v133-module-soft:var(--v133-soft-coral);
+  --module-accent:#a8343a!important;
+  --module-accent-2:var(--v133-coral)!important;
+}
+body.course-page.course-portal-aligned .course-module[data-module-panel="4"]{
+  --v133-module-accent:var(--v133-green);
+  --v133-module-strong:#28684f;
+  --v133-module-soft:var(--v133-soft-green);
+  --module-accent:#28684f!important;
+  --module-accent-2:var(--v133-green)!important;
+}
+body.course-page.course-portal-aligned .course-module[data-module-panel="5"]{
+  --v133-module-accent:var(--v133-cream);
+  --v133-module-strong:var(--v133-green);
+  --v133-module-soft:var(--v133-soft-cream);
+  --module-accent:var(--v133-green)!important;
+  --module-accent-2:var(--v133-mint)!important;
+}
+
+/* ---------- PLAN KURSU: kolorowe numery na ciemnym sidebarze ---------- */
+body.course-page.course-portal-aligned .course-sidebar{
+  background:var(--v133-black)!important;
+  color:var(--v133-white)!important;
+}
+body.course-page.course-portal-aligned .course-sidebar :is(.overall-progress span,.overall-progress small,.sidebar-module-button strong,.sidebar-module-button small,.sidebar-module-button em,.section-nav a){
+  color:rgba(255,255,255,.78)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.78)!important;
+}
+body.course-page.course-portal-aligned .course-sidebar .sidebar-module-button.is-active strong,
+body.course-page.course-portal-aligned .course-sidebar .sidebar-module-button:hover strong,
+body.course-page.course-portal-aligned .course-sidebar .section-nav a.is-active,
+body.course-page.course-portal-aligned .course-sidebar .section-nav a:hover{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.course-page.course-portal-aligned .sidebar-module-button[data-module-target="1"]>span:first-child{background:var(--v133-mint)!important;color:#111!important;}
+body.course-page.course-portal-aligned .sidebar-module-button[data-module-target="2"]>span:first-child{background:var(--v133-amber)!important;color:#111!important;}
+body.course-page.course-portal-aligned .sidebar-module-button[data-module-target="3"]>span:first-child{background:var(--v133-coral)!important;color:#111!important;}
+body.course-page.course-portal-aligned .sidebar-module-button[data-module-target="4"]>span:first-child{background:var(--v133-green)!important;color:#111!important;}
+body.course-page.course-portal-aligned .sidebar-module-button[data-module-target="5"]>span:first-child{background:var(--v133-cream)!important;color:#111!important;}
+body.course-page.course-portal-aligned .sidebar-module-button.is-active{
+  box-shadow:inset 4px 0 0 var(--v133-coral)!important;
+  background:rgba(255,255,255,.08)!important;
+}
+body.course-page.course-portal-aligned .overall-progress strong{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.course-page.course-portal-aligned .progress-track{background:rgba(255,255,255,.16)!important;}
+body.course-page.course-portal-aligned .progress-track span{
+  background:linear-gradient(90deg,var(--v133-mint),var(--v133-amber),var(--v133-coral))!important;
+}
+
+/* ---------- OTWARCIE MODUŁU ---------- */
+body.course-page.course-portal-aligned .module-hero{
+  position:relative!important;
+  padding:clamp(28px,3.4vw,48px)!important;
+  margin-bottom:22px!important;
+  border:1px solid color-mix(in srgb,var(--v133-module-strong) 22%,#ded8cb)!important;
+  border-top:7px solid var(--v133-module-accent)!important;
+  background:linear-gradient(135deg,var(--v133-module-soft) 0%,#fff 62%)!important;
+}
+body.course-page.course-portal-aligned .module-hero h1,
+body.course-page.course-portal-aligned .module-hero p,
+body.course-page.course-portal-aligned .module-meta dd{
+  color:var(--v133-ink)!important;
+  -webkit-text-fill-color:var(--v133-ink)!important;
+}
+body.course-page.course-portal-aligned .module-kicker,
+body.course-page.course-portal-aligned .module-meta dt{
+  color:var(--v133-module-strong)!important;
+  -webkit-text-fill-color:var(--v133-module-strong)!important;
+}
+body.course-page.course-portal-aligned .module-meta{
+  border-color:color-mix(in srgb,var(--v133-module-strong) 24%,#ded8cb)!important;
+}
+body.course-page.course-portal-aligned .module-meta>div{
+  border-color:color-mix(in srgb,var(--v133-module-strong) 20%,#ded8cb)!important;
+}
+body.course-page.course-portal-aligned .module-reading-progress{background:#ece9e2!important;}
+body.course-page.course-portal-aligned .module-reading-progress span{
+  background:linear-gradient(90deg,var(--v133-module-strong),var(--v133-module-accent))!important;
+}
+
+/* ---------- NAGŁÓWKI TEMATÓW ---------- */
+body.course-page.course-portal-aligned .course-section-header{
+  border-top:3px solid color-mix(in srgb,var(--v133-module-accent) 55%,transparent)!important;
+}
+body.course-page.course-portal-aligned .section-index{
+  background:var(--v133-module-accent)!important;
+  border-color:var(--v133-module-accent)!important;
+  color:#111!important;
+  -webkit-text-fill-color:#111!important;
+  font-weight:900!important;
+}
+body.course-page.course-portal-aligned .section-eyebrow{
+  color:var(--v133-module-strong)!important;
+  -webkit-text-fill-color:var(--v133-module-strong)!important;
+}
+body.course-page.course-portal-aligned .course-section h2,
+body.course-page.course-portal-aligned .course-section h3,
+body.course-page.course-portal-aligned .course-section-body>p,
+body.course-page.course-portal-aligned .course-section-body>ul,
+body.course-page.course-portal-aligned .course-section-body>ol{
+  color:var(--v133-ink)!important;
+}
+
+/* Ćwiczenia: jasny krem/bursztyn, zawsze ciemny tekst. */
+body.course-page.course-portal-aligned .course-section--exercise{
+  border-left:5px solid var(--v133-amber)!important;
+  background:linear-gradient(90deg,var(--v133-soft-amber),#fff 42%)!important;
+}
+body.course-page.course-portal-aligned .exercise-compact,
+body.course-page.course-portal-aligned .course-quiz-card,
+body.course-page.course-portal-aligned .course-quiz-summary,
+body.course-page.course-portal-aligned .course-workbook-card,
+body.course-page.course-portal-aligned .course-workbook-panel{
+  background:var(--v133-soft-cream)!important;
+  border-color:rgba(128,108,50,.24)!important;
+  color:var(--v133-ink)!important;
+}
+body.course-page.course-portal-aligned :is(.exercise-compact,.course-quiz-card,.course-quiz-summary,.course-workbook-card,.course-workbook-panel) :is(h2,h3,h4,strong,p,li,label,span,small){
+  color:var(--v133-ink)!important;
+  -webkit-text-fill-color:var(--v133-ink)!important;
+}
+
+/* ---------- CALLOUTY: znaczenie + kolor ---------- */
+body.course-page.course-portal-aligned .course-callout{
+  color:var(--v133-ink)!important;
+  background:var(--v133-soft-mint)!important;
+  border:1px solid rgba(59,143,115,.24)!important;
+  border-left:6px solid var(--v133-mint)!important;
+}
+body.course-page.course-portal-aligned .course-callout--info{
+  background:var(--v133-soft-mint)!important;
+  border-color:rgba(59,143,115,.24)!important;
+  border-left-color:var(--v133-mint)!important;
+}
+body.course-page.course-portal-aligned .course-callout--warn{
+  background:var(--v133-soft-amber)!important;
+  border-color:rgba(155,101,28,.24)!important;
+  border-left-color:var(--v133-amber)!important;
+}
+body.course-page.course-portal-aligned .course-callout--success{
+  background:var(--v133-soft-green)!important;
+  border-color:rgba(59,143,115,.27)!important;
+  border-left-color:var(--v133-green)!important;
+}
+body.course-page.course-portal-aligned .course-callout--example{
+  background:var(--v133-soft-coral)!important;
+  border-color:rgba(223,82,88,.23)!important;
+  border-left-color:var(--v133-coral)!important;
+}
+body.course-page.course-portal-aligned .course-callout--reflection{
+  background:var(--v133-soft-blush)!important;
+  border-color:rgba(223,82,88,.19)!important;
+  border-left-color:var(--v133-blush)!important;
+}
+body.course-page.course-portal-aligned .course-callout :is(strong,p,li,span),
+body.course-page.course-portal-aligned :is(.course-guide-question,.course-guide-bridge,.course-perspective-note) :is(strong,p){
+  color:var(--v133-ink)!important;
+  -webkit-text-fill-color:var(--v133-ink)!important;
+}
+body.course-page.course-portal-aligned .course-guide-question{
+  background:var(--v133-soft-mint)!important;
+  border-color:rgba(59,143,115,.22)!important;
+  border-left:5px solid var(--v133-mint)!important;
+}
+body.course-page.course-portal-aligned .course-guide-bridge{
+  background:var(--v133-soft-cream)!important;
+  border-color:rgba(128,108,50,.20)!important;
+  border-left:5px solid var(--v133-cream)!important;
+}
+body.course-page.course-portal-aligned .course-perspective-note{
+  background:var(--v133-soft-amber)!important;
+  border-color:rgba(155,101,28,.20)!important;
+  border-left:5px solid var(--v133-amber)!important;
+}
+
+/* ---------- TABELE ---------- */
+body.course-page.course-portal-aligned .course-table-wrap{
+  border-color:rgba(59,143,115,.25)!important;
+  background:#fff!important;
+}
+body.course-page.course-portal-aligned .course-table thead th{
+  background:var(--v133-black)!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border-color:rgba(255,255,255,.16)!important;
+}
+body.course-page.course-portal-aligned .course-table tbody th{
+  background:var(--v133-soft-cream)!important;
+  color:var(--v133-ink)!important;
+  -webkit-text-fill-color:var(--v133-ink)!important;
+}
+body.course-page.course-portal-aligned .course-table td{
+  background:#fff!important;
+  color:var(--v133-ink)!important;
+  -webkit-text-fill-color:var(--v133-ink)!important;
+}
+
+/* ---------- FORMULARZE, WYBORY, FEEDBACK ---------- */
+body.course-page.course-portal-aligned :is(.course-answer,input[type="text"],textarea,select){
+  background:#fff!important;
+  color:var(--v133-ink)!important;
+  border-color:rgba(59,143,115,.28)!important;
+}
+body.course-page.course-portal-aligned :is(.course-answer,input[type="text"],textarea,select):focus{
+  border-color:var(--v133-green)!important;
+  outline-color:var(--v133-green)!important;
+}
+body.course-page.course-portal-aligned .check-item{
+  background:var(--v133-soft-mint)!important;
+  color:var(--v133-ink)!important;
+  border-color:rgba(59,143,115,.20)!important;
+}
+body.course-page.course-portal-aligned :is(.is-correct,.feedback-correct,.quiz-correct){
+  --semantic-surface:#edf7f2;
+}
+body.course-page.course-portal-aligned :is(.is-wrong,.feedback-wrong,.quiz-wrong){
+  --semantic-surface:#fff0ef;
+}
+
+/* ---------- PRZYCISKI: jasne powierzchnie = ciemny tekst ---------- */
+body.course-page.course-portal-aligned :is(.primary-action,.course-btn-primary,.module-cta,.next-topic-btn):not(.is-correct):not(.is-wrong){
+  background:var(--v133-coral)!important;
+  border-color:var(--v133-coral)!important;
+  color:#111!important;
+  -webkit-text-fill-color:#111!important;
+}
+body.course-page.course-portal-aligned :is(.primary-action,.course-btn-primary,.module-cta,.next-topic-btn):not(.is-correct):not(.is-wrong):hover{
+  background:var(--v133-blush)!important;
+  border-color:var(--v133-blush)!important;
+  color:#111!important;
+}
+body.course-page.course-portal-aligned :is(.secondary-action,.course-btn-secondary,.tool-link):not(.is-correct):not(.is-wrong){
+  background:var(--v133-mint)!important;
+  border-color:var(--v133-mint)!important;
+  color:#111!important;
+  -webkit-text-fill-color:#111!important;
+}
+body.course-page.course-portal-aligned .module-bottom-nav [data-module-target]{
+  background:var(--v133-black)!important;
+  border-color:var(--v133-black)!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.course-page.course-portal-aligned .module-bottom-nav [data-scroll-top]{
+  background:var(--v133-cream)!important;
+  border-color:var(--v133-cream)!important;
+  color:#111!important;
+  -webkit-text-fill-color:#111!important;
+}
+
+/* ---------- CIEMNE POWIERZCHNIE: twarda blokada kontrastu ---------- */
+body.course-page.course-portal-aligned :is(.course-topbar,.course-sidebar,.course-footer,.course-certificate-progress),
+body.course-page.course-portal-aligned :is(.course-topbar,.course-sidebar,.course-footer,.course-certificate-progress)[style*="background"]{
+  color:#fff!important;
+}
+body.course-page.course-portal-aligned :is(.course-footer,.course-certificate-progress) :is(h1,h2,h3,h4,strong,b){
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.course-page.course-portal-aligned :is(.course-footer,.course-certificate-progress) :is(p,small,span){
+  color:rgba(255,255,255,.80)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.80)!important;
+}
+
+/* ---------- MOBILE / TABLET ---------- */
+@media(max-width:1180px){
+  body.course-page.course-portal-aligned .module-hero{
+    padding:28px!important;
+  }
+}
+@media(max-width:700px){
+  body.course-page.course-portal-aligned .module-hero{
+    padding:22px 18px!important;
+    border-top-width:6px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header{
+    border-top-width:2px!important;
+  }
+  body.course-page.course-portal-aligned .section-index{
+    width:38px!important;
+    height:38px!important;
+  }
+}

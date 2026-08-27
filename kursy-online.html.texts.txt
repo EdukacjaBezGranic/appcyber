@@ -1,0 +1,17 @@
+001	Kursy online - Edukacja bez granic
+002	Start
+003	Nasze szkolenia
+004	Zapisy na szkolenia
+005	Kursy online
+006	Kontakt
+007	Kurs online: Media Literacy, Fake News i Krytyczne Myślenie
+008	Jedna alarmująca treść potrafi uruchomić emocję szybciej niż analizę. Ten kurs prowadzi od rozpoznania mechanizmu manipulacji przez weryfikację źródeł i dowodów aż do odpowiedzialnej reakcji.
+009	Otwórz kurs online
+010	Kurs online: Wystąpienia publiczne i storytelling
+011	Wkrótce
+012	Kurs online: Grywalizacja – uczenie przez gry i doświadczenie
+013	Kurs online: Cyberbezpieczeństwo
+014	Edukacja bez granic
+015	Projekt Wojewódzkiego Urzędu Pracy w Katowicach realizowany w ramach programu Erasmus+.
+016	Strona główna
+017	Panel trenera

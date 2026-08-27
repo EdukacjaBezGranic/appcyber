@@ -1,0 +1,4 @@
+V152
+Moduł 1: wyraźny podział sekcji „Informacja jako produkt” na uwagę i rekomendacje + wyrównanie tekstu hero na stronie startowej
+Data: 2026-08-27
+Baza: V151

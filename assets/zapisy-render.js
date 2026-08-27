@@ -52,8 +52,7 @@
       `;
     }
     return `
-      <span class="signup-status">Zapisy wkrótce</span>
-      <span class="signup-soon-note" aria-disabled="true">${escapeHtml(label)}</span>
+      <a class="signup-status signup-calendar-link" href="#terminarz">Sprawdź terminarz</a>
     `;
   };
 
@@ -85,7 +84,7 @@
     `;
   };
 
-  trainings.forEach((training) => {
+  trainings.filter((training) => !training.calendarOnly).forEach((training) => {
     const groupKey = training.group === 'new' ? 'new' : 'other';
     const container = groups[groupKey];
     if (container) container.insertAdjacentHTML('beforeend', renderCard(training));

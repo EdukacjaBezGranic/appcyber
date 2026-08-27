@@ -1,300 +1,40 @@
 (() => {
   'use strict';
-
-  const FORM_STATE_KEY = 'ebgCourseFormsStateV1';
-  const COURSE_STATE_KEY = 'ebgCourseV2State';
-  const formKeys = ['registration', 'pretest', 'finaltest', 'evaluation'];
-  const config = window.EBG_COURSE_FORMS || {};
-
-  const storage = (() => {
-    try {
-      const s = window.localStorage;
-      const probe = '__ebg_forms_probe__';
-      s.setItem(probe, '1');
-      s.removeItem(probe);
-      return s;
-    } catch {
-      const memory = new Map();
-      return {
-        getItem: key => memory.has(key) ? memory.get(key) : null,
-        setItem: (key, value) => memory.set(key, String(value))
-      };
-    }
-  })();
-
-  const readJson = (key, fallback) => {
-    try {
-      const parsed = JSON.parse(storage.getItem(key));
-      return parsed && typeof parsed === 'object' ? parsed : fallback;
-    } catch {
-      return fallback;
-    }
-  };
-
-  const writeJson = (key, value) => storage.setItem(key, JSON.stringify(value));
-  const getFormState = () => ({
-    registration: false,
-    pretest: false,
-    finaltest: false,
-    evaluation: false,
-    privacyAccepted: false,
-    privacyReadToEnd: false,
-    ...readJson(FORM_STATE_KEY, {})
-  });
-
-  const isValidUrl = value => {
-    try {
-      const url = new URL(String(value || '').trim());
-      return ['https:', 'http:'].includes(url.protocol);
-    } catch {
-      return false;
-    }
-  };
-
-  function configureLinks() {
-    document.querySelectorAll('[data-google-form]').forEach(link => {
-      const key = link.dataset.googleForm;
-      const entry = config[key] || {};
-      const url = String(entry.url || '').trim();
-      const status = link.querySelector('small');
-
-      if (isValidUrl(url)) {
-        link.href = url;
-        link.classList.remove('is-pending');
-        link.removeAttribute('aria-disabled');
-        link.removeAttribute('tabindex');
-        if (status) status.textContent = 'Google Forms';
-      } else {
-        link.removeAttribute('href');
-        link.classList.add('is-pending');
-        link.setAttribute('aria-disabled', 'true');
-        link.setAttribute('tabindex', '-1');
-        if (status) status.textContent = 'Link zostanie dodany po utworzeniu formularza';
-      }
-    });
+  const COURSE_KEY='ebgCourseV2State';
+  const QUIZ_KEY='ebgCourseModuleQuizV4';
+  const read=(k,f={})=>{try{return JSON.parse(localStorage.getItem(k))||f}catch{return f}};
+  const sections=()=>[...document.querySelectorAll('.course-section[data-course-section]')].filter(s=>s.dataset.quizRequired!=='false');
+  function status(){
+    const completed=new Set(read(COURSE_KEY,{completed:[]}).completed||[]);
+    const all=sections(), done=all.filter(s=>completed.has(s.dataset.courseSection)).length;
+    const quizzes=read(QUIZ_KEY,{}); let passed=0;
+    for(let m=1;m<=5;m++) if(quizzes[m]?.passed && Number(quizzes[m].score)>=7) passed++;
+    // Każdy test modułowy odblokowuje się dopiero po ukończeniu wymaganych treści modułu.
+    // Zaliczenie wszystkich pięciu testów jest więc ostatecznym potwierdzeniem ukończenia kursu.
+    const allQuizzesPassed=passed===5;
+    const sectionPercent=all.length?Math.min(100,Math.round(done/all.length*100)):0;
+    const eligible=sectionPercent===100&&allQuizzesPassed;
+    const overall=eligible?100:Math.min(99,Math.round(((sectionPercent/100)*5+passed)/10*100));
+    return {done,total:all.length,sectionPercent,passed,eligible,overall};
   }
-
-  function moduleCompletion() {
-    const courseState = readJson(COURSE_STATE_KEY, { completed: [] });
-    const completed = new Set(Array.isArray(courseState.completed) ? courseState.completed : []);
-    let completedModules = 0;
-
-    for (let module = 1; module <= 5; module += 1) {
-      const sections = [...document.querySelectorAll(`.course-section[data-module-number="${module}"]`)];
-      if (sections.length && sections.every(section => completed.has(section.dataset.courseSection))) {
-        completedModules += 1;
-      }
-    }
-
-    return completedModules;
+  function update(){
+    const s=status();
+    document.querySelectorAll('[data-certificate-sections]').forEach(n=>n.textContent=`${s.sectionPercent}%`);
+    document.querySelectorAll('[data-certificate-quizzes]').forEach(n=>n.textContent=`${s.passed} z 5`);
+    document.querySelectorAll('[data-certificate-progress-text]').forEach(n=>n.textContent=`${s.overall}%`);
+    document.querySelectorAll('[data-certificate-bar]').forEach(n=>n.style.width=`${s.overall}%`);
+    document.querySelectorAll('[data-certificate-status]').forEach(n=>n.textContent=s.eligible?'Dyplom ukończenia kursu jest odblokowany':s.passed===5?'Zaliczono testy – ukończ wszystkie tematy modułów':s.sectionPercent===100?'Ukończono wszystkie tematy – zalicz testy modułowe':'Dyplom nie jest jeszcze odblokowany');
+    document.dispatchEvent(new CustomEvent('ebg:certificate-requirements-updated',{detail:s}));
   }
-
-  function updateUi() {
-    const state = getFormState();
-    document.querySelectorAll('[data-form-complete]').forEach(input => {
-      input.checked = Boolean(state[input.dataset.formComplete]);
-    });
-    const privacyInput = document.querySelector('[data-privacy-accepted]');
-    const privacyPanel = document.querySelector('.course-privacy-consent');
-    const enterButton = document.querySelector('[data-enter-course]');
-    const privacyStatus = document.querySelector('[data-privacy-status]');
-    if (privacyInput) {
-      privacyInput.checked = Boolean(state.privacyAccepted);
-      privacyInput.disabled = !state.privacyReadToEnd && !state.privacyAccepted;
-      privacyInput.setAttribute('aria-disabled', String(privacyInput.disabled));
-    }
-    if (privacyPanel) {
-      privacyPanel.classList.toggle('is-complete', Boolean(state.privacyAccepted));
-    }
-    if (enterButton) {
-      enterButton.disabled = !state.privacyAccepted;
-      enterButton.setAttribute('aria-disabled', String(!state.privacyAccepted));
-      enterButton.title = state.privacyAccepted ? '' : 'Najpierw potwierdź zapoznanie się z klauzulą informacyjną.';
-    }
-    if (privacyStatus) {
-      privacyStatus.textContent = state.privacyAccepted
-        ? 'Potwierdzenie zapisano na tym urządzeniu.'
-        : state.privacyReadToEnd
-          ? 'Możesz teraz zaznaczyć obowiązkowe oświadczenie.'
-          : 'Otwórz klauzulę i przewiń ją do końca, aby odblokować oświadczenie.';
-      privacyStatus.classList.toggle('is-complete', Boolean(state.privacyAccepted));
-    }
-
-    const formsDone = formKeys.filter(key => state[key]).length;
-    const modulesDone = moduleCompletion();
-    const privacyDone = state.privacyAccepted ? 1 : 0;
-    const totalSteps = 10;
-    const doneSteps = formsDone + modulesDone + privacyDone;
-    const percent = Math.round((doneSteps / totalSteps) * 100);
-    const startDone = ['registration', 'pretest'].filter(key => state[key]).length;
-
-    document.querySelectorAll('[data-start-form-status]').forEach(node => {
-      node.textContent = `${startDone} z 2 etapów startowych oznaczonych jako wykonane`;
-    });
-    document.querySelectorAll('[data-certificate-forms]').forEach(node => {
-      node.textContent = `${formsDone} z 4`;
-    });
-    document.querySelectorAll('[data-certificate-modules]').forEach(node => {
-      node.textContent = `${modulesDone} z 5`;
-    });
-    document.querySelectorAll('[data-certificate-progress-text]').forEach(node => {
-      node.textContent = `${percent}%`;
-    });
-    document.querySelectorAll('[data-certificate-bar]').forEach(node => {
-      node.style.width = `${percent}%`;
-    });
-    document.querySelectorAll('[data-certificate-status]').forEach(node => {
-      if (formsDone === 4 && modulesDone === 5 && state.privacyAccepted) {
-        node.textContent = 'Możesz pobrać potwierdzenie do weryfikacji';
-      } else if (doneSteps >= 5) {
-        node.textContent = 'Jesteś blisko ukończenia wszystkich warunków';
-      } else {
-        node.textContent = 'Warunki certyfikatu nie są jeszcze kompletne';
-      }
-    });
-
-    document.querySelectorAll('[data-form-card]').forEach(card => {
-      card.classList.toggle('is-complete', Boolean(state[card.dataset.formCard]));
-    });
-    document.dispatchEvent(new CustomEvent('ebg:certificate-requirements-updated', {
-      detail: { formsDone, modulesDone, privacyAccepted: state.privacyAccepted, eligible: formsDone === 4 && modulesDone === 5 && state.privacyAccepted, percent }
-    }));
-  }
-
-  document.querySelectorAll('[data-form-complete]').forEach(input => {
-    input.addEventListener('change', () => {
-      const state = getFormState();
-      state[input.dataset.formComplete] = input.checked;
-      state.updatedAt = new Date().toISOString();
-      writeJson(FORM_STATE_KEY, state);
-      updateUi();
-    });
-  });
-
-  document.querySelectorAll('[data-google-form]').forEach(link => {
-    link.addEventListener('click', event => {
-      if (link.getAttribute('aria-disabled') === 'true') {
-        event.preventDefault();
-      }
-    });
-  });
-
-  const privacyModal = document.querySelector('[data-privacy-modal]');
-  const privacyPanel = privacyModal?.querySelector('.course-privacy-modal__panel');
-  const privacyScroll = privacyModal?.querySelector('[data-privacy-scroll]');
-  let privacyReturnFocus = null;
-
-  function markPrivacyReadIfAtEnd() {
-    if (!privacyScroll) return;
-    const atEnd = privacyScroll.scrollTop + privacyScroll.clientHeight >= privacyScroll.scrollHeight - 8;
-    if (!atEnd) return;
-    const state = getFormState();
-    if (!state.privacyReadToEnd) {
-      state.privacyReadToEnd = true;
-      state.updatedAt = new Date().toISOString();
-      writeJson(FORM_STATE_KEY, state);
-      updateUi();
-    }
-  }
-
-  function openPrivacyModal() {
-    if (!privacyModal) return;
-    privacyReturnFocus = document.activeElement;
-    privacyModal.hidden = false;
-    document.body.classList.add('has-privacy-modal');
-    requestAnimationFrame(() => {
-      privacyPanel?.focus();
-      markPrivacyReadIfAtEnd();
-    });
-  }
-
-  function closePrivacyModal() {
-    if (!privacyModal) return;
-    privacyModal.hidden = true;
-    document.body.classList.remove('has-privacy-modal');
-    if (privacyReturnFocus instanceof HTMLElement) privacyReturnFocus.focus();
-  }
-
-
-  const certificateRulesModal = document.querySelector('[data-certificate-rules-modal]');
-  const certificateRulesPanel = certificateRulesModal?.querySelector('.course-privacy-modal__panel');
-  let certificateRulesReturnFocus = null;
-
-  function openCertificateRulesModal() {
-    if (!certificateRulesModal) return;
-    certificateRulesReturnFocus = document.activeElement;
-    certificateRulesModal.hidden = false;
-    document.body.classList.add('has-privacy-modal');
-    requestAnimationFrame(() => certificateRulesPanel?.focus());
-  }
-
-  function closeCertificateRulesModal() {
-    if (!certificateRulesModal) return;
-    certificateRulesModal.hidden = true;
-    document.body.classList.remove('has-privacy-modal');
-    if (certificateRulesReturnFocus instanceof HTMLElement) certificateRulesReturnFocus.focus();
-  }
-
-  document.querySelectorAll('[data-certificate-rules-open]').forEach(node => {
-    node.addEventListener('click', openCertificateRulesModal);
-  });
-  certificateRulesModal?.querySelectorAll('[data-certificate-rules-close]').forEach(node => {
-    node.addEventListener('click', closeCertificateRulesModal);
-  });
-
-  document.querySelector('[data-privacy-open]')?.addEventListener('click', openPrivacyModal);
-  privacyScroll?.addEventListener('scroll', markPrivacyReadIfAtEnd, { passive: true });
-  privacyModal?.querySelectorAll('[data-privacy-close]').forEach(node => {
-    node.addEventListener('click', closePrivacyModal);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key !== 'Escape') return;
-    if (certificateRulesModal && !certificateRulesModal.hidden) { closeCertificateRulesModal(); return; }
-    if (privacyModal && !privacyModal.hidden) closePrivacyModal();
-  });
-
-  document.querySelector('[data-privacy-accepted]')?.addEventListener('change', event => {
-    const state = getFormState();
-    if (event.currentTarget.checked && !state.privacyReadToEnd) {
-      event.currentTarget.checked = false;
-      openPrivacyModal();
-      return;
-    }
-    state.privacyAccepted = event.currentTarget.checked;
-    state.updatedAt = new Date().toISOString();
-    writeJson(FORM_STATE_KEY, state);
-    updateUi();
-  });
-
-  document.querySelector('[data-start-requirements]')?.addEventListener('click', () => {
-    document.getElementById('courseRequirements')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-
-  document.querySelector('[data-enter-course]')?.addEventListener('click', event => {
-    const state = getFormState();
-    if (!state.privacyAccepted) {
-      event.preventDefault();
-      openPrivacyModal();
-      return;
-    }
-    document.querySelector('[data-module-target="1"]')?.click();
-    requestAnimationFrame(() => {
-      document.querySelector('[data-module-panel="1"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  document.querySelector('[data-go-requirements]')?.addEventListener('click', openCertificateRulesModal);
-
-  document.addEventListener('click', event => {
-    if (event.target.closest('[data-toggle-complete]')) {
-      setTimeout(updateUi, 50);
-    }
-  });
-
-  window.addEventListener('storage', event => {
-    if ([FORM_STATE_KEY, COURSE_STATE_KEY].includes(event.key)) updateUi();
-  });
-
-  configureLinks();
-  updateUi();
+  document.querySelector('[data-enter-course]')?.addEventListener('click',()=>document.querySelector('.course-app')?.scrollIntoView({behavior:'smooth',block:'start'}));
+  const modal=document.querySelector('[data-certificate-rules-modal]'); let ret=null;
+  const open=()=>{if(!modal)return;ret=document.activeElement;modal.hidden=false;document.body.classList.add('has-privacy-modal');requestAnimationFrame(()=>modal.querySelector('.course-privacy-modal__panel')?.focus())};
+  const close=()=>{if(!modal)return;modal.hidden=true;document.body.classList.remove('has-privacy-modal');if(ret instanceof HTMLElement)ret.focus()};
+  document.querySelectorAll('[data-certificate-rules-open]').forEach(b=>b.addEventListener('click',open));
+  modal?.querySelectorAll('[data-certificate-rules-close]').forEach(b=>b.addEventListener('click',close));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal&&!modal.hidden)close()});
+  document.addEventListener('ebg:course-progress-updated',update);
+  document.addEventListener('ebg:module-quiz-updated',update);
+  window.addEventListener('storage',e=>{if([COURSE_KEY,QUIZ_KEY].includes(e.key))update()});
+  update();
 })();

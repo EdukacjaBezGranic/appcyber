@@ -1,0 +1,36 @@
+/* V141 — Module 1 narrative flow: attention economy, actors, clickbait and sharing without reading. */
+body.course-page.course-portal-aligned .m1-flow-block{margin:28px 0 20px;padding:26px 28px;border:1px solid rgba(23,33,43,.12);border-radius:18px;background:#fff;color:#17212b}
+body.course-page.course-portal-aligned .m1-flow-block h3{margin:6px 0 12px;color:#17212b}
+body.course-page.course-portal-aligned .m1-flow-block p{color:#44515d}
+body.course-page.course-portal-aligned .m1-attention-actors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 22px}
+body.course-page.course-portal-aligned .m1-attention-actor{min-height:210px;padding:22px;border:1px solid rgba(23,33,43,.12);border-radius:18px;color:#17212b;display:flex;flex-direction:column}
+body.course-page.course-portal-aligned .m1-attention-actor--mint{background:#deeee8}
+body.course-page.course-portal-aligned .m1-attention-actor--cream{background:#eee5c8}
+body.course-page.course-portal-aligned .m1-attention-actor--coral{background:#f5dddd}
+body.course-page.course-portal-aligned .m1-attention-actor--amber{background:#f5e6c9}
+body.course-page.course-portal-aligned .m1-attention-actor>span{font-size:11px;font-weight:850;letter-spacing:.12em;color:#3b8f73}
+body.course-page.course-portal-aligned .m1-attention-actor h3{margin:16px 0 10px;color:#17212b;font-size:clamp(19px,2vw,24px)}
+body.course-page.course-portal-aligned .m1-attention-actor p{margin:0;color:#3f4c58;line-height:1.6}
+body.course-page.course-portal-aligned .m1-attention-actor b{margin-top:auto;padding-top:18px;color:#17212b;font-size:13px}
+body.course-page.course-portal-aligned .m1-clickbait-case{margin:26px 0;padding:30px;border:1px solid rgba(223,82,88,.28);border-left:5px solid #df5258;border-radius:18px;background:#fff;color:#17212b}
+body.course-page.course-portal-aligned .m1-clickbait-case h3{margin:7px 0 12px;color:#17212b}
+body.course-page.course-portal-aligned .m1-clickbait-case p{color:#44515d}
+body.course-page.course-portal-aligned .m1-clickbait-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1.25fr;align-items:center;gap:9px;margin:22px 0;padding:15px;border-radius:14px;background:#f7f3e8;color:#17212b}
+body.course-page.course-portal-aligned .m1-clickbait-flow span{padding:9px 10px;text-align:center;font-weight:750;line-height:1.35}
+body.course-page.course-portal-aligned .m1-clickbait-flow b{color:#df5258}
+body.course-page.course-portal-aligned .m1-source-link{display:inline-flex;margin-top:12px;font-weight:800;color:#17212b;text-decoration-thickness:1px;text-underline-offset:4px}
+body.course-page.course-portal-aligned .m1-sharing-research{margin:26px 0;padding:28px;border:1px solid rgba(59,143,115,.22);border-radius:18px;background:#edf5f1;color:#17212b}
+body.course-page.course-portal-aligned .m1-sharing-research h3{margin:7px 0 10px;color:#17212b}
+body.course-page.course-portal-aligned .m1-sharing-research p{color:#44515d}
+body.course-page.course-portal-aligned .m1-research-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+body.course-page.course-portal-aligned .m1-research-stats article{padding:20px;border:1px solid rgba(23,33,43,.11);border-radius:16px;background:#fff;color:#17212b}
+body.course-page.course-portal-aligned .m1-research-stats strong{display:block;font-size:clamp(34px,5vw,56px);line-height:1;color:#3b8f73;letter-spacing:-.04em}
+body.course-page.course-portal-aligned .m1-research-stats p{margin:10px 0 12px;color:#44515d}
+body.course-page.course-portal-aligned .m1-research-stats a{font-size:13px;font-weight:800;color:#17212b}
+body.course-page.course-portal-aligned .m1-research-caveat{margin:0;padding-top:16px;border-top:1px solid rgba(23,33,43,.12);font-size:14px}
+@media(max-width:800px){
+ body.course-page.course-portal-aligned .m1-attention-actors,body.course-page.course-portal-aligned .m1-research-stats{grid-template-columns:1fr}
+ body.course-page.course-portal-aligned .m1-clickbait-flow{grid-template-columns:1fr;gap:4px}
+ body.course-page.course-portal-aligned .m1-clickbait-flow b{transform:rotate(90deg);justify-self:center}
+ body.course-page.course-portal-aligned .m1-flow-block,body.course-page.course-portal-aligned .m1-clickbait-case,body.course-page.course-portal-aligned .m1-sharing-research{padding:22px 18px}
+}

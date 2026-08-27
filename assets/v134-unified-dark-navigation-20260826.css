@@ -1,0 +1,178 @@
+/* V134 — one dark navigation system across the whole portal and the online course.
+   Dark field = light text. All three institutional/project marks use white transparent assets.
+   Active and hover states use the same coral underline treatment as the online course. */
+:root{
+  --v134-nav-bg:#111111;
+  --v134-nav-text:#ffffff;
+  --v134-nav-line:rgba(255,255,255,.14);
+  --v134-nav-muted:rgba(255,255,255,.88);
+  --v134-nav-accent:#df5258;
+}
+
+/* PUBLIC PORTAL */
+body.public-page .site-header-v125{
+  background:var(--v134-nav-bg)!important;
+  color:var(--v134-nav-text)!important;
+  border:0!important;
+  border-bottom:1px solid var(--v134-nav-line)!important;
+  box-shadow:0 5px 18px rgba(0,0,0,.14)!important;
+}
+body.public-page .site-header-v125 .site-logo,
+body.public-page .site-header-v125 .site-logo-project,
+body.public-page .site-header-v125 .site-brand{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body.public-page .site-header-v125 .site-project-wordmark,
+body.public-page .site-header-v125 .site-funding-logo{
+  filter:none!important;
+  opacity:1!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body.public-page .site-header-v125 .site-brand-separator{
+  background:rgba(255,255,255,.28)!important;
+}
+
+body.public-page .site-header-v125 .site-nav a,
+body.public-page .site-header-v125 .site-nav a:link,
+body.public-page .site-header-v125 .site-nav a:visited,
+body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]),
+body.public-page .site-header-v125 .site-nav .nav-trainer:not([aria-current="page"]){
+  color:var(--v134-nav-text)!important;
+  -webkit-text-fill-color:var(--v134-nav-text)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  position:relative!important;
+}
+body.public-page .site-header-v125 .site-nav a::before{
+  display:none!important;
+  content:none!important;
+}
+body.public-page .site-header-v125 .site-nav a::after{
+  display:block!important;
+  content:""!important;
+  position:absolute!important;
+  left:9px!important;
+  right:9px!important;
+  bottom:2px!important;
+  height:2px!important;
+  background:var(--v134-nav-accent)!important;
+  border-radius:999px!important;
+  transform:scaleX(0)!important;
+  transform-origin:center!important;
+  transition:transform .22s ease!important;
+}
+body.public-page .site-header-v125 .site-nav a:hover,
+body.public-page .site-header-v125 .site-nav a:focus-visible,
+body.public-page .site-header-v125 .site-nav a[aria-current="page"],
+body.public-page .site-header-v125 .site-nav .nav-trainer[aria-current="page"]{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  background:transparent!important;
+  border-color:transparent!important;
+  outline:none!important;
+}
+body.public-page .site-header-v125 .site-nav a:hover::after,
+body.public-page .site-header-v125 .site-nav a:focus-visible::after,
+body.public-page .site-header-v125 .site-nav a[aria-current="page"]::after{
+  transform:scaleX(1)!important;
+}
+
+/* Language control belongs to the same dark system. */
+body.public-page .site-header-v125 .site-language-switch,
+body.public-page .site-header-v125 .site-language-switch button{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+body.public-page .site-header-v125 .site-language-switch button{
+  background:transparent!important;
+  border:1px solid transparent!important;
+  box-shadow:none!important;
+}
+body.public-page .site-header-v125 .site-language-switch button:hover,
+body.public-page .site-header-v125 .site-language-switch button:focus-visible,
+body.public-page .site-header-v125 .site-language-switch button.is-active{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  background:transparent!important;
+  border-color:rgba(255,255,255,.32)!important;
+}
+body.public-page .site-header-v125 .nav-toggle{
+  background:transparent!important;
+  border-color:rgba(255,255,255,.32)!important;
+}
+body.public-page .site-header-v125 .nav-toggle span{background:#ffffff!important;}
+
+@media(max-width:980px){
+  body.public-page .site-header-v125 .site-nav{
+    background:var(--v134-nav-bg)!important;
+    border-top:1px solid rgba(255,255,255,.10)!important;
+    border-bottom:1px solid var(--v134-nav-line)!important;
+    box-shadow:0 14px 28px rgba(0,0,0,.20)!important;
+  }
+  body.public-page .site-header-v125 .site-nav a,
+  body.public-page .site-header-v125 .site-nav a:link,
+  body.public-page .site-header-v125 .site-nav a:visited,
+  body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-trainer:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav a[aria-current="page"]{
+    color:#ffffff!important;
+    -webkit-text-fill-color:#ffffff!important;
+    background:transparent!important;
+    border-color:transparent!important;
+  }
+  body.public-page .site-header-v125 .site-nav a::after{
+    left:12px!important;
+    right:auto!important;
+    width:44px!important;
+    bottom:5px!important;
+    transform-origin:left!important;
+  }
+}
+
+/* ONLINE COURSE — identical visual language, including the project mark. */
+body.course-page.course-portal-aligned .course-topbar.course-topbar--portal{
+  background:var(--v134-nav-bg)!important;
+  color:var(--v134-nav-text)!important;
+  border-bottom:1px solid var(--v134-nav-line)!important;
+  box-shadow:0 5px 18px rgba(0,0,0,.14)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-logo,
+body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark,
+body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logo{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  opacity:1!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-brand-separator{
+  background:rgba(255,255,255,.28)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:link,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:visited,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:hover,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:focus-visible,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a[aria-current="page"]{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  background:transparent!important;
+  border-color:transparent!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a::after{
+  background:var(--v134-nav-accent)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  border-color:rgba(255,255,255,.34)!important;
+  background:transparent!important;
+}

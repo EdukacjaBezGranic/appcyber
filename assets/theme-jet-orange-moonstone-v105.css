@@ -1,0 +1,349 @@
+/* ======================================================================
+   V105 — BRAND PALETTE: JET + ORANGE + MOONSTONE
+   Palette supplied by user:
+   Jet       #282B2B — primary dark/base
+   Orange    #EE6C29 — primary action/accent
+   Moonstone #7AA6B3 — supporting surface/accent
+   ====================================================================== */
+
+:root{
+  --brand-jet:#282B2B;
+  --brand-orange:#EE6C29;
+  --brand-moonstone:#7AA6B3;
+  --brand-paper:#F6F5F0;
+  --brand-white:#FFFFFF;
+  --brand-ink:#282B2B;
+  --brand-muted:#596164;
+  --brand-line:rgba(122,166,179,.38);
+  --brand-moonstone-soft:rgba(122,166,179,.13);
+  --brand-orange-soft:rgba(238,108,41,.12);
+
+  /* Retarget existing design tokens so older components inherit V105. */
+  --v94-graphite:var(--brand-jet);
+  --v94-graphite-2:#343838;
+  --v94-lime:var(--brand-orange);
+  --v94-lime-dark:#A84517;
+  --v94-paper:var(--brand-paper);
+  --v94-text:var(--brand-ink);
+  --v94-muted:var(--brand-muted);
+  --v94-line:var(--brand-line);
+  --v103-dark:var(--brand-jet);
+  --v103-dark-2:#343838;
+  --v103-lime:var(--brand-orange);
+  --v103-paper:var(--brand-paper);
+}
+
+/* ----------------------------------------------------------------------
+   PUBLIC PORTAL — foundation
+   ---------------------------------------------------------------------- */
+body.public-page{
+  background:var(--brand-paper)!important;
+  color:var(--brand-ink)!important;
+}
+body.public-page ::selection{background:var(--brand-orange)!important;color:var(--brand-jet)!important}
+body.public-page :where(h1,h2,h3,h4,strong){color:var(--brand-jet)}
+body.public-page :where(a,button,input,select,textarea):focus-visible{
+  outline:3px solid var(--brand-orange)!important;
+  outline-offset:3px!important;
+}
+
+/* Header / navigation */
+body.public-page .site-header{background:var(--brand-jet)!important;border-color:rgba(255,255,255,.13)!important}
+body.public-page .site-nav a{color:rgba(255,255,255,.82)!important}
+body.public-page .site-nav a:hover{
+  background:rgba(122,166,179,.14)!important;
+  border-color:rgba(122,166,179,.62)!important;
+  color:var(--brand-moonstone)!important;
+}
+body.public-page .site-nav a[aria-current="page"]{
+  background:var(--brand-orange)!important;
+  border-color:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+  -webkit-text-fill-color:var(--brand-jet)!important;
+  box-shadow:0 0 0 3px rgba(238,108,41,.16)!important;
+}
+body.public-page .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-nav .nav-online:not([aria-current="page"]){
+  background:transparent!important;
+  border-color:rgba(238,108,41,.72)!important;
+  color:var(--brand-orange)!important;
+  -webkit-text-fill-color:var(--brand-orange)!important;
+}
+body.public-page .nav-toggle{border-color:var(--brand-orange)!important}
+body.public-page .nav-toggle span{background:var(--brand-orange)!important}
+
+/* Hero / dark editorial surfaces */
+body.public-page.home-rd .home-rd-hero,
+body.public-page .contact-hero,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip),
+body.public-page :is(.home-rd-final,.signup-intro-section,.calendar-board)[style*="background-color"]{
+  background:var(--brand-jet)!important;
+}
+body.public-page.home-rd .home-rd-hero .editorial-emphasis,
+body.public-page.home-rd .home-rd-hero .editorial-emphasis font,
+body.public-page .contact-hero h1,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip) :where(h2,h3,strong){
+  color:var(--brand-orange)!important;
+  -webkit-text-fill-color:var(--brand-orange)!important;
+}
+body.public-page.home-rd .home-rd-hero-copy>p,
+body.public-page.home-rd .home-rd-meta dd,
+body.public-page :where(.home-project-note,.public-cta,.training-cta-section,.training-proof-strip) p{
+  color:rgba(255,255,255,.74)!important;
+}
+body.public-page.home-rd .home-rd-meta{border-color:rgba(122,166,179,.45)!important}
+
+/* Primary actions — Orange with Jet text for accessible contrast. */
+body.public-page :is(
+  .public-btn.primary,
+  .home-rd-btn-primary,
+  .calendar-form-btn,
+  .trainer-access-box button,
+  .signup-institution-contact a:first-child
+){
+  background:var(--brand-orange)!important;
+  border-color:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+  -webkit-text-fill-color:var(--brand-jet)!important;
+  box-shadow:none!important;
+}
+body.public-page :is(
+  .public-btn.primary,
+  .home-rd-btn-primary,
+  .calendar-form-btn,
+  .trainer-access-box button,
+  .signup-institution-contact a:first-child
+):hover{
+  background:#F27C43!important;
+  border-color:#F27C43!important;
+  box-shadow:0 0 0 4px rgba(238,108,41,.18)!important;
+}
+body.public-page :is(
+  .public-btn.primary,
+  .home-rd-btn-primary,
+  .calendar-form-btn,
+  .trainer-access-box button,
+  .signup-institution-contact a:first-child
+) :where(span,small,strong,b){
+  color:var(--brand-jet)!important;
+  -webkit-text-fill-color:var(--brand-jet)!important;
+}
+
+/* Secondary actions — Moonstone. */
+body.public-page .home-rd-btn-secondary{
+  background:transparent!important;
+  border-color:var(--brand-moonstone)!important;
+  color:var(--brand-moonstone)!important;
+}
+body.public-page .home-rd-btn-secondary:hover{
+  background:var(--brand-moonstone)!important;
+  border-color:var(--brand-moonstone)!important;
+  color:var(--brand-jet)!important;
+}
+
+/* Small editorial labels: keep text readable, use palette as marker. */
+body.public-page :where(
+  .home-rd-overline,
+  .home-rd-section-heading>div>span,
+  .training-showcase-overline,
+  .training-showcase-heading span,
+  .public-eyebrow
+){
+  color:var(--brand-jet)!important;
+  border-left:4px solid var(--brand-orange);
+  padding-left:10px;
+}
+body.public-page :where(.home-rd-number,.public-step>span,.training-topic-number){
+  color:var(--brand-jet)!important;
+  background:var(--brand-moonstone)!important;
+  border-color:var(--brand-moonstone)!important;
+}
+
+/* Supporting surfaces — Moonstone is visible but does not overwhelm. */
+body.public-page :where(
+  .home-rd-program,
+  .home-eu-origin-points article,
+  .public-step,
+  .training-topic-grid article,
+  .contact-panel,
+  .signup-training-card,
+  .online-course-cover,
+  .calendar-card,
+  .trainer-card
+){
+  border-color:var(--brand-line)!important;
+}
+body.public-page :where(
+  .home-eu-origin-points article,
+  .public-step,
+  .training-topic-grid article
+):hover{
+  border-color:var(--brand-moonstone)!important;
+  background:var(--brand-moonstone-soft)!important;
+}
+body.public-page.online-catalog-page .online-course-cover{
+  border-top-color:var(--brand-orange)!important;
+}
+
+/* Contact + signups */
+body.public-page .contact-hero .contact-hero-map{border-color:rgba(122,166,179,.55)!important}
+body.public-page .contact-grid .contact-panel[style*="background-color"]{background:var(--brand-jet)!important}
+body.public-page .contact-grid .contact-panel[style*="background-color"] :where(h2,h3,strong,a){color:var(--brand-orange)!important}
+body.public-page .contact-grid .contact-panel[style*="background-color"] p{color:rgba(255,255,255,.76)!important}
+body.public-page .signup-institution-contact a:last-child{
+  background:var(--brand-moonstone)!important;
+  border-color:var(--brand-moonstone)!important;
+  color:var(--brand-jet)!important;
+}
+body.public-page .signup-institution-contact a:last-child :where(small,span,strong){color:var(--brand-jet)!important}
+
+/* Calendar controls on Jet surface. */
+body.public-page .calendar-board[style*="background-color"] :is(.calendar-mini-btn,.calendar-arrow-btn,.calendar-mode-switch button){
+  background:var(--brand-moonstone)!important;
+  color:var(--brand-jet)!important;
+  border-color:var(--brand-moonstone)!important;
+}
+body.public-page .calendar-board[style*="background-color"] :is(.calendar-mini-btn,.calendar-arrow-btn,.calendar-mode-switch button):hover,
+body.public-page .calendar-board[style*="background-color"] .calendar-mode-switch button.is-active{
+  background:var(--brand-orange)!important;
+  border-color:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+}
+
+/* Trainer area */
+body.public-page.trainer-page .trainer-access-box .tag{
+  background:var(--brand-moonstone)!important;
+  color:var(--brand-jet)!important;
+}
+
+/* Footer */
+body.public-page .v67-footer{
+  background:var(--brand-jet)!important;
+  border-top-color:var(--brand-orange)!important;
+}
+body.public-page .v67-footer-links a:hover{color:var(--brand-moonstone)!important}
+
+/* ----------------------------------------------------------------------
+   COURSE — same brand shell, while semantic exercise success/error colours
+   remain untouched.
+   ---------------------------------------------------------------------- */
+body.course-page{
+  --brand-jet:#282B2B;
+  --brand-orange:#EE6C29;
+  --brand-moonstone:#7AA6B3;
+  --brand-line:rgba(122,166,179,.38);
+}
+body.course-page.course-portal-aligned .course-topbar,
+body.course-page .course-sidebar{
+  background:var(--brand-jet)!important;
+}
+body.course-page.course-portal-aligned .course-topbar{border-bottom-color:rgba(122,166,179,.32)!important}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a::after{
+  background:var(--brand-orange)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:hover,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:focus-visible{
+  color:var(--brand-moonstone)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a[aria-current="page"]{
+  color:var(--brand-orange)!important;
+}
+body.course-page .course-language-switch{border-color:rgba(122,166,179,.58)!important;background:rgba(122,166,179,.10)!important}
+body.course-page .course-language-switch button:hover,
+body.course-page .course-language-switch button:focus-visible{background:rgba(122,166,179,.20)!important;color:#fff!important}
+body.course-page .course-language-switch button.is-active{
+  background:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+  box-shadow:none!important;
+}
+body.course-page .overall-progress{border-color:rgba(122,166,179,.30)!important;background:rgba(122,166,179,.08)!important}
+body.course-page .overall-progress strong{color:var(--brand-orange)!important}
+body.course-page .progress-track{background:rgba(122,166,179,.24)!important}
+body.course-page .progress-track span{background:var(--brand-orange)!important}
+body.course-page .course-search input:focus{border-color:var(--brand-moonstone)!important}
+body.course-page .sidebar-module-button:hover,
+body.course-page .sidebar-module-button.is-active{
+  border-color:rgba(122,166,179,.48)!important;
+  background:rgba(122,166,179,.13)!important;
+}
+body.course-page .sidebar-module-button.is-active>span:first-child{
+  background:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+}
+body.course-page .sidebar-module-button em{color:var(--brand-moonstone)!important}
+body.course-page .section-nav a:hover,
+body.course-page .section-nav a.is-active{background:rgba(122,166,179,.15)!important}
+
+/* Generic course primary controls. Do not override correctness/error states. */
+body.course-page :is(
+  .intro-primary,
+  .course-primary-btn,
+  .course-btn-primary,
+  .workbook-primary,
+  .quiz-submit,
+  .course-form-link:not(.is-pending)
+){
+  background:var(--brand-orange)!important;
+  border-color:var(--brand-orange)!important;
+  color:var(--brand-jet)!important;
+}
+body.course-page :is(
+  .intro-primary,
+  .course-primary-btn,
+  .course-btn-primary,
+  .workbook-primary,
+  .quiz-submit,
+  .course-form-link:not(.is-pending)
+):hover{
+  background:#F27C43!important;
+  border-color:#F27C43!important;
+}
+
+/* Focus treatment across course. */
+body.course-page :where(a,button,input,select,textarea):focus-visible{
+  outline-color:var(--brand-orange)!important;
+}
+
+/* ----------------------------------------------------------------------
+   RESPONSIVE — palette should remain calm on mobile/tablet.
+   ---------------------------------------------------------------------- */
+@media(max-width:700px){
+  body.public-page .site-nav{background:var(--brand-jet)!important}
+  body.public-page .contact-hero .contact-hero-map{border-top-color:rgba(122,166,179,.55)!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.public-page *,body.public-page *::before,body.public-page *::after,
+  body.course-page *,body.course-page *::before,body.course-page *::after{transition:none!important;animation:none!important}
+}
+
+/* Legacy CMS teal text is remapped to the new accent instead of leaking old green. */
+body.public-page :is(h1,h2,h3,strong)[style*="color: rgb(22, 135, 127)"],
+body.public-page :is(h1,h2,h3) font[color="#16877f"],
+body.public-page :is(h1,h2,h3) font[color="#16877F"]{
+  color:var(--brand-orange)!important;
+  -webkit-text-fill-color:var(--brand-orange)!important;
+}
+body.public-page :is(p,span,small,a)[style*="color: rgb(22, 135, 127)"]{
+  color:#A84517!important;
+  -webkit-text-fill-color:#A84517!important;
+}
+
+/* The featured online-course pulse follows Orange instead of the old teal. */
+@keyframes v87CourseCtaPulse{
+  0%,100%{box-shadow:0 10px 24px rgba(238,108,41,.18),0 0 0 0 rgba(238,108,41,0)}
+  50%{box-shadow:0 12px 30px rgba(238,108,41,.28),0 0 0 7px rgba(238,108,41,.13)}
+}
+body.public-page .online-course-cover__image-link:focus-visible{
+  outline-color:var(--brand-orange)!important;
+}
+body.public-page .online-course-cover__actions .public-btn{
+  box-shadow:0 12px 28px rgba(238,108,41,.18)!important;
+}
+
+/* Explicit higher-specificity overrides for trainer hover from the previous lime theme. */
+body.public-page.trainer-page .trainer-access-box button:hover{
+  background:#F27C43!important;
+  border-color:#F27C43!important;
+  box-shadow:0 0 0 4px rgba(238,108,41,.18)!important;
+}

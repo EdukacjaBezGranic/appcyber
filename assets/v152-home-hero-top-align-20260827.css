@@ -1,0 +1,14 @@
+/* V152 — Start: wyrównanie tekstu hero do górnej krawędzi zdjęcia
+   Na szerokich ekranach kolumna tekstowa zaczyna się na tej samej wysokości
+   co fotografia. Na tabletach i telefonach zachowujemy naturalny układ pionowy. */
+@media (min-width: 901px){
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-copy{
+    justify-content:flex-start !important;
+    align-self:start !important;
+    padding-top:0 !important;
+  }
+
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual{
+    align-self:start !important;
+  }
+}

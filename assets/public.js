@@ -4,7 +4,8 @@ const publicNavItems = [
   { href: 'nasze-szkolenia.html', label: 'Nasze szkolenia' },
   { href: 'zapisy.html', label: 'Zapisy na szkolenia', className: 'nav-signups' },
   { href: 'kursy-online.html', label: 'Kursy online', className: 'nav-online' },
-  { href: 'kontakt.html', label: 'Kontakt' }
+  { href: 'kontakt.html', label: 'Kontakt' },
+  { href: 'panel-trenera.html', label: 'Panel trenera', className: 'nav-trainer' }
 ];
 
 function normalizePublicNavigation(nav) {
