@@ -1,0 +1,47 @@
+(()=>{
+  const I=window.EBG_I18N;
+  if(!I||!I.dict)return;
+  Object.assign(I.dict,{
+    'Oceń na skali 1-5, na ile rozpoznajesz własne reakcje i mechanizmy opisane w tym module. To samoocena - nie test wiedzy.':'Rate from 1 to 5 how well you recognise your own reactions and the mechanisms described in this module. This is a self-assessment - not a knowledge test.',
+    'Skala: 1 - zdecydowanie nie · 2 - raczej nie · 3 - częściowo · 4 - raczej tak · 5 - zdecydowanie tak':'Scale: 1 - definitely not · 2 - rather not · 3 - partly · 4 - rather yes · 5 - definitely yes',
+    'Przykład przepracowany: CLEAR bez zgadywania':'Worked example: CLEAR without guessing',
+    'Najpierw przeczytaj wszystkie dane.':'Read all the information first.',
+    'W tym przykładzie CLEAR służy do uporządkowania decyzji, a nie do odgadywania pięciu osobnych odpowiedzi.':'In this example CLEAR is used to organise a decision, not to guess five separate answers.',
+    'Co dokładnie oceniamy?':'What exactly are we assessing?',
+    'Producent reklamuje system jako narzędzie „wykrywające nieszczerość kandydatów z trafnością 99%”. Dokumentacja mówi jednak, że system klasyfikuje wybrane wzorce głosu i obrazu - nie mierzy kłamstwa bezpośrednio.':'The vendor advertises the system as a tool that “detects candidate dishonesty with 99% accuracy”. The documentation, however, says that it classifies selected voice and image patterns - it does not measure lying directly.',
+    'Jakich źródeł potrzebujemy?':'Which sources do we need?',
+    'Mamy reklamę i skrócony opis testu producenta. Brakuje niezależnego badania lub audytu oraz materiału pozwalającego ocenić zgodność zastosowania z prawem.':'We have an advertisement and a short vendor test description. We lack an independent study or audit and material needed to assess legal compliance.',
+    'Jak mocne są dowody?':'How strong is the evidence?',
+    'Podano „99%”, ale nie pokazano sposobu doboru próby, warunków testu ani liczby fałszywych wskazań. Nie wiemy też, czy wynik powtarza się w różnych grupach i warunkach.':'A “99%” result is given, but the sample selection, test conditions and number of false positives are not shown. We also do not know whether the result is reproduced across different groups and conditions.',
+    'Jakie są inne wyjaśnienia?':'What other explanations are possible?',
+    'Na analizowane sygnały mogą wpływać m.in. stres, sposób mówienia, jakość nagrania i warunki rozmowy. Tych czynników nie można automatycznie utożsamiać z „nieszczerością”.':'The analysed signals may be affected by stress, speaking style, recording quality and interview conditions. These factors cannot automatically be equated with “dishonesty”.',
+    'Wszystkie dane w tym przykładzie są fikcyjne i służą wyłącznie nauce procesu decyzyjnego.':'All information in this example is fictional and is used solely to learn the decision-making process.',
+    'R - Response: jaka decyzja jest uzasadniona na podstawie informacji, które rzeczywiście mamy?':'R - Response: which decision is justified by the information we actually have?',
+    'Nie podejmować decyzji o wdrożeniu na tej podstawie. Najpierw zebrać niezależne dowody, ocenić ryzyko i zgodność z prawem.':'Do not decide to deploy on this basis. First gather independent evidence and assess risk and legal compliance.',
+    'Co pokazuje CLEAR?':'What does CLEAR show?',
+    'Model nie ma produkować pięciu „zaliczonych literek”. Ma pilnować, żeby decyzja nie była mocniejsza niż dowody. W tym przypadku najważniejszym wynikiem jest właśnie informacja:':'The model is not meant to produce five “completed letters”. It is meant to ensure that the decision is no stronger than the evidence. In this case the most important result is the information:',
+    'jeszcze nie mamy podstaw do wdrożenia':'we do not yet have grounds for deployment',
+    'Ćwiczenie: co naprawdę warto udostępnić?':'Exercise: what is actually worth sharing?',
+    'Nie musisz odpowiadać osobno na pięć literek.':'You do not need to answer five letters separately.',
+    'Najpierw dostajesz post i wynik sprawdzenia. SHARE pomoże Ci potem nazwać, dlaczego jedna decyzja jest bezpieczniejsza od drugiej.':'First you receive the post and the verification result. SHARE then helps explain why one decision is safer than another.',
+    'To zrzut ekranu przesłany przez prywatne konto. W poście nie ma linku do źródła ani informacji, kto opublikował pierwotny komunikat.':'This is a screenshot shared by a private account. The post contains no source link and no information about who published the original announcement.',
+    'Wynik sprawdzenia informacji':'Verification result',
+    'Co udało się ustalić o poście':'What was established about the post',
+    'Nie można potwierdzić jego pierwotnego źródła. Sam zrzut ekranu nie jest komunikatem urzędu.':'Its original source cannot be confirmed. A screenshot by itself is not an official notice.',
+    'Oficjalny komunikat - materiał fikcyjny':'Official notice - fictional material',
+    '„W dniach 12-13 września zamknięta będzie część parkingu od strony wjazdu B. Pozostałe miejsca oraz wejście główne pozostają dostępne.”':'“On 12-13 September, part of the car park by entrance B will be closed. The remaining spaces and the main entrance will stay available.”',
+    'Porównanie:':'Comparison:',
+    'post mówi o zamknięciu całego parkingu przez trzy miesiące. Komunikat źródłowy mówi o części parkingu przez dwa dni. Te informacje nie są równoważne.':'the post says the whole car park will be closed for three months. The primary announcement says part of it will be closed for two days. These claims are not equivalent.',
+    'Co robisz, jeśli chcesz praktycznie pomóc innym?':'What do you do if you want to help others in a practical way?',
+    'Nie powielam błędnego zrzutu. Jeśli informacja jest potrzebna, udostępniam aktualny komunikat źródłowy i krótko wyjaśniam różnicę.':'I do not repeat the incorrect screenshot. If the information is useful, I share the current primary announcement and briefly explain the difference.',
+    'Nie sprawdzam niczego, bo informacje organizacyjne są zbyt błahe, żeby mogły szkodzić.':'I do not check anything because organisational information is too trivial to cause harm.',
+    'Sprawdź odpowiedź':'Check the answer',
+    'Jak ta decyzja przechodzi przez SHARE?':'How does this decision map to SHARE?',
+    'pierwotne źródło zrzutu jest nieustalone; mamy natomiast komunikat źródłowy.':'the screenshot’s original source is unknown; we do have a primary announcement.',
+    'błędna informacja może powodować niepotrzebne zmiany planów i dalszy chaos.':'incorrect information can cause unnecessary changes of plans and further confusion.',
+    'dostępny komunikat nie potwierdza tezy o trzech miesiącach; podaje dwa dni i tylko część parkingu.':'the available announcement does not confirm the three-month claim; it says two days and only part of the car park.',
+    'intencją jest pomoc innym, więc lepiej przekazać materiał, który rzeczywiście pomaga.':'the intention is to help others, so it is better to share material that actually helps.',
+    'presja „przekażcie wszystkim” nie jest dowodem i nie powinna przyspieszać decyzji.':'the pressure to “tell everyone” is not evidence and should not speed up the decision.'
+  });
+  try{I.setLanguage(I.getLanguage());}catch(e){}
+})();

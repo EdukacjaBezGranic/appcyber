@@ -1,2 +1,1 @@
-V165 - 2026-08-27
-Poprawiono kontrast rozwijanych danych projektu na telefonach i tabletach oraz ujednolicono wysokość kart lekcji 3A-5C na szerokich ekranach. Wartości numeru projektu, beneficjenta i akcji mają teraz jawny ciemny kolor wraz z resetem WebKit text fill. Karty lekcji mają wspólną geometrię na desktopie, a na mobile zachowują naturalną wysokość.
+V175 - 2026-08-28

@@ -275,17 +275,6 @@
       ],
       note: 'Nie oceniasz, czy temat jest ważny. Oceniasz sposób jego przedstawienia.'
     },
-    'm4-16-praktyczny-przyklad-do-analizy': {
-      intro: 'Przeczytaj post z procentem i sprawdź, czy liczba rzeczywiście uzasadnia wniosek o całej grupie.',
-      steps: [
-        'Sprawdź, czy podano źródło, wartości bezwzględne i okres.',
-        'Oceń, jak post przechodzi od danych do wniosku o grupie.',
-        'Wybierz dominujący mechanizm manipulacji.',
-        'Wskaż brakujące dane i odpowiedzialną reakcję.',
-        'Opcjonalnie zapisz pierwszą informację, którą sprawdzisz.'
-      ],
-      note: 'Procent nie mówi wszystkiego. Potrzebujesz wartości bazowej, definicji, mianownika i porównywalnych danych.'
-    },
     'm4-18-zadanie-refleksyjne': {
       intro: 'Wybierz temat i zasadę, przy których chcesz zachować szczególną ostrożność.',
       steps: [

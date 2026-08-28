@@ -23,7 +23,7 @@ function render(panel,m){
  const section=document.createElement('section');section.className='module-quiz';section.dataset.moduleQuiz=m;
  section.innerHTML=`<div class="module-quiz__head"><div><span>TEST MODUŁOWY</span><h2>Sprawdź wiedzę z Modułu ${m}</h2><p>Odpowiedz na 8 pytań. Do zaliczenia potrzebujesz co najmniej 7 poprawnych odpowiedzi.</p></div><strong data-quiz-status>Nieukończony</strong></div><form><div class="module-quiz__questions"></div><div class="module-quiz__actions"><button type="submit">Sprawdź wynik</button><p data-quiz-result aria-live="polite"></p></div></form>`;
  const box=$('.module-quiz__questions',section);
- quizzes[m].forEach((q,i)=>{const item=document.createElement('fieldset');item.innerHTML=`<legend><span>${i+1}</span>${q[0]}</legend><div>${q[1].map((a,j)=>`<label><input type="radio" name="quiz-${m}-${i}" value="${j}"><span>${a}</span></label>`).join('')}</div>`;box.append(item)});
+ quizzes[m].forEach((q,i)=>{const item=document.createElement('fieldset');item.dataset.correct=String(q[2]);item.innerHTML=`<legend><span>${i+1}</span>${q[0]}</legend><div>${q[1].map((a,j)=>`<label><input type="radio" name="quiz-${m}-${i}" value="${j}"><span>${a}</span></label>`).join('')}</div>`;box.append(item)});
  nav.before(section);
  if(m===5){const evaluation=document.getElementById('courseEvaluation');const finalization=document.getElementById('courseFinalization');if(evaluation)section.after(evaluation);if(finalization)(evaluation||section).after(finalization);}
  const saved=quizState()[m]; if(saved?.answers) Object.entries(saved.answers).forEach(([i,v])=>{const f=$(`input[name="quiz-${m}-${i}"][value="${v}"]`,section);if(f)f.checked=true});
