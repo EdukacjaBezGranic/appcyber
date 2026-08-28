@@ -1,0 +1,44 @@
+/* V174 - desktop tooltip positioning and sizing.
+   On desktop the tooltip is a compact anchored bubble. Tablet/phone keep the bottom-panel behaviour from V164. */
+@media (min-width:1201px){
+  body.course-page.course-portal-aligned .course-term-tooltip__bubble{
+    position:fixed!important;
+    left:var(--v174-tooltip-left, 12px)!important;
+    top:var(--v174-tooltip-top, 12px)!important;
+    right:auto!important;
+    bottom:auto!important;
+    width:max-content!important;
+    max-width:min(300px, calc(100vw - 24px))!important;
+    padding:9px 11px!important;
+    border-radius:9px!important;
+    font-size:.76rem!important;
+    line-height:1.4!important;
+    transform:translateY(4px)!important;
+    z-index:500!important;
+  }
+  body.course-page.course-portal-aligned .course-term-tooltip:hover .course-term-tooltip__bubble,
+  body.course-page.course-portal-aligned .course-term-tooltip:focus .course-term-tooltip__bubble,
+  body.course-page.course-portal-aligned .course-term-tooltip:focus-visible .course-term-tooltip__bubble{
+    transform:translateY(0)!important;
+  }
+  body.course-page.course-portal-aligned .course-term-tooltip__bubble::after{
+    content:"";
+    position:absolute;
+    left:var(--v174-tooltip-arrow-left, 22px);
+    bottom:-6px;
+    width:12px;
+    height:12px;
+    background:#17231e;
+    border-right:1px solid rgba(255,255,255,.16);
+    border-bottom:1px solid rgba(255,255,255,.16);
+    transform:rotate(45deg);
+  }
+  body.course-page.course-portal-aligned .course-term-tooltip.is-tooltip-below .course-term-tooltip__bubble::after{
+    top:-6px;
+    bottom:auto;
+    border-right:0;
+    border-bottom:0;
+    border-left:1px solid rgba(255,255,255,.16);
+    border-top:1px solid rgba(255,255,255,.16);
+  }
+}
