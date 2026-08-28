@@ -1,5 +1,5 @@
 /*
-  V154 — aktywne linki do anonimowej ankiety ewaluacyjnej.
+  V154 - aktywne linki do anonimowej ankiety ewaluacyjnej.
   Linki prowadzą do formularzy respondentów Google Forms (PL / EN).
 */
 (()=>{

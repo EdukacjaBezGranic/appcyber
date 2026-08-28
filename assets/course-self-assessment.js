@@ -62,7 +62,7 @@
     rows.forEach(row => row.classList.remove('is-focus-area'));
 
     if (completed.length !== rows.length) {
-      scoreEl.textContent = '— / 35';
+      scoreEl.textContent = '- / 35';
       profileEl.textContent = 'Uzupełnij wszystkie stwierdzenia';
       descriptionEl.textContent = `Pozostało ${rows.length - completed.length} ${rows.length - completed.length === 1 ? 'stwierdzenie' : 'stwierdzenia'}. Po zakończeniu zobaczysz orientacyjny profil oraz dwa obszary do dalszej pracy.`;
       focusEl.hidden = true;
@@ -79,7 +79,7 @@
     scoreEl.textContent = `${total} / 35`;
     profileEl.textContent = profile.title;
     descriptionEl.textContent = profile.description;
-    areasEl.innerHTML = focus.map(item => `<li><strong>${item.area} — ${item.score}/5</strong><span>${item.tip}</span></li>`).join('');
+    areasEl.innerHTML = focus.map(item => `<li><strong>${item.area} - ${item.score}/5</strong><span>${item.tip}</span></li>`).join('');
     focus.forEach(item => item.row.classList.add('is-focus-area'));
     focusEl.hidden = false;
     result.classList.add('is-complete');

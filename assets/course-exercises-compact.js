@@ -9,10 +9,10 @@
       high: 'Twoje odpowiedzi wskazują na dobrą świadomość emocji, błędów poznawczych, efektu powtarzania i społecznego dowodu słuszności. Utrzymuj ten nawyk szczególnie wtedy, gdy treść wywołuje silny gniew, strach lub presję szybkiej reakcji.'
     },
     critical: {
-      area: 'krytyczne myślenie, źródła i decyzje',
-    low: 'Wróć do pytań o źródło, dowody, kontekst i cel decyzji. Przed działaniem doprecyzuj, czego próbujesz się dowiedzieć i czego nadal nie wiesz.',
+      area: 'krytyczne myślenie, źródła i dowody',
+    low: 'Wróć do pytań o konkretne twierdzenie, źródło, dowody i kontekst. Przed sformułowaniem wniosku doprecyzuj, czego próbujesz się dowiedzieć i czego nadal nie wiesz.',
       mid: 'Potrafisz stosować część zasad krytycznej oceny, lecz nie wszystkie są jeszcze jednakowo utrwalone. Najwięcej korzyści da regularne porównywanie niezależnych źródeł i sprawdzanie związku między dowodem a wnioskiem.',
-      high: 'Twoje odpowiedzi wskazują na dobrze rozwiniętą ocenę źródeł i dowodów oraz świadome podejmowanie decyzji. Utrzymuj ten standard również przy odpowiedziach AI i informacjach zgodnych z Twoim pierwszym przekonaniem.'
+      high: 'Twoje odpowiedzi wskazują na dobrze rozwinięte nawyki oceny źródeł i dowodów. Utrzymuj ten standard również przy odpowiedziach AI i informacjach zgodnych z Twoim pierwszym przekonaniem.'
     },
     sensitive: {
       area: 'odpowiedzialna komunikacja w tematach wrażliwych',
@@ -57,7 +57,7 @@
       summaryField.className = 'course-answer';
       summaryField.dataset.assessmentSummaryField = '';
       summaryField.dataset.saveKey = `${sectionId}-summary-v57`;
-      summaryField.dataset.workbookLabel = `Samoocena – ${section.querySelector('h2')?.textContent.trim() || `Moduł ${moduleNumber}`}`;
+      summaryField.dataset.workbookLabel = `Samoocena - ${section.querySelector('h2')?.textContent.trim() || `Moduł ${moduleNumber}`}`;
       section.querySelector('.course-section-body')?.append(summaryField);
     }
 
@@ -92,7 +92,7 @@
       const weakest = items.filter(item => item.value === weakestValue).slice(0, 2);
       weakest.forEach(item => item.row.classList.add('is-assessment-focus'));
 
-      title.textContent = `${score} / 25 – ${profile.label}`;
+      title.textContent = `${score} / 25 - ${profile.label}`;
       copy.textContent = config[profile.band];
       focus.textContent = `Obszar do dalszej pracy: ${weakest.map(item => `${item.label} (${item.value}/5)`).join(' oraz ')}.`;
       result.classList.add('is-complete');

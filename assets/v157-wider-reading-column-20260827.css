@@ -1,0 +1,27 @@
+/* V157 — szersza kolumna czytelnicza na laptopie i desktopie.
+   Nie zmienia treści ani mobilnego składu. Przywraca wykorzystanie dostępnej
+   szerokości, które zostało przypadkowo ograniczone przez reguły V151. */
+
+@media (min-width: 1024px){
+  body.course-page.course-portal-aligned .course-section h2{
+    max-width:36ch!important;
+  }
+
+  body.course-page.course-portal-aligned .course-section-body>p,
+  body.course-page.course-portal-aligned .course-section-body>ul,
+  body.course-page.course-portal-aligned .course-section-body>ol,
+  body.course-page.course-portal-aligned .course-section--v3 .course-section-body>p,
+  body.course-page.course-portal-aligned .course-section--v3 .course-section-body>ul,
+  body.course-page.course-portal-aligned .course-section--v3 .course-section-body>ol,
+  body.course-page.course-portal-aligned .v149-editorial-paragraph,
+  body.course-page.course-portal-aligned .v148-editorial-insert>p{
+    width:100%!important;
+    max-width:112ch!important;
+  }
+
+  /* Narracyjne przejścia mogą być nieco szersze od zwykłego tekstu,
+     ale nadal pozostają wygodną kolumną do czytania. */
+  body.course-page.course-portal-aligned .course-narrator-v150{
+    max-width:104ch!important;
+  }
+}

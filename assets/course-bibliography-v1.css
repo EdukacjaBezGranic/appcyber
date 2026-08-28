@@ -98,3 +98,76 @@
   .course-bibliography__group{break-inside:avoid;box-shadow:none}
   .course-audio-infographic__toggle{animation:none!important}
 }
+
+
+/* V156 — bibliografia kursu jako rozwijana sekcja */
+.course-bibliography-details{
+  max-width:104ch;
+  margin:0;
+  border:1px solid #d7e4df;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(25,61,58,.06);
+  overflow:hidden;
+}
+.course-bibliography-details>summary{
+  display:flex;
+  flex-direction:column;
+  gap:.25rem;
+  position:relative;
+  padding:1.1rem 3.4rem 1.1rem 1.2rem;
+  cursor:pointer;
+  list-style:none;
+  background:#f5f8f7;
+  color:#183f3a;
+  transition:background .18s ease,border-color .18s ease;
+}
+.course-bibliography-details>summary::-webkit-details-marker{display:none}
+.course-bibliography-details>summary::after{
+  content:"+";
+  position:absolute;
+  right:1.2rem;
+  top:50%;
+  width:1.9rem;
+  height:1.9rem;
+  display:grid;
+  place-items:center;
+  transform:translateY(-50%);
+  border:1px solid rgba(22,135,127,.28);
+  border-radius:999px;
+  background:#e8f7f4;
+  color:#0d5e59;
+  font-size:1.25rem;
+  font-weight:800;
+  line-height:1;
+}
+.course-bibliography-details[open]>summary::after{content:"−"}
+.course-bibliography-details>summary:hover,
+.course-bibliography-details>summary:focus-visible{background:#edf5f2}
+.course-bibliography-details>summary:focus-visible{outline:3px solid rgba(22,135,127,.28);outline-offset:-3px}
+.course-bibliography-details__label{
+  color:#0d5e59;
+  font-size:.78rem;
+  font-weight:850;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.course-bibliography-details>summary strong{
+  max-width:74ch;
+  font-size:clamp(1rem,1.8vw,1.12rem);
+  line-height:1.35;
+}
+.course-bibliography-details__content{padding:clamp(18px,3vw,28px)}
+.course-bibliography-details__content>.course-bibliography__group:first-of-type{margin-top:.5rem}
+@media(max-width:620px){
+  .course-bibliography-details{border-radius:13px}
+  .course-bibliography-details>summary{padding:1rem 3.1rem 1rem 1rem}
+  .course-bibliography-details>summary::after{right:.9rem}
+  .course-bibliography-details__content{padding:15px}
+}
+@media print{
+  .course-bibliography-details{border:0;box-shadow:none;overflow:visible}
+  .course-bibliography-details>summary{display:none!important}
+  .course-bibliography-details:not([open])>.course-bibliography-details__content{display:block!important}
+  .course-bibliography-details__content{padding:0}
+}

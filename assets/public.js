@@ -1,4 +1,4 @@
-// Wspólny pasek nawigacji — jedna kolejność na wszystkich podstronach.
+// Wspólny pasek nawigacji - jedna kolejność na wszystkich podstronach.
 const publicNavItems = [
   { href: 'index.html', label: 'Start' },
   { href: 'nasze-szkolenia.html', label: 'Nasze szkolenia' },

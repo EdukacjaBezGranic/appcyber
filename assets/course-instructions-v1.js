@@ -28,17 +28,17 @@
         'Najpierw zaznacz elementy, które mogą sprawić, że post wyda się wiarygodny jeszcze przed sprawdzeniem źródła.',
         'Następnie zdecyduj, od czego rozpoczniesz weryfikację deklarowanego wyniku „40% szybciej”.',
         'Na końcu wskaż informacje o metodzie badania, bez których nie da się uczciwie ocenić tego wyniku.',
-        'Po sprawdzeniu odpowiedzi przeczytaj uzasadnienia — pokazują różnicę między sygnałem wiarygodności a dowodem.'
+        'Po sprawdzeniu odpowiedzi przeczytaj uzasadnienia - pokazują różnicę między sygnałem wiarygodności a dowodem.'
       ],
       note: 'Na tym etapie nie oceniaj jeszcze, czy post jest prawdziwy. Zwróć uwagę na to, co sprawia, że może brzmieć wiarygodnie.'
     },
     'm4-extension-sift': {
       intro: 'Potraktuj fikcyjny komunikat o rzekomej likwidacji urzędów pracy jak wiadomość, którą właśnie zobaczyłeś w mediach społecznościowych. Przejdź przez SIFT bez dopowiadania faktów, których jeszcze nie sprawdziłeś.',
       steps: [
-        'S — zatrzymaj reakcję wywołaną słowami „PILNE” i „udostępnij, zanim usuną”.',
-        'I — określ, co naprawdę wiesz o autorze i domenie, a czego dopiero musisz się dowiedzieć.',
-        'F — zaznacz wynik sprawdzenia lepszych źródeł. Jeżeli jeszcze tego nie zrobiłeś, nie zgaduj.',
-        'T — wskaż, czy dotarłeś do pierwotnego komunikatu lub pełnego kontekstu.',
+        'S - zatrzymaj reakcję wywołaną słowami „PILNE” i „udostępnij, zanim usuną”.',
+        'I - określ, co naprawdę wiesz o autorze i domenie, a czego dopiero musisz się dowiedzieć.',
+        'F - zaznacz wynik sprawdzenia lepszych źródeł. Jeżeli jeszcze tego nie zrobiłeś, nie zgaduj.',
+        'T - wskaż, czy dotarłeś do pierwotnego komunikatu lub pełnego kontekstu.',
         'Dopiero na końcu wybierz decyzję i nazwij pierwsze źródło, które sprawdzisz.',
         'Kliknij „Sprawdź odpowiedzi i wyjaśnienia”, aby zobaczyć uzasadnienie każdego etapu.'
       ],
@@ -94,13 +94,13 @@
         'Wybierz sposób, który pomoże Ci zatrzymać automatyczną reakcję.',
         'Na końcu zapisz własną krótką zasadę przed szybką oceną lub udostępnieniem.'
       ],
-      note: 'To refleksja, nie test. Nie oceniasz jeszcze narzędzi fact-checkingowych — skupiasz się na własnej reakcji i podatności na wpływ.'
+      note: 'To refleksja, nie test. Nie oceniasz jeszcze narzędzi fact-checkingowych - skupiasz się na własnej reakcji i podatności na wpływ.'
     },
     'm2-19-krotka-samoocena': {
       intro: 'Oceń pięć zdań na skali od 1 do 5.',
       steps: [
         'Przeczytaj pierwsze zdanie.',
-        'Wybierz liczbę od 1 do 5: 1 oznacza „zdecydowanie się nie zgadzam”, a 5 — „zdecydowanie się zgadzam”.',
+        'Wybierz liczbę od 1 do 5: 1 oznacza „zdecydowanie się nie zgadzam”, a 5 - „zdecydowanie się zgadzam”.',
         'Powtórz to dla wszystkich pięciu zdań.',
         'Po zaznaczeniu wszystkich odpowiedzi zobaczysz podsumowanie.'
       ],
@@ -160,11 +160,11 @@
       intro: 'Wybierz jedną decyzję i przejdź przez model CLEAR od początku do końca.',
       steps: [
         'Wpisz lub wybierz obszar decyzji, którą chcesz przeanalizować.',
-        'C — napisz, co dokładnie musisz ustalić.',
-        'L — wskaż źródła, które sprawdzisz.',
-        'E — oceń jakość dostępnych dowodów.',
-        'A — sprawdź inne wyjaśnienia lub możliwości.',
-        'R — zdecyduj, czy możesz działać teraz, warunkowo, czy potrzebujesz więcej danych.'
+        'C - napisz, co dokładnie musisz ustalić.',
+        'L - wskaż źródła, które sprawdzisz.',
+        'E - oceń jakość dostępnych dowodów.',
+        'A - sprawdź inne wyjaśnienia lub możliwości.',
+        'R - zdecyduj, czy możesz działać teraz, warunkowo, czy potrzebujesz więcej danych.'
       ],
       note: 'Nie chodzi o szybkie dojście do odpowiedzi. Model pomaga zobaczyć, czego jeszcze brakuje.'
     },
@@ -318,14 +318,14 @@
       note: 'To nie jest diagnoza. Jeżeli nie rozpoznajesz żadnego sygnału, nie musisz go zaznaczać.'
     },
     'm5-7-zdrowe-nawyki-korzystania-z-mediow': {
-      intro: 'Wybierz jeden rzeczywisty kontakt z informacją z ostatnich 24 godzin — taki, który trwał dłużej, niż planowałeś, albo wyraźnie wpłynął na Twoje samopoczucie.',
+      intro: 'Wybierz jeden rzeczywisty kontakt z informacją z ostatnich 24 godzin - taki, który trwał dłużej, niż planowałeś, albo wyraźnie wpłynął na Twoje samopoczucie.',
       steps: [
         'Wskaż, gdzie rozpoczął się ten kontakt i po co sięgnąłeś po informację.',
         'Zastanów się, co przedłużyło korzystanie: kolejne rekomendacje, powiadomienia, emocje, dyskusja czy świadoma potrzeba.',
         'Nazwij swoje odczucie po zakończeniu i oceń, czy osiągnąłeś pierwotny cel.',
         'Zapisz jedną niewielką zmianę, która w podobnej sytuacji pozwoli zachować większą kontrolę nad czasem i uwagą.'
       ],
-      note: 'To analiza własnego doświadczenia, a nie test dobrych nawyków. Nie otrzymasz czerwonej ani zielonej oceny — ważne jest zauważenie związku między celem, mechanizmem zatrzymującym uwagę i skutkiem.'
+      note: 'To analiza własnego doświadczenia, a nie test dobrych nawyków. Nie otrzymasz czerwonej ani zielonej oceny - ważne jest zauważenie związku między celem, mechanizmem zatrzymującym uwagę i skutkiem.'
     },
     'm5-8-od-reakcji-do-odpowiedzi': {
       intro: 'Przeczytaj wiadomość i przejdź od pierwszego impulsu do spokojnej odpowiedzi.',
@@ -362,11 +362,11 @@
     'm5-17-narzedzie-share-udostepniaj-odpowiedzialnie': {
       intro: 'Zanim udostępnisz wybrany post, odpowiedz po kolei na pięć pytań SHARE.',
       steps: [
-        'S — sprawdź, czy znasz źródło.',
-        'H — oceń, komu treść może zaszkodzić.',
-        'A — sprawdź, czy są konkretne dowody.',
-        'R — nazwij prawdziwy powód, dla którego chcesz udostępnić.',
-        'E — zauważ emocję, która towarzyszy decyzji.',
+        'S - sprawdź, czy znasz źródło.',
+        'H - oceń, komu treść może zaszkodzić.',
+        'A - sprawdź, czy są konkretne dowody.',
+        'R - nazwij prawdziwy powód, dla którego chcesz udostępnić.',
+        'E - zauważ emocję, która towarzyszy decyzji.',
         'Dopiero na końcu wybierz: udostępniam, sprawdzam, nie udostępniam albo szukam bezpieczniejszego źródła.'
       ],
       note: 'SHARE nie mówi automatycznie, czy treść jest prawdziwa. Pomaga zatrzymać impuls i wybrać następny krok.'
