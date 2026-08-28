@@ -1,0 +1,53 @@
+/* V173 - czytelne przejścia narracyjne między sekcjami */
+body.course-page.course-portal-aligned .course-section > .course-note--transition-v150{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  gap:.78rem;
+  margin:1.15rem clamp(18px,3vw,34px) 1.35rem!important;
+  padding:.95rem 1.05rem!important;
+  max-width:none!important;
+  border:1px solid #d8e6e0!important;
+  border-left:4px solid #2f8a6d!important;
+  border-radius:12px!important;
+  background:linear-gradient(90deg,#f2f8f5 0%,#f9fcfa 100%)!important;
+  color:#33443d!important;
+  -webkit-text-fill-color:#33443d!important;
+  font-size:1rem!important;
+  font-weight:500!important;
+  line-height:1.58!important;
+  box-shadow:0 5px 16px rgba(22,48,38,.045)!important;
+}
+body.course-page.course-portal-aligned .course-section > .course-note--transition-v150::before{
+  content:"→";
+  display:grid;
+  place-items:center;
+  flex:0 0 28px;
+  width:28px;
+  height:28px;
+  margin-top:.02rem;
+  border-radius:50%;
+  background:#28684f;
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+  font-size:.9rem;
+  font-weight:900;
+  line-height:1;
+}
+
+@media(max-width:760px){
+  body.course-page.course-portal-aligned .course-section > .course-note--transition-v150{
+    gap:.65rem;
+    margin:1rem var(--v164-card-pad,10px) 1.15rem!important;
+    padding:.82rem .88rem!important;
+    border-radius:10px!important;
+    font-size:.96rem!important;
+    line-height:1.52!important;
+  }
+  body.course-page.course-portal-aligned .course-section > .course-note--transition-v150::before{
+    flex-basis:24px;
+    width:24px;
+    height:24px;
+    font-size:.78rem;
+  }
+}
