@@ -1,2 +1,2 @@
-V164 - 2026-08-27
-Pełny audyt responsywności kursu online na telefonach i tabletach. Zmniejszono i ujednolicono boczne marginesy, usunięto historyczne jednostronne wcięcia iPad, przebudowano tabletowy nagłówek i zachowanie planu kursu, wyrównano szerokości kart, ćwiczeń, formularzy i bloków informacyjnych oraz zabezpieczono tabele i tooltipy przed poziomym overflow. Zweryfikowano szerokości 360, 390, 430, 768, 820, 1024 i 1194 px.
+V165 - 2026-08-27
+Poprawiono kontrast rozwijanych danych projektu na telefonach i tabletach oraz ujednolicono wysokość kart lekcji 3A-5C na szerokich ekranach. Wartości numeru projektu, beneficjenta i akcji mają teraz jawny ciemny kolor wraz z resetem WebKit text fill. Karty lekcji mają wspólną geometrię na desktopie, a na mobile zachowują naturalną wysokość.
