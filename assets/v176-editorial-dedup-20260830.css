@@ -1,0 +1,6 @@
+/* V176: remove the additive narrative layer that repeated section content. */
+.course-narrator-v150,
+.course-guide-bridge {
+  display: none !important;
+}
+

@@ -64,13 +64,11 @@
     },
     '1.3': {
       steps: [
-        'Wyobraź sobie, że jedna wiadomość jest skracana i przesyłana dalej przez kolejne osoby.',
         'Najpierw przeczytaj wszystkie pięć wersji. Każda dotyczy tego samego czasowego zamknięcia jednego urzędu.',
         'Przy każdej wersji wybierz jej miejsce w kolejności: 1 to pełny komunikat oficjalny, a 5 to najbardziej zniekształcona i uogólniona wersja.',
-        'Każdego numeru od 1 do 5 użyj tylko raz.',
-        'Kliknij „Sprawdź kolejność” i przeczytaj wyjaśnienie pod każdą wersją wiadomości.'
+        'Każdego numeru od 1 do 5 użyj tylko raz.'
       ],
-      note: 'To działa jak zabawa w głuchy telefon: im dalej wiadomość jest od źródła, tym więcej szczegółów może zniknąć albo zmienić znaczenie.'
+      note: ''
     },
     '1.4': {
       steps: [
@@ -402,7 +400,7 @@
         ['4','4 - wiadomość przekazana bez źródła i ważnych szczegółów'],
         ['5','5 - końcowe uogólnienie zmieniające znaczenie']
       ];
-      const body=`<form><div class="m1v3-reference"><p><strong>Ułóż historię wiadomości.</strong> Przeczytaj pięć wersji i ustaw je od pełnego komunikatu do zniekształconego uogólnienia.</p><p><strong>Wskazówka:</strong> zacznij od wersji, która ma autora, datę, godziny i link. Na końcu ustaw wersję, która mówi o wszystkich urzędach, chociaż źródło dotyczyło tylko jednego.</p></div>${cards.map((c,i)=>`<label class="m1v3-row"><p><strong>Tekst ${String.fromCharCode(65+i)}.</strong> ${c.text}</p><select name="pos${i}" required><option value="">Wybierz miejsce w kolejności</option>${positionOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select><span class="m1v3-item-feedback" data-order-feedback="${i}"></span></label>`).join('')}<div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź kolejność</button></div></form>`;
+      const body=`<form><div class="m1v3-reference"><p><strong>Wskazówka:</strong> zacznij od wersji, która ma autora, datę, godziny i link. Na końcu ustaw wersję, która mówi o wszystkich urzędach, chociaż źródło dotyczyło tylko jednego.</p></div>${cards.map((c,i)=>`<label class="m1v3-row"><p><strong>Tekst ${String.fromCharCode(65+i)}.</strong> ${c.text}</p><select name="pos${i}" required><option value="">Wybierz miejsce w kolejności</option>${positionOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select><span class="m1v3-item-feedback" data-order-feedback="${i}"></span></label>`).join('')}<div class="m1v3-actions"><button class="m1v3-button" type="submit">Sprawdź kolejność</button></div></form>`;
       host.innerHTML=activityShell('1.3','1.3','Jak wiadomość zmienia się po drodze?','Ułóż pięć wersji tej samej wiadomości - od pełnego komunikatu do zniekształconego uogólnienia.',body);const form=host.querySelector('form');restoreRecord(host);
       let wrongOrder=[];
       const secondChance=setupSecondChance(host,{
