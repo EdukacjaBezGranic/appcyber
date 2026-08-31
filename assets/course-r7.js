@@ -15,6 +15,7 @@
       chooseAll:'Odpowiedz na wszystkie 8 pytań. W pytaniach wielokrotnego wyboru zaznacz dokładnie 2 odpowiedzi.', passedMsg:'Test zaliczony. Możesz przejść dalej.',
       failedMsg:'Jeszcze nie. Sprawdź zaznaczone odpowiedzi i spróbuj ponownie.', correct:'✓ Poprawna odpowiedź', wrong:'✕ Błędna odpowiedź',
       exerciseChoose:'Zaznacz odpowiedź w każdym pytaniu.', exerciseOk:'Dobrze - wszystkie odpowiedzi są poprawne.', exerciseSome:'Nie wszystkie odpowiedzi są poprawne. Sprawdź oznaczenia i wyjaśnienia.',
+      exerciseRetry:'Spróbuj ponownie', exerciseSolution:'Pokaż rozwiązanie', exerciseSolutionShown:'Rozwiązanie zostało pokazane. Przeczytaj wyjaśnienia przy odpowiedziach.',
       completed:'Ukończone', markComplete:'Zaznacz jako ukończone', unmark:'Cofnij oznaczenie ukończenia',
       saved:'Zapisano lokalnie.', imported:'Postęp został zaimportowany.', badImport:'Nie udało się odczytać pliku postępu.',
       resetConfirm:'Wyzerować cały postęp kursu?', search:'Szukaj w kursie...', noResults:'Brak wyników w planie kursu.',
@@ -29,6 +30,7 @@
       chooseAll:'Answer all 8 questions. In multiple-choice questions select exactly 2 answers.', passedMsg:'Quiz passed. You can continue.',
       failedMsg:'Not yet. Review the marked answers and try again.', correct:'✓ Correct answer', wrong:'✕ Incorrect answer',
       exerciseChoose:'Choose an answer for every question.', exerciseOk:'Good - all answers are correct.', exerciseSome:'Some answers are incorrect. Review the markings and explanations.',
+      exerciseRetry:'Try again', exerciseSolution:'Show solution', exerciseSolutionShown:'The solution is shown. Read the explanation under each answer.',
       completed:'Completed', markComplete:'Mark as complete', unmark:'Undo completion',
       saved:'Saved locally.', imported:'Progress imported.', badImport:'Could not read the progress file.',
       resetConfirm:'Reset all course progress?', search:'Search the course...', noResults:'No results in the course plan.',
@@ -252,6 +254,59 @@
     ]
   };
 
+  const QUIZ_REASONS={
+    m1:[
+      ['Liczby opisują zasięg i reakcje odbiorców, nie jakość źródła ani prawdziwość twierdzenia.','Numbers describe reach and audience reactions, not source quality or truth.'],
+      ['Personalizacja korzysta z historii zachowań i sieci relacji; nie tworzy osobnej wersji faktów.','Personalisation uses behaviour history and social networks; it does not create separate facts.'],
+      ['Testowanie tytułów pod kątem zatrzymania uwagi jest elementem konkurencji o czas odbiorcy.','Testing headlines for attention is part of competition for the audience’s time.'],
+      ['Zastrzeżenie w treści ogranicza wniosek, więc kategoryczny nagłówek wykracza poza przedstawione dowody.','The caveat limits the conclusion, so the categorical headline goes beyond the evidence.'],
+      ['Bez oryginalnego linku najłatwiej tracimy datę, autora, źródło i ważne zastrzeżenia.','Without the original link, date, author, source and caveats are easily lost.'],
+      ['Bańka dotyczy ekspozycji personalizowanej, a komora dodaje społeczne wzmacnianie podobnych poglądów.','A filter bubble concerns personalised exposure; an echo chamber adds social reinforcement.'],
+      ['AI zwiększa skalę tworzenia, ale płynność wyniku nie gwarantuje jego prawdziwości.','AI increases production scale, but fluent output is not guaranteed to be true.'],
+      ['Przed oceną trzeba ustalić nadawcę, treść twierdzenia i drogę, którą materiał do nas dotarł.','Before judging, establish the sender, claim and route by which it reached you.']
+    ],
+    m2:[
+      ['Silna emocja może przyspieszyć ocenę i udostępnienie przed sprawdzeniem źródła.','Strong emotion can accelerate judgement and sharing before verification.'],
+      ['Dostępność dramatycznego przykładu i popularność są skrótami, natomiast źródło i porównanie danych są analizą.','A vivid example and popularity are shortcuts; source checking and data comparison are analysis.'],
+      ['Te same pytania wobec treści zgodnej i niezgodnej z poglądami ograniczają selektywne sprawdzanie.','Applying the same questions to agreeable and disagreeable content reduces selective checking.'],
+      ['Powtarzanie zwiększa znajomość przekazu, którą łatwo pomylić z prawdziwością.','Repetition increases familiarity, which can be mistaken for truth.'],
+      ['Popularność wpływa na pierwsze wrażenie, ale nadal opisuje zachowanie odbiorców, nie dowód.','Popularity affects first impressions but still describes audience behaviour, not evidence.'],
+      ['Prosta opowieść daje poczucie porządku w niepewności, nawet jeśli pomija złożoność.','A simple story creates order under uncertainty even when it omits complexity.'],
+      ['Rekomendacje, emocje i relacje zwiększają dystrybucję, lecz same nie weryfikują twierdzenia.','Recommendations, emotion and relationships increase distribution but do not verify a claim.'],
+      ['Pauza dotyczy reakcji; ciekawość nadal prowadzi do źródła i pytań.','The pause concerns reaction; curiosity still leads to sources and questions.']
+    ],
+    m3:[
+      ['Autentyczny materiał może wprowadzać w błąd, gdy opis zmienia jego miejsce, czas lub znaczenie.','Authentic material can mislead when its caption changes place, time or meaning.'],
+      ['Fałszywy podpis i selektywne kadrowanie zmieniają kontekst bez tworzenia nowego obrazu.','A false caption and selective crop change context without creating a new image.'],
+      ['Podobna nazwa, grafika i zmieniona domena wskazują na podszywanie się pod wiarygodne źródło.','A similar name, visuals and altered domain indicate source impersonation.'],
+      ['Selekcja prawdziwych danych może tworzyć fałszywy obraz całości, gdy pomija istotny kontekst.','Selecting true data can distort the whole picture when material context is omitted.'],
+      ['Kilka elementów jednej operacji może wyglądać jak niezależne potwierdzenia tej samej historii.','Several elements of one operation can look like independent confirmations.'],
+      ['Atrybucję wspiera podobieństwo metod i skoordynowany zestaw podszyć, nie sam język publikacji.','Attribution is supported by method similarity and coordinated impersonation, not language alone.'],
+      ['AI jest narzędziem; o dezinformacji decydują cel, kontekst, oznaczenie i sposób użycia.','AI is a tool; intent, context, labelling and use determine whether content misleads.'],
+      ['Wysoka stawka emocjonalna i dehumanizacja przesuwają uwagę z dowodów na konflikt tożsamości.','High emotional stakes and dehumanisation shift attention from evidence to identity conflict.']
+    ],
+    m4:[
+      ['Precyzyjne zapisanie twierdzenia wyznacza, jakiego dowodu trzeba szukać.','Stating the claim precisely determines what evidence is needed.'],
+      ['Pełna wypowiedź i oficjalny dokument są bezpośrednimi materiałami, a nie cudzym omówieniem.','A full statement and official document are direct materials, not someone else’s summary.'],
+      ['Czytanie lateralne oznacza wyjście poza stronę i sprawdzenie jej w niezależnych źródłach.','Lateral reading means leaving the site and checking it through independent sources.'],
+      ['Triangulacja porównuje niezależne typy dowodów, a nie wiele kopii tego samego źródła.','Triangulation compares independent evidence types, not multiple copies of one source.'],
+      ['Wyszukiwanie obrazem pomaga znaleźć wcześniejsze wystąpienia i ustalić pochodzenie, ale nie odczytuje intencji.','Reverse image search finds earlier uses and provenance but cannot determine intent.'],
+      ['Miejsce potwierdzają wcześniejsze publikacje, geolokalizacja i niezależny kontakt ze źródłami lokalnymi.','Location is supported by earlier posts, geolocation and independent local confirmation.'],
+      ['Zdjęcie może być autentyczne, a manipulacja dotyczyć wyłącznie przypisanej mu daty.','A photo may be authentic while the manipulation concerns only its assigned date.'],
+      ['Uczciwy wniosek pokazuje ograniczenia i odróżnia brak potwierdzenia od dowodu nieistnienia.','An honest conclusion states limits and distinguishes no confirmation from proof of absence.']
+    ],
+    m5:[
+      ['Przy małym zasięgu i niskim ryzyku publiczne dementi może niepotrzebnie zwiększyć widoczność.','With low reach and risk, a public rebuttal can unnecessarily increase visibility.'],
+      ['Prebunking uprzedza o technice przed fałszem, a debunking koryguje konkretny fałsz po publikacji.','Prebunking warns about a technique beforehand; debunking corrects a specific falsehood afterwards.'],
+      ['Spokojne wskazanie daty i źródła koryguje informację bez zawstydzania rozmówcy.','Calmly showing the date and source corrects information without shaming the person.'],
+      ['Przy podszyciu nie klikamy; sprawdzamy kanał oficjalny, zachowujemy dowód i zgłaszamy incydent.','With impersonation, do not click; use the official channel, preserve evidence and report.'],
+      ['Publiczna korekta może nadać niszowej treści zasięg, którego wcześniej nie miała.','A public correction can give niche content reach it did not previously have.'],
+      ['Higiena informacyjna porządkuje kontakt z informacją, ale nie oznacza całkowitego unikania wiadomości.','Information hygiene structures news use; it does not mean avoiding information entirely.'],
+      ['SHARE łączy ocenę źródła, szkody, dokładności, celu udostępnienia i własnej emocji.','SHARE combines source, harm, accuracy, reason for sharing and emotion.'],
+      ['Najpierw zatrzymujemy impuls, potem sprawdzamy dowody i dopiero dobieramy proporcjonalną reakcję.','First pause the impulse, then verify evidence and choose a proportionate response.']
+    ]
+  };
+
   function q(pl,en,opts,correct){ return {pl,en,opts,correct}; }
   const QUIZ_OPTION_PERMS=[[0,1,2,3],[1,3,0,2],[2,0,3,1],[3,2,1,0]];
 
@@ -387,7 +442,7 @@
   function gradeQuiz(module,host,result,status,submit){
     const lessonStatus=moduleLessonStatus(module); if(!lessonStatus.complete){result.textContent=currentLang()==='pl'?`Najpierw ukończ wszystkie lekcje modułu (${lessonStatus.done}/${lessonStatus.total}).`:`Complete all module lessons first (${lessonStatus.done}/${lessonStatus.total}).`;return;}
     const items=QUIZZES[module]; let answered=0,score=0;
-    host.querySelectorAll('.choice').forEach(c=>{c.classList.remove('is-correct','is-wrong'); c.querySelector('.choice-status')?.remove();});
+    host.querySelectorAll('.choice').forEach(c=>{c.classList.remove('is-correct','is-wrong'); c.querySelector('.choice-status')?.remove();});host.querySelectorAll('.quiz-question-feedback').forEach(n=>n.remove());
     items.forEach((item,qi)=>{
       const field=host.querySelector(`[data-question="${qi}"]`);
       const expected=Array.isArray(item.correct)?item.correct:[item.correct];
@@ -403,6 +458,12 @@
         selected.forEach(input=>applyChoiceStatus(input.closest('.choice'),expected.includes(Number(input.value))));
         expected.forEach(index=>{ const input=field.querySelector(`input[value="${index}"]`); if(input&&!input.checked) applyChoiceStatus(input.closest('.choice'),true); });
       }
+      const reason=QUIZ_REASONS[module]?.[qi]?.[currentLang()==='pl'?0:1]||'';
+      const note=document.createElement('div');note.className='quiz-question-feedback '+(isCorrect?'is-correct':'is-guidance');
+      const lead=currentLang()==='pl'?(isCorrect?'Dobrze.':'Ten wybór nie jest najlepiej uzasadniony przez materiał.'):(isCorrect?'Correct.':'This choice is not the best supported by the material.');
+      const answers=expected.map(index=>escapeHtml(txt(item.opts[index]))).join(currentLang()==='pl'?' oraz ':' and ');
+      note.innerHTML=`<strong>${escapeHtml(lead)}</strong> ${escapeHtml(reason)}${isCorrect?'':` <span>${currentLang()==='pl'?'Najlepiej uzasadniona odpowiedź:':'Best-supported answer:'} <b>${answers}</b></span>`}`;
+      field.appendChild(note);
     });
     if(answered<8){ result.textContent=t().chooseAll; result.style.color='var(--danger)'; return; }
     const passed=score>=PASS_SCORE, prev=state.quizzes[module]||{};
@@ -416,6 +477,11 @@
   }
 
   function initExercises(){
+    $$('.exercise').forEach(ex=>{
+      const actions=ex.querySelector('.exercise-actions'); if(!actions)return;
+      if(!actions.querySelector('.exercise-retry')){const b=document.createElement('button');b.type='button';b.className='exercise-retry';b.hidden=true;b.textContent=t().exerciseRetry;actions.insertBefore(b,actions.querySelector('.exercise-feedback'));}
+      if(!actions.querySelector('.exercise-solution')){const b=document.createElement('button');b.type='button';b.className='exercise-solution';b.hidden=true;b.textContent=t().exerciseSolution;actions.insertBefore(b,actions.querySelector('.exercise-feedback'));}
+    });
     // Delegated listeners make exercises reliable even after module switching or dynamic DOM updates.
     document.addEventListener('change',e=>{
       const input=e.target.closest?.('.exercise input[type="radio"], .exercise input[type="checkbox"]');
@@ -424,12 +490,13 @@
       q?.querySelectorAll('.choice').forEach(c=>c.classList.toggle('is-selected',!!c.querySelector('input:checked')));
     });
     document.addEventListener('click',e=>{
-      const btn=e.target.closest?.('.exercise-check, .exercise-reset');
+      const btn=e.target.closest?.('.exercise-check, .exercise-reset, .exercise-retry, .exercise-solution');
       if(!btn)return;
       const ex=btn.closest('.exercise');
       if(!ex)return;
       e.preventDefault();
       if(btn.classList.contains('exercise-check')) gradeExercise(ex);
+      else if(btn.classList.contains('exercise-solution')) showExerciseSolution(ex);
       else resetExercise(ex);
     });
   }
@@ -438,16 +505,21 @@
     qs.forEach(qel=>{
       $$('.choice',qel).forEach(c=>{c.classList.remove('is-correct','is-wrong'); c.querySelector('.choice-status')?.remove();});
       const selected=qel.querySelector('input:checked'); if(!selected)return; answered++;
-      const selectedLabel=selected.closest('.choice'); const isCorrect=selected.dataset.correct==='true'; if(isCorrect){correctCount++;applyChoiceStatus(selectedLabel,true);} else {applyChoiceStatus(selectedLabel,false); const ci=qel.querySelector('input[data-correct="true"]'); if(ci)applyChoiceStatus(ci.closest('.choice'),true);}
+      const selectedLabel=selected.closest('.choice'); const isCorrect=selected.dataset.correct==='true'; if(isCorrect){correctCount++;applyChoiceStatus(selectedLabel,true);} else {applyChoiceStatus(selectedLabel,false);}
       const specific=isCorrect ? qel.dataset[`feedbackCorrect${currentLang()==='pl'?'Pl':'En'}`] : qel.dataset[`feedbackWrong${currentLang()==='pl'?'Pl':'En'}`];
-      if(specific){ let note=qel.querySelector('.question-feedback'); if(!note){note=document.createElement('p');note.className='question-feedback';qel.appendChild(note);} note.textContent=specific; note.style.color=isCorrect?'var(--success)':'var(--danger)'; }
+      if(specific){ let note=qel.querySelector('.question-feedback'); if(!note){note=document.createElement('p');note.className='question-feedback';qel.appendChild(note);} note.className='question-feedback '+(isCorrect?'is-correct':'is-guidance');note.textContent=isCorrect?specific:(currentLang()==='pl'?`Niezupełnie. ${specific}`:`Not quite. ${specific}`); }
     });
     const feedback=ex.querySelector('.exercise-feedback'); if(!feedback)return;
     if(answered<qs.length){feedback.textContent=t().exerciseChoose;feedback.className='exercise-feedback bad';return;}
     const all=correctCount===qs.length; feedback.textContent=all?t().exerciseOk:t().exerciseSome; feedback.className='exercise-feedback '+(all?'ok':'bad');
+    const retry=ex.querySelector('.exercise-retry'),solution=ex.querySelector('.exercise-solution');if(retry)retry.hidden=all;if(solution)solution.hidden=all;
   }
-  function resetExercise(ex){ ex.querySelectorAll('input').forEach(i=>{i.checked=false}); ex.querySelectorAll('.choice').forEach(c=>c.classList.remove('is-selected','is-correct','is-wrong')); ex.querySelectorAll('.choice-status,.question-feedback').forEach(n=>n.remove()); const f=ex.querySelector('.exercise-feedback');if(f){f.textContent='';f.className='exercise-feedback';} }
-  function updateExerciseStatusLabels(){ $$('.choice-status').forEach(s=>{ const c=s.closest('.choice'); s.textContent=c?.classList.contains('is-correct')?t().correct:t().wrong; }); }
+  function showExerciseSolution(ex){
+    $$('.exercise-question',ex).forEach(qel=>{qel.querySelectorAll('.choice').forEach(c=>c.classList.remove('is-selected','is-correct','is-wrong'));const ci=qel.querySelector('input[data-correct="true"]');if(ci){ci.checked=true;applyChoiceStatus(ci.closest('.choice'),true);}const specific=qel.dataset[`feedbackCorrect${currentLang()==='pl'?'Pl':'En'}`];if(specific){let note=qel.querySelector('.question-feedback');if(!note){note=document.createElement('p');qel.appendChild(note);}note.className='question-feedback is-correct';note.textContent=specific;}});
+    const f=ex.querySelector('.exercise-feedback');if(f){f.textContent=t().exerciseSolutionShown;f.className='exercise-feedback ok';}const retry=ex.querySelector('.exercise-retry'),solution=ex.querySelector('.exercise-solution');if(retry)retry.hidden=false;if(solution)solution.hidden=true;
+  }
+  function resetExercise(ex){ ex.querySelectorAll('input').forEach(i=>{i.checked=false}); ex.querySelectorAll('.choice').forEach(c=>c.classList.remove('is-selected','is-correct','is-wrong')); ex.querySelectorAll('.choice-status,.question-feedback').forEach(n=>n.remove()); const f=ex.querySelector('.exercise-feedback');if(f){f.textContent='';f.className='exercise-feedback';} const retry=ex.querySelector('.exercise-retry'),solution=ex.querySelector('.exercise-solution');if(retry)retry.hidden=true;if(solution)solution.hidden=true; }
+  function updateExerciseStatusLabels(){ $$('.choice-status').forEach(s=>{ const c=s.closest('.choice'); s.textContent=c?.classList.contains('is-correct')?t().correct:t().wrong; });$$('.exercise-retry').forEach(b=>b.textContent=t().exerciseRetry);$$('.exercise-solution').forEach(b=>b.textContent=t().exerciseSolution); }
 
   function initTooltips(){
     const tip=$('#courseTooltip'); if(!tip)return;
