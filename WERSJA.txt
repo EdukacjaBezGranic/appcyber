@@ -1,1 +1,17 @@
-R8.2 - responsywność oraz rozbudowane karty osiągnięć PDF z umiejętnościami i logotypami
+R8.6 - dopracowane przekrojowe ćwiczenie praktyczne
+
+Nowości w R8.6:
+- osobny, uporządkowany planer analizy w każdym z pięciu modułów,
+- pytania krok po kroku dopasowane do kompetencji ćwiczonej w module,
+- wybór werdyktu w Module 4 i rodzaju reakcji w Module 5,
+- informacja zwrotna odnosząca wybór do zakresu dowodów,
+- pełny wniosek, dwustopniowa pomoc, przykładowa analiza i kryteria samooceny,
+- dodatkowe ilustracje R8.5 usunięto z widoku; priorytetem są konkretne materiały dowodowe i czytelna praca uczestnika,
+- pięcioetapowe studium o manipulacyjnym połączeniu dopłat do ogrzewania, pomocy dla Ukraińców i polityki klimatycznej,
+- realistyczny post, udostępnienie, profil autora, inne wpisy konta, komentarze, uchwała, oficjalny komunikat, wyniki wyszukiwania i sprawdzenie obrazu,
+- podpowiedź naprowadzająca i przykładowa poprawna analiza w każdym module,
+- pomarańczowe, pulsujące oznaczenia materiałów symulacyjnych z obsługą ograniczenia animacji,
+- własna odpowiedź uczestnika zapisywana wyłącznie lokalnie,
+- kryteria porównawcze i możliwość poprawienia odpowiedzi bez automatycznego oceniania,
+- nowa fotografia symulacyjna przygotowana do ćwiczenia z fałszywego kontekstu,
+- ćwiczenia nie zmieniają progu 7/8 ani dotychczasowego licznika 47 lekcji.
