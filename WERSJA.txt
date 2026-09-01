@@ -1,1 +1,9 @@
-V175 - 2026-08-28
+R8.9 - ankiety ewaluacyjne PL i EN
+
+Nowości w R8.9:
+- przywrócono przycisk do ankiety po ukończeniu całego kursu,
+- wersja polska otwiera polski formularz Google Forms,
+- wersja angielska otwiera angielski formularz Google Forms,
+- zmiana języka natychmiast przełącza adres ankiety,
+- ankieta pozostaje dobrowolna i nie wpływa na zaliczenie ani pobranie dyplomu,
+- zachowano wszystkie poprawki responsywności z wersji R8.8.
