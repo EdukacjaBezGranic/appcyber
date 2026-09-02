@@ -1,9 +1,22 @@
-R8.9 - ankiety ewaluacyjne PL i EN
+R8.18 - filmy „Fakt, opinia, interpretacja” i „Od informacji do decyzji”
 
-Nowości w R8.9:
-- przywrócono przycisk do ankiety po ukończeniu całego kursu,
-- wersja polska otwiera polski formularz Google Forms,
-- wersja angielska otwiera angielski formularz Google Forms,
-- zmiana języka natychmiast przełącza adres ankiety,
-- ankieta pozostaje dobrowolna i nie wpływa na zaliczenie ani pobranie dyplomu,
-- zachowano wszystkie poprawki responsywności z wersji R8.8.
+Nowości w R8.18:
+- pozostawiono krótką wzmiankę o szkoleniu „K jak kompetencje” w katalogu tematów,
+- usunięto rozbudowaną sekcję z plakatem, opisem programu i przyciskami,
+- usunięto kartę szkolenia ze strony zapisów,
+- kod QR nie jest odczytywany ani wykorzystywany,
+- usunięto ręczne przesunięcia CMS rozbijające sekcję „Jak działa projekt”,
+- zablokowano minimalne szerokości kolumn, poprawne zawijanie tekstu i skalowanie logotypu UE.
+- dodano krótką kartę „K jak kompetencje” w sekcji „Oferta rozwijana etapami”, bez plakatu, kodu QR i odnośnika do zapisów.
+- w lekcji „Jak AI uczestniczy w obiegu informacji?” podmieniono ilustrację „Trzy role AI” na przesłaną animację,
+- film ma kontrolki, obsługę pełnego ekranu, tryb `playsinline`, obraz startowy i nie uruchamia się automatycznie,
+- dodano opis dostępności i podpis w języku polskim oraz angielskim.
+- w karcie „K jak kompetencje” na stronie głównej zastąpiono znak „K” przesłaną ilustracją kompetencji.
+- opis karty dostosowano do rzeczywistego programu: odbiorców, narzędzi projektu „Wstań z kanapy!” oraz metodyki pracy z osobami młodymi.
+- w sekcji „Mechanizm szybkiego udostępniania” podmieniono statyczną ilustrację na przesłaną animację,
+- film ma kontrolki, tryb `playsinline`, obraz startowy i nie uruchamia się automatycznie,
+- dodano dwujęzyczny opis dostępności i podpis objaśniający mechanizm.
+- w sekcji dotyczącej rozróżniania faktu, opinii i interpretacji statyczną ilustrację zastąpiono przesłaną animacją,
+- w sekcji „Od informacji do decyzji” statyczną ilustrację zastąpiono przesłaną animacją,
+- oba filmy mają kontrolki, tryb `playsinline`, obrazy startowe i nie uruchamiają się automatycznie,
+- dodano polskie i angielskie opisy dostępności oraz podpisy objaśniające.
