@@ -12,7 +12,7 @@
       "shortTitle": "Edukacja medialna",
       "date": "2026-09-16",
       "time": "09:00 - 14:25",
-      "place": "WUP Katowice",
+      "place": "Mała sala, IV piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
@@ -22,7 +22,7 @@
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
-      "link": "",
+      "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
       "button": "Sprawdź terminarz"
     },
     {
@@ -33,7 +33,7 @@
       "shortTitle": "Edukacja medialna",
       "date": "2026-09-23",
       "time": "09:00 - 14:25",
-      "place": "WUP Katowice",
+      "place": "Mała sala, IV piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
@@ -43,7 +43,7 @@
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
-      "link": "",
+      "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
       "calendarOnly": true
     },
@@ -55,7 +55,7 @@
       "shortTitle": "Edukacja medialna",
       "date": "2026-09-29",
       "time": "09:00 - 14:25",
-      "place": "WUP Katowice",
+      "place": "Mała sala, IV piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
@@ -65,7 +65,7 @@
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
-      "link": "",
+      "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
       "calendarOnly": true
     },
@@ -75,9 +75,31 @@
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
+      "date": "2026-09-11",
+      "time": "09:00 - 14:25",
+      "place": "Mała sala, IV piętro, WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
+        "Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy."
+      ],
+      "color": "#1f6f54",
+      "image": "grafiki/komunikacja.webp",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "registrationClosed": true,
+      "link": "",
+      "button": "Sprawdź terminarz"
+    },
+    {
+      "id": "komunikacja-2026-09-25",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Wystąpienia publiczne i storytelling",
+      "shortTitle": "Wystąpienia publiczne",
       "date": "2026-09-25",
       "time": "09:00 - 14:25",
-      "place": "WUP Katowice",
+      "place": "Mała sala, IV piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
@@ -87,8 +109,9 @@
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
-      "link": "",
-      "button": "Sprawdź terminarz"
+      "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
+      "button": "Sprawdź terminarz",
+      "calendarOnly": true
     },
     {
       "id": "grywalizacja",
@@ -96,9 +119,9 @@
       "source": "Projekt Edukacja bez granic",
       "title": "Grywalizacja, uczenie przez gry i doświadczenie",
       "shortTitle": "Grywalizacja",
-      "date": "2026-09-18",
+      "date": "2026-09-10",
       "time": "09:00 - 14:25",
-      "place": "WUP Katowice",
+      "place": "Duża sala, I piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
         "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
@@ -108,8 +131,30 @@
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
-      "link": "",
+      "link": "https://forms.gle/rHQEKgebZtFokURo9",
       "button": "Sprawdź terminarz"
+    },
+    {
+      "id": "grywalizacja-2026-09-18",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja, uczenie przez gry i doświadczenie",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-09-18",
+      "time": "09:00 - 14:25",
+      "place": "Mała sala, IV piętro, WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
+        "Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "https://forms.gle/bYtFwViHgS6rBgUp8",
+      "button": "Sprawdź terminarz",
+      "calendarOnly": true
     },
     {
       "id": "ai",

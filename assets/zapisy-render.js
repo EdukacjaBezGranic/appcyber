@@ -31,6 +31,23 @@
     }).format(date);
   };
 
+  const seriesKey = (training) => String(training.series || training.id || '')
+    .replace(/-\d{4}-\d{2}-\d{2}$/, '');
+
+  const nearestUpcoming = (baseTraining, now = new Date()) => {
+    const today = new Date(now);
+    today.setHours(0, 0, 0, 0);
+    const key = seriesKey(baseTraining);
+    const upcoming = trainings
+      .filter((training) => seriesKey(training) === key && training.date)
+      .map((training) => ({ training, date: new Date(`${training.date}T12:00:00`) }))
+      .filter(({ date }) => !Number.isNaN(date.getTime()) && date >= today)
+      .sort((a, b) => a.date - b.date);
+
+    if (upcoming.length) return { ...baseTraining, ...upcoming[0].training, calendarOnly: false };
+    return { ...baseTraining, date: '', time: '', place: '', open: false, link: '', calendarOnly: false };
+  };
+
   const asDescription = (description) => {
     if (Array.isArray(description)) return description;
     if (!description) return [];
@@ -44,6 +61,9 @@
   };
 
   const renderAction = (training) => {
+    if (training.registrationClosed) {
+      return '<span class="signup-status is-closed">Zapisy zakończone</span>';
+    }
     const label = training.open ? 'Zapisz się' : 'Termin zostanie ogłoszony';
     if (training.open && training.link) {
       return `
@@ -84,7 +104,7 @@
     `;
   };
 
-  trainings.filter((training) => !training.calendarOnly).forEach((training) => {
+  trainings.filter((training) => !training.calendarOnly).map((training) => nearestUpcoming(training)).forEach((training) => {
     const groupKey = training.group === 'new' ? 'new' : 'other';
     const container = groups[groupKey];
     if (container) container.insertAdjacentHTML('beforeend', renderCard(training));

@@ -1,6 +1,12 @@
-R8.18 - filmy „Fakt, opinia, interpretacja” i „Od informacji do decyzji”
+R8.26 - komplet formularzy zapisów na wrzesień
 
-Nowości w R8.18:
+Nowości w R8.26:
+- dodano indywidualne formularze Google do wszystkich opublikowanych terminów: grywalizacja 10.09 i 18.09, edukacja medialna 16.09, 23.09 i 29.09 oraz komunikacja 25.09.
+- termin komunikacji 11.09 pozostaje oznaczony jako „Zapisy zakończone”.
+- do terminu „Grywalizacja” 10.09.2026 dodano formularz Google: https://forms.gle/rHQEKgebZtFokURo9.
+- usunięto powtórzoną informację o opisach programów z nagłówka terminarza; pozostawiono krótką instrukcję wyboru terminu.
+- wszystkie terminy w małej sali opisano jako „Mała sala, IV piętro, WUP Katowice”.
+- pod opisem terminarza dodano numer telefonu 32 757 33 84 oraz adres pr@wup-katowice.pl do kontaktu w sprawie zapisów.
 - pozostawiono krótką wzmiankę o szkoleniu „K jak kompetencje” w katalogu tematów,
 - usunięto rozbudowaną sekcję z plakatem, opisem programu i przyciskami,
 - usunięto kartę szkolenia ze strony zapisów,
@@ -20,3 +26,15 @@ Nowości w R8.18:
 - w sekcji „Od informacji do decyzji” statyczną ilustrację zastąpiono przesłaną animacją,
 - oba filmy mają kontrolki, tryb `playsinline`, obrazy startowe i nie uruchamiają się automatycznie,
 - dodano polskie i angielskie opisy dostępności oraz podpisy objaśniające.
+- w terminarzu dodano szkolenie z grywalizacji 10.09.2026 w dużej sali na I piętrze WUP Katowice,
+- pozostawiono drugi termin grywalizacji 18.09.2026 i doprecyzowano miejsce: mała sala na IV piętrze WUP Katowice,
+- oba terminy są oddzielnymi pozycjami kalendarza i mogą otrzymać osobne linki do formularzy zapisowych.
+- dla terminów edukacji medialnej 16.09, 23.09 i 29.09.2026 wpisano małą salę na IV piętrze WUP Katowice.
+- w terminarzu dodano dwa osobne terminy szkolenia „Wystąpienia publiczne i storytelling”: 11.09 i 25.09.2026,
+- pierwszy termin jest wyświetlany na głównej karcie szkolenia, a drugi jako dodatkowa pozycja kalendarza,
+- oba terminy odbywają się w małej sali WUP Katowice; numer piętra pozostaje do uzupełnienia.
+- karty szkoleń automatycznie pokazują najbliższy przyszły termin z terminarza,
+- po zakończeniu terminu karta przełącza się na kolejną datę, a po ostatnim terminie pokazuje komunikat „Termin wkrótce”,
+- opis strony zapisów informuje, że zgłoszenia są przyjmowane przez formularze Google,
+- terminarz wyświetla przycisk formularza po dodaniu linku, a wcześniej neutralny komunikat „Formularz zapisów wkrótce”.
+- dla szkolenia „Wystąpienia publiczne i storytelling” 11.09.2026 wyświetlany jest status „Zapisy zakończone”; termin 25.09 pozostaje kolejnym terminem w serii.

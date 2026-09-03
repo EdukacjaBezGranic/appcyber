@@ -108,9 +108,17 @@ function renderAction(event) {
   const action = detailPanel?.querySelector('[data-detail-action]');
   if (!action) return;
 
-  action.innerHTML = `
-    <a class="public-btn calendar-form-btn" href="mailto:pr@wup-katowice.pl">${siteT('Napisz e-mail')}</a>
-    <a class="public-btn public-btn-ghost" href="tel:+48327573384">${siteT('Zadzwoń: 32 757 33 84')}</a>`;
+  if (event.registrationClosed) {
+    action.innerHTML = `<span class="signup-status is-closed">${siteT('Zapisy zakończone')}</span>`;
+    return;
+  }
+
+  if (event.open && event.link) {
+    action.innerHTML = `<a class="public-btn calendar-form-btn" href="${event.link}" target="_blank" rel="noopener noreferrer">${siteT('Otwórz formularz zapisów')}</a>`;
+    return;
+  }
+
+  action.innerHTML = `<span class="signup-status is-waiting">${siteT(event.open ? 'Formularz zapisów wkrótce' : 'Zapisy wkrótce')}</span>`;
 }
 
 function renderDetailLogo(event) {
