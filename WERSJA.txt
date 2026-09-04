@@ -1,11 +1,28 @@
-R8.26 - komplet formularzy zapisów na wrzesień
+R8.32 - aktualizacja terminarza i szkolenie AI w PUP Zabrze
 
-Nowości w R8.26:
+Nowości w R8.32:
+- termin szkolenia „Edukacja medialna, fake news i krytyczne myślenie” przeniesiono z 23.09 na 22.09.2026;
+- dodano termin 21.10.2026: szkolenie z AI dla szkolnych doradców zawodowych w PUP Zabrze;
+- szkolenie AI oznaczono jako wydarzenie z zakończoną rekrutacją;
+- zachowano godziny 09:00-14:15 i dodano pełną obsługę wersji angielskiej.
+
+Nowości w R8.31:
+- do studium przypadku o próbie skłócenia Polaków i Czechów dodano porównanie prawdziwego portalu iROZHLAS.cz z jego podrobioną kopią;
+- podpis wskazuje najważniejszy trop: fałszywa domena lrozhlas.cz zaczynająca się małą literą „l” zamiast „i”;
+- materiał otrzymał opis polski i angielski oraz możliwość powiększenia.
+
+Nowości w R8.30:
+- przycisk „Najbliższy termin” sortuje wydarzenia według pełnej daty i wybiera pierwszy termin przypadający dziś lub później.
+- 03.09.2026 przycisk prowadzi do grywalizacji 10.09.2026, a nie do pierwszego wpisu w pliku z datą 16.09.
+- każdy wrześniowy termin ma własny kolor w kalendarzu, również w ramach tego samego tematu.
+- godziny wszystkich siedmiu wrześniowych terminów zmieniono z 09:00-14:25 na 09:00-14:15.
+- termin grywalizacji 10.09 opisano jako „Sala konferencyjna, I piętro, WUP Katowice”.
+- wszystkie terminy w małej sali opisano jako „Mała sala nr 419, IV piętro, WUP Katowice”.
 - dodano indywidualne formularze Google do wszystkich opublikowanych terminów: grywalizacja 10.09 i 18.09, edukacja medialna 16.09, 23.09 i 29.09 oraz komunikacja 25.09.
 - termin komunikacji 11.09 pozostaje oznaczony jako „Zapisy zakończone”.
 - do terminu „Grywalizacja” 10.09.2026 dodano formularz Google: https://forms.gle/rHQEKgebZtFokURo9.
 - usunięto powtórzoną informację o opisach programów z nagłówka terminarza; pozostawiono krótką instrukcję wyboru terminu.
-- wszystkie terminy w małej sali opisano jako „Mała sala, IV piętro, WUP Katowice”.
+- wszystkie terminy w małej sali opisano jako „Mała sala nr 419, IV piętro, WUP Katowice”.
 - pod opisem terminarza dodano numer telefonu 32 757 33 84 oraz adres pr@wup-katowice.pl do kontaktu w sprawie zapisów.
 - pozostawiono krótką wzmiankę o szkoleniu „K jak kompetencje” w katalogu tematów,
 - usunięto rozbudowaną sekcję z plakatem, opisem programu i przyciskami,

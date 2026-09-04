@@ -127,8 +127,8 @@ function renderDetailLogo(event) {
   if (!logo || !logoWrap) return;
 
   logo.src = event.logo || projectLogo;
-  logoWrap.style.setProperty('--detail-color', event.color);
-  detailPanel?.style.setProperty('--detail-color', event.color || '#0b3fa8');
+  logoWrap.style.setProperty('--detail-color', event.calendarColor || event.color);
+  detailPanel?.style.setProperty('--detail-color', event.calendarColor || event.color || '#0b3fa8');
 }
 
 function selectEvent(id) {
@@ -156,7 +156,7 @@ function makeEventButton(event) {
   button.className = `calendar-event ${event.open ? 'is-open' : 'is-waiting'} is-${event.tone}`;
   button.type = 'button';
   button.dataset.eventId = event.id;
-  button.style.setProperty('--event-color', event.color || '#2563eb');
+  button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
   button.innerHTML = `<small>${event.time}</small>${siteT(event.shortTitle)}`;
   return button;
 }
@@ -215,7 +215,7 @@ function renderList(monthEvents) {
     button.className = 'calendar-list-item';
     button.type = 'button';
     button.dataset.eventId = event.id;
-    button.style.setProperty('--event-color', event.color || '#2563eb');
+    button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
     button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small></span><b>${siteT(event.title)}</b>`;
     calendarList.append(button);
   });
@@ -246,15 +246,25 @@ function changeMonth(delta) {
   renderMonth();
 }
 
+function findNearestEvent(now = new Date()) {
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const datedEvents = trainingEvents
+    .map(event => ({ event, date: parseDate(event.date) }))
+    .filter(item => item.date)
+    .sort((a, b) => a.date - b.date);
+  const upcomingEvent = datedEvents.find(item => item.date >= today);
+  return upcomingEvent?.event || datedEvents.at(-1)?.event || trainingEvents[0];
+}
+
 function goToNearestEvent() {
-  const firstEvent = trainingEvents.find(event => parseDate(event.date)) || trainingEvents[0];
-  if (!firstEvent) return;
-  const date = parseDate(firstEvent.date);
+  const nearestEvent = findNearestEvent();
+  if (!nearestEvent) return;
+  const date = parseDate(nearestEvent.date);
   if (date) {
     currentYear = date.getFullYear();
     currentMonth = date.getMonth();
   }
-  selectedEventId = firstEvent.id;
+  selectedEventId = nearestEvent.id;
   renderMonth();
 }
 
