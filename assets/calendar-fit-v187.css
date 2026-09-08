@@ -1,0 +1,15 @@
+/* Compact, readable labels inside the seven-column month view. */
+body#portal-layout.public-page .calendar-grid{grid-template-columns:repeat(7,minmax(0,1fr))!important}
+body#portal-layout.public-page .calendar-day{min-width:0!important;padding:10px!important}
+body#portal-layout.public-page .calendar-event{
+ display:block!important;box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;
+ height:auto!important;min-height:0!important;padding:10px 9px!important;margin:8px 0 0!important;
+ font-size:13px!important;font-weight:600!important;line-height:1.4!important;text-align:left!important;
+ white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto;
+ color:#183b38!important;-webkit-text-fill-color:#183b38!important;letter-spacing:normal!important;
+ border-radius:9px!important;box-shadow:none!important;
+}
+body#portal-layout.public-page .calendar-event small{display:block!important;font-size:11px!important;font-weight:600!important;line-height:1.4!important;margin:0 0 7px!important;white-space:normal!important;color:#304744!important;-webkit-text-fill-color:#304744!important}
+@media(max-width:640px){body#portal-layout.public-page .calendar-day{padding:4px!important}body#portal-layout.public-page .calendar-event{font-size:11px!important;padding:7px 5px!important}body#portal-layout.public-page .calendar-event small{font-size:10px!important}}
+body#portal-layout.public-page .calendar-layout:has(.calendar-month.is-active){grid-template-columns:minmax(0,1fr)!important}
+body#portal-layout.public-page .calendar-layout:has(.calendar-month.is-active) .calendar-details{position:static!important;width:100%!important;max-width:none!important}

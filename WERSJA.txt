@@ -1,11 +1,57 @@
-R8.8 - poprawki tabletów i telefonów w orientacji poziomej
+R8.32 - aktualizacja terminarza i szkolenie AI w PUP Zabrze
 
-Nowości w R8.8:
-- kalendarz przechodzi na stabilny układ jednokolumnowy już na tabletach,
-- nazwy wydarzeń są skracane wielokropkiem zamiast łamać się litera po literze,
-- panel szczegółów terminu zachowuje pełną szerokość i czytelną typografię,
-- sekcja finansowania UE zeruje historyczne przesunięcia i wymiary CMS,
-- logotypy projektu, UE i WUP mają bezpieczne limity rozmiaru,
-- stopka układa znaki w dwie kolumny na tablecie i jedną na telefonie,
-- hero strony kontaktowej ma naturalną wysokość w orientacji poziomej,
-- wszystkie publiczne strony korzystają z jednej końcowej warstwy zabezpieczeń R8.8.
+Nowości w R8.32:
+- termin szkolenia „Edukacja medialna, fake news i krytyczne myślenie” przeniesiono z 23.09 na 22.09.2026;
+- dodano termin 21.10.2026: szkolenie z AI dla szkolnych doradców zawodowych w PUP Zabrze;
+- szkolenie AI oznaczono jako wydarzenie z zakończoną rekrutacją;
+- zachowano godziny 09:00-14:15 i dodano pełną obsługę wersji angielskiej.
+
+Nowości w R8.31:
+- do studium przypadku o próbie skłócenia Polaków i Czechów dodano porównanie prawdziwego portalu iROZHLAS.cz z jego podrobioną kopią;
+- podpis wskazuje najważniejszy trop: fałszywa domena lrozhlas.cz zaczynająca się małą literą „l” zamiast „i”;
+- materiał otrzymał opis polski i angielski oraz możliwość powiększenia.
+
+Nowości w R8.30:
+- przycisk „Najbliższy termin” sortuje wydarzenia według pełnej daty i wybiera pierwszy termin przypadający dziś lub później.
+- 03.09.2026 przycisk prowadzi do grywalizacji 10.09.2026, a nie do pierwszego wpisu w pliku z datą 16.09.
+- każdy wrześniowy termin ma własny kolor w kalendarzu, również w ramach tego samego tematu.
+- godziny wszystkich siedmiu wrześniowych terminów zmieniono z 09:00-14:25 na 09:00-14:15.
+- termin grywalizacji 10.09 opisano jako „Sala konferencyjna, I piętro, WUP Katowice”.
+- wszystkie terminy w małej sali opisano jako „Mała sala nr 419, IV piętro, WUP Katowice”.
+- dodano indywidualne formularze Google do wszystkich opublikowanych terminów: grywalizacja 10.09 i 18.09, edukacja medialna 16.09, 23.09 i 29.09 oraz komunikacja 25.09.
+- termin komunikacji 11.09 pozostaje oznaczony jako „Zapisy zakończone”.
+- do terminu „Grywalizacja” 10.09.2026 dodano formularz Google: https://forms.gle/rHQEKgebZtFokURo9.
+- usunięto powtórzoną informację o opisach programów z nagłówka terminarza; pozostawiono krótką instrukcję wyboru terminu.
+- wszystkie terminy w małej sali opisano jako „Mała sala nr 419, IV piętro, WUP Katowice”.
+- pod opisem terminarza dodano numer telefonu 32 757 33 84 oraz adres pr@wup-katowice.pl do kontaktu w sprawie zapisów.
+- pozostawiono krótką wzmiankę o szkoleniu „K jak kompetencje” w katalogu tematów,
+- usunięto rozbudowaną sekcję z plakatem, opisem programu i przyciskami,
+- usunięto kartę szkolenia ze strony zapisów,
+- kod QR nie jest odczytywany ani wykorzystywany,
+- usunięto ręczne przesunięcia CMS rozbijające sekcję „Jak działa projekt”,
+- zablokowano minimalne szerokości kolumn, poprawne zawijanie tekstu i skalowanie logotypu UE.
+- dodano krótką kartę „K jak kompetencje” w sekcji „Oferta rozwijana etapami”, bez plakatu, kodu QR i odnośnika do zapisów.
+- w lekcji „Jak AI uczestniczy w obiegu informacji?” podmieniono ilustrację „Trzy role AI” na przesłaną animację,
+- film ma kontrolki, obsługę pełnego ekranu, tryb `playsinline`, obraz startowy i nie uruchamia się automatycznie,
+- dodano opis dostępności i podpis w języku polskim oraz angielskim.
+- w karcie „K jak kompetencje” na stronie głównej zastąpiono znak „K” przesłaną ilustracją kompetencji.
+- opis karty dostosowano do rzeczywistego programu: odbiorców, narzędzi projektu „Wstań z kanapy!” oraz metodyki pracy z osobami młodymi.
+- w sekcji „Mechanizm szybkiego udostępniania” podmieniono statyczną ilustrację na przesłaną animację,
+- film ma kontrolki, tryb `playsinline`, obraz startowy i nie uruchamia się automatycznie,
+- dodano dwujęzyczny opis dostępności i podpis objaśniający mechanizm.
+- w sekcji dotyczącej rozróżniania faktu, opinii i interpretacji statyczną ilustrację zastąpiono przesłaną animacją,
+- w sekcji „Od informacji do decyzji” statyczną ilustrację zastąpiono przesłaną animacją,
+- oba filmy mają kontrolki, tryb `playsinline`, obrazy startowe i nie uruchamiają się automatycznie,
+- dodano polskie i angielskie opisy dostępności oraz podpisy objaśniające.
+- w terminarzu dodano szkolenie z grywalizacji 10.09.2026 w dużej sali na I piętrze WUP Katowice,
+- pozostawiono drugi termin grywalizacji 18.09.2026 i doprecyzowano miejsce: mała sala na IV piętrze WUP Katowice,
+- oba terminy są oddzielnymi pozycjami kalendarza i mogą otrzymać osobne linki do formularzy zapisowych.
+- dla terminów edukacji medialnej 16.09, 23.09 i 29.09.2026 wpisano małą salę na IV piętrze WUP Katowice.
+- w terminarzu dodano dwa osobne terminy szkolenia „Wystąpienia publiczne i storytelling”: 11.09 i 25.09.2026,
+- pierwszy termin jest wyświetlany na głównej karcie szkolenia, a drugi jako dodatkowa pozycja kalendarza,
+- oba terminy odbywają się w małej sali WUP Katowice; numer piętra pozostaje do uzupełnienia.
+- karty szkoleń automatycznie pokazują najbliższy przyszły termin z terminarza,
+- po zakończeniu terminu karta przełącza się na kolejną datę, a po ostatnim terminie pokazuje komunikat „Termin wkrótce”,
+- opis strony zapisów informuje, że zgłoszenia są przyjmowane przez formularze Google,
+- terminarz wyświetla przycisk formularza po dodaniu linku, a wcześniej neutralny komunikat „Formularz zapisów wkrótce”.
+- dla szkolenia „Wystąpienia publiczne i storytelling” 11.09.2026 wyświetlany jest status „Zapisy zakończone”; termin 25.09 pozostaje kolejnym terminem w serii.

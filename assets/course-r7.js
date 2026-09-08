@@ -5,6 +5,10 @@
   const VERSION = 'R8.2-2026-08-30';
   const PASS_SCORE = 7;
   const MODULES = ['m1','m2','m3','m4','m5'];
+  const EVALUATION_URLS = {
+    pl: 'https://docs.google.com/forms/d/e/1FAIpQLScPPHIwXHXyN3Gay4if8j3f4Uixz64qzAqrEvk0Ff5drKvs9w/viewform?usp=dialog',
+    en: 'https://docs.google.com/forms/d/e/1FAIpQLScAuYaZnnhjZC5ZuNcaKM-eeZT_kfVm-IagbaYjb9-NRMgSmA/viewform?usp=dialog'
+  };
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => [...root.querySelectorAll(s)];
 
@@ -332,6 +336,7 @@
     $$('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===state.lang)));
     const search=$('#courseSearch'); if(search) search.placeholder=t().search;
     const name=$('#participantName'); if(name) name.placeholder=state.lang==='en'?'Name and surname':'Imię i nazwisko';
+    const evaluationLink=$('#evaluationLink'); if(evaluationLink) evaluationLink.href=EVALUATION_URLS[state.lang];
     renderSidebar(); renderQuizzes(); updateExerciseStatusLabels(); updateAll(); localStorage.setItem(STATE_KEY,JSON.stringify(state));
   }
 
@@ -599,7 +604,7 @@
     const sidebar=$('#courseSidebar'), backdrop=$('.sidebar-backdrop'); const open=()=>{sidebar?.classList.add('is-open');backdrop&&(backdrop.hidden=false);$('.sidebar-open')?.setAttribute('aria-expanded','true')}; const close=()=>{sidebar?.classList.remove('is-open');backdrop&&(backdrop.hidden=true);$('.sidebar-open')?.setAttribute('aria-expanded','false')};
     $('.sidebar-open')?.addEventListener('click',open); $('.sidebar-close')?.addEventListener('click',close); backdrop?.addEventListener('click',close); $('#sidebarNav')?.addEventListener('click',e=>{if((e.target.closest('a')||e.target.closest('.sidebar-module__button'))&&innerWidth<=900)close()});
 
-    const hash=(location.hash||'').slice(1), hashEl=hash&&$('#'+hash); const hashModule=moduleForElement(hashEl);
+    const hash=(location.hash||'').slice(1), hashEl=hash?$('#'+hash):null; const hashModule=moduleForElement(hashEl);
     if(hash==='courseFinal')showFinal(true); else if(hashModule)showModule(hashModule,hash,true); else showModule('m1',null,true);
   }
 

@@ -1,0 +1,57 @@
+/* Readable lesson measure and consistent spacing, without changing exercises. */
+body.ui-course{--bg:#f3f6f4;--surface:#fff;--reading:80ch;--sidebar:286px}
+.ui-course .course-r1-topbar__inner{min-height:76px;padding-block:10px}
+.ui-course .course-r1-brand .wordmark{width:140px;max-height:66px;object-fit:contain}
+.ui-course .course-r1-hero h1{line-height:1.12;letter-spacing:-.028em;font-size:clamp(2rem,3.8vw,3.65rem)}
+.ui-course .course-r1-hero__inner{gap:36px;padding-top:40px;padding-bottom:32px}
+.ui-course .course-r1-shell{gap:28px;padding-top:32px}
+.ui-course .course-r1-sidebar{top:98px;max-height:calc(100dvh - 118px);scrollbar-gutter:stable}
+.ui-course .sidebar-lessons a{font-size:.875rem!important;line-height:1.45!important;padding-block:9px!important}
+.ui-course .course-section{margin-bottom:28px!important;border-radius:16px!important;scroll-margin-top:100px}
+.ui-course .section-header{padding:22px 26px!important;gap:14px!important;align-items:start!important}
+.ui-course .section-header h3{font-size:clamp(1.2rem,2vw,1.65rem)!important;line-height:1.3!important;letter-spacing:-.015em}
+.ui-course .section-body{padding:26px 28px 30px!important}
+.ui-course .section-body>:is(p,ul,ol){max-width:80ch!important;font-size:1rem!important;line-height:1.75!important;text-align:left!important;margin-top:0!important;margin-bottom:20px!important}
+.ui-course .section-body>:is(h3,h4){margin-top:28px;margin-bottom:14px;line-height:1.3}
+.ui-course :is(.callout,.exercise,.media-frame,.case-gallery,details){margin-block:24px}
+.ui-course .callout{padding:20px 22px!important;line-height:1.65}
+.ui-course .callout p:last-child{margin-bottom:0}
+.ui-course .exercise{padding:24px!important}
+.ui-course .choice-list{gap:10px!important}
+.ui-course .choice{padding:14px!important;gap:12px!important;line-height:1.55}
+.ui-course .exercise-actions{gap:12px!important;margin-top:20px!important}
+.ui-course .media-frame figcaption,.ui-course .case-gallery figcaption{font-size:.875rem!important;line-height:1.5;padding:14px 16px}
+.ui-course .course-r1-main :is(button,a,input,textarea,summary):focus-visible{outline:3px solid #087a75;outline-offset:4px}
+.ui-course .btn-primary{color:#17231e!important}
+@media(max-width:820px){
+ .ui-course .course-r1-shell{padding:20px 16px 56px!important;gap:20px!important}
+ .ui-course .section-header{padding:18px!important;gap:10px!important}
+ .ui-course .section-body{padding:20px!important}
+ .ui-course :is(.callout,.exercise){padding:18px!important}
+ .ui-course .course-r1-hero__inner{padding:28px 20px!important;gap:24px!important}
+ .ui-course .course-r1-sidebar{max-height:100dvh!important}
+}
+@media(max-width:480px){
+ .ui-course .course-r1-brand .wordmark{width:112px}
+ .ui-course .course-r1-shell{padding-inline:12px!important}
+ .ui-course .section-header{padding:16px!important;grid-template-columns:32px minmax(0,1fr) 32px!important}
+ .ui-course .section-body{padding:18px 16px!important}
+ .ui-course :is(.callout,.exercise){padding:16px!important}
+ .ui-course .section-body>:is(p,ul,ol){line-height:1.65!important}
+ .ui-course .exercise-actions>button{min-height:44px}
+}
+
+.ui-course .course-module,.ui-course .module-hero{scroll-margin-top:106px}
+
+/* V184: one reading column for paragraphs, media and exercise frames. */
+body.ui-course .course-r1-shell{max-width:1440px!important;margin-inline:auto!important}
+body.ui-course .course-r1-main{min-width:0!important;width:100%!important}
+body.ui-course .section-body{width:100%!important;max-width:none!important}
+body.ui-course .section-body>:is(p,ul,ol,.media-frame,.callout,.exercise,.case-gallery){width:100%!important;max-width:880px!important;margin-left:0!important;margin-right:0!important}
+body.ui-course .section-body>.media-frame--evidence{max-width:690px!important}
+body.ui-course .section-header h3{max-width:none!important;width:auto!important}
+body.ui-course .section-body>*{max-width:880px!important}
+body.ui-course .section-body>.video-frame{width:100%!important;margin:24px 0!important;border:1px solid #d7e2df;border-radius:14px;overflow:hidden;background:#f1f5f3}
+body.ui-course :is(.video-frame,.deepfake-card__media) iframe{display:block;width:100%!important;height:auto!important;aspect-ratio:16/9;border:0}
+body.ui-course .video-external-link{display:block;padding:12px 16px;background:#edf4f1;color:#174f45;font-size:.9rem;line-height:1.5;text-decoration:underline;text-underline-offset:3px}
+body.ui-course .deepfake-card__media{height:auto!important;min-height:0!important}
