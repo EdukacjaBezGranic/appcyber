@@ -1,0 +1,85 @@
+/* V197: status zapisów jest widoczny na całym kafelku, niezależnie od tematu szkolenia. */
+body#portal-layout.public-page .calendar-list-item.is-registration-open,
+body#portal-layout.public-page .calendar-event.is-registration-open {
+  --registration-accent: #168269;
+  --registration-border: #79b9a2;
+  --registration-bg: #eaf7f1;
+  --registration-bg-hover: #def1e8;
+  color: #133f34 !important;
+  -webkit-text-fill-color: #133f34 !important;
+  background: var(--registration-bg) !important;
+  border-color: var(--registration-border) !important;
+  border-left-color: var(--registration-accent) !important;
+}
+
+body#portal-layout.public-page .calendar-list-item.is-registration-closed,
+body#portal-layout.public-page .calendar-event.is-registration-closed {
+  --registration-accent: #c84955;
+  --registration-border: #e3a1a8;
+  --registration-bg: #fff0f1;
+  --registration-bg-hover: #ffe4e6;
+  color: #65242b !important;
+  -webkit-text-fill-color: #65242b !important;
+  background: var(--registration-bg) !important;
+  border-color: var(--registration-border) !important;
+  border-left-color: var(--registration-accent) !important;
+}
+
+body#portal-layout.public-page .calendar-list-item:is(.is-registration-open,.is-registration-closed):hover {
+  background: var(--registration-bg-hover) !important;
+  border-color: var(--registration-accent) !important;
+  box-shadow: 0 9px 22px color-mix(in srgb, var(--registration-accent) 16%, transparent) !important;
+}
+
+body#portal-layout.public-page .calendar-list-item:is(.is-registration-open,.is-registration-closed).is-active {
+  background: var(--registration-bg-hover) !important;
+  border-color: var(--registration-accent) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--registration-accent) 24%, transparent),
+              0 10px 24px color-mix(in srgb, var(--registration-accent) 14%, transparent) !important;
+}
+
+body#portal-layout.public-page .calendar-event:is(.is-registration-open,.is-registration-closed):hover,
+body#portal-layout.public-page .calendar-event:is(.is-registration-open,.is-registration-closed).is-active {
+  background: var(--registration-bg-hover) !important;
+  border-color: var(--registration-accent) !important;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--registration-accent) 18%, transparent) !important;
+}
+
+body#portal-layout.public-page .calendar-event:is(.is-registration-open,.is-registration-closed).is-active {
+  outline: 2px solid color-mix(in srgb, var(--registration-accent) 34%, transparent) !important;
+}
+
+body#portal-layout.public-page .calendar-list-item:is(.is-registration-open,.is-registration-closed) small,
+body#portal-layout.public-page .calendar-event:is(.is-registration-open,.is-registration-closed) small {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+  opacity: .76;
+}
+
+body#portal-layout.public-page .calendar-list-status {
+  display: inline-flex !important;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 4px 9px;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: var(--registration-accent);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+body#portal-layout.public-page .calendar-legend .legend-registration-open {
+  background: #168269 !important;
+}
+
+body#portal-layout.public-page .calendar-legend .legend-registration-closed {
+  background: #c84955 !important;
+}
+
+@media (max-width: 600px) {
+  body#portal-layout.public-page .calendar-list-status {
+    margin-top: 7px;
+  }
+}

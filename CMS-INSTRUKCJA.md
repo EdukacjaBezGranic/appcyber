@@ -15,6 +15,8 @@ Panel działa lokalnie w przeglądarce. Nie wymaga serwera, bazy danych ani logo
 - opisy, tytuły, odbiorców i media przypisane do szkoleń;
 - daty, godziny, miejsca, linki i status zapisów;
 - główne nagłówki, akapity oraz elementy list na stronach;
+- wyrównanie tekstu do lewej, środka, prawej lub obustronnie;
+- szerokość bloku, krój i rozmiar pisma, grubość, interlinię, kolory oraz odstępy;
 - grafiki, filmy i dokumenty w bibliotece mediów;
 - nazwę i numer wersji eksportowanej paczki.
 

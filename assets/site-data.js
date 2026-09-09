@@ -143,12 +143,13 @@ window.portalSiteData = {
         "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
         "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
-      "color": "#da2cdd",
+      "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/rHQEKgebZtFokURo9",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja-2026-09-18",
@@ -166,7 +167,7 @@ window.portalSiteData = {
         "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
         "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
-      "color": "#da2cdd",
+      "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,

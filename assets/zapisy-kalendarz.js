@@ -89,6 +89,18 @@ function eventById(id) {
   return trainingEvents.find(event => event.id === id) || trainingEvents.find(event => parseDate(event.date)) || trainingEvents[0];
 }
 
+function isRegistrationOpen(event) {
+  return event.open === true && event.registrationClosed !== true;
+}
+
+function registrationState(event) {
+  const isOpen = isRegistrationOpen(event);
+  return {
+    className: isOpen ? 'is-registration-open' : 'is-registration-closed',
+    label: siteT(isOpen ? 'Zapisy otwarte' : 'Zapisy zamknięte')
+  };
+}
+
 function setText(selector, value) {
   const element = detailPanel?.querySelector(selector);
   if (element) element.textContent = value;
@@ -154,9 +166,11 @@ function selectEvent(id) {
 
 function makeEventButton(event) {
   const button = document.createElement('button');
-  button.className = `calendar-event ${event.open ? 'is-open' : 'is-waiting'} is-${event.tone}`;
+  const state = registrationState(event);
+  button.className = `calendar-event ${state.className} is-${event.tone}`;
   button.type = 'button';
   button.dataset.eventId = event.id;
+  button.setAttribute('aria-label', `${siteT(event.shortTitle || event.title)}. ${state.label}. ${event.time || ''}`.trim());
   button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
   button.innerHTML = `<small>${event.time}</small>${siteT(event.shortTitle)}`;
   return button;
@@ -213,11 +227,13 @@ function renderList(monthEvents) {
 
   monthEvents.forEach(event => {
     const button = document.createElement('button');
-    button.className = 'calendar-list-item';
+    const state = registrationState(event);
+    button.className = `calendar-list-item ${state.className}`;
     button.type = 'button';
     button.dataset.eventId = event.id;
+    button.setAttribute('aria-label', `${formatFullDate(event.date)}. ${siteT(event.title)}. ${state.label}.`);
     button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
-    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small></span><b>${siteT(event.title)}</b>`;
+    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small><span class="calendar-list-status">${state.label}</span></span><b>${siteT(event.title)}</b>`;
     calendarList.append(button);
   });
 }

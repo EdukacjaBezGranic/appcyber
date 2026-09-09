@@ -11,6 +11,8 @@
     ['zapisy.html', 'Zapisy na szkolenia'],
     ['kursy-online.html', 'Kursy online'],
     ['kontakt.html', 'Kontakt'],
+    ['zapisy-kalendarz.html', 'Kalendarz szkoleń'],
+    ['panel-trenera.html', 'Panel trenera'],
     ['polityka-prywatnosci.html', 'Polityka prywatności'],
     ['polityka-cookies.html', 'Polityka cookies']
   ];
@@ -22,7 +24,7 @@
     sourceKind: '',
     fileCount: 0,
     data: { trainings: [] },
-    settings: { version: 193, outputBase: 'appcyber-main', compression: 'DEFLATE' },
+    settings: { version: 198, outputBase: 'appcyber-main', compression: 'DEFLATE' },
     view: 'dashboard',
     selectedTraining: null,
     selectedEvent: null,
@@ -371,7 +373,102 @@
   }
   function editableBlocks(doc) {
     const main = doc.querySelector('main') || doc.body;
-    return $$('h1,h2,h3,p,li', main).filter(node => !node.closest('script,style,noscript,nav,footer') && stripHtml(node.innerHTML).length > 1);
+    return $$('h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption', main).filter(node => !node.closest('script,style,noscript,nav,footer') && stripHtml(node.innerHTML).length > 1);
+  }
+  function selectedOption(value, expected) { return String(value || '') === String(expected) ? 'selected' : ''; }
+  function checked(value) { return value ? 'checked' : ''; }
+  function colorToHex(value, fallback) {
+    if (/^#[0-9a-f]{6}$/i.test(value || '')) return value;
+    if (/^#[0-9a-f]{3}$/i.test(value || '')) return `#${value.slice(1).split('').map(char => char + char).join('')}`;
+    const channels = String(value || '').match(/[\d.]+/g)?.slice(0, 3).map(Number);
+    return channels?.length === 3 ? `#${channels.map(channel => Math.max(0, Math.min(255, channel)).toString(16).padStart(2, '0')).join('')}` : fallback;
+  }
+  function knownFont(value) {
+    const font = String(value || '').toLowerCase();
+    if (font.includes('georgia')) return "Georgia, 'Times New Roman', serif";
+    if (font.includes('times new roman')) return "'Times New Roman', Times, serif";
+    if (font.includes('verdana')) return 'Verdana, Geneva, sans-serif';
+    if (font.includes('arial')) return 'Arial, Helvetica, sans-serif';
+    return 'default';
+  }
+  function blockFormat(node) {
+    const style = node.style;
+    return {
+      align: style.textAlign || 'default',
+      width: node.dataset.cmsWidth || 'default',
+      font: knownFont(style.fontFamily),
+      size: parseInt(style.fontSize, 10) || '',
+      weight: style.fontWeight || 'default',
+      lineHeight: style.lineHeight || 'default',
+      textColor: colorToHex(style.color, '#17252a'),
+      textColorEnabled: Boolean(style.color),
+      backgroundColor: colorToHex(style.backgroundColor, '#ffffff'),
+      backgroundColorEnabled: Boolean(style.backgroundColor),
+      marginTop: parseInt(style.marginTop, 10) || 0,
+      marginBottom: parseInt(style.marginBottom, 10) || 0,
+      padding: parseInt(style.padding, 10) || 0
+    };
+  }
+  function formatPanelHtml(format) {
+    return `<section class="format-panel" aria-labelledby="formatTitle">
+      <div class="format-panel__head"><div><span class="eyebrow">Wygląd fragmentu</span><h3 id="formatTitle">Układ i typografia</h3></div><button type="button" class="text-button" id="resetFormat">Przywróć domyślne</button></div>
+      <div class="format-section"><span class="format-label">Wyrównanie tekstu</span><div class="segmented" role="group" aria-label="Wyrównanie tekstu">
+        <button type="button" data-align="left" class="${format.align === 'left' || format.align === 'default' ? 'is-active' : ''}" title="Do lewej">${icon('align-left')}<span>Lewo</span></button>
+        <button type="button" data-align="center" class="${format.align === 'center' ? 'is-active' : ''}" title="Wyśrodkuj">${icon('align-center')}<span>Środek</span></button>
+        <button type="button" data-align="right" class="${format.align === 'right' ? 'is-active' : ''}" title="Do prawej">${icon('align-right')}<span>Prawo</span></button>
+        <button type="button" data-align="justify" class="${format.align === 'justify' ? 'is-active' : ''}" title="Od krawędzi do krawędzi">${icon('align-justify')}<span>Justuj</span></button>
+      </div></div>
+      <div class="format-grid">
+        <label>Szerokość bloku<select id="blockWidth"><option value="default" ${selectedOption(format.width, 'default')}>Domyślna strony</option><option value="narrow" ${selectedOption(format.width, 'narrow')}>Wąska - 52 znaki</option><option value="reading" ${selectedOption(format.width, 'reading')}>Czytelna - 70 znaków</option><option value="wide" ${selectedOption(format.width, 'wide')}>Szeroka - 1100 px</option><option value="full" ${selectedOption(format.width, 'full')}>Pełna szerokość kolumny</option></select></label>
+        <label>Krój pisma<select id="fontFamily"><option value="default" ${selectedOption(format.font, 'default')}>Domyślny strony</option><option value="Arial, Helvetica, sans-serif" ${selectedOption(format.font, 'Arial, Helvetica, sans-serif')}>Arial</option><option value="Verdana, Geneva, sans-serif" ${selectedOption(format.font, 'Verdana, Geneva, sans-serif')}>Verdana</option><option value="Georgia, 'Times New Roman', serif" ${selectedOption(format.font, "Georgia, 'Times New Roman', serif")}>Georgia</option><option value="'Times New Roman', Times, serif" ${selectedOption(format.font, "'Times New Roman', Times, serif")}>Times New Roman</option></select></label>
+        <label>Rozmiar tekstu <span class="field-unit">px</span><input id="fontSize" type="number" min="12" max="96" step="1" value="${format.size}" placeholder="domyślny"></label>
+        <label>Grubość<select id="fontWeight"><option value="default" ${selectedOption(format.weight, 'default')}>Domyślna</option><option value="400" ${selectedOption(format.weight, '400')}>Zwykła</option><option value="500" ${selectedOption(format.weight, '500')}>Średnia</option><option value="600" ${selectedOption(format.weight, '600')}>Półgruba</option><option value="700" ${selectedOption(format.weight, '700')}>Gruba</option><option value="800" ${selectedOption(format.weight, '800')}>Bardzo gruba</option></select></label>
+        <label>Interlinia<select id="lineHeight"><option value="default" ${selectedOption(format.lineHeight, 'default')}>Domyślna</option><option value="1.2" ${selectedOption(format.lineHeight, '1.2')}>Zwarta</option><option value="1.4" ${selectedOption(format.lineHeight, '1.4')}>Standardowa</option><option value="1.6" ${selectedOption(format.lineHeight, '1.6')}>Wygodna</option><option value="1.8" ${selectedOption(format.lineHeight, '1.8')}>Luźna</option></select></label>
+        <label>Odstęp nad <span class="field-unit">px</span><input id="marginTop" type="number" min="0" max="160" step="4" value="${format.marginTop}"></label>
+        <label>Odstęp pod <span class="field-unit">px</span><input id="marginBottom" type="number" min="0" max="160" step="4" value="${format.marginBottom}"></label>
+        <label>Wewnętrzny odstęp <span class="field-unit">px</span><input id="blockPadding" type="number" min="0" max="80" step="4" value="${format.padding}"></label>
+      </div>
+      <div class="color-grid">
+        <label class="color-control"><span><input id="textColorEnabled" type="checkbox" ${checked(format.textColorEnabled)}> Własny kolor tekstu</span><input id="textColor" type="color" value="${escapeHtml(format.textColor)}"></label>
+        <label class="color-control"><span><input id="backgroundColorEnabled" type="checkbox" ${checked(format.backgroundColorEnabled)}> Tło fragmentu</span><input id="backgroundColor" type="color" value="${escapeHtml(format.backgroundColor)}"></label>
+      </div>
+      <p class="format-help">Zmiany widać od razu w podglądzie. Zostaną zapisane w stronie po kliknięciu „Zapisz fragment”.</p>
+    </section>`;
+  }
+  function applyFormatFromControls(target) {
+    const value = id => $(`#${id}`)?.value;
+    const style = target.style;
+    const setStyle = (property, nextValue) => nextValue ? style.setProperty(property, nextValue, 'important') : style.removeProperty(property);
+    const align = $('.segmented [data-align].is-active')?.dataset.align || 'left';
+    setStyle('text-align', align === 'left' ? 'left' : align);
+    setStyle('font-family', value('fontFamily') === 'default' ? '' : value('fontFamily'));
+    setStyle('font-size', value('fontSize') ? `${Math.max(12, Math.min(96, Number(value('fontSize'))))}px` : '');
+    setStyle('font-weight', value('fontWeight') === 'default' ? '' : value('fontWeight'));
+    setStyle('line-height', value('lineHeight') === 'default' ? '' : value('lineHeight'));
+    setStyle('color', $('#textColorEnabled')?.checked ? value('textColor') : '');
+    setStyle('background-color', $('#backgroundColorEnabled')?.checked ? value('backgroundColor') : '');
+    setStyle('margin-top', Number(value('marginTop')) ? `${Number(value('marginTop'))}px` : '');
+    setStyle('margin-bottom', Number(value('marginBottom')) ? `${Number(value('marginBottom'))}px` : '');
+    setStyle('padding', Number(value('blockPadding')) ? `${Number(value('blockPadding'))}px` : '');
+    setStyle('box-sizing', Number(value('blockPadding')) ? 'border-box' : '');
+    const width = value('blockWidth') || 'default';
+    delete target.dataset.cmsReset;
+    target.dataset.cmsWidth = width;
+    setStyle('width', width === 'default' ? '' : '100%');
+    setStyle('max-width', width === 'narrow' ? '52ch' : width === 'reading' ? '70ch' : width === 'wide' ? '1100px' : width === 'full' ? 'none' : '');
+    setStyle('margin-left', ['narrow', 'reading', 'wide'].includes(width) ? 'auto' : '');
+    setStyle('margin-right', ['narrow', 'reading', 'wide'].includes(width) ? 'auto' : '');
+    if (width === 'default') delete target.dataset.cmsWidth;
+  }
+  function protectShortWords(root) {
+    if (!root) return;
+    const pattern = /(^|[\s([{„“"'])([aAiIoOuUwWzZ])[ \t]+(?=\S)/g;
+    const walker = root.ownerDocument.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.parentElement?.closest('script,style,noscript,textarea,pre,code,[contenteditable="true"],[data-no-polish-spacing]')) continue;
+      node.nodeValue = node.nodeValue.replace(pattern, '$1$2\u00a0');
+    }
   }
   async function renderPages() {
     const pages = availablePages(); if (!state.selectedPage && pages[0]) state.selectedPage = pages[0][0];
@@ -383,13 +480,44 @@
   }
   function renderPageEditor(doc, blocks) {
     const panel = $('.page-editor'); const selected = blocks[state.selectedBlock] || blocks[0];
-    panel.innerHTML = `<div class="editor-title"><div><span class="eyebrow">Fragmenty strony</span><h2>${escapeHtml(PUBLIC_PAGES.find(([path]) => path === state.selectedPage)?.[1] || state.selectedPage)}</h2></div><span class="status">${blocks.length} elementów</span></div><div class="block-list">${blocks.map((node, index) => `<button data-block="${index}" class="${index === state.selectedBlock ? 'is-active' : ''}"><span>${node.tagName}</span><strong>${escapeHtml(stripHtml(node.innerHTML).slice(0, 88))}</strong></button>`).join('')}</div>${selected ? `<div class="rich-editor"><div class="editor-toolbar"><button type="button" data-command="bold" title="Pogrubienie"><strong>B</strong></button><button type="button" data-command="italic" title="Kursywa"><em>I</em></button><button type="button" data-command="createLink" title="Dodaj link">${icon('link')}</button></div><div id="richText" contenteditable="true" spellcheck="true">${selected.innerHTML}</div><div class="form-actions"><button class="button button--primary" id="saveBlock">${icon('check')} Zapisz fragment</button></div></div>` : '<p class="empty">Na tej stronie nie znaleziono prostych bloków tekstu.</p>'}`;
+    const format = selected ? blockFormat(selected) : null;
+    panel.innerHTML = `<div class="editor-title"><div><span class="eyebrow">Fragmenty strony</span><h2>${escapeHtml(PUBLIC_PAGES.find(([path]) => path === state.selectedPage)?.[1] || state.selectedPage)}</h2></div><span class="status">${blocks.length} elementów</span></div><div class="block-list">${blocks.map((node, index) => `<button data-block="${index}" class="${index === state.selectedBlock ? 'is-active' : ''}"><span>${node.tagName}</span><strong>${escapeHtml(stripHtml(node.innerHTML).slice(0, 88))}</strong></button>`).join('')}</div>${selected ? `<div class="rich-editor"><div class="editor-toolbar" aria-label="Formatowanie zaznaczonego tekstu"><button type="button" data-command="bold" title="Pogrubienie"><strong>B</strong></button><button type="button" data-command="italic" title="Kursywa"><em>I</em></button><button type="button" data-command="underline" title="Podkreślenie">${icon('underline')}</button><span class="toolbar-divider"></span><button type="button" data-command="createLink" title="Dodaj link">${icon('link')}</button><button type="button" data-command="unlink" title="Usuń link">${icon('unlink')}</button></div><div id="richText" contenteditable="true" spellcheck="true" style="${escapeHtml(selected.getAttribute('style') || '')}"${selected.dataset.cmsWidth ? ` data-cms-width="${escapeHtml(selected.dataset.cmsWidth)}"` : ''}>${selected.innerHTML}</div>${formatPanelHtml(format)}<div class="form-actions form-actions--sticky"><span class="unsaved-note" id="blockState">Wybierz ustawienia i sprawdź podgląd</span><button class="button button--primary" id="saveBlock">${icon('check')} Zapisz fragment</button></div></div>` : '<p class="empty">Na tej stronie nie znaleziono prostych bloków tekstu.</p>'}`;
     $$('[data-block]', panel).forEach(node => node.onclick = () => { state.selectedBlock = Number(node.dataset.block); renderPageEditor(doc, blocks); });
-    $$('[data-command]', panel).forEach(button => button.onclick = () => { const command = button.dataset.command; const value = command === 'createLink' ? prompt('Podaj adres linku:', 'https://') : null; if (command !== 'createLink' || value) document.execCommand(command, false, value); $('#richText').focus(); });
-    const save = $('#saveBlock'); if (save) save.onclick = () => { selected.innerHTML = $('#richText').innerHTML; state.changedPages.add(state.selectedPage); markDirty(); updatePagePreview(doc); toast('Fragment strony zapisano.'); const nextBlocks = editableBlocks(doc); renderPageEditor(doc, nextBlocks); };
+    $$('[data-command]', panel).forEach(button => button.onclick = () => { const command = button.dataset.command; const value = command === 'createLink' ? prompt('Podaj adres linku:', 'https://') : null; if (command !== 'createLink' || value) document.execCommand(command, false, value); $('#richText').focus(); setTimeout(previewDraft, 0); });
+    const richText = $('#richText');
+    const previewDraft = () => { applyFormatFromControls(richText); $('#blockState').textContent = 'Zmiany oczekują na zapis'; updatePagePreview(doc, richText); };
+    richText?.addEventListener('input', previewDraft);
+    $$('.format-panel input,.format-panel select', panel).forEach(control => control.addEventListener('input', previewDraft));
+    $$('[data-align]', panel).forEach(button => button.onclick = () => { $$('[data-align]', panel).forEach(item => item.classList.toggle('is-active', item === button)); previewDraft(); });
+    const reset = $('#resetFormat'); if (reset) reset.onclick = () => {
+      richText.removeAttribute('style'); delete richText.dataset.cmsWidth; richText.dataset.cmsReset = 'true';
+      $('#blockWidth').value = 'default'; $('#fontFamily').value = 'default'; $('#fontSize').value = '';
+      $('#fontWeight').value = 'default'; $('#lineHeight').value = 'default'; $('#marginTop').value = 0;
+      $('#marginBottom').value = 0; $('#blockPadding').value = 0; $('#textColorEnabled').checked = false; $('#backgroundColorEnabled').checked = false;
+      $$('[data-align]', panel).forEach(item => item.classList.toggle('is-active', item.dataset.align === 'left'));
+      $('#blockState').textContent = 'Domyślne ustawienia oczekują na zapis'; updatePagePreview(doc, richText);
+      toast('Przywrócono domyślne ustawienia. Kliknij „Zapisz fragment”, aby je zachować.');
+    };
+    const save = $('#saveBlock'); if (save) save.onclick = () => {
+      if (richText.dataset.cmsReset === 'true') { richText.removeAttribute('style'); delete richText.dataset.cmsWidth; delete richText.dataset.cmsReset; }
+      else applyFormatFromControls(richText);
+      selected.innerHTML = richText.innerHTML;
+      if (richText.getAttribute('style')) selected.setAttribute('style', richText.getAttribute('style')); else selected.removeAttribute('style');
+      if (richText.dataset.cmsWidth) selected.dataset.cmsWidth = richText.dataset.cmsWidth; else delete selected.dataset.cmsWidth;
+      state.changedPages.add(state.selectedPage); markDirty(); updatePagePreview(doc); toast('Treść i wygląd fragmentu zapisano.'); const nextBlocks = editableBlocks(doc); renderPageEditor(doc, nextBlocks);
+    };
   }
-  function updatePagePreview(doc) {
+  function updatePagePreview(doc, draft = null) {
     const clone = doc.cloneNode(true); $$('script', clone).forEach(node => node.remove());
+    if (draft) {
+      const target = editableBlocks(clone)[state.selectedBlock];
+      if (target) {
+        target.innerHTML = draft.innerHTML;
+        if (draft.getAttribute('style')) target.setAttribute('style', draft.getAttribute('style')); else target.removeAttribute('style');
+        if (draft.dataset.cmsWidth) target.dataset.cmsWidth = draft.dataset.cmsWidth; else delete target.dataset.cmsWidth;
+      }
+    }
+    protectShortWords(clone.body);
     let base = clone.querySelector('base'); if (!base) { base = clone.createElement('base'); clone.head.prepend(base); } base.href = '../';
     const frame = $('#pageFrame'); if (frame) frame.srcdoc = '<!doctype html>\n' + clone.documentElement.outerHTML;
   }
