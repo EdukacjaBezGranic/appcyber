@@ -24,7 +24,7 @@
     sourceKind: '',
     fileCount: 0,
     data: { trainings: [] },
-    settings: { version: 204, outputBase: 'appcyber-main', compression: 'DEFLATE' },
+    settings: { version: 205, outputBase: 'appcyber-main', compression: 'DEFLATE' },
     view: 'dashboard',
     selectedTraining: null,
     selectedEvent: null,

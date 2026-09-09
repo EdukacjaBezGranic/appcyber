@@ -1,0 +1,82 @@
+/* V205 — zwarta grupa otwarcia kursu i pobrania podręcznika. */
+body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+}
+
+body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 .public-btn,
+body#portal-layout.public-page.online-catalog-page .online-handbook-download {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 54px !important;
+  margin: 0 !important;
+  padding: 14px 16px !important;
+  border-radius: 11px !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  line-height: 1.25 !important;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+body#portal-layout.public-page.online-catalog-page .online-handbook-download {
+  gap: 9px;
+  color: #18594f !important;
+  -webkit-text-fill-color: #18594f !important;
+  background: rgba(255, 255, 255, .76) !important;
+  border: 1px solid rgba(20, 116, 102, .34) !important;
+  box-shadow: none !important;
+}
+
+body#portal-layout.public-page.online-catalog-page .online-handbook-download span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+body#portal-layout.public-page.online-catalog-page .online-handbook-download:hover,
+body#portal-layout.public-page.online-catalog-page .online-handbook-download:focus-visible {
+  color: #0e6257 !important;
+  -webkit-text-fill-color: #0e6257 !important;
+  background: #fff !important;
+  border-color: #147466 !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1180px) and (min-width: 981px) {
+  body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 {
+    gap: 9px;
+  }
+
+  body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 .public-btn,
+  body#portal-layout.public-page.online-catalog-page .online-handbook-download {
+    padding-inline: 12px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 {
+    grid-template-columns: 1fr;
+    max-width: none;
+    gap: 10px;
+  }
+
+  body#portal-layout.public-page.online-catalog-page .online-handbook-download {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body#portal-layout.public-page.online-catalog-page .online-course-actions-v205 * {
+    transition: none !important;
+  }
+}
