@@ -23,9 +23,10 @@
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
       "id": "fake-news-2026-09-22",
@@ -33,7 +34,7 @@
       "source": "Projekt Edukacja bez granic",
       "title": "Edukacja medialna, fake news i krytyczne myślenie",
       "shortTitle": "Edukacja medialna",
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "calendarColor": "#0e7490",
       "tone": "cyan",
       "time": "09:00 - 14:15",
@@ -46,10 +47,11 @@
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -70,10 +72,11 @@
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "komunikacja",
@@ -118,10 +121,11 @@
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja",
@@ -139,7 +143,7 @@
         "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
         "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
-      "color": "#0d4f96",
+      "color": "#da2cdd",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,
@@ -162,7 +166,7 @@
         "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
         "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
-      "color": "#0d4f96",
+      "color": "#da2cdd",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
       "open": true,

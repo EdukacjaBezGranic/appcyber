@@ -1,16 +1,11 @@
 (function () {
-  const data = window.portalSiteData || {};
-  const trainings = Array.isArray(data.trainings) ? data.trainings : [];
+  let trainings = [];
   const groups = {
     new: document.querySelector('[data-training-group="new"]'),
     other: document.querySelector('[data-training-group="other"]')
   };
 
   if (!groups.new && !groups.other) return;
-
-  Object.values(groups).forEach((container) => {
-    if (container) container.innerHTML = '';
-  });
 
   const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
     '&': '&amp;',
@@ -104,9 +99,24 @@
     `;
   };
 
-  trainings.filter((training) => !training.calendarOnly).map((training) => nearestUpcoming(training)).forEach((training) => {
-    const groupKey = training.group === 'new' ? 'new' : 'other';
-    const container = groups[groupKey];
-    if (container) container.insertAdjacentHTML('beforeend', renderCard(training));
+  const renderTrainings = (data) => {
+    trainings = Array.isArray(data?.trainings) ? data.trainings : [];
+    Object.values(groups).forEach((container) => {
+      if (container) container.innerHTML = '';
+    });
+    trainings.filter((training) => !training.calendarOnly).map((training) => nearestUpcoming(training)).forEach((training) => {
+      const groupKey = training.group === 'new' ? 'new' : 'other';
+      const container = groups[groupKey];
+      if (container) container.insertAdjacentHTML('beforeend', renderCard(training));
+    });
+  };
+
+  window.EBG_RENDER_SIGNUPS = renderTrainings;
+  window.addEventListener('message', (event) => {
+    if (event.data?.type !== 'ebg-cms-preview' || !Array.isArray(event.data.data?.trainings)) return;
+    window.portalSiteData = event.data.data;
+    renderTrainings(event.data.data);
   });
+  renderTrainings(window.portalSiteData || {});
+  window.opener?.postMessage({ type: 'ebg-cms-preview-ready' }, '*');
 })();

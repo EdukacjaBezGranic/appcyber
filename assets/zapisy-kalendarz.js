@@ -1,6 +1,6 @@
 const projectLogo = 'grafiki/logo-projektu-symbol-transparent.png';
 const competencesLogo = 'grafiki/kierunek-kompetencje.png';
-const portalData = window.portalSiteData || {};
+let portalData = window.portalSiteData || {};
 const siteLang = () => localStorage.getItem('ebgSiteLanguageV115') === 'en' ? 'en' : 'pl';
 const siteT = (value) => {
   const text = String(value ?? '').trim();
@@ -22,13 +22,14 @@ const inferTone = (event) => {
   return 'blue';
 };
 
-const trainingEvents = (portalData.trainings || []).map((event) => ({
+const buildTrainingEvents = (data) => (data.trainings || []).map((event) => ({
   ...event,
   description: normalizeDescription(event.description),
   logo: event.logo || (event.source === 'Kierunek Kompetencje 4.0' ? competencesLogo : projectLogo),
   button: event.button || (event.open ? 'Zapisz się' : 'Zapisy wkrótce'),
   tone: inferTone(event)
 }));
+let trainingEvents = buildTrainingEvents(portalData);
 
 const minMonth = { year: 2026, month: 8 };
 const maxMonth = { year: 2027, month: 11 };
@@ -299,5 +300,22 @@ document.querySelector('.calendar-close')?.addEventListener('click', () => {
 });
 
 document.addEventListener('ebg:site-language-changed', () => renderMonth());
+
+window.addEventListener('message', (event) => {
+  if (event.data?.type !== 'ebg-cms-preview' || !Array.isArray(event.data.data?.trainings)) return;
+  portalData = event.data.data;
+  window.portalSiteData = portalData;
+  trainingEvents = buildTrainingEvents(portalData);
+  const nearest = findNearestEvent();
+  if (nearest) {
+    selectedEventId = nearest.id;
+    const nearestDate = parseDate(nearest.date);
+    if (nearestDate) {
+      currentYear = nearestDate.getFullYear();
+      currentMonth = nearestDate.getMonth();
+    }
+  }
+  renderMonth();
+});
 
 renderMonth();
