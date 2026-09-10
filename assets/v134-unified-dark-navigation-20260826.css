@@ -176,3 +176,24 @@ body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
   border-color:rgba(255,255,255,.34)!important;
   background:transparent!important;
 }
+
+/* Aktualności są widocznym, lecz spójnym elementem głównej nawigacji. */
+body.public-page .site-header-v125 .site-nav .nav-news:not([aria-current="page"]){
+  background:rgba(233,86,91,.14)!important;
+  border:1px solid rgba(233,86,91,.48)!important;
+  border-radius:5px!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-news[aria-current="page"]{
+  background:#e9565b!important;
+  border-color:#e9565b!important;
+  border-radius:5px!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-news[aria-current="page"]::after{display:none!important}
+@media(max-width:980px){
+  body.public-page .site-header-v125 .site-nav .nav-news:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-news[aria-current="page"]{
+    background:transparent!important;
+    border-color:transparent!important;
+    border-radius:0!important;
+  }
+}

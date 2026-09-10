@@ -3,6 +3,29 @@ window.portalSiteData = {
     "email": "pr@wup-katowice.pl",
     "phone": "32 757 33 84"
   },
+  "news": [
+    {
+      "id": "pierwsze-szkolenie-z-grywalizacji-2026-09-10",
+      "date": "2026-09-10",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Pierwsze szkolenie z nowej serii za nami",
+      "titleEn": "The first training session in our new series is complete",
+      "lead": "Cykl nowych działań edukacyjnych rozpoczęliśmy od szkolenia wewnętrznego dla pracowników Wojewódzkiego Urzędu Pracy w Katowicach.",
+      "leadEn": "We opened our new educational series with an internal training session for employees of the Voivodeship Labour Office in Katowice.",
+      "body": "Pierwszym tematem była „Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie”. Uczestnicy sprawdzali, jak wykorzystywać wyzwania, role, współpracę i informację zwrotną, aby zwiększać zaangażowanie i wspierać uczenie się przez doświadczenie.\n\nSzkolenie poprowadziły Joanna, Alicja i Kamila. Krótkie wprowadzenia przeplatały ćwiczeniami, podczas których uczestnicy mogli od razu sprawdzić omawiane rozwiązania w praktyce.\n\nBył to czas praktycznych ćwiczeń, pracy zespołowej i wymiany pomysłów. Zajęcia pokazały, że elementy znane z gier można stosować bez budowania skomplikowanych systemów punktów - liczy się dobrze postawiony cel, przestrzeń do działania i jasna informacja zwrotna.\n\nSpotkanie zapoczątkowało serię nowych szkoleń przygotowanych w ramach projektu „Edukacja bez granic”. W kolejnych odsłonach zajmiemy się także edukacją medialną, fake newsami i krytycznym myśleniem oraz wystąpieniami publicznymi i storytellingiem.",
+      "bodyEn": "The first topic was Gamification and Game-Based Learning - creativity, collaboration and learning through action. Participants explored how challenges, roles, teamwork and feedback can strengthen engagement and experiential learning.\n\nThe training was led by Joanna, Alicja and Kamila. Short introductions were combined with exercises that allowed participants to immediately test the presented ideas in practice.\n\nThe session combined practical exercises, teamwork and an exchange of ideas. It showed that game-based elements can be used without creating complex point systems: a clear goal, room for action and useful feedback matter most.\n\nThe meeting launched a new training series developed as part of the Education Without Borders project. Future sessions will also cover media literacy, fake news and critical thinking, as well as public speaking and storytelling.",
+      "image": "grafiki/aktualnosci/2026-09-10-grywalizacja/otwarcie-szkolenia.webp",
+      "imageAlt": "Rozpoczęcie szkolenia z grywalizacji dla pracowników WUP Katowice",
+      "imageAltEn": "Opening of the gamification training session for WUP Katowice employees",
+      "gallery": [
+        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/cwiczenie-zespolowe.webp", "alt": "Uczestnicy podczas ćwiczenia zespołowego", "altEn": "Participants during a teamwork exercise" },
+        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/prezentacja.webp", "alt": "Prezentacja podczas szkolenia z grywalizacji", "altEn": "Presentation during the gamification training" },
+        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/bingo-szkoleniowe.webp", "alt": "Materiały wykorzystane podczas ćwiczenia szkoleniowego", "altEn": "Materials used during a training exercise" }
+      ],
+      "published": true
+    }
+  ],
   "trainings": [
     {
       "id": "fake-news",
@@ -23,10 +46,9 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
-      "button": "Sprawdź terminarz",
-      "registrationClosed": true
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "fake-news-2026-09-22",
@@ -34,7 +56,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Edukacja medialna, fake news i krytyczne myślenie",
       "shortTitle": "Edukacja medialna",
-      "date": "2026-09-23",
+      "date": "2026-09-22",
       "calendarColor": "#0e7490",
       "tone": "cyan",
       "time": "09:00 - 14:15",
@@ -47,11 +69,10 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -72,11 +93,10 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "komunikacja",
@@ -121,11 +141,10 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "grywalizacja",
@@ -146,10 +165,9 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/rHQEKgebZtFokURo9",
-      "button": "Sprawdź terminarz",
-      "registrationClosed": true
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "grywalizacja-2026-09-18",

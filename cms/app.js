@@ -11,6 +11,7 @@
     ['zapisy.html', 'Zapisy na szkolenia'],
     ['kursy-online.html', 'Kursy online'],
     ['kontakt.html', 'Kontakt'],
+    ['aktualnosci.html', 'Aktualności'],
     ['zapisy-kalendarz.html', 'Kalendarz szkoleń'],
     ['panel-trenera.html', 'Panel trenera'],
     ['polityka-prywatnosci.html', 'Polityka prywatności'],
@@ -23,10 +24,11 @@
     sourceName: '',
     sourceKind: '',
     fileCount: 0,
-    data: { trainings: [] },
-    settings: { version: 205, outputBase: 'appcyber-main', compression: 'DEFLATE' },
+    data: { trainings: [], news: [] },
+    settings: { version: 202, outputBase: 'appcyber-main', compression: 'DEFLATE' },
     view: 'dashboard',
     selectedTraining: null,
+    selectedNews: null,
     selectedEvent: null,
     selectedPage: null,
     selectedBlock: 0,
@@ -159,12 +161,18 @@
     const js = json || await readText('assets/site-data.js');
     state.data = parseData(js || '{}');
     if (!Array.isArray(state.data.trainings)) state.data.trainings = [];
+    if (!Array.isArray(state.data.news)) state.data.news = [];
     state.settings.outputBase = (state.root.replace(/\/$/, '') || name.replace(/\.zip$/i, '') || 'appcyber-main').replace(/-V\d+$/i, '');
     state.pageDocs.clear(); state.changedPages.clear(); state.selectedTraining = trainingGroups()[0]?.key || null;
+    state.selectedNews = newsItems()[0]?.id || null;
     state.selectedEvent = state.data.trainings.find(item => item.date)?.id || null;
     state.selectedPage = availablePages()[0]?.[0] || null; state.selectedBlock = 0; state.selectedMedia = null;
     state.draftKey = `edukacja-cms:${state.sourceName}:${state.fileCount}`;
-    restoreDraft(); state.dirty = false; updateChrome();
+    restoreDraft();
+    if (!Array.isArray(state.data.trainings)) state.data.trainings = [];
+    if (!Array.isArray(state.data.news)) state.data.news = [];
+    state.selectedNews = newsItems()[0]?.id || null;
+    state.dirty = false; updateChrome();
     els.importScreen.hidden = true; els.app.hidden = false; navigate('dashboard');
   }
 
@@ -212,6 +220,7 @@
   }
   function selectedGroup() { return trainingGroups().find(group => group.key === state.selectedTraining) || trainingGroups()[0]; }
   function events() { return state.data.trainings.filter(item => item.date).sort((a, b) => String(a.date).localeCompare(String(b.date))); }
+  function newsItems() { return [...(state.data.news || [])].sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))); }
   function availablePages() { return PUBLIC_PAGES.filter(([path]) => state.zip?.file(pathInZip(path))); }
   function mediaFiles() {
     if (!state.zip) return [];
@@ -224,7 +233,7 @@
   }
 
   function render() {
-    const renderers = { dashboard: renderDashboard, trainings: renderTrainings, calendar: renderCalendar, pages: renderPages, media: renderMedia, settings: renderSettings };
+    const renderers = { dashboard: renderDashboard, trainings: renderTrainings, calendar: renderCalendar, news: renderNews, pages: renderPages, media: renderMedia, settings: renderSettings };
     (renderers[state.view] || renderDashboard)();
     els.workspace.scrollTop = 0;
   }
@@ -250,6 +259,7 @@
         <article class="panel quick-panel"><span class="eyebrow">Szybkie działania</span><h2>Co chcesz zmienić?</h2>
           <button class="quick-action" data-go="trainings">${icon('edit')}<span><strong>Opis szkolenia</strong><small>Tytuł, opis, odbiorcy i grafika</small></span>${icon('arrow')}</button>
           <button class="quick-action" data-action="new-event">${icon('plus')}<span><strong>Dodaj termin</strong><small>Uzupełnij datę i informacje o zapisach</small></span>${icon('arrow')}</button>
+          <button class="quick-action" data-go="news">${icon('news')}<span><strong>Dodaj aktualność</strong><small>Opublikuj relację i zdjęcia ze szkolenia</small></span>${icon('arrow')}</button>
           <button class="quick-action" data-go="pages">${icon('page')}<span><strong>Treść strony</strong><small>Edytuj nagłówki i akapity</small></span>${icon('arrow')}</button>
           <button class="quick-action" data-go="media">${icon('image')}<span><strong>Dodaj plik</strong><small>Grafika, film albo dokument</small></span>${icon('arrow')}</button>
         </article>
@@ -325,6 +335,71 @@
   function duplicateTraining(item) {
     const copy = structuredClone(item); const stamp = Date.now(); copy.id = `${slugify(item.shortTitle || item.title)}-kopia-${stamp}`; copy.series = `${trainingKey(item)}-kopia-${stamp}`; copy.title = `${item.title || 'Szkolenie'} – kopia`; copy.shortTitle = `${item.shortTitle || 'Szkolenie'} – kopia`; copy.date = ''; copy.open = false;
     state.data.trainings.push(copy); state.selectedTraining = copy.series; markDirty(); toast('Utworzono kopię szkolenia.'); renderTrainings();
+  }
+
+  function renderNews() {
+    const items = newsItems();
+    if (!state.selectedNews && items[0]) state.selectedNews = items[0].id;
+    const item = items.find(entry => entry.id === state.selectedNews) || null;
+    els.workspace.innerHTML = `${pageHeading('Publikacje', 'Aktualności', 'Dodawaj relacje z kolejnych szkoleń wraz ze zdjęciem głównym i galerią.', `<button class="button button--primary" id="addNews">${icon('plus')} Dodaj wpis</button>`)}
+      <div class="editor-layout news-editor-layout">
+        <aside class="record-list"><div class="list-search">${icon('search')}<input id="newsSearch" type="search" placeholder="Szukaj wpisu"></div><div id="newsItems">${newsListHtml(items)}</div></aside>
+        <section class="editor-panel">${item ? newsFormHtml(item) : '<div class="empty-state"><h2>Brak aktualności</h2><p>Dodaj pierwszą relację ze szkolenia.</p></div>'}</section>
+        <aside class="preview-panel">${newsPreviewHtml(item)}</aside>
+      </div>`;
+    $('#addNews').onclick = addNews;
+    $('#newsSearch').oninput = event => { const term = event.target.value.toLowerCase(); $('#newsItems').innerHTML = newsListHtml(items.filter(entry => `${entry.title || ''} ${entry.category || ''}`.toLowerCase().includes(term))); bindNewsList(); };
+    bindNewsList(); if (item) bindNewsForm(item);
+  }
+  function newsListHtml(items) {
+    return items.map((item, index) => `<button class="record-item ${item.id === state.selectedNews ? 'is-active' : ''}" data-news="${escapeHtml(item.id)}"><span class="record-index">${String(index + 1).padStart(2, '0')}</span><span><strong>${escapeHtml(item.title || 'Bez tytułu')}</strong><small>${escapeHtml(formatDate(item.date))} · ${item.published === false ? 'szkic' : 'opublikowany'}</small></span>${icon('arrow')}</button>`).join('') || '<p class="empty">Nie znaleziono wpisów.</p>';
+  }
+  function bindNewsList() { $$('[data-news]', els.workspace).forEach(node => node.onclick = () => { state.selectedNews = node.dataset.news; renderNews(); }); }
+  function galleryPaths(item) { return (Array.isArray(item.gallery) ? item.gallery : []).map(entry => typeof entry === 'string' ? entry : entry.src).filter(Boolean); }
+  function newsFormHtml(item) {
+    return `<div class="editor-title"><div><span class="eyebrow">Edycja publikacji</span><h2>${escapeHtml(item.title || 'Nowa aktualność')}</h2></div><span class="status ${item.published === false ? 'status--muted' : ''}">${item.published === false ? 'szkic' : 'opublikowany'}</span></div>
+      <form id="newsForm" class="form-stack">
+        <div class="field-grid"><label>Data publikacji<input type="date" name="date" value="${escapeHtml(item.date || '')}" required></label><label>Kategoria<input name="category" value="${escapeHtml(item.category || 'Z życia projektu')}"></label></div>
+        <label>Tytuł<input name="title" value="${escapeHtml(item.title || '')}" required></label>
+        <label>Wprowadzenie<textarea name="lead" rows="4">${escapeHtml(item.lead || '')}</textarea><small>Krótki tekst widoczny także na karcie aktualności.</small></label>
+        <label>Treść wpisu<textarea name="body" rows="10">${escapeHtml(item.body || '')}</textarea><small>Oddziel akapity pustą linią.</small></label>
+        <label>Zdjęcie główne<div class="media-field"><input name="image" value="${escapeHtml(item.image || '')}" placeholder="grafiki/aktualnosci/zdjecie.webp"><button type="button" class="button button--small button--secondary" id="chooseNewsImage">Wybierz</button></div></label>
+        <label>Opis zdjęcia<input name="imageAlt" value="${escapeHtml(item.imageAlt || '')}" placeholder="Co przedstawia zdjęcie?"></label>
+        <label>Galeria zdjęć<textarea name="gallery" rows="5" placeholder="Jedna ścieżka w każdym wierszu">${escapeHtml(galleryPaths(item).join('\n'))}</textarea><button type="button" class="button button--small button--secondary inline-picker" id="addGalleryImage">${icon('plus')} Dodaj zdjęcie z mediów</button></label>
+        <details class="translation-fields"><summary>Wersja angielska (opcjonalna)</summary><div class="form-stack"><label>Tytuł EN<input name="titleEn" value="${escapeHtml(item.titleEn || '')}"></label><label>Wprowadzenie EN<textarea name="leadEn" rows="4">${escapeHtml(item.leadEn || '')}</textarea></label><label>Treść EN<textarea name="bodyEn" rows="8">${escapeHtml(item.bodyEn || '')}</textarea></label></div></details>
+        <label class="toggle-row"><span><strong>Wpis opublikowany</strong><small>Wyłączenie tej opcji ukryje wpis na stronie.</small></span><input type="checkbox" name="published" ${item.published !== false ? 'checked' : ''}></label>
+        <div class="form-actions"><button type="button" class="button button--danger" id="deleteNews">Usuń wpis</button><button class="button button--primary">${icon('check')} Zapisz publikację</button></div>
+      </form>`;
+  }
+  function newsPreviewHtml(item) {
+    if (!item) return '<div class="empty-state"><h2>Podgląd wpisu</h2><p>Po dodaniu publikacji zobaczysz tutaj jej kartę.</p></div>';
+    return `<div class="preview-head"><span class="eyebrow">Podgląd karty</span><span class="preview-dot">na żywo</span></div><article class="training-preview news-preview"><div class="preview-media" id="newsMediaPreview">${icon('image')}</div><div class="preview-content"><span class="preview-label">${escapeHtml(item.category || 'Aktualności')}</span><h3>${escapeHtml(item.title || 'Tytuł wpisu')}</h3><p>${escapeHtml(item.lead || 'Tutaj pojawi się krótkie wprowadzenie.')}</p><div class="preview-meta"><span>${icon('calendar')} ${escapeHtml(formatDate(item.date))}</span></div><span class="fake-button">Czytaj relację ${icon('arrow')}</span></div></article><p class="preview-note">Po eksporcie wpis pojawi się na stronie „Aktualności”. Kolejność ustala data publikacji.</p>`;
+  }
+  async function updateNewsMediaPreview(path) {
+    const box = $('#newsMediaPreview'); if (!box) return;
+    const file = state.zip.file(pathInZip(path)); if (!file) { box.innerHTML = icon('image'); return; }
+    box.innerHTML = `<img src="${blobUrl(await file.async('blob'))}" alt="">`;
+  }
+  function bindNewsForm(item) {
+    const form = $('#newsForm'); updateNewsMediaPreview(form.elements.image.value);
+    form.oninput = () => { const preview = $('.news-preview'); if (!preview) return; $('h3', preview).textContent = form.elements.title.value || 'Tytuł wpisu'; $('p', preview).textContent = form.elements.lead.value || 'Tutaj pojawi się krótkie wprowadzenie.'; };
+    form.elements.image.onchange = () => updateNewsMediaPreview(form.elements.image.value);
+    $('#chooseNewsImage').onclick = () => openMediaPicker(path => { form.elements.image.value = path; updateNewsMediaPreview(path); });
+    $('#addGalleryImage').onclick = () => openMediaPicker(path => { const current = form.elements.gallery.value.trim(); form.elements.gallery.value = current ? `${current}\n${path}` : path; });
+    form.onsubmit = event => {
+      event.preventDefault(); const values = Object.fromEntries(new FormData(form));
+      const existingAlt = new Map((item.gallery || []).map(entry => [typeof entry === 'string' ? entry : entry.src, entry]));
+      values.gallery = values.gallery.split(/\r?\n/).map(path => path.trim()).filter(Boolean).map(path => existingAlt.get(path) || { src: path, alt: 'Zdjęcie z wydarzenia', altEn: 'Photo from the event' });
+      values.published = form.elements.published.checked; Object.assign(item, values);
+      if (!item.id || item.id.startsWith('nowa-aktualnosc-')) item.id = `${slugify(item.title)}-${item.date || Date.now()}`;
+      state.selectedNews = item.id; markDirty(); toast('Aktualność została zapisana.'); renderNews();
+    };
+    $('#deleteNews').onclick = async () => { if (!await confirmDialog('Usunąć aktualność?', `<p>Wpis <strong>${escapeHtml(item.title)}</strong> zniknie ze strony po eksporcie.</p>`, 'Usuń wpis')) return; state.data.news = state.data.news.filter(entry => entry !== item); state.selectedNews = newsItems()[0]?.id || null; markDirty(); toast('Aktualność usunięto.'); renderNews(); };
+  }
+  function addNews() {
+    const stamp = Date.now(); const today = new Date().toISOString().slice(0, 10);
+    const item = { id: `nowa-aktualnosc-${stamp}`, date: today, category: 'Z życia projektu', title: 'Nowa aktualność', lead: '', body: '', image: '', imageAlt: '', gallery: [], published: false };
+    state.data.news.push(item); state.selectedNews = item.id; markDirty(); renderNews();
   }
 
   function renderCalendar() {
@@ -584,7 +659,7 @@
         const doc = state.pageDocs.get(path); if (doc) state.zip.file(pathInZip(path), '<!doctype html>\n' + doc.documentElement.outerHTML);
       }
       const version = state.settings.version || 1;
-      for (const path of ['zapisy.html', 'zapisy-kalendarz.html']) {
+      for (const path of ['zapisy.html', 'zapisy-kalendarz.html', 'aktualnosci.html']) {
         const current = await readText(path); if (current) state.zip.file(pathInZip(path), current.replace(/(assets\/site-data\.js)(?:\?v=[^"']*)?/g, `$1?v=${version}`));
       }
       const blob = await state.zip.generateAsync({ type: 'blob', compression: state.settings.compression || 'DEFLATE', compressionOptions: { level: 6 }, streamFiles: true }, metadata => { const progress = $('#busyProgress'); if (progress) progress.value = metadata.percent; });
