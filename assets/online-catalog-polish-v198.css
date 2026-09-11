@@ -6,13 +6,13 @@ body#portal-layout.public-page.online-catalog-page .v68-online-main {
 
 body#portal-layout.public-page.online-catalog-page .v68-online-featured {
   display: grid !important;
-  grid-template-columns: minmax(0, 1.14fr) minmax(370px, .86fr) !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
   width: min(1360px, calc(100% - 48px)) !important;
   min-height: 0 !important;
   margin: 0 auto !important;
   padding: 0 !important;
   gap: 0 !important;
-  align-items: stretch !important;
+  align-items: center !important;
   overflow: hidden !important;
   background: #fff !important;
   border: 1px solid rgba(19, 63, 52, .14) !important;
@@ -28,7 +28,7 @@ body#portal-layout.public-page.online-catalog-page .v68-online-featured-media {
   place-items: center !important;
   overflow: hidden !important;
   background: #fff !important;
-  border-right: 1px solid rgba(19, 63, 52, .11) !important;
+  border-right: 0 !important;
 }
 
 body#portal-layout.public-page.online-catalog-page .v68-online-featured-media img {
@@ -48,7 +48,7 @@ body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy {
   align-items: flex-start !important;
   justify-content: center !important;
   min-width: 0 !important;
-  padding: clamp(34px, 4vw, 66px) !important;
+  padding: clamp(24px, 2.5vw, 36px) !important;
   gap: 0 !important;
   background: linear-gradient(145deg, #f8fbf9 0%, #edf5f1 100%) !important;
   border: 0 !important;
@@ -58,7 +58,7 @@ body#portal-layout.public-page.online-catalog-page .online-course-availability {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   color: #176b5a;
   font-size: 12px;
   font-weight: 800;
@@ -77,11 +77,11 @@ body#portal-layout.public-page.online-catalog-page .online-course-availability i
 
 body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy h1 {
   width: 100% !important;
-  max-width: 15ch !important;
-  margin: 0 0 22px !important;
+  max-width: none !important;
+  margin: 0 0 16px !important;
   color: #17221f !important;
   -webkit-text-fill-color: #17221f !important;
-  font-size: clamp(34px, 3.2vw, 54px) !important;
+  font-size: clamp(28px, 2.3vw, 36px) !important;
   font-weight: 650 !important;
   line-height: 1.04 !important;
   letter-spacing: -.045em !important;
@@ -90,7 +90,7 @@ body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy h1 
 body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy p {
   width: 100% !important;
   max-width: 52ch !important;
-  margin: 0 0 26px !important;
+  margin: 0 0 18px !important;
   color: #4d5d58 !important;
   -webkit-text-fill-color: #4d5d58 !important;
   font-size: clamp(16px, 1.25vw, 18px) !important;
@@ -101,7 +101,7 @@ body#portal-layout.public-page.online-catalog-page .online-course-facts {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
 }
@@ -118,17 +118,17 @@ body#portal-layout.public-page.online-catalog-page .online-course-facts li {
 }
 
 body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy .public-btn {
-  min-width: 240px !important;
-  min-height: 56px !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
   margin: 0 !important;
-  padding: 15px 24px !important;
+  padding: 12px 16px !important;
   justify-content: center !important;
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
   background: #147466 !important;
   border: 1px solid #147466 !important;
   border-radius: 12px !important;
-  box-shadow: 0 11px 24px rgba(20, 116, 102, .18) !important;
+  box-shadow: none !important;
   animation: none !important;
 }
 
@@ -191,4 +191,20 @@ body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy .pu
     width: 100% !important;
     min-width: 0 !important;
   }
+}
+
+/* Keep both actions together with an explicit gap, including narrow screens. */
+body#portal-layout.public-page.online-catalog-page .online-course-actions {
+  display: flex; flex-wrap: wrap; gap: 12px; width: 100%;
+}
+body#portal-layout.public-page.online-catalog-page .online-course-actions .public-btn {
+  font-size: 14px !important; line-height: 1.4 !important;
+  white-space: normal !important; flex: 1 1 180px;
+}
+body#portal-layout.public-page.online-catalog-page .online-course-actions .handbook-download {
+  color: #145d52 !important; -webkit-text-fill-color: #145d52 !important;
+  background: #fff !important; border-color: #b5cfc8 !important; box-shadow: none !important;
+}
+body#portal-layout.public-page.online-catalog-page .online-course-actions .handbook-download:hover {
+  background: #e4f0ec !important;
 }

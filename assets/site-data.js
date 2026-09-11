@@ -19,9 +19,21 @@ window.portalSiteData = {
       "imageAlt": "Rozpoczęcie szkolenia z grywalizacji dla pracowników WUP Katowice",
       "imageAltEn": "Opening of the gamification training session for WUP Katowice employees",
       "gallery": [
-        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/cwiczenie-zespolowe.webp", "alt": "Uczestnicy podczas ćwiczenia zespołowego", "altEn": "Participants during a teamwork exercise" },
-        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/prezentacja.webp", "alt": "Prezentacja podczas szkolenia z grywalizacji", "altEn": "Presentation during the gamification training" },
-        { "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/bingo-szkoleniowe.webp", "alt": "Materiały wykorzystane podczas ćwiczenia szkoleniowego", "altEn": "Materials used during a training exercise" }
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/cwiczenie-zespolowe.webp",
+          "alt": "Uczestnicy podczas ćwiczenia zespołowego",
+          "altEn": "Participants during a teamwork exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/prezentacja.webp",
+          "alt": "Prezentacja podczas szkolenia z grywalizacji",
+          "altEn": "Presentation during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/bingo-szkoleniowe.webp",
+          "alt": "Materiały wykorzystane podczas ćwiczenia szkoleniowego",
+          "altEn": "Materials used during a training exercise"
+        }
       ],
       "published": true
     }
@@ -46,9 +58,10 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
       "id": "fake-news-2026-09-22",
@@ -56,7 +69,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Edukacja medialna, fake news i krytyczne myślenie",
       "shortTitle": "Edukacja medialna",
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "calendarColor": "#0e7490",
       "tone": "cyan",
       "time": "09:00 - 14:15",
@@ -69,10 +82,11 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -93,10 +107,11 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "komunikacja",
@@ -104,7 +119,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "2026-09-11",
+      "date": "2026-09-14",
       "calendarColor": "#1f6f54",
       "tone": "green",
       "time": "09:00 - 14:15",
@@ -141,10 +156,11 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja",
@@ -165,9 +181,10 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/rHQEKgebZtFokURo9",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja-2026-09-18",
@@ -191,7 +208,8 @@ window.portalSiteData = {
       "open": true,
       "link": "https://forms.gle/bYtFwViHgS6rBgUp8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": false
     },
     {
       "id": "ai-pup-zabrze-2026-10-21",
