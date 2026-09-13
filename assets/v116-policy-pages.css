@@ -1,0 +1,27 @@
+/* V116: privacy/cookie pages footer logo balance */
+body.policy-page .v67-footer{padding-top:34px!important;padding-bottom:24px!important}
+body.policy-page .v67-footer .v67-shell{max-width:1180px!important;margin-inline:auto!important;padding-inline:clamp(20px,4vw,54px)!important}
+body.policy-page .v67-footer-logos{display:grid!important;grid-template-columns:max-content 132px 172px 190px minmax(240px,1fr)!important;align-items:center!important;gap:clamp(18px,2.2vw,30px)!important;margin:0!important}
+body.policy-page .v67-footer-logos>strong{font-size:.82rem!important;line-height:1.2!important;white-space:nowrap!important}
+body.policy-page .v67-footer-logos img{width:auto!important;height:auto!important;max-height:42px!important;max-width:100%!important;object-fit:contain!important;object-position:left center!important;margin:0!important}
+body.policy-page .v67-footer-logos .v67-footer-project{width:132px!important;max-height:40px!important}
+body.policy-page .v67-footer-note{margin:0!important;max-width:38ch!important;font-size:.8rem!important;line-height:1.45!important}
+body.policy-page .v67-footer-bottom{margin-top:24px!important;padding-top:18px!important}
+body.policy-page .v67-footer-links{gap:12px 20px!important;font-size:.82rem!important}
+@media(max-width:900px){
+ body.policy-page .v67-footer-logos{grid-template-columns:110px minmax(150px,1fr) minmax(150px,1fr)!important;gap:18px 24px!important}
+ body.policy-page .v67-footer-logos>strong{grid-column:1/-1!important}
+ body.policy-page .v67-footer-logos .v67-footer-project{width:110px!important}
+ body.policy-page .v67-footer-logos img{max-height:38px!important}
+ body.policy-page .v67-footer-note{grid-column:1/-1!important;max-width:54ch!important}
+}
+@media(max-width:700px){
+ body.policy-page .v67-footer{padding-top:28px!important}
+ body.policy-page .v67-footer-logos{grid-template-columns:1fr 1fr!important;gap:18px 20px!important}
+ body.policy-page .v67-footer-logos>strong{grid-column:1/-1!important;font-size:.76rem!important}
+ body.policy-page .v67-footer-logos .v67-footer-project{width:96px!important;max-height:34px!important}
+ body.policy-page .v67-footer-logos img{max-height:34px!important;max-width:150px!important}
+ body.policy-page .v67-footer-note{grid-column:1/-1!important;font-size:.76rem!important}
+ body.policy-page .v67-footer-bottom{margin-top:18px!important;padding-top:14px!important}
+ body.policy-page .v67-footer-links{font-size:.76rem!important;gap:10px 16px!important}
+}

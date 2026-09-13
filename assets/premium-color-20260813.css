@@ -1,0 +1,688 @@
+/*
+  EDUKACJA BEZ GRANIC — SUBTELNA PALETA PREMIUM / V64
+  Warstwa kolorystyczna ładowana po stylach bazowych.
+  Nie zmienia struktury, treści ani kadrowania zdjęć.
+*/
+
+:root {
+  --premium-navy: #102b3a;
+  --premium-blue: #2f7395;
+  --premium-blue-deep: #245f7d;
+  --premium-teal: #1f7968;
+  --premium-teal-deep: #176152;
+  --premium-gold: #b98932;
+  --premium-blue-mist: #edf5f8;
+  --premium-sage-mist: #eef5f1;
+  --premium-sand-mist: #f7f1e5;
+  --premium-rose-mist: #f7efec;
+  --premium-paper: #f7f6f2;
+  --premium-line-blue: rgba(47, 115, 149, .22);
+  --premium-line-teal: rgba(31, 121, 104, .22);
+  --premium-line-gold: rgba(185, 137, 50, .24);
+  --premium-shadow: 0 20px 46px rgba(16, 43, 58, .09);
+}
+
+/* Kolor jako detal identyfikacyjny, nie dekoracja. */
+body.public-page .site-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0 8%,
+    var(--premium-blue) 25%,
+    var(--premium-teal) 52%,
+    var(--premium-gold) 76%,
+    transparent 92% 100%);
+  opacity: .78;
+}
+
+body.public-page .site-nav > a[aria-current="page"] {
+  box-shadow: inset 0 -2px 0 #d5aa57 !important;
+}
+
+body.public-page .site-nav > a.nav-signups,
+body.public-page.editorial-2026 .public-btn.primary,
+body.public-page.editorial-2026 .home-rd-btn-primary {
+  background: var(--premium-blue-deep) !important;
+  border-color: var(--premium-blue-deep) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(36, 95, 125, .16) !important;
+}
+
+body.public-page .site-nav > a.nav-signups:hover,
+body.public-page.editorial-2026 .public-btn.primary:hover,
+body.public-page.editorial-2026 .home-rd-btn-primary:hover {
+  background: var(--premium-teal-deep) !important;
+  border-color: var(--premium-teal-deep) !important;
+  box-shadow: 0 14px 30px rgba(23, 97, 82, .2) !important;
+}
+
+body.public-page.editorial-2026 .public-btn.light:hover,
+body.public-page.editorial-2026 .home-rd-btn-secondary:hover {
+  color: var(--premium-blue-deep) !important;
+  background: rgba(237, 245, 248, .86) !important;
+  border-color: var(--premium-blue) !important;
+}
+
+/* STRONA GŁÓWNA */
+body.public-page.home-rd.editorial-2026 .home-rd-hero {
+  background:
+    radial-gradient(circle at 6% 20%, rgba(47, 115, 149, .09), transparent 29%),
+    linear-gradient(100deg, rgba(237, 245, 248, .54) 0%, rgba(247, 246, 242, 0) 55%),
+    var(--paper) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-hero h1 {
+  color: var(--premium-navy) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-hero-visual > img {
+  box-shadow: 0 24px 56px rgba(16, 43, 58, .12) !important;
+  outline: 1px solid rgba(47, 115, 149, .12);
+  outline-offset: -1px;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-meta {
+  border-top: 1px solid var(--premium-line-blue) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-meta > div:nth-child(1) dt {
+  color: var(--premium-blue-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-meta > div:nth-child(2) dt {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-meta > div:nth-child(3) dt {
+  color: #8a651f !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-eu-origin {
+  background:
+    radial-gradient(circle at 94% 8%, rgba(185, 137, 50, .11), transparent 27%),
+    linear-gradient(125deg, var(--premium-blue-mist) 0%, var(--premium-sage-mist) 58%, #f7f5ee 100%) !important;
+  border-top: 1px solid var(--premium-line-blue) !important;
+  border-bottom: 1px solid var(--premium-line-teal) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-eu-origin-points article {
+  position: relative;
+  overflow: hidden;
+  padding: 28px !important;
+  background: rgba(255, 255, 255, .68) !important;
+  border: 1px solid rgba(255, 255, 255, .82) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 38px rgba(16, 43, 58, .055) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-eu-origin-points article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--premium-blue);
+}
+
+body.public-page.home-rd.editorial-2026 .home-eu-origin-points article:nth-child(2)::before {
+  background: var(--premium-teal);
+}
+
+body.public-page.home-rd.editorial-2026 .home-eu-origin-points article:nth-child(3)::before {
+  background: var(--premium-gold);
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-programs {
+  background: var(--premium-paper) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program {
+  --program-color: var(--premium-blue);
+  position: relative;
+  padding-left: clamp(28px, 3.1vw, 48px) !important;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--program-color) 7%, transparent), transparent 43%) !important;
+  border-top-color: color-mix(in srgb, var(--program-color) 30%, transparent) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--program-color);
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program.is-gold {
+  --program-color: var(--premium-gold);
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program.is-green {
+  --program-color: var(--premium-teal);
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program.is-blue {
+  --program-color: var(--premium-blue);
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-program .home-rd-number {
+  color: var(--program-color) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-project-note {
+  background: linear-gradient(110deg, rgba(237, 245, 248, .74), rgba(238, 245, 241, .66)) !important;
+  border-color: var(--premium-line-teal) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-project-facts {
+  background:
+    radial-gradient(circle at 92% 5%, rgba(47, 115, 149, .24), transparent 28%),
+    linear-gradient(145deg, #123444 0%, #102b3a 55%, #12372f 100%) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-impact-steps article strong {
+  color: #e0b865 !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-story-badge {
+  border-top: 3px solid var(--premium-teal) !important;
+  box-shadow: var(--premium-shadow) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-gallery {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(47, 115, 149, .08), transparent 27%),
+    var(--premium-blue-mist) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-prior-results-grid article {
+  background: rgba(255, 255, 255, .72) !important;
+  border-color: rgba(47, 115, 149, .18) !important;
+  box-shadow: 0 15px 34px rgba(16, 43, 58, .05) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-expanded-offer {
+  background:
+    radial-gradient(circle at 94% 6%, rgba(185, 137, 50, .09), transparent 25%),
+    var(--premium-sand-mist) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-topic-card {
+  --topic-color: var(--premium-blue);
+  background: rgba(255, 255, 255, .72) !important;
+  border-top: 3px solid var(--topic-color) !important;
+  box-shadow: 0 16px 34px rgba(16, 43, 58, .055) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-topic-card:nth-child(2),
+body.public-page.home-rd.editorial-2026 .home-one-topic-card:nth-child(5) {
+  --topic-color: var(--premium-teal);
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-topic-card:nth-child(3),
+body.public-page.home-rd.editorial-2026 .home-one-topic-card:nth-child(6) {
+  --topic-color: var(--premium-gold);
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-topic-card > div > span {
+  color: var(--topic-color) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience {
+  background: var(--premium-sage-mist) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article span,
+body.public-page.home-rd.editorial-2026 .home-one-values article span {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:nth-child(2) span,
+body.public-page.home-rd.editorial-2026 .home-one-values article:nth-child(2) span {
+  color: var(--premium-blue-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:nth-child(3) span,
+body.public-page.home-rd.editorial-2026 .home-one-values article:nth-child(3) span {
+  color: #8a651f !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-rd-final {
+  background:
+    radial-gradient(circle at 88% 20%, rgba(185, 137, 50, .18), transparent 28%),
+    linear-gradient(135deg, #215f71 0%, #176152 100%) !important;
+}
+
+/* NASZE SZKOLENIA */
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-hero-copy {
+  background:
+    radial-gradient(circle at 8% 14%, rgba(47, 115, 149, .1), transparent 31%),
+    linear-gradient(120deg, var(--premium-blue-mist), var(--premium-paper) 72%) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-overline,
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-heading > span,
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-heading div > span {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-proof-strip {
+  background: linear-gradient(110deg, #102b3a 0%, #123846 65%, #174638 100%) !important;
+  border-top: 2px solid rgba(224, 184, 101, .78) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-proof-strip article:nth-child(1) strong {
+  color: #e2bc70 !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-proof-strip article:nth-child(2) strong {
+  color: #8bc7b8 !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-proof-strip article:nth-child(3) strong {
+  color: #93bed3 !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-intro {
+  background: var(--premium-sand-mist) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-showcase-section:nth-of-type(4) {
+  background: var(--premium-sage-mist) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-audience-grid article b {
+  color: var(--premium-blue-deep) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-audience-grid article:nth-child(even) b {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-topics-section {
+  background:
+    radial-gradient(circle at 88% 8%, rgba(47, 115, 149, .2), transparent 26%),
+    linear-gradient(145deg, #123443, #102a38) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-topic-grid article span {
+  color: #dcb15d !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-topic-grid article:nth-child(3n + 2) span {
+  color: #7fc0af !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-topic-grid article:nth-child(3n) span {
+  color: #84b5cf !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-gallery-section {
+  background: var(--premium-blue-mist) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-feedback-section {
+  background: var(--premium-sand-mist) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-cta-section {
+  background: linear-gradient(135deg, #245f70 0%, #176152 100%) !important;
+}
+
+/* ZAPISY */
+body.public-page.editorial-2026 .signup-public-hero--split .public-hero-content {
+  background: linear-gradient(105deg, rgba(237, 245, 248, .94), rgba(247, 246, 242, .82)) !important;
+}
+
+body.public-page.editorial-2026 .signup-intro-section {
+  background: var(--premium-sand-mist) !important;
+}
+
+body.public-page.editorial-2026 .signup-training-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(var(--signup-accent-rgb), .055), rgba(255, 255, 255, .92) 36%) !important;
+  border-color: rgba(var(--signup-accent-rgb), .25) !important;
+  box-shadow: 0 16px 36px rgba(16, 43, 58, .06) !important;
+}
+
+body.public-page.editorial-2026 .signup-training-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--signup-accent);
+}
+
+body.public-page.editorial-2026 .signup-calendar-section {
+  background: var(--premium-blue-mist) !important;
+}
+
+body.public-page.editorial-2026 .calendar-shell,
+body.public-page.calendar-signup-page .calendar-shell {
+  border-color: var(--premium-line-blue) !important;
+  box-shadow: var(--premium-shadow) !important;
+}
+
+body.public-page.editorial-2026 .calendar-day.has-events,
+body.public-page.calendar-signup-page .calendar-day.has-events {
+  background: rgba(47, 115, 149, .08) !important;
+  border-color: rgba(47, 115, 149, .25) !important;
+}
+
+/* KURSY ONLINE */
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover:nth-child(1) {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(47, 115, 149, .1), transparent 27%),
+    var(--premium-blue-mist) !important;
+}
+
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover:nth-child(2) {
+  background: var(--premium-sage-mist) !important;
+}
+
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover:nth-child(3) {
+  background: var(--premium-sand-mist) !important;
+}
+
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover:nth-child(4) {
+  background: var(--premium-rose-mist) !important;
+}
+
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover {
+  border-top-color: rgba(16, 43, 58, .12) !important;
+}
+
+body.public-page.online-catalog-page.editorial-2026 .online-course-cover__image-link {
+  box-shadow: 0 22px 54px rgba(16, 43, 58, .12) !important;
+}
+
+/* KONTAKT */
+body.public-page.editorial-2026 .contact-hero h1 span {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.editorial-2026 .contact-grid .contact-panel:first-child {
+  background: linear-gradient(140deg, var(--premium-blue-mist), rgba(255, 255, 255, .94)) !important;
+  border-top: 3px solid var(--premium-blue) !important;
+}
+
+body.public-page.editorial-2026 .contact-grid .contact-panel:last-child {
+  background: linear-gradient(140deg, var(--premium-sage-mist), rgba(255, 255, 255, .94)) !important;
+  border-top: 3px solid var(--premium-teal) !important;
+}
+
+body.public-page.editorial-2026 .contact-line a {
+  color: var(--premium-blue-deep) !important;
+}
+
+body.public-page.editorial-2026 .public-step {
+  position: relative;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--step-accent) 7%, white), rgba(255, 255, 255, .75)) !important;
+  border-top: 3px solid var(--step-accent) !important;
+}
+
+body.public-page.editorial-2026 .public-step > span {
+  color: var(--step-accent) !important;
+}
+
+body.public-page.editorial-2026 .public-cta {
+  background: linear-gradient(135deg, #245f70, #176152) !important;
+}
+
+/* Spójne detale i stany interaktywne. */
+body.public-page.editorial-2026 :where(.home-eu-origin-points article, .home-one-topic-card, .signup-training-card, .contact-panel) {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.public-page.editorial-2026 :where(.home-eu-origin-points article, .home-one-topic-card, .signup-training-card, .contact-panel):hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 22px 48px rgba(16, 43, 58, .1) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.public-page.home-rd.editorial-2026 .home-rd-program {
+    padding-left: 24px !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 .home-eu-origin-points article {
+    padding: 24px !important;
+  }
+
+  body.public-page.online-catalog-page.editorial-2026 .online-course-cover__image-link {
+    box-shadow: 0 16px 36px rgba(16, 43, 58, .1) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body.public-page.home-rd.editorial-2026 .home-rd-hero {
+    background: linear-gradient(180deg, rgba(237, 245, 248, .68), var(--paper) 54%) !important;
+  }
+
+  body.public-page .site-header::after {
+    opacity: .58;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.public-page.editorial-2026 :where(.home-eu-origin-points article, .home-one-topic-card, .signup-training-card, .contact-panel) {
+    transition: none !important;
+  }
+}
+
+@supports not (background: color-mix(in srgb, red 10%, transparent)) {
+  body.public-page.home-rd.editorial-2026 .home-rd-program {
+    background: rgba(47, 115, 149, .035) !important;
+  }
+
+  body.public-page.editorial-2026 .public-step {
+    background: rgba(237, 245, 248, .72) !important;
+  }
+}
+
+/* ==========================================================
+   KOREKTA CZYTELNOŚCI I ODDECHU — 2026-08-13
+   Jasne pasma zachowują ciemną typografię, a kolor wchodzi
+   łagodnie i ma wyraźny margines względem pól z treścią.
+   ========================================================== */
+
+/* Łagodniejsze przejścia zamiast ostrego odcięcia koloru. */
+body.public-page.home-rd.editorial-2026 .home-eu-origin {
+  background:
+    radial-gradient(circle at 94% 18%, rgba(185, 137, 50, .1), transparent 28%),
+    linear-gradient(180deg,
+      var(--paper) 0,
+      var(--premium-blue-mist) 72px,
+      var(--premium-sage-mist) calc(100% - 72px),
+      var(--paper) 100%) !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-gallery {
+  background:
+    radial-gradient(circle at 10% 18%, rgba(47, 115, 149, .075), transparent 28%),
+    linear-gradient(180deg,
+      var(--paper) 0,
+      var(--premium-blue-mist) 72px,
+      var(--premium-blue-mist) calc(100% - 72px),
+      var(--paper) 100%) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-expanded-offer {
+  background:
+    radial-gradient(circle at 94% 14%, rgba(185, 137, 50, .075), transparent 27%),
+    linear-gradient(180deg,
+      var(--paper) 0,
+      var(--premium-sand-mist) 72px,
+      var(--premium-sand-mist) calc(100% - 72px),
+      var(--paper) 100%) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience {
+  color: var(--premium-navy) !important;
+  background:
+    radial-gradient(circle at 90% 14%, rgba(31, 121, 104, .07), transparent 28%),
+    linear-gradient(180deg,
+      var(--paper) 0,
+      var(--premium-sage-mist) 72px,
+      var(--premium-sage-mist) calc(100% - 72px),
+      var(--paper) 100%) !important;
+}
+
+/* Białe pola otrzymują wewnętrzny margines i spokojną ramę. */
+body.public-page.home-rd.editorial-2026 :is(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+  padding: clamp(30px, 3.4vw, 50px) !important;
+  margin-bottom: clamp(26px, 3vw, 40px) !important;
+  background: rgba(255, 255, 255, .84) !important;
+  border: 1px solid rgba(16, 43, 58, .09) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 42px rgba(16, 43, 58, .055) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-prior-results-grid {
+  gap: 18px !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-prior-results-grid article,
+body.public-page.home-rd.editorial-2026 .home-prior-results-grid article + article {
+  padding: clamp(28px, 3vw, 42px) !important;
+  background: rgba(255, 255, 255, .84) !important;
+  border: 1px solid rgba(47, 115, 149, .13) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 36px rgba(16, 43, 58, .045) !important;
+}
+
+/* Poprawny kontrast całej jasnej sekcji „Dla kogo”. */
+body.public-page.home-rd.editorial-2026 .home-one-audience .home-rd-section-heading {
+  border-color: rgba(31, 121, 104, .13) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience .home-rd-section-heading > div:first-child > span {
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience .home-rd-section-heading h2 {
+  color: var(--premium-navy) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience .home-rd-section-heading > p {
+  color: #526573 !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid {
+  gap: 18px !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article,
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:first-child,
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article + article,
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:last-child {
+  padding: clamp(28px, 3vw, 40px) !important;
+  color: var(--premium-navy) !important;
+  background: rgba(255, 255, 255, .78) !important;
+  border: 1px solid rgba(31, 121, 104, .12) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 34px rgba(16, 43, 58, .045) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article > span {
+  margin-bottom: 30px !important;
+  color: var(--premium-teal-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:nth-child(2) > span {
+  color: var(--premium-blue-deep) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:nth-child(3) > span {
+  color: #8a651f !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid h3 {
+  margin-top: 0 !important;
+  color: var(--premium-navy) !important;
+}
+
+body.public-page.home-rd.editorial-2026 .home-one-audience-grid p {
+  color: #526573 !important;
+}
+
+/* Zgrabniejszy rytm w numerowanych kaflach: mniej pustki,
+   ale bez ściskania treści i z zachowaniem lekkiego dołu. */
+body.public-page.training-showcase-page.editorial-2026 .training-audience-grid b {
+  margin-bottom: clamp(30px, 2.4vw, 40px) !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-audience-grid h3 {
+  margin: 0 0 12px !important;
+}
+
+body.public-page.training-showcase-page.editorial-2026 .training-audience-grid p {
+  margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+  body.public-page.home-rd.editorial-2026 :is(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+    padding: 28px !important;
+    border-radius: 16px !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 .home-prior-results-grid article,
+  body.public-page.home-rd.editorial-2026 .home-prior-results-grid article + article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:first-child,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article + article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:last-child {
+    padding: 26px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body.public-page.home-rd.editorial-2026 :is(.home-eu-origin, .home-one-gallery, .home-expanded-offer, .home-one-audience) {
+    background: linear-gradient(180deg,
+      var(--paper) 0,
+      var(--premium-blue-mist) 34px,
+      var(--premium-sage-mist) calc(100% - 34px),
+      var(--paper) 100%) !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 :is(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+    padding: 22px !important;
+    margin-bottom: 18px !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 .home-prior-results-grid,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid {
+    gap: 14px !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 .home-prior-results-grid article,
+  body.public-page.home-rd.editorial-2026 .home-prior-results-grid article + article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:first-child,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article + article,
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article:last-child {
+    padding: 22px !important;
+    border-radius: 16px !important;
+  }
+
+  body.public-page.home-rd.editorial-2026 .home-one-audience-grid article > span,
+  body.public-page.training-showcase-page.editorial-2026 .training-audience-grid b {
+    margin-bottom: 24px !important;
+  }
+}

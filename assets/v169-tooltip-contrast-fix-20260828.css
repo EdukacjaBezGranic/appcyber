@@ -1,0 +1,12 @@
+/* V169 - tooltip contrast hardening.
+   Some broad component typography rules target nested spans with !important.
+   Tooltip bubbles must retain their own dark-surface palette everywhere. */
+body.course-page.course-portal-aligned .course-term-tooltip__bubble,
+body.course-page.course-portal-aligned .course-term-tooltip__bubble *{
+  background:#17231e!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.course-page.course-portal-aligned .course-term-tooltip__bubble{
+  border:1px solid rgba(255,255,255,.16)!important;
+}

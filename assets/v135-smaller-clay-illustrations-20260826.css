@@ -1,0 +1,72 @@
+/* ==========================================================
+   2026-08-26 / V135 — Smaller 3D clay illustrations in course
+   Goal: make the online course feel lighter by slightly reducing
+   the most prominent 3D clay/editorial illustrations while keeping
+   text, exercises and regular evidence screenshots unchanged.
+   ========================================================== */
+
+/* Main module hero illustrations */
+body.course-page.course-portal-aligned .module-hero-visual{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:clamp(12px,1.5vw,22px)!important;
+  min-height:290px!important;
+}
+body.course-page.course-portal-aligned .module-hero-visual img[src*="assets/img/course-editorial/"]{
+  width:min(100%,88%)!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:320px!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+}
+
+/* Supplementary 3D clay / editorial illustrations inside the course */
+body.course-page.course-portal-aligned .course-supplementary-visual{
+  width:min(100%,920px)!important;
+}
+body.course-page.course-portal-aligned .course-supplementary-visual--wide{
+  width:min(100%,980px)!important;
+}
+body.course-page.course-portal-aligned .course-supplementary-visual img[src*="assets/img/course-supplementary/"]{
+  width:min(100%,90%)!important;
+  margin:0 auto!important;
+}
+
+/* Selected 3D clay style figures from later modules */
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/moduly-3-4/"],
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/moduly-4-5/"]{
+  width:min(100%,88%)!important;
+  margin:0 auto!important;
+}
+
+/* A few clay-like explainer visuals from module 1 */
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/m1-"],
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/infografika-model-redakcyjny-i-obieg-sieciowy.webp"],
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/infografika-trzy-role-ai-w-obiegu-informacji.webp"],
+body.course-page.course-portal-aligned .course-figure img[src*="assets/img/infografika-petla-personalizacji.webp"]{
+  width:min(100%,90%)!important;
+  margin:0 auto!important;
+}
+
+@media (max-width: 900px){
+  body.course-page.course-portal-aligned .module-hero-visual{
+    min-height:0!important;
+    padding:10px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero-visual img[src*="assets/img/course-editorial/"]{
+    width:min(100%,94%)!important;
+    max-height:none!important;
+  }
+  body.course-page.course-portal-aligned .course-supplementary-visual,
+  body.course-page.course-portal-aligned .course-supplementary-visual--wide{
+    width:100%!important;
+  }
+  body.course-page.course-portal-aligned .course-supplementary-visual img[src*="assets/img/course-supplementary/"],
+  body.course-page.course-portal-aligned .course-figure img[src*="assets/img/moduly-3-4/"],
+  body.course-page.course-portal-aligned .course-figure img[src*="assets/img/moduly-4-5/"],
+  body.course-page.course-portal-aligned .course-figure img[src*="assets/img/m1-"]{
+    width:min(100%,96%)!important;
+  }
+}

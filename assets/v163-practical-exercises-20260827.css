@@ -1,0 +1,148 @@
+/* V163 - practical exercise rebuild */
+.v163-scenario{
+  display:grid;
+  gap:1.2rem;
+  margin-top:1.25rem;
+}
+.v163-case-post{
+  display:grid;
+  gap:.45rem;
+  padding:1.15rem 1.25rem;
+  border:1px solid rgba(21,53,45,.16);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(21,53,45,.05);
+}
+.v163-case-post>span,
+.v163-disclaimer{
+  font-size:.82rem;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+  font-weight:800;
+  color:#49645d;
+}
+.v163-case-post>strong{font-size:1.08rem;line-height:1.45}
+.v163-case-post p{margin:0;max-width:100%}
+.v163-evidence-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.8rem;
+}
+.v163-evidence-grid article{
+  display:grid;
+  grid-template-columns:2.1rem minmax(0,1fr);
+  gap:.75rem;
+  align-items:start;
+  padding:1rem;
+  border:1px solid rgba(21,53,45,.12);
+  border-radius:16px;
+  background:rgba(247,244,232,.64);
+}
+.v163-evidence-grid article>span{
+  display:grid;
+  place-items:center;
+  min-width:2.1rem;
+  height:2.1rem;
+  border-radius:999px;
+  background:#173f35;
+  color:#fff;
+  font-weight:800;
+  font-size:.86rem;
+}
+.v163-evidence-grid article p{margin:.25rem 0 0;max-width:100%;font-size:.96rem;line-height:1.55}
+.v163-disclaimer{margin:.05rem 0 0;text-transform:none;letter-spacing:0;font-weight:650}
+.v163-question-list{display:grid;gap:.8rem}
+.v163-question-list fieldset{
+  min-width:0;
+  margin:0;
+  padding:1rem 1.05rem;
+  border:1px solid rgba(21,53,45,.13);
+  border-radius:16px;
+  background:#fff;
+}
+.v163-question-list fieldset.is-correct{
+  border-color:rgba(46,139,111,.45);
+  background:rgba(232,247,241,.66);
+}
+.v163-question-list fieldset.is-incorrect{
+  border-color:rgba(171,93,66,.38);
+  background:rgba(251,241,237,.65);
+}
+.v163-question-list legend{
+  width:100%;
+  padding:0 0 .55rem;
+  font-weight:800;
+  line-height:1.4;
+}
+.v163-question-list label{
+  display:flex;
+  align-items:flex-start;
+  gap:.7rem;
+  margin:.42rem 0;
+  padding:.72rem .8rem;
+  border:1px solid rgba(21,53,45,.10);
+  border-radius:13px;
+  cursor:pointer;
+  background:rgba(255,255,255,.78);
+  transition:border-color .16s ease,background .16s ease,transform .16s ease;
+}
+.v163-question-list label:hover{border-color:rgba(46,139,111,.42);background:rgba(235,247,241,.7)}
+.v163-question-list label:has(input:checked){border-color:#2f8d70;background:rgba(226,245,237,.86)}
+.v163-question-list input[type="radio"]{
+  flex:0 0 auto;
+  width:1.05rem !important;
+  height:1.05rem !important;
+  min-height:0 !important;
+  margin:.18rem 0 0 !important;
+  accent-color:#2f8d70;
+}
+.v163-question-list label span{line-height:1.45}
+.v163-question-feedback{
+  min-height:0;
+  margin:.7rem 0 0;
+  padding:.72rem .8rem;
+  border-radius:12px;
+  font-size:.94rem;
+  line-height:1.5;
+}
+.v163-question-feedback:empty{display:none}
+.is-correct .v163-question-feedback{background:rgba(216,241,231,.72)}
+.is-incorrect .v163-question-feedback{background:rgba(248,228,219,.72)}
+.v163-scenario-summary{
+  margin:.1rem 0 0;
+  padding:.9rem 1rem;
+  border-radius:14px;
+  font-weight:700;
+  line-height:1.5;
+}
+.v163-scenario-summary:empty{display:none}
+.v163-scenario-summary.is-success{background:rgba(216,241,231,.8);border:1px solid rgba(46,139,111,.3)}
+.v163-scenario-summary.is-partial{background:rgba(249,239,208,.76);border:1px solid rgba(179,139,36,.3)}
+.v163-after-tool{
+  border:1px solid rgba(21,53,45,.14);
+  border-radius:15px;
+  background:rgba(247,244,232,.52);
+  overflow:hidden;
+}
+.v163-after-tool summary{
+  cursor:pointer;
+  padding:.95rem 1rem;
+  font-weight:800;
+}
+.v163-after-tool>div{padding:0 1rem 1rem}
+.v163-after-tool ul{margin:.25rem 0 0;padding-left:1.25rem}
+.v163-after-tool li+li{margin-top:.45rem}
+.v163-fallback-case{
+  margin:.85rem 0 1rem;
+  padding:1rem 1.05rem;
+  border-left:4px solid #2f8d70;
+  border-radius:12px;
+  background:rgba(232,247,241,.68);
+}
+.v163-fallback-case p{margin:.42rem 0 0;max-width:100%}
+
+@media (max-width:760px){
+  .v163-evidence-grid{grid-template-columns:1fr}
+  .v163-question-list fieldset{padding:.9rem}
+  .v163-question-list label{padding:.7rem}
+}

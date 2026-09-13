@@ -1,0 +1,23 @@
+.exercise-review-actions{display:grid;gap:.65rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid #d7e1e6}
+.exercise-review-button{justify-self:start;border:0;border-radius:10px;background:#164f73;color:#fff;padding:.72rem 1rem;font:inherit;font-weight:800;cursor:pointer}
+.exercise-review-button:hover{background:#0e3f60}
+.exercise-review-button:focus-visible{outline:3px solid #f0b64d;outline-offset:3px}
+.exercise-review-summary{margin:0!important;padding:.72rem .8rem;border-radius:9px;background:#f2f6f8;color:#35566a;font-weight:700}
+.exercise-review-summary:empty{display:none}
+.exercise-review-summary.is-success{background:#e9f7ef;color:#205b46}
+.exercise-review-summary.is-warning{background:#fff5e8;color:#785616}
+.compact-field.exercise-feedback-correct,.compact-check.exercise-feedback-correct,.choice-card.exercise-feedback-correct{padding:.75rem;border:2px solid #75af96;border-radius:10px;background:#eef8f3}
+.compact-field.exercise-feedback-incorrect,.compact-check.exercise-feedback-incorrect,.choice-card.exercise-feedback-incorrect{padding:.75rem;border:2px solid #d38460;border-radius:10px;background:#fff1ea}
+.exercise-field-feedback{margin:.55rem 0 0!important;font-size:.9rem;line-height:1.45;font-weight:650}
+.exercise-feedback-correct .exercise-field-feedback{color:#205b46}
+.exercise-feedback-incorrect .exercise-field-feedback{color:#8b3f27}
+.exercise-checkbox-feedback{margin:.7rem 0 0!important;padding:.72rem .8rem;border-radius:9px;font-size:.9rem;line-height:1.5;font-weight:650}
+.exercise-checkbox-feedback.is-correct{background:#e9f7ef;color:#205b46}
+.exercise-checkbox-feedback.is-incorrect{background:#fff1ea;color:#8b3f27}
+.exercise-retry-choice{margin-top:.85rem;padding:1rem;border:1px solid #dfbd6a;border-radius:11px;background:#fff8e7;color:#684d18}
+.exercise-retry-choice[hidden]{display:none}
+.exercise-retry-choice strong{display:block}
+.exercise-retry-choice p{margin:.35rem 0 0!important}
+.exercise-retry-buttons{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:.75rem}
+.exercise-review-button.is-secondary{border:1px solid #164f73;background:#fff;color:#164f73}
+.exercise-field-feedback.is-revealed,.exercise-checkbox-feedback.is-revealed{color:#174f73;background:#eef6fa;font-weight:750}

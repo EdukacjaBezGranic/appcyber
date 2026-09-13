@@ -1,0 +1,122 @@
+/* V147 — Module 5 narrative flow and response/resilience applications */
+.course-page [data-module-number="5"] .m5-response-map,
+.course-page [data-module-number="5"] .m5-whole-course {
+  display:flex; align-items:stretch; gap:10px; flex-wrap:wrap; margin:24px 0;
+}
+.course-page [data-module-number="5"] .m5-response-map > div,
+.course-page [data-module-number="5"] .m5-whole-course > div {
+  flex:1 1 155px; min-width:0; background:#eef6f2; border:1px solid #cfe2db;
+  border-radius:16px; padding:16px; color:#17212b;
+}
+.course-page [data-module-number="5"] .m5-response-map > i,
+.course-page [data-module-number="5"] .m5-whole-course > i {
+  align-self:center; font-style:normal; font-weight:800; color:#3b8f73; font-size:22px;
+}
+.course-page [data-module-number="5"] .m5-response-map span,
+.course-page [data-module-number="5"] .m5-whole-course span {
+  display:inline-flex; align-items:center; justify-content:center; min-width:34px; height:28px;
+  padding:0 9px; border-radius:999px; background:#deeee8; color:#17212b; font-weight:800;
+  margin-bottom:9px; font-size:.78rem; letter-spacing:.03em;
+}
+.course-page [data-module-number="5"] .m5-response-map strong,
+.course-page [data-module-number="5"] .m5-whole-course strong {display:block; color:#17212b; margin-bottom:6px;}
+.course-page [data-module-number="5"] .m5-response-map p,
+.course-page [data-module-number="5"] .m5-whole-course p {margin:0; color:#44515d;}
+
+.course-page [data-module-number="5"] .m5-practice-route,
+.course-page [data-module-number="5"] .m5-institution-principles,
+.course-page [data-module-number="5"] .m5-quarantine-options,
+.course-page [data-module-number="5"] .m5-trust-grid,
+.course-page [data-module-number="5"] .m5-zus-actions {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:22px 0;
+}
+.course-page [data-module-number="5"] .m5-practice-route {grid-template-columns:repeat(5,minmax(0,1fr));}
+.course-page [data-module-number="5"] .m5-institution-principles {grid-template-columns:repeat(4,minmax(0,1fr));}
+.course-page [data-module-number="5"] .m5-practice-route > div,
+.course-page [data-module-number="5"] .m5-institution-principles > div,
+.course-page [data-module-number="5"] .m5-quarantine-options > div,
+.course-page [data-module-number="5"] .m5-trust-grid > div,
+.course-page [data-module-number="5"] .m5-zus-actions > div {
+  background:#f4f1e8; border:1px solid #e1d9c5; border-radius:15px; padding:16px; color:#17212b;
+}
+.course-page [data-module-number="5"] .m5-practice-route strong,
+.course-page [data-module-number="5"] .m5-institution-principles strong,
+.course-page [data-module-number="5"] .m5-quarantine-options strong,
+.course-page [data-module-number="5"] .m5-trust-grid strong,
+.course-page [data-module-number="5"] .m5-zus-actions strong {display:block; color:#17212b; margin-bottom:7px;}
+.course-page [data-module-number="5"] .m5-practice-route p,
+.course-page [data-module-number="5"] .m5-institution-principles p,
+.course-page [data-module-number="5"] .m5-quarantine-options p,
+.course-page [data-module-number="5"] .m5-trust-grid p,
+.course-page [data-module-number="5"] .m5-zus-actions p {margin:0; color:#44515d;}
+
+.course-page [data-module-number="5"] .m5-correction-logic,
+.course-page [data-module-number="5"] .m5-sms-flow {
+  display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; margin:24px 0;
+  padding:18px; background:#eef6f2; border:1px solid #cfe2db; border-radius:16px; color:#17212b;
+}
+.course-page [data-module-number="5"] .m5-correction-logic span,
+.course-page [data-module-number="5"] .m5-sms-flow span {
+  padding:9px 12px; background:#fff; border:1px solid #d6e3df; border-radius:999px; color:#17212b; font-weight:800;
+}
+.course-page [data-module-number="5"] .m5-correction-logic i,
+.course-page [data-module-number="5"] .m5-sms-flow i {font-style:normal; color:#3b8f73; font-weight:900;}
+
+.course-page [data-module-number="5"] .m5-three-step,
+.course-page [data-module-number="5"] .m5-five-steps {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:22px 0;
+}
+.course-page [data-module-number="5"] .m5-five-steps {grid-template-columns:repeat(5,minmax(0,1fr));}
+.course-page [data-module-number="5"] .m5-three-step > div,
+.course-page [data-module-number="5"] .m5-five-steps > div {
+  background:#eef6f2; border:1px solid #cfe2db; border-radius:15px; padding:16px; color:#17212b;
+}
+.course-page [data-module-number="5"] .m5-three-step span,
+.course-page [data-module-number="5"] .m5-five-steps span {
+  display:inline-flex; width:30px; height:30px; align-items:center; justify-content:center; border-radius:50%;
+  background:#3b8f73; color:#fff; font-weight:800; margin-bottom:10px;
+}
+.course-page [data-module-number="5"] .m5-three-step strong,
+.course-page [data-module-number="5"] .m5-five-steps strong {display:block; color:#17212b; margin-bottom:6px;}
+.course-page [data-module-number="5"] .m5-three-step p,
+.course-page [data-module-number="5"] .m5-five-steps p {margin:0; color:#44515d;}
+
+.course-page [data-module-number="5"] .m5-case-card {
+  margin:22px 0; padding:18px; border-radius:16px; background:#fff5f3; border:1px solid #eed4d1; color:#17212b;
+  display:grid; grid-template-columns:minmax(150px,.36fr) minmax(0,1fr); gap:10px 18px;
+}
+.course-page [data-module-number="5"] .m5-case-card span {font-size:.78rem; font-weight:900; letter-spacing:.04em; color:#b53f47;}
+.course-page [data-module-number="5"] .m5-case-card p {margin:0; color:#44515d;}
+
+.course-page [data-module-number="5"] .m5-final-model {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:24px 0;
+}
+.course-page [data-module-number="5"] .m5-final-model > div {
+  padding:20px; border-radius:18px; background:#eef6f2; border:1px solid #cfe2db; color:#17212b;
+}
+.course-page [data-module-number="5"] .m5-final-model span {
+  display:inline-block; padding:6px 10px; border-radius:999px; background:#17212b; color:#fff;
+  font-weight:900; letter-spacing:.045em; font-size:.8rem; margin-bottom:10px;
+}
+.course-page [data-module-number="5"] .m5-final-model p {margin:0; color:#44515d;}
+
+@media (max-width: 1050px){
+  .course-page [data-module-number="5"] .m5-practice-route,
+  .course-page [data-module-number="5"] .m5-five-steps {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .course-page [data-module-number="5"] .m5-institution-principles {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width: 760px){
+  .course-page [data-module-number="5"] .m5-response-map,
+  .course-page [data-module-number="5"] .m5-whole-course {display:grid; grid-template-columns:1fr; gap:10px;}
+  .course-page [data-module-number="5"] .m5-response-map > i,
+  .course-page [data-module-number="5"] .m5-whole-course > i {transform:rotate(90deg); justify-self:center;}
+  .course-page [data-module-number="5"] .m5-practice-route,
+  .course-page [data-module-number="5"] .m5-institution-principles,
+  .course-page [data-module-number="5"] .m5-quarantine-options,
+  .course-page [data-module-number="5"] .m5-trust-grid,
+  .course-page [data-module-number="5"] .m5-zus-actions,
+  .course-page [data-module-number="5"] .m5-three-step,
+  .course-page [data-module-number="5"] .m5-five-steps,
+  .course-page [data-module-number="5"] .m5-final-model {grid-template-columns:1fr;}
+  .course-page [data-module-number="5"] .m5-case-card {grid-template-columns:1fr;}
+}

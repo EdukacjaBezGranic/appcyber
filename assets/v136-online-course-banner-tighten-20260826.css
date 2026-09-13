@@ -1,0 +1,51 @@
+/* ==========================================================
+   2026-08-26 / V136 — Smaller online-course banner on the
+   "Kursy online" page and no gap below the navigation bar.
+   Keeps the dark navigation unchanged; only tightens the page
+   hero/banner area and makes the featured banner more compact.
+   ========================================================== */
+
+body.public-page.online-catalog-page .public-main.v68-online-main{
+  padding-top:0!important;
+}
+
+body.public-page.online-catalog-page .v68-online-featured{
+  margin-top:0!important;
+  gap:0!important;
+  align-items:start!important;
+}
+
+body.public-page.online-catalog-page .v68-online-featured-media{
+  margin-top:0!important;
+  padding-top:0!important;
+  align-self:start!important;
+}
+
+body.public-page.online-catalog-page .v68-online-featured-media img{
+  display:block!important;
+  width:min(100%,88%)!important;
+  height:auto!important;
+  margin:0 auto!important;
+}
+
+body.public-page.online-catalog-page .v68-online-featured-copy{
+  padding-top:20px!important;
+}
+
+@media (max-width: 1100px){
+  body.public-page.online-catalog-page .v68-online-featured-media img{
+    width:min(100%,92%)!important;
+  }
+}
+
+@media (max-width: 700px){
+  body.public-page.online-catalog-page .public-main.v68-online-main{
+    padding-top:0!important;
+  }
+  body.public-page.online-catalog-page .v68-online-featured-media img{
+    width:min(100%,96%)!important;
+  }
+  body.public-page.online-catalog-page .v68-online-featured-copy{
+    padding-top:16px!important;
+  }
+}

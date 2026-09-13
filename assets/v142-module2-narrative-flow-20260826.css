@@ -1,0 +1,15 @@
+/* V142 — Module 2 narrative flow. Light surfaces keep dark text by design. */
+body.course-page.course-portal-aligned .m2-narrative-bridge{margin:20px 0;padding:20px 22px;border:1px solid rgba(23,33,43,.12);border-radius:16px;color:#17212b}
+body.course-page.course-portal-aligned .m2-narrative-bridge strong{display:block;margin-bottom:7px;color:#17212b}
+body.course-page.course-portal-aligned .m2-narrative-bridge p{margin:7px 0;color:#3f4c58}
+body.course-page.course-portal-aligned .m2-narrative-bridge--mint{background:#deeee8}.m2-narrative-bridge--amber{background:#f5e6c9}.m2-narrative-bridge--coral{background:#f5dddd}
+body.course-page.course-portal-aligned .m2-signal-example{margin:22px 0;padding:24px;border:1px solid rgba(223,82,88,.22);border-radius:18px;background:#fff5f3;color:#17212b}
+body.course-page.course-portal-aligned .m2-signal-example>span,body.course-page.course-portal-aligned .m2-doomscrolling span{font-size:11px;font-weight:850;letter-spacing:.12em;color:#df5258}
+body.course-page.course-portal-aligned .m2-signal-example h3{margin:10px 0 12px;color:#17212b;font-size:clamp(20px,2.2vw,27px)}
+body.course-page.course-portal-aligned .m2-signal-example p{color:#3f4c58}.m2-check-sequence{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+body.course-page.course-portal-aligned .m2-check-sequence b{padding:12px 13px;border-radius:12px;background:#eee5c8;color:#17212b;font-size:13px;line-height:1.4}.m2-signal-rule{margin-top:14px!important;padding-top:14px;border-top:1px solid rgba(23,33,43,.12)}
+body.course-page.course-portal-aligned .m2-doomscrolling{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(230px,.55fr);gap:18px;margin:22px 0;padding:24px;border:1px solid rgba(59,143,115,.18);border-radius:18px;background:#eef6f2;color:#17212b}
+body.course-page.course-portal-aligned .m2-doomscrolling h3{margin:8px 0 10px;color:#17212b}.m2-doomscrolling p{color:#3f4c58}.m2-doomscrolling aside{align-self:stretch;padding:18px;border-radius:14px;background:#fff;color:#17212b}
+body.course-page.course-portal-aligned .m2-information-vacuum,body.course-page.course-portal-aligned .m2-source-question{margin:20px 0;padding:20px 22px;border-left:5px solid #3b8f73;background:#f4f1e8;color:#17212b}.m2-information-vacuum p,.m2-source-question p{color:#3f4c58}
+body.course-page.course-portal-aligned .m2-mantra{margin:18px 0;padding:16px 18px;border-radius:14px;background:#deeee8;color:#17212b}.m2-flow-summary{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0;padding:17px 18px;border-radius:16px;background:#eee5c8;color:#17212b}.m2-flow-summary span{padding:8px 10px;border-radius:10px;background:#fff;color:#17212b;font-weight:750}.m2-flow-summary b{color:#df5258}
+@media(max-width:800px){.m2-check-sequence{grid-template-columns:1fr!important}.m2-doomscrolling{grid-template-columns:1fr!important;padding:20px 18px!important}.m2-flow-summary{gap:6px}.m2-flow-summary span{font-size:13px}}

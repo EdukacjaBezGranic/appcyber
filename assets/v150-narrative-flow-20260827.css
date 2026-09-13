@@ -1,0 +1,38 @@
+
+/* V150 — editorial narrator and non-template transitions */
+.course-narrator-v150{
+  margin:0 0 1.65rem;
+  padding:1.05rem 0 1.05rem 1.35rem;
+  border-left:3px solid var(--module-accent,#1f6aa5);
+  max-width:78ch;
+}
+.course-narrator-v150 p{
+  margin:0;
+  font-size:clamp(1rem,.98rem + .16vw,1.12rem);
+  line-height:1.72;
+  color:#202a33;
+}
+.course-narrator-v150 p + p{margin-top:.78rem;}
+.course-guide-question--unlabelled{
+  padding-top:1rem;
+}
+.course-guide-question--unlabelled > p:first-child{
+  margin-top:0;
+  font-weight:650;
+}
+.course-guide-bridge--unlabelled{
+  margin-top:1.65rem;
+  padding:1rem 1.1rem 1rem 1.2rem;
+  border-left:2px solid color-mix(in srgb,var(--module-accent,#1f6aa5) 68%,transparent);
+  background:transparent;
+}
+.course-guide-bridge--unlabelled p{
+  margin:0;
+  color:#34414d;
+  line-height:1.65;
+}
+@media (max-width:760px){
+  .course-narrator-v150{margin-bottom:1.35rem;padding:.9rem 0 .9rem 1rem;max-width:none;}
+  .course-narrator-v150 p{font-size:1rem;line-height:1.66;}
+  .course-guide-bridge--unlabelled{padding:.85rem .4rem .85rem 1rem;}
+}

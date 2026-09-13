@@ -1,0 +1,101 @@
+/* V87: pełny baner kursu, a opis i przycisk w osobnym wierszu poniżej. */
+body.portal-v68 .v68-online-featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+body.portal-v68 .v68-online-featured-media {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+body.portal-v68 .v68-online-featured-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+}
+
+body.portal-v68 .v68-online-featured-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(28px, 5vw, 78px);
+  align-items: center;
+  padding: clamp(28px, 3.2vw, 48px) 0;
+  border-top: 1px solid var(--v68-line);
+  border-left: 0;
+}
+
+body.portal-v68 .v68-online-featured-copy p {
+  max-width: 76ch;
+  margin: 0;
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.65;
+}
+
+body.portal-v68 .v68-online-featured-copy .public-btn {
+  min-width: 250px;
+  justify-content: center;
+  white-space: nowrap;
+  animation: v87CourseCtaPulse 3.2s ease-in-out infinite;
+}
+
+body.portal-v68 .v68-online-featured-copy .public-btn:hover,
+body.portal-v68 .v68-online-featured-copy .public-btn:focus-visible {
+  animation-play-state: paused;
+}
+
+@keyframes v87CourseCtaPulse {
+  0%, 100% {
+    box-shadow: 0 10px 24px rgba(22, 135, 127, .16), 0 0 0 0 rgba(22, 135, 127, 0);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(22, 135, 127, .25), 0 0 0 7px rgba(22, 135, 127, .12);
+  }
+}
+
+body.portal-v68 .v87-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 760px) {
+  body.portal-v68 .v68-online-featured-copy {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 0 38px;
+  }
+
+  body.portal-v68 .v68-online-featured-copy .public-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.portal-v68 .v68-online-featured-copy .public-btn {
+    animation: none;
+  }
+}
+
+@media print {
+  body.portal-v68 .v68-online-featured-media img {
+    height: auto;
+    object-fit: contain;
+  }
+}

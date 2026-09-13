@@ -1,0 +1,43 @@
+/* V194 — naturalne przenoszenie polskich tekstów bez dzielenia wyrazów. */
+body#portal-layout.public-page main :where(
+  h1,h2,h3,h4,h5,h6,
+  p,li,blockquote,figcaption,dt,dd,
+  button,.public-btn,.signup-status,.calendar-event,.calendar-list-item
+){
+  -webkit-hyphens:none!important;
+  hyphens:none!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+}
+
+body#portal-layout.public-page main :where(p,li,blockquote,figcaption){
+  text-wrap:pretty;
+}
+
+body#portal-layout.public-page.home-rd .home-rd-hero--refined .home-rd-hero-copy>p{
+  width:100%!important;
+  max-width:70ch!important;
+  text-align:left!important;
+  text-align-last:auto!important;
+  text-justify:auto!important;
+  -webkit-hyphens:none!important;
+  hyphens:none!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+  text-wrap:pretty!important;
+}
+
+/* Długie adresy mogą łamać się awaryjnie, ale zwykły tekst pozostaje w całości. */
+body#portal-layout.public-page main a[href^="http"],
+body#portal-layout.public-page main a[href^="mailto:"]{
+  overflow-wrap:anywhere;
+}
+
+@media(max-width:700px){
+  body#portal-layout.public-page main :where(h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,dt,dd){
+    -webkit-hyphens:none!important;
+    hyphens:none!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+  }
+}

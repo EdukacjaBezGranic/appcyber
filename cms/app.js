@@ -221,7 +221,14 @@
   function selectedGroup() { return trainingGroups().find(group => group.key === state.selectedTraining) || trainingGroups()[0]; }
   function events() { return state.data.trainings.filter(item => item.date).sort((a, b) => String(a.date).localeCompare(String(b.date))); }
   function newsItems() { return [...(state.data.news || [])].sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))); }
-  function availablePages() { return PUBLIC_PAGES.filter(([path]) => state.zip?.file(pathInZip(path))); }
+  function availablePages() {
+    if (!state.zip) return [];
+    return Object.keys(state.zip.files).filter(name => !state.zip.files[name].dir && name.startsWith(state.root))
+      .map(name => name.slice(state.root.length))
+      .filter(path => /^[^/]+\.html$/i.test(path) && !/^(kurs(?:-|\.)|modul|module|lekcja|lesson)/i.test(path))
+      .map(path => [path, PUBLIC_PAGES.find(item => item[0] === path)?.[1] || path])
+      .sort((a, b) => a[1].localeCompare(b[1], 'pl'));
+  }
   function mediaFiles() {
     if (!state.zip) return [];
     return Object.keys(state.zip.files).filter(name => !state.zip.files[name].dir && name.startsWith(state.root) && /^(grafiki|videos|pliki|assets\/images)\//.test(name.slice(state.root.length))).map(name => name.slice(state.root.length)).sort();
@@ -442,13 +449,17 @@
     };
   }
 
+  function leaveTextEditor() {
+    if (!$('#blockState')?.textContent.includes('oczekują')) return true;
+    return confirm('Zmiany fragmentu nie zostały zapisane. Przejść dalej bez zapisu?');
+  }
   async function getPageDoc(path) {
     if (state.pageDocs.has(path)) return state.pageDocs.get(path);
     const html = await readText(path); const doc = new DOMParser().parseFromString(html, 'text/html'); state.pageDocs.set(path, doc); return doc;
   }
   function editableBlocks(doc) {
     const main = doc.querySelector('main') || doc.body;
-    return $$('h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption', main).filter(node => !node.closest('script,style,noscript,nav,footer') && stripHtml(node.innerHTML).length > 1);
+    return $$('h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,td,th,dt,dd,label,button,a,span', main).filter(node => !node.closest('script,style,noscript,nav,footer') && stripHtml(node.innerHTML).length > 1 && !node.parentElement.closest('h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,td,th,dt,dd,label,button,a,span'));
   }
   function selectedOption(value, expected) { return String(value || '') === String(expected) ? 'selected' : ''; }
   function checked(value) { return value ? 'checked' : ''; }
@@ -548,20 +559,21 @@
   async function renderPages() {
     const pages = availablePages(); if (!state.selectedPage && pages[0]) state.selectedPage = pages[0][0];
     els.workspace.innerHTML = `${pageHeading('Treści', 'Edycja stron', 'Kliknij fragment tekstu, aby zmienić go bez pracy w kodzie.')}
-      <div class="pages-layout"><aside class="page-list">${pages.map(([path, label]) => `<button data-page="${path}" class="${path === state.selectedPage ? 'is-active' : ''}">${icon('page')}<span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(path)}</small></span>${icon('arrow')}</button>`).join('')}</aside><section class="panel page-editor"><div class="loading"><span class="spinner"></span>Wczytywanie strony…</div></section><aside class="panel page-preview"><div class="preview-head"><span class="eyebrow">Podgląd strony</span><button class="icon-button" id="refreshPreview" title="Odśwież">${icon('refresh')}</button></div><iframe id="pageFrame" title="Podgląd strony"></iframe></aside></div>`;
-    $$('[data-page]', els.workspace).forEach(node => node.onclick = () => { state.selectedPage = node.dataset.page; state.selectedBlock = 0; renderPages(); });
+      <div class="pages-layout"><aside class="page-list">${pages.map(([path, label]) => `<button data-page="${path}" class="${path === state.selectedPage ? 'is-active' : ''}">${icon('page')}<span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(path)}</small></span>${icon('arrow')}</button>`).join('')}</aside><section class="panel page-editor"><div class="loading"><span class="spinner"></span>Wczytywanie strony…</div></section><aside class="panel page-preview"><div class="preview-head"><span class="eyebrow">Podgląd strony</span><button class="icon-button" id="refreshPreview" title="Odśwież">${icon('refresh')}</button></div><iframe sandbox="allow-same-origin" id="pageFrame" title="Podgląd strony"></iframe></aside></div>`;
+    $$('[data-page]', els.workspace).forEach(node => node.onclick = () => { if (!leaveTextEditor()) return; state.selectedPage = node.dataset.page; state.selectedBlock = 0; renderPages(); });
     if (!state.selectedPage) return;
     const doc = await getPageDoc(state.selectedPage), blocks = editableBlocks(doc); renderPageEditor(doc, blocks); updatePagePreview(doc);
+    $('#refreshPreview').onclick = () => updatePagePreview(doc, $('#richText'));
   }
   function renderPageEditor(doc, blocks) {
     const panel = $('.page-editor'); const selected = blocks[state.selectedBlock] || blocks[0];
     const format = selected ? blockFormat(selected) : null;
     panel.innerHTML = `<div class="editor-title"><div><span class="eyebrow">Fragmenty strony</span><h2>${escapeHtml(PUBLIC_PAGES.find(([path]) => path === state.selectedPage)?.[1] || state.selectedPage)}</h2></div><span class="status">${blocks.length} elementów</span></div><div class="block-list">${blocks.map((node, index) => `<button data-block="${index}" class="${index === state.selectedBlock ? 'is-active' : ''}"><span>${node.tagName}</span><strong>${escapeHtml(stripHtml(node.innerHTML).slice(0, 88))}</strong></button>`).join('')}</div>${selected ? `<div class="rich-editor"><div class="editor-toolbar" aria-label="Formatowanie zaznaczonego tekstu"><button type="button" data-command="bold" title="Pogrubienie"><strong>B</strong></button><button type="button" data-command="italic" title="Kursywa"><em>I</em></button><button type="button" data-command="underline" title="Podkreślenie">${icon('underline')}</button><span class="toolbar-divider"></span><button type="button" data-command="createLink" title="Dodaj link">${icon('link')}</button><button type="button" data-command="unlink" title="Usuń link">${icon('unlink')}</button></div><div id="richText" contenteditable="true" spellcheck="true" style="${escapeHtml(selected.getAttribute('style') || '')}"${selected.dataset.cmsWidth ? ` data-cms-width="${escapeHtml(selected.dataset.cmsWidth)}"` : ''}>${selected.innerHTML}</div>${formatPanelHtml(format)}<div class="form-actions form-actions--sticky"><span class="unsaved-note" id="blockState">Wybierz ustawienia i sprawdź podgląd</span><button class="button button--primary" id="saveBlock">${icon('check')} Zapisz fragment</button></div></div>` : '<p class="empty">Na tej stronie nie znaleziono prostych bloków tekstu.</p>'}`;
-    $$('[data-block]', panel).forEach(node => node.onclick = () => { state.selectedBlock = Number(node.dataset.block); renderPageEditor(doc, blocks); });
-    $$('[data-command]', panel).forEach(button => button.onclick = () => { const command = button.dataset.command; const value = command === 'createLink' ? prompt('Podaj adres linku:', 'https://') : null; if (command !== 'createLink' || value) document.execCommand(command, false, value); $('#richText').focus(); setTimeout(previewDraft, 0); });
+    $$('[data-block]', panel).forEach(node => node.onclick = () => { if (!leaveTextEditor()) return; state.selectedBlock = Number(node.dataset.block); renderPageEditor(doc, editableBlocks(doc)); });
     const richText = $('#richText');
     const previewDraft = () => { applyFormatFromControls(richText); $('#blockState').textContent = 'Zmiany oczekują na zapis'; updatePagePreview(doc, richText); };
     richText?.addEventListener('input', previewDraft);
+    if (richText) window.mountSelectionEditor(richText, panel.querySelector('.editor-toolbar'), previewDraft, toast);
     $$('.format-panel input,.format-panel select', panel).forEach(control => control.addEventListener('input', previewDraft));
     $$('[data-align]', panel).forEach(button => button.onclick = () => { $$('[data-align]', panel).forEach(item => item.classList.toggle('is-active', item === button)); previewDraft(); });
     const reset = $('#resetFormat'); if (reset) reset.onclick = () => {
@@ -594,7 +606,26 @@
     }
     protectShortWords(clone.body);
     let base = clone.querySelector('base'); if (!base) { base = clone.createElement('base'); clone.head.prepend(base); } base.href = '../';
-    const frame = $('#pageFrame'); if (frame) frame.srcdoc = '<!doctype html>\n' + clone.documentElement.outerHTML;
+    const frame = $('#pageFrame');
+    if (frame) frame.onload = () => {
+      const previewDoc = frame.contentDocument;
+      if (!previewDoc) return;
+      editableBlocks(previewDoc).forEach((block, index) => {
+        block.style.cursor = 'text';
+        block.title = 'Kliknij, aby edytować ten tekst w CMS';
+        block.addEventListener('click', event => {
+          event.preventDefault(); event.stopPropagation();
+          if (index === state.selectedBlock) { $('#richText')?.focus(); return; }
+          if ($('#blockState')?.textContent.includes('oczekują') && !confirm('Przejść do innego fragmentu bez zapisania bieżących zmian?')) return;
+          state.selectedBlock = index;
+          renderPageEditor(doc, editableBlocks(doc));
+          $('#richText')?.focus();
+        });
+      });
+      previewDoc.addEventListener('click', event => { if (event.target.closest('a')) event.preventDefault(); });
+      previewDoc.addEventListener('submit', event => event.preventDefault());
+    };
+    if (frame) frame.srcdoc = '<!doctype html>\n' + clone.documentElement.outerHTML;
   }
 
   function renderMedia() {
@@ -652,7 +683,7 @@
     return json;
   }
   async function exportProject() {
-    if (!state.zip) return; saveDraft(); setBusy('Tworzenie pełnej paczki ZIP');
+    if (!state.zip) return; if ($('#blockState')?.textContent.includes('oczekują')) $('#saveBlock')?.click(); saveDraft(); setBusy('Tworzenie pełnej paczki ZIP');
     try {
       serializeData();
       for (const path of state.changedPages) {
@@ -684,7 +715,7 @@
   ['dragenter', 'dragover'].forEach(type => els.dropZone.addEventListener(type, event => { event.preventDefault(); els.dropZone.classList.add('is-over'); }));
   ['dragleave', 'drop'].forEach(type => els.dropZone.addEventListener(type, event => { event.preventDefault(); els.dropZone.classList.remove('is-over'); }));
   els.dropZone.addEventListener('drop', event => { const file = [...event.dataTransfer.files].find(file => file.name.toLowerCase().endsWith('.zip')); if (file) importZip(file); else toast('Upuść plik projektu w formacie ZIP.', 'error'); });
-  document.addEventListener('keydown', event => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') { event.preventDefault(); saveDraft(); toast('Kopia robocza została zapisana.'); } });
+  document.addEventListener('keydown', event => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') { event.preventDefault(); if ($('#richText')) $('#saveBlock')?.click(); saveDraft(); toast('Kopia robocza została zapisana.'); } });
   window.addEventListener('message', event => { if (event.data?.type === 'ebg-cms-preview-ready') sendPreviewData(); });
   $$('[data-close-modal]').forEach(node => node.onclick = closeModal);
   window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });

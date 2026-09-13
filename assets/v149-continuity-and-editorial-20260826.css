@@ -1,0 +1,14 @@
+/* V149 — ciągłość rozumowania i redakcja sekwencyjna 1–5. */
+.v149-editorial-paragraph{margin:1rem 0;line-height:1.72;color:#263440}
+.v149-story{margin:1.25rem 0 1.45rem;padding:1.05rem 1.15rem;border-left:4px solid #3b8f73;background:#f4f1e8;color:#17212b;border-radius:0 14px 14px 0;line-height:1.7}
+.v149-story>strong:first-child{display:block;margin-bottom:.45rem;color:#17212b;font-size:1.04rem;line-height:1.35}
+.v149-subtransition{margin:1.35rem 0 1.45rem;padding:1rem 1.1rem;background:#eef6f2;border:1px solid #d7e8e1;border-radius:14px;color:#17212b;line-height:1.68}
+.v149-subtransition>strong:first-child{display:block;margin-bottom:.4rem;color:#17212b;font-size:1.03rem;line-height:1.35}
+.v149-subtransition p{margin:.35rem 0 0;color:#34414d;line-height:1.68}
+.v149-section-opening{margin-top:.2rem}
+.v149-after-exercise{padding-top:.35rem}
+.course-section-body .v149-story p:last-child,.course-section-body .v149-subtransition p:last-child{margin-bottom:0}
+@media(max-width:700px){
+  .v149-editorial-paragraph{line-height:1.66}
+  .v149-story,.v149-subtransition{margin:1rem 0 1.2rem;padding:.9rem .95rem;border-radius:12px}
+}

@@ -1,0 +1,52 @@
+/* V165 - kontrast danych projektu na mobile + rowne karty lekcji. */
+
+/* Mobilne dane projektu: jawny reset koloru oraz WebKit text fill.
+   Chroni przed dziedziczeniem starych reguł z ciemnego hero. */
+@media (max-width: 900px){
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile,
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dl,
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dl > div{
+    color:#171717 !important;
+    -webkit-text-fill-color:#171717 !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile summary{
+    color:#232323 !important;
+    -webkit-text-fill-color:#232323 !important;
+    opacity:1 !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dt{
+    color:#5d625e !important;
+    -webkit-text-fill-color:#5d625e !important;
+    opacity:1 !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dd{
+    color:#171717 !important;
+    -webkit-text-fill-color:#171717 !important;
+    opacity:1 !important;
+    font-weight:650 !important;
+    overflow-wrap:anywhere;
+  }
+}
+
+/* Lekcje 3A/3B, 4A/4B i 5A/5B/5C: wspolna geometria kart na szerokich ekranach. */
+@media (min-width: 901px){
+  body.course-page.course-portal-aligned .course-lesson-divider{
+    box-sizing:border-box;
+    min-height:226px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+  }
+  body.course-page.course-portal-aligned .course-lesson-divider > p:last-child{
+    margin-top:.8rem;
+  }
+}
+
+/* Na telefonie i tablecie pionowym nie wymuszamy pustej wysokosci. */
+@media (max-width: 900px){
+  body.course-page.course-portal-aligned .course-lesson-divider{
+    min-height:0 !important;
+    height:auto !important;
+  }
+}

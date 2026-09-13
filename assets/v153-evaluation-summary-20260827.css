@@ -1,0 +1,111 @@
+/* V153 — anonimowe podsumowanie kursu przed dyplomem */
+.course-evaluation-v153{
+  margin:2rem 0 1.5rem;
+  padding:clamp(1.25rem,2.4vw,2rem);
+  border:1px solid #d8dfd9;
+  border-radius:22px;
+  background:#f4f1e8;
+  color:#17212b;
+  box-shadow:0 16px 40px rgba(23,33,43,.07);
+}
+.course-evaluation-v153__head{max-width:800px}
+.course-evaluation-v153__eyebrow{
+  margin:0 0 .55rem;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:#2f7866;
+}
+.course-evaluation-v153 h2{
+  margin:0 0 .8rem;
+  max-width:19ch;
+  color:#17212b;
+  font-size:clamp(1.7rem,3vw,2.55rem);
+  line-height:1.08;
+  letter-spacing:-.025em;
+}
+.course-evaluation-v153__lead{
+  margin:0;
+  max-width:72ch;
+  color:#34414d;
+  font-size:1.04rem;
+  line-height:1.72;
+}
+.course-evaluation-v153__facts{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.8rem;
+  margin:1.35rem 0;
+}
+.course-evaluation-v153__fact{
+  min-width:0;
+  padding:.95rem 1rem;
+  border:1px solid #d7e5df;
+  border-radius:14px;
+  background:#fff;
+}
+.course-evaluation-v153__fact strong{
+  display:block;
+  margin-bottom:.25rem;
+  color:#17212b;
+  font-size:.95rem;
+}
+.course-evaluation-v153__fact span{
+  display:block;
+  color:#46545f;
+  font-size:.9rem;
+  line-height:1.5;
+}
+.course-evaluation-v153__copy{
+  max-width:72ch;
+  margin:0 0 1.1rem;
+  color:#34414d;
+  line-height:1.7;
+}
+.course-evaluation-v153__action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:.78rem 1.1rem;
+  border:0;
+  border-radius:12px;
+  background:#17212b;
+  color:#fff;
+  font:inherit;
+  font-weight:800;
+  cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;
+}
+.course-evaluation-v153__action:not(:disabled):hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(23,33,43,.18);
+}
+.course-evaluation-v153__action:disabled{
+  cursor:not-allowed;
+  opacity:.55;
+}
+.course-evaluation-v153__status{
+  margin:.75rem 0 0;
+  color:#56636d;
+  font-size:.88rem;
+  line-height:1.55;
+}
+.course-evaluation-v153__note{
+  margin:1rem 0 0;
+  padding-top:.9rem;
+  border-top:1px solid #d8dfd9;
+  color:#4c5963;
+  font-size:.86rem;
+  line-height:1.55;
+}
+.course-evaluation-v153 + .course-finalization{margin-top:1.25rem}
+@media(max-width:820px){
+  .course-evaluation-v153__facts{grid-template-columns:1fr}
+  .course-evaluation-v153 h2{max-width:none}
+}
+@media(max-width:520px){
+  .course-evaluation-v153{margin:1.25rem 0;padding:1.05rem;border-radius:16px}
+  .course-evaluation-v153__action{width:100%}
+}

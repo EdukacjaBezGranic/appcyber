@@ -37,3 +37,13 @@
 
 /* News editor */
 .inline-picker{width:max-content;margin-top:8px}.translation-fields{border:1px solid var(--line);border-radius:8px;background:#f8faf9}.translation-fields summary{padding:13px 15px;color:var(--teal);font-weight:850;cursor:pointer}.translation-fields[open] summary{border-bottom:1px solid var(--line)}.translation-fields>.form-stack{margin:0;padding:15px}.news-preview .preview-content h3{font-size:24px}.news-preview .preview-media{background:#dce9e5}
+
+/* Selected-text tools; separate from whole-block controls. */
+.editor-toolbar {flex-wrap:wrap;gap:8px!important;position:sticky;top:0;z-index:2;background:#fff;}
+.selection-controls {display:flex;flex-wrap:wrap;gap:10px;width:100%;padding-top:10px;border-top:1px solid #e0e8e4;}
+.selection-controls label {display:flex;flex-direction:column;gap:5px;font-size:12px;color:#46635d;flex:1 1 130px;}
+.selection-controls select {width:100%;min-height:38px;padding:6px;border:1px solid #ccd9d3;border-radius:7px;background:white;}
+.selection-controls input[type=color] {width:64px;height:38px;border:1px solid #ccd9d3;background:white;border-radius:7px;}
+.selection-controls button {width:auto!important;height:auto!important;padding:8px 12px!important;font-size:12px;}
+.selection-help {font-size:13px;line-height:1.5;color:#52645c;margin:12px 0;}
+#richText:focus {outline:2px solid #16877f;outline-offset:3px;}
