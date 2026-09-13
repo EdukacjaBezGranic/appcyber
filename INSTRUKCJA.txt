@@ -1,0 +1,7 @@
+AKTUALIZACJA AKTUALNOŚCI - 19 CZERWCA 2026
+
+Skopiuj foldery assets, data i grafiki z tej paczki do głównego folderu aktualnego portalu. Scal foldery i zastąp pliki site-data.js oraz site-data.json.
+
+Paczka dodaje wpis PL/EN oraz trzy zdjęcia. Zachowuje relację ze szkolenia z 10 września. Nowy wpis pojawi się pod nią w sekcji Więcej aktualności. Nie zawiera plików układu stron ani CMS.
+
+Dane szkoleń pochodzą z ostatniej odzyskanej paczki V202-uklad-poprawiony. Jeśli od tamtej pory samodzielnie zmieniałeś terminy lub wpisy w CMS, nie zastępuj plików danych - najpierw połącz aktualizację z nowszym projektem.

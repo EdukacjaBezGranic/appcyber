@@ -36,6 +36,34 @@ window.portalSiteData = {
         }
       ],
       "published": true
+    },
+    {
+      "id": "prezentacja-projektu-partnerom-2026-06-19",
+      "date": "2026-06-19",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "„Edukacja bez granic” - prezentujemy nowe szkolenia partnerom",
+      "titleEn": "Education Without Borders - introducing new training programmes to our partners",
+      "lead": "Od czerwca informujemy partnerów Wojewódzkiego Urzędu Pracy w Katowicach o projekcie „Edukacja bez granic”, jego rezultatach i przygotowywanej ofercie szkoleniowej.",
+      "leadEn": "Since June, we have been introducing partners of the Voivodeship Labour Office in Katowice to the Education Without Borders project, its results and the training programmes being developed.",
+      "body": "Jedną z okazji było spotkanie 19 czerwca, poświęcone upowszechnianiu rezultatów innego projektu. Część wydarzenia przeznaczyliśmy na prezentację „Edukacji bez granic” oraz nowych tematów szkoleń: edukacji medialnej i krytycznego myślenia, wystąpień publicznych i storytellingu oraz grywalizacji i uczenia przez działanie.\n\nPokazaliśmy, jak doświadczenia zdobyte podczas zagranicznych mobilności wykorzystujemy do przygotowania zajęć dla kolejnych odbiorców. Zaprezentowaliśmy również portal projektu, na którym udostępniamy informacje o szkoleniach i rozwijamy materiały edukacyjne.\n\nW ten sposób rozpoczęliśmy promocję nowych szkoleń wśród instytucji współpracujących z WUP Katowice, jeszcze przed uruchomieniem pierwszych zajęć.",
+      "bodyEn": "One such opportunity was a meeting on 19 June dedicated to sharing the results of another project. Part of the event was devoted to presenting Education Without Borders and the new training topics: media literacy and critical thinking, public speaking and storytelling, and gamification and learning through action.\n\nWe showed how we are using experience gained during international mobility activities to develop sessions for further groups of learners. We also presented the project website, where we share training information and develop educational materials.\n\nThis marked the start of promoting the new training programmes among institutions working with WUP Katowice, ahead of the first sessions.",
+      "image": "grafiki/aktualnosci/2026-06-19-partnerzy/prezentacja-projektu.jpg",
+      "imageAlt": "Prezentacja projektu „Edukacja bez granic” podczas spotkania 19 czerwca 2026 r.",
+      "imageAltEn": "Presentation of Education Without Borders at the meeting on 19 June 2026",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/oferta-szkolen.jpg",
+          "alt": "Prezentacja nowych tematów szkoleń na portalu projektu",
+          "altEn": "Presenting the new training topics on the project website"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.jpg",
+          "alt": "Uczestnicy spotkania upowszechniającego rezultaty projektów",
+          "altEn": "Participants at the meeting sharing project results"
+        }
+      ]
     }
   ],
   "trainings": [
@@ -58,10 +86,9 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
-      "button": "Sprawdź terminarz",
-      "registrationClosed": true
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "fake-news-2026-09-22",
@@ -69,7 +96,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Edukacja medialna, fake news i krytyczne myślenie",
       "shortTitle": "Edukacja medialna",
-      "date": "2026-09-23",
+      "date": "2026-09-22",
       "calendarColor": "#0e7490",
       "tone": "cyan",
       "time": "09:00 - 14:15",
@@ -82,11 +109,10 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -107,11 +133,10 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "komunikacja",
@@ -119,7 +144,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "2026-09-14",
+      "date": "2026-09-11",
       "calendarColor": "#1f6f54",
       "tone": "green",
       "time": "09:00 - 14:15",
@@ -156,11 +181,10 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": true
+      "calendarOnly": true
     },
     {
       "id": "grywalizacja",
@@ -181,10 +205,9 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": false,
+      "open": true,
       "link": "https://forms.gle/rHQEKgebZtFokURo9",
-      "button": "Sprawdź terminarz",
-      "registrationClosed": true
+      "button": "Sprawdź terminarz"
     },
     {
       "id": "grywalizacja-2026-09-18",
@@ -208,8 +231,7 @@ window.portalSiteData = {
       "open": true,
       "link": "https://forms.gle/bYtFwViHgS6rBgUp8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true,
-      "registrationClosed": false
+      "calendarOnly": true
     },
     {
       "id": "ai-pup-zabrze-2026-10-21",
