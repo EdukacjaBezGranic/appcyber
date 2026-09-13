@@ -1,3 +1,8 @@
+
+Nowości w R8.35:
+- na stronie „Kursy online” dodano przycisk „Pobierz komiks (PDF)” obok przycisku podręcznika;
+- dodano komiks „Leon i Pixel kontra Bulwator - Zanim udostępnisz” jako plik PDF do pobrania;
+- przycisk komiksu korzysta z tego samego stylu co przycisk podręcznika i zachowuje responsywność na urządzeniach mobilnych.
 R8.33 - aktualizacja terminów i statusów zapisów
 
 Nowości w R8.33:
