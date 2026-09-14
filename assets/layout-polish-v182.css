@@ -1,0 +1,137 @@
+/* V182: shared rhythm and responsive geometry for the public portal.
+   Loaded after the historical theme files; game and exercise content is untouched. */
+:root{--ui-shell:1280px;--ui-gutter:clamp(20px,4vw,56px);--ui-section:clamp(48px,6vw,80px);--ui-gap:clamp(24px,3vw,44px);--ui-ink:#192b2b;--ui-muted:#485b59;--ui-teal:#11685f;--ui-soft:#f1f6f4;--ui-line:#d7e2df;--ui-coral:#bc3948}
+html{scroll-padding-top:96px}
+body#portal-layout.public-page{color:var(--ui-ink);background:#fff}
+body#portal-layout.public-page main{font-weight:400!important}
+body#portal-layout.public-page main :is(p,li,dd){text-align:left!important;line-height:1.7!important;letter-spacing:normal!important;word-spacing:normal!important}
+body#portal-layout.public-page main :is(h1,h2,h3){height:auto!important;word-break:normal!important;overflow-wrap:break-word!important;text-wrap:pretty;letter-spacing:-.025em!important}
+body#portal-layout.public-page main h1{font-size:clamp(2.5rem,4.7vw,4.5rem)!important;line-height:1.08!important}
+body#portal-layout.public-page main h2{font-size:clamp(1.8rem,3.1vw,2.8rem)!important;line-height:1.16!important}
+body#portal-layout.public-page main h3{font-size:clamp(1.22rem,1.8vw,1.65rem)!important;line-height:1.28!important}
+body#portal-layout.public-page main :is(h1,h2,h3) strong,body#portal-layout.public-page.home-rd .home-hero-title-accent{color:var(--ui-coral)!important}
+body#portal-layout.public-page main p{font-size:1rem}
+body#portal-layout.public-page :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #087a75!important;outline-offset:4px!important}
+body#portal-layout.public-page .site-header-v125 .site-nav a{font-size:.875rem!important;letter-spacing:0!important;min-height:44px}
+body#portal-layout.public-page .site-header-v125 .site-nav a::after{display:none!important}
+body#portal-layout.public-page .site-header-v125 .site-nav a[aria-current="page"]{background:#263635!important;border-radius:7px;color:#fff!important}
+body#portal-layout.public-page :is(.home-rd-hero-actions,.training-showcase-actions,.public-hero-actions){display:flex;flex-wrap:wrap;gap:12px!important;margin-top:24px!important}
+body#portal-layout.public-page :is(.home-rd-hero-actions,.training-showcase-actions,.public-hero-actions) a{min-height:48px;padding:14px 20px!important;line-height:1.3!important;border-radius:10px!important;font-size:.9375rem!important;text-align:center!important}
+body#portal-layout.public-page :is(.home-rd-hero-actions,.training-showcase-actions,.public-hero-actions) a:first-child{background:var(--ui-teal)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid var(--ui-teal)!important}
+body#portal-layout.public-page :is(.home-rd-hero-actions,.training-showcase-actions,.public-hero-actions) a:nth-child(2){background:#e8f2ef!important;color:#154c45!important;-webkit-text-fill-color:#154c45!important;border:1px solid #c2d8d2!important}
+
+/* A single alignment axis; full-width color bands keep that same inner gutter. */
+body#portal-layout.public-page.home-rd .home-rd-main{width:100%!important;margin:0!important;padding:0!important}
+body#portal-layout.public-page.home-rd :is(.home-rd-hero,.home-eu-origin,.home-rd-programs,.home-rd-project-facts,.home-rd-story,.home-one-section){width:100%!important;max-width:none!important;margin:0!important;padding:var(--ui-section) max(var(--ui-gutter),calc((100% - var(--ui-shell))/2))!important;border-radius:0!important}
+body#portal-layout.public-page.home-rd .home-rd-hero{display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)!important;gap:32px var(--ui-gap)!important;align-items:start!important;padding-top:48px!important;padding-bottom:48px!important;min-height:0!important;background:#fff!important}
+body#portal-layout.public-page.home-rd .home-rd-hero-copy{padding:0!important;margin:0!important;max-width:none!important;align-self:start!important}
+body#portal-layout.public-page.home-rd .home-rd-hero-copy h1{margin:20px 0 24px!important}
+body#portal-layout.public-page.home-rd .home-rd-hero-copy>p{max-width:64ch!important;margin:0!important;font-size:1.0625rem!important}
+body#portal-layout.public-page.home-rd .home-rd-hero-visual{height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;align-self:start!important}
+body#portal-layout.public-page.home-rd .home-rd-hero-visual img{width:100%!important;height:clamp(390px,42vw,550px)!important;min-height:0!important;max-height:none!important;object-fit:cover!important;border-radius:16px!important}
+body#portal-layout.public-page.home-rd :is(.home-eu-origin,.home-one-work){background:var(--ui-soft)!important;color:var(--ui-ink)!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)!important;gap:24px var(--ui-gap)!important;align-items:start!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy h2{grid-column:1!important;grid-row:1!important;max-width:19ch!important;margin:0!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy .home-eu-origin-logo{grid-column:1!important;grid-row:2!important;width:140px!important;max-height:100px!important;object-fit:contain!important;object-position:left!important;margin:0!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy>p{grid-column:2!important;grid-row:1 / span 2!important;margin:0!important;max-width:65ch!important;color:var(--ui-muted)!important}
+body#portal-layout.public-page.home-rd :is(.home-rd-section-heading,.home-rd-project-facts .home-rd-section-heading){display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;gap:var(--ui-gap)!important;align-items:start!important;margin:0 0 36px!important}
+body#portal-layout.public-page.home-rd .home-rd-section-heading :is(h2,p){margin-bottom:0!important}
+body#portal-layout.public-page.home-rd .home-rd-section-heading h2{margin-top:12px!important;max-width:24ch!important}
+body#portal-layout.public-page.home-rd .home-rd-section-heading>p{margin-top:0!important;max-width:62ch!important;color:var(--ui-muted)!important}
+body#portal-layout.public-page.home-rd .home-rd-program-grid{gap:0!important}
+body#portal-layout.public-page.home-rd .home-one-offer .home-rd-program{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;gap:24px var(--ui-gap)!important;padding:36px 0!important;align-items:start!important}
+body#portal-layout.public-page.home-rd .home-rd-program :is(h3,p){margin-top:0!important}
+body#portal-layout.public-page.home-rd .home-rd-program p{margin-bottom:16px!important;max-width:68ch!important}
+body#portal-layout.public-page.home-rd .home-rd-program video{width:100%!important;max-height:none!important;aspect-ratio:16/9!important;object-fit:contain!important;border-radius:12px!important;background:#172b28}
+body#portal-layout.public-page.home-rd .home-rd-program-outcome{padding:18px 22px!important;margin:0!important;background:var(--ui-soft)!important;border-radius:10px!important}
+body#portal-layout.public-page.home-rd .home-rd-project-facts{background:#edf4f2!important}
+body#portal-layout.public-page.home-rd .home-project-funding-side{gap:20px!important}
+body#portal-layout.public-page.home-rd .home-rd-story{gap:var(--ui-gap)!important;align-items:center!important}
+body#portal-layout.public-page.home-rd .home-rd-story-media{margin:0!important;min-width:0!important}
+body#portal-layout.public-page.home-rd .home-rd-story-media img{width:100%!important;height:auto!important;max-height:480px!important;object-fit:cover!important;border-radius:16px!important}
+body#portal-layout.public-page.home-rd .home-rd-final{width:calc(100% - 2*var(--ui-gutter))!important;max-width:var(--ui-shell)!important;margin:48px auto!important;padding:clamp(24px,4vw,48px)!important;gap:32px!important;background:#eaf3f0!important;border:1px solid var(--ui-line)!important;border-radius:16px!important;align-items:center!important}
+body#portal-layout.public-page.home-rd .home-rd-final h2{max-width:24ch!important;margin:12px 0 18px!important}
+body#portal-layout.public-page.home-rd .home-rd-final p{margin:0!important;max-width:70ch!important;color:var(--ui-muted)!important}
+body#portal-layout.public-page.home-rd .home-rd-final>a{background:var(--ui-teal)!important;color:#fff!important;border-radius:10px!important;padding:16px 22px!important;min-height:48px!important;white-space:normal!important}
+body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.home-eu-origin-grid,.public-step-grid,.contact-grid){gap:24px!important}
+body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.public-step-grid,.contact-grid)>article{padding:clamp(20px,2.4vw,32px)!important;min-width:0!important}
+body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.public-step-grid,.contact-grid)>article :is(h3,strong){margin-bottom:12px!important}
+body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.public-step-grid,.contact-grid)>article p:last-child{margin-bottom:0!important}
+body#portal-layout.public-page .training-photo-gallery{gap:18px!important}
+body#portal-layout.public-page .gallery-photo{border-radius:12px!important;overflow:hidden}
+
+/* Inner pages: balanced opening, readable text measure, aligned cards. */
+body#portal-layout.public-page :is(.training-showcase-hero,.signup-public-hero,.contact-hero){width:100%!important;max-width:none!important;margin:0!important;padding:48px max(var(--ui-gutter),calc((100% - var(--ui-shell))/2))!important;gap:var(--ui-gap)!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;align-items:start!important;min-height:0!important}
+body#portal-layout.public-page :is(.training-showcase-hero,.signup-public-hero,.contact-hero) :is(h1,p){max-width:none!important}
+body#portal-layout.public-page .training-showcase-copy h1{font-size:clamp(2.35rem,4.2vw,3.8rem)!important;max-width:18ch!important;margin:20px 0 24px!important}
+body#portal-layout.public-page :is(.training-showcase-hero-media,.signup-public-hero-media,.contact-hero-map){margin:0!important;min-height:0!important;height:auto!important;align-self:start!important}
+body#portal-layout.public-page :is(.training-showcase-hero-media,.signup-public-hero-media) img{width:100%!important;height:clamp(340px,40vw,530px)!important;object-fit:cover!important;border-radius:16px!important;min-height:0!important;max-height:none!important}
+body#portal-layout.public-page .contact-hero-map img{width:100%!important;height:auto!important;max-height:460px!important;object-fit:contain!important;border-radius:12px!important}
+body#portal-layout.public-page :is(.public-section,.training-showcase-section,.training-topics-section,.training-gallery-section,.training-feedback-section){width:100%!important;max-width:none!important;margin:0!important;padding:var(--ui-section) max(var(--ui-gutter),calc((100% - var(--ui-shell))/2))!important}
+body#portal-layout.public-page .signup-calendar-section{padding-top:32px!important}
+body#portal-layout.public-page .public-section-head{gap:28px!important;margin-bottom:32px!important;align-items:start!important}
+body#portal-layout.public-page .public-section-head :is(h2,p){margin-top:0!important}
+body#portal-layout.public-page .signup-public-hero h1 span{display:block!important;font-size:clamp(1.2rem,2vw,1.6rem)!important;line-height:1.4!important;letter-spacing:-.01em!important;margin-top:20px!important;max-width:32ch!important}
+body#portal-layout.public-page .calendar-layout{gap:24px!important;align-items:start!important}
+body#portal-layout.public-page :is(.calendar-board,.calendar-details){padding:24px!important;border-radius:14px!important;border:1px solid var(--ui-line)!important}
+body#portal-layout.public-page :is(.calendar-toolbar,.calendar-view-switch,.calendar-filter-row){gap:12px!important;flex-wrap:wrap!important}
+body#portal-layout.public-page .calendar-details :is(p,li){font-size:1rem!important}
+body#portal-layout.public-page .calendar-details h3{line-height:1.3!important}
+body#portal-layout.public-page .contact-panel{border-radius:14px!important}
+body#portal-layout.public-page .contact-panel[style*="background-color"]{background:var(--ui-teal)!important;color:#fff!important}
+body#portal-layout.public-page .contact-panel[style*="background-color"] :is(h2,h3,p,a,li,strong){color:#fff!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured{gap:var(--ui-gap)!important;padding:48px max(var(--ui-gutter),calc((100% - var(--ui-shell))/2))!important;margin:0!important;align-items:center!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-media{margin:0!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-media img{width:100%!important;height:auto!important;border-radius:14px!important;object-fit:contain!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy{padding:0!important;min-width:0!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-list{padding:40px max(var(--ui-gutter),calc((100% - var(--ui-shell))/2)) 72px!important;margin:0!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-row{gap:20px!important;padding:28px 0!important;align-items:center!important}
+body#portal-layout.public-page .v67-footer{margin-top:0!important;padding:40px var(--ui-gutter) 24px!important}
+body#portal-layout.public-page .v67-footer .v67-shell{width:100%!important;max-width:var(--ui-shell)!important;padding:0!important;margin:auto!important}
+body#portal-layout.public-page .v67-footer-logos{gap:24px!important;align-items:center!important}
+body#portal-layout.public-page .v67-footer-note{font-size:.875rem!important;line-height:1.6!important;letter-spacing:0!important}
+body#portal-layout.public-page .v67-footer-links a{font-size:.875rem!important;padding-block:8px!important}
+
+@media(max-width:1000px){
+ body#portal-layout.public-page.home-rd :is(.home-rd-hero,.home-eu-origin-copy,.home-rd-section-heading,.home-rd-project-facts .home-rd-section-heading,.home-rd-story),body#portal-layout.public-page :is(.training-showcase-hero,.signup-public-hero,.contact-hero),body#portal-layout.public-page.online-catalog-page .v68-online-featured{grid-template-columns:minmax(0,1fr)!important}
+ body#portal-layout.public-page.home-rd .home-eu-origin-copy>*{grid-column:1!important;grid-row:auto!important}
+ body#portal-layout.public-page.home-rd .home-eu-origin-copy .home-eu-origin-logo{display:none!important}
+ body#portal-layout.public-page.home-rd .home-rd-hero-visual img,body#portal-layout.public-page :is(.training-showcase-hero-media,.signup-public-hero-media) img{height:auto!important;aspect-ratio:16/9!important;max-height:440px!important;object-fit:cover!important}
+ body#portal-layout.public-page.home-rd .home-rd-hero-copy>p{max-width:76ch!important}
+ body#portal-layout.public-page .calendar-layout{grid-template-columns:minmax(0,1fr)!important}
+ body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.public-step-grid){grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:640px){
+ :root{--ui-gutter:20px;--ui-section:44px;--ui-gap:24px}
+ body#portal-layout.public-page main h1{font-size:clamp(2.15rem,9.5vw,3rem)!important;line-height:1.12!important;letter-spacing:-.025em!important}
+ body#portal-layout.public-page main h2{font-size:1.85rem!important}
+ body#portal-layout.public-page main h3{font-size:1.25rem!important}
+ body#portal-layout.public-page.home-rd .home-rd-hero,body#portal-layout.public-page :is(.training-showcase-hero,.signup-public-hero,.contact-hero){padding-top:32px!important;padding-bottom:36px!important}
+ body#portal-layout.public-page.home-rd .home-rd-hero-copy h1{margin:16px 0 20px!important}
+ body#portal-layout.public-page.home-rd .home-rd-hero-copy>p{font-size:1rem!important}
+ body#portal-layout.public-page.home-rd .home-rd-section-heading{gap:20px!important;margin-bottom:28px!important}
+ body#portal-layout.public-page.home-rd .home-one-offer .home-rd-program{grid-template-columns:1fr!important;padding:28px 0!important;gap:20px!important}
+ body#portal-layout.public-page.home-rd .home-rd-program>*{grid-column:1!important;grid-row:auto!important}
+ body#portal-layout.public-page :is(.training-values-grid,.training-audience-grid,.training-method-grid,.public-step-grid,.contact-grid){grid-template-columns:1fr!important;gap:16px!important}
+ body#portal-layout.public-page :is(.calendar-board,.calendar-details){padding:16px!important}
+ body#portal-layout.public-page .calendar-grid{gap:3px!important}
+ body#portal-layout.public-page .calendar-day{padding:4px!important}
+ body#portal-layout.public-page .v67-footer{padding-top:32px!important}
+ body#portal-layout.public-page :is(.home-rd-hero-actions,.training-showcase-actions,.public-hero-actions) a{width:100%!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}body#portal-layout.public-page *{animation:none!important;transition:none!important}}
+
+body#portal-layout .training-proof-strip{background:#192b2b!important;padding:28px var(--ui-gutter)!important;gap:24px!important}
+body#portal-layout .training-proof-strip :is(strong,p,span){color:#fff!important;-webkit-text-fill-color:#fff!important}
+body#portal-layout.public-page.home-rd .home-rd-meta dd{margin-left:0!important}
+/* Content-sized intro rows and compact headings inside calendar cards. */
+body#portal-layout.public-page.home-rd .home-eu-origin-copy>.home-rd-overline{grid-column:1 / -1!important;grid-row:1!important;margin:0!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy h2{grid-row:2!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy .home-eu-origin-logo{grid-row:3!important;justify-self:start!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy>p{grid-row:2 / span 2!important;width:100%!important;height:auto!important}
+body#portal-layout.public-page .calendar-details h2{font-size:1.65rem!important;line-height:1.25!important;margin:20px 0!important}
+body#portal-layout.public-page .calendar-board h2{font-size:1.85rem!important}
+@media(max-width:1000px){body#portal-layout.public-page.home-rd .home-eu-origin-copy>*{grid-column:1!important;grid-row:auto!important}}
+
+body#portal-layout.public-page .contact-hero h1,body#portal-layout.public-page .contact-hero h1>span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+body#portal-layout.public-page.home-rd .home-eu-origin-copy>.home-rd-overline{position:static!important;inset:auto!important;transform:none!important;translate:none!important;align-self:start!important}

@@ -1,3 +1,16 @@
+
+Nowości w R8.35:
+- na stronie „Kursy online” dodano przycisk „Pobierz komiks (PDF)” obok przycisku podręcznika;
+- dodano komiks „Leon i Pixel kontra Bulwator - Zanim udostępnisz” jako plik PDF do pobrania;
+- przycisk komiksu korzysta z tego samego stylu co przycisk podręcznika i zachowuje responsywność na urządzeniach mobilnych.
+R8.33 - aktualizacja terminów i statusów zapisów
+
+Nowości w R8.33:
+- termin szkolenia „Wystąpienia publiczne i storytelling” przeniesiono z 11.09 na 14.09.2026;
+- termin szkolenia „Edukacja medialna, fake news i krytyczne myślenie” przeniesiono z 22.09 na 23.09.2026;
+- zapisy zamknięto dla wszystkich opublikowanych terminów poza szkoleniem z grywalizacji 18.09.2026;
+- 18.09.2026 pozostaje jedynym terminem z otwartym formularzem zapisów.
+
 R8.32 - aktualizacja terminarza i szkolenie AI w PUP Zabrze
 
 Nowości w R8.32:

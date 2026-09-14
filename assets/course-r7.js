@@ -604,7 +604,7 @@
     const sidebar=$('#courseSidebar'), backdrop=$('.sidebar-backdrop'); const open=()=>{sidebar?.classList.add('is-open');backdrop&&(backdrop.hidden=false);$('.sidebar-open')?.setAttribute('aria-expanded','true')}; const close=()=>{sidebar?.classList.remove('is-open');backdrop&&(backdrop.hidden=true);$('.sidebar-open')?.setAttribute('aria-expanded','false')};
     $('.sidebar-open')?.addEventListener('click',open); $('.sidebar-close')?.addEventListener('click',close); backdrop?.addEventListener('click',close); $('#sidebarNav')?.addEventListener('click',e=>{if((e.target.closest('a')||e.target.closest('.sidebar-module__button'))&&innerWidth<=900)close()});
 
-    const hash=(location.hash||'').slice(1), hashEl=hash&&$('#'+hash); const hashModule=moduleForElement(hashEl);
+    const hash=(location.hash||'').slice(1), hashEl=hash?$('#'+hash):null; const hashModule=moduleForElement(hashEl);
     if(hash==='courseFinal')showFinal(true); else if(hashModule)showModule(hashModule,hash,true); else showModule('m1',null,true);
   }
 

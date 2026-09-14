@@ -1,0 +1,99 @@
+/* V190: stabilny układ sekcji „O projekcie” na telefonach i tabletach. */
+@media (max-width: 1000px) {
+  body#portal-layout.public-page.home-rd #o-projekcie.home-eu-origin {
+    display: block !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy {
+    display: grid !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 16px !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > .home-rd-overline,
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > h2,
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > p {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    translate: none !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > .home-rd-overline {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    letter-spacing: .11em !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > h2 {
+    font-size: clamp(2.15rem, 7.5vw, 3.5rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.035em !important;
+    text-wrap: balance !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > h2 .eu-title-line {
+    display: inline !important;
+    width: auto !important;
+    writing-mode: horizontal-tb !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > p {
+    margin-top: 6px !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-logo {
+    display: none !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-points {
+    display: grid !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 32px !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-points article,
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-points article + article {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    border: 1px solid var(--ui-line, #d7e2df) !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body#portal-layout.public-page.home-rd #o-projekcie.home-eu-origin {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+  }
+
+  body#portal-layout.public-page.home-rd #o-projekcie .home-eu-origin-copy > h2 {
+    font-size: clamp(2rem, 10vw, 2.65rem) !important;
+  }
+}

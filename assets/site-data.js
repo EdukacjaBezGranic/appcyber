@@ -3,6 +3,97 @@ window.portalSiteData = {
     "email": "pr@wup-katowice.pl",
     "phone": "32 757 33 84"
   },
+  "news": [
+    {
+      "id": "pierwsze-szkolenie-z-wystapien-publicznych-2026-09-14",
+      "date": "2026-09-14",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Pierwsze szkolenie z wystąpień publicznych i storytellingu",
+      "titleEn": "Our first public speaking and storytelling workshop",
+      "lead": "Za nami pierwsze wewnętrzne szkolenie z cyklu „Wystąpienia publiczne i storytelling”, przygotowane w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "We have completed our first internal workshop in the Public Speaking and Storytelling series, developed as part of the Education Without Borders project.",
+      "body": "Było to intensywne i mocno warsztatowe spotkanie. Uczestnicy ćwiczyli m.in. świadome wykorzystywanie głosu i mowy ciała, przyciąganie uwagi odbiorców, radzenie sobie ze stresem oraz budowanie wypowiedzi z wykorzystaniem storytellingu.\n\nWarsztaty poprowadziła Ania - wymagająco i z dużą energią, ale jednocześnie z ogromną wyrozumiałością, wsparciem i gotowością do pomocy.\n\nNie zabrakło praktycznych zadań, krótkich wystąpień i informacji zwrotnej. Duże zaangażowanie uczestników oraz swobodna, życzliwa atmosfera sprawiły, że był to dzień pełen dobrej energii, inspiracji i nauki poprzez działanie.\n\nDziękujemy wszystkim uczestnikom za otwartość, aktywność i wspólnie spędzony czas!",
+      "bodyEn": "It was an intensive, hands-on session. Participants practised using their voice and body language consciously, capturing an audience's attention, managing stress and shaping a compelling message through storytelling.\n\nThe workshop was led by Ania, who set a high bar and brought great energy while remaining understanding, supportive and always ready to help.\n\nThere was no shortage of practical tasks, short presentations and feedback. The participants' strong engagement and the open, friendly atmosphere made it a day full of positive energy, inspiration and learning by doing.\n\nThank you to everyone who took part for your openness, active participation and the time we shared!",
+      "image": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/prowadzaca-i-prezentacja.webp",
+      "imageAlt": "Ania prowadząca warsztaty z wystąpień publicznych i storytellingu",
+      "imageAltEn": "Ania leading the public speaking and storytelling workshop",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/cwiczenie-uczestnika.webp",
+          "alt": "Uczestnik prezentujący podczas ćwiczenia warsztatowego",
+          "altEn": "A participant presenting during a workshop exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/warsztaty-z-grupa.webp",
+          "alt": "Warsztatowe szkolenie z wystąpień publicznych dla pracowników WUP Katowice",
+          "altEn": "Public speaking workshop for WUP Katowice employees"
+        }
+      ],
+      "published": true
+    },
+    {
+      "id": "pierwsze-szkolenie-z-grywalizacji-2026-09-10",
+      "date": "2026-09-10",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Pierwsze szkolenie z nowej serii za nami",
+      "titleEn": "The first training session in our new series is complete",
+      "lead": "Cykl nowych działań edukacyjnych rozpoczęliśmy od szkolenia wewnętrznego dla pracowników Wojewódzkiego Urzędu Pracy w Katowicach.",
+      "leadEn": "We opened our new educational series with an internal training session for employees of the Voivodeship Labour Office in Katowice.",
+      "body": "Pierwszym tematem była „Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie”. Uczestnicy sprawdzali, jak wykorzystywać wyzwania, role, współpracę i informację zwrotną, aby zwiększać zaangażowanie i wspierać uczenie się przez doświadczenie.\n\nSzkolenie poprowadziły Joanna, Alicja i Kamila. Krótkie wprowadzenia przeplatały ćwiczeniami, podczas których uczestnicy mogli od razu sprawdzić omawiane rozwiązania w praktyce.\n\nBył to czas praktycznych ćwiczeń, pracy zespołowej i wymiany pomysłów. Zajęcia pokazały, że elementy znane z gier można stosować bez budowania skomplikowanych systemów punktów - liczy się dobrze postawiony cel, przestrzeń do działania i jasna informacja zwrotna.\n\nSpotkanie zapoczątkowało serię nowych szkoleń przygotowanych w ramach projektu „Edukacja bez granic”. W kolejnych odsłonach zajmiemy się także edukacją medialną, fake newsami i krytycznym myśleniem oraz wystąpieniami publicznymi i storytellingiem.",
+      "bodyEn": "The first topic was Gamification and Game-Based Learning - creativity, collaboration and learning through action. Participants explored how challenges, roles, teamwork and feedback can strengthen engagement and experiential learning.\n\nThe training was led by Joanna, Alicja and Kamila. Short introductions were combined with exercises that allowed participants to immediately test the presented ideas in practice.\n\nThe session combined practical exercises, teamwork and an exchange of ideas. It showed that game-based elements can be used without creating complex point systems: a clear goal, room for action and useful feedback matter most.\n\nThe meeting launched a new training series developed as part of the Education Without Borders project. Future sessions will also cover media literacy, fake news and critical thinking, as well as public speaking and storytelling.",
+      "image": "grafiki/aktualnosci/2026-09-10-grywalizacja/otwarcie-szkolenia.webp",
+      "imageAlt": "Rozpoczęcie szkolenia z grywalizacji dla pracowników WUP Katowice",
+      "imageAltEn": "Opening of the gamification training session for WUP Katowice employees",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/cwiczenie-zespolowe.webp",
+          "alt": "Uczestnicy podczas ćwiczenia zespołowego",
+          "altEn": "Participants during a teamwork exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/prezentacja.webp",
+          "alt": "Prezentacja podczas szkolenia z grywalizacji",
+          "altEn": "Presentation during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-10-grywalizacja/bingo-szkoleniowe.webp",
+          "alt": "Materiały wykorzystane podczas ćwiczenia szkoleniowego",
+          "altEn": "Materials used during a training exercise"
+        }
+      ],
+      "published": true
+    },
+    {
+      "id": "prezentacja-projektu-partnerom-2026-06-19",
+      "date": "2026-06-19",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "„Edukacja bez granic” - prezentujemy nowe szkolenia partnerom",
+      "titleEn": "Education Without Borders - introducing new training programmes to our partners",
+      "lead": "Od czerwca informujemy partnerów Wojewódzkiego Urzędu Pracy w Katowicach o projekcie „Edukacja bez granic”, jego rezultatach i przygotowywanej ofercie szkoleniowej.",
+      "leadEn": "Since June, we have been introducing partners of the Voivodeship Labour Office in Katowice to the Education Without Borders project, its results and the training programmes being developed.",
+      "body": "Jedną z okazji było spotkanie 19 czerwca, poświęcone upowszechnianiu rezultatów innego projektu. Część wydarzenia przeznaczyliśmy na prezentację „Edukacji bez granic” oraz nowych tematów szkoleń: edukacji medialnej i krytycznego myślenia, wystąpień publicznych i storytellingu oraz grywalizacji i uczenia przez działanie.\n\nPokazaliśmy, jak doświadczenia zdobyte podczas zagranicznych mobilności wykorzystujemy do przygotowania zajęć dla kolejnych odbiorców. Zaprezentowaliśmy również portal projektu, na którym udostępniamy informacje o szkoleniach i rozwijamy materiały edukacyjne.\n\nW ten sposób rozpoczęliśmy promocję nowych szkoleń wśród instytucji współpracujących z WUP Katowice, jeszcze przed uruchomieniem pierwszych zajęć.",
+      "bodyEn": "One such opportunity was a meeting on 19 June dedicated to sharing the results of another project. Part of the event was devoted to presenting Education Without Borders and the new training topics: media literacy and critical thinking, public speaking and storytelling, and gamification and learning through action.\n\nWe showed how we are using experience gained during international mobility activities to develop sessions for further groups of learners. We also presented the project website, where we share training information and develop educational materials.\n\nThis marked the start of promoting the new training programmes among institutions working with WUP Katowice, ahead of the first sessions.",
+      "image": "grafiki/aktualnosci/2026-06-19-partnerzy/prezentacja-projektu.jpg",
+      "imageAlt": "Prezentacja projektu „Edukacja bez granic” podczas spotkania 19 czerwca 2026 r.",
+      "imageAltEn": "Presentation of Education Without Borders at the meeting on 19 June 2026",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/oferta-szkolen.jpg",
+          "alt": "Prezentacja nowych tematów szkoleń na portalu projektu",
+          "altEn": "Presenting the new training topics on the project website"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.jpg",
+          "alt": "Uczestnicy spotkania upowszechniającego rezultaty projektów",
+          "altEn": "Participants at the meeting sharing project results"
+        }
+      ]
+    }
+  ],
   "trainings": [
     {
       "id": "fake-news",
@@ -23,17 +114,18 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/ebkYoqmBMnsM1bnv6",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
-      "id": "fake-news-2026-09-22",
+      "id": "fake-news-2026-09-23",
       "group": "new",
       "source": "Projekt Edukacja bez granic",
       "title": "Edukacja medialna, fake news i krytyczne myślenie",
       "shortTitle": "Edukacja medialna",
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "calendarColor": "#0e7490",
       "tone": "cyan",
       "time": "09:00 - 14:15",
@@ -46,10 +138,11 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -70,10 +163,11 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "komunikacja",
@@ -81,7 +175,7 @@ window.portalSiteData = {
       "source": "Projekt Edukacja bez granic",
       "title": "Wystąpienia publiczne i storytelling",
       "shortTitle": "Wystąpienia publiczne",
-      "date": "2026-09-11",
+      "date": "2026-09-14",
       "calendarColor": "#1f6f54",
       "tone": "green",
       "time": "09:00 - 14:15",
@@ -118,16 +212,17 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja",
       "group": "new",
       "source": "Projekt Edukacja bez granic",
-      "title": "Grywalizacja, uczenie przez gry i doświadczenie",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
       "shortTitle": "Grywalizacja",
       "date": "2026-09-10",
       "calendarColor": "#0d4f96",
@@ -136,21 +231,22 @@ window.portalSiteData = {
       "place": "Sala konferencyjna, I piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
-        "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
-        "Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania."
+        "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
+        "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/rHQEKgebZtFokURo9",
-      "button": "Sprawdź terminarz"
+      "button": "Sprawdź terminarz",
+      "registrationClosed": true
     },
     {
       "id": "grywalizacja-2026-09-18",
       "group": "new",
       "source": "Projekt Edukacja bez granic",
-      "title": "Grywalizacja, uczenie przez gry i doświadczenie",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
       "shortTitle": "Grywalizacja",
       "date": "2026-09-18",
       "calendarColor": "#0f8f68",
@@ -159,8 +255,8 @@ window.portalSiteData = {
       "place": "Mała sala nr 419, IV piętro, WUP Katowice",
       "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
       "description": [
-        "Projektujesz zadania, wyzwania i mechanizmy gry tak, aby wspierały uczenie się dorosłych.",
-        "Tworzysz zajęcia, które angażują uczestników i pozwalają im bezpiecznie przećwiczyć nowe sposoby działania."
+        "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
+        "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
       ],
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
@@ -168,7 +264,8 @@ window.portalSiteData = {
       "open": true,
       "link": "https://forms.gle/bYtFwViHgS6rBgUp8",
       "button": "Sprawdź terminarz",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "registrationClosed": false
     },
     {
       "id": "ai-pup-zabrze-2026-10-21",
