@@ -5,6 +5,34 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "szkolenie-edukacja-medialna-fake-news-2026-09-16",
+      "date": "2026-09-16",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Fake news pod lupą – relacja ze szkolenia",
+      "titleEn": "Fake news under the microscope – a training report",
+      "lead": "16 września spotkaliśmy się na wewnętrznym szkoleniu „Edukacja medialna, fake news i krytyczne myślenie”, przygotowanym w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "On 16 September, we met for an internal training session on media literacy, fake news and critical thinking, prepared as part of the Education Without Borders project.",
+      "body": "Szkolenie poprowadzili Ania i Łukasz. Uczestnicy przyglądali się temu, jak emocjonalne nagłówki wpływają na odbiór wiadomości oraz jak prawdziwą informację można przedstawić w mylący sposób. Podczas ćwiczenia „Jeden fakt, inny przekaz” sprawdzali, jak dobór słów zmienia znaczenie komunikatu.\n\nBył też czas na analizę przykładów i rozmowę o tym, od czego zacząć sprawdzanie podejrzanej informacji: gdzie szukać źródła, jak ustalić kontekst i co warto potwierdzić przed udostępnieniem treści dalej.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną pracę!",
+      "bodyEn": "The session was led by Ania and Łukasz. Participants explored how emotional headlines affect the way we receive news and how a true fact can be presented in a misleading way. In the “One fact, a different message” exercise, they examined how word choice changes the meaning of a message.\n\nThere was also time to analyse examples and discuss where to start when checking a suspicious story: how to find its source, establish the context and decide what needs confirming before sharing it further.\n\nThank you to everyone who took part for your participation, questions and work together!",
+      "image": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/rozpoczecie-szkolenia.webp",
+      "imageAlt": "Ania i Łukasz prowadzą szkolenie z edukacji medialnej, fake newsów i krytycznego myślenia",
+      "imageAltEn": "Ania and Łukasz leading a media literacy, fake news and critical thinking training session",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/cwiczenie-jeden-fakt-inny-przekaz.webp",
+          "alt": "Uczestnicy analizują kartę ćwiczenia „Jeden fakt, inny przekaz”",
+          "altEn": "Participants working on the “One fact, a different message” exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/omowienie-programu.webp",
+          "alt": "Łukasz omawia program szkolenia z edukacji medialnej",
+          "altEn": "Łukasz presenting the media literacy training programme"
+        }
+      ],
+      "published": true
+    },
+    {
       "id": "pierwsze-szkolenie-z-wystapien-publicznych-2026-09-14",
       "date": "2026-09-14",
       "category": "Z życia projektu",
