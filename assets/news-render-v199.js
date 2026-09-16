@@ -31,7 +31,11 @@
   function galleryHtml(post) {
     const gallery = Array.isArray(post.gallery) ? post.gallery.filter(item => item?.src) : [];
     if (!gallery.length) return '';
-    return `<div class="news-gallery" aria-label="${language() === 'en' ? 'Photo gallery' : 'Galeria zdjęć'}">${gallery.map(item => `<button type="button" data-news-image="${escapeHtml(item.src)}" data-news-alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"><img loading="lazy" src="${escapeHtml(item.src)}" alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"></button>`).join('')}</div>`;
+    const staticGallery = post.disableImageZoom === true;
+    return `<div class="news-gallery${staticGallery ? ' news-gallery--static' : ''}" aria-label="${language() === 'en' ? 'Photo gallery' : 'Galeria zdjęć'}">${gallery.map(item => {
+      const alt = escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt);
+      return staticGallery ? `<div class="news-gallery-static"><img loading="lazy" src="${escapeHtml(item.src)}" alt="${alt}"></div>` : `<button type="button" data-news-image="${escapeHtml(item.src)}" data-news-alt="${alt}"><img loading="lazy" src="${escapeHtml(item.src)}" alt="${alt}"></button>`;
+    }).join('')}</div>`;
   }
 
   function render() {
@@ -43,7 +47,10 @@
     }
     const post = allPosts.find(item => item.id === selectedId()) || allPosts[0];
     const caption = local(post, 'imageAlt');
-    articleRoot.innerHTML = `<article class="news-article"><div class="news-media-column"><figure class="news-cover"><button class="news-cover-button" type="button" data-news-image="${escapeHtml(post.image)}" data-news-alt="${escapeHtml(caption)}"><img src="${escapeHtml(post.image)}" alt="${escapeHtml(caption)}"></button><figcaption>${escapeHtml(caption)}</figcaption></figure>${galleryHtml(post)}</div><div class="news-copy"><div class="news-meta"><span>${escapeHtml(local(post, 'category'))}</span><time datetime="${escapeHtml(post.date)}">${escapeHtml(dateLabel(post.date))}</time></div><h2>${escapeHtml(local(post, 'title'))}</h2><p class="news-lead">${escapeHtml(local(post, 'lead'))}</p><div class="news-body">${String(local(post, 'body')).split(/\n\s*\n/).filter(Boolean).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div></div></article>`;
+    const cover = post.disableImageZoom === true
+      ? `<div class="news-cover-static"><img src="${escapeHtml(post.image)}" alt="${escapeHtml(caption)}"></div>`
+      : `<button class="news-cover-button" type="button" data-news-image="${escapeHtml(post.image)}" data-news-alt="${escapeHtml(caption)}"><img src="${escapeHtml(post.image)}" alt="${escapeHtml(caption)}"></button>`;
+    articleRoot.innerHTML = `<article class="news-article"><div class="news-media-column"><figure class="news-cover">${cover}<figcaption>${escapeHtml(caption)}</figcaption></figure>${galleryHtml(post)}</div><div class="news-copy"><div class="news-meta"><span>${escapeHtml(local(post, 'category'))}</span><time datetime="${escapeHtml(post.date)}">${escapeHtml(dateLabel(post.date))}</time></div><h2>${escapeHtml(local(post, 'title'))}</h2><p class="news-lead">${escapeHtml(local(post, 'lead'))}</p><div class="news-body">${String(local(post, 'body')).split(/\n\s*\n/).filter(Boolean).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div></div></article>`;
 
     const archive = allPosts.map(item => `<article class="news-card ${item.id === post.id ? 'is-current' : ''}"><a class="news-card-media" href="?wpis=${encodeURIComponent(item.id)}" data-news-post="${escapeHtml(item.id)}"><img loading="lazy" src="${escapeHtml(item.image)}" alt="${escapeHtml(local(item, 'imageAlt'))}"></a><div class="news-card-copy"><div class="news-meta"><span>${escapeHtml(local(item, 'category'))}</span><time datetime="${escapeHtml(item.date)}">${escapeHtml(dateLabel(item.date))}</time></div><h3>${escapeHtml(local(item, 'title'))}</h3><p>${escapeHtml(local(item, 'lead'))}</p><a href="?wpis=${encodeURIComponent(item.id)}" data-news-post="${escapeHtml(item.id)}">${language() === 'en' ? 'Read the story' : 'Czytaj relację'}</a></div></article>`).join('');
     listRoot.innerHTML = archive || `<div class="news-empty">${language() === 'en' ? 'More stories will appear here after the next training sessions.' : 'Kolejne relacje pojawią się tutaj po następnych szkoleniach.'}</div>`;

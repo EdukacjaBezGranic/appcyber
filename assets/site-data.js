@@ -5,6 +5,63 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "szkolenie-edukacja-medialna-fake-news-2026-09-16",
+      "date": "2026-09-16",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Fake news pod lupą - relacja ze szkolenia",
+      "titleEn": "Fake news under the microscope - a training report",
+      "lead": "16 września spotkaliśmy się na wewnętrznym szkoleniu „Edukacja medialna, fake news i krytyczne myślenie”, przygotowanym w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "On 16 September, we met for an internal training session on media literacy, fake news and critical thinking, prepared as part of the Education Without Borders project.",
+      "body": "Szkolenie poprowadzili Ania i Łukasz. Uczestnicy przyglądali się temu, jak emocjonalne nagłówki wpływają na odbiór wiadomości oraz jak prawdziwą informację można przedstawić w mylący sposób. Podczas ćwiczenia „Jeden fakt, inny przekaz” sprawdzali, jak dobór słów zmienia znaczenie komunikatu.\n\nBył też czas na analizę przykładów i rozmowę o tym, od czego zacząć sprawdzanie podejrzanej informacji: gdzie szukać źródła, jak ustalić kontekst i co warto potwierdzić przed udostępnieniem treści dalej.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną pracę!",
+      "bodyEn": "The session was led by Ania and Łukasz. Participants explored how emotional headlines affect the way we receive news and how a true fact can be presented in a misleading way. In the “One fact, a different message” exercise, they examined how word choice changes the meaning of a message.\n\nThere was also time to analyse examples and discuss where to start when checking a suspicious story: how to find its source, establish the context and decide what needs confirming before sharing it further.\n\nThank you to everyone who took part for your participation, questions and work together!",
+      "image": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/omowienie-programu.webp",
+      "imageAlt": "Łukasz omawia program szkolenia z edukacji medialnej",
+      "imageAltEn": "Łukasz presenting the media literacy training programme",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/cwiczenie-jeden-fakt-inny-przekaz.webp",
+          "alt": "Uczestnicy analizują kartę ćwiczenia „Jeden fakt, inny przekaz”",
+          "altEn": "Participants working on the “One fact, a different message” exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-16-edukacja-medialna/rozpoczecie-szkolenia.webp",
+          "alt": "Ania i Łukasz prowadzą szkolenie z edukacji medialnej, fake newsów i krytycznego myślenia",
+          "altEn": "Ania and Łukasz leading a media literacy, fake news and critical thinking training session"
+        }
+      ],
+      "published": true,
+      "disableImageZoom": true
+    },
+    {
+      "id": "pierwsze-szkolenie-z-wystapien-publicznych-2026-09-14",
+      "date": "2026-09-14",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Pierwsze szkolenie z wystąpień publicznych i storytellingu",
+      "titleEn": "Our first public speaking and storytelling workshop",
+      "lead": "Za nami pierwsze wewnętrzne szkolenie z cyklu „Wystąpienia publiczne i storytelling”, przygotowane w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "We have completed our first internal workshop in the Public Speaking and Storytelling series, developed as part of the Education Without Borders project.",
+      "body": "Było to intensywne i mocno warsztatowe spotkanie. Uczestnicy ćwiczyli m.in. świadome wykorzystywanie głosu i mowy ciała, przyciąganie uwagi odbiorców, radzenie sobie ze stresem oraz budowanie wypowiedzi z wykorzystaniem storytellingu.\n\nWarsztaty poprowadziła Ania - wymagająco i z dużą energią, ale jednocześnie z ogromną wyrozumiałością, wsparciem i gotowością do pomocy.\n\nNie zabrakło praktycznych zadań, krótkich wystąpień i informacji zwrotnej. Duże zaangażowanie uczestników oraz swobodna, życzliwa atmosfera sprawiły, że był to dzień pełen dobrej energii, inspiracji i nauki poprzez działanie.\n\nDziękujemy wszystkim uczestnikom za otwartość, aktywność i wspólnie spędzony czas!",
+      "bodyEn": "It was an intensive, hands-on session. Participants practised using their voice and body language consciously, capturing an audience's attention, managing stress and shaping a compelling message through storytelling.\n\nThe workshop was led by Ania, who set a high bar and brought great energy while remaining understanding, supportive and always ready to help.\n\nThere was no shortage of practical tasks, short presentations and feedback. The participants' strong engagement and the open, friendly atmosphere made it a day full of positive energy, inspiration and learning by doing.\n\nThank you to everyone who took part for your openness, active participation and the time we shared!",
+      "image": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/prowadzaca-i-prezentacja.webp",
+      "imageAlt": "Ania prowadząca warsztaty z wystąpień publicznych i storytellingu",
+      "imageAltEn": "Ania leading the public speaking and storytelling workshop",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/cwiczenie-uczestnika.webp",
+          "alt": "Uczestnik prezentujący podczas ćwiczenia warsztatowego",
+          "altEn": "A participant presenting during a workshop exercise"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-14-wystapienia-publiczne/warsztaty-z-grupa.webp",
+          "alt": "Warsztatowe szkolenie z wystąpień publicznych dla pracowników WUP Katowice",
+          "altEn": "Public speaking workshop for WUP Katowice employees"
+        }
+      ],
+      "published": true
+    },
+    {
       "id": "pierwsze-szkolenie-z-grywalizacji-2026-09-10",
       "date": "2026-09-10",
       "category": "Z życia projektu",
