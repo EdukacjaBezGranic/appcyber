@@ -1,5 +1,0 @@
-body.ui-course .course-r1-hero__inner {
-  max-width: 980px;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0;
-}

@@ -76,7 +76,7 @@
     const image = training.image || 'grafiki/projekt-hero.png';
     const title = training.title || 'Szkolenie';
     const descriptions = asDescription(training.description);
-    const meta = [formatDate(training.date), training.date ? training.time : '', training.place].filter(Boolean).join(' · ');
+    const meta = [formatDate(training.date), training.tentative ? 'Termin wstępny' : '', training.date ? training.time : '', training.place].filter(Boolean).join(' · ');
     const accentRgb = colorToRgb(color);
 
     return `

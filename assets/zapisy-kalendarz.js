@@ -95,9 +95,10 @@ function isRegistrationOpen(event) {
 
 function registrationState(event) {
   const isOpen = isRegistrationOpen(event);
+  const isWaiting = !isOpen && event.registrationClosed !== true;
   return {
-    className: isOpen ? 'is-registration-open' : 'is-registration-closed',
-    label: siteT(isOpen ? 'Zapisy otwarte' : 'Zapisy zamknięte')
+    className: isOpen ? 'is-registration-open' : isWaiting ? 'is-registration-waiting' : 'is-registration-closed',
+    label: siteT(isOpen ? 'Zapisy otwarte' : isWaiting ? 'Zapisy wkrótce' : 'Zapisy zamknięte')
   };
 }
 
@@ -151,7 +152,7 @@ function selectEvent(id) {
 
   setText('[data-detail-source]', siteT(event.source));
   setText('[data-detail-title]', siteT(event.title));
-  setText('[data-detail-date]', formatFullDate(event.date));
+  setText('[data-detail-date]', `${formatFullDate(event.date)}${event.tentative ? ` (${siteT('termin wstępny')})` : ''}`);
   setText('[data-detail-time]', event.time || siteT('Wkrótce'));
   setText('[data-detail-place]', event.place || siteT('Wkrótce'));
   setText('[data-detail-audience]', siteT(event.audience));
@@ -170,9 +171,9 @@ function makeEventButton(event) {
   button.className = `calendar-event ${state.className} is-${event.tone}`;
   button.type = 'button';
   button.dataset.eventId = event.id;
-  button.setAttribute('aria-label', `${siteT(event.shortTitle || event.title)}. ${state.label}. ${event.time || ''}`.trim());
+  button.setAttribute('aria-label', `${siteT(event.shortTitle || event.title)}. ${event.tentative ? `${siteT('Termin wstępny')}. ` : ''}${state.label}. ${event.time || ''}`.trim());
   button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
-  button.innerHTML = `<small>${event.time}</small>${siteT(event.shortTitle)}`;
+  button.innerHTML = `${event.time ? `<small>${event.time}</small>` : ''}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}${siteT(event.shortTitle)}`;
   return button;
 }
 
@@ -231,9 +232,9 @@ function renderList(monthEvents) {
     button.className = `calendar-list-item ${state.className}`;
     button.type = 'button';
     button.dataset.eventId = event.id;
-    button.setAttribute('aria-label', `${formatFullDate(event.date)}. ${siteT(event.title)}. ${state.label}.`);
+    button.setAttribute('aria-label', `${formatFullDate(event.date)}. ${siteT(event.title)}. ${event.tentative ? `${siteT('Termin wstępny')}. ` : ''}${state.label}.`);
     button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
-    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong><small>${event.time}</small><span class="calendar-list-status">${state.label}</span></span><b>${siteT(event.title)}</b>`;
+    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong>${event.time ? `<small>${event.time}</small>` : ''}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}<span class="calendar-list-status">${state.label}</span></span><b>${siteT(event.title)}</b>`;
     calendarList.append(button);
   });
 }
