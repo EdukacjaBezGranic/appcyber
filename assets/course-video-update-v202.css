@@ -1,0 +1,18 @@
+/* Film zapraszający w katalogu kursów oraz nagłówek kursu bez filmu. */
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-media video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #10231e;
+}
+body.ui-course .course-r1-hero__inner {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1050px;
+}
+@media (max-width: 600px) {
+  body#portal-layout.public-page.online-catalog-page .v68-online-featured-media video { border-radius: 10px; }
+}

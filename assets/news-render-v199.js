@@ -31,7 +31,7 @@
   function galleryHtml(post) {
     const gallery = Array.isArray(post.gallery) ? post.gallery.filter(item => item?.src) : [];
     if (!gallery.length) return '';
-    return `<div class="news-gallery" aria-label="${language() === 'en' ? 'Photo gallery' : 'Galeria zdjęć'}">${gallery.map(item => `<button type="button" data-news-image="${escapeHtml(item.src)}" data-news-alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"><img loading="lazy" src="${escapeHtml(item.src)}" alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"></button>`).join('')}</div>`;
+    return `<div class="news-gallery${gallery.length === 1 ? ' news-gallery--single' : ''}" aria-label="${language() === 'en' ? 'Photo gallery' : 'Galeria zdjęć'}">${gallery.map(item => `<button type="button" data-news-image="${escapeHtml(item.src)}" data-news-alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"><img loading="lazy" src="${escapeHtml(item.src)}" alt="${escapeHtml(language() === 'en' ? item.altEn || item.alt : item.alt)}"></button>`).join('')}</div>`;
   }
 
   function render() {

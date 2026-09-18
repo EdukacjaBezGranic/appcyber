@@ -5,6 +5,29 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "kreatywnosc-w-dzialaniu-grywalizacja-2026-09-18",
+      "date": "2026-09-18",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Kreatywność w działaniu - warsztaty z grywalizacji",
+      "titleEn": "Creativity in action - a gamification workshop",
+      "lead": "18 września spotkaliśmy się na szkoleniu z grywalizacji i uczenia przez gry. Był to dzień pełen ćwiczeń, rozmów i twórczych pomysłów. Uczestnicy mieli okazję spojrzeć na znane zadania z innej perspektywy i zastanowić się, jak uczynić je bardziej angażującymi.",
+      "leadEn": "On 18 September, we met for a workshop on gamification and game-based learning. The day was filled with exercises, conversations and creative ideas. Participants explored familiar tasks from a new angle and considered how to make them more engaging.",
+      "body": "Podczas warsztatów skupiliśmy się na kreatywności, współpracy i uczeniu się przez działanie. Ćwiczenia zachęcały do eksperymentowania, szukania różnych rozwiązań i dzielenia się własnymi doświadczeniami. Pokazały też, że elementy gry można wykorzystać w prosty sposób - na przykład proponując grupie wyzwanie, wspólny cel lub możliwość wyboru drogi do jego osiągnięcia.\n\nNie zabrakło śmiechu, żywych dyskusji i dobrej atmosfery, która sprzyjała swobodnej wymianie pomysłów. Dziękujemy wszystkim uczestnikom za zaangażowanie i energię wniesioną do wspólnej pracy!",
+      "bodyEn": "The workshop focused on creativity, collaboration and learning by doing. Exercises encouraged participants to experiment, explore different solutions and share their experience. They also showed how game elements can be used in simple ways - by offering a group a challenge, a shared goal or a choice of how to reach it.\n\nThere was laughter, lively discussion and a friendly atmosphere that made it easy to exchange ideas. Thank you to everyone for your engagement and the energy you brought to the workshop!",
+      "image": "grafiki/aktualnosci/2026-09-18-grywalizacja/prezentacja-gry-planszowej.jpg",
+      "imageAlt": "Prezentacja gry planszowej podczas szkolenia z grywalizacji",
+      "imageAltEn": "A board game presentation during the gamification workshop",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/uczestnicy-szkolenia.jpg",
+          "alt": "Uczestnicy szkolenia z grywalizacji podczas prezentacji przykładów gier edukacyjnych",
+          "altEn": "Gamification workshop participants during a presentation of educational games"
+        }
+      ],
+      "published": true
+    },
+    {
       "id": "szkolenie-edukacja-medialna-fake-news-2026-09-16",
       "date": "2026-09-16",
       "category": "Z życia projektu",
