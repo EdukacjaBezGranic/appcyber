@@ -39,7 +39,10 @@
       .filter(({ date }) => !Number.isNaN(date.getTime()) && date >= today)
       .sort((a, b) => a.date - b.date);
 
-    if (upcoming.length) return { ...baseTraining, ...upcoming[0].training, calendarOnly: false };
+    if (upcoming.length) {
+      const preferred = upcoming.find(({ training }) => training.open === true && training.registrationClosed !== true) || upcoming[0];
+      return { ...baseTraining, ...preferred.training, calendarOnly: false };
+    }
     return { ...baseTraining, date: '', time: '', place: '', open: false, link: '', calendarOnly: false };
   };
 
@@ -53,6 +56,17 @@
     const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(String(value || ''));
     if (!match) return '14,116,144';
     return `${parseInt(match[1], 16)},${parseInt(match[2], 16)},${parseInt(match[3], 16)}`;
+  };
+
+  const audienceBadgeLabel = (training) => {
+    const tag = String(training.audienceTag || '').trim().toUpperCase();
+    if (tag === 'WUP') return 'Szkolenie dla pracowników WUP';
+    if (tag === 'PUP') return 'Szkolenie dla pracowników PUP';
+
+    const audience = String(training.audience || '').toLowerCase();
+    if (audience.includes('powiatowych urzędów pracy') || audience.includes('pracowników pup')) return 'Szkolenie dla pracowników PUP';
+    if (audience.includes('pracowników wup')) return 'Szkolenie dla pracowników WUP';
+    return '';
   };
 
   const renderAction = (training) => {
@@ -78,6 +92,7 @@
     const descriptions = asDescription(training.description);
     const meta = [formatDate(training.date), training.tentative ? 'Termin wstępny' : '', training.date ? training.time : '', training.place].filter(Boolean).join(' · ');
     const accentRgb = colorToRgb(color);
+    const audienceBadge = audienceBadgeLabel(training);
 
     return `
       <article class="signup-training-card" style="--signup-accent:${escapeHtml(color)};--signup-accent-rgb:${accentRgb};">
@@ -88,6 +103,7 @@
           <span class="signup-training-source">${escapeHtml(training.source || '')}</span>
           <h3>${escapeHtml(title)}</h3>
           ${meta ? `<p class="signup-training-meta">${escapeHtml(meta)}</p>` : ''}
+          ${audienceBadge ? `<span class="signup-training-audience-badge">${escapeHtml(audienceBadge)}</span>` : ''}
           <div class="signup-training-copy">
             ${descriptions.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
           </div>

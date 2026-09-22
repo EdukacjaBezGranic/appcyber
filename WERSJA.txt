@@ -1,3 +1,10 @@
+Aktualizacja 22.09.2026 - terminarz i rekrutacja:
+- dodano potwierdzone terminy: 06.10 WUP (wystąpienia), 07.10 WUP (grywalizacja), 13.10 PUP (wystąpienia), 22.10 PUP (media literacy), 26.10 PUP (grywalizacja), 27.10 PUP (media literacy);
+- uruchomiono formularze rekrutacyjne dla tych sześciu terminów; szkolenie AI w PUP Zabrze 21.10 pozostawiono bez zmian;
+- kafelki szkoleń pokazują oznaczenie „Szkolenie dla pracowników WUP” albo „Szkolenie dla pracowników PUP” zgodnie z najbliższym otwartym terminem;
+- minione terminy wyszarzają się automatycznie i otrzymują status „Termin minął”;
+- jeśli do minionego szkolenia istnieje wpis w Aktualnościach z tą samą datą, w szczegółach terminarza wyświetla się karta relacji z linkiem do wpisu.
+
 
 Nowości w R8.35:
 - na stronie „Kursy online” dodano przycisk „Pobierz komiks (PDF)” obok przycisku podręcznika;

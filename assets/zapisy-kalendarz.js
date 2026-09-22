@@ -8,6 +8,16 @@ const siteT = (value) => {
   return window.EBG_SITE_I18N?.dict?.[text] || window.EBG_SITE_I18N?.t?.(text) || value;
 };
 
+const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, char => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+}[char]));
+
+const localizedNewsField = (post, field) => {
+  if (!post) return '';
+  if (siteLang() === 'en' && post[`${field}En`]) return post[`${field}En`];
+  return post[field] || '';
+};
+
 const normalizeDescription = (description) => {
   if (Array.isArray(description)) return description;
   if (!description) return [];
@@ -89,11 +99,35 @@ function eventById(id) {
   return trainingEvents.find(event => event.id === id) || trainingEvents.find(event => parseDate(event.date)) || trainingEvents[0];
 }
 
+function relatedNews(event) {
+  const posts = Array.isArray(portalData.news) ? portalData.news.filter(post => post.published !== false) : [];
+  if (event?.newsId) {
+    const explicit = posts.find(post => post.id === event.newsId);
+    if (explicit) return explicit;
+  }
+  if (!event?.date) return null;
+  const sameDate = posts.filter(post => post.date === event.date);
+  return sameDate.length === 1 ? sameDate[0] : null;
+}
+
+function startOfToday(now = new Date()) {
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+function isPastEvent(event, now = new Date()) {
+  const eventDate = parseDate(event.date);
+  if (!eventDate) return false;
+  return eventDate < startOfToday(now);
+}
+
 function isRegistrationOpen(event) {
   return event.open === true && event.registrationClosed !== true;
 }
 
 function registrationState(event) {
+  if (isPastEvent(event)) {
+    return { className: 'is-past', label: siteLang() === 'en' ? 'Date passed' : 'Termin minął' };
+  }
   const isOpen = isRegistrationOpen(event);
   const isWaiting = !isOpen && event.registrationClosed !== true;
   return {
@@ -118,9 +152,45 @@ function setDescription(paragraphs) {
   });
 }
 
+function renderRelatedNews(event) {
+  const container = detailPanel?.querySelector('[data-detail-news]');
+  if (!container) return;
+  const post = isPastEvent(event) ? relatedNews(event) : null;
+  if (!post) {
+    container.hidden = true;
+    container.innerHTML = '';
+    return;
+  }
+
+  const title = localizedNewsField(post, 'title');
+  const lead = localizedNewsField(post, 'lead');
+  const alt = localizedNewsField(post, 'imageAlt') || title;
+  const label = siteLang() === 'en' ? 'Training report' : 'Relacja ze szkolenia';
+  const button = siteLang() === 'en' ? 'Read the story' : 'Czytaj relację';
+  const href = `aktualnosci.html?wpis=${encodeURIComponent(post.id)}`;
+  container.innerHTML = `
+    <article class="calendar-news-card">
+      <a class="calendar-news-media" href="${href}">
+        <img src="${escapeHtml(post.image || '')}" alt="${escapeHtml(alt)}" loading="lazy">
+      </a>
+      <div class="calendar-news-copy">
+        <span>${escapeHtml(label)}</span>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(lead)}</p>
+        <a class="public-btn calendar-news-link" href="${href}">${escapeHtml(button)}</a>
+      </div>
+    </article>`;
+  container.hidden = false;
+}
+
 function renderAction(event) {
   const action = detailPanel?.querySelector('[data-detail-action]');
   if (!action) return;
+
+  if (isPastEvent(event)) {
+    action.innerHTML = `<span class="signup-status is-closed is-past">${siteLang() === 'en' ? 'Date passed' : 'Termin minął'}</span>`;
+    return;
+  }
 
   if (event.registrationClosed) {
     action.innerHTML = `<span class="signup-status is-closed">${siteT('Zapisy zakończone')}</span>`;
@@ -159,6 +229,7 @@ function selectEvent(id) {
   setDescription(event.description.map(siteT));
   renderDetailLogo(event);
   renderAction(event);
+  renderRelatedNews(event);
 
   document.querySelectorAll('[data-event-id]').forEach(item => {
     item.classList.toggle('is-active', item.dataset.eventId === event.id);
@@ -173,7 +244,10 @@ function makeEventButton(event) {
   button.dataset.eventId = event.id;
   button.setAttribute('aria-label', `${siteT(event.shortTitle || event.title)}. ${event.tentative ? `${siteT('Termin wstępny')}. ` : ''}${state.label}. ${event.time || ''}`.trim());
   button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
-  button.innerHTML = `${event.time ? `<small>${event.time}</small>` : ''}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}${siteT(event.shortTitle)}`;
+  const audienceTag = event.audienceTag ? ` · ${siteT(event.audienceTag)}` : '';
+  const newsTag = isPastEvent(event) && relatedNews(event) ? `<em class="calendar-event-news">${siteLang() === 'en' ? 'Report' : 'Relacja'}</em>` : '';
+  const timeLine = event.time ? `<small>${event.time}${audienceTag}</small>` : (event.audienceTag ? `<small>${siteT(event.audienceTag)}</small>` : '');
+  button.innerHTML = `${timeLine}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}${siteT(event.shortTitle)}${newsTag}`;
   return button;
 }
 
@@ -234,7 +308,10 @@ function renderList(monthEvents) {
     button.dataset.eventId = event.id;
     button.setAttribute('aria-label', `${formatFullDate(event.date)}. ${siteT(event.title)}. ${event.tentative ? `${siteT('Termin wstępny')}. ` : ''}${state.label}.`);
     button.style.setProperty('--event-color', event.calendarColor || event.color || '#2563eb');
-    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong>${event.time ? `<small>${event.time}</small>` : ''}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}<span class="calendar-list-status">${state.label}</span></span><b>${siteT(event.title)}</b>`;
+    const audienceTag = event.audienceTag ? ` · ${siteT(event.audienceTag)}` : '';
+    const newsTag = isPastEvent(event) && relatedNews(event) ? `<span class="calendar-list-news">${siteLang() === 'en' ? 'Training report available' : 'Relacja ze szkolenia'}</span>` : '';
+    const timeMeta = event.time || event.audienceTag ? `<small>${event.time || ''}${audienceTag}</small>` : '';
+    button.innerHTML = `<span><strong>${formatFullDate(event.date)}</strong>${timeMeta}${event.tentative ? `<small>${siteT('Termin wstępny')}</small>` : ''}<span class="calendar-list-status">${state.label}</span>${newsTag}</span><b>${siteT(event.title)}</b>`;
     calendarList.append(button);
   });
 }
