@@ -15,22 +15,18 @@ window.portalSiteData = {
       "leadEn": "On 23 September, another training session on media literacy, fake news and critical thinking took place as part of the Education Without Borders project.",
       "body": "Szkolenie poprowadzili Łukasz i Ania. Podczas zajęć uczestnicy przyglądali się temu, jak sposób przedstawienia informacji może wpływać na jej odbiór oraz jak prawdziwy materiał może zostać wykorzystany w mylącym kontekście.\n\nRozmawialiśmy o mechanizmach wykorzystywanych w dezinformacji i manipulacji, emocjonalnych przekazach oraz o tym, co właściwie wiemy, skąd pochodzi informacja i czego jeszcze potrzebujemy, aby móc ją rzetelnie ocenić.\n\nW trakcie szkolenia pojawiły się również elementy praktyczne. Uczestnicy analizowali wybrane przykłady internetowych przekazów, zwracając uwagę na sposób przedstawienia informacji, użyty język, kontekst oraz wiarygodność źródła. Ćwiczenia były punktem wyjścia do rozmowy o tym, jak świadomie oceniać treści i na co zwracać uwagę przed ich dalszym udostępnieniem.\n\nNie zabrakło także pytań, dyskusji i wymiany doświadczeń związanych z codziennym korzystaniem z mediów i mediów społecznościowych.\n\nDziękujemy uczestnikom za aktywność, zaangażowanie i wspólną pracę!",
       "bodyEn": "The session was led by Łukasz and Ania. Participants looked at how the way information is presented can influence how it is received and how authentic material can be used in a misleading context.\n\nWe discussed mechanisms used in disinformation and manipulation, emotional messaging, and what we actually know, where information comes from and what else we need in order to assess it reliably.\n\nThe training also included practical elements. Participants analysed selected examples of online messages, paying attention to the way information was presented, the language used, the context and the credibility of the source. The exercises provided a starting point for discussing how to assess content consciously and what to check before sharing it further.\n\nThere was also time for questions, discussion and sharing experiences related to everyday use of media and social media.\n\nThank you to all participants for your activity, engagement and work together!",
-      "image": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/cwiczenie-analiza-przekazow.webp",
-      "imageAlt": "Uczestnicy szkolenia analizują materiały i karty ćwiczeń z edukacji medialnej",
-      "imageAltEn": "Participants analysing media literacy materials and exercise sheets",
+      "image": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/sala-szkoleniowa.webp",
+      "imageAlt": "Uczestnicy podczas szkolenia „Edukacja medialna, fake news i krytyczne myślenie”",
+      "imageAltEn": "Participants during the Media Literacy, Fake News and Critical Thinking training session",
       "gallery": [
         {
-          "src": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/prezentacja-i-dyskusja.webp",
-          "alt": "Prezentacja i dyskusja podczas szkolenia z edukacji medialnej",
-          "altEn": "Presentation and discussion during the media literacy training"
-        },
-        {
-          "src": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/szkolenie-edukacja-medialna.webp",
-          "alt": "Uczestnicy podczas szkolenia „Edukacja medialna, fake news i krytyczne myślenie”",
-          "altEn": "Participants during the Media Literacy, Fake News and Critical Thinking training session"
+          "src": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/cwiczenie-analiza-przekazow.webp",
+          "alt": "Uczestnicy analizują materiały i karty ćwiczeń podczas szkolenia z edukacji medialnej",
+          "altEn": "Participants analysing materials and exercise sheets during the media literacy training"
         }
       ],
-      "published": true
+      "published": true,
+      "showImageCaptions": false
     },
     {
       "id": "kreatywnosc-w-dzialaniu-grywalizacja-2026-09-18",
@@ -231,7 +227,8 @@ window.portalSiteData = {
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true
     },
     {
       "id": "fake-news-2026-09-29",

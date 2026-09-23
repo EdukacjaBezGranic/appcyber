@@ -115,6 +115,7 @@ function startOfToday(now = new Date()) {
 }
 
 function isPastEvent(event, now = new Date()) {
+  if (event?.completed === true) return true;
   const eventDate = parseDate(event.date);
   if (!eventDate) return false;
   return eventDate < startOfToday(now);
