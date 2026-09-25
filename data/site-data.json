@@ -5,6 +5,35 @@
   },
   "news": [
     {
+      "id": "czy-storytelling-to-opowiadanie-bajek-2026-09-25",
+      "date": "2026-09-25",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Czy storytelling to opowiadanie bajek?",
+      "titleEn": "Is storytelling just telling fairy tales?",
+      "lead": "25 września odbyło się kolejne szkolenie realizowane w ramach projektu „Edukacja bez granic” — tym razem poświęcone wystąpieniom publicznym i storytellingowi.",
+      "leadEn": "On 25 September, another training session took place as part of the Education Without Borders project — this time focusing on public speaking and storytelling.",
+      "body": "Czy storytelling oznacza po prostu opowiadanie bajek? Nie do końca. Dobra historia może jednak sprawić, że nawet złożony temat stanie się bardziej zrozumiały, ciekawszy i łatwiejszy do zapamiętania.\n\nPodczas szkolenia rozmawialiśmy o tym, jak budować wypowiedź, która ma wyraźny początek, rozwinięcie i zakończenie, jak zainteresować odbiorców oraz jak wykorzystać historię, przykład lub anegdotę, żeby lepiej przekazać najważniejszą myśl.\n\nNie zabrakło również rozmów o tym, co pomaga utrzymać uwagę słuchaczy, jak dopasować sposób mówienia do odbiorców i dlaczego czasem jedna dobrze opowiedziana historia może powiedzieć więcej niż kilka slajdów pełnych tekstu.\n\nByła przestrzeń na przykłady, dyskusję i spojrzenie na wystąpienia publiczne z trochę mniej formalnej strony. Bo dobra prezentacja nie musi oznaczać wyłącznie stania przed ekranem i odczytywania kolejnych punktów.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólnie spędzony czas!",
+      "bodyEn": "Does storytelling simply mean telling fairy tales? Not quite. A good story can, however, make even a complex topic easier to understand, more engaging and easier to remember.\n\nDuring the training, we discussed how to structure a speech with a clear beginning, development and ending, how to engage an audience, and how to use a story, example or anecdote to communicate the key message more effectively.\n\nWe also talked about what helps maintain listeners’ attention, how to adapt the way we speak to the audience, and why one well-told story can sometimes say more than several slides full of text.\n\nThere was room for examples, discussion and a less formal look at public speaking. A good presentation does not have to mean standing in front of a screen and reading consecutive bullet points.\n\nThank you to all participants for your activity, openness and time spent together!",
+      "image": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-sala.webp",
+      "imageAlt": "Szkolenie z wystąpień publicznych i storytellingu – uczestnicy podczas zajęć",
+      "imageAltEn": "Public speaking and storytelling training – participants during the session",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-prezentacja.webp",
+          "alt": "Prowadząca podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Trainer during the public speaking and storytelling session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-cwiczenie.webp",
+          "alt": "Ćwiczenie podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Exercise during the public speaking and storytelling session"
+        }
+      ]
+    },
+    {
       "id": "jak-nie-dac-sie-nabrac-edukacja-medialna-2026-09-23",
       "date": "2026-09-23",
       "category": "Z życia projektu",
@@ -302,7 +331,9 @@
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true,
+      "newsId": "czy-storytelling-to-opowiadanie-bajek-2026-09-25"
     },
     {
       "id": "grywalizacja",
