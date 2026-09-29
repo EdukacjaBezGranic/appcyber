@@ -5,6 +5,55 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "wrzesien-pelen-szkolen-podsumowanie-2026-09-30",
+      "date": "2026-09-30",
+      "published": true,
+      "category": "Podsumowanie działań projektowych",
+      "categoryEn": "Project activities summary",
+      "title": "Wrzesień pełen szkoleń w projekcie „Edukacja bez granic”",
+      "titleEn": "A September full of training in the Education Without Borders project",
+      "lead": "Wrzesień był w projekcie „Edukacja bez granic” miesiącem intensywnej pracy szkoleniowej. W ciągu kilku tygodni zrealizowaliśmy 7 szkoleń w 3 obszarach tematycznych.",
+      "leadEn": "September was a month of intensive training activity in the Education Without Borders project. Over several weeks, we delivered 7 training sessions in 3 thematic areas.",
+      "body": "Trzy spotkania poświęciliśmy edukacji medialnej, fake news i krytycznemu myśleniu, dwa wystąpieniom publicznym i storytellingowi, a kolejne dwa grywalizacji i Game-Based Learning.\n\nZ wrześniowej oferty skorzystało łącznie blisko 70 pracowników Wojewódzkiego Urzędu Pracy w Katowicach. Od początku zależało nam na tym, aby zajęcia miały przede wszystkim praktyczny charakter. Dlatego obok części merytorycznej ważne miejsce zajmowały ćwiczenia, praca w grupach, analiza konkretnych przykładów, dyskusje oraz wymiana doświadczeń między uczestnikami.\n\nWrześniowy cykl miał dla nas jeszcze jedno ważne znaczenie. Były to pierwsze szkolenia prowadzone na podstawie nowych programów przygotowanych w ramach projektu, dlatego stanowiły również okazję do sprawdzenia ich w praktyce. Obserwowaliśmy reakcje uczestników, sprawdzaliśmy, które elementy najlepiej sprawdzają się podczas zajęć i na bieżąco wprowadzaliśmy zmiany do kolejnych edycji.\n\nTym bardziej cieszy nas, że już pierwsze szkolenia zostały wysoko ocenione przez uczestników. Zebrane ankiety ewaluacyjne pokazują, że szczególnie dobrze odbierane były wartość merytoryczna zajęć, sposób ich prowadzenia, praktyczne podejście oraz atmosfera sprzyjająca aktywnemu udziałowi. Pojawiające się sugestie dotyczyły przede wszystkim dalszego rozwijania programów, zwiększania liczby ćwiczeń oraz przeznaczenia jeszcze większej ilości czasu na część praktyczną. To dla nas cenna informacja przy planowaniu kolejnych spotkań.\n\nW przypadku edukacji medialnej, fake news i krytycznego myślenia uczestnicy szczególnie doceniali konkretne przykłady, ćwiczenia oraz pracę na rzeczywistych przypadkach dezinformacji i manipulacji. Ważnym elementem zajęć było poznawanie mechanizmów wpływających na sposób, w jaki oceniamy informacje, oraz praktycznych metod sprawdzania ich wiarygodności.\n\nPodczas zajęć z grywalizacji i Game-Based Learning dużym zainteresowaniem cieszyły się praktyczne możliwości wykorzystania gier i mechanizmów grywalizacyjnych. Uczestnicy nie tylko poznawali przykłady takich rozwiązań, ale również zastanawiali się, w jaki sposób mogą wykorzystać je we własnej pracy. W ankietach pojawiały się już konkretne pomysły na zastosowanie poznanych metod.\n\nZ kolei warsztaty z wystąpień publicznych i storytellingu pozwalały przede wszystkim ćwiczyć. Uczestnicy zwracali uwagę na sposób przekazywania wiedzy, warsztatowy charakter spotkań oraz atmosferę, która ułatwiała przełamywanie stresu i stopniowe zdobywanie większej swobody podczas wystąpień przed grupą.\n\nWrzesień był więc dla nas czymś więcej niż tylko intensywnym miesiącem szkoleniowym. Był również ważnym etapem testowania i doskonalenia programów wypracowanych w ramach projektu „Edukacja bez granic”. Opinie uczestników pozwoliły nam sprawdzić przyjęte założenia w praktyce i wskazały, w jakim kierunku warto dalej rozwijać poszczególne szkolenia.\n\nA w październiku nie zwalniamy tempa. Przed nami kolejne spotkania. Rozszerzamy również grono odbiorców - w następnych szkoleniach uczestniczyć będą pracownicy Powiatowych Urzędów Pracy, dzięki czemu rezultaty projektu będą trafiały do kolejnych osób i instytucji.",
+      "bodyEn": "Three sessions focused on media literacy, fake news and critical thinking, two on public speaking and storytelling, and two on gamification and Game-Based Learning.\n\nNearly 70 employees of the Voivodeship Labour Office in Katowice took part in the September offer. From the beginning, we wanted the sessions to be strongly practical, combining substantive content with exercises, group work, analysis of specific examples, discussions and exchange of experience.\n\nThe September cycle also had another important role. These were the first training sessions based on new programmes developed within the project, so they were also an opportunity to test them in practice. We observed participants’ reactions, checked which elements worked best and introduced improvements in subsequent editions.\n\nWe are especially pleased that the first sessions were already rated highly by participants. Evaluation surveys show that the substantive value, delivery, practical approach and atmosphere supporting active participation were particularly appreciated. Suggestions mainly concerned further development of the programmes, more exercises and even more time for practical work.\n\nIn media literacy, fake news and critical thinking, participants particularly appreciated concrete examples, exercises and work with real cases of disinformation and manipulation.\n\nIn gamification and Game-Based Learning, participants valued practical ways of using games and gamification mechanisms and began identifying ways to apply them in their own work.\n\nPublic speaking and storytelling workshops focused strongly on practice. Participants highlighted the way knowledge was shared, the workshop format and an atmosphere that helped reduce stress and gradually build confidence in speaking in front of a group.\n\nSeptember was therefore more than just an intensive month of training. It was also an important stage in testing and improving the programmes developed within the Education Without Borders project.\n\nAnd in October we are not slowing down. More sessions are ahead, and the audience is expanding to include employees of District Labour Offices, allowing the project results to reach more people and institutions.",
+      "image": "grafiki/edukacjabz-logo-article.png",
+      "imageAlt": "Logo projektu „Edukacja bez granic”",
+      "imageAltEn": "Education Without Borders project logo",
+      "theme": "summary",
+      "imageMode": "logo",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
+      "id": "zanim-uwierzysz-sprawdz-edukacja-medialna-2026-09-29",
+      "date": "2026-09-29",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Zanim uwierzysz, sprawdź - szkolenie z edukacji medialnej",
+      "titleEn": "Before you believe it, check it - media literacy training",
+      "lead": "29 września odbyło się szkolenie „Edukacja medialna, fake news i krytyczne myślenie”, realizowane w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "On 29 September, a training session on media literacy, fake news and critical thinking took place as part of the Education Without Borders project.",
+      "body": "Szkolenie poprowadzili Łukasz i Grzegorz. Punktem wyjścia do rozmowy było pytanie: dlaczego niektóre informacje przyjmujemy niemal od razu za prawdziwe, a wobec innych automatycznie stajemy się podejrzliwi?\n\nPodczas szkolenia przyglądaliśmy się temu, jak na ocenę informacji wpływają emocje, sposób sformułowania przekazu, jego źródło oraz nasze wcześniejsze przekonania. Rozmawialiśmy również o tym, dlaczego prawdziwe zdjęcie, cytat czy statystyka mogą prowadzić do błędnych wniosków, jeżeli zostaną pokazane bez odpowiedniego kontekstu.\n\nW części praktycznej uczestnicy pracowali m.in. z ćwiczeniem „Jeden post - cztery warstwy”, które pozwoliło przejść przez podstawowe etapy fact-checkingu i przyjrzeć się temu, co w danym przekazie jest faktem, interpretacją, emocją lub elementem wymagającym dalszego sprawdzenia.\n\nZ kolei ćwiczenie „Jeden fakt - pięć światów” pokazało, jak bardzo ten sam fakt może zmienić swój wydźwięk w zależności od tego, w jaki sposób zostanie przedstawiony, jakich słów użyjemy i na czym skupimy uwagę odbiorcy.\n\nUczestnicy pracowali również z profilami użytkowników mediów społecznościowych, zastanawiając się, co można wywnioskować na podstawie sposobu publikowania treści, używanego języka, źródeł i aktywności danego konta. Ćwiczenie pokazało, że ocena wiarygodności profilu wymaga spojrzenia na więcej niż jeden element i unikania pochopnych wniosków.\n\nWspólnie wracaliśmy do jednej z najważniejszych zasad krytycznego myślenia: nie chodzi o to, aby nie wierzyć w nic, ale żeby wiedzieć, kiedy warto się zatrzymać i sprawdzić więcej.\n\nDziękujemy uczestnikom za aktywność, pytania, dyskusję i wspólną pracę!",
+      "bodyEn": "The training was led by Łukasz and Grzegorz. We began with a question: why do we accept some information as true almost immediately, while becoming suspicious of other messages straight away?\n\nDuring the session, we looked at how emotions, wording, sources and prior beliefs influence the way information is assessed. We also discussed why a real photo, quotation or statistic can still lead to false conclusions when it is presented without the right context.\n\nIn the practical part, participants worked with the exercise “One post - four layers”, which introduced basic fact-checking steps and helped distinguish facts, interpretations, emotions and elements that require further verification.\n\nThe exercise “One fact - five worlds” showed how strongly the meaning of the same fact can change depending on how it is presented, which words are used and what the audience's attention is directed towards.\n\nParticipants also worked with social media profiles, considering what can and cannot be inferred from posting style, language, sources and account activity. The exercise showed that assessing a profile's credibility requires looking at more than one element and avoiding hasty conclusions.\n\nWe returned to one of the key principles of critical thinking: the aim is not to believe nothing, but to know when it is worth stopping and checking more.\n\nThank you to all participants for your activity, questions, discussion and work together!",
+      "image": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/prowadzacy-lukasz-grzegorz.webp",
+      "imageAlt": "Łukasz i Grzegorz prowadzą szkolenie z edukacji medialnej",
+      "imageAltEn": "Łukasz and Grzegorz leading a media literacy training session",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/uczestnicy-cwiczenia.webp",
+          "alt": "Uczestnicy wykonują ćwiczenia podczas szkolenia z edukacji medialnej",
+          "altEn": "Participants working on exercises during the media literacy training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/praca-z-kartami.webp",
+          "alt": "Praca z kartami ćwiczeń podczas szkolenia",
+          "altEn": "Working with exercise sheets during the training"
+        }
+      ]
+    },
+    {
       "id": "czy-storytelling-to-opowiadanie-bajek-2026-09-25",
       "date": "2026-09-25",
       "published": true,
@@ -282,7 +331,9 @@ window.portalSiteData = {
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true,
+      "newsId": "zanim-uwierzysz-sprawdz-edukacja-medialna-2026-09-29"
     },
     {
       "id": "komunikacja",
