@@ -1,0 +1,15 @@
+/* Show the second photo at its natural ratio when a post has one gallery image. */
+.news-gallery.news-gallery--single {
+  display: block;
+  height: auto;
+}
+.news-gallery.news-gallery--single button {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.news-gallery.news-gallery--single img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

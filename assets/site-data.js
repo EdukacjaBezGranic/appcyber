@@ -5,6 +5,121 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "zanim-uwierzysz-sprawdz-edukacja-medialna-2026-09-29",
+      "date": "2026-09-29",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Zanim uwierzysz, sprawdź - szkolenie z edukacji medialnej",
+      "titleEn": "Before you believe it, check it - media literacy training",
+      "lead": "29 września odbyło się szkolenie „Edukacja medialna, fake news i krytyczne myślenie”, realizowane w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "On 29 September, a training session on media literacy, fake news and critical thinking took place as part of the Education Without Borders project.",
+      "body": "Szkolenie poprowadzili Łukasz i Grzegorz. Punktem wyjścia do rozmowy było pytanie: dlaczego niektóre informacje przyjmujemy niemal od razu za prawdziwe, a wobec innych automatycznie stajemy się podejrzliwi?\n\nPodczas szkolenia przyglądaliśmy się temu, jak na ocenę informacji wpływają emocje, sposób sformułowania przekazu, jego źródło oraz nasze wcześniejsze przekonania. Rozmawialiśmy również o tym, dlaczego prawdziwe zdjęcie, cytat czy statystyka mogą prowadzić do błędnych wniosków, jeżeli zostaną pokazane bez odpowiedniego kontekstu.\n\nW części praktycznej uczestnicy pracowali m.in. z ćwiczeniem „Jeden post - cztery warstwy”, które pozwoliło przejść przez podstawowe etapy fact-checkingu i przyjrzeć się temu, co w danym przekazie jest faktem, interpretacją, emocją lub elementem wymagającym dalszego sprawdzenia.\n\nZ kolei ćwiczenie „Jeden fakt - pięć światów” pokazało, jak bardzo ten sam fakt może zmienić swój wydźwięk w zależności od tego, w jaki sposób zostanie przedstawiony, jakich słów użyjemy i na czym skupimy uwagę odbiorcy.\n\nUczestnicy pracowali również z profilami użytkowników mediów społecznościowych, zastanawiając się, co można wywnioskować na podstawie sposobu publikowania treści, używanego języka, źródeł i aktywności danego konta. Ćwiczenie pokazało, że ocena wiarygodności profilu wymaga spojrzenia na więcej niż jeden element i unikania pochopnych wniosków.\n\nWspólnie wracaliśmy do jednej z najważniejszych zasad krytycznego myślenia: nie chodzi o to, aby nie wierzyć w nic, ale żeby wiedzieć, kiedy warto się zatrzymać i sprawdzić więcej.\n\nDziękujemy uczestnikom za aktywność, pytania, dyskusję i wspólną pracę!",
+      "bodyEn": "The training was led by Łukasz and Grzegorz. We began with a question: why do we accept some information as true almost immediately, while becoming suspicious of other messages straight away?\n\nDuring the session, we looked at how emotions, wording, sources and prior beliefs influence the way information is assessed. We also discussed why a real photo, quotation or statistic can still lead to false conclusions when it is presented without the right context.\n\nIn the practical part, participants worked with the exercise “One post - four layers”, which introduced basic fact-checking steps and helped distinguish facts, interpretations, emotions and elements that require further verification.\n\nThe exercise “One fact - five worlds” showed how strongly the meaning of the same fact can change depending on how it is presented, which words are used and what the audience's attention is directed towards.\n\nParticipants also worked with social media profiles, considering what can and cannot be inferred from posting style, language, sources and account activity. The exercise showed that assessing a profile's credibility requires looking at more than one element and avoiding hasty conclusions.\n\nWe returned to one of the key principles of critical thinking: the aim is not to believe nothing, but to know when it is worth stopping and checking more.\n\nThank you to all participants for your activity, questions, discussion and work together!",
+      "image": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/prowadzacy-lukasz-grzegorz.webp",
+      "imageAlt": "Łukasz i Grzegorz prowadzą szkolenie z edukacji medialnej",
+      "imageAltEn": "Łukasz and Grzegorz leading a media literacy training session",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/uczestnicy-cwiczenia.webp",
+          "alt": "Uczestnicy wykonują ćwiczenia podczas szkolenia z edukacji medialnej",
+          "altEn": "Participants working on exercises during the media literacy training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-29-edukacja-medialna/praca-z-kartami.webp",
+          "alt": "Praca z kartami ćwiczeń podczas szkolenia",
+          "altEn": "Working with exercise sheets during the training"
+        }
+      ]
+    },
+    {
+      "id": "czy-storytelling-to-opowiadanie-bajek-2026-09-25",
+      "date": "2026-09-25",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Czy storytelling to opowiadanie bajek?",
+      "titleEn": "Is storytelling just telling fairy tales?",
+      "lead": "25 września odbyło się kolejne szkolenie realizowane w ramach projektu „Edukacja bez granic” — tym razem poświęcone wystąpieniom publicznym i storytellingowi.",
+      "leadEn": "On 25 September, another training session took place as part of the Education Without Borders project — this time focusing on public speaking and storytelling.",
+      "body": "Czy storytelling oznacza po prostu opowiadanie bajek? Nie do końca. Dobra historia może jednak sprawić, że nawet złożony temat stanie się bardziej zrozumiały, ciekawszy i łatwiejszy do zapamiętania.\n\nPodczas szkolenia rozmawialiśmy o tym, jak budować wypowiedź, która ma wyraźny początek, rozwinięcie i zakończenie, jak zainteresować odbiorców oraz jak wykorzystać historię, przykład lub anegdotę, żeby lepiej przekazać najważniejszą myśl.\n\nNie zabrakło również rozmów o tym, co pomaga utrzymać uwagę słuchaczy, jak dopasować sposób mówienia do odbiorców i dlaczego czasem jedna dobrze opowiedziana historia może powiedzieć więcej niż kilka slajdów pełnych tekstu.\n\nByła przestrzeń na przykłady, dyskusję i spojrzenie na wystąpienia publiczne z trochę mniej formalnej strony. Bo dobra prezentacja nie musi oznaczać wyłącznie stania przed ekranem i odczytywania kolejnych punktów.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólnie spędzony czas!",
+      "bodyEn": "Does storytelling simply mean telling fairy tales? Not quite. A good story can, however, make even a complex topic easier to understand, more engaging and easier to remember.\n\nDuring the training, we discussed how to structure a speech with a clear beginning, development and ending, how to engage an audience, and how to use a story, example or anecdote to communicate the key message more effectively.\n\nWe also talked about what helps maintain listeners’ attention, how to adapt the way we speak to the audience, and why one well-told story can sometimes say more than several slides full of text.\n\nThere was room for examples, discussion and a less formal look at public speaking. A good presentation does not have to mean standing in front of a screen and reading consecutive bullet points.\n\nThank you to all participants for your activity, openness and time spent together!",
+      "image": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-sala.webp",
+      "imageAlt": "Szkolenie z wystąpień publicznych i storytellingu – uczestnicy podczas zajęć",
+      "imageAltEn": "Public speaking and storytelling training – participants during the session",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-prezentacja.webp",
+          "alt": "Prowadząca podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Trainer during the public speaking and storytelling session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-25-wystapienia-storytelling/wystapienia-storytelling-cwiczenie.webp",
+          "alt": "Ćwiczenie podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Exercise during the public speaking and storytelling session"
+        }
+      ]
+    },
+    {
+      "id": "jak-nie-dac-sie-nabrac-edukacja-medialna-2026-09-23",
+      "date": "2026-09-23",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Jak nie dać się nabrać? Kolejne szkolenie z edukacji medialnej",
+      "titleEn": "How not to be misled? Another media literacy training session",
+      "lead": "23 września odbyło się kolejne szkolenie „Edukacja medialna, fake news i krytyczne myślenie”, przygotowane w ramach projektu „Edukacja bez granic”.",
+      "leadEn": "On 23 September, another training session on media literacy, fake news and critical thinking took place as part of the Education Without Borders project.",
+      "body": "Szkolenie poprowadzili Łukasz i Ania. Podczas zajęć uczestnicy przyglądali się temu, jak sposób przedstawienia informacji może wpływać na jej odbiór oraz jak prawdziwy materiał może zostać wykorzystany w mylącym kontekście.\n\nRozmawialiśmy o mechanizmach wykorzystywanych w dezinformacji i manipulacji, emocjonalnych przekazach oraz o tym, co właściwie wiemy, skąd pochodzi informacja i czego jeszcze potrzebujemy, aby móc ją rzetelnie ocenić.\n\nW trakcie szkolenia pojawiły się również elementy praktyczne. Uczestnicy analizowali wybrane przykłady internetowych przekazów, zwracając uwagę na sposób przedstawienia informacji, użyty język, kontekst oraz wiarygodność źródła. Ćwiczenia były punktem wyjścia do rozmowy o tym, jak świadomie oceniać treści i na co zwracać uwagę przed ich dalszym udostępnieniem.\n\nNie zabrakło także pytań, dyskusji i wymiany doświadczeń związanych z codziennym korzystaniem z mediów i mediów społecznościowych.\n\nDziękujemy uczestnikom za aktywność, zaangażowanie i wspólną pracę!",
+      "bodyEn": "The session was led by Łukasz and Ania. Participants looked at how the way information is presented can influence how it is received and how authentic material can be used in a misleading context.\n\nWe discussed mechanisms used in disinformation and manipulation, emotional messaging, and what we actually know, where information comes from and what else we need in order to assess it reliably.\n\nThe training also included practical elements. Participants analysed selected examples of online messages, paying attention to the way information was presented, the language used, the context and the credibility of the source. The exercises provided a starting point for discussing how to assess content consciously and what to check before sharing it further.\n\nThere was also time for questions, discussion and sharing experiences related to everyday use of media and social media.\n\nThank you to all participants for your activity, engagement and work together!",
+      "image": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/sala-szkoleniowa.webp",
+      "imageAlt": "Uczestnicy podczas szkolenia „Edukacja medialna, fake news i krytyczne myślenie”",
+      "imageAltEn": "Participants during the Media Literacy, Fake News and Critical Thinking training session",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-23-edukacja-medialna/cwiczenie-analiza-przekazow.webp",
+          "alt": "Uczestnicy analizują materiały i karty ćwiczeń podczas szkolenia z edukacji medialnej",
+          "altEn": "Participants analysing materials and exercise sheets during the media literacy training"
+        }
+      ],
+      "published": true,
+      "showImageCaptions": false
+    },
+    {
+      "id": "kreatywnosc-w-dzialaniu-grywalizacja-2026-09-18",
+      "date": "2026-09-18",
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Kreatywność w działaniu - warsztaty z grywalizacji",
+      "titleEn": "Creativity in action - a gamification workshop",
+      "lead": "18 września spotkaliśmy się na szkoleniu z grywalizacji i uczenia przez gry. Był to dzień pełen ćwiczeń, rozmów i twórczych pomysłów. Uczestnicy mieli okazję spojrzeć na znane zadania z innej perspektywy i zastanowić się, jak uczynić je bardziej angażującymi.",
+      "leadEn": "On 18 September, we met for a workshop on gamification and game-based learning. The day was filled with exercises, conversations and creative ideas. Participants explored familiar tasks from a new angle and considered how to make them more engaging.",
+      "body": "Podczas warsztatów skupiliśmy się na kreatywności, współpracy i uczeniu się przez działanie. Ćwiczenia zachęcały do eksperymentowania, szukania różnych rozwiązań i dzielenia się własnymi doświadczeniami. Pokazały też, że elementy gry można wykorzystać w prosty sposób - na przykład proponując grupie wyzwanie, wspólny cel lub możliwość wyboru drogi do jego osiągnięcia.\n\nNie zabrakło śmiechu, żywych dyskusji i dobrej atmosfery, która sprzyjała swobodnej wymianie pomysłów. Dziękujemy wszystkim uczestnikom za zaangażowanie i energię wniesioną do wspólnej pracy!",
+      "bodyEn": "The workshop focused on creativity, collaboration and learning by doing. Exercises encouraged participants to experiment, explore different solutions and share their experience. They also showed how game elements can be used in simple ways - by offering a group a challenge, a shared goal or a choice of how to reach it.\n\nThere was laughter, lively discussion and a friendly atmosphere that made it easy to exchange ideas. Thank you to everyone for your engagement and the energy you brought to the workshop!",
+      "image": "grafiki/aktualnosci/2026-09-18-grywalizacja/prezentacja-gry-planszowej.jpg",
+      "imageAlt": "Prezentacja gry planszowej podczas szkolenia z grywalizacji",
+      "imageAltEn": "A board game presentation during the gamification workshop",
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/uczestnicy-szkolenia.jpg",
+          "alt": "Uczestnicy szkolenia z grywalizacji podczas prezentacji przykładów gier edukacyjnych",
+          "altEn": "Gamification workshop participants during a presentation of educational games"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/cwiczenie-bingo.png",
+          "alt": "Uczestnicy wspólnie wykonują ćwiczenie bingo podczas warsztatów z grywalizacji",
+          "altEn": "Participants doing a bingo exercise together at the gamification workshop"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/praca-z-kartami-zadan.jpg",
+          "alt": "Uczestnicy wypełniają karty zadań podczas warsztatów z grywalizacji",
+          "altEn": "Participants filling in activity sheets at the gamification workshop"
+        }
+      ],
+      "published": true
+    },
+    {
       "id": "szkolenie-edukacja-medialna-fake-news-2026-09-16",
       "date": "2026-09-16",
       "category": "Z życia projektu",
@@ -170,7 +285,8 @@ window.portalSiteData = {
       "link": "https://forms.gle/tWPhUFZjoU6VXCMbA",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true
     },
     {
       "id": "fake-news-2026-09-29",
@@ -195,7 +311,9 @@ window.portalSiteData = {
       "link": "https://forms.gle/tCxBqdFeEe4nkCf88",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true,
+      "newsId": "zanim-uwierzysz-sprawdz-edukacja-medialna-2026-09-29"
     },
     {
       "id": "komunikacja",
@@ -244,7 +362,9 @@ window.portalSiteData = {
       "link": "https://forms.gle/2qVJQ2WiMixrirvb8",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": true
+      "registrationClosed": true,
+      "completed": true,
+      "newsId": "czy-storytelling-to-opowiadanie-bajek-2026-09-25"
     },
     {
       "id": "grywalizacja",
@@ -289,11 +409,89 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/bYtFwViHgS6rBgUp8",
       "button": "Sprawdź terminarz",
       "calendarOnly": true,
-      "registrationClosed": false
+      "registrationClosed": true
+    },
+    {
+      "id": "komunikacja-2026-10-06",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Wystąpienia publiczne i storytelling",
+      "shortTitle": "Wystąpienia publiczne",
+      "date": "2026-10-06",
+      "calendarColor": "#187254",
+      "tone": "green",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
+        "Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy."
+      ],
+      "color": "#1f6f54",
+      "image": "grafiki/komunikacja.webp",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/KioaiUgTELcNvNmk6",
+      "button": "Zapisz się",
+      "calendarOnly": true,
+      "audienceTag": "WUP"
+    },
+    {
+      "id": "grywalizacja-2026-10-07",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-10-07",
+      "calendarColor": "#0d6a96",
+      "tone": "blue",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie wewnętrzne dla pracowników WUP Katowice",
+      "description": [
+        "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
+        "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "https://forms.gle/X6LZVXsRik1Xojbe9",
+      "button": "Zapisz się",
+      "registrationClosed": false,
+      "calendarOnly": true,
+      "audienceTag": "WUP"
+    },
+    {
+      "id": "komunikacja-2026-10-13",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Wystąpienia publiczne i storytelling",
+      "shortTitle": "Wystąpienia publiczne",
+      "date": "2026-10-13",
+      "calendarColor": "#1f6f54",
+      "tone": "green",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników Powiatowych Urzędów Pracy",
+      "description": [
+        "Ćwiczysz jasne przekazywanie informacji bez chaosu, przeładowania i uciekania w urzędowe formuły.",
+        "Porządkujesz strukturę wypowiedzi, pracujesz nad kontaktem z grupą, opowiadasz przykłady i budujesz komunikat zrozumiały dla odbiorcy."
+      ],
+      "color": "#1f6f54",
+      "image": "grafiki/komunikacja.webp",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/qAsS9mA1AzsR4Sby7",
+      "button": "Zapisz się",
+      "calendarOnly": true,
+      "audienceTag": "PUP"
     },
     {
       "id": "ai-pup-zabrze-2026-10-21",
@@ -319,6 +517,84 @@ window.portalSiteData = {
       "link": "",
       "button": "Zapisy zakończone",
       "calendarOnly": true
+    },
+    {
+      "id": "fake-news-2026-10-22",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Edukacja medialna, fake news i krytyczne myślenie",
+      "shortTitle": "Edukacja medialna",
+      "date": "2026-10-22",
+      "calendarColor": "#0e7490",
+      "tone": "cyan",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników Powiatowych Urzędów Pracy",
+      "description": [
+        "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
+        "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "https://forms.gle/fTwB1DStd58EeNBZ9",
+      "button": "Zapisz się",
+      "registrationClosed": false,
+      "calendarOnly": true,
+      "audienceTag": "PUP"
+    },
+    {
+      "id": "grywalizacja-2026-10-26",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-10-26",
+      "calendarColor": "#0d4f96",
+      "tone": "blue",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników Powiatowych Urzędów Pracy",
+      "description": [
+        "Szkolenie pokazuje, jak wykorzystywać proste elementy gier do pobudzania kreatywności, angażowania grupy i wzmacniania współpracy. Uczestnicy rozwiązują problemy, podejmują decyzje, eksperymentują i wymieniają się pomysłami.",
+        "Nie trzeba znać się na grach ani tworzyć rozbudowanych systemów punktów. Pracujemy z wyzwaniami, rolami, celami i informacją zwrotną, które można łatwo wykorzystać podczas spotkań, szkoleń i pracy zespołowej."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "https://forms.gle/p3yRvwcjWivh248g7",
+      "button": "Zapisz się",
+      "registrationClosed": false,
+      "calendarOnly": true,
+      "audienceTag": "PUP"
+    },
+    {
+      "id": "fake-news-2026-10-27",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Edukacja medialna, fake news i krytyczne myślenie",
+      "shortTitle": "Edukacja medialna",
+      "date": "2026-10-27",
+      "calendarColor": "#6857a8",
+      "tone": "blue",
+      "time": "09:00 - 14:15",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników Powiatowych Urzędów Pracy",
+      "description": [
+        "Sensacyjny nagłówek, fałszywy kontekst i nagranie wygenerowane przez AI wymagają różnych sposobów sprawdzania. Podczas szkolenia uczysz się rozpoznawać te mechanizmy i zatrzymywać reakcję przed udostępnieniem.",
+        "Oceniasz źródło, oddzielasz fakt od opinii i przechodzisz krok po kroku od podejrzanego twierdzenia do uczciwego wniosku."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "link": "https://forms.gle/e3PfzyLNqswoxrH58",
+      "button": "Zapisz się",
+      "registrationClosed": false,
+      "calendarOnly": true,
+      "audienceTag": "PUP"
     },
     {
       "id": "ai",

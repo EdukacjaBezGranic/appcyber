@@ -1,3 +1,15 @@
+- dodano aktualność z 29.09.2026 po szkoleniu z edukacji medialnej, trzema zdjęciami oraz oznaczono termin 29.09 jako zakończony.
+- dodano aktualność z 25.09.2026 po szkoleniu z wystąpień publicznych i storytellingu wraz z trzema zdjęciami; termin 25.09 oznaczono jako zakończony.
+- aktualność z 23.09: pozostawiono dwa wskazane zdjęcia w ustalonej kolejności; termin 23.09 oznaczono jako zakończony i wyszarzony od razu.
+- w aktualności z 23.09.2026 pozostawiono dwa zdjęcia; usunięto najmniejsze trzecie zdjęcie.
+- dodano aktualność z 23.09.2026 po szkoleniu „Edukacja medialna, fake news i krytyczne myślenie” wraz z trzema różnymi zdjęciami.
+Aktualizacja 22.09.2026 - terminarz i rekrutacja:
+- dodano potwierdzone terminy: 06.10 WUP (wystąpienia), 07.10 WUP (grywalizacja), 13.10 PUP (wystąpienia), 22.10 PUP (media literacy), 26.10 PUP (grywalizacja), 27.10 PUP (media literacy);
+- uruchomiono formularze rekrutacyjne dla tych sześciu terminów; szkolenie AI w PUP Zabrze 21.10 pozostawiono bez zmian;
+- kafelki szkoleń pokazują oznaczenie „Szkolenie dla pracowników WUP” albo „Szkolenie dla pracowników PUP” zgodnie z najbliższym otwartym terminem;
+- minione terminy wyszarzają się automatycznie i otrzymują status „Termin minął”;
+- jeśli do minionego szkolenia istnieje wpis w Aktualnościach z tą samą datą, w szczegółach terminarza wyświetla się karta relacji z linkiem do wpisu.
+
 
 Nowości w R8.35:
 - na stronie „Kursy online” dodano przycisk „Pobierz komiks (PDF)” obok przycisku podręcznika;

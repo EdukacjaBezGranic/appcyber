@@ -18,7 +18,12 @@ Object.assign(DICT,{
   "Proste elementy gier, wyzwania i role, które pobudzają kreatywność, angażują grupę i pomagają uczestnikom lepiej współpracować.":"Simple game elements, challenges and roles that spark creativity, engage the group and help participants collaborate more effectively.",
   "Aktualności":"News",
   "Aktualności - Edukacja bez granic":"News - Education without Borders",
-  "Strona główna":"Home"
+  "Strona główna":"Home",
+  "Szkolenie dla pracowników WUP":"Training for WUP staff",
+  "Szkolenie dla pracowników PUP":"Training for PUP staff",
+  "Szkolenie dla pracowników Powiatowych Urzędów Pracy":"Training for district labour office staff",
+  "Termin minął":"Date passed",
+  "Relacja ze szkolenia":"Training report"
 });
 let lang=localStorage.getItem(STORAGE)==='en'?'en':'pl';
 const originals=new WeakMap();
