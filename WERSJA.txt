@@ -1,3 +1,7 @@
+- zamknięto zapisy na termin 13.10.2026 (PUP - wystąpienia publiczne i storytelling).
+- zamknięto zapisy na szkolenia 06.10.2026 i 07.10.2026; terminy pozostają widoczne w terminarzu.
+- terminarz automatycznie otwiera bieżący miesiąc i odświeża się po północy; od 01.10 pokaże październik bez ręcznej zmiany.
+- w kursie online przycisk „Zaznacz jako ukończone” przeniesiono na koniec każdej lekcji/punktu.
 - poprawiono podsumowanie 30.09: nadtytuł „Podsumowanie działań projektowych”, większe logo i układ artykułowy z tekstem opływającym ilustrację.
 - dodano podsumowanie września z datą 30.09.2026, ilustracją z logo projektu i delikatnie wyróżnionym tłem wpisu.
 - dodano aktualność z 29.09.2026 po szkoleniu z edukacji medialnej, trzema zdjęciami oraz oznaczono termin 29.09 jako zakończony.

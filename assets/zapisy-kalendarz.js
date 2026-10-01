@@ -47,7 +47,7 @@ const monthNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec'
 
 let currentYear = 2026;
 let currentMonth = 8;
-let selectedEventId = 'fake-news';
+let selectedEventId = '';
 
 const detailPanel = document.querySelector('.calendar-details');
 const calendarGrid = document.querySelector('[data-calendar-grid]');
@@ -68,6 +68,62 @@ function parseDate(value) {
 
 function monthIndex(year, month) {
   return year * 12 + month;
+}
+
+
+function clampCalendarMonth(year, month) {
+  const index = monthIndex(year, month);
+  const min = monthIndex(minMonth.year, minMonth.month);
+  const max = monthIndex(maxMonth.year, maxMonth.month);
+  if (index < min) return { year: minMonth.year, month: minMonth.month };
+  if (index > max) return { year: maxMonth.year, month: maxMonth.month };
+  return { year, month };
+}
+
+function preferredEventForMonth(year, month, now = new Date()) {
+  const monthEvents = eventsInMonth(year, month);
+  if (!monthEvents.length) return findNearestEvent(now);
+
+  const today = startOfToday(now);
+  const upcoming = monthEvents.find(event => {
+    const date = parseDate(event.date);
+    return date && date >= today;
+  });
+  return upcoming || monthEvents.at(-1) || findNearestEvent(now);
+}
+
+function syncCalendarToCurrentMonth(now = new Date(), forceMonth = true) {
+  const target = clampCalendarMonth(now.getFullYear(), now.getMonth());
+  const monthChanged = currentYear !== target.year || currentMonth !== target.month;
+
+  if (forceMonth || monthChanged) {
+    currentYear = target.year;
+    currentMonth = target.month;
+    const preferred = preferredEventForMonth(currentYear, currentMonth, now);
+    if (preferred) selectedEventId = preferred.id;
+  }
+
+  renderMonth();
+}
+
+function scheduleMidnightRefresh() {
+  const now = new Date();
+  const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 1, 0);
+  const delay = Math.max(1000, nextMidnight.getTime() - now.getTime());
+
+  window.setTimeout(() => {
+    const afterMidnight = new Date();
+    const target = clampCalendarMonth(afterMidnight.getFullYear(), afterMidnight.getMonth());
+    const monthChanged = currentYear !== target.year || currentMonth !== target.month;
+
+    if (monthChanged) {
+      syncCalendarToCurrentMonth(afterMidnight, true);
+    } else {
+      // Odśwież także statusy zakończonych terminów po zmianie dnia.
+      renderMonth();
+    }
+    scheduleMidnightRefresh();
+  }, delay);
 }
 
 function formatMonth(year, month) {
@@ -413,4 +469,5 @@ window.addEventListener('message', (event) => {
   renderMonth();
 });
 
-renderMonth();
+syncCalendarToCurrentMonth(new Date(), true);
+scheduleMidnightRefresh();
