@@ -16,7 +16,7 @@ Uczestnik wpisuje własną analizę, odsłania kryteria i może poprawić odpowi
 
 - `assets/case-study-r83.js`
 - `assets/case-study-r83.css`
-- `grafiki/studium-przekrojowe/szkolenie-budynek-material-zrodlowy.png`
+- `grafiki/studium-przekrojowe/szkolenie-budynek-material-zrodlowy.webp`
 - `kurs-fake-news.html`
 
 Zachowano dotychczasowe treści, przypadki AFP i Demagog, filmy, gry, testy oraz generowanie kart osiągnięć PDF.

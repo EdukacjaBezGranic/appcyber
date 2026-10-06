@@ -1,3 +1,4 @@
+- 06.10.2026: dodano aktualność otwierającą październikową serię szkoleń - wystąpienia publiczne i storytelling; dodano 3 zdjęcia i relację z terminarza.
 - zamknięto zapisy na termin 13.10.2026 (PUP - wystąpienia publiczne i storytelling).
 - zamknięto zapisy na szkolenia 06.10.2026 i 07.10.2026; terminy pozostają widoczne w terminarzu.
 - terminarz automatycznie otwiera bieżący miesiąc i odświeża się po północy; od 01.10 pokaże październik bez ręcznej zmiany.

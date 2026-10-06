@@ -12,7 +12,7 @@ Ta paczka zawiera ostatnie zmiany:
 - tytuly glownych sekcji maja wlasne kolory,
 - kafelki sa spokojne w stanie spoczynku, a po najechaniu kursorem dostaja kolorowy fade, lekkie uniesienie i kolorowy przycisk,
 - wnetrza cwiczen maja delikatne pastelowe akcenty w kartach, sekcjach, zakladkach, materialach zrodlowych i scenariuszach prowadzacego,
-- dodany jest plik assets/training-banner.png,
+- dodany jest plik assets/training-banner.webp,
 - wszystkie cwiczenia otwieraja sie teraz w wizualnym ukladzie:
   Pulpit pracy, Materialy zrodlowe, Dla prowadzacego,
 - pierwszy ekran cwiczenia pokazuje mape pracy, efekty, decyzje, kroki i checklisty zamiast samej dlugiej tresci,

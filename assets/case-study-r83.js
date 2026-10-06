@@ -2,7 +2,7 @@
   'use strict';
 
   const STORAGE_KEY = 'ebg-cross-case-r84';
-  const photo = 'grafiki/studium-przekrojowe/doplaty-ogrzewanie-kolejka-urzad.png';
+  const photo = 'grafiki/studium-przekrojowe/doplaty-ogrzewanie-kolejka-urzad.webp';
   const copy = {
     m1: {
       no: '1/5',
@@ -82,8 +82,8 @@
   }
 
   function visualMarkup(module){
-    if(module==='m3') return `<figure class="case-visual"><img src="grafiki/studium-przekrojowe/profil-alarmistycznych-publikacji.png" alt=""><figcaption><span class="lang-pl">Ilustracja profilu publikującego serię alarmistycznych treści</span><span class="lang-en">Illustration of a profile publishing a series of alarmist posts</span></figcaption></figure>`;
-    if(module==='m4') return `<div class="case-visual-grid"><figure class="case-visual"><img src="grafiki/studium-przekrojowe/uchwala-i-komunikat-urzedowy.png" alt=""><figcaption><span class="lang-pl">Ilustracja dokumentów urzędowych poddawanych analizie</span><span class="lang-en">Illustration of official documents under analysis</span></figcaption></figure><figure class="case-visual"><img src="grafiki/studium-przekrojowe/sprawdzanie-historii-zdjecia.png" alt=""><figcaption><span class="lang-pl">Ilustracja procesu sprawdzania historii zdjęcia</span><span class="lang-en">Illustration of checking an image's history</span></figcaption></figure></div>`;
+    if(module==='m3') return `<figure class="case-visual"><img src="grafiki/studium-przekrojowe/profil-alarmistycznych-publikacji.webp" alt=""><figcaption><span class="lang-pl">Ilustracja profilu publikującego serię alarmistycznych treści</span><span class="lang-en">Illustration of a profile publishing a series of alarmist posts</span></figcaption></figure>`;
+    if(module==='m4') return `<div class="case-visual-grid"><figure class="case-visual"><img src="grafiki/studium-przekrojowe/uchwala-i-komunikat-urzedowy.webp" alt=""><figcaption><span class="lang-pl">Ilustracja dokumentów urzędowych poddawanych analizie</span><span class="lang-en">Illustration of official documents under analysis</span></figcaption></figure><figure class="case-visual"><img src="grafiki/studium-przekrojowe/sprawdzanie-historii-zdjecia.webp" alt=""><figcaption><span class="lang-pl">Ilustracja procesu sprawdzania historii zdjęcia</span><span class="lang-en">Illustration of checking an image's history</span></figcaption></figure></div>`;
     return '';
   }
 

@@ -5,6 +5,35 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "pazdziernik-zaczynamy-wystapienia-storytelling-2026-10-06",
+      "date": "2026-10-06",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Październik zaczynamy od wystąpień publicznych i storytellingu",
+      "titleEn": "October begins with public speaking and storytelling",
+      "lead": "6 października rozpoczęliśmy październikową serię szkoleń realizowanych w ramach projektu „Edukacja bez granic”. Na początek - wystąpienia publiczne i storytelling.",
+      "leadEn": "On 6 October, we launched the October series of training sessions delivered as part of the Education Without Borders project. We began with public speaking and storytelling.",
+      "body": "Podczas dzisiejszego spotkania uczestnicy pracowali nad tym, jak mówić jasno, konkretnie i w sposób, który utrzymuje uwagę odbiorców. Była praca nad strukturą wypowiedzi, doborem najważniejszych informacji, kontaktem z grupą oraz wykorzystywaniem przykładów i historii, które pomagają lepiej przekazać główną myśl.\n\nJak zawsze zależało nam przede wszystkim na praktyce. Uczestnicy mieli okazję ćwiczyć, sprawdzać różne sposoby budowania wypowiedzi i przyglądać się temu, co sprawia, że komunikat jest zrozumiały, naturalny i zostaje z odbiorcą na dłużej.\n\nO dobrą atmosferę podczas spotkania zadbała również niezastąpiona Kamila, która jak zawsze przygotowała poczęstunek dla uczestników. A że październikowa seria dopiero się rozkręca, Kamila zaprasza również już następnego dnia - 7 października - na szkolenie z grywalizacji i Game-Based Learning.\n\nDzisiejsze spotkanie otwiera cały październikowy cykl. W kolejnych tygodniach wrócimy również do tematów edukacji medialnej, fake news i krytycznego myślenia, a część działań będzie skierowana także do pracowników Powiatowych Urzędów Pracy.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólną pracę. Październik dopiero się zaczyna - przed nami jeszcze sporo szkoleniowych spotkań.",
+      "bodyEn": "During the session, participants worked on how to speak clearly, concisely and in a way that keeps the audience's attention. They focused on structuring a message, selecting the most important information, engaging with the group and using examples and stories to communicate the main point more effectively.\n\nAs always, the emphasis was on practice. Participants had the opportunity to exercise, test different ways of building a statement and look at what makes a message clear, natural and memorable.\n\nThe atmosphere was also supported by our indispensable Kamila, who once again prepared refreshments for the participants. And because the October series is only getting started, Kamila also invites everyone to the next day's session - on 7 October - devoted to gamification and Game-Based Learning.\n\nToday's session opens the entire October cycle. In the coming weeks, we will also return to media literacy, fake news and critical thinking, and some activities will be addressed to employees of District Labour Offices.\n\nThank you to all participants for your activity, openness and work together. October is only beginning - there are still many training sessions ahead of us.",
+      "image": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/sala-szkoleniowa.webp",
+      "imageAlt": "Szkolenie z wystąpień publicznych i storytellingu w WUP Katowice",
+      "imageAltEn": "Public speaking and storytelling training at the Voivodeship Labour Office in Katowice",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/prowadzaca-wystapienia.webp",
+          "alt": "Prowadząca podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Trainer during the public speaking and storytelling session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/poczestunek.webp",
+          "alt": "Poczęstunek przygotowany dla uczestników szkolenia",
+          "altEn": "Refreshments prepared for training participants"
+        }
+      ]
+    },
+    {
       "id": "wrzesien-pelen-szkolen-podsumowanie-2026-09-30",
       "date": "2026-09-30",
       "published": true,
@@ -127,12 +156,12 @@ window.portalSiteData = {
           "altEn": "Gamification workshop participants during a presentation of educational games"
         },
         {
-          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/cwiczenie-bingo.png",
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/cwiczenie-bingo.webp",
           "alt": "Uczestnicy wspólnie wykonują ćwiczenie bingo podczas warsztatów z grywalizacji",
           "altEn": "Participants doing a bingo exercise together at the gamification workshop"
         },
         {
-          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/praca-z-kartami-zadan.jpg",
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/praca-z-kartami-zadan.webp",
           "alt": "Uczestnicy wypełniają karty zadań podczas warsztatów z grywalizacji",
           "altEn": "Participants filling in activity sheets at the gamification workshop"
         }
@@ -250,7 +279,7 @@ window.portalSiteData = {
           "altEn": "Presenting the new training topics on the project website"
         },
         {
-          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.jpg",
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.webp",
           "alt": "Uczestnicy spotkania upowszechniającego rezultaty projektów",
           "altEn": "Participants at the meeting sharing project results"
         }
@@ -459,7 +488,9 @@ window.portalSiteData = {
       "link": "https://forms.gle/KioaiUgTELcNvNmk6",
       "button": "Zapisz się",
       "calendarOnly": true,
-      "audienceTag": "WUP"
+      "audienceTag": "WUP",
+      "completed": true,
+      "newsId": "pazdziernik-zaczynamy-wystapienia-storytelling-2026-10-06"
     },
     {
       "id": "grywalizacja-2026-10-07",
@@ -530,7 +561,7 @@ window.portalSiteData = {
         "Uczestnicy poznają zastosowania AI wspierające przygotowanie materiałów, pracę z informacją i działania doradcze, z uwzględnieniem bezpieczeństwa danych oraz kontroli jakości odpowiedzi."
       ],
       "color": "#7c3aed",
-      "image": "grafiki/ai.jpg",
+      "image": "grafiki/ai.webp",
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "registrationClosed": true,
@@ -631,7 +662,7 @@ window.portalSiteData = {
         "Tworzysz treści i materiały, automatyzujesz proste zadania, ćwiczysz pisanie promptów oraz kontrolujesz bezpieczeństwo danych i jakość odpowiedzi."
       ],
       "color": "#7c3aed",
-      "image": "grafiki/ai.jpg",
+      "image": "grafiki/ai.webp",
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "link": "",
