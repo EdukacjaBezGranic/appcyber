@@ -5,6 +5,35 @@
   },
   "news": [
     {
+      "id": "grywalizacja-w-praktyce-2026-10-07",
+      "date": "2026-10-07",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Grywalizacja w praktyce - kreatywność, współpraca i uczenie przez działanie",
+      "titleEn": "Gamification in practice - creativity, collaboration and learning by doing",
+      "lead": "7 października kontynuowaliśmy październikową serię szkoleń w projekcie „Edukacja bez granic”. Tym razem uczestnicy pracowali z grywalizacją i Game-Based Learning, sprawdzając w praktyce, jak mechanizmy znane z gier mogą wspierać uczenie się i angażować grupę.",
+      "leadEn": "On 7 October, we continued the October training series in the Education Without Borders project. This time, participants explored gamification and Game-Based Learning, testing how game-inspired mechanisms can support learning and group engagement.",
+      "body": "Podczas szkolenia uczestnicy przyglądali się temu, jak wykorzystywać elementy gier w pracy szkoleniowej, edukacyjnej i zespołowej. Nie chodziło o tworzenie rozbudowanych systemów punktów czy rywalizacji, ale o takie projektowanie zadań, aby zachęcały do działania, współpracy, podejmowania decyzji i szukania własnych rozwiązań.\n\nDużo miejsca poświęciliśmy ćwiczeniom. Uczestnicy pracowali na kartach zadań, wspólnie rozwiązywali problemy i sprawdzali, jak proste mechanizmy grywalizacyjne mogą zmienić sposób odbioru nawet dobrze znanego zadania. Ważna była nie tylko sama zabawa, ale przede wszystkim refleksja nad tym, po co dany mechanizm jest stosowany i jaki efekt ma przynieść.\n\nJednym z elementów spotkania był również quiz w Kahoot, który pozwolił zobaczyć grywalizację od strony uczestnika - z natychmiastową informacją zwrotną, elementem wyzwania i lekką rywalizacją. To dobry przykład tego, że czasem prosty mechanizm może wyraźnie zwiększyć zaangażowanie grupy.\n\nRozmawialiśmy także o różnicy między grywalizacją a Game-Based Learning oraz o tym, kiedy gra rzeczywiście wspiera proces uczenia się, a kiedy pozostaje jedynie atrakcyjnym dodatkiem. Uczestnicy zastanawiali się, które z poznanych rozwiązań mogą wykorzystać we własnej pracy - podczas szkoleń, spotkań, pracy zespołowej i działań z klientami.\n\nDziękujemy uczestnikom za energię, kreatywność i aktywną pracę. Październikowa seria trwa - przed nami następne spotkania i kolejne okazje do testowania metod wypracowanych w ramach projektu „Edukacja bez granic”.",
+      "bodyEn": "During the session, participants explored how game elements can be used in training, education and teamwork. The aim was not to build complex point systems or competition, but to design tasks that encourage action, collaboration, decision-making and independent problem solving.\n\nA large part of the session was practical. Participants worked with task sheets, solved problems together and tested how simple gamification mechanisms can change the way even familiar tasks are experienced. The key was not only the fun element, but also reflecting on why a given mechanism is used and what effect it is intended to create.\n\nThe session also included a Kahoot quiz, allowing participants to experience gamification from the learner’s perspective - with immediate feedback, challenge and light competition. It showed how a simple mechanism can noticeably increase group engagement.\n\nWe also discussed the difference between gamification and Game-Based Learning, and when a game genuinely supports learning rather than becoming only an attractive addition. Participants considered which approaches could be transferred to their own work in training, meetings, teamwork and client-facing activities.\n\nThank you to all participants for your energy, creativity and active involvement. The October series continues, with more sessions and further opportunities to test methods developed within the Education Without Borders project.",
+      "image": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-praca-zespolowa.webp",
+      "imageAlt": "Uczestniczki pracują zespołowo podczas szkolenia z grywalizacji i Game-Based Learning",
+      "imageAltEn": "Participants working together during the gamification and Game-Based Learning training",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-karty-cwiczen.webp",
+          "alt": "Uczestniczki wypełniają karty ćwiczeń podczas szkolenia z grywalizacji",
+          "altEn": "Participants completing exercise sheets during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-kahoot.webp",
+          "alt": "Quiz Kahoot wykorzystany podczas szkolenia z grywalizacji",
+          "altEn": "A Kahoot quiz used during the gamification training"
+        }
+      ]
+    },
+    {
       "id": "pazdziernik-zaczynamy-wystapienia-storytelling-2026-10-06",
       "date": "2026-10-06",
       "published": true,
@@ -516,7 +545,9 @@
       "button": "Zapisz się",
       "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "WUP"
+      "audienceTag": "WUP",
+      "completed": true,
+      "newsId": "grywalizacja-w-praktyce-2026-10-07"
     },
     {
       "id": "komunikacja-2026-10-13",
