@@ -3,7 +3,7 @@ window.TRAINING_PANELS = {
     number: '02',
     title: 'Fake newsy i krytyczne myślenie',
     subtitle: 'Roboczy panel do szkolenia z rozpoznawania manipulacji, sprawdzania źródeł i spokojnej weryfikacji informacji.',
-    banner: '../training-panels/assets/fake-news-banner.png',
+    banner: '../training-panels/assets/fake-news-banner.webp',
     bannerAlt: 'Myślenie krytyczne, dezinformacja i manipulacja - baner szkolenia',
     presentationUrl: 'https://kompetencjekierunek4zero.my.canva.site/copy-of-my-lenie-krytyczne-dezinformacja-i-manipulacja-w-mediach',
     accent: '#b25b72',

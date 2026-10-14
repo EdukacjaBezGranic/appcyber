@@ -5,6 +5,118 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "pierwsze-szkolenie-pup-wystapienia-storytelling-2026-10-13",
+      "date": "2026-10-13",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Pierwsze szkolenie dla pracowników PUP w projekcie „Edukacja bez granic”",
+      "titleEn": "First training session for District Labour Office employees in the Education Without Borders project",
+      "lead": "13 października rozpoczęliśmy nowy etap działań w projekcie „Edukacja bez granic”. Po szkoleniach realizowanych dla pracowników WUP do udziału po raz pierwszy zaprosiliśmy pracowników Powiatowych Urzędów Pracy.",
+      "leadEn": "On 13 October, we began a new stage of activities in the Education Without Borders project. Following training sessions for WUP employees, we invited employees of District Labour Offices to take part for the first time.",
+      "body": "Pierwsze spotkanie dla tej grupy poświęciliśmy wystąpieniom publicznym i storytellingowi. Rozmawialiśmy o tym, jak porządkować wypowiedź, wybierać najważniejsze informacje i przekazywać je w sposób zrozumiały dla odbiorcy.\n\nJak w pozostałych szkoleniach realizowanych w ramach projektu, najważniejsza była praktyka. Uczestnicy pracowali nad sposobem budowania komunikatu, kontaktem z odbiorcami oraz wykorzystywaniem przykładów i historii, które pomagają zainteresować słuchaczy i lepiej zapamiętać najważniejszą myśl.\n\nByła również przestrzeń na rozmowę o tym, co pomaga podczas wystąpienia, skąd bierze się stres i jak stopniowo budować większą swobodę w mówieniu przed grupą. Ćwiczenia pozwalały od razu sprawdzić omawiane rozwiązania i spojrzeć na własny sposób komunikowania się z perspektywy odbiorcy.\n\nTo spotkanie było dla nas szczególnie ważne, ponieważ rozpoczyna serię szkoleń skierowanych do pracowników Powiatowych Urzędów Pracy. Tym samym programy przygotowane w projekcie „Edukacja bez granic” zaczynają trafiać do kolejnych instytucji publicznych służb zatrudnienia w województwie śląskim.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólną pracę. Przed nami następne spotkania dla pracowników PUP, poświęcone również edukacji medialnej oraz grywalizacji i Game-Based Learning.",
+      "bodyEn": "The first session for this group focused on public speaking and storytelling. We discussed how to structure a statement, select the most important information and communicate it clearly to the audience.\n\nAs in the other training sessions delivered within the project, practice was the main focus. Participants worked on building a message, engaging with an audience and using examples and stories that help attract attention and make the key idea easier to remember.\n\nThere was also time to discuss what helps during a presentation, where stress comes from and how to gradually build greater confidence when speaking in front of a group. The exercises made it possible to test the solutions immediately and look at one’s own communication from the audience’s perspective.\n\nThis meeting was particularly important to us because it launches a series of training sessions for employees of District Labour Offices. In this way, the programmes developed within the Education Without Borders project are beginning to reach further institutions of the public employment services in the Silesian Voivodeship.\n\nThank you to all participants for your activity, openness and work together. More sessions for District Labour Office employees are ahead, including media literacy and gamification and Game-Based Learning.",
+      "image": "grafiki/aktualnosci/2026-10-13-pup-wystapienia-storytelling/pierwsze-szkolenie-pup.webp",
+      "imageAlt": "Pierwsze szkolenie dla pracowników Powiatowych Urzędów Pracy z wystąpień publicznych i storytellingu",
+      "imageAltEn": "First public speaking and storytelling training session for District Labour Office employees",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-13-pup-wystapienia-storytelling/uczestnicy-szkolenia.webp",
+          "alt": "Uczestnicy pierwszego szkolenia dla pracowników PUP",
+          "altEn": "Participants in the first training session for District Labour Office employees"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-13-pup-wystapienia-storytelling/prowadzaca-i-grupa.webp",
+          "alt": "Prowadząca podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Trainer during the public speaking and storytelling session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-13-pup-wystapienia-storytelling/wystapienia-publiczne-warsztat.webp",
+          "alt": "Warsztat z wystąpień publicznych dla pracowników PUP",
+          "altEn": "Public speaking workshop for District Labour Office employees"
+        }
+      ]
+    },
+    {
+      "id": "grywalizacja-w-praktyce-2026-10-07",
+      "date": "2026-10-07",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Grywalizacja w praktyce - kreatywność, współpraca i uczenie przez działanie",
+      "titleEn": "Gamification in practice - creativity, collaboration and learning by doing",
+      "lead": "7 października kontynuowaliśmy październikową serię szkoleń w projekcie „Edukacja bez granic”. Tym razem uczestnicy pracowali z grywalizacją i Game-Based Learning, sprawdzając w praktyce, jak mechanizmy znane z gier mogą wspierać uczenie się i angażować grupę.",
+      "leadEn": "On 7 October, we continued the October training series in the Education Without Borders project. This time, participants explored gamification and Game-Based Learning, testing how game-inspired mechanisms can support learning and group engagement.",
+      "body": "Podczas szkolenia uczestnicy przyglądali się temu, jak wykorzystywać elementy gier w pracy szkoleniowej, edukacyjnej i zespołowej. Nie chodziło o tworzenie rozbudowanych systemów punktów czy rywalizacji, ale o takie projektowanie zadań, aby zachęcały do działania, współpracy, podejmowania decyzji i szukania własnych rozwiązań.\n\nDużo miejsca poświęciliśmy ćwiczeniom. Uczestnicy pracowali na kartach zadań, wspólnie rozwiązywali problemy i sprawdzali, jak proste mechanizmy grywalizacyjne mogą zmienić sposób odbioru nawet dobrze znanego zadania. Ważna była nie tylko sama zabawa, ale przede wszystkim refleksja nad tym, po co dany mechanizm jest stosowany i jaki efekt ma przynieść.\n\nJednym z elementów spotkania był również quiz w Kahoot, który pozwolił zobaczyć grywalizację od strony uczestnika - z natychmiastową informacją zwrotną, elementem wyzwania i lekką rywalizacją. To dobry przykład tego, że czasem prosty mechanizm może wyraźnie zwiększyć zaangażowanie grupy.\n\nRozmawialiśmy także o różnicy między grywalizacją a Game-Based Learning oraz o tym, kiedy gra rzeczywiście wspiera proces uczenia się, a kiedy pozostaje jedynie atrakcyjnym dodatkiem. Uczestnicy zastanawiali się, które z poznanych rozwiązań mogą wykorzystać we własnej pracy - podczas szkoleń, spotkań, pracy zespołowej i działań z klientami.\n\nDziękujemy uczestnikom za energię, kreatywność i aktywną pracę. Październikowa seria trwa - przed nami następne spotkania i kolejne okazje do testowania metod wypracowanych w ramach projektu „Edukacja bez granic”.",
+      "bodyEn": "During the session, participants explored how game elements can be used in training, education and teamwork. The aim was not to build complex point systems or competition, but to design tasks that encourage action, collaboration, decision-making and independent problem solving.\n\nA large part of the session was practical. Participants worked with task sheets, solved problems together and tested how simple gamification mechanisms can change the way even familiar tasks are experienced. The key was not only the fun element, but also reflecting on why a given mechanism is used and what effect it is intended to create.\n\nThe session also included a Kahoot quiz, allowing participants to experience gamification from the learner’s perspective - with immediate feedback, challenge and light competition. It showed how a simple mechanism can noticeably increase group engagement.\n\nWe also discussed the difference between gamification and Game-Based Learning, and when a game genuinely supports learning rather than becoming only an attractive addition. Participants considered which approaches could be transferred to their own work in training, meetings, teamwork and client-facing activities.\n\nThank you to all participants for your energy, creativity and active involvement. The October series continues, with more sessions and further opportunities to test methods developed within the Education Without Borders project.",
+      "image": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-praca-zespolowa.webp",
+      "imageAlt": "Uczestniczki pracują zespołowo podczas szkolenia z grywalizacji i Game-Based Learning",
+      "imageAltEn": "Participants working together during the gamification and Game-Based Learning training",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-karty-cwiczen.webp",
+          "alt": "Uczestniczki wypełniają karty ćwiczeń podczas szkolenia z grywalizacji",
+          "altEn": "Participants completing exercise sheets during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-07-grywalizacja/grywalizacja-kahoot.webp",
+          "alt": "Quiz Kahoot wykorzystany podczas szkolenia z grywalizacji",
+          "altEn": "A Kahoot quiz used during the gamification training"
+        }
+      ]
+    },
+    {
+      "id": "pazdziernik-zaczynamy-wystapienia-storytelling-2026-10-06",
+      "date": "2026-10-06",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Październik zaczynamy od wystąpień publicznych i storytellingu",
+      "titleEn": "October begins with public speaking and storytelling",
+      "lead": "6 października rozpoczęliśmy październikową serię szkoleń realizowanych w ramach projektu „Edukacja bez granic”. Na początek - wystąpienia publiczne i storytelling.",
+      "leadEn": "On 6 October, we launched the October series of training sessions delivered as part of the Education Without Borders project. We began with public speaking and storytelling.",
+      "body": "Podczas dzisiejszego spotkania uczestnicy pracowali nad tym, jak mówić jasno, konkretnie i w sposób, który utrzymuje uwagę odbiorców. Była praca nad strukturą wypowiedzi, doborem najważniejszych informacji, kontaktem z grupą oraz wykorzystywaniem przykładów i historii, które pomagają lepiej przekazać główną myśl.\n\nJak zawsze zależało nam przede wszystkim na praktyce. Uczestnicy mieli okazję ćwiczyć, sprawdzać różne sposoby budowania wypowiedzi i przyglądać się temu, co sprawia, że komunikat jest zrozumiały, naturalny i zostaje z odbiorcą na dłużej.\n\nO dobrą atmosferę podczas spotkania zadbała również niezastąpiona Kamila, która jak zawsze przygotowała poczęstunek dla uczestników. A że październikowa seria dopiero się rozkręca, Kamila zaprasza również już następnego dnia - 7 października - na szkolenie z grywalizacji i Game-Based Learning.\n\nDzisiejsze spotkanie otwiera cały październikowy cykl. W kolejnych tygodniach wrócimy również do tematów edukacji medialnej, fake news i krytycznego myślenia, a część działań będzie skierowana także do pracowników Powiatowych Urzędów Pracy.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólną pracę. Październik dopiero się zaczyna - przed nami jeszcze sporo szkoleniowych spotkań.",
+      "bodyEn": "During the session, participants worked on how to speak clearly, concisely and in a way that keeps the audience's attention. They focused on structuring a message, selecting the most important information, engaging with the group and using examples and stories to communicate the main point more effectively.\n\nAs always, the emphasis was on practice. Participants had the opportunity to exercise, test different ways of building a statement and look at what makes a message clear, natural and memorable.\n\nThe atmosphere was also supported by our indispensable Kamila, who once again prepared refreshments for the participants. And because the October series is only getting started, Kamila also invites everyone to the next day's session - on 7 October - devoted to gamification and Game-Based Learning.\n\nToday's session opens the entire October cycle. In the coming weeks, we will also return to media literacy, fake news and critical thinking, and some activities will be addressed to employees of District Labour Offices.\n\nThank you to all participants for your activity, openness and work together. October is only beginning - there are still many training sessions ahead of us.",
+      "image": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/sala-szkoleniowa.webp",
+      "imageAlt": "Szkolenie z wystąpień publicznych i storytellingu w WUP Katowice",
+      "imageAltEn": "Public speaking and storytelling training at the Voivodeship Labour Office in Katowice",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/prowadzaca-wystapienia.webp",
+          "alt": "Prowadząca podczas szkolenia z wystąpień publicznych i storytellingu",
+          "altEn": "Trainer during the public speaking and storytelling session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-06-wystapienia-storytelling/poczestunek.webp",
+          "alt": "Poczęstunek przygotowany dla uczestników szkolenia",
+          "altEn": "Refreshments prepared for training participants"
+        }
+      ]
+    },
+    {
+      "id": "wrzesien-pelen-szkolen-podsumowanie-2026-09-30",
+      "date": "2026-09-30",
+      "published": true,
+      "category": "Podsumowanie działań projektowych",
+      "categoryEn": "Project activities summary",
+      "title": "Wrzesień pełen szkoleń w projekcie „Edukacja bez granic”",
+      "titleEn": "A September full of training in the Education Without Borders project",
+      "lead": "Wrzesień był w projekcie „Edukacja bez granic” miesiącem intensywnej pracy szkoleniowej. W ciągu kilku tygodni zrealizowaliśmy 7 szkoleń w 3 obszarach tematycznych.",
+      "leadEn": "September was a month of intensive training activity in the Education Without Borders project. Over several weeks, we delivered 7 training sessions in 3 thematic areas.",
+      "body": "Trzy spotkania poświęciliśmy edukacji medialnej, fake news i krytycznemu myśleniu, dwa wystąpieniom publicznym i storytellingowi, a kolejne dwa grywalizacji i Game-Based Learning.\n\nZ wrześniowej oferty skorzystało łącznie blisko 70 pracowników Wojewódzkiego Urzędu Pracy w Katowicach. Od początku zależało nam na tym, aby zajęcia miały przede wszystkim praktyczny charakter. Dlatego obok części merytorycznej ważne miejsce zajmowały ćwiczenia, praca w grupach, analiza konkretnych przykładów, dyskusje oraz wymiana doświadczeń między uczestnikami.\n\nWrześniowy cykl miał dla nas jeszcze jedno ważne znaczenie. Były to pierwsze szkolenia prowadzone na podstawie nowych programów przygotowanych w ramach projektu, dlatego stanowiły również okazję do sprawdzenia ich w praktyce. Obserwowaliśmy reakcje uczestników, sprawdzaliśmy, które elementy najlepiej sprawdzają się podczas zajęć i na bieżąco wprowadzaliśmy zmiany do kolejnych edycji.\n\nTym bardziej cieszy nas, że już pierwsze szkolenia zostały wysoko ocenione przez uczestników. Zebrane ankiety ewaluacyjne pokazują, że szczególnie dobrze odbierane były wartość merytoryczna zajęć, sposób ich prowadzenia, praktyczne podejście oraz atmosfera sprzyjająca aktywnemu udziałowi. Pojawiające się sugestie dotyczyły przede wszystkim dalszego rozwijania programów, zwiększania liczby ćwiczeń oraz przeznaczenia jeszcze większej ilości czasu na część praktyczną. To dla nas cenna informacja przy planowaniu kolejnych spotkań.\n\nW przypadku edukacji medialnej, fake news i krytycznego myślenia uczestnicy szczególnie doceniali konkretne przykłady, ćwiczenia oraz pracę na rzeczywistych przypadkach dezinformacji i manipulacji. Ważnym elementem zajęć było poznawanie mechanizmów wpływających na sposób, w jaki oceniamy informacje, oraz praktycznych metod sprawdzania ich wiarygodności.\n\nPodczas zajęć z grywalizacji i Game-Based Learning dużym zainteresowaniem cieszyły się praktyczne możliwości wykorzystania gier i mechanizmów grywalizacyjnych. Uczestnicy nie tylko poznawali przykłady takich rozwiązań, ale również zastanawiali się, w jaki sposób mogą wykorzystać je we własnej pracy. W ankietach pojawiały się już konkretne pomysły na zastosowanie poznanych metod.\n\nZ kolei warsztaty z wystąpień publicznych i storytellingu pozwalały przede wszystkim ćwiczyć. Uczestnicy zwracali uwagę na sposób przekazywania wiedzy, warsztatowy charakter spotkań oraz atmosferę, która ułatwiała przełamywanie stresu i stopniowe zdobywanie większej swobody podczas wystąpień przed grupą.\n\nWrzesień był więc dla nas czymś więcej niż tylko intensywnym miesiącem szkoleniowym. Był również ważnym etapem testowania i doskonalenia programów wypracowanych w ramach projektu „Edukacja bez granic”. Opinie uczestników pozwoliły nam sprawdzić przyjęte założenia w praktyce i wskazały, w jakim kierunku warto dalej rozwijać poszczególne szkolenia.\n\nA w październiku nie zwalniamy tempa. Przed nami kolejne spotkania. Rozszerzamy również grono odbiorców - w następnych szkoleniach uczestniczyć będą pracownicy Powiatowych Urzędów Pracy, dzięki czemu rezultaty projektu będą trafiały do kolejnych osób i instytucji.",
+      "bodyEn": "Three sessions focused on media literacy, fake news and critical thinking, two on public speaking and storytelling, and two on gamification and Game-Based Learning.\n\nNearly 70 employees of the Voivodeship Labour Office in Katowice took part in the September offer. From the beginning, we wanted the sessions to be strongly practical, combining substantive content with exercises, group work, analysis of specific examples, discussions and exchange of experience.\n\nThe September cycle also had another important role. These were the first training sessions based on new programmes developed within the project, so they were also an opportunity to test them in practice. We observed participants’ reactions, checked which elements worked best and introduced improvements in subsequent editions.\n\nWe are especially pleased that the first sessions were already rated highly by participants. Evaluation surveys show that the substantive value, delivery, practical approach and atmosphere supporting active participation were particularly appreciated. Suggestions mainly concerned further development of the programmes, more exercises and even more time for practical work.\n\nIn media literacy, fake news and critical thinking, participants particularly appreciated concrete examples, exercises and work with real cases of disinformation and manipulation.\n\nIn gamification and Game-Based Learning, participants valued practical ways of using games and gamification mechanisms and began identifying ways to apply them in their own work.\n\nPublic speaking and storytelling workshops focused strongly on practice. Participants highlighted the way knowledge was shared, the workshop format and an atmosphere that helped reduce stress and gradually build confidence in speaking in front of a group.\n\nSeptember was therefore more than just an intensive month of training. It was also an important stage in testing and improving the programmes developed within the Education Without Borders project.\n\nAnd in October we are not slowing down. More sessions are ahead, and the audience is expanding to include employees of District Labour Offices, allowing the project results to reach more people and institutions.",
+      "image": "grafiki/edukacjabz-logo-article.png",
+      "imageAlt": "Logo projektu „Edukacja bez granic”",
+      "imageAltEn": "Education Without Borders project logo",
+      "theme": "summary",
+      "imageMode": "logo",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
       "id": "zanim-uwierzysz-sprawdz-edukacja-medialna-2026-09-29",
       "date": "2026-09-29",
       "published": true,
@@ -107,12 +219,12 @@ window.portalSiteData = {
           "altEn": "Gamification workshop participants during a presentation of educational games"
         },
         {
-          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/cwiczenie-bingo.png",
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/cwiczenie-bingo.webp",
           "alt": "Uczestnicy wspólnie wykonują ćwiczenie bingo podczas warsztatów z grywalizacji",
           "altEn": "Participants doing a bingo exercise together at the gamification workshop"
         },
         {
-          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/praca-z-kartami-zadan.jpg",
+          "src": "grafiki/aktualnosci/2026-09-18-grywalizacja/praca-z-kartami-zadan.webp",
           "alt": "Uczestnicy wypełniają karty zadań podczas warsztatów z grywalizacji",
           "altEn": "Participants filling in activity sheets at the gamification workshop"
         }
@@ -230,7 +342,7 @@ window.portalSiteData = {
           "altEn": "Presenting the new training topics on the project website"
         },
         {
-          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.jpg",
+          "src": "grafiki/aktualnosci/2026-06-19-partnerzy/spotkanie.webp",
           "alt": "Uczestnicy spotkania upowszechniającego rezultaty projektów",
           "altEn": "Participants at the meeting sharing project results"
         }
@@ -434,12 +546,14 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "registrationClosed": false,
+      "open": false,
+      "registrationClosed": true,
       "link": "https://forms.gle/KioaiUgTELcNvNmk6",
       "button": "Zapisz się",
       "calendarOnly": true,
-      "audienceTag": "WUP"
+      "audienceTag": "WUP",
+      "completed": true,
+      "newsId": "pazdziernik-zaczynamy-wystapienia-storytelling-2026-10-06"
     },
     {
       "id": "grywalizacja-2026-10-07",
@@ -460,12 +574,14 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/X6LZVXsRik1Xojbe9",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "WUP"
+      "audienceTag": "WUP",
+      "completed": true,
+      "newsId": "grywalizacja-w-praktyce-2026-10-07"
     },
     {
       "id": "komunikacja-2026-10-13",
@@ -486,12 +602,14 @@ window.portalSiteData = {
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "registrationClosed": false,
+      "open": false,
+      "registrationClosed": true,
       "link": "https://forms.gle/qAsS9mA1AzsR4Sby7",
       "button": "Zapisz się",
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "pierwsze-szkolenie-pup-wystapienia-storytelling-2026-10-13"
     },
     {
       "id": "ai-pup-zabrze-2026-10-21",
@@ -510,7 +628,7 @@ window.portalSiteData = {
         "Uczestnicy poznają zastosowania AI wspierające przygotowanie materiałów, pracę z informacją i działania doradcze, z uwzględnieniem bezpieczeństwa danych oraz kontroli jakości odpowiedzi."
       ],
       "color": "#7c3aed",
-      "image": "grafiki/ai.jpg",
+      "image": "grafiki/ai.webp",
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "registrationClosed": true,
@@ -611,7 +729,7 @@ window.portalSiteData = {
         "Tworzysz treści i materiały, automatyzujesz proste zadania, ćwiczysz pisanie promptów oraz kontrolujesz bezpieczeństwo danych i jakość odpowiedzi."
       ],
       "color": "#7c3aed",
-      "image": "grafiki/ai.jpg",
+      "image": "grafiki/ai.webp",
       "logo": "grafiki/kierunek-kompetencje.png",
       "open": false,
       "link": "",

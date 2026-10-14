@@ -2,7 +2,7 @@ Folder na grafiki szkolen.
 
 Proponowane nazwy plikow:
 - logo-projektu.png
-- ai.jpg
+- ai.webp
 - fake-news.jpg
 - komunikacja.webp
 - gamifikacja.jpg

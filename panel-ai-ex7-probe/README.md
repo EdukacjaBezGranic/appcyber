@@ -13,7 +13,7 @@ Statyczny panel do prowadzenia szkolenia z praktycznego wykorzystania AI. Zawier
 - `assets/exercise-overrides-05-09.js` - dopracowane wersje ćwiczeń 5-9 z plików Word.
 - `assets/exercise-modern-07.js` - trzeci próbny układ ćwiczenia 7: wizualny pulpit pracy, mapa źródeł, oś procesu, rozwijane źródła i dwa warianty druku.
 - `assets/exercise-visual-all.js` - wspólna warstwa wizualnych pulpitów dla ćwiczeń, z mapą pracy, efektami, decyzjami i materiałami źródłowymi.
-- `assets/training-banner.png` - szeroki baner graficzny w nagłówku panelu.
+- `assets/training-banner.webp` - szeroki baner graficzny w nagłówku panelu.
 - `../generator-zaswiadczen-html/` - uniwersalny generator zaświadczeń HTML działający w przeglądarce.
 - `prompts/` - osobne strony z gotowymi promptami.
 - `assets/prompt.css` i `assets/prompt.js` - wspólne pliki dla stron promptów.

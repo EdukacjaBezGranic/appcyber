@@ -1,3 +1,12 @@
+- 13.10.2026: dodano pierwszą relację ze szkolenia dla pracowników PUP (wystąpienia publiczne i storytelling) z 4 zdjęciami; przebudowano układ aktualności, aby tekst po zakończeniu zdjęć przechodził na pełną szerokość artykułu.
+- 07.10.2026: dodano aktualność ze szkolenia z grywalizacji i Game-Based Learning; dodano 3 zdjęcia, Kahoot i połączenie relacji z terminarzem.
+- 06.10.2026: dodano aktualność otwierającą październikową serię szkoleń - wystąpienia publiczne i storytelling; dodano 3 zdjęcia i relację z terminarza.
+- zamknięto zapisy na termin 13.10.2026 (PUP - wystąpienia publiczne i storytelling).
+- zamknięto zapisy na szkolenia 06.10.2026 i 07.10.2026; terminy pozostają widoczne w terminarzu.
+- terminarz automatycznie otwiera bieżący miesiąc i odświeża się po północy; od 01.10 pokaże październik bez ręcznej zmiany.
+- w kursie online przycisk „Zaznacz jako ukończone” przeniesiono na koniec każdej lekcji/punktu.
+- poprawiono podsumowanie 30.09: nadtytuł „Podsumowanie działań projektowych”, większe logo i układ artykułowy z tekstem opływającym ilustrację.
+- dodano podsumowanie września z datą 30.09.2026, ilustracją z logo projektu i delikatnie wyróżnionym tłem wpisu.
 - dodano aktualność z 29.09.2026 po szkoleniu z edukacji medialnej, trzema zdjęciami oraz oznaczono termin 29.09 jako zakończony.
 - dodano aktualność z 25.09.2026 po szkoleniu z wystąpień publicznych i storytellingu wraz z trzema zdjęciami; termin 25.09 oznaczono jako zakończony.
 - aktualność z 23.09: pozostawiono dwa wskazane zdjęcia w ustalonej kolejności; termin 23.09 oznaczono jako zakończony i wyszarzony od razu.

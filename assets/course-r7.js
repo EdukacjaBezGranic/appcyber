@@ -725,11 +725,28 @@
 
   function escapeHtml(s){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
 
+
+  function relocateCompletionControls(){
+    $$('.required-section').forEach(sec=>{
+      const btn=sec.querySelector('.section-header .section-complete') || sec.querySelector('.section-complete');
+      const body=sec.querySelector(':scope > .section-body') || sec.querySelector('.section-body');
+      if(!btn || !body) return;
+      let row=body.querySelector(':scope > .section-complete-row');
+      if(!row){
+        row=document.createElement('div');
+        row.className='section-complete-row';
+        body.appendChild(row);
+      }
+      row.appendChild(btn);
+    });
+  }
+
   function safeInit(name,fn){
     try{fn();}catch(err){console.error(`[EBG course] ${name}:`,err);}
   }
   function init(){
     document.documentElement.lang=state.lang;
+    relocateCompletionControls();
     $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
     $$('.section-complete').forEach(btn=>btn.addEventListener('click',()=>toggleSection(btn.closest('.required-section'))));
     // Bind core learning interactions first so a secondary UI failure cannot disable exercises.
