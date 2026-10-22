@@ -5,6 +5,40 @@
   },
   "news": [
     {
+      "id": "edukacja-medialna-dla-pracownikow-pup-2026-10-22",
+      "date": "2026-10-22",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Jak nie dać się wprowadzić w błąd? Edukacja medialna dla pracowników PUP",
+      "titleEn": "How not to be misled? Media literacy for District Labour Office employees",
+      "lead": "22 października kontynuowaliśmy serię szkoleń skierowanych do pracowników Powiatowych Urzędów Pracy. Tym razem spotkanie poświęciliśmy edukacji medialnej, fake news i krytycznemu myśleniu.",
+      "leadEn": "On 22 October, we continued our series of training sessions for District Labour Office employees. This time the meeting focused on media literacy, fake news and critical thinking.",
+      "body": "Rozmawialiśmy o tym, jak zmienił się sposób, w jaki docierają do nas informacje, dlaczego niektóre treści przyciągają uwagę szybciej niż inne i jak dużą rolę w ich odbiorze odgrywają emocje.\n\nPrzyglądaliśmy się również mechanizmom dezinformacji i manipulacji. Pokazywaliśmy, że wprowadzający w błąd przekaz nie zawsze musi opierać się na całkowicie fałszywej informacji. Czasem wystarczy zmiana kontekstu, odpowiedni dobór słów, fragment wypowiedzi lub sposób przedstawienia prawdziwych danych.\n\nWażną częścią spotkania było krytyczne spojrzenie na źródła informacji. Rozmawialiśmy o tym, od czego rozpocząć weryfikację treści, co powinno wzbudzić naszą czujność i jakie elementy warto sprawdzić, zanim uznamy informację za wiarygodną lub przekażemy ją dalej.\n\nNie chodzi przy tym o to, żeby podważać każdą napotkaną informację. Krytyczne myślenie pomaga przede wszystkim rozpoznać moment, w którym warto się zatrzymać, poszukać źródła, sprawdzić kontekst i upewnić się, czy przedstawiony przekaz rzeczywiście mówi nam całą historię.\n\nDzisiejsze szkolenie było kolejnym spotkaniem przygotowanym dla pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszymy się, że programy wypracowane w projekcie trafiają do kolejnych pracowników publicznych służb zatrudnienia i mogą być wykorzystywane także poza Wojewódzkim Urzędem Pracy.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną rozmowę o tym, jak świadomiej poruszać się w świecie informacji.",
+      "bodyEn": "We discussed how the way information reaches us has changed, why some content attracts attention faster than others and how strongly emotions influence the way we receive information.\n\nWe also looked at mechanisms of disinformation and manipulation. We showed that misleading content does not always have to be based on completely false information. Sometimes changing the context, choosing particular words, using only a fragment of a statement or presenting true data in a certain way is enough.\n\nAn important part of the meeting was taking a critical look at information sources. We discussed where to begin verification, what should raise our attention and which elements are worth checking before treating information as credible or passing it on.\n\nThe aim is not to question every piece of information we encounter. Critical thinking primarily helps us recognise when it is worth stopping, finding the source, checking the context and making sure that a message really tells the whole story.\n\nToday’s training was another session prepared for District Labour Office employees within the Education Without Borders project. We are pleased that the programmes developed through the project are reaching more public employment service employees and can be used beyond the Voivodeship Labour Office.\n\nThank you to all participants for your activity, questions and shared discussion about navigating the information environment more consciously.",
+      "image": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/szkolenie-edukacja-medialna-pup.webp",
+      "imageAlt": "Szkolenie z edukacji medialnej, fake news i krytycznego myślenia dla pracowników PUP",
+      "imageAltEn": "Media literacy, fake news and critical thinking training for District Labour Office employees",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/dezinformacja-slajd.webp",
+          "alt": "Slajd dotyczący dezinformacji, misinformacji, manipulacji i fake news",
+          "altEn": "Slide about disinformation, misinformation, manipulation and fake news"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/uczestnicy-szkolenia.webp",
+          "alt": "Uczestnicy szkolenia z edukacji medialnej dla pracowników PUP",
+          "altEn": "Participants in the media literacy training for District Labour Office employees"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/sala-i-prowadzacy.webp",
+          "alt": "Szkolenie z edukacji medialnej prowadzone w WUP Katowice",
+          "altEn": "Media literacy training held at the Voivodeship Labour Office in Katowice"
+        }
+      ]
+    },
+    {
       "id": "od-mobilnosci-do-praktyki-ai-pup-zabrze-2026-10-21",
       "date": "2026-10-21",
       "published": true,
@@ -676,12 +710,14 @@
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/fTwB1DStd58EeNBZ9",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "edukacja-medialna-dla-pracownikow-pup-2026-10-22"
     },
     {
       "id": "grywalizacja-2026-10-26",
