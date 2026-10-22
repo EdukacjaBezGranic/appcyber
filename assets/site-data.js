@@ -10,8 +10,8 @@ window.portalSiteData = {
       "published": true,
       "category": "Z życia projektu",
       "categoryEn": "Project news",
-      "title": "Jak nie dać się wprowadzić w błąd? Edukacja medialna dla pracowników PUP",
-      "titleEn": "How not to be misled? Media literacy for District Labour Office employees",
+      "title": "Między faktem a manipulacją - edukacja medialna dla pracowników PUP",
+      "titleEn": "Between fact and manipulation - media literacy for District Labour Office employees",
       "lead": "22 października kontynuowaliśmy serię szkoleń skierowanych do pracowników Powiatowych Urzędów Pracy. Tym razem spotkanie poświęciliśmy edukacji medialnej, fake news i krytycznemu myśleniu.",
       "leadEn": "On 22 October, we continued our series of training sessions for District Labour Office employees. This time the meeting focused on media literacy, fake news and critical thinking.",
       "body": "Rozmawialiśmy o tym, jak zmienił się sposób, w jaki docierają do nas informacje, dlaczego niektóre treści przyciągają uwagę szybciej niż inne i jak dużą rolę w ich odbiorze odgrywają emocje.\n\nPrzyglądaliśmy się również mechanizmom dezinformacji i manipulacji. Pokazywaliśmy, że wprowadzający w błąd przekaz nie zawsze musi opierać się na całkowicie fałszywej informacji. Czasem wystarczy zmiana kontekstu, odpowiedni dobór słów, fragment wypowiedzi lub sposób przedstawienia prawdziwych danych.\n\nWażną częścią spotkania było krytyczne spojrzenie na źródła informacji. Rozmawialiśmy o tym, od czego rozpocząć weryfikację treści, co powinno wzbudzić naszą czujność i jakie elementy warto sprawdzić, zanim uznamy informację za wiarygodną lub przekażemy ją dalej.\n\nNie chodzi przy tym o to, żeby podważać każdą napotkaną informację. Krytyczne myślenie pomaga przede wszystkim rozpoznać moment, w którym warto się zatrzymać, poszukać źródła, sprawdzić kontekst i upewnić się, czy przedstawiony przekaz rzeczywiście mówi nam całą historię.\n\nDzisiejsze szkolenie było kolejnym spotkaniem przygotowanym dla pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszymy się, że programy wypracowane w projekcie trafiają do kolejnych pracowników publicznych służb zatrudnienia i mogą być wykorzystywane także poza Wojewódzkim Urzędem Pracy.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną rozmowę o tym, jak świadomiej poruszać się w świecie informacji.",
@@ -55,7 +55,13 @@ window.portalSiteData = {
       "imageAltEn": "Direction - Competences 4.0 project logo",
       "imageMode": "logo",
       "showImageCaptions": false,
-      "gallery": []
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-21-ai-pup-zabrze/szkolenie-ai-pup-zabrze.webp",
+          "alt": "Szkolenie dotyczące sztucznej inteligencji dla doradców zawodowych w PUP Zabrze",
+          "altEn": "Artificial intelligence training for career counsellors at the District Labour Office in Zabrze"
+        }
+      ]
     },
     {
       "id": "pierwsze-szkolenie-pup-wystapienia-storytelling-2026-10-13",
