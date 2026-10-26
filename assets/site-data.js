@@ -5,6 +5,40 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "co-sprawia-ze-chce-nam-sie-dzialac-grywalizacja-2026-10-26",
+      "date": "2026-10-26",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Co sprawia, że chce nam się działać? Grywalizacja w pracy z grupą",
+      "titleEn": "What makes us want to act? Gamification in group work",
+      "lead": "26 października podczas szkolenia dla pracowników Powiatowych Urzędów Pracy przyglądaliśmy się temu, co sprawia, że zwykłe zadanie zaczyna angażować, budzić ciekawość i zachęcać do działania. Tym razem głównym tematem była grywalizacja i Game-Based Learning.",
+      "leadEn": "On 26 October, during a training session for District Labour Office employees, we looked at what makes an ordinary task engaging, interesting and motivating. This time, the main topic was gamification and Game-Based Learning.",
+      "body": "Punktem wyjścia nie były same gry, ale mechanizmy, które sprawiają, że chcemy podejmować wyzwania, sprawdzać swoje możliwości, współpracować z innymi i widzieć efekty własnego działania.\n\nPodczas spotkania pokazywaliśmy, że grywalizacja nie musi oznaczać skomplikowanego systemu punktów, rankingów czy nagród. Czasem wystarczy dobrze postawiony cel, jasne zasady, element wyboru, wyzwanie albo informacja zwrotna, żeby znane zadanie nabrało zupełnie innego charakteru.\n\nPrzyglądaliśmy się również różnicy między grywalizacją a Game-Based Learning. To dwa różne podejścia, ale oba mogą pomagać w tworzeniu bardziej angażujących spotkań, szkoleń i działań edukacyjnych.\n\nWażnym elementem zajęć było spojrzenie na te rozwiązania z perspektywy codziennej pracy. Nie chodzi o to, aby każdą aktywność zamieniać w grę, ale żeby świadomie wykorzystywać wybrane mechanizmy tam, gdzie mogą pomóc uruchomić aktywność, współpracę lub kreatywność uczestników.\n\nDzisiejsze spotkanie było następnym szkoleniem skierowanym do pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszy nas, że programy przygotowane i testowane wcześniej w WUP są obecnie wykorzystywane w pracy z kolejnymi grupami publicznych służb zatrudnienia.\n\nDziękujemy uczestnikom za energię, pomysły i otwartość na nieco inne spojrzenie na uczenie się i pracę z grupą.",
+      "bodyEn": "The starting point was not games themselves, but the mechanisms that make us want to take on challenges, test our abilities, cooperate with others and see the effects of our actions.\n\nDuring the session, we showed that gamification does not have to mean a complicated system of points, rankings or rewards. Sometimes a clear goal, simple rules, an element of choice, a challenge or feedback is enough to give a familiar task a completely different character.\n\nWe also looked at the difference between gamification and Game-Based Learning. These are two different approaches, but both can help create more engaging meetings, training sessions and educational activities.\n\nAn important part of the session was looking at these solutions from the perspective of everyday work. The point is not to turn every activity into a game, but to consciously use selected mechanisms where they can support activity, cooperation or creativity.\n\nToday’s meeting was another training session for District Labour Office employees within the Education Without Borders project. We are pleased that programmes previously developed and tested at WUP are now being used with further groups in the public employment services.\n\nThank you to all participants for your energy, ideas and openness to a different perspective on learning and group work.",
+      "image": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/grywalizacja-sala.webp",
+      "imageAlt": "Szkolenie z grywalizacji i Game-Based Learning dla pracowników PUP",
+      "imageAltEn": "Gamification and Game-Based Learning training for District Labour Office employees",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/cwiczenie-bingo.webp",
+          "alt": "Uczestnicy wykonują ćwiczenie bingo podczas szkolenia z grywalizacji",
+          "altEn": "Participants completing a bingo activity during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/praca-zadaniowa.webp",
+          "alt": "Praca uczestników nad zadaniami podczas szkolenia",
+          "altEn": "Participants working on tasks during the training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/gry-edukacyjne.webp",
+          "alt": "Gry i materiały wykorzystywane podczas szkolenia z grywalizacji",
+          "altEn": "Games and materials used during the gamification training"
+        }
+      ]
+    },
+    {
       "id": "edukacja-medialna-dla-pracownikow-pup-2026-10-22",
       "date": "2026-10-22",
       "published": true,
@@ -744,12 +778,14 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/p3yRvwcjWivh248g7",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "co-sprawia-ze-chce-nam-sie-dzialac-grywalizacja-2026-10-26"
     },
     {
       "id": "fake-news-2026-10-27",
