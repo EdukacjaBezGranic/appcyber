@@ -5,6 +5,123 @@ window.portalSiteData = {
   },
   "news": [
     {
+      "id": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27",
+      "date": "2026-10-27",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Nie wszystko, co wygląda wiarygodnie, takie jest",
+      "titleEn": "Not everything that looks credible really is",
+      "lead": "27 października spotkaliśmy się z pracownikami Powiatowych Urzędów Pracy na szkoleniu poświęconym edukacji medialnej, fake news i krytycznemu myśleniu.",
+      "leadEn": "On 27 October, we met with employees of District Labour Offices for a training session devoted to media literacy, fake news and critical thinking.",
+      "body": "Tym razem szczególnie przyglądaliśmy się temu, dlaczego niektóre informacje od razu wydają nam się wiarygodne. Znajome zdjęcie, konkretny cytat, liczba, wykres czy powołanie się na eksperta mogą sprawić, że komunikat zaczynamy traktować jako prawdziwy, zanim jeszcze sprawdzimy jego źródło i kontekst.\n\nPodczas spotkania pokazywaliśmy, że manipulacja nie zawsze oznacza stworzenie informacji od początku do końca. Często wykorzystuje prawdziwe elementy, które zostają odpowiednio dobrane, wyrwane z kontekstu albo przedstawione w sposób prowadzący odbiorcę do określonego wniosku.\n\nRozmawialiśmy o tym, na jakie sygnały warto zwracać uwagę podczas odbioru informacji, gdzie szukać pierwotnego źródła i dlaczego przed udostępnieniem treści dobrze zadać sobie kilka dodatkowych pytań.\n\nWażnym tematem były również emocje. To właśnie treści, które wywołują złość, strach, zdziwienie lub silne poczucie zgody z naszymi przekonaniami, najłatwiej skłaniają nas do szybkiej reakcji. Krytyczne myślenie zaczyna się często od bardzo prostego działania: zatrzymania się na chwilę przed oceną lub udostępnieniem informacji.\n\nDzisiejsze spotkanie było kolejnym szkoleniem skierowanym do pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszymy się, że temat świadomego korzystania z informacji trafia do kolejnych osób pracujących w publicznych służbach zatrudnienia.\n\nDziękujemy uczestnikom za uwagę, pytania i wspólną rozmowę o tym, jak poruszać się w świecie informacji z większą świadomością i mniejszym pośpiechem.",
+      "bodyEn": "This time, we looked particularly closely at why some information immediately seems credible to us. A familiar image, a specific quotation, a number, a chart or a reference to an expert can make us accept a message as true before checking its source and context.\n\nDuring the session, we showed that manipulation does not always mean creating information entirely from scratch. It often uses true elements that are selectively chosen, removed from context or presented in a way that leads the audience towards a particular conclusion.\n\nWe discussed which signals are worth noticing when receiving information, where to look for the original source and why it is useful to ask a few additional questions before sharing content.\n\nEmotions were also an important topic. Content that provokes anger, fear, surprise or strongly confirms our existing beliefs is especially likely to trigger a quick reaction. Critical thinking often begins with a very simple action: pausing for a moment before judging or sharing information.\n\nToday's meeting was another training session for District Labour Office employees delivered as part of the Education Without Borders project. We are pleased that the topic of conscious information use is reaching more people working in public employment services.\n\nThank you to all participants for your attention, questions and the shared discussion about how to navigate the information environment with greater awareness and less haste.",
+      "image": "grafiki/aktualnosci/2026-10-27-edukacja-medialna-pup/prowadzacy-i-dezinformacja.webp",
+      "imageAlt": "Prowadzący szkolenie z edukacji medialnej na tle slajdu o misinformacji, dezinformacji i malinformacji",
+      "imageAltEn": "Trainers leading a media literacy session with a slide about misinformation, disinformation and malinformation",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-27-edukacja-medialna-pup/informacja-i-smartfony.webp",
+          "alt": "Szkolenie o obiegu informacji w internecie i mediach społecznościowych",
+          "altEn": "Training session about information flows on the internet and social media"
+        }
+      ]
+    },
+    {
+      "id": "co-sprawia-ze-chce-nam-sie-dzialac-grywalizacja-2026-10-26",
+      "date": "2026-10-26",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Co sprawia, że chce nam się działać? Grywalizacja w pracy z grupą",
+      "titleEn": "What makes us want to act? Gamification in group work",
+      "lead": "26 października podczas szkolenia dla pracowników Powiatowych Urzędów Pracy przyglądaliśmy się temu, co sprawia, że zwykłe zadanie zaczyna angażować, budzić ciekawość i zachęcać do działania. Tym razem głównym tematem była grywalizacja i Game-Based Learning.",
+      "leadEn": "On 26 October, during a training session for District Labour Office employees, we looked at what makes an ordinary task engaging, interesting and motivating. This time, the main topic was gamification and Game-Based Learning.",
+      "body": "Punktem wyjścia nie były same gry, ale mechanizmy, które sprawiają, że chcemy podejmować wyzwania, sprawdzać swoje możliwości, współpracować z innymi i widzieć efekty własnego działania.\n\nPodczas spotkania pokazywaliśmy, że grywalizacja nie musi oznaczać skomplikowanego systemu punktów, rankingów czy nagród. Czasem wystarczy dobrze postawiony cel, jasne zasady, element wyboru, wyzwanie albo informacja zwrotna, żeby znane zadanie nabrało zupełnie innego charakteru.\n\nPrzyglądaliśmy się również różnicy między grywalizacją a Game-Based Learning. To dwa różne podejścia, ale oba mogą pomagać w tworzeniu bardziej angażujących spotkań, szkoleń i działań edukacyjnych.\n\nWażnym elementem zajęć było spojrzenie na te rozwiązania z perspektywy codziennej pracy. Nie chodzi o to, aby każdą aktywność zamieniać w grę, ale żeby świadomie wykorzystywać wybrane mechanizmy tam, gdzie mogą pomóc uruchomić aktywność, współpracę lub kreatywność uczestników.\n\nDzisiejsze spotkanie było następnym szkoleniem skierowanym do pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszy nas, że programy przygotowane i testowane wcześniej w WUP są obecnie wykorzystywane w pracy z kolejnymi grupami publicznych służb zatrudnienia.\n\nDziękujemy uczestnikom za energię, pomysły i otwartość na nieco inne spojrzenie na uczenie się i pracę z grupą.",
+      "bodyEn": "The starting point was not games themselves, but the mechanisms that make us want to take on challenges, test our abilities, cooperate with others and see the effects of our actions.\n\nDuring the session, we showed that gamification does not have to mean a complicated system of points, rankings or rewards. Sometimes a clear goal, simple rules, an element of choice, a challenge or feedback is enough to give a familiar task a completely different character.\n\nWe also looked at the difference between gamification and Game-Based Learning. These are two different approaches, but both can help create more engaging meetings, training sessions and educational activities.\n\nAn important part of the session was looking at these solutions from the perspective of everyday work. The point is not to turn every activity into a game, but to consciously use selected mechanisms where they can support activity, cooperation or creativity.\n\nToday’s meeting was another training session for District Labour Office employees within the Education Without Borders project. We are pleased that programmes previously developed and tested at WUP are now being used with further groups in the public employment services.\n\nThank you to all participants for your energy, ideas and openness to a different perspective on learning and group work.",
+      "image": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/grywalizacja-sala.webp",
+      "imageAlt": "Szkolenie z grywalizacji i Game-Based Learning dla pracowników PUP",
+      "imageAltEn": "Gamification and Game-Based Learning training for District Labour Office employees",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/cwiczenie-bingo.webp",
+          "alt": "Uczestnicy wykonują ćwiczenie bingo podczas szkolenia z grywalizacji",
+          "altEn": "Participants completing a bingo activity during the gamification training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/praca-zadaniowa.webp",
+          "alt": "Praca uczestników nad zadaniami podczas szkolenia",
+          "altEn": "Participants working on tasks during the training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-26-grywalizacja-pup/gry-edukacyjne.webp",
+          "alt": "Gry i materiały wykorzystywane podczas szkolenia z grywalizacji",
+          "altEn": "Games and materials used during the gamification training"
+        }
+      ]
+    },
+    {
+      "id": "edukacja-medialna-dla-pracownikow-pup-2026-10-22",
+      "date": "2026-10-22",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Między faktem a manipulacją - edukacja medialna dla pracowników PUP",
+      "titleEn": "Between fact and manipulation - media literacy for District Labour Office employees",
+      "lead": "22 października kontynuowaliśmy serię szkoleń skierowanych do pracowników Powiatowych Urzędów Pracy. Tym razem spotkanie poświęciliśmy edukacji medialnej, fake news i krytycznemu myśleniu.",
+      "leadEn": "On 22 October, we continued our series of training sessions for District Labour Office employees. This time the meeting focused on media literacy, fake news and critical thinking.",
+      "body": "Rozmawialiśmy o tym, jak zmienił się sposób, w jaki docierają do nas informacje, dlaczego niektóre treści przyciągają uwagę szybciej niż inne i jak dużą rolę w ich odbiorze odgrywają emocje.\n\nPrzyglądaliśmy się również mechanizmom dezinformacji i manipulacji. Pokazywaliśmy, że wprowadzający w błąd przekaz nie zawsze musi opierać się na całkowicie fałszywej informacji. Czasem wystarczy zmiana kontekstu, odpowiedni dobór słów, fragment wypowiedzi lub sposób przedstawienia prawdziwych danych.\n\nWażną częścią spotkania było krytyczne spojrzenie na źródła informacji. Rozmawialiśmy o tym, od czego rozpocząć weryfikację treści, co powinno wzbudzić naszą czujność i jakie elementy warto sprawdzić, zanim uznamy informację za wiarygodną lub przekażemy ją dalej.\n\nNie chodzi przy tym o to, żeby podważać każdą napotkaną informację. Krytyczne myślenie pomaga przede wszystkim rozpoznać moment, w którym warto się zatrzymać, poszukać źródła, sprawdzić kontekst i upewnić się, czy przedstawiony przekaz rzeczywiście mówi nam całą historię.\n\nDzisiejsze szkolenie było kolejnym spotkaniem przygotowanym dla pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszymy się, że programy wypracowane w projekcie trafiają do kolejnych pracowników publicznych służb zatrudnienia i mogą być wykorzystywane także poza Wojewódzkim Urzędem Pracy.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną rozmowę o tym, jak świadomiej poruszać się w świecie informacji.",
+      "bodyEn": "We discussed how the way information reaches us has changed, why some content attracts attention faster than others and how strongly emotions influence the way we receive information.\n\nWe also looked at mechanisms of disinformation and manipulation. We showed that misleading content does not always have to be based on completely false information. Sometimes changing the context, choosing particular words, using only a fragment of a statement or presenting true data in a certain way is enough.\n\nAn important part of the meeting was taking a critical look at information sources. We discussed where to begin verification, what should raise our attention and which elements are worth checking before treating information as credible or passing it on.\n\nThe aim is not to question every piece of information we encounter. Critical thinking primarily helps us recognise when it is worth stopping, finding the source, checking the context and making sure that a message really tells the whole story.\n\nToday’s training was another session prepared for District Labour Office employees within the Education Without Borders project. We are pleased that the programmes developed through the project are reaching more public employment service employees and can be used beyond the Voivodeship Labour Office.\n\nThank you to all participants for your activity, questions and shared discussion about navigating the information environment more consciously.",
+      "image": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/szkolenie-edukacja-medialna-pup.webp",
+      "imageAlt": "Szkolenie z edukacji medialnej, fake news i krytycznego myślenia dla pracowników PUP",
+      "imageAltEn": "Media literacy, fake news and critical thinking training for District Labour Office employees",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/dezinformacja-slajd.webp",
+          "alt": "Slajd dotyczący dezinformacji, misinformacji, manipulacji i fake news",
+          "altEn": "Slide about disinformation, misinformation, manipulation and fake news"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/uczestnicy-szkolenia.webp",
+          "alt": "Uczestnicy szkolenia z edukacji medialnej dla pracowników PUP",
+          "altEn": "Participants in the media literacy training for District Labour Office employees"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-10-22-edukacja-medialna-pup/sala-i-prowadzacy.webp",
+          "alt": "Szkolenie z edukacji medialnej prowadzone w WUP Katowice",
+          "altEn": "Media literacy training held at the Voivodeship Labour Office in Katowice"
+        }
+      ]
+    },
+    {
+      "id": "od-mobilnosci-do-praktyki-ai-pup-zabrze-2026-10-21",
+      "date": "2026-10-21",
+      "published": true,
+      "category": "Kierunek - Kompetencje 4.0",
+      "categoryEn": "Direction - Competences 4.0",
+      "title": "Od mobilności do praktyki - AI dla doradców zawodowych w PUP Zabrze",
+      "titleEn": "From mobility to practice - AI for career counsellors at the District Labour Office in Zabrze",
+      "lead": "21 października spotkaliśmy się w Powiatowym Urzędzie Pracy w Zabrzu na szkoleniu poświęconym praktycznemu wykorzystaniu sztucznej inteligencji. W wydarzeniu uczestniczyło ponad 20 osób - doradcy zawodowi pracujący w szkołach oraz pracownicy PUP Zabrze.",
+      "leadEn": "On 21 October, we met at the District Labour Office in Zabrze for a training session devoted to the practical use of artificial intelligence. More than 20 people took part - career counsellors working in schools and employees of the District Labour Office in Zabrze.",
+      "body": "Podczas spotkania przedstawiliśmy możliwości wykorzystania narzędzi opartych na sztucznej inteligencji w codziennej pracy doradcy zawodowego. Pokazaliśmy przykłady zastosowania AI m.in. do przygotowywania materiałów, porządkowania informacji, tworzenia pomysłów na zajęcia, pracy z tekstem oraz wspierania komunikacji z odbiorcami.\n\nRozmawialiśmy również o tym, jak formułować polecenia dla narzędzi AI, na co zwracać uwagę przy ocenie generowanych odpowiedzi oraz dlaczego tak ważne pozostają weryfikacja informacji, odpowiedzialne korzystanie z nowych technologii i ochrona danych.\n\nTo szkolenie ma dla nas szczególne znaczenie także z innego powodu. Program stanowi kontynuację działań rozpoczętych w projekcie Erasmus+ „Kierunek - Kompetencje 4.0”. Wiedza i doświadczenia zdobyte podczas mobilności zostały wykorzystane do przygotowania programu, który może dziś wspierać kolejne grupy odbiorców.\n\nTym samym rezultat projektu nie kończy się wraz z jego realizacją. Szkolenie dotyczące praktycznego wykorzystania sztucznej inteligencji zostało włączone do stałej oferty szkoleniowej Wojewódzkiego Urzędu Pracy w Katowicach i będzie rozwijane oraz wykorzystywane podczas kolejnych działań edukacyjnych.\n\nDziękujemy Powiatowemu Urzędowi Pracy w Zabrzu za zaproszenie, zorganizowanie szkolenia i stworzenie przestrzeni do wspólnego spotkania, a wszystkim uczestnikom za zainteresowanie, pytania i wspólnie spędzony czas.\n\nCieszymy się, że kompetencje zdobyte podczas mobilności mogą dziś pracować dalej - bezpośrednio na rzecz doradców zawodowych i instytucji rynku pracy w naszym regionie.",
+      "bodyEn": "During the meeting, we presented ways in which artificial intelligence tools can support the everyday work of career counsellors. We showed examples of using AI to prepare materials, organise information, develop ideas for activities, work with text and support communication with audiences.\n\nWe also discussed how to formulate prompts for AI tools, what to look for when assessing generated answers and why verification, responsible use of new technologies and data protection remain essential.\n\nThis training is particularly important to us for another reason. The programme continues activities launched within the Erasmus+ project “Direction - Competences 4.0”. Knowledge and experience gained during mobility activities were used to develop a programme that can now support further groups of recipients.\n\nThe project result therefore continues beyond the formal end of the project. Training on the practical use of artificial intelligence has been incorporated into the permanent training offer of the Voivodeship Labour Office in Katowice and will continue to be developed and used in future educational activities.\n\nWe thank the District Labour Office in Zabrze for the invitation, organisation of the training and creating space for the meeting, and all participants for their interest, questions and time together.\n\nWe are pleased that competences gained during mobility can continue to work directly for career counsellors and labour market institutions in our region.",
+      "image": "grafiki/aktualnosci/2026-10-21-ai-pup-zabrze/kierunek-kompetencje-4-0.webp",
+      "imageAlt": "Logo projektu „Kierunek - Kompetencje 4.0”",
+      "imageAltEn": "Direction - Competences 4.0 project logo",
+      "imageMode": "logo",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-21-ai-pup-zabrze/szkolenie-ai-pup-zabrze.webp",
+          "alt": "Szkolenie dotyczące sztucznej inteligencji dla doradców zawodowych w PUP Zabrze",
+          "altEn": "Artificial intelligence training for career counsellors at the District Labour Office in Zabrze"
+        }
+      ]
+    },
+    {
       "id": "pierwsze-szkolenie-pup-wystapienia-storytelling-2026-10-13",
       "date": "2026-10-13",
       "published": true,
@@ -634,7 +751,9 @@ window.portalSiteData = {
       "registrationClosed": true,
       "link": "",
       "button": "Zapisy zakończone",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "completed": true,
+      "newsId": "od-mobilnosci-do-praktyki-ai-pup-zabrze-2026-10-21"
     },
     {
       "id": "fake-news-2026-10-22",
@@ -655,12 +774,14 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/fTwB1DStd58EeNBZ9",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "edukacja-medialna-dla-pracownikow-pup-2026-10-22"
     },
     {
       "id": "grywalizacja-2026-10-26",
@@ -681,12 +802,14 @@ window.portalSiteData = {
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/p3yRvwcjWivh248g7",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "co-sprawia-ze-chce-nam-sie-dzialac-grywalizacja-2026-10-26"
     },
     {
       "id": "fake-news-2026-10-27",
@@ -707,12 +830,14 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/e3PfzyLNqswoxrH58",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27"
     },
     {
       "id": "ai",
