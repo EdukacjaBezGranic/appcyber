@@ -5,6 +5,30 @@
   },
   "news": [
     {
+      "id": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27",
+      "date": "2026-10-27",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Nie wszystko, co wygląda wiarygodnie, takie jest",
+      "titleEn": "Not everything that looks credible really is",
+      "lead": "27 października spotkaliśmy się z pracownikami Powiatowych Urzędów Pracy na szkoleniu poświęconym edukacji medialnej, fake news i krytycznemu myśleniu.",
+      "leadEn": "On 27 October, we met with employees of District Labour Offices for a training session devoted to media literacy, fake news and critical thinking.",
+      "body": "Tym razem szczególnie przyglądaliśmy się temu, dlaczego niektóre informacje od razu wydają nam się wiarygodne. Znajome zdjęcie, konkretny cytat, liczba, wykres czy powołanie się na eksperta mogą sprawić, że komunikat zaczynamy traktować jako prawdziwy, zanim jeszcze sprawdzimy jego źródło i kontekst.\n\nPodczas spotkania pokazywaliśmy, że manipulacja nie zawsze oznacza stworzenie informacji od początku do końca. Często wykorzystuje prawdziwe elementy, które zostają odpowiednio dobrane, wyrwane z kontekstu albo przedstawione w sposób prowadzący odbiorcę do określonego wniosku.\n\nRozmawialiśmy o tym, na jakie sygnały warto zwracać uwagę podczas odbioru informacji, gdzie szukać pierwotnego źródła i dlaczego przed udostępnieniem treści dobrze zadać sobie kilka dodatkowych pytań.\n\nWażnym tematem były również emocje. To właśnie treści, które wywołują złość, strach, zdziwienie lub silne poczucie zgody z naszymi przekonaniami, najłatwiej skłaniają nas do szybkiej reakcji. Krytyczne myślenie zaczyna się często od bardzo prostego działania: zatrzymania się na chwilę przed oceną lub udostępnieniem informacji.\n\nDzisiejsze spotkanie było kolejnym szkoleniem skierowanym do pracowników PUP w ramach projektu „Edukacja bez granic”. Cieszymy się, że temat świadomego korzystania z informacji trafia do kolejnych osób pracujących w publicznych służbach zatrudnienia.\n\nDziękujemy uczestnikom za uwagę, pytania i wspólną rozmowę o tym, jak poruszać się w świecie informacji z większą świadomością i mniejszym pośpiechem.",
+      "bodyEn": "This time, we looked particularly closely at why some information immediately seems credible to us. A familiar image, a specific quotation, a number, a chart or a reference to an expert can make us accept a message as true before checking its source and context.\n\nDuring the session, we showed that manipulation does not always mean creating information entirely from scratch. It often uses true elements that are selectively chosen, removed from context or presented in a way that leads the audience towards a particular conclusion.\n\nWe discussed which signals are worth noticing when receiving information, where to look for the original source and why it is useful to ask a few additional questions before sharing content.\n\nEmotions were also an important topic. Content that provokes anger, fear, surprise or strongly confirms our existing beliefs is especially likely to trigger a quick reaction. Critical thinking often begins with a very simple action: pausing for a moment before judging or sharing information.\n\nToday's meeting was another training session for District Labour Office employees delivered as part of the Education Without Borders project. We are pleased that the topic of conscious information use is reaching more people working in public employment services.\n\nThank you to all participants for your attention, questions and the shared discussion about how to navigate the information environment with greater awareness and less haste.",
+      "image": "grafiki/aktualnosci/2026-10-27-edukacja-medialna-pup/prowadzacy-i-dezinformacja.webp",
+      "imageAlt": "Prowadzący szkolenie z edukacji medialnej na tle slajdu o misinformacji, dezinformacji i malinformacji",
+      "imageAltEn": "Trainers leading a media literacy session with a slide about misinformation, disinformation and malinformation",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-10-27-edukacja-medialna-pup/informacja-i-smartfony.webp",
+          "alt": "Szkolenie o obiegu informacji w internecie i mediach społecznościowych",
+          "altEn": "Training session about information flows on the internet and social media"
+        }
+      ]
+    },
+    {
       "id": "co-sprawia-ze-chce-nam-sie-dzialac-grywalizacja-2026-10-26",
       "date": "2026-10-26",
       "published": true,
@@ -806,12 +830,14 @@
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
+      "open": false,
       "link": "https://forms.gle/e3PfzyLNqswoxrH58",
       "button": "Zapisz się",
-      "registrationClosed": false,
+      "registrationClosed": true,
       "calendarOnly": true,
-      "audienceTag": "PUP"
+      "audienceTag": "PUP",
+      "completed": true,
+      "newsId": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27"
     },
     {
       "id": "ai",
@@ -896,6 +922,110 @@
       "open": false,
       "link": "",
       "button": "Wkrótce"
+    },
+    {
+      "id": "komunikacja-2026-11-05",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Wystąpienia publiczne i storytelling",
+      "shortTitle": "Wystąpienia publiczne",
+      "date": "2026-11-05",
+      "calendarColor": "#1f6f54",
+      "tone": "green",
+      "time": "09:00 - 14:00",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników PUP i WUP",
+      "audienceTag": "PUP+WUP",
+      "description": [
+        "Praktyczne spojrzenie na budowanie jasnej wypowiedzi, kontakt z odbiorcami i wykorzystywanie storytellingu w codziennej komunikacji.",
+        "Szkolenie pomaga porządkować przekaz, wybierać najważniejsze informacje i mówić w sposób angażujący oraz zrozumiały."
+      ],
+      "color": "#1f6f54",
+      "image": "grafiki/komunikacja.webp",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/zosohNBwNEvz9afD7",
+      "button": "Zapisz się",
+      "calendarOnly": true
+    },
+    {
+      "id": "grywalizacja-2026-11-09",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-11-09",
+      "calendarColor": "#0d4f96",
+      "tone": "blue",
+      "time": "09:00 - 14:00",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników PUP i WUP",
+      "audienceTag": "PUP+WUP",
+      "description": [
+        "Szkolenie pokazuje, jak wykorzystywać proste mechanizmy gier do angażowania uczestników, pobudzania kreatywności i wzmacniania współpracy.",
+        "Uczestnicy poznają różnicę między grywalizacją a Game-Based Learning oraz przykłady rozwiązań możliwych do zastosowania w pracy z grupą."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/svrn5qa7knqMSKQ67",
+      "button": "Zapisz się",
+      "calendarOnly": true
+    },
+    {
+      "id": "fake-news-2026-11-16",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Edukacja medialna, fake news i krytyczne myślenie",
+      "shortTitle": "Edukacja medialna",
+      "date": "2026-11-16",
+      "calendarColor": "#16877f",
+      "tone": "cyan",
+      "time": "09:00 - 14:00",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników PUP i WUP",
+      "audienceTag": "PUP+WUP",
+      "description": [
+        "Szkolenie pomaga rozpoznawać mechanizmy dezinformacji i manipulacji oraz świadomie oceniać wiarygodność informacji.",
+        "Uczestnicy poznają sposoby sprawdzania źródeł, kontekstu i treści, a także zasady krytycznego korzystania z informacji w środowisku cyfrowym."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/WWNtKnDuEWGLpBvQA",
+      "button": "Zapisz się",
+      "calendarOnly": true
+    },
+    {
+      "id": "grywalizacja-2026-11-27",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Grywalizacja i Game-Based Learning - kreatywność, współpraca i uczenie przez działanie",
+      "shortTitle": "Grywalizacja",
+      "date": "2026-11-27",
+      "calendarColor": "#0d4f96",
+      "tone": "blue",
+      "time": "09:00 - 14:00",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników PUP i WUP",
+      "audienceTag": "PUP+WUP",
+      "description": [
+        "Szkolenie pokazuje, jak wykorzystywać proste mechanizmy gier do angażowania uczestników, pobudzania kreatywności i wzmacniania współpracy.",
+        "Uczestnicy poznają różnicę między grywalizacją a Game-Based Learning oraz przykłady rozwiązań możliwych do zastosowania w pracy z grupą."
+      ],
+      "color": "#0d4f96",
+      "image": "grafiki/gamifikacja.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": true,
+      "registrationClosed": false,
+      "link": "https://forms.gle/4dZhXzMVVTKNPKrXA",
+      "button": "Zapisz się",
+      "calendarOnly": true
     }
   ]
 }

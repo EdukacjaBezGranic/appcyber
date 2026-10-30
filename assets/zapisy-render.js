@@ -62,6 +62,7 @@
     const tag = String(training.audienceTag || '').trim().toUpperCase();
     if (tag === 'WUP') return 'Szkolenie dla pracowników WUP';
     if (tag === 'PUP') return 'Szkolenie dla pracowników PUP';
+    if (tag === 'PUP+WUP' || tag === 'WUP+PUP') return 'Szkolenie dla pracowników PUP i WUP';
 
     const audience = String(training.audience || '').toLowerCase();
     if (audience.includes('powiatowych urzędów pracy') || audience.includes('pracowników pup')) return 'Szkolenie dla pracowników PUP';
