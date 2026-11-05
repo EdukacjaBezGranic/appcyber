@@ -5,6 +5,24 @@
   },
   "news": [
     {
+      "id": "dobra-historia-wystapienia-storytelling-2026-11-05",
+      "date": "2026-11-05",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Dobra historia pomaga mówić o tym, co naprawdę ważne",
+      "titleEn": "A good story helps us talk about what really matters",
+      "lead": "5 listopada spotkaliśmy się na szkoleniu poświęconym wystąpieniom publicznym i storytellingowi. Tym razem przyglądaliśmy się temu, dlaczego dobrze opowiedziana historia potrafi zainteresować odbiorców i sprawić, że najważniejszy przekaz zostaje z nimi na dłużej.",
+      "leadEn": "On 5 November, we met for a training session on public speaking and storytelling. This time, we looked at why a well-told story can engage an audience and help the key message stay with them for longer.",
+      "body": "Zajęcia poprowadziła niezastąpiona Ania, która po raz kolejny pokazała, że o wystąpieniach publicznych można mówić konkretnie, praktycznie i z dużą swobodą.\n\nStorytelling nie polega na dodawaniu historii do każdej wypowiedzi. Chodzi przede wszystkim o świadome budowanie przekazu - określenie, co chcemy powiedzieć, do kogo mówimy i w jaki sposób poprowadzić odbiorcę do najważniejszej myśli.\n\nPodczas spotkania skupiliśmy się na strukturze wypowiedzi, sposobach przyciągania uwagi oraz wykorzystywaniu przykładów, doświadczeń i historii, które pomagają lepiej wyjaśniać nawet bardziej złożone tematy.\n\nRozmawialiśmy również o tym, co sprawia, że jednych wystąpień słuchamy z zainteresowaniem, a przy innych szybko tracimy uwagę. Znaczenie mają nie tylko słowa, ale również sposób ich uporządkowania, tempo wypowiedzi, kontakt z odbiorcami i jasne określenie najważniejszego komunikatu.\n\nW pracy zawodowej nie zawsze potrzebujemy długiej prezentacji. Czasem wystarczy dobrze dobrany przykład albo krótka historia, żeby informacja stała się bardziej zrozumiała, konkretna i łatwiejsza do zapamiętania.\n\nDziękujemy uczestnikom za aktywność, otwartość i wspólnie spędzony czas. Listopadowa seria szkoleń w projekcie „Edukacja bez granic” właśnie się rozpoczęła.",
+      "bodyEn": "The session was led by our indispensable Ania, who once again showed that public speaking can be discussed in a concrete, practical and natural way.\n\nStorytelling is not about adding a story to every statement. It is primarily about consciously building a message - deciding what we want to say, who we are speaking to and how to guide the audience towards the key idea.\n\nDuring the session, we focused on structure, ways of attracting attention and the use of examples, experiences and stories that can help explain even more complex topics.\n\nWe also discussed why some presentations keep us interested while others quickly lose our attention. It is not only the words that matter, but also how they are organised, the pace of delivery, contact with the audience and a clear key message.\n\nIn professional communication, a long presentation is not always necessary. Sometimes a well-chosen example or a short story is enough to make information clearer, more concrete and easier to remember.\n\nThank you to all participants for your activity, openness and time together. The November series of training sessions in the Education Without Borders project has now begun.",
+      "image": "grafiki/aktualnosci/2026-11-05-wystapienia-storytelling/ania-wystapienia-storytelling.webp",
+      "imageAlt": "Ania prowadzi szkolenie z wystąpień publicznych i storytellingu",
+      "imageAltEn": "Ania leading a public speaking and storytelling training session",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
       "id": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27",
       "date": "2026-10-27",
       "published": true,
@@ -943,11 +961,13 @@
       "color": "#1f6f54",
       "image": "grafiki/komunikacja.webp",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "registrationClosed": false,
+      "open": false,
+      "registrationClosed": true,
       "link": "https://forms.gle/zosohNBwNEvz9afD7",
       "button": "Zapisz się",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "completed": true,
+      "newsId": "dobra-historia-wystapienia-storytelling-2026-11-05"
     },
     {
       "id": "grywalizacja-2026-11-09",
