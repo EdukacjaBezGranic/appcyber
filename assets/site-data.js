@@ -23,6 +23,26 @@ window.portalSiteData = {
       "gallery": []
     },
     {
+      "id": "pazdziernik-pod-znakiem-rozwoju-kompetencji-2026-10-31",
+      "date": "2026-10-31",
+      "published": true,
+      "category": "Podsumowanie działań projektowych",
+      "categoryEn": "Project activities summary",
+      "title": "Październik pod znakiem rozwoju kompetencji",
+      "titleEn": "October focused on competence development",
+      "lead": "Październik był kolejnym intensywnym miesiącem działań realizowanych przez Wojewódzki Urząd Pracy w Katowicach w ramach projektu „Edukacja bez granic”. Kontynuowaliśmy rozwijanie kompetencji pracowników publicznych służb zatrudnienia, koncentrując się na komunikacji, edukacji medialnej oraz nowoczesnych metodach angażowania uczestników w proces uczenia się.",
+      "leadEn": "October was another intensive month of activities carried out by the Voivodeship Labour Office in Katowice as part of the Education Without Borders project. We continued to develop the competencies of public employment service staff, focusing on communication, media literacy and modern methods of engaging participants in the learning process.",
+      "body": "W ciągu miesiąca zrealizowaliśmy 6 szkoleń projektowych, podczas których odnotowaliśmy łącznie 84 uczestnictwa. Październik był również ważnym momentem w rozwoju projektu, ponieważ do szkoleń, obok pracowników WUP, dołączyli pracownicy Powiatowych Urzędów Pracy.\n\nSpotkania były przestrzenią do zdobywania wiedzy, poznawania nowych rozwiązań i wymiany doświadczeń związanych z codzienną pracą w publicznych służbach zatrudnienia.\n\n## Komunikacja, która pomaga skuteczniej docierać do odbiorców\n\n6 i 13 października odbyły się szkolenia „Wystąpienia publiczne i storytelling”, w których uczestniczyło łącznie 19 osób.\n\nPodczas spotkań skupiliśmy się na budowaniu uporządkowanych i angażujących wypowiedzi, utrzymywaniu kontaktu z odbiorcami oraz świadomym wykorzystywaniu sposobu mówienia i opowiadania historii.\n\nSkuteczna komunikacja nie ogranicza się do samego przekazywania informacji. Równie ważne są ich zrozumiałość, odpowiednia struktura i dostosowanie języka do potrzeb odbiorcy. Umiejętności te mają szczególne znaczenie w pracy doradczej, podczas prowadzenia spotkań oraz prezentowania informacji klientom urzędów pracy.\n\n## Grywalizacja jako sposób na większe zaangażowanie\n\n7 i 26 października zrealizowaliśmy dwa szkolenia poświęcone grywalizacji i Game-Based Learning, z udziałem łącznie 26 osób.\n\nPrzyglądaliśmy się temu, dlaczego mechanizmy znane z gier mogą zwiększać motywację do działania, zachęcać do współpracy i ułatwiać aktywne uczestnictwo w zajęciach.\n\nUczestnicy poznawali możliwości wykorzystywania wyzwań, informacji zwrotnej, elementów rywalizacji i współpracy w działaniach edukacyjnych. Szczególną uwagę poświęciliśmy rozwiązaniom, które można dostosować do różnych grup odbiorców i zastosować bez konieczności korzystania ze skomplikowanych narzędzi technologicznych.\n\n## Edukacja medialna i krytyczne myślenie w świecie nadmiaru informacji\n\n22 i 27 października odbyły się szkolenia z zakresu edukacji medialnej, fake news i krytycznego myślenia, w których uczestniczyło łącznie 39 osób.\n\nTematyka spotkań obejmowała mechanizmy dezinformacji, manipulowanie kontekstem, rolę emocji w odbiorze treści oraz sposoby oceny wiarygodności informacji.\n\nZwracaliśmy uwagę na to, że wprowadzający w błąd przekaz nie zawsze opiera się na całkowicie fałszywej informacji. Często wykorzystuje prawdziwe zdjęcia, wypowiedzi lub dane przedstawione w taki sposób, że zmienia się ich pierwotny sens.\n\nUmiejętność krytycznej analizy informacji ma znaczenie zarówno w codziennym życiu, jak i w pracy zawodowej, w której rzetelność przekazywanych treści oraz odpowiedzialne korzystanie ze źródeł są szczególnie ważne.\n\n## Sztuczna inteligencja w pracy doradców zawodowych\n\nPaździernik był również okazją do kontynuowania rezultatów wcześniejszych projektów mobilnościowych WUP.\n\n21 października w Powiatowym Urzędzie Pracy w Zabrzu przeprowadziliśmy szkolenie dotyczące wykorzystania sztucznej inteligencji w pracy doradcy zawodowego. W spotkaniu uczestniczyli pracownicy PUP oraz doradcy zawodowi pracujący w szkołach.\n\nSzkolenie było kontynuacją działań rozpoczętych w projekcie „Kierunek - Kompetencje 4.0”. Wiedza i doświadczenia zdobyte podczas mobilności zostały wykorzystane do przygotowania programu szkoleniowego, który obecnie został włączony do stałej oferty Wojewódzkiego Urzędu Pracy w Katowicach.\n\nPodczas spotkania przedstawiliśmy możliwości wykorzystania narzędzi AI m.in. do przygotowywania materiałów, pracy z tekstem, porządkowania informacji i wspierania realizacji codziennych zadań zawodowych. Ważnym elementem była również odpowiedzialność za sposób korzystania z generowanych treści, ich weryfikację oraz ochronę informacji.\n\n## Od zdobywania wiedzy do jej wykorzystania w praktyce\n\nPaździernikowe działania pokazały, jak wiedza zdobywana podczas mobilności i przygotowywana w ramach projektów może być stopniowo przekładana na konkretne programy szkoleniowe.\n\nW przypadku projektu „Edukacja bez granic” programy przygotowane na podstawie doświadczeń zdobytych podczas zagranicznej mobilności są już wykorzystywane nie tylko podczas szkoleń wewnętrznych WUP, ale również w działaniach skierowanych do pracowników Powiatowych Urzędów Pracy.\n\nZależy nam, aby przekazywana wiedza znajdowała zastosowanie w codziennej pracy. Dlatego omawiane zagadnienia odnosimy do rzeczywistych sytuacji zawodowych, potrzeb uczestników oraz wyzwań, z którymi mierzą się pracownicy publicznych służb zatrudnienia.\n\nDziękujemy wszystkim uczestnikom za aktywność, pytania, dzielenie się doświadczeniami i otwartość na nowe rozwiązania.\n\nPrzed nami kolejne spotkania i dalsza praca nad rozwijaniem kompetencji, które pomagają skuteczniej komunikować się, świadomie korzystać z informacji i wykorzystywać nowoczesne rozwiązania w pracy zawodowej.\n\n*Działania szkoleniowe projektu „Edukacja bez granic” są finansowane ze środków programu Erasmus+.*",
+      "bodyEn": "During the month, we delivered 6 project training sessions with a total of 84 attendances. October was also an important stage in the project because, alongside WUP employees, staff from District Labour Offices joined the training offer.\n\nThe meetings created space for gaining knowledge, exploring new solutions and exchanging experience related to daily work in the public employment services.\n\n## Communication that helps reach audiences more effectively\n\nOn 6 and 13 October, we held training sessions on public speaking and storytelling, attended by a total of 19 people.\n\nThe meetings focused on building well-structured and engaging messages, maintaining contact with the audience and consciously using speech and storytelling. Effective communication is not limited to conveying information alone. Clarity, structure and adapting language to audience needs are equally important.\n\n## Gamification as a way to increase engagement\n\nOn 7 and 26 October, we delivered two training sessions devoted to gamification and Game-Based Learning, with a total of 26 participants. Participants explored why game mechanisms can increase motivation, encourage cooperation and support active participation.\n\n## Media literacy and critical thinking in a world of information overload\n\nOn 22 and 27 October, training sessions on media literacy, fake news and critical thinking took place, with a total of 39 participants. The topics included disinformation mechanisms, context manipulation, the role of emotions in receiving content and ways of assessing the credibility of information.\n\n## Artificial intelligence in the work of career counsellors\n\nOctober was also an opportunity to continue the outcomes of previous mobility projects. On 21 October, at the District Labour Office in Zabrze, we delivered training on the use of artificial intelligence in the work of career counsellors. This session continued the activities initiated in the “Direction - Competences 4.0” project.\n\n## From gaining knowledge to using it in practice\n\nOctober showed how knowledge gained during mobility and developed within projects can gradually be translated into specific training programmes. In the case of Education Without Borders, programmes based on international mobility experience are already being used not only in internal WUP training, but also in activities addressed to District Labour Office staff.\n\nWe want the knowledge shared during meetings to be useful in everyday work, so the discussed topics are always linked to real professional situations, participant needs and the challenges faced by public employment service employees.\n\nThank you to all participants for your activity, questions, sharing of experience and openness to new solutions. More meetings and further work on competence development lie ahead.\n\n*The training activities of the Education Without Borders project are financed by Erasmus+ funds.*",
+      "image": "grafiki/edukacjabz-logo-article.png",
+      "imageAlt": "Logo projektu „Edukacja bez granic”",
+      "imageAltEn": "Education Without Borders project logo",
+      "theme": "summary",
+      "imageMode": "logo",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
       "id": "nie-wszystko-co-wyglada-wiarygodnie-2026-10-27",
       "date": "2026-10-27",
       "published": true,
@@ -1015,8 +1035,8 @@ window.portalSiteData = {
       "color": "#16877f",
       "image": "grafiki/fake-news.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "registrationClosed": false,
+      "open": false,
+      "registrationClosed": true,
       "link": "https://forms.gle/WWNtKnDuEWGLpBvQA",
       "button": "Zapisz się",
       "calendarOnly": true
@@ -1044,6 +1064,32 @@ window.portalSiteData = {
       "open": true,
       "registrationClosed": false,
       "link": "https://forms.gle/4dZhXzMVVTKNPKrXA",
+      "button": "Zapisz się",
+      "calendarOnly": true
+    },
+    {
+      "id": "komunikacja-2026-11-17",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Wystąpienia publiczne i storytelling",
+      "shortTitle": "Wystąpienia publiczne",
+      "date": "2026-11-17",
+      "calendarColor": "#1f6f54",
+      "tone": "green",
+      "time": "09:00 - 14:00",
+      "place": "WUP Katowice",
+      "audience": "Szkolenie dla pracowników PUP",
+      "audienceTag": "PUP",
+      "description": [
+        "Praktyczne spojrzenie na budowanie jasnej wypowiedzi, kontakt z odbiorcami i wykorzystywanie storytellingu w codziennej komunikacji.",
+        "Szkolenie pomaga porządkować przekaz, wybierać najważniejsze informacje i mówić w sposób angażujący oraz zrozumiały."
+      ],
+      "color": "#1f6f54",
+      "image": "grafiki/komunikacja.webp",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "registrationClosed": true,
+      "link": "https://forms.gle/TvahbwB33tTdWEr1A",
       "button": "Zapisz się",
       "calendarOnly": true
     }
