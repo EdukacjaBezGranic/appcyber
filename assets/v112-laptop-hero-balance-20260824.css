@@ -1,0 +1,23 @@
+/* ======================================================================
+   V112 — SUBTELNY BALANS HERO NA LAPTOPIE / DESKTOPIE
+   - mniej martwej przestrzeni pomiędzy copy a zdjęciem
+   - zdjęcie większe o ok. 7%, rośnie w kierunku tekstu
+   - blok tekstowy, wysokość hero, mobile i tablet bez zmian
+   ====================================================================== */
+
+@media (min-width:1181px){
+  body.public-page.home-rd.portal-v68 .home-rd-hero.home-rd-hero--refined{
+    column-gap:clamp(56px,4vw,76px)!important;
+  }
+
+  body.public-page.home-rd.portal-v68 .home-rd-hero--refined .home-rd-hero-visual{
+    width:107%!important;
+    max-width:none!important;
+    transform:translateX(-6.55%)!important;
+    transform-origin:right center!important;
+  }
+
+  body.public-page.home-rd.portal-v68 .home-rd-hero--refined .home-rd-hero-visual>img{
+    width:100%!important;
+  }
+}

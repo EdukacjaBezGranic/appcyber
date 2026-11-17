@@ -1,0 +1,108 @@
+/* V167 - jednoznaczny stan odpowiedzi po sprawdzeniu.
+   Kolor nie jest jedynym sygnałem: zaznaczona odpowiedź dostaje też etykietę ✓ / ✕. */
+body.course-page.course-portal-aligned .v167-answer-correct,
+body.course-page.course-portal-aligned label.v167-answer-correct{
+  border-color:#2f8b67!important;
+  background:#e7f6ee!important;
+  box-shadow:inset 4px 0 0 #2f8b67,0 0 0 1px rgba(47,139,103,.08)!important;
+}
+body.course-page.course-portal-aligned .v167-answer-incorrect,
+body.course-page.course-portal-aligned label.v167-answer-incorrect{
+  border-color:#bd5a4f!important;
+  background:#fff0ed!important;
+  box-shadow:inset 4px 0 0 #bd5a4f,0 0 0 1px rgba(189,90,79,.07)!important;
+}
+body.course-page.course-portal-aligned .v167-answer-correct input[type="radio"],
+body.course-page.course-portal-aligned .v167-answer-correct input[type="checkbox"]{accent-color:#247453!important}
+body.course-page.course-portal-aligned .v167-answer-incorrect input[type="radio"],
+body.course-page.course-portal-aligned .v167-answer-incorrect input[type="checkbox"]{accent-color:#a9473d!important}
+body.course-page.course-portal-aligned .v167-answer-state-badge{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:100%;
+  margin:.5rem 0 0;
+  padding:.25rem .52rem;
+  border-radius:999px;
+  font-size:.74rem;
+  font-weight:850;
+  line-height:1.2;
+  letter-spacing:.01em;
+}
+body.course-page.course-portal-aligned .v167-answer-correct .v167-answer-state-badge{
+  background:#cfeadb;
+  color:#174d38!important;
+  -webkit-text-fill-color:#174d38!important;
+}
+body.course-page.course-portal-aligned .v167-answer-incorrect .v167-answer-state-badge{
+  background:#f6d5cf;
+  color:#7d3029!important;
+  -webkit-text-fill-color:#7d3029!important;
+}
+
+/* Starsze ćwiczenia, które już oznaczają poprawność na poziomie pola/fieldsetu. */
+body.course-page.course-portal-aligned .compact-field.exercise-feedback-correct select,
+body.course-page.course-portal-aligned .m1v3-row.is-correct select,
+body.course-page.course-portal-aligned .m1v3-question-block.is-correct select{
+  border-color:#2f8b67!important;
+  background:#e7f6ee!important;
+  color:#173f31!important;
+  -webkit-text-fill-color:#173f31!important;
+}
+body.course-page.course-portal-aligned .compact-field.exercise-feedback-incorrect select,
+body.course-page.course-portal-aligned .m1v3-row.is-incorrect select,
+body.course-page.course-portal-aligned .m1v3-question-block.is-incorrect select{
+  border-color:#bd5a4f!important;
+  background:#fff0ed!important;
+  color:#692d28!important;
+  -webkit-text-fill-color:#692d28!important;
+}
+body.course-page.course-portal-aligned .m1v3-fieldset.is-correct label:has(input:checked),
+body.course-page.course-portal-aligned .m1v3-question-block.is-correct label:has(input:checked){
+  border-color:#2f8b67!important;
+  background:#e7f6ee!important;
+}
+body.course-page.course-portal-aligned .m1v3-fieldset.is-incorrect label:has(input:checked),
+body.course-page.course-portal-aligned .m1v3-question-block.is-incorrect label:has(input:checked){
+  border-color:#bd5a4f!important;
+  background:#fff0ed!important;
+}
+
+/* V163 ma stan na fieldsecie - zaznaczona odpowiedź ma być wyraźniejsza niż samo tło pytania. */
+body.course-page.course-portal-aligned .v163-question-list fieldset.is-correct label:has(input:checked){
+  border-color:#2f8b67!important;
+  background:#dff2e8!important;
+  box-shadow:inset 4px 0 0 #2f8b67!important;
+}
+body.course-page.course-portal-aligned .v163-question-list fieldset.is-incorrect label:has(input:checked){
+  border-color:#bd5a4f!important;
+  background:#fde6e2!important;
+  box-shadow:inset 4px 0 0 #bd5a4f!important;
+}
+
+@media(max-width:620px){
+  body.course-page.course-portal-aligned .v167-answer-state-badge{
+    margin-top:.42rem;
+    font-size:.7rem;
+  }
+}
+
+
+/* V168 - badge stanu zawsze pod tekstem odpowiedzi, nigdy w kolumnie kontrolki. */
+body.course-page.course-portal-aligned .v168-answer-content{
+  display:block!important;
+  min-width:0;
+}
+body.course-page.course-portal-aligned .v168-answer-content>.v167-answer-state-badge{
+  display:flex!important;
+  width:max-content;
+  max-width:100%;
+  margin:.5rem 0 0!important;
+}
+/* Zabezpieczenie dla nietypowej etykiety bez osobnego spana tekstowego. */
+body.course-page.course-portal-aligned label.v167-answer-correct>.v168-answer-state-badge--fallback,
+body.course-page.course-portal-aligned label.v167-answer-incorrect>.v168-answer-state-badge--fallback{
+  grid-column:2/-1;
+  justify-self:start;
+}

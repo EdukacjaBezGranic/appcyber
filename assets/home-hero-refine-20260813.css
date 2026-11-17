@@ -1,0 +1,151 @@
+/* ==========================================================
+   PASS 63 — START HERO: brand strip + balanced copy/photo grid
+   Goal: logo strip spans the section, the photo begins with the H1,
+   and project metadata spans the full width below both columns.
+   ========================================================== */
+
+body.public-page.home-rd.editorial-2026 .home-rd-hero.home-rd-hero--refined{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.38fr) minmax(420px,1fr)!important;
+  grid-template-areas:
+    "brand brand"
+    "copy visual"
+    "meta meta"!important;
+  column-gap:clamp(42px,5vw,88px)!important;
+  row-gap:clamp(26px,2.6vw,40px)!important;
+  align-items:stretch!important;
+  min-height:0!important;
+  padding:clamp(46px,5.3vw,84px) var(--g) clamp(42px,4.6vw,72px)!important;
+  overflow:visible!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero.home-rd-hero--refined::before{display:none!important;content:none!important;}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-brandbar{
+  grid-area:brand!important;
+  display:flex!important;
+  align-items:center!important;
+  min-height:74px!important;
+  padding:0 0 22px!important;
+  border-bottom:1px solid rgba(19,32,42,.14)!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-wordmark{
+  display:block!important;
+  width:clamp(250px,20vw,340px)!important;
+  max-width:100%!important;
+  margin:0!important;
+  filter:none!important;
+  opacity:1!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-copy{
+  grid-area:copy!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-self:stretch!important;
+  min-width:0!important;
+  padding:0!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero h1,
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined h1{
+  max-width:9.6ch!important;
+  margin:0!important;
+  font-size:clamp(64px,6vw,104px)!important;
+  line-height:.92!important;
+  letter-spacing:-.062em!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-copy>p{
+  max-width:62ch!important;
+  margin:clamp(24px,2.6vw,38px) 0 0!important;
+  font-size:clamp(17px,1.25vw,21px)!important;
+  line-height:1.6!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-actions{
+  margin-top:28px!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual{
+  grid-area:visual!important;
+  display:flex!important;
+  align-self:stretch!important;
+  min-height:clamp(470px,35vw,610px)!important;
+  height:auto!important;
+  overflow:hidden!important;
+  background:#e8e4dd!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual>img{
+  display:block!important;
+  flex:1 1 auto!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:43% 58%!important;
+  border-radius:0!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-meta{
+  grid-area:meta!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-meta-mobile{grid-area:meta!important;}
+
+/* iPad portrait and smaller tablets: logo strip + copy + photo + data */
+@media (max-width:900px){
+  body.public-page.home-rd.editorial-2026 .home-rd-hero.home-rd-hero--refined{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"brand" "copy" "visual" "meta"!important;
+    gap:28px!important;
+    padding:42px 32px 52px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-brandbar{
+    min-height:0!important;
+    padding-bottom:18px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-wordmark{
+    width:230px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined h1{
+    max-width:10ch!important;
+    font-size:clamp(56px,8.2vw,68px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-copy>p{
+    max-width:68ch!important;
+    font-size:18px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual{
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual>img{
+    min-height:0!important;
+    aspect-ratio:16/9!important;
+    object-position:43% 62%!important;
+  }
+}
+
+/* Phones: nav already carries branding, keep the hero short and content-first. */
+@media (max-width:700px){
+  body.public-page.home-rd.editorial-2026 .home-rd-hero.home-rd-hero--refined{
+    grid-template-areas:"copy" "visual" "meta"!important;
+    gap:24px!important;
+    padding:32px 16px 38px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-brandbar{display:none!important;}
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined h1{
+    font-size:clamp(44px,12vw,52px)!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-copy>p{
+    font-size:16px!important;
+    line-height:1.58!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual{
+    aspect-ratio:4/3!important;
+    border-radius:18px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-hero-visual>img{
+    aspect-ratio:4/3!important;
+    border-radius:18px!important;
+  }
+  body.public-page.home-rd.editorial-2026 .home-rd-hero--refined .home-rd-meta{display:none!important;}
+}

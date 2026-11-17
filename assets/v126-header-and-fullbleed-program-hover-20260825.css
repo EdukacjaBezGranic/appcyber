@@ -1,0 +1,164 @@
+/* V126 — light navigation + full-bleed hover bands on latest project results.
+   No content or layout changes. */
+:root{
+  --v126-header-bg:#eee5c8;
+  --v126-header-text:#090b0b;
+  --v126-header-line:rgba(9,11,11,.16);
+  --v126-header-hover:#7ac4b7;
+  --v126-header-active:#df5258;
+  --v126-header-soft:#f39f97;
+}
+
+/* ---------- PUBLIC HEADER ---------- */
+body.public-page .site-header-v125{
+  background:var(--v126-header-bg)!important;
+  color:var(--v126-header-text)!important;
+  border-bottom:1px solid var(--v126-header-line)!important;
+  box-shadow:0 5px 16px rgba(9,11,11,.07)!important;
+}
+body.public-page .site-header-v125 .site-project-wordmark,
+body.public-page .site-header-v125 .site-funding-logo{
+  filter:none!important;
+  opacity:1!important;
+}
+body.public-page .site-header-v125 .site-brand-separator{
+  background:rgba(9,11,11,.24)!important;
+}
+body.public-page .site-header-v125 .site-nav a,
+body.public-page .site-header-v125 .site-nav a:link,
+body.public-page .site-header-v125 .site-nav a:visited{
+  color:var(--v126-header-text)!important;
+  -webkit-text-fill-color:var(--v126-header-text)!important;
+  border-color:transparent!important;
+  background:transparent!important;
+}
+body.public-page .site-header-v125 .site-nav a:hover,
+body.public-page .site-header-v125 .site-nav a:focus-visible{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:var(--v126-header-hover)!important;
+  border-color:var(--v126-header-hover)!important;
+}
+body.public-page .site-header-v125 .site-nav a[aria-current="page"]{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:var(--v126-header-active)!important;
+  border-color:var(--v126-header-active)!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]),
+body.public-page .site-header-v125 .site-nav .nav-trainer:not([aria-current="page"]){
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  border-color:rgba(59,143,115,.36)!important;
+  background:transparent!important;
+}
+body.public-page .site-header-v125 .site-nav .nav-trainer{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+body.public-page .site-header-v125 .site-language-switch{
+  color:#111!important;
+}
+body.public-page .site-header-v125 .site-language-switch button{
+  color:#111!important;
+  -webkit-text-fill-color:#111!important;
+}
+body.public-page .site-header-v125 .site-language-switch button.is-active{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:var(--v126-header-hover)!important;
+}
+body.public-page .site-header-v125 .nav-toggle{
+  background:transparent!important;
+  border-color:rgba(9,11,11,.38)!important;
+}
+body.public-page .site-header-v125 .nav-toggle span{background:#090b0b!important;}
+
+@media (max-width:980px){
+  body.public-page .site-header-v125 .site-nav{
+    background:var(--v126-header-bg)!important;
+    border-top:1px solid rgba(9,11,11,.12)!important;
+    border-bottom:1px solid rgba(9,11,11,.16)!important;
+    box-shadow:0 14px 28px rgba(9,11,11,.12)!important;
+  }
+  body.public-page .site-header-v125 .site-nav a,
+  body.public-page .site-header-v125 .site-nav a:link,
+  body.public-page .site-header-v125 .site-nav a:visited,
+  body.public-page .site-header-v125 .site-nav .nav-signups:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-online:not([aria-current="page"]),
+  body.public-page .site-header-v125 .site-nav .nav-trainer:not([aria-current="page"]){
+    color:#090b0b!important;
+    -webkit-text-fill-color:#090b0b!important;
+  }
+}
+
+/* ---------- COURSE HEADER: same light palette ---------- */
+body.course-page.course-portal-aligned .course-topbar--portal{
+  background:var(--v126-header-bg)!important;
+  color:var(--v126-header-text)!important;
+  border-bottom:1px solid var(--v126-header-line)!important;
+  box-shadow:0 5px 16px rgba(9,11,11,.07)!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:link,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:visited{
+  color:#090b0b!important;
+  -webkit-text-fill-color:#090b0b!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:hover,
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a:focus-visible{
+  background:var(--v126-header-hover)!important;
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a[aria-current="page"]{
+  background:var(--v126-header-active)!important;
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+}
+body.course-page.course-portal-aligned .course-topbar--portal .course-menu-toggle{
+  color:#090b0b!important;
+  border-color:rgba(9,11,11,.38)!important;
+}
+
+/* ---------- LATEST PROJECT RESULTS: hover from edge to edge ---------- */
+body.public-page.home-rd .home-one-offer{
+  overflow:visible!important;
+}
+body.public-page.home-rd .home-one-offer .home-rd-program{
+  position:relative!important;
+  z-index:0!important;
+  isolation:isolate!important;
+  background:transparent!important;
+  transition:border-color .18s ease!important;
+}
+body.public-page.home-rd .home-one-offer .home-rd-program::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  z-index:-1!important;
+  top:0!important;
+  bottom:0!important;
+  left:50%!important;
+  width:100vw!important;
+  transform:translateX(-50%)!important;
+  background:transparent!important;
+  pointer-events:none!important;
+  transition:background-color .18s ease!important;
+}
+body.public-page.home-rd .home-one-offer .home-rd-program:hover{
+  background:transparent!important;
+  border-color:#3b8f73!important;
+}
+body.public-page.home-rd .home-one-offer .home-rd-program:hover::before{
+  background:rgba(122,196,183,.16)!important;
+}
+
+@media (hover:none){
+  body.public-page.home-rd .home-one-offer .home-rd-program::before,
+  body.public-page.home-rd .home-one-offer .home-rd-program:hover::before{
+    background:transparent!important;
+  }
+}

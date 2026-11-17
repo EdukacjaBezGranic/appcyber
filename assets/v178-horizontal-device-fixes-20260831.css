@@ -1,0 +1,50 @@
+/* V178 — tablet i telefon w orientacji poziomej. */
+body.public-page :where(.home-rd-section-heading,.home-project-funding-side,.calendar-layout,.calendar-board,.calendar-details,.v67-footer-logos)>*{min-width:0!important}
+body.public-page :where(.home-project-funding-side,.calendar-event,.calendar-event small,.v67-footer-logos,.v67-footer-note){word-break:normal!important;overflow-wrap:normal!important}
+
+@media (max-width:1180px){
+  body.public-page .calendar-layout,
+  body.public-page .signup-calendar-embedded{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important}
+  body.public-page .calendar-board,
+  body.public-page .calendar-details{width:100%!important;max-width:none!important}
+  body.public-page .calendar-day{overflow:hidden!important}
+  body.public-page .calendar-event{width:100%!important;min-width:0!important;padding:5px 6px!important;overflow:hidden!important;white-space:nowrap!important;text-overflow:ellipsis!important;font-size:clamp(9px,1.15vw,12px)!important;line-height:1.25!important}
+  body.public-page .calendar-event small{display:block!important;overflow:hidden!important;white-space:nowrap!important;text-overflow:ellipsis!important}
+
+  body.public-page.home-rd .home-rd-project-facts .home-rd-section-heading{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  body.public-page.home-rd .home-project-funding-side{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;height:auto!important;max-width:100%!important;padding:0!important;gap:20px!important;translate:none!important;transform:none!important}
+  body.public-page.home-rd .home-project-funding-side>p{width:auto!important;height:auto!important;max-width:58ch!important;margin:0!important;translate:none!important;transform:none!important}
+  body.public-page.home-rd .home-project-funding-side>img{width:min(320px,100%)!important;height:auto!important;max-width:100%!important;max-height:96px!important;margin:0!important;justify-self:start!important;object-fit:contain!important;object-position:left center!important;translate:none!important;transform:none!important}
+
+  body.public-page .v67-footer-logos{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 34px!important;align-items:center!important}
+  body.public-page .v67-footer-logos>strong,
+  body.public-page .v67-footer-logos>.v67-footer-note{grid-column:1/-1!important;width:auto!important}
+  body.public-page .v67-footer-logos img{width:auto!important;height:auto!important;max-width:min(100%,260px)!important;max-height:64px!important;object-fit:contain!important;object-position:left center!important}
+  body.public-page .v67-footer-logos .v67-footer-project{max-width:min(100%,190px)!important}
+}
+
+@media (orientation:landscape) and (max-height:850px) and (max-width:1180px){
+  body.public-page.portal-v68 .public-hero.contact-hero{display:grid!important;grid-template-columns:minmax(310px,.9fr) minmax(0,1.1fr)!important;min-height:0!important;height:auto!important}
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content{min-height:0!important;height:auto!important;padding:clamp(28px,5vw,56px)!important;align-self:stretch!important}
+  body.public-page.portal-v68 .contact-hero-map,
+  body.public-page.portal-v68 .contact-hero-map img{min-height:0!important;height:100%!important}
+  body.public-page.portal-v68 .contact-hero-map{aspect-ratio:4/3!important}
+  body.public-page.portal-v68 .contact-hero-map img{width:100%!important;object-fit:cover!important}
+  body.public-page.portal-v68 .contact-hero h1{font-size:clamp(46px,7vw,72px)!important}
+  body.public-page.portal-v68 .contact-hero h1>span{font-size:clamp(22px,3vw,30px)!important}
+  body.public-page.portal-v68 .contact-hero::after{display:none!important}
+}
+
+@media (max-width:700px){
+  body.public-page .v67-footer-logos{grid-template-columns:minmax(0,1fr)!important}
+  body.public-page .v67-footer-logos>*{grid-column:1!important}
+  body.public-page .calendar-board{padding:18px 10px!important}
+  body.public-page .calendar-weekdays{font-size:9px!important}
+  body.public-page .calendar-day{min-height:72px!important;padding:4px!important}
+  body.public-page .calendar-event{padding:4px!important;font-size:9px!important}
+}
+
+@media (orientation:landscape) and (max-height:560px){
+  body.public-page.portal-v68 .public-hero.contact-hero{grid-template-columns:minmax(0,1fr)!important}
+  body.public-page.portal-v68 .contact-hero-map{aspect-ratio:16/7!important}
+}

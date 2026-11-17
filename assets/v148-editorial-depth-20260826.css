@@ -1,0 +1,9 @@
+/* V148 — redakcja głębi merytorycznej 1–5. Prosty, ludzki tekst bez powtarzalnych kart. */
+.v148-editorial-insert{display:contents}
+.course-section-body > p,
+.v148-editorial-insert > p{line-height:1.72}
+.course-editorial-subhead{margin:1.55rem 0 .7rem;font-size:clamp(1.05rem,1.3vw,1.2rem);line-height:1.3;color:#17212b;font-weight:760;letter-spacing:-.01em}
+.course-editorial-scene{margin:1.35rem 0 1.45rem;padding:1rem 1.1rem 1.05rem;border-left:4px solid #3b8f73;background:#f4f1e8;color:#17212b;border-radius:0 14px 14px 0}
+.course-editorial-scene strong{display:block;margin-bottom:.4rem;color:#17212b;font-size:1.02rem}
+.course-editorial-scene p{margin:.35rem 0 0;color:#34414d;line-height:1.68}
+@media(max-width:700px){.course-editorial-scene{margin:1rem 0 1.2rem;padding:.9rem .95rem}.course-section-body > p,.v148-editorial-insert > p{line-height:1.66}}

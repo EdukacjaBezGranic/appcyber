@@ -1,0 +1,38 @@
+/* V171 - real Poland-Czechia influence-operation case study */
+.v171-czpl-case .course-section-body{overflow:visible}
+.v171-case-intro{margin:0 0 30px;padding:clamp(20px,2.7vw,34px);border:1px solid rgba(23,35,30,.16);background:linear-gradient(135deg,#f6f1e2 0%,#fffdf8 100%);border-radius:22px}
+.v171-case-intro h3{margin:.25rem 0 .8rem!important;max-width:38ch}
+.v171-case-kicker{margin:0!important;font-size:.78rem!important;letter-spacing:.13em;font-weight:850;color:#2e7767!important}
+.v171-media-grid{display:grid;gap:18px;margin:20px 0 30px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.v171-media-card{margin:0;min-width:0;border:1px solid rgba(23,35,30,.14);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.v171-media-card>a{display:flex;align-items:center;justify-content:center;min-height:250px;background:#101211;padding:10px}
+.v171-media-card img{display:block;width:100%;height:clamp(280px,34vw,490px);object-fit:contain;background:#101211}
+.v171-media-card figcaption{display:grid;gap:5px;padding:14px 16px 16px;color:#45514c;font-size:.94rem;line-height:1.45}
+.v171-media-card figcaption strong{color:#171717;font-size:1rem}
+.v171-media-grid--response{grid-template-columns:repeat(2,minmax(0,1fr))}
+.v171-media-card--wide{grid-column:1/-1}
+.v171-media-card--wide img{height:clamp(320px,46vw,620px)}
+.v171-case-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:26px 0 28px}
+.v171-case-flow article{position:relative;min-width:0;padding:18px 14px 16px;border-radius:17px;background:#eff7f3;border:1px solid rgba(47,122,104,.2)}
+.v171-case-flow article>span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;margin-bottom:12px;background:#155b4d;color:#fff!important;-webkit-text-fill-color:#fff!important;font-weight:850}
+.v171-case-flow strong{display:block;margin-bottom:6px;color:#17231e}
+.v171-case-flow p{margin:0!important;font-size:.91rem!important;line-height:1.48!important;color:#49564f!important}
+.v171-crossborder-note{margin:28px 0}
+.v171-source-figure{margin:28px 0 34px;max-width:860px}
+.v171-source-figure a{display:block;border-radius:18px;overflow:hidden;border:1px solid rgba(23,35,30,.14);background:#fff}
+.v171-source-figure img{display:block;width:100%;height:auto}
+.v171-source-figure figcaption{padding:10px 2px 0;color:#66716c;font-size:.88rem;line-height:1.45}
+.v171-checkpoint{margin:32px 0;padding:clamp(18px,2.3vw,28px);border:1px solid rgba(23,35,30,.14);background:#fff;border-radius:20px}
+.v171-checkpoint fieldset{border:0;padding:0;margin:0;display:grid;gap:10px}
+.v171-checkpoint legend{font-weight:850;font-size:1.08rem;line-height:1.35;margin-bottom:8px;color:#171717}
+.v171-checkpoint label{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:14px 15px;border:1px solid #d8dfdc;border-radius:14px;background:#fff;cursor:pointer}
+.v171-checkpoint input{margin-top:.2rem;width:1.1rem;height:1.1rem}
+.v171-checkpoint label:has(input:checked){border-color:#5ca58f;background:#f1f8f5}
+.v171-feedback{margin:10px 0 0!important;font-weight:700;line-height:1.5!important}
+.v171-feedback.is-correct{color:#1d694f!important}.v171-feedback.is-wrong{color:#9a3d31!important}
+.v171-resilience{margin-top:28px}
+.v171-sources{margin:30px 0 0;border:1px solid rgba(23,35,30,.14);border-radius:16px;background:#fafbf9}
+.v171-sources summary{cursor:pointer;padding:15px 18px;font-weight:850;color:#17231e}
+.v171-sources>div{padding:0 18px 18px}.v171-sources ul{margin:.35rem 0 0;padding-left:1.25rem}.v171-sources li{margin:.55rem 0;line-height:1.45}.v171-source-note{margin:16px 0 0!important;color:#626d68!important;font-size:.86rem!important;line-height:1.5!important}
+@media(max-width:1100px){.v171-case-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.v171-case-flow article:last-child{grid-column:1/-1}}
+@media(max-width:700px){.v171-case-intro{padding:16px;border-radius:17px}.v171-media-grid,.v171-media-grid--response{grid-template-columns:1fr;gap:14px}.v171-media-card--wide{grid-column:auto}.v171-media-card>a{min-height:0;padding:7px}.v171-media-card img,.v171-media-card--wide img{height:auto;max-height:520px}.v171-media-card figcaption{padding:12px 13px 14px}.v171-case-flow{grid-template-columns:1fr;gap:9px}.v171-case-flow article:last-child{grid-column:auto}.v171-case-flow article{padding:14px}.v171-checkpoint{padding:14px;border-radius:16px}.v171-checkpoint label{padding:12px 11px;gap:10px}.v171-source-figure{margin:22px 0 28px}.v171-sources summary{padding:14px}.v171-sources>div{padding:0 14px 15px}}

@@ -1,0 +1,222 @@
+
+/* V128: strona główna - hero w stylistyce zbliżonej do sekcji "Nasze szkolenia" */
+body.public-page.home-rd .home-rd-main{
+  background:#f7f6f2 !important;
+}
+body.public-page.home-rd .home-rd-hero.home-rd-hero--refined{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr) !important;
+  align-items:start !important;
+  gap:clamp(34px,4vw,82px) !important;
+  padding:clamp(48px,5vw,72px) clamp(24px,6vw,110px) clamp(38px,4vw,56px) !important;
+  min-height:auto !important;
+  background:#f7f6f2 !important;
+  color:#171717 !important;
+}
+body.public-page.home-rd .home-rd-hero.home-rd-hero--refined::before,
+body.public-page.home-rd .home-rd-hero.home-rd-hero--refined::after{
+  display:none !important;
+  content:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-brandbar{
+  grid-column:1 / 2;
+  align-self:start;
+  display:flex !important;
+  align-items:center;
+  gap:14px;
+  margin:0 0 18px 0 !important;
+  padding-left:14px;
+  border-left:5px solid #df5258;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-wordmark{
+  width:clamp(250px,30vw,420px) !important;
+  max-width:100%;
+  margin:0 !important;
+  opacity:1 !important;
+  filter:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-copy{
+  display:flex !important;
+  flex-direction:column;
+  justify-content:flex-start !important;
+  min-height:auto !important;
+  padding:0 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined h1{
+  max-width:8.5ch !important;
+  margin:0 !important;
+  color:#151515 !important;
+  font-size:clamp(66px,7.4vw,102px) !important;
+  font-weight:500 !important;
+  line-height:.92 !important;
+  letter-spacing:-.072em !important;
+  text-shadow:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-hero-title-line{
+  display:block !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-hero-title-line--accent{
+  color:#df5258 !important;
+  font-weight:700 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-copy > p{
+  max-width:34ch !important;
+  margin:28px 0 0 !important;
+  color:#5f6660 !important;
+  font-family:inherit !important;
+  font-size:clamp(17px,1.58vw,22px) !important;
+  line-height:1.68 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-actions{
+  display:flex !important;
+  flex-wrap:wrap;
+  gap:12px !important;
+  margin-top:28px !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-btn{
+  min-height:50px;
+  border-radius:12px !important;
+  font-weight:700 !important;
+  box-shadow:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-btn-primary{
+  background:#df5258 !important;
+  color:#111 !important;
+  border:1px solid #df5258 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-btn-secondary{
+  background:#3b8f73 !important;
+  color:#fff !important;
+  border:1px solid #3b8f73 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual{
+  align-self:stretch !important;
+  min-height:0 !important;
+  display:flex !important;
+  overflow:hidden;
+  background:transparent !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual > img{
+  width:100% !important;
+  height:100% !important;
+  min-height:720px !important;
+  object-fit:cover !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta{
+  grid-column:1 / -1;
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) auto !important;
+  gap:0 !important;
+  margin:22px 0 0 !important;
+  padding:0 !important;
+  border-top:1px solid rgba(0,0,0,.12) !important;
+  border-bottom:1px solid rgba(0,0,0,.08) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta > div{
+  padding:18px 18px 18px 0 !important;
+  border-right:1px solid rgba(0,0,0,.08) !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta > div + div{
+  padding-left:18px !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta dt{
+  color:#737373 !important;
+  font-size:11px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+  text-transform:uppercase;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta dd{
+  margin-top:7px !important;
+  color:#232323 !important;
+  font-size:14px !important;
+  line-height:1.5 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-logo{
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right:0 !important;
+  border-right:0 !important;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-logo img{
+  max-width:220px;
+  width:100%;
+  height:auto;
+}
+body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile{
+  display:none !important;
+}
+
+@media (max-width: 1180px){
+  body.public-page.home-rd .home-rd-hero.home-rd-hero--refined{
+    grid-template-columns:minmax(0,1fr) minmax(340px,.88fr) !important;
+    padding-inline:clamp(22px,4vw,48px) !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined h1{
+    font-size:clamp(58px,7vw,88px) !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual > img{
+    min-height:620px !important;
+  }
+}
+@media (max-width: 900px){
+  body.public-page.home-rd .home-rd-hero.home-rd-hero--refined{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding:32px 20px 28px !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-brandbar{
+    margin-bottom:12px !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-wordmark{
+    width:min(82vw,340px) !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined h1{
+    max-width:9.4ch !important;
+    font-size:clamp(52px,14vw,72px) !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-copy > p{
+    max-width:none !important;
+    font-size:18px !important;
+    line-height:1.62 !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual{
+    order:2;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-hero-visual > img{
+    min-height:0 !important;
+    aspect-ratio: 4 / 5;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta{display:none !important;}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile{
+    display:block !important;
+    margin-top:18px !important;
+    padding:0 !important;
+    border-top:1px solid rgba(0,0,0,.12);
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile summary{
+    display:flex;align-items:center;justify-content:space-between;list-style:none;cursor:pointer;
+    padding:14px 0;
+    font-weight:700;
+    color:#232323;
+  }
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile summary::-webkit-details-marker{display:none;}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile summary::after{content:"+";font-size:20px;font-weight:500;}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile[open] summary::after{content:"−";}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dl{margin:0;padding:0 0 10px;}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dl > div{padding:11px 0;border-top:1px solid rgba(0,0,0,.08);}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dt{font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#737373;}
+  body.public-page.home-rd .home-rd-hero--refined .home-rd-meta-mobile dd{margin:5px 0 0;font-size:13px;line-height:1.45;color:#232323;}
+}

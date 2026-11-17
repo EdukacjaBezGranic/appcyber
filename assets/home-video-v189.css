@@ -1,0 +1,10 @@
+/* Two explicit columns prevent the legacy third grid track shrinking videos. */
+body#portal-layout.public-page.home-rd .home-one-offer .home-rd-program{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:36px!important;align-items:start!important}
+body#portal-layout.public-page.home-rd .home-rd-program>.home-rd-number{display:none!important}
+body#portal-layout.public-page.home-rd .home-rd-program>.home-program-video{grid-column:1!important;grid-row:1!important;width:100%!important;max-width:none!important;min-width:0!important;padding:0!important;margin:0!important}
+body#portal-layout.public-page.home-rd .home-rd-program>.home-program-description{grid-column:2!important;grid-row:1!important;width:100%!important;min-width:0!important;max-width:none!important;padding:0!important;margin:0!important}
+body#portal-layout.public-page.home-rd .home-program-video video{display:block!important;width:100%!important;height:auto!important;max-width:none!important;aspect-ratio:16/9!important;object-fit:contain!important}
+body#portal-layout.public-page.home-rd .home-program-description h3{max-width:none!important;margin:0 0 18px!important}
+body#portal-layout.public-page.home-rd .home-program-description .home-rd-program-outcome{width:100%!important;max-width:none!important;margin-top:24px!important;padding:18px 22px!important}
+body#portal-layout.public-page.home-rd .home-rd-program>div::before{display:none!important}
+@media(max-width:900px){body#portal-layout.public-page.home-rd .home-one-offer .home-rd-program{grid-template-columns:minmax(0,1fr)!important;gap:24px!important}body#portal-layout.public-page.home-rd .home-rd-program>.home-program-description{grid-column:1!important;grid-row:2!important}}

@@ -1,0 +1,137 @@
+/* ======================================================================
+   V107 — CONTROLLED TITLES + COURSE HERO WIDTH
+   Fixes visible in the 2026-08-23 QA screenshots:
+   1) home title never splits "w praktyce" or a word internally;
+   2) course module titles never split inside a word;
+   3) course opener uses the content rail more efficiently, with a smaller
+      dead gap between copy and illustration.
+   ====================================================================== */
+
+/* HOME — explicit editorial line breaks, no emergency word breaking. */
+body.public-page.home-rd .home-rd-hero--refined h1{
+  width:100%!important;
+  max-width:none!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  hyphens:none!important;
+  text-wrap:wrap!important;
+}
+body.public-page.home-rd .home-rd-hero--refined h1 .home-hero-title-line{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  white-space:nowrap!important;
+  overflow-wrap:normal!important;
+  word-break:keep-all!important;
+  hyphens:none!important;
+}
+body.public-page.home-rd .home-rd-hero--refined h1 .home-hero-title-line--accent{
+  color:#EE6C29!important;
+  -webkit-text-fill-color:#EE6C29!important;
+  margin-top:.035em!important;
+}
+
+/* At narrower widths scale the display line instead of breaking it. */
+@media (min-width:901px) and (max-width:1366px){
+  body.public-page.home-rd .home-rd-hero--refined h1{
+    font-size:clamp(60px,6.15vw,84px)!important;
+    line-height:.93!important;
+  }
+}
+@media (min-width:701px) and (max-width:900px){
+  body.public-page.home-rd .home-rd-hero--refined h1{
+    font-size:clamp(58px,9vw,74px)!important;
+    line-height:.94!important;
+  }
+}
+@media (max-width:700px){
+  body.public-page.home-rd .home-rd-hero--refined h1{
+    font-size:clamp(40px,12vw,58px)!important;
+    line-height:.95!important;
+  }
+  body.public-page.home-rd .home-rd-hero--refined h1 .home-hero-title-line{
+    width:auto!important;
+    max-width:100%!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  /* The short accent phrase always fits and stays together. */
+  body.public-page.home-rd .home-rd-hero--refined h1 .home-hero-title-line--accent{
+    display:inline-block!important;
+    width:max-content!important;
+    white-space:nowrap!important;
+    word-break:keep-all!important;
+  }
+}
+
+/* COURSE — use more of the available horizontal rail and forbid mid-word
+   splitting in every module opener. */
+body.course-page.course-portal-aligned .module-hero{
+  grid-template-columns:minmax(0,1.14fr) minmax(390px,.86fr)!important;
+  column-gap:clamp(26px,2.5vw,42px)!important;
+  row-gap:clamp(28px,3vw,42px)!important;
+}
+body.course-page.course-portal-aligned .module-hero-copy{
+  min-width:0!important;
+}
+body.course-page.course-portal-aligned .module-hero h1{
+  width:100%!important;
+  max-width:14.5ch!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  hyphens:none!important;
+  text-wrap:balance!important;
+}
+body.course-page.course-portal-aligned .module-hero-copy>p:not(.module-kicker){
+  max-width:66ch!important;
+}
+
+/* Landscape tablets: keep image and copy side by side, but tighter than
+   desktop so the heading receives enough width to keep whole words. */
+@media (min-width:901px) and (max-width:1366px) and (orientation:landscape){
+  body.course-page.course-portal-aligned .course-main{
+    padding-left:clamp(30px,3.2vw,46px)!important;
+    padding-right:clamp(30px,3.2vw,46px)!important;
+  }
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr)!important;
+    column-gap:clamp(22px,2.4vw,34px)!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    max-width:14ch!important;
+    font-size:clamp(50px,5.15vw,68px)!important;
+    line-height:.95!important;
+  }
+}
+
+/* Portrait tablets: one clear column; image follows the complete title. */
+@media (min-width:701px) and (max-width:900px),
+       (min-width:700px) and (max-width:1024px) and (orientation:portrait){
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-areas:"copy" "visual" "meta"!important;
+    gap:28px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    max-width:16ch!important;
+    font-size:clamp(48px,7.6vw,68px)!important;
+  }
+}
+
+@media (max-width:700px){
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-areas:"copy" "visual" "meta"!important;
+    gap:22px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    max-width:none!important;
+    font-size:clamp(38px,10.2vw,48px)!important;
+    line-height:.98!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    hyphens:none!important;
+    text-wrap:pretty!important;
+  }
+}

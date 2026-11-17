@@ -1,0 +1,106 @@
+/* ======================================================================
+   V160 - AUDYT UI CWICZEN 2026-08-27
+   Cel: naprawa konfliktu klas w mini-symulacji V155 i zabezpieczenie
+   kart odpowiedzi przed dziedziczeniem stylow pol tekstowych.
+   ====================================================================== */
+
+/* Mini-symulacja M1: zwarte, czytelne kafle odpowiedzi. */
+body.course-page.course-portal-aligned .v155-choice-set{
+  gap:10px;
+  margin:.8rem 0 14px;
+}
+
+body.course-page.course-portal-aligned .v155-choice-set label{
+  display:grid;
+  grid-template-columns:20px minmax(0,1fr);
+  align-items:start;
+  gap:11px;
+  min-height:0;
+  margin:0;
+  padding:12px 14px;
+  border:1px solid #d9dfdc;
+  border-radius:11px;
+  background:#fff;
+  color:#303b36;
+  line-height:1.48;
+  cursor:pointer;
+  transition:background .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+
+body.course-page.course-portal-aligned .v155-choice-set label:hover{
+  border-color:color-mix(in srgb,var(--module-accent) 46%,#d9dfdc);
+  background:color-mix(in srgb,var(--module-accent) 3%,#fff);
+}
+
+/* Twardy reset: radio nigdy nie moze odziedziczyc .course-answer. */
+body.course-page.course-portal-aligned .v155-choice-set input[type="radio"],
+body.course-page.course-portal-aligned .v155-choice-set input[type="radio"].course-answer{
+  appearance:auto;
+  display:block;
+  width:18px!important;
+  height:18px!important;
+  min-width:18px!important;
+  max-width:18px!important;
+  min-height:18px!important;
+  max-height:18px!important;
+  margin:.16rem 0 0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%;
+  background:transparent!important;
+  box-shadow:none!important;
+  outline:none;
+  resize:none;
+  accent-color:var(--module-accent);
+}
+
+body.course-page.course-portal-aligned .v155-choice-set label:has(input:checked){
+  border-color:color-mix(in srgb,var(--module-accent) 62%,#c9d6d0);
+  background:color-mix(in srgb,var(--module-accent) 7%,#fff);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--module-accent) 9%,transparent);
+}
+
+body.course-page.course-portal-aligned .v155-choice-set label:has(input:focus-visible){
+  outline:3px solid color-mix(in srgb,var(--module-accent) 22%,transparent);
+  outline-offset:2px;
+}
+
+body.course-page.course-portal-aligned .v155-choice-set label>span{
+  display:block;
+  min-width:0;
+  margin:0;
+  color:#303b36;
+}
+
+body.course-page.course-portal-aligned .v155-check-answer{
+  margin-top:2px;
+}
+
+/* Dodatkowa ochrona globalna: jeśli radio/checkbox przypadkowo dostanie
+   klasę pola tekstowego .course-answer, nie może rozepchnąć layoutu. */
+body.course-page.course-portal-aligned input.course-answer:is([type="radio"],[type="checkbox"]){
+  display:inline-block!important;
+  width:20px!important;
+  height:20px!important;
+  min-width:20px!important;
+  min-height:20px!important;
+  max-width:20px!important;
+  max-height:20px!important;
+  margin:2px 0 0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  resize:none!important;
+  flex:0 0 20px!important;
+}
+
+@media(max-width:700px){
+  body.course-page.course-portal-aligned .v155-choice-set{gap:8px}
+  body.course-page.course-portal-aligned .v155-choice-set label{
+    grid-template-columns:20px minmax(0,1fr);
+    gap:10px;
+    padding:12px;
+    border-radius:10px;
+  }
+}

@@ -1,0 +1,131 @@
+/* V124 — restore previous dark navigation bar and guarantee Trainer panel visibility. */
+
+/* Public header: restore the dark navigation treatment used before V123. */
+body.public-page .site-header{
+  background:#282B2B!important;
+  color:#fff!important;
+  border-bottom:1px solid rgba(255,255,255,.13)!important;
+  box-shadow:0 10px 28px rgba(4,19,29,.12)!important;
+}
+body.public-page .site-brand-separator{background:rgba(255,255,255,.26)!important;}
+body.public-page .site-header :where(.site-project-wordmark,.site-funding-logo){filter:invert(1) brightness(2)!important;}
+body.public-page .site-logo{background:#fff!important;}
+body.public-page .site-logo .site-project-wordmark{filter:none!important;}
+
+body.public-page .site-nav a,
+body.public-page .site-nav a:link,
+body.public-page .site-nav a:visited{
+  color:rgba(255,255,255,.86)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.86)!important;
+  background:transparent!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+body.public-page .site-nav a::after{background:#df5258!important;}
+body.public-page .site-nav a:hover,
+body.public-page .site-nav a:focus-visible{
+  color:#7ac4b7!important;
+  -webkit-text-fill-color:#7ac4b7!important;
+  background:transparent!important;
+}
+body.public-page .site-nav a[aria-current="page"]{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:#df5258!important;
+  border-color:#df5258!important;
+  box-shadow:0 0 0 3px rgba(223,82,88,.15)!important;
+}
+body.public-page .site-nav .nav-signups:not([aria-current="page"]),
+body.public-page .site-nav .nav-online:not([aria-current="page"]){
+  color:#f39f97!important;
+  -webkit-text-fill-color:#f39f97!important;
+  border-color:rgba(243,159,151,.72)!important;
+  background:transparent!important;
+}
+
+/* Language switch is placed after the complete navigation on desktop. */
+body.public-page .site-language-switch{color:rgba(255,255,255,.74)!important;}
+body.public-page .site-language-switch button{color:inherit!important;}
+body.public-page .site-language-switch button.is-active{
+  color:#000!important;
+  background:#eee5c8!important;
+}
+body.public-page .site-language-switch button:focus-visible{outline-color:#7ac4b7!important;}
+body.public-page .nav-toggle{background:transparent!important;border-color:#df5258!important;color:#df5258!important;}
+body.public-page .nav-toggle span{background:#df5258!important;}
+
+/* Desktop/laptop layout: nav cannot shrink and Trainer panel stays after Contact. */
+@media (min-width:981px){
+  body.public-page .site-header-inner{
+    width:min(1680px,calc(100% - 36px))!important;
+    max-width:none!important;
+    justify-content:flex-start!important;
+    gap:14px!important;
+    overflow:visible!important;
+  }
+  body.public-page .site-branding{order:1!important;flex:0 1 auto!important;min-width:0!important;gap:14px!important;}
+  body.public-page .site-nav{
+    order:2!important;
+    display:flex!important;
+    flex:0 0 auto!important;
+    min-width:max-content!important;
+    width:max-content!important;
+    margin-left:auto!important;
+    gap:clamp(8px,1vw,14px)!important;
+    overflow:visible!important;
+  }
+  body.public-page .site-nav a{
+    flex:0 0 auto!important;
+    font-size:12.5px!important;
+    white-space:nowrap!important;
+  }
+  body.public-page .site-nav .nav-trainer{display:inline-flex!important;visibility:visible!important;opacity:1!important;}
+  body.public-page .site-language-switch{order:3!important;flex:0 0 auto!important;margin:0 0 0 6px!important;}
+  body.public-page .nav-toggle{order:4!important;}
+}
+@media (min-width:981px) and (max-width:1180px){
+  body.public-page .site-header-inner{width:calc(100% - 28px)!important;gap:10px!important;}
+  body.public-page .site-branding{gap:9px!important;}
+  body.public-page .site-logo{width:88px!important;}
+  body.public-page .site-project-wordmark{width:84px!important;}
+  body.public-page .site-funding-logo-wup{display:none!important;}
+  body.public-page .site-funding-logo-eu{width:96px!important;}
+  body.public-page .site-brand-separator{height:32px!important;}
+  body.public-page .site-nav{gap:7px!important;}
+  body.public-page .site-nav a{font-size:11.5px!important;}
+  body.public-page .site-language-switch{font-size:11px!important;margin-left:2px!important;}
+}
+@media (min-width:981px) and (max-width:1060px){
+  body.public-page .site-funding-logos{display:none!important;}
+}
+
+/* Mobile: keep the same dark dropdown and explicitly show Trainer panel. */
+@media (max-width:980px){
+  body.public-page .site-header{background:#282B2B!important;}
+  body.public-page .site-nav.is-open{
+    background:#282B2B!important;
+    border-color:rgba(122,196,183,.28)!important;
+  }
+  body.public-page .site-nav.is-open a,
+  body.public-page .site-nav.is-open a:link,
+  body.public-page .site-nav.is-open a:visited{
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+    background:transparent!important;
+  }
+  body.public-page .site-nav.is-open a:hover{color:#7ac4b7!important;-webkit-text-fill-color:#7ac4b7!important;}
+  body.public-page .site-nav.is-open a[aria-current="page"]{background:#df5258!important;color:#000!important;-webkit-text-fill-color:#000!important;}
+  body.public-page .site-nav .nav-trainer{display:flex!important;visibility:visible!important;opacity:1!important;}
+  body.public-page .site-language-switch{color:rgba(255,255,255,.78)!important;}
+}
+
+/* Course top navigation: keep Trainer panel after Contact as well. */
+body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav .nav-trainer{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+}
+@media (min-width:1051px) and (max-width:1320px){
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{padding-left:7px!important;padding-right:7px!important;font-size:11.5px!important;}
+}

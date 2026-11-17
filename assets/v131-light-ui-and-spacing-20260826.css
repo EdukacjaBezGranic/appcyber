@@ -1,0 +1,196 @@
+/* V131 — lżejsze akcenty, jasny kalendarz i uporządkowane odstępy. */
+
+/* 1. Strona główna: rezultat projektu — lżej niż czarny blok. */
+body.public-page.home-rd .home-project-note,
+body.public-page.home-rd .home-project-note[style*="background-color"]{
+  background:#f7f2df !important;
+  color:#242424 !important;
+  border:1px solid rgba(59,143,115,.18) !important;
+  box-shadow:none !important;
+}
+body.public-page.home-rd .home-project-note strong,
+body.public-page.home-rd .home-project-note strong[style]{
+  color:#df5258 !important;
+  -webkit-text-fill-color:#df5258 !important;
+}
+body.public-page.home-rd .home-project-note p,
+body.public-page.home-rd .home-project-note p font,
+body.public-page.home-rd .home-project-note p font[color]{
+  color:#424946 !important;
+  -webkit-text-fill-color:#424946 !important;
+}
+
+/* 2. Podpis na zdjęciu — jasna mięta zamiast ciężkiego turkusu. */
+body.public-page.home-rd .home-rd-story-badge,
+body.public-page.home-rd .home-rd-story-badge[style*="background-color"]{
+  background:#dff0eb !important;
+  color:#171717 !important;
+  border:1px solid rgba(59,143,115,.20) !important;
+  box-shadow:0 10px 30px rgba(31,49,43,.08) !important;
+}
+body.public-page.home-rd .home-rd-story-badge :where(strong,span){
+  color:#171717 !important;
+  -webkit-text-fill-color:#171717 !important;
+}
+
+/* 3. Zakres tematyczny — znacznik ma mieć wyraźny oddech od tekstu. */
+body.training-showcase-page .training-topics-section > .training-showcase-heading > span{
+  display:flex !important;
+  align-items:center !important;
+  gap:16px !important;
+  border-left:0 !important;
+  padding-left:0 !important;
+}
+body.training-showcase-page .training-topics-section > .training-showcase-heading > span::before{
+  content:"" !important;
+  display:block !important;
+  flex:0 0 6px !important;
+  width:6px !important;
+  height:32px !important;
+  margin:0 !important;
+  background:#df5258 !important;
+}
+
+/* 4. Kalendarz zapisów — jasny, zgodny z nową paletą. */
+body.public-page .signup-calendar-section{
+  background:#fff !important;
+}
+body.public-page .calendar-board,
+body.public-page .calendar-board[style*="background-color"]{
+  background:#f7f2df !important;
+  color:#171717 !important;
+  border:1px solid rgba(59,143,115,.18) !important;
+  box-shadow:none !important;
+}
+body.public-page .calendar-board :where(h2,h3,p,span,b,strong,small){
+  -webkit-text-fill-color:currentColor;
+}
+body.public-page .calendar-board h2,
+body.public-page .calendar-board h3{
+  color:#171717 !important;
+  -webkit-text-fill-color:#171717 !important;
+}
+body.public-page .calendar-board-head p,
+body.public-page .calendar-empty,
+body.public-page .calendar-legend{
+  color:#59625e !important;
+  -webkit-text-fill-color:#59625e !important;
+}
+body.public-page .calendar-board .calendar-mini-btn,
+body.public-page .calendar-board .calendar-arrow-btn,
+body.public-page .calendar-board .calendar-mode-switch button,
+body.public-page .calendar-board[style*="background-color"] :is(.calendar-mini-btn,.calendar-arrow-btn,.calendar-mode-switch button){
+  background:#fff !important;
+  color:#1e2522 !important;
+  border-color:rgba(59,143,115,.28) !important;
+  -webkit-text-fill-color:#1e2522 !important;
+  box-shadow:none !important;
+}
+body.public-page .calendar-board .calendar-mini-btn:hover,
+body.public-page .calendar-board .calendar-arrow-btn:hover,
+body.public-page .calendar-board .calendar-mode-switch button:hover{
+  background:#dff0eb !important;
+  border-color:#7ac4b7 !important;
+  color:#171717 !important;
+}
+body.public-page .calendar-board .calendar-mode-switch{
+  background:#eee5c8 !important;
+  border-color:rgba(59,143,115,.18) !important;
+}
+body.public-page .calendar-board .calendar-mode-switch button.is-active,
+body.public-page .calendar-board[style*="background-color"] .calendar-mode-switch button.is-active{
+  background:#7ac4b7 !important;
+  border-color:#7ac4b7 !important;
+  color:#111 !important;
+  -webkit-text-fill-color:#111 !important;
+  box-shadow:none !important;
+}
+body.public-page .calendar-list-item{
+  background:#fff !important;
+  color:#1f2925 !important;
+  border-color:rgba(59,143,115,.18) !important;
+  box-shadow:none !important;
+}
+body.public-page .calendar-list-item:hover,
+body.public-page .calendar-list-item.is-active{
+  background:#f6fbf9 !important;
+  border-color:#7ac4b7 !important;
+  box-shadow:0 8px 22px rgba(59,143,115,.08) !important;
+}
+body.public-page .calendar-list-item small{color:#66706b !important;}
+body.public-page .calendar-empty{
+  background:#fff !important;
+  border-color:rgba(59,143,115,.22) !important;
+}
+body.public-page .calendar-legend span{
+  background:#fff !important;
+  border-color:rgba(59,143,115,.16) !important;
+}
+body.public-page .calendar-details{
+  background:#fff !important;
+  box-shadow:none !important;
+  border-color:rgba(59,143,115,.18) !important;
+}
+
+/* 5. Kursy online — baner i panel pod nim bez sztucznego białego odstępu. */
+body.public-page.online-catalog-page .v68-online-featured{
+  gap:0 !important;
+  margin-bottom:0 !important;
+  align-content:start !important;
+}
+body.public-page.online-catalog-page .v68-online-featured-media{
+  margin:0 !important;
+  padding:0 !important;
+  line-height:0 !important;
+  min-height:0 !important;
+  background:#fff !important;
+}
+body.public-page.online-catalog-page .v68-online-featured-media img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+body.public-page.online-catalog-page .v68-online-featured-copy{
+  margin:0 !important;
+  padding-top:28px !important;
+  border-top:1px solid rgba(59,143,115,.18) !important;
+}
+
+/* 6. Kurs właściwy — żadnej dodatkowej przerwy przed panelem nawigacji kursu. */
+body.course-page.course-portal-aligned .course-start-compact,
+body.course-page.course-portal-aligned .course-tools-compact,
+body.course-page.course-portal-aligned .course-app{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+body.course-page.course-portal-aligned .course-tools-compact{
+  padding-bottom:0 !important;
+}
+body.course-page.course-portal-aligned .course-tools-details > summary{
+  min-height:54px !important;
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+}
+body.course-page.course-portal-aligned .course-app{
+  padding-top:0 !important;
+}
+
+@media (max-width:700px){
+  body.training-showcase-page .training-topics-section > .training-showcase-heading > span{
+    gap:12px !important;
+  }
+  body.training-showcase-page .training-topics-section > .training-showcase-heading > span::before{
+    height:26px !important;
+    width:5px !important;
+    flex-basis:5px !important;
+  }
+  body.public-page.online-catalog-page .v68-online-featured-copy{
+    padding-top:22px !important;
+  }
+}

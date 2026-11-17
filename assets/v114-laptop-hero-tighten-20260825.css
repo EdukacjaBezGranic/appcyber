@@ -1,0 +1,22 @@
+/* ======================================================================
+   V114 — DELIKATNIE CIAŚNIEJSZY HERO NA LAPTOPIE / DESKTOPIE
+   - jeszcze mniejsza przerwa pomiędzy copy a zdjęciem
+   - zdjęcie minimalnie większe i przesunięte bardziej w lewo
+   - mobile/tablet bez zmian
+   ====================================================================== */
+@media (min-width:1181px){
+  body.public-page.home-rd.portal-v68 .home-rd-hero.home-rd-hero--refined{
+    column-gap:clamp(42px,3vw,48px)!important;
+  }
+
+  body.public-page.home-rd.portal-v68 .home-rd-hero--refined .home-rd-hero-visual{
+    width:110%!important;
+    max-width:none!important;
+    transform:translateX(-9.1%)!important;
+    transform-origin:right center!important;
+  }
+
+  body.public-page.home-rd.portal-v68 .home-rd-hero--refined .home-rd-hero-visual>img{
+    width:100%!important;
+  }
+}

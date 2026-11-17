@@ -1,0 +1,2397 @@
+/* ==========================================================
+   EDUKACJA BEZ GRANIC — PORTAL V68 / DOPRACOWANE PODSTRONY
+   Większa typografia, wspólny rytm i modułowe układy publiczne.
+   ========================================================== */
+
+:root {
+  --v68-container: 1460px;
+  --v68-gutter: clamp(22px, 4.4vw, 76px);
+  --v68-section: clamp(90px, 9vw, 148px);
+  --v68-ink: #111619;
+  --v68-muted: #4e5b57;
+  --v68-soft: #f1f4f2;
+  --v68-line: #cbd2cf;
+  --v68-teal: #087f79;
+  --v68-teal-dark: #075e5a;
+}
+
+body.portal-v68 {
+  color: var(--v68-ink);
+  background: #fff;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+body.portal-v68 .site-header-inner {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+}
+
+body.portal-v68 .site-nav a { font-size: 14px; }
+
+body.portal-v68 :where(.public-btn, .signup-contact-link, .calendar-form-btn) {
+  min-height: 54px;
+  padding: 15px 22px;
+  border-radius: 0;
+  font-size: 14px;
+  letter-spacing: .035em;
+}
+
+body.portal-v68 :where(.public-btn, .signup-contact-link, .calendar-form-btn):hover {
+  box-shadow: none;
+}
+
+body.portal-v68 :where(.public-main, .training-showcase-main) {
+  overflow: clip;
+  background: #fff;
+}
+
+body.portal-v68 :where(.public-section, .training-showcase-section, .training-gallery-section, .training-feedback-section) {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+  padding-top: var(--v68-section);
+}
+
+body.portal-v68 :where(.public-section-head, .training-showcase-heading) {
+  grid-template-columns: minmax(0, 1.18fr) minmax(330px, .62fr);
+  gap: clamp(48px, 8vw, 126px);
+  margin-bottom: clamp(44px, 5vw, 76px);
+}
+
+body.portal-v68 :where(.public-section-head, .training-showcase-heading) h2 {
+  font-size: clamp(48px, 4.9vw, 76px);
+  font-weight: 300;
+  line-height: .99;
+  letter-spacing: -.055em;
+}
+
+body.portal-v68 :where(.public-section-head, .training-showcase-heading) > p,
+body.portal-v68 .training-showcase-heading.light > p {
+  max-width: 44ch;
+  font-size: clamp(18px, 1.4vw, 21px);
+  line-height: 1.72;
+}
+
+body.portal-v68 :where(.training-showcase-overline, .signup-training-source),
+body.portal-v68 :where(.training-showcase-heading > span, .training-showcase-heading > div > span) {
+  margin-bottom: 16px;
+  font-size: 13px;
+  letter-spacing: .145em;
+}
+
+/* Strona Start — powiększenie drobniejszych elementów bez zmiany kompozycji. */
+body.portal-v68 .v67-label,
+body.portal-v68 .v67-link { font-size: 12px; }
+body.portal-v68 .v67-hero-intro p { font-size: clamp(18px, 1.3vw, 20px); }
+body.portal-v68 .v67-project-strip span { font-size: 11px; }
+body.portal-v68 .v67-project-strip strong { font-size: 15px; }
+body.portal-v68 .v67-programs-head > p,
+body.portal-v68 .v67-cta-side p { font-size: 18px; }
+body.portal-v68 .v67-program-number { font-size: 15px; }
+body.portal-v68 .v67-program-tag { font-size: 11px; }
+body.portal-v68 .v67-program p,
+body.portal-v68 .v67-result p { font-size: 17px; }
+body.portal-v68 .v67-result > span,
+body.portal-v68 .v67-audience-item > span { font-size: 13px; }
+body.portal-v68 .v67-audience-item p { font-size: 16px; }
+body.portal-v68 .v67-footer-note,
+body.portal-v68 .v67-footer-bottom { font-size: 12px; }
+
+/* ==========================================================
+   NASZE SZKOLENIA
+   ========================================================== */
+
+body.portal-v68 .training-showcase-hero {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+  min-height: 720px;
+  padding: clamp(70px, 7vw, 112px) 0;
+  grid-template-columns: minmax(0, .96fr) minmax(470px, .9fr);
+  gap: clamp(56px, 8vw, 132px);
+  align-items: stretch;
+}
+
+body.portal-v68 .training-showcase-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.portal-v68 .training-showcase-hero h1 {
+  max-width: 10.5ch;
+  margin: 0 0 32px;
+  font-size: clamp(64px, 6.1vw, 98px);
+  font-weight: 300;
+  line-height: .95;
+  letter-spacing: -.06em;
+}
+
+body.portal-v68 .training-showcase-hero-copy > p {
+  max-width: 51ch;
+  font-size: clamp(18px, 1.35vw, 21px);
+  line-height: 1.72;
+}
+
+body.portal-v68 .training-showcase-actions { gap: 14px; margin-top: 36px; }
+
+body.portal-v68 .training-showcase-hero-media {
+  min-height: 610px;
+  border-radius: 0;
+}
+
+body.portal-v68 .training-showcase-hero-media img {
+  min-height: 610px;
+  object-position: 53% center;
+}
+
+body.portal-v68 .training-proof-strip {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+}
+
+body.portal-v68 .training-proof-strip article { padding: 30px 30px 34px 0; }
+body.portal-v68 .training-proof-strip article + article { padding-left: 30px; }
+body.portal-v68 .training-proof-strip strong { margin-bottom: 9px; font-size: 22px; font-weight: 500; }
+body.portal-v68 .training-proof-strip span { font-size: 15px; line-height: 1.62; }
+
+body.portal-v68 .training-showcase-intro {
+  grid-template-columns: minmax(0, .92fr) minmax(420px, .78fr);
+  gap: clamp(60px, 10vw, 168px);
+}
+
+body.portal-v68 .training-showcase-intro .training-showcase-heading h2 {
+  max-width: 16ch;
+  font-size: clamp(44px, 4vw, 62px);
+  line-height: 1.01;
+}
+
+body.portal-v68 .training-showcase-copy { grid-template-columns: 1fr; }
+body.portal-v68 .training-showcase-copy p,
+body.portal-v68 .training-showcase-copy p + p {
+  padding: 25px 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--v68-line);
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+body.portal-v68 :where(.training-audience-grid, .training-method-grid) article {
+  padding: 30px 30px 36px 0;
+}
+
+body.portal-v68 :where(.training-audience-grid, .training-method-grid) article + article { padding-left: 30px; }
+
+body.portal-v68 .training-audience-grid b {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+body.portal-v68 :where(.training-audience-grid, .training-method-grid) h3 {
+  margin-bottom: 16px;
+  font-size: clamp(27px, 2.2vw, 34px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+body.portal-v68 :where(.training-audience-grid, .training-method-grid) p {
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+body.portal-v68 .training-topics-section {
+  margin-top: var(--v68-section);
+  padding: var(--v68-section) max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2));
+  color: #fff;
+  background: #0d1011;
+}
+
+body.portal-v68 .training-topics-section :where(h2, h3) { color: #fff; }
+body.portal-v68 .training-topics-section :where(.training-showcase-heading > span, p) { color: rgba(255,255,255,.66); }
+body.portal-v68 .training-topic-grid { border-color: rgba(255,255,255,.28); }
+body.portal-v68 .training-topic-grid article {
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 16px;
+  padding: 31px 34px 34px 0;
+}
+body.portal-v68 .training-topic-grid article:nth-child(even) { padding-left: 34px; }
+body.portal-v68 .training-topic-grid article > span {
+  padding-top: 4px;
+  color: #52bdb7;
+  font-size: 14px;
+  font-weight: 600;
+}
+body.portal-v68 .training-topic-grid h3 { margin-bottom: 10px; font-size: clamp(27px, 2.35vw, 36px); font-weight: 400; }
+body.portal-v68 .training-topic-grid p { font-size: 16px; line-height: 1.72; }
+
+body.portal-v68 .training-gallery-grid {
+  grid-template-columns: 1.24fr .76fr .76fr;
+  grid-auto-rows: 310px;
+  gap: 12px;
+}
+body.portal-v68 .training-gallery-grid figure { border-radius: 0; }
+body.portal-v68 .training-gallery-grid figcaption {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px 17px;
+  border-radius: 0;
+  background: rgba(10,14,15,.78);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body.portal-v68 .training-feedback-section {
+  gap: clamp(58px, 10vw, 168px);
+  padding-bottom: var(--v68-section);
+}
+body.portal-v68 .training-feedback-section > div:first-child > span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--v68-teal-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .145em;
+  text-transform: uppercase;
+}
+body.portal-v68 .training-feedback-section h2 { font-size: clamp(46px, 4.7vw, 72px); font-weight: 300; line-height: 1; }
+body.portal-v68 .training-feedback-points p { padding: 21px 0; font-size: 17px; line-height: 1.65; }
+
+body.portal-v68 .training-cta-section,
+body.portal-v68 .public-cta {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(72px, 8vw, 120px) max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2));
+  border: 0;
+  color: #fff;
+  background: #111415;
+}
+body.portal-v68 .training-cta-section > div > span { color: #55bcb6; font-size: 13px; }
+body.portal-v68 :where(.training-cta-section, .public-cta) h2 {
+  max-width: 18ch;
+  color: #fff;
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 300;
+  line-height: 1;
+}
+body.portal-v68 :where(.training-cta-section, .public-cta) p { font-size: 18px; color: rgba(255,255,255,.67); }
+body.portal-v68 :where(.training-cta-section, .public-cta) .public-btn { border-color: #fff; color: #111619; background: #fff; }
+body.portal-v68 :where(.training-cta-section, .public-cta) .public-btn.primary { border-color: var(--v68-teal); color: #fff; background: var(--v68-teal); }
+
+/* ==========================================================
+   ZAPISY
+   ========================================================== */
+
+body.portal-v68 .public-hero {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+  padding: clamp(68px, 7vw, 112px) 0;
+  grid-template-columns: minmax(0, .92fr) minmax(470px, .88fr);
+  gap: clamp(56px, 8vw, 132px);
+}
+
+body.portal-v68 .public-hero h1 {
+  max-width: 10.5ch;
+  margin: 0 0 30px;
+  font-size: clamp(64px, 6vw, 96px);
+  font-weight: 300;
+  line-height: .95;
+  letter-spacing: -.06em;
+}
+
+body.portal-v68 .public-hero h1 > span {
+  max-width: 17ch;
+  margin-top: 24px;
+  color: var(--v68-muted);
+  font-size: clamp(27px, 2.35vw, 38px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+body.portal-v68 .public-hero-content > p { font-size: clamp(18px, 1.35vw, 21px); line-height: 1.72; }
+body.portal-v68 .public-hero-logo-link { width: 178px; margin-bottom: 36px; }
+body.portal-v68 .public-hero-logo-link img { max-height: 92px; }
+body.portal-v68 .signup-public-hero-media { min-height: 650px; border-radius: 0; }
+body.portal-v68 .signup-public-hero-media img { min-height: 650px; }
+
+body.portal-v68 .signup-intro-section { padding-top: clamp(70px, 7vw, 110px); }
+body.portal-v68 .signup-program-section { padding-top: var(--v68-section); }
+
+body.portal-v68 .signup-training-card {
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: clamp(38px, 5vw, 74px);
+  padding: 42px 0;
+}
+body.portal-v68 .signup-training-media { height: 290px; border-radius: 0; }
+body.portal-v68 .signup-training-content h3 {
+  max-width: 25ch;
+  margin-bottom: 20px;
+  font-size: clamp(34px, 3vw, 46px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+body.portal-v68 .signup-training-copy { gap: clamp(28px, 4vw, 58px); }
+body.portal-v68 .signup-training-copy p { font-size: 16px; line-height: 1.74; }
+body.portal-v68 .signup-training-action { gap: 12px; margin-top: 28px; }
+body.portal-v68 .signup-status { padding: 10px 13px; border-radius: 0; font-size: 13px; }
+body.portal-v68 .signup-contact-link { min-height: 46px; padding: 11px 15px; font-size: 13px; }
+
+body.portal-v68 .signup-training-grid-two { column-gap: clamp(38px, 6vw, 82px); }
+body.portal-v68 .signup-training-grid-two .signup-training-card {
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-content: start;
+  padding: 34px 0 44px;
+}
+body.portal-v68 .signup-training-grid-two .signup-training-media { height: 270px; }
+body.portal-v68 .signup-training-grid-two .signup-training-content h3 { font-size: clamp(30px, 2.55vw, 40px); }
+body.portal-v68 .signup-training-grid-two .signup-training-copy { gap: 14px; }
+
+body.portal-v68 .signup-calendar-section {
+  max-width: none;
+  padding: var(--v68-section) max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2)) clamp(70px, 8vw, 118px);
+  background: var(--v68-soft);
+}
+body.portal-v68 .calendar-layout { max-width: var(--v68-container); }
+body.portal-v68 :where(.calendar-board, .calendar-details, .calendar-shell) { border-radius: 0; box-shadow: none; }
+body.portal-v68 .calendar-board { padding: clamp(24px, 3vw, 42px); }
+body.portal-v68 .calendar-board h2 { font-size: clamp(32px, 3vw, 46px); }
+body.portal-v68 .calendar-board-head p { font-size: 16px; line-height: 1.65; }
+body.portal-v68 .calendar-mode-row h3 { font-size: 20px; }
+body.portal-v68 :where(.calendar-mini-btn, .calendar-mode-switch button) { font-size: 13px; }
+body.portal-v68 .calendar-weekdays { font-size: 12px; }
+body.portal-v68 .calendar-day > span { font-size: 14px; }
+body.portal-v68 .calendar-legend span { font-size: 13px; }
+body.portal-v68 .calendar-details { padding: clamp(26px, 3vw, 42px); }
+body.portal-v68 .calendar-details-head p,
+body.portal-v68 .calendar-detail-meta dt { font-size: 12px; }
+body.portal-v68 .calendar-details h2 { font-size: clamp(28px, 2.5vw, 38px); line-height: 1.08; }
+body.portal-v68 .calendar-details :where(p, dd) { font-size: 15px; line-height: 1.67; }
+
+body.portal-v68 .signup-institution { gap: clamp(50px, 8vw, 130px); padding: 54px 0; }
+body.portal-v68 .signup-institution h2 { max-width: 18ch; font-size: clamp(42px, 4.2vw, 64px); font-weight: 300; line-height: 1; }
+body.portal-v68 .signup-institution p { font-size: 17px; line-height: 1.72; }
+body.portal-v68 .signup-institution-contact a { min-width: 290px; padding: 16px 18px; border-radius: 0; font-size: 18px; }
+body.portal-v68 .signup-institution-contact small { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+
+body.portal-v68 .brand-bar {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+  margin-bottom: clamp(70px, 8vw, 118px);
+  padding: 30px 0;
+}
+body.portal-v68 .brand-bar img { max-height: 82px; }
+
+/* ==========================================================
+   KURSY ONLINE — redakcyjny katalog zamiast banerów
+   ========================================================== */
+
+body.portal-v68 .v68-online-main { padding-bottom: 0; }
+body.portal-v68 .v68-online-hero,
+body.portal-v68 .v68-online-featured,
+body.portal-v68 .v68-online-list {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+  margin-inline: auto;
+}
+
+body.portal-v68 .v68-online-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, .62fr);
+  gap: clamp(56px, 9vw, 148px);
+  align-items: end;
+  padding: clamp(82px, 8vw, 132px) 0 clamp(74px, 8vw, 122px);
+  border-bottom: 1px solid var(--v68-line);
+}
+body.portal-v68 .v68-kicker {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--v68-teal-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+body.portal-v68 .v68-online-hero h1 {
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(70px, 7.2vw, 112px);
+  font-weight: 300;
+  line-height: .93;
+  letter-spacing: -.065em;
+}
+body.portal-v68 .v68-online-hero > p { max-width: 39ch; margin: 0; font-size: 20px; line-height: 1.72; }
+
+body.portal-v68 .v68-online-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(420px, .85fr);
+  min-height: 680px;
+  margin-top: var(--v68-section);
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+body.portal-v68 .v68-online-featured-media { min-height: 680px; margin: 0; overflow: hidden; }
+body.portal-v68 .v68-online-featured-media img { width: 100%; height: 100%; object-fit: cover; object-position: 46% center; }
+body.portal-v68 .v68-online-featured-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(46px, 6vw, 92px);
+  border-left: 1px solid var(--v68-line);
+}
+body.portal-v68 .v68-online-featured-copy h2 {
+  max-width: 12ch;
+  margin: 0 0 28px;
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 300;
+  line-height: .98;
+}
+body.portal-v68 .v68-online-featured-copy p { max-width: 43ch; margin: 0 0 34px; font-size: 18px; line-height: 1.72; }
+body.portal-v68 .v68-online-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 36px;
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+body.portal-v68 .v68-online-meta div { padding: 16px 18px 17px 0; }
+body.portal-v68 .v68-online-meta div + div { padding-left: 18px; border-left: 1px solid var(--v68-line); }
+body.portal-v68 .v68-online-meta span { display: block; color: var(--v68-muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+body.portal-v68 .v68-online-meta strong { display: block; margin-top: 3px; font-size: 16px; font-weight: 500; }
+
+body.portal-v68 .v68-online-list { padding: var(--v68-section) 0; }
+body.portal-v68 .v68-online-list-head {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, .62fr);
+  gap: clamp(52px, 8vw, 126px);
+  align-items: end;
+  margin-bottom: clamp(46px, 6vw, 82px);
+}
+body.portal-v68 .v68-online-list-head h2 { max-width: 12ch; margin: 0; font-size: clamp(52px, 5.5vw, 84px); font-weight: 300; line-height: .98; }
+body.portal-v68 .v68-online-list-head p { margin: 0; font-size: 18px; line-height: 1.7; }
+body.portal-v68 .v68-online-row {
+  display: grid;
+  grid-template-columns: 64px 170px minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  min-height: 142px;
+  padding: 28px 0;
+  border-top: 1px solid var(--v68-line);
+}
+body.portal-v68 .v68-online-row:last-child { border-bottom: 1px solid var(--v68-line); }
+body.portal-v68 .v68-online-row > span { color: var(--v68-teal); font-size: 14px; font-weight: 600; }
+body.portal-v68 .v68-online-row small { color: var(--v68-muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+body.portal-v68 .v68-online-row h3 { max-width: 24ch; margin: 0; font-size: clamp(30px, 3vw, 46px); font-weight: 400; line-height: 1.05; }
+body.portal-v68 .v68-soon { min-width: 116px; color: var(--v68-muted); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-align: right; text-transform: uppercase; }
+
+body.portal-v68 .v68-online-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .55fr);
+  gap: 70px;
+  align-items: end;
+  padding: clamp(78px, 8vw, 126px) max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2));
+  color: #fff;
+  background: #111415;
+}
+body.portal-v68 .v68-online-cta h2 { max-width: 14ch; margin: 0; color: #fff; font-size: clamp(50px, 5.4vw, 84px); font-weight: 300; line-height: .98; }
+body.portal-v68 .v68-online-cta p { margin: 0 0 30px; color: rgba(255,255,255,.68); font-size: 18px; }
+body.portal-v68 .v68-online-cta .public-btn { border-color: #fff; color: #111619; background: #fff; }
+
+/* ==========================================================
+   KONTAKT
+   ========================================================== */
+
+body.portal-v68 .contact-hero {
+  display: flex;
+  min-height: 650px;
+  align-items: center;
+  padding: clamp(72px, 8vw, 126px) 55% clamp(72px, 8vw, 126px) 0;
+  background-color: var(--v68-soft);
+  background-position: right center;
+  background-size: 50% 100%;
+}
+body.portal-v68 .contact-hero .public-hero-content { width: 100%; }
+body.portal-v68 .contact-wup-brand { width: 180px; margin-bottom: 38px; }
+body.portal-v68 .contact-wup-brand img { max-height: 92px; }
+body.portal-v68 .contact-hero h1 { font-size: clamp(72px, 7vw, 108px); }
+
+body.portal-v68 .contact-grid { border-color: var(--v68-line); }
+body.portal-v68 .contact-panel { padding: 46px clamp(42px, 6vw, 88px) 52px 0; }
+body.portal-v68 .contact-panel + .contact-panel { padding-left: clamp(42px, 6vw, 88px); }
+body.portal-v68 .contact-panel h2 { font-size: clamp(46px, 4.5vw, 68px); font-weight: 300; line-height: 1; }
+body.portal-v68 .contact-panel h3 { font-size: clamp(34px, 3.4vw, 50px); font-weight: 300; line-height: 1.03; }
+body.portal-v68 .contact-panel p { font-size: 17px; line-height: 1.72; }
+body.portal-v68 .contact-line { grid-template-columns: 98px 1fr; gap: 20px; padding: 17px 0; }
+body.portal-v68 .contact-line span { font-size: 13px; letter-spacing: .1em; }
+body.portal-v68 .contact-line a { font-size: clamp(22px, 2vw, 30px); font-weight: 400; letter-spacing: -.02em; }
+
+body.portal-v68 .public-step { padding: 30px 34px 36px 0; }
+body.portal-v68 .public-step + .public-step { padding-left: 34px; }
+body.portal-v68 .public-step > span { margin-bottom: 11px; font-size: 15px; font-weight: 600; }
+body.portal-v68 .public-step h3 { margin-bottom: 14px; font-size: clamp(28px, 2.5vw, 38px); font-weight: 400; }
+body.portal-v68 .public-step p { font-size: 16px; line-height: 1.7; }
+
+body.portal-v68 .public-cta { margin-top: var(--v68-section); }
+
+/* Przekierowanie starego kalendarza zachowuje wspólną skalę. */
+body.portal-v68.calendar-signup-page .calendar-main { background: #fff; }
+body.portal-v68.calendar-signup-page .calendar-hero { border-radius: 0; box-shadow: none; }
+body.portal-v68.calendar-signup-page .calendar-hero h1 { font-size: clamp(56px, 6vw, 92px); font-weight: 300; line-height: .96; }
+body.portal-v68.calendar-signup-page .calendar-hero p { font-size: 19px; line-height: 1.72; }
+
+/* Wspólna stopka podstron. */
+body.portal-v68 .v67-footer .v67-shell {
+  width: min(var(--v68-container), calc(100% - 2 * var(--v68-gutter)));
+}
+body.portal-v68 .v67-footer-note,
+body.portal-v68 .v67-footer-bottom { font-size: 12px; }
+
+@media (max-width: 1180px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .public-hero { grid-template-columns: minmax(0, 1fr) minmax(390px, .78fr); gap: 52px; }
+  body.portal-v68 .training-audience-grid,
+  body.portal-v68 .training-method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.portal-v68 .signup-training-card { grid-template-columns: 310px minmax(0, 1fr); }
+  body.portal-v68 .v68-online-featured { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 { font-size: 17px; }
+  body.portal-v68 .site-nav a { font-size: 15px; }
+  body.portal-v68 :where(.public-section-head, .training-showcase-heading),
+  body.portal-v68 .training-showcase-intro,
+  body.portal-v68 .training-feedback-section,
+  body.portal-v68 .v68-online-hero,
+  body.portal-v68 .v68-online-list-head,
+  body.portal-v68 .v68-online-cta { grid-template-columns: 1fr; gap: 34px; }
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .public-hero { grid-template-columns: 1fr; }
+  body.portal-v68 .training-showcase-hero-media,
+  body.portal-v68 .signup-public-hero-media { min-height: 520px; }
+  body.portal-v68 :where(.training-showcase-hero-media, .signup-public-hero-media) img { min-height: 520px; }
+  body.portal-v68 .training-gallery-grid { grid-template-columns: 1.15fr .85fr; }
+  body.portal-v68 .training-gallery-grid .portrait { grid-row: auto; }
+  body.portal-v68 .training-topic-grid { grid-template-columns: 1fr; }
+  body.portal-v68 .training-topic-grid article,
+  body.portal-v68 .training-topic-grid article:nth-child(even) { padding-inline: 0; border-right: 0; }
+  body.portal-v68 .signup-training-card { grid-template-columns: 280px minmax(0, 1fr); gap: 34px; }
+  body.portal-v68 .signup-training-copy { grid-template-columns: 1fr; gap: 12px; }
+  body.portal-v68 .v68-online-featured { grid-template-columns: 1fr; }
+  body.portal-v68 .v68-online-featured-copy { border-top: 1px solid var(--v68-line); border-left: 0; }
+  body.portal-v68 .v68-online-featured-media { min-height: 520px; }
+  body.portal-v68 .v68-online-row { grid-template-columns: 52px 130px minmax(0, 1fr); }
+  body.portal-v68 .v68-soon { grid-column: 3; text-align: left; }
+  body.portal-v68 .contact-hero {
+    min-height: 0;
+    padding: 70px 0 520px;
+    background-position: center bottom;
+    background-size: 100% 460px;
+  }
+}
+
+@media (max-width: 680px) {
+  :root { --v68-gutter: 20px; --v68-section: 82px; }
+  body.portal-v68 .site-header-inner { min-height: 78px; }
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .public-hero { min-height: 0; padding: 58px 0 70px; }
+  body.portal-v68 .training-showcase-hero h1,
+  body.portal-v68 .public-hero h1 { font-size: clamp(52px, 15vw, 72px); }
+  body.portal-v68 .training-showcase-hero-media,
+  body.portal-v68 .signup-public-hero-media { min-height: 390px; }
+  body.portal-v68 :where(.training-showcase-hero-media, .signup-public-hero-media) img { min-height: 390px; }
+  body.portal-v68 .training-proof-strip,
+  body.portal-v68 .training-audience-grid,
+  body.portal-v68 .training-method-grid,
+  body.portal-v68 .signup-training-grid-two,
+  body.portal-v68 .contact-grid,
+  body.portal-v68 .public-step-grid { grid-template-columns: 1fr; }
+  body.portal-v68 :where(.training-proof-strip, .training-audience-grid, .training-method-grid) article,
+  body.portal-v68 :where(.training-proof-strip, .training-audience-grid, .training-method-grid) article + article {
+    padding: 25px 0 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--v68-line);
+  }
+  body.portal-v68 .training-gallery-grid { display: grid; grid-template-columns: 1fr; grid-auto-rows: 310px; }
+  body.portal-v68 .training-gallery-grid .wide,
+  body.portal-v68 .training-gallery-grid .portrait { grid-row: auto; }
+  body.portal-v68 .training-feedback-section { padding-bottom: var(--v68-section); }
+  body.portal-v68 .training-cta-section,
+  body.portal-v68 .public-cta { grid-template-columns: 1fr; gap: 32px; }
+  body.portal-v68 .signup-training-card,
+  body.portal-v68 .signup-training-grid-two .signup-training-card { grid-template-columns: 1fr; gap: 24px; }
+  body.portal-v68 .signup-training-media,
+  body.portal-v68 .signup-training-grid-two .signup-training-media { height: 250px; }
+  body.portal-v68 .signup-institution { grid-template-columns: 1fr; }
+  body.portal-v68 .signup-institution-contact a { min-width: 0; }
+  body.portal-v68 .v68-online-hero h1 { font-size: clamp(56px, 16vw, 78px); }
+  body.portal-v68 .v68-online-featured-media { min-height: 390px; }
+  body.portal-v68 .v68-online-featured-copy { padding: 38px 0; }
+  body.portal-v68 .v68-online-row { grid-template-columns: 36px minmax(0, 1fr); gap: 16px; }
+  body.portal-v68 .v68-online-row small,
+  body.portal-v68 .v68-online-row h3,
+  body.portal-v68 .v68-soon { grid-column: 2; }
+  body.portal-v68 .v68-online-row > span { grid-row: 1 / 4; }
+  body.portal-v68 .contact-hero { padding: 58px 0 360px; background-size: 100% 320px; }
+  body.portal-v68 .contact-panel,
+  body.portal-v68 .contact-panel + .contact-panel { padding: 34px 0; border-right: 0; }
+  body.portal-v68 .contact-line { grid-template-columns: 1fr; gap: 2px; }
+  body.portal-v68 .public-step,
+  body.portal-v68 .public-step + .public-step { padding: 26px 0 30px; border-right: 0; }
+  body.portal-v68 .site-footer-inner { grid-template-columns: 1fr; gap: 34px; }
+  body.portal-v68 .site-footer-links { justify-content: flex-start; }
+}
+
+/* ================================================================
+   V68.4 — korekta rytmu, kontrastu i symetrii
+   ================================================================ */
+
+/* Wypełnione przyciski zawsze zachowują biały napis. */
+body.portal-v68 :where(
+  .home-rd-btn-primary,
+  .public-btn.primary,
+  .calendar-form-btn,
+  .v67-cta-button
+),
+body.portal-v68 :where(
+  .home-rd-btn-primary,
+  .public-btn.primary,
+  .calendar-form-btn,
+  .v67-cta-button
+):is(:visited, :hover, :focus-visible, :active) {
+  color: #fff !important;
+}
+
+/* Programy na stronie głównej: jedna, spokojna oś dla wszystkich wierszy. */
+body.portal-v68 .home-one-offer > .home-rd-section-heading {
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .72fr);
+  column-gap: clamp(54px, 7vw, 112px);
+  align-items: start;
+  padding-bottom: clamp(54px, 6vw, 88px);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program-grid {
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program,
+body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) {
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .72fr);
+  column-gap: clamp(54px, 7vw, 112px);
+  align-items: start;
+  margin: 0;
+  padding: clamp(46px, 5vw, 72px) 0;
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program:last-child {
+  border-bottom: 0;
+}
+
+body.portal-v68 .home-one-offer .home-rd-program-outcome {
+  align-self: start;
+  margin: 0;
+  padding: 4px 0 0;
+}
+
+/* Kontakt: mapa jest pełnym tłem nagłówka, bez podziału i bez mgły. */
+body.portal-v68 .public-hero.contact-hero {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  min-height: clamp(620px, 62vw, 760px);
+  overflow: hidden;
+  background: #080a0b;
+}
+
+body.portal-v68 .contact-hero-map {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body.portal-v68 .contact-hero-map::before {
+  display: none !important;
+}
+
+body.portal-v68 .contact-hero-map img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+body.portal-v68 .public-hero.contact-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(3, 5, 6, .88) 0%, rgba(3, 5, 6, .76) 34%, rgba(3, 5, 6, .28) 60%, rgba(3, 5, 6, 0) 78%);
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(680px, 58%);
+  min-height: clamp(620px, 62vw, 760px);
+  justify-content: center;
+  padding: clamp(54px, 6vw, 92px) clamp(38px, 5vw, 78px) !important;
+  color: #fff;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+  width: clamp(280px, 25vw, 390px);
+  margin: 0 0 clamp(46px, 6vw, 78px);
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand img {
+  width: 100%;
+  max-height: 126px;
+  object-position: left center;
+}
+
+body.portal-v68 .contact-hero h1,
+body.portal-v68 .contact-hero h1 > span {
+  color: #fff;
+}
+
+body.portal-v68 .contact-hero p {
+  color: rgba(255, 255, 255, .78);
+}
+
+/* Stopka: jedna linia, wspólna baza i równe światło między znakami. */
+body.portal-v68 .v67-footer-logos {
+  grid-template-columns: max-content 112px 220px 250px minmax(250px, 1fr);
+  column-gap: clamp(28px, 3.4vw, 64px);
+  row-gap: 28px;
+  align-items: center;
+  min-height: 0;
+  padding-block: 44px;
+}
+
+body.portal-v68 .v67-footer-logos > strong {
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+body.portal-v68 .v67-footer-logos .v67-footer-project {
+  width: 108px;
+  height: 68px;
+}
+
+body.portal-v68 .v67-footer-logos img {
+  max-height: 68px;
+}
+
+body.portal-v68 .v67-footer-note {
+  justify-self: end;
+  max-width: 34ch;
+  margin: 0;
+}
+
+@media (max-width: 1180px) {
+  body.portal-v68 .v67-footer-logos {
+    grid-template-columns: max-content 108px 210px 230px;
+  }
+
+  body.portal-v68 .v67-footer-note {
+    grid-column: 1 / -1;
+    justify-self: start;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .home-one-offer > .home-rd-section-heading,
+  body.portal-v68 .home-one-offer .home-rd-program,
+  body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  body.portal-v68 .home-one-offer .home-rd-program-outcome {
+    padding-left: 28px;
+  }
+
+  body.portal-v68 .public-hero.contact-hero {
+    min-height: 650px;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+    width: min(720px, 88%);
+    min-height: 650px;
+    padding: 58px var(--v68-gutter) !important;
+  }
+
+  body.portal-v68 .public-hero.contact-hero::after {
+    background: linear-gradient(90deg, rgba(3, 5, 6, .9) 0%, rgba(3, 5, 6, .76) 55%, rgba(3, 5, 6, .34) 100%);
+  }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 .public-hero.contact-hero,
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+    min-height: 620px;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+    width: 100%;
+    padding: 44px 20px 52px !important;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+    width: min(300px, 82vw);
+    margin-bottom: 44px;
+  }
+
+  body.portal-v68 .public-hero.contact-hero::after {
+    background: rgba(3, 5, 6, .74);
+  }
+
+  body.portal-v68 .v67-footer-logos {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+  }
+
+  body.portal-v68 .v67-footer-logos > strong,
+  body.portal-v68 .v67-footer-note {
+    grid-column: 1 / -1;
+  }
+
+  body.portal-v68 .v67-footer-logos img:nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.portal-v68 * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* ==========================================================
+   V68.1 — ZWARTY RYTM PODSTRON
+   Korekta po przeglądzie pełnych ekranów 2048 px.
+   ========================================================== */
+
+body.portal-v68 { --v68-section: clamp(70px, 6.5vw, 104px); }
+
+body.portal-v68 :where(.public-section-head, .training-showcase-heading) {
+  align-items: start;
+}
+
+/* Sekcje szkoleniowe: nagłówek i treść tworzą jeden moduł. */
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro),
+body.portal-v68 .training-gallery-section {
+  padding-top: clamp(70px, 6vw, 98px);
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading,
+body.portal-v68 .training-gallery-section > .training-showcase-heading {
+  grid-template-columns: minmax(230px, .42fr) minmax(0, 1.58fr);
+  gap: clamp(42px, 6vw, 92px);
+  align-items: start;
+  margin-bottom: clamp(34px, 3.5vw, 54px);
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading > span,
+body.portal-v68 .training-gallery-section > .training-showcase-heading > span { padding-top: 8px; }
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading h2,
+body.portal-v68 .training-gallery-section > .training-showcase-heading h2 {
+  max-width: 18ch;
+  font-size: clamp(48px, 4.4vw, 68px);
+}
+
+body.portal-v68 :where(.training-audience-grid, .training-method-grid) {
+  gap: clamp(28px, 4vw, 56px);
+  padding-top: 28px;
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .training-topics-section {
+  margin-top: clamp(72px, 6vw, 98px);
+  padding-top: clamp(76px, 6vw, 102px);
+  padding-bottom: clamp(76px, 6vw, 102px);
+}
+
+body.portal-v68 .training-topics-section > .training-showcase-heading {
+  grid-template-columns: minmax(230px, .42fr) minmax(0, 1.08fr) minmax(320px, .5fr);
+  gap: clamp(34px, 4.6vw, 70px);
+  align-items: start;
+  margin-bottom: clamp(42px, 4vw, 62px);
+}
+
+body.portal-v68 .training-topics-section > .training-showcase-heading > span,
+body.portal-v68 .training-topics-section > .training-showcase-heading > p { padding-top: 9px; }
+body.portal-v68 .training-topics-section > .training-showcase-heading h2 {
+  max-width: 15ch;
+  font-size: clamp(48px, 4.4vw, 68px);
+}
+
+body.portal-v68 .training-topic-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+body.portal-v68 .training-topic-grid article,
+body.portal-v68 .training-topic-grid article:nth-child(even) {
+  grid-template-columns: 34px minmax(0, 1fr);
+  padding: 28px 24px 30px;
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+body.portal-v68 .training-topic-grid article:nth-child(4n) { border-right: 0; }
+body.portal-v68 .training-topic-grid h3 { font-size: clamp(25px, 1.75vw, 30px); }
+
+body.portal-v68 .training-gallery-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: clamp(310px, 22vw, 350px);
+  grid-auto-rows: clamp(310px, 22vw, 350px);
+}
+body.portal-v68 .training-gallery-grid .wide,
+body.portal-v68 .training-gallery-grid .portrait { grid-row: auto; grid-column: auto; }
+body.portal-v68 .training-gallery-grid img { object-position: center; }
+body.portal-v68 .training-gallery-grid .wide img { object-position: 54% 67%; }
+body.portal-v68 .training-gallery-grid figure:nth-child(2) img { object-position: 50% 68%; }
+body.portal-v68 .training-gallery-grid .portrait img { object-position: 50% 62%; }
+body.portal-v68 .training-gallery-grid figure:nth-child(4) img { object-position: 50% 68%; }
+
+/* Ciemne wezwania do działania: mniejsza wysokość i mocniejszy kontrast. */
+body.portal-v68 :where(.training-cta-section, .public-cta) {
+  padding-top: clamp(54px, 4.5vw, 72px);
+  padding-bottom: clamp(54px, 4.5vw, 72px);
+}
+body.portal-v68 .training-cta-section {
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, .55fr);
+  gap: clamp(44px, 7vw, 104px);
+  align-items: end;
+  border-radius: 0;
+}
+body.portal-v68 .training-cta-section > div { max-width: 1040px; }
+body.portal-v68 .training-cta-section h2 {
+  max-width: 22ch;
+  font-size: clamp(46px, 4.25vw, 66px);
+}
+body.portal-v68 .training-cta-section .training-showcase-actions { justify-content: flex-end; }
+body.portal-v68 :where(.training-cta-section, .public-cta) p { color: rgba(255,255,255,.84); }
+body.portal-v68 .training-cta-section > div > p,
+body.portal-v68 .contact-hero ~ .public-section .public-cta p {
+  color: rgba(255,255,255,.8);
+}
+
+/* Zapisy: dwa nagłówki nie tworzą już dwóch pustych ekranów. */
+body.portal-v68 .signup-intro-section {
+  padding-top: clamp(58px, 4.6vw, 76px);
+  padding-bottom: clamp(46px, 3.8vw, 62px);
+  border-bottom: 1px solid var(--v68-line);
+}
+body.portal-v68 .signup-intro-section .public-section-head,
+body.portal-v68 .signup-program-section .public-section-head { margin-bottom: 0; }
+body.portal-v68 .signup-intro-section .public-section-head h2 {
+  max-width: 18ch;
+  font-size: clamp(48px, 4.4vw, 68px);
+}
+body.portal-v68 .signup-program-section { padding-top: clamp(46px, 4vw, 64px); }
+body.portal-v68 .signup-program-section .public-section-head {
+  align-items: start;
+  margin-bottom: clamp(28px, 2.7vw, 42px);
+  padding-bottom: 0;
+}
+body.portal-v68 .signup-program-section .public-section-head h2 {
+  max-width: 20ch;
+  font-size: clamp(42px, 3.8vw, 58px);
+}
+
+/* Kontakt: mapa jest osobnym, równym modułem zamiast rozciągniętego tła. */
+body.portal-v68 .contact-hero {
+  display: grid;
+  min-height: 0;
+  padding: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  background: var(--v68-soft);
+}
+body.portal-v68 .contact-hero .public-hero-content {
+  display: flex;
+  min-height: 680px;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(56px, 5.5vw, 86px) clamp(42px, 5vw, 76px) clamp(56px, 5.5vw, 86px) 0;
+}
+body.portal-v68 .contact-hero-map { min-height: 680px; margin: 0; overflow: hidden; }
+body.portal-v68 .contact-hero-map img {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  object-fit: cover;
+  object-position: 61% center;
+}
+body.portal-v68 .contact-wup-brand { margin-bottom: 30px; }
+body.portal-v68 .contact-hero h1 { font-size: clamp(68px, 6.5vw, 100px); }
+body.portal-v68 .contact-hero h1 > span { max-width: 13ch; font-size: clamp(29px, 2.5vw, 39px); }
+body.portal-v68 .contact-hero + .public-section { padding-top: clamp(70px, 6vw, 98px); }
+
+body.portal-v68 .contact-hero ~ .public-section .public-step-grid {
+  padding-top: 26px;
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .contact-hero ~ .public-section .public-cta {
+  width: calc(100% + 2 * max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2)));
+  margin-right: calc(-1 * max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2)));
+  margin-left: calc(-1 * max(var(--v68-gutter), calc((100vw - var(--v68-container)) / 2)));
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(44px, 7vw, 100px);
+  align-items: center;
+  border-radius: 0;
+}
+body.portal-v68 .contact-hero ~ .public-section .public-cta h2 {
+  max-width: 15ch;
+  font-size: clamp(44px, 4.6vw, 70px);
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .training-topics-section > .training-showcase-heading,
+  body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading,
+  body.portal-v68 .training-gallery-section > .training-showcase-heading { grid-template-columns: 1fr; gap: 24px; }
+  body.portal-v68 .training-topic-grid { grid-template-columns: 1fr; }
+  body.portal-v68 .training-topic-grid article,
+  body.portal-v68 .training-topic-grid article:nth-child(even) {
+    padding-inline: 0;
+    border-right: 0;
+  }
+  body.portal-v68 .training-gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 320px 320px; }
+  body.portal-v68 .training-cta-section {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  body.portal-v68 .training-cta-section .training-showcase-actions { justify-content: flex-start; }
+  body.portal-v68 .contact-hero { grid-template-columns: 1fr; }
+  body.portal-v68 .contact-hero .public-hero-content { min-height: 0; padding: 68px var(--v68-gutter); }
+  body.portal-v68 .contact-hero-map,
+  body.portal-v68 .contact-hero-map img { min-height: 460px; }
+  body.portal-v68 .contact-hero-map img { object-position: 57% center; }
+}
+
+@media (max-width: 1280px) and (min-width: 981px) {
+  body.portal-v68 .training-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.portal-v68 .training-topic-grid article:nth-child(2n) { border-right: 0; }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 { --v68-section: 72px; }
+  body.portal-v68 .training-gallery-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 310px; }
+  body.portal-v68 .training-gallery-grid .wide,
+  body.portal-v68 .training-gallery-grid .portrait { grid-row: auto; grid-column: auto; }
+  body.portal-v68 .training-cta-section .training-showcase-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  body.portal-v68 .contact-hero .public-hero-content { padding: 56px 20px 62px; }
+  body.portal-v68 .contact-hero-map,
+  body.portal-v68 .contact-hero-map img { min-height: 320px; }
+  body.portal-v68 .contact-hero ~ .public-section .public-cta {
+    width: calc(100% + 40px);
+    margin-right: -20px;
+    margin-left: -20px;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================
+   V68.2 — KOREKTA PROPORCJI, RYTMU I WIDOKÓW RESPONSYWNYCH
+   ========================================================== */
+
+/* Pierwsza treść zaczyna się bliżej nawigacji na wszystkich podstronach. */
+body.portal-v68 .training-showcase-hero,
+body.portal-v68 .public-hero {
+  padding-top: clamp(46px, 4.6vw, 72px);
+}
+
+body.portal-v68 .v68-online-hero {
+  padding-top: clamp(46px, 4.6vw, 72px);
+}
+
+/* Start: zdjęcie zajmuje dokładnie połowę hero, a tekst nie jest opuszczony. */
+@media (min-width: 981px) {
+  body.portal-v68 .v67-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  body.portal-v68 .v67-hero-copy {
+    justify-content: flex-start;
+    padding-top: clamp(54px, 5vw, 78px);
+    padding-right: clamp(42px, 4.8vw, 76px);
+  }
+}
+
+/* V68.10 — selektywne pogrubienie słów-kluczy w dużych nagłówkach. */
+body.portal-v68 .editorial-emphasis {
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
+/* ================================================================
+   V68.11 — pełna optymalizacja publicznych stron dla telefonów
+   ================================================================ */
+@media (max-width: 680px) {
+  :root {
+    --v68-gutter: 18px;
+    --v68-section: 58px;
+  }
+
+  html { overflow-x: hidden; }
+  body.portal-v68 {
+    min-width: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  body.portal-v68 :where(.public-main, .training-showcase-main, .home-rd-main) {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Nagłówek i menu: kompaktowy znak oraz wygodne pola dotykowe. */
+  body.portal-v68 .site-header-inner {
+    width: calc(100% - 28px);
+    min-height: 68px;
+  }
+
+  body.portal-v68 .site-logo-project { width: 118px; }
+  body.portal-v68 .site-project-wordmark { width: 100%; height: auto; }
+  body.portal-v68 .site-funding-logos { display: none; }
+  body.portal-v68 .nav-toggle { width: 44px; height: 44px; }
+  body.portal-v68 .site-nav a { min-height: 48px; font-size: 16px; }
+
+  /* Wspólna skala i rytm. */
+  body.portal-v68 :where(.public-section, .training-showcase-section, .training-gallery-section, .training-feedback-section) {
+    width: calc(100% - 36px);
+    padding-top: var(--v68-section);
+  }
+
+  body.portal-v68 :where(.public-section-head, .training-showcase-heading, .home-rd-section-heading) {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  body.portal-v68 :where(.public-section-head, .training-showcase-heading, .home-rd-section-heading) > p {
+    max-width: none;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  body.portal-v68 :where(.public-section-head, .training-showcase-heading, .home-rd-section-heading) h2 {
+    max-width: none;
+    font-size: clamp(37px, 10.6vw, 48px);
+    line-height: 1.01;
+    letter-spacing: -.05em;
+    text-wrap: balance;
+  }
+
+  body.portal-v68 :where(.public-btn, .signup-contact-link, .calendar-form-btn, .home-rd-btn, .v67-cta-button) {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Strona startowa. */
+  body.portal-v68 .home-rd-hero {
+    width: calc(100% - 36px);
+    padding-top: 28px;
+    gap: 28px;
+  }
+
+  body.portal-v68 .home-rd-hero-copy { padding: 8px 0 0; }
+  body.portal-v68 .home-rd-hero-copy h1 {
+    max-width: 11ch;
+    margin-bottom: 20px;
+    font-size: clamp(46px, 13.2vw, 62px);
+    line-height: .98;
+  }
+  body.portal-v68 .home-rd-hero-copy > p { margin-bottom: 24px; font-size: 16px; line-height: 1.62; }
+  body.portal-v68 .home-rd-hero-actions { display: grid; gap: 10px; }
+  body.portal-v68 .home-rd-hero-visual,
+  body.portal-v68 .home-rd-hero-visual img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  body.portal-v68 .home-eu-origin {
+    margin-top: 36px;
+    padding: 50px 18px 54px;
+  }
+  body.portal-v68 .home-eu-origin-copy { gap: 22px; }
+  body.portal-v68 .home-eu-origin-copy h2 { font-size: clamp(38px, 10.8vw, 50px); }
+  body.portal-v68 .home-eu-origin-copy > p { font-size: 16px; line-height: 1.65; }
+  body.portal-v68 .home-eu-origin-logo { width: 132px; }
+  body.portal-v68 .home-eu-origin-points { grid-template-columns: 1fr; margin-top: 32px; }
+  body.portal-v68 .home-eu-origin-points article,
+  body.portal-v68 .home-eu-origin-points article + article { padding: 22px 0 24px 18px; }
+
+  body.portal-v68 :where(.home-rd-programs, .home-rd-project-facts, .home-one-section) {
+    padding-top: var(--v68-section);
+    padding-bottom: var(--v68-section);
+  }
+  body.portal-v68 .home-one-offer .home-rd-program,
+  body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+  body.portal-v68 .home-one-offer .home-rd-program-outcome { padding-left: 0; }
+
+  body.portal-v68 .home-rd-story { grid-template-columns: 1fr; margin-top: 54px; }
+  body.portal-v68 .home-rd-story-media,
+  body.portal-v68 .home-rd-story-media > img { min-height: 0; aspect-ratio: 4 / 3; }
+  body.portal-v68 .home-rd-story-copy { padding: 42px 18px 48px; }
+  body.portal-v68 .home-rd-story-copy h2 { max-width: none; font-size: clamp(38px, 10.5vw, 48px); }
+  body.portal-v68 .home-rd-story-copy > p { font-size: 16px; line-height: 1.66; }
+  body.portal-v68 .home-rd-story-copy li { grid-template-columns: 1fr; gap: 5px; }
+
+  body.portal-v68 .home-prior-results-grid,
+  body.portal-v68 .home-one-audience-grid,
+  body.portal-v68 .training-values-grid.home-one-values { grid-template-columns: 1fr; }
+  body.portal-v68 :where(.home-prior-results-grid, .home-one-audience-grid, .training-values-grid.home-one-values) article,
+  body.portal-v68 :where(.home-prior-results-grid, .home-one-audience-grid, .training-values-grid.home-one-values) article + article {
+    min-height: 0;
+    padding: 24px 0 26px;
+    border-right: 0;
+    border-bottom: 1px solid var(--v68-line);
+  }
+  body.portal-v68 :where(.home-one-audience-grid, .training-values-grid.home-one-values) article > span { margin-bottom: 14px; }
+
+  body.portal-v68 .story-gallery.training-photo-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+    gap: 6px;
+  }
+  body.portal-v68 .story-gallery.training-photo-gallery .gallery-large { grid-column: 1 / -1; grid-row: auto; height: 230px; }
+
+  body.portal-v68 .home-one-topic-grid { grid-template-columns: 1fr; }
+  body.portal-v68 .home-one-topic-card,
+  body.portal-v68 .home-one-topic-card:nth-child(even) {
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 16px;
+    padding: 22px 0;
+    border-right: 0;
+  }
+  body.portal-v68 .home-one-topic-card img { width: 104px; height: 104px; }
+  body.portal-v68 .home-one-topic-card h3 { font-size: 23px; }
+  body.portal-v68 .home-one-topic-card p { display: block; margin-top: 10px; font-size: 14px; line-height: 1.55; }
+
+  body.portal-v68 .home-rd-final {
+    width: 100%;
+    padding: 42px 18px 46px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  body.portal-v68 .home-rd-final > :where(div, p, a) { grid-column: 1; grid-row: auto; }
+  body.portal-v68 .home-rd-logos { padding: 22px 10px; }
+  body.portal-v68 .home-rd-logos img { max-height: none; }
+
+  /* Nasze szkolenia. */
+  body.portal-v68 .training-showcase-hero {
+    width: calc(100% - 36px);
+    padding: 30px 0 54px;
+    gap: 30px;
+  }
+  body.portal-v68 .training-showcase-hero h1 { max-width: none; font-size: clamp(45px, 12.8vw, 60px); }
+  body.portal-v68 .training-showcase-hero-copy > p { font-size: 16px; }
+  body.portal-v68 .training-showcase-hero-media,
+  body.portal-v68 .training-showcase-hero-media img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  body.portal-v68 .training-proof-strip { width: calc(100% - 36px); grid-template-columns: 1fr; }
+  body.portal-v68 .training-showcase-intro { gap: 24px; }
+  body.portal-v68 .training-showcase-copy p,
+  body.portal-v68 .training-showcase-copy p + p { padding: 18px 0; font-size: 16px; }
+  body.portal-v68 .training-gallery-grid { grid-auto-rows: 250px; gap: 8px; }
+  body.portal-v68 .training-cta-section { width: calc(100% - 36px); padding: 46px 0; }
+  body.portal-v68 .training-cta-section h2 { max-width: none; font-size: clamp(38px, 10.4vw, 48px); }
+
+  /* Zapisy i terminarz. */
+  body.portal-v68 .signup-public-hero {
+    width: calc(100% - 36px);
+    padding: 28px 0 52px;
+    gap: 30px;
+  }
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono {
+    width: min(220px, 70vw) !important;
+    margin-bottom: 26px !important;
+  }
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 {
+    max-width: none;
+    margin-bottom: 22px;
+    font-size: clamp(45px, 12.8vw, 60px);
+  }
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 > span {
+    max-width: 18ch;
+    margin-top: 18px;
+    font-size: clamp(21px, 6.1vw, 27px);
+  }
+  body.portal-v68 .signup-public-hero-media,
+  body.portal-v68 .signup-public-hero-media img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  body.portal-v68 .signup-intro-section { padding-top: 48px; padding-bottom: 42px; }
+  body.portal-v68 .signup-program-section { padding-top: 48px; }
+  body.portal-v68 .signup-training-card,
+  body.portal-v68 .signup-training-grid-two .signup-training-card { gap: 20px; padding: 26px 0; }
+  body.portal-v68 .signup-training-media,
+  body.portal-v68 .signup-training-grid-two .signup-training-media { height: auto; aspect-ratio: 4 / 3; }
+  body.portal-v68 .signup-training-copy { grid-template-columns: 1fr; gap: 12px; }
+  body.portal-v68 .signup-training-action { display: grid; grid-template-columns: 1fr; }
+  body.portal-v68 .signup-status { width: 100%; text-align: center; }
+  body.portal-v68 .signup-institution { gap: 28px; padding: 42px 0; }
+  body.portal-v68 .signup-institution h2 { font-size: clamp(38px, 10.5vw, 48px); }
+  body.portal-v68 .signup-calendar-section { padding-inline: 0; }
+  body.portal-v68 .signup-calendar-embedded,
+  body.portal-v68 .calendar-layout { min-width: 0; grid-template-columns: 1fr; }
+  body.portal-v68 .calendar-details { padding: 22px 16px; }
+
+  /* Kursy online. */
+  body.portal-v68 .v68-online-featured,
+  body.portal-v68 .v68-online-list { width: calc(100% - 36px); }
+  body.portal-v68 .v68-online-featured { margin-top: 42px; }
+  body.portal-v68 .v68-online-featured-media,
+  body.portal-v68 .v68-online-featured-media img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  body.portal-v68 .v68-online-featured-copy { padding: 34px 0 42px; }
+  body.portal-v68 .v68-online-original .v68-online-featured-copy h1 {
+    max-width: none;
+    margin-bottom: 26px;
+    font-size: clamp(40px, 11.5vw, 52px);
+  }
+  body.portal-v68 .v68-online-original .v68-online-row { padding: 28px 0; }
+  body.portal-v68 .v68-online-original .v68-online-row h2 { font-size: clamp(29px, 8.3vw, 38px); }
+
+  /* Kontakt. */
+  body.portal-v68 .public-hero.contact-hero,
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content { min-height: 560px; }
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content { padding: 38px 18px 44px !important; }
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+    width: min(240px, 72vw) !important;
+    margin-bottom: 28px !important;
+  }
+  body.portal-v68 .contact-hero h1 { font-size: clamp(48px, 14vw, 64px); }
+  body.portal-v68 .contact-hero h1 > span { font-size: clamp(23px, 7vw, 30px); }
+  body.portal-v68 .contact-grid { grid-template-columns: 1fr; }
+
+  /* Stopka. */
+  body.portal-v68 .v67-footer .v67-shell { width: calc(100% - 36px); }
+  body.portal-v68 .v67-footer-logos {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 18px;
+    padding-block: 34px;
+  }
+  body.portal-v68 .v67-footer-logos > strong,
+  body.portal-v68 .v67-footer-note { grid-column: 1 / -1; white-space: normal; }
+  body.portal-v68 .v67-footer-logos img { width: 100%; max-height: 58px; object-position: left center; }
+  body.portal-v68 .v67-footer-bottom { justify-content: flex-start; }
+  body.portal-v68 .v67-footer-links { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+  body.portal-v68 .v67-footer-links a { min-height: 40px; display: flex; align-items: center; }
+}
+
+@media (max-width: 420px) {
+  :root { --v68-gutter: 16px; --v68-section: 52px; }
+
+  body.portal-v68 :where(.public-section, .training-showcase-section, .training-gallery-section, .training-feedback-section),
+  body.portal-v68 :where(.home-rd-hero, .training-showcase-hero, .signup-public-hero, .training-proof-strip, .training-cta-section),
+  body.portal-v68 :where(.v68-online-featured, .v68-online-list),
+  body.portal-v68 .v67-footer .v67-shell { width: calc(100% - 32px); }
+
+  body.portal-v68 :where(.public-section-head, .training-showcase-heading, .home-rd-section-heading) h2 { font-size: clamp(35px, 10.2vw, 43px); }
+  body.portal-v68 .story-gallery.training-photo-gallery { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+  body.portal-v68 .story-gallery.training-photo-gallery .gallery-large { grid-column: auto; height: 220px; }
+  body.portal-v68 .home-one-topic-card,
+  body.portal-v68 .home-one-topic-card:nth-child(even) { grid-template-columns: 88px minmax(0, 1fr); gap: 14px; }
+  body.portal-v68 .home-one-topic-card img { width: 88px; height: 88px; }
+  body.portal-v68 .v67-footer-links { grid-template-columns: 1fr; }
+}
+
+/* Nasze szkolenia: podpis jest bezpośrednio nad właściwym nagłówkiem. */
+body.portal-v68 .training-showcase-main > .training-showcase-section > .training-audience-heading {
+  display: block;
+  margin-bottom: clamp(42px, 4vw, 60px);
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section > .training-audience-heading > span {
+  display: block;
+  margin-bottom: 18px;
+  padding-top: 0;
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section > .training-audience-heading h2 {
+  max-width: 19ch;
+}
+
+/* Zapisy: większy oryginalny znak WUP i kadr skupiony na uczestnikach. */
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono {
+  width: clamp(238px, 18vw, 292px) !important;
+  max-width: 78% !important;
+  margin: 0 0 38px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .hero-wup-mono .public-hero-logo {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+body.portal-v68 .signup-public-hero-media img {
+  object-position: 50% 68%;
+}
+
+/* Szczegóły szkolenia: pełna szerokość tytułu usuwa przypadkowe pojedyncze słowa. */
+@media (max-width: 860px) {
+  body.portal-v68 .calendar-details-head {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 14px 18px;
+    padding-right: 52px;
+  }
+
+  body.portal-v68 .calendar-details-head > div {
+    display: contents;
+  }
+
+  body.portal-v68 .calendar-details-head > div > p {
+    grid-column: 2;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  body.portal-v68 .calendar-details-head > div > h2 {
+    grid-column: 1 / -1;
+    max-width: 18ch;
+    margin-top: 10px;
+    font-size: clamp(34px, 6.2vw, 48px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: balance;
+  }
+
+  body.portal-v68 .calendar-detail-meta {
+    margin-top: 28px;
+  }
+}
+
+/* Kontakt: większe logo, wewnętrzny oddech i łagodne wejście mapy. */
+body.portal-v68 .public-hero.contact-hero {
+  padding-top: 0;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+  max-width: none !important;
+  margin: 0 !important;
+  justify-content: flex-start;
+  padding: clamp(48px, 4.8vw, 72px) clamp(50px, 5vw, 82px) clamp(52px, 5vw, 78px) clamp(34px, 3.8vw, 62px) !important;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+  display: block !important;
+  width: clamp(260px, 20vw, 330px) !important;
+  min-height: 0 !important;
+  margin: 0 0 clamp(34px, 3.2vw, 48px) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+body.portal-v68 .contact-hero-map {
+  position: relative;
+  background: var(--v68-soft);
+}
+
+body.portal-v68 .contact-hero-map::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: clamp(76px, 10vw, 160px);
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--v68-soft) 0%, rgba(241, 244, 242, .72) 24%, rgba(241, 244, 242, 0) 100%);
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .public-hero {
+    padding-top: 42px;
+  }
+
+  body.portal-v68 .contact-hero-map::before {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: 84px;
+    background: linear-gradient(180deg, var(--v68-soft) 0%, rgba(241, 244, 242, 0) 100%);
+  }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .public-hero {
+    padding-top: 34px;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono {
+    width: 226px !important;
+    margin-bottom: 28px !important;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+    padding: 40px 24px 50px !important;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+    width: min(280px, 82vw) !important;
+    margin-bottom: 30px !important;
+  }
+
+  body.portal-v68 .calendar-details-head > div > h2 {
+    max-width: none;
+    font-size: clamp(34px, 10vw, 44px);
+  }
+}
+
+/* ==========================================================
+   V68.3 — ŁAGODNIEJSZE PRZEJŚCIA, ZDJĘCIA I HIERARCHIA SEKCJI
+   ========================================================== */
+
+/* Pierwsze ekrany zaczynają się bliżej nawigacji. */
+body.portal-v68 .training-showcase-hero,
+body.portal-v68 .signup-public-hero {
+  padding-top: clamp(30px, 3.2vw, 50px);
+}
+
+@media (min-width: 981px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .signup-public-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(44px, 5vw, 78px);
+  }
+}
+
+/* Spokojniejszy, bardziej redakcyjny charakter zdjęć stockowych. */
+body.portal-v68 .training-showcase-hero-media img,
+body.portal-v68 .signup-public-hero-media img {
+  filter: saturate(.86) contrast(.98);
+}
+
+body.portal-v68 .training-showcase-hero-media img {
+  object-position: 50% center;
+}
+
+body.portal-v68 .signup-public-hero-media img {
+  object-position: 50% 50%;
+}
+
+/* Przywrócona pełna treść strony startowej, nadal w spokojnym układzie V68. */
+body.portal-v68 .home-rd-hero {
+  padding-top: clamp(34px, 3.6vw, 56px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(48px, 6vw, 92px);
+}
+
+body.portal-v68 .home-rd-hero-copy h1 {
+  max-width: 10ch;
+  font-size: clamp(62px, 6vw, 96px);
+  font-weight: 300;
+  line-height: .96;
+  letter-spacing: -.06em;
+}
+
+body.portal-v68 .home-rd-hero-copy > p {
+  max-width: 52ch;
+  color: var(--v68-muted);
+}
+
+body.portal-v68 .home-rd-hero-visual {
+  min-height: 680px;
+  border-radius: 0;
+}
+
+body.portal-v68 .home-rd-hero-visual img {
+  min-height: 680px;
+  filter: saturate(.86) contrast(.98);
+}
+
+body.portal-v68 .home-rd-meta {
+  display: grid;
+}
+
+body.portal-v68 .home-rd-meta-mobile {
+  display: none;
+}
+
+body.portal-v68 .home-rd-section-heading > div > span,
+body.portal-v68 .home-rd-overline {
+  margin-bottom: 18px;
+}
+
+body.portal-v68 .home-rd-section-heading h2,
+body.portal-v68 .home-eu-origin-copy h2,
+body.portal-v68 .home-rd-story-copy h2 {
+  font-weight: 300;
+  letter-spacing: -.055em;
+}
+
+body.portal-v68 .home-prior-results-grid {
+  display: grid;
+}
+
+body.portal-v68 .home-project-note,
+body.portal-v68 .home-rd-final,
+body.portal-v68 .home-rd-story-media,
+body.portal-v68 .home-rd-story-badge,
+body.portal-v68 .home-one-topic-card img,
+body.portal-v68 .gallery-photo {
+  border-radius: 0;
+}
+
+/* Kursy online zachowują oryginalne nazwy i komunikaty. */
+body.portal-v68 .v68-online-original .v68-online-featured-copy h1 {
+  max-width: 12ch;
+  margin: 0 0 38px;
+  font-size: clamp(54px, 5.3vw, 82px);
+  font-weight: 300;
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+body.portal-v68 .v68-online-original .v68-online-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(32px, 6vw, 92px);
+  align-items: center;
+}
+
+body.portal-v68 .v68-online-original .v68-online-row h2 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: clamp(32px, 3.2vw, 48px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+/* Szczegóły szkolenia: znak i nazwa projektu tworzą wiersz, a tytuł korzysta z całej szerokości karty. */
+body.portal-v68 .calendar-details-head {
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 14px 18px;
+  padding-right: 52px;
+}
+
+body.portal-v68 .calendar-details-head > div {
+  display: contents;
+}
+
+body.portal-v68 .calendar-details-head > div > p {
+  grid-column: 2;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+body.portal-v68 .calendar-details-head > div > h2 {
+  grid-column: 1 / -1;
+  max-width: none;
+  margin-top: 10px;
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
+}
+
+body.portal-v68 .v67-footer-logos > strong {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body.portal-v68 .v67-footer-bottom {
+  justify-content: flex-end;
+}
+
+/* Etykieta i nagłówek tworzą jeden blok wyrównany do lewej krawędzi. */
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading,
+body.portal-v68 .training-gallery-section > .training-showcase-heading {
+  display: block;
+  margin-bottom: clamp(34px, 3.5vw, 54px);
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading > span,
+body.portal-v68 .training-gallery-section > .training-showcase-heading > span {
+  display: block;
+  margin-bottom: 18px;
+  padding-top: 0;
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro) > .training-showcase-heading h2,
+body.portal-v68 .training-gallery-section > .training-showcase-heading h2 {
+  max-width: 19ch;
+}
+
+/* W ciemnym zakresie opis pozostaje obok, ale podpis stoi nad tytułem. */
+body.portal-v68 .training-topics-section > .training-showcase-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, .55fr);
+  grid-template-areas:
+    "label copy"
+    "title copy";
+  column-gap: clamp(56px, 8vw, 126px);
+  row-gap: 18px;
+  align-items: start;
+}
+
+body.portal-v68 .training-topics-section > .training-showcase-heading > span {
+  grid-area: label;
+  margin: 0;
+  padding: 0;
+}
+
+body.portal-v68 .training-topics-section > .training-showcase-heading > h2 {
+  grid-area: title;
+  max-width: 15ch;
+}
+
+body.portal-v68 .training-topics-section > .training-showcase-heading > p {
+  grid-area: copy;
+  align-self: start;
+  margin: 0;
+  padding: 0;
+}
+
+/* Kontakt: obraz jest odsłaniany przezroczystością zamiast jasnej mgły. */
+body.portal-v68 .contact-hero-map::before {
+  display: none;
+}
+
+@supports ((-webkit-mask-image: linear-gradient(#000, #000)) or (mask-image: linear-gradient(#000, #000))) {
+  body.portal-v68 .contact-hero-map img {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, .04) 3%,
+      rgba(0, 0, 0, .14) 6%,
+      rgba(0, 0, 0, .3) 10%,
+      rgba(0, 0, 0, .52) 14%,
+      rgba(0, 0, 0, .74) 18%,
+      rgba(0, 0, 0, .91) 22%,
+      #000 27%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, .04) 3%,
+      rgba(0, 0, 0, .14) 6%,
+      rgba(0, 0, 0, .3) 10%,
+      rgba(0, 0, 0, .52) 14%,
+      rgba(0, 0, 0, .74) 18%,
+      rgba(0, 0, 0, .91) 22%,
+      #000 27%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .signup-public-hero {
+    padding-top: 30px;
+  }
+
+  body.portal-v68 .training-topics-section > .training-showcase-heading {
+    display: block;
+  }
+
+  body.portal-v68 .training-topics-section > .training-showcase-heading > span {
+    margin-bottom: 18px;
+  }
+
+  body.portal-v68 .training-topics-section > .training-showcase-heading > p {
+    margin-top: 26px;
+  }
+
+  body.portal-v68 .home-rd-hero {
+    grid-template-columns: 1fr;
+  }
+
+  body.portal-v68 .home-rd-hero-visual,
+  body.portal-v68 .home-rd-hero-visual img {
+    min-height: 520px;
+  }
+
+  body.portal-v68 .home-rd-meta {
+    display: none;
+  }
+
+  body.portal-v68 .home-rd-meta-mobile {
+    display: block;
+  }
+
+  body.portal-v68 .contact-hero-map::before {
+    width: auto;
+    height: 64px;
+    background: linear-gradient(180deg, var(--v68-soft) 0%, rgba(241, 244, 242, 0) 100%);
+  }
+
+  @supports ((-webkit-mask-image: linear-gradient(#000, #000)) or (mask-image: linear-gradient(#000, #000))) {
+    body.portal-v68 .contact-hero-map img {
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .18) 7%, rgba(0, 0, 0, .52) 14%, rgba(0, 0, 0, .82) 21%, #000 28%);
+      mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .18) 7%, rgba(0, 0, 0, .52) 14%, rgba(0, 0, 0, .82) 21%, #000 28%);
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 .training-showcase-hero,
+  body.portal-v68 .signup-public-hero {
+    padding-top: 24px;
+  }
+
+  body.portal-v68 .home-rd-hero-copy h1 {
+    font-size: clamp(48px, 13.5vw, 66px);
+  }
+
+  body.portal-v68 .home-rd-hero-visual,
+  body.portal-v68 .home-rd-hero-visual img {
+    min-height: 360px;
+  }
+
+  body.portal-v68 .v68-online-original .v68-online-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* V68.4 final cascade — musi pozostać na końcu arkusza. */
+body.portal-v68 :where(.home-rd-btn-primary, .public-btn.primary, .calendar-form-btn, .v67-cta-button),
+body.portal-v68 :where(.home-rd-btn-primary, .public-btn.primary, .calendar-form-btn, .v67-cta-button):is(:visited, :hover, :focus-visible, :active) {
+  color: #fff !important;
+}
+
+body.portal-v68 .home-one-offer > .home-rd-section-heading,
+body.portal-v68 .home-one-offer .home-rd-program,
+body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) {
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .72fr);
+  column-gap: clamp(54px, 7vw, 112px);
+  align-items: start;
+}
+
+body.portal-v68 .home-one-offer > .home-rd-section-heading {
+  padding-bottom: clamp(54px, 6vw, 88px);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program-grid {
+  border-top: 1px solid var(--v68-line);
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program,
+body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) {
+  margin: 0;
+  padding: clamp(46px, 5vw, 72px) 0;
+  border-bottom: 1px solid var(--v68-line);
+}
+
+body.portal-v68 .home-one-offer .home-rd-program:last-child { border-bottom: 0; }
+body.portal-v68 .home-one-offer .home-rd-program-outcome { align-self: start; margin: 0; padding: 4px 0 0; }
+
+body.portal-v68 .public-hero.contact-hero {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  min-height: clamp(620px, 62vw, 760px);
+  overflow: hidden;
+  background: #080a0b;
+}
+
+body.portal-v68 .contact-hero-map {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body.portal-v68 .contact-hero-map::before { display: none !important; }
+body.portal-v68 .contact-hero-map img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+body.portal-v68 .public-hero.contact-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(3, 5, 6, .88) 0%, rgba(3, 5, 6, .76) 34%, rgba(3, 5, 6, .28) 60%, rgba(3, 5, 6, 0) 78%);
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(680px, 58%);
+  min-height: clamp(620px, 62vw, 760px);
+  justify-content: center;
+  padding: clamp(54px, 6vw, 92px) clamp(38px, 5vw, 78px) !important;
+  color: #fff;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand {
+  width: clamp(280px, 25vw, 390px);
+  margin: 0 0 clamp(46px, 6vw, 78px);
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand img {
+  width: 100%;
+  max-height: 126px;
+  object-position: left center;
+}
+
+body.portal-v68 .contact-hero h1,
+body.portal-v68 .contact-hero h1 > span { color: #fff; }
+body.portal-v68 .contact-hero p { color: rgba(255, 255, 255, .78); }
+
+body.portal-v68 .v67-footer-logos {
+  grid-template-columns: max-content 112px 220px 250px minmax(250px, 1fr);
+  column-gap: clamp(28px, 3.4vw, 64px);
+  row-gap: 28px;
+  align-items: center;
+  min-height: 0;
+  padding-block: 44px;
+}
+
+body.portal-v68 .v67-footer-logos > strong {
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+body.portal-v68 .v67-footer-logos .v67-footer-project { width: 108px; height: 68px; }
+body.portal-v68 .v67-footer-logos img { max-height: 68px; }
+body.portal-v68 .v67-footer-note { justify-self: end; max-width: 34ch; margin: 0; }
+
+@media (max-width: 1180px) {
+  body.portal-v68 .v67-footer-logos { grid-template-columns: max-content 108px 210px 230px; }
+  body.portal-v68 .v67-footer-note { grid-column: 1 / -1; justify-self: start; max-width: 620px; }
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .home-one-offer > .home-rd-section-heading,
+  body.portal-v68 .home-one-offer .home-rd-program,
+  body.portal-v68 .home-one-offer .home-rd-program:nth-child(even) { grid-template-columns: 1fr; gap: 28px; }
+  body.portal-v68 .home-one-offer .home-rd-program-outcome { padding-left: 28px; }
+  body.portal-v68 .public-hero.contact-hero { min-height: 650px; }
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content {
+    width: min(720px, 88%);
+    min-height: 650px;
+    padding: 58px var(--v68-gutter) !important;
+  }
+  body.portal-v68 .public-hero.contact-hero::after {
+    background: linear-gradient(90deg, rgba(3, 5, 6, .9) 0%, rgba(3, 5, 6, .76) 55%, rgba(3, 5, 6, .34) 100%);
+  }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 .public-hero.contact-hero,
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content { min-height: 620px; }
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .public-hero-content { width: 100%; padding: 44px 20px 52px !important; }
+  body.public-page.portal-v68 .public-hero.inner-hero.contact-hero .contact-wup-brand { width: min(300px, 82vw); margin-bottom: 44px; }
+  body.portal-v68 .public-hero.contact-hero::after { background: rgba(3, 5, 6, .74); }
+  body.portal-v68 .v67-footer-logos { grid-template-columns: 1fr 1fr; column-gap: 26px; }
+  body.portal-v68 .v67-footer-logos > strong,
+  body.portal-v68 .v67-footer-note { grid-column: 1 / -1; }
+  body.portal-v68 .v67-footer-logos img:nth-child(3) { grid-column: auto; width: 100%; }
+}
+
+/* ================================================================
+   V68.5 — logotypy, wyrównanie pól i zwarty rytm sekcji
+   ================================================================ */
+
+/* Sekcja mobilności: logo projektu wykorzystuje wolną środkową kolumnę. */
+body.portal-v68 .home-eu-origin {
+  margin-top: clamp(42px, 4.5vw, 66px);
+  padding-top: clamp(60px, 5.5vw, 86px);
+  padding-bottom: clamp(66px, 6vw, 94px);
+}
+
+body.portal-v68 .home-eu-origin-copy {
+  grid-template-columns: minmax(0, .82fr) minmax(150px, .26fr) minmax(0, 1.12fr);
+  column-gap: clamp(36px, 5vw, 82px);
+  row-gap: clamp(44px, 5vw, 70px);
+}
+
+body.portal-v68 .home-eu-origin-copy > .home-rd-overline {
+  grid-column: 1 / -1;
+  margin-bottom: -8px;
+}
+
+body.portal-v68 .home-eu-origin-copy > h2 { grid-column: 1; }
+body.portal-v68 .home-eu-origin-copy > p { grid-column: 3; }
+
+body.portal-v68 .home-eu-origin-logo {
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 190px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Pasek logotypów na stronie startowej był optycznie zbyt mały. */
+body.portal-v68 .home-rd-logos {
+  padding: clamp(34px, 4vw, 56px) 0;
+}
+
+body.portal-v68 .home-rd-logos img {
+  width: min(100%, 1450px);
+  max-height: 260px;
+}
+
+/* Pasek cech: każdy blok zaczyna się na identycznej górnej osi. */
+body.portal-v68 .training-proof-strip {
+  align-items: start;
+}
+
+body.portal-v68 .training-proof-strip article,
+body.portal-v68 .training-proof-strip article + article {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.portal-v68 .training-proof-strip strong {
+  margin-top: 0 !important;
+}
+
+/* Wszystkie cztery pola zaczynają się dokładnie na tej samej osi. */
+body.portal-v68 .training-method-grid {
+  align-items: stretch;
+}
+
+body.portal-v68 .training-method-grid article,
+body.portal-v68 .training-method-grid article + article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0;
+}
+
+body.portal-v68 .training-method-grid h3 {
+  align-self: start;
+  min-height: 2.25em;
+  margin: 0 0 16px;
+}
+
+body.portal-v68 .training-method-grid p {
+  align-self: start;
+  margin-top: 0;
+}
+
+/* Odbiorcy: wspólna górna oś oraz jedna linia startu opisów. */
+body.portal-v68 .training-audience-grid {
+  align-items: stretch;
+}
+
+body.portal-v68 .training-audience-grid article,
+body.portal-v68 .training-audience-grid article + article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: stretch;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.portal-v68 .training-audience-grid h3 {
+  min-height: 3.35em;
+  margin-top: 0 !important;
+}
+
+body.portal-v68 .training-audience-grid p {
+  margin-top: 0;
+}
+
+/* Globalnie mniej pustej przestrzeni nad podobnymi modułami redakcyjnymi. */
+body.portal-v68 {
+  --v68-section: clamp(58px, 5.2vw, 82px);
+}
+
+body.portal-v68 .training-showcase-main > .training-showcase-section:not(.training-showcase-intro),
+body.portal-v68 .training-gallery-section {
+  padding-top: clamp(54px, 4.8vw, 76px);
+}
+
+body.portal-v68 .training-topics-section {
+  margin-top: clamp(56px, 5vw, 78px);
+  padding-top: clamp(58px, 5vw, 80px);
+  padding-bottom: clamp(58px, 5vw, 80px);
+}
+
+body.portal-v68 :where(.home-rd-programs, .home-rd-project-facts, .home-one-section) {
+  padding-top: clamp(58px, 5.2vw, 84px);
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 .home-eu-origin-copy {
+    grid-template-columns: minmax(0, 1fr) minmax(130px, .28fr);
+    gap: 32px 42px;
+  }
+
+  body.portal-v68 .home-eu-origin-copy > .home-rd-overline { grid-column: 1 / -1; }
+  body.portal-v68 .home-eu-origin-copy > h2 { grid-column: 1; }
+  body.portal-v68 .home-eu-origin-logo { grid-column: 2; grid-row: 2; width: min(100%, 160px); }
+  body.portal-v68 .home-eu-origin-copy > p { grid-column: 1 / -1; }
+  body.portal-v68 .home-rd-logos img { max-height: 190px; }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 .home-eu-origin-copy { grid-template-columns: 1fr; gap: 26px; }
+  body.portal-v68 .home-eu-origin-copy > :where(.home-rd-overline, h2, p),
+  body.portal-v68 .home-eu-origin-logo { grid-column: 1; }
+  body.portal-v68 .home-eu-origin-logo { grid-row: auto; justify-self: start; width: 150px; }
+  body.portal-v68 .home-rd-logos img { max-height: 145px; }
+}
+
+/* V68.6 — status szkolenia jest czytelnym odnośnikiem do terminarza. */
+body.portal-v68 .signup-calendar-link,
+body.portal-v68 .signup-calendar-link:is(:visited, :hover, :focus-visible, :active) {
+  color: #6d4d06;
+  text-decoration: none;
+}
+
+body.portal-v68 .signup-calendar-link:hover,
+body.portal-v68 .signup-calendar-link:focus-visible {
+  background: #f2d77f;
+}
+
+/* ================================================================
+   V68.8 — lżejsza hierarchia i precyzyjne osie sekcji
+   ================================================================ */
+
+/* Opis po prawej jest tekstem wspierającym, dlatego zaczyna się na
+   wysokości nagłówka, a nie etykiety nad nim. */
+body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, .62fr);
+  grid-template-areas:
+    "heading ."
+    "heading copy";
+  column-gap: clamp(56px, 7vw, 112px);
+  row-gap: 0;
+  align-items: start;
+  margin-bottom: clamp(34px, 3.5vw, 52px);
+}
+
+body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading > div {
+  grid-area: heading;
+}
+
+body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading > p {
+  grid-area: copy;
+  align-self: start;
+  max-width: 43ch;
+  margin: clamp(50px, 4.8vw, 72px) 0 0;
+}
+
+/* Każda z trzech sekcji zachowuje własny rytm zamiast powtarzać
+   identyczny, wysoki blok wprowadzający. */
+body.portal-v68 .home-one-gallery {
+  padding-top: clamp(54px, 5vw, 76px);
+  padding-bottom: clamp(58px, 5.4vw, 84px);
+}
+
+body.portal-v68 .home-one-gallery > .home-rd-section-heading h2 {
+  max-width: 18ch;
+  font-size: clamp(48px, 4.5vw, 68px);
+}
+
+body.portal-v68 .home-one-gallery .home-prior-results-grid {
+  margin-top: 0;
+}
+
+body.portal-v68 .home-one-gallery .training-photo-gallery {
+  margin-top: clamp(22px, 2vw, 30px);
+}
+
+body.portal-v68 .home-expanded-offer {
+  padding-top: clamp(58px, 5.2vw, 80px);
+  padding-bottom: clamp(62px, 5.6vw, 88px);
+}
+
+body.portal-v68 .home-expanded-offer > .home-rd-section-heading h2 {
+  max-width: 19ch;
+  font-size: clamp(46px, 4.25vw, 66px);
+}
+
+body.portal-v68 .home-expanded-offer .home-one-topic-grid {
+  margin-top: 0;
+}
+
+body.portal-v68 .home-one-audience {
+  padding-top: clamp(56px, 5vw, 78px);
+  padding-bottom: clamp(58px, 5.2vw, 82px);
+}
+
+body.portal-v68 .home-one-audience > .home-rd-section-heading h2 {
+  max-width: 18ch;
+  font-size: clamp(48px, 4.45vw, 68px);
+}
+
+body.portal-v68 .home-one-audience .home-one-audience-grid {
+  margin-top: 0;
+}
+
+/* Zapisy: znak WUP pozostaje bez zmian. Odciążamy tylko typografię
+   i skracamy odstępy wewnątrz lewej połowy hero. */
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-content {
+  justify-content: center;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono {
+  margin-bottom: clamp(30px, 3.1vw, 44px) !important;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 {
+  max-width: 9.5ch;
+  margin-bottom: clamp(22px, 2.2vw, 32px);
+  font-size: clamp(58px, 5.6vw, 84px);
+  line-height: .97;
+  letter-spacing: -.058em;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 > span {
+  max-width: 17ch;
+  margin-top: clamp(22px, 2.2vw, 32px);
+  font-size: clamp(24px, 2.25vw, 34px);
+  line-height: 1.16;
+  letter-spacing: -.035em;
+}
+
+body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-content > p {
+  max-width: 54ch;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.68;
+}
+
+@media (max-width: 980px) {
+  body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "copy";
+    gap: 24px;
+  }
+
+  body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading > p {
+    max-width: 60ch;
+    margin-top: 0;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 {
+    max-width: 11ch;
+    font-size: clamp(52px, 8vw, 72px);
+  }
+}
+
+@media (max-width: 680px) {
+  body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading {
+    margin-bottom: 30px;
+  }
+
+  body.portal-v68 :where(.home-one-gallery, .home-expanded-offer, .home-one-audience) > .home-rd-section-heading h2 {
+    font-size: clamp(38px, 10.5vw, 48px);
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero .public-hero-logo-link.hero-wup-mono {
+    margin-bottom: 28px !important;
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 {
+    font-size: clamp(46px, 13vw, 62px);
+  }
+
+  body.public-page.portal-v68 .public-hero.inner-hero.signup-public-hero h1 > span {
+    margin-top: 20px;
+    font-size: clamp(21px, 6.5vw, 28px);
+  }
+}
+
+/* V68.9 — zdjęcie w hero zapisów bliżej bloku tekstowego. */
+@media (min-width: 981px) {
+  body.portal-v68 .signup-public-hero {
+    grid-template-columns: minmax(0, .93fr) minmax(0, 1.07fr);
+    gap: clamp(20px, 2vw, 34px);
+  }
+
+  body.portal-v68 .v68-online-featured {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    min-height: clamp(520px, 43vw, 610px);
+  }
+
+  body.portal-v68 .v68-online-featured-media {
+    min-height: clamp(520px, 43vw, 610px);
+  }
+}

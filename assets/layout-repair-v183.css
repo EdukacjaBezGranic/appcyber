@@ -1,0 +1,62 @@
+/* V183: explicit layouts for contact and the course catalogue. */
+body#portal-layout.public-page.portal-v68 .contact-hero{
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ align-items:center!important;gap:clamp(28px,4vw,64px)!important;
+ width:100%!important;max-width:none!important;height:auto!important;min-height:0!important;
+ padding:56px max(24px,calc((100% - 1280px)/2))!important;
+ background:#102522!important;overflow:hidden!important;
+}
+body#portal-layout.public-page.portal-v68 .contact-hero::before,
+body#portal-layout.public-page.portal-v68 .contact-hero::after{display:none!important}
+body#portal-layout.public-page.portal-v68 .contact-hero .public-hero-content{
+ position:static!important;display:flex!important;flex-direction:column!important;
+ width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;
+ padding:0!important;margin:0!important;transform:none!important;translate:none!important;gap:0!important;
+}
+body#portal-layout.public-page.portal-v68 .contact-hero .contact-wup-brand{position:static!important;width:100%!important;max-width:330px!important;margin:0 0 32px!important;padding:0!important}
+body#portal-layout.public-page.portal-v68 .contact-hero .contact-wup-brand img{width:100%!important;height:auto!important;max-height:100px!important;object-fit:contain!important;object-position:left!important}
+body#portal-layout.public-page.portal-v68 .contact-hero h1{width:100%!important;max-width:none!important;margin:0 0 24px!important;font-size:clamp(40px,4vw,64px)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+body#portal-layout.public-page.portal-v68 .contact-hero h1 span{display:block!important;width:100%!important;max-width:30ch!important;font-size:clamp(24px,2.2vw,34px)!important;line-height:1.3!important;margin-top:18px!important}
+body#portal-layout.public-page.portal-v68 .contact-hero p{width:100%!important;max-width:60ch!important;height:auto!important;margin:0!important;color:#e5eeeb!important;-webkit-text-fill-color:#e5eeeb!important}
+body#portal-layout.public-page.portal-v68 .contact-hero-map{
+ position:static!important;inset:auto!important;grid-column:auto!important;grid-row:auto!important;
+ width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;
+ margin:0!important;padding:0!important;transform:none!important;align-self:center!important;border-radius:16px!important;
+}
+body#portal-layout.public-page.portal-v68 .contact-hero-map img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:4/3!important;object-fit:cover!important;object-position:center!important;opacity:1!important;filter:none!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-main{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured{
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ width:100%!important;max-width:none!important;padding:56px max(24px,calc((100% - 1280px)/2))!important;
+ gap:clamp(28px,4vw,64px)!important;align-items:center!important;
+}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy{
+ display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;
+ width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;padding:0!important;margin:0!important;gap:24px!important;border:0!important;
+}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy p{width:100%!important;max-width:60ch!important;min-width:0!important;height:auto!important;margin:0!important;word-break:normal!important;overflow-wrap:normal!important;font-size:18px!important;line-height:1.7!important}
+body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy a{width:auto!important;max-width:100%!important;margin:0!important;padding:16px 24px!important;border-radius:10px!important;background:#11685f!important;color:white!important;-webkit-text-fill-color:white!important;line-height:1.4!important;text-align:center!important}
+@media(max-width:900px){
+ body#portal-layout.public-page.portal-v68 .contact-hero,body#portal-layout.public-page.online-catalog-page .v68-online-featured{grid-template-columns:minmax(0,1fr)!important;padding:36px 24px!important}
+ body#portal-layout.public-page.portal-v68 .contact-hero-map{max-width:640px!important;justify-self:center!important}
+}
+@media(max-width:480px){body#portal-layout.public-page.online-catalog-page .v68-online-featured-copy a{width:100%!important}}
+/* V185: map blends into the contact band instead of a separate card. */
+body#portal-layout.public-page.portal-v68 .contact-hero-map{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;overflow:visible!important}
+body#portal-layout.public-page.portal-v68 .contact-hero-map img{border:0!important;border-radius:0!important;box-shadow:none!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 16%,#000 90%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%)!important;mask-image:linear-gradient(to right,transparent 0%,#000 16%,#000 90%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%)!important;-webkit-mask-composite:source-in!important;mask-composite:intersect!important}
+
+/* V186: spacing replaces decorative contact dividers. */
+body#portal-layout[data-contact-clean] .public-section,
+body#portal-layout[data-contact-clean] :is(.contact-grid,.contact-panel,.contact-line,.public-section-head,.public-step-grid,.public-step,.public-step>span){border:0!important;box-shadow:none!important;background-image:none!important}
+body#portal-layout[data-contact-clean] :is(.contact-grid,.contact-panel,.contact-line,.public-section-head,.public-step-grid,.public-step,.public-step>span)::before,
+body#portal-layout[data-contact-clean] :is(.contact-grid,.contact-panel,.contact-line,.public-section-head,.public-step-grid,.public-step,.public-step>span)::after{display:none!important}
+/* V188: course catalogue separated by whitespace. */
+body#portal-layout.public-page.online-catalog-page :is(.v68-online-main,.v68-online-featured,.v68-online-featured-copy,.v68-online-list,.v68-online-rows,.v68-online-row){border:0!important;box-shadow:none!important;background-image:none!important}
+body#portal-layout.public-page.online-catalog-page :is(.v68-online-featured,.v68-online-list,.v68-online-rows,.v68-online-row)::before,
+body#portal-layout.public-page.online-catalog-page :is(.v68-online-featured,.v68-online-list,.v68-online-rows,.v68-online-row)::after{display:none!important}
+/* V189: a larger map fills the right side of the contact hero. */
+@media(min-width:901px){
+ body#portal-layout.public-page.portal-v68 .contact-hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;padding-block:28px!important}
+ body#portal-layout.public-page.portal-v68 .contact-hero-map{width:calc(100% + max(24px,(100vw - 1280px)/2))!important;max-width:none!important;justify-self:start!important}
+ body#portal-layout.public-page.portal-v68 .contact-hero-map img{height:clamp(460px,38vw,620px)!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center!important}
+}

@@ -1,0 +1,666 @@
+/* ======================================================================
+   V164 - PHONE + TABLET RESPONSIVE PASS 2026-08-27
+   Cel:
+   - małe, symetryczne marginesy na telefonie;
+   - usunięcie historycznych jednostronnych wcięć iPad 58-60 px;
+   - pełna szerokość kursu na tabletach (sidebar jako drawer);
+   - równe karty, formularze, ćwiczenia i elementy informacyjne;
+   - brak poziomego overflow poza świadomie przewijanymi tabelami.
+   ====================================================================== */
+
+body.course-page.course-portal-aligned,
+body.course-page.course-portal-aligned *,
+body.course-page.course-portal-aligned *::before,
+body.course-page.course-portal-aligned *::after{
+  box-sizing:border-box;
+}
+
+@media(max-width:1200px){
+  html,
+  body.course-page.course-portal-aligned{
+    max-width:100%;
+    overflow-x:clip!important;
+  }
+
+  /* Tablet: plan kursu nie zabiera stale 282-300 px szerokości. */
+  body.course-page.course-portal-aligned .course-app{
+    display:block!important;
+    grid-template-columns:none!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+  body.course-page.course-portal-aligned .course-sidebar{
+    position:fixed!important;
+    inset:0 auto 0 0!important;
+    z-index:160!important;
+    width:min(88vw,370px)!important;
+    max-width:370px!important;
+    transform:translateX(-104%)!important;
+    transition:transform .25s ease!important;
+  }
+  body.course-page.course-portal-aligned .course-sidebar.is-open{
+    transform:translateX(0)!important;
+  }
+  body.course-page.course-portal-aligned .sidebar-inner{
+    position:static!important;
+    top:auto!important;
+    max-height:100vh!important;
+    min-height:100vh!important;
+    overflow:auto!important;
+  }
+  body.course-page.course-portal-aligned .sidebar-open{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  body.course-page.course-portal-aligned .sidebar-close{display:block!important;}
+
+  /* Tabletowy topbar: plan kursu pozostaje dostępny po schowaniu bocznego panelu. */
+  body.course-page.course-portal-aligned .course-topbar--portal .course-topbar-inner{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto auto!important;
+    grid-template-areas:"brand lang plan" "nav nav nav"!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;
+    gap:6px 10px!important;
+    min-height:0!important;
+    padding-top:8px!important;
+    padding-bottom:8px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-branding{
+    grid-area:brand!important;
+    min-width:0!important;
+  }
+  /* Na tablecie finansowanie nie zajmuje miejsca w stałym nagłówku - logotypy są w innych częściach strony. */
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logos{
+    display:none!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{
+    width:118px!important;
+    height:48px!important;
+    padding:0!important;
+    object-fit:contain!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-language-switch{
+    grid-area:lang!important;
+    order:initial!important;
+    margin:0!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
+    grid-area:plan!important;
+    display:inline-flex!important;
+    min-height:42px!important;
+    margin:0!important;
+    padding:8px 11px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav{
+    grid-area:nav!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:2px!important;
+    overflow-x:auto!important;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:none;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav::-webkit-scrollbar{display:none;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{
+    flex:0 0 auto!important;
+    min-height:40px!important;
+    padding:8px 10px!important;
+    white-space:nowrap!important;
+  }
+
+  /* Tooltip na tablecie nie może wyjść poza ekran przy terminie blisko krawędzi. */
+  body.course-page.course-portal-aligned .course-term-tooltip__bubble{
+    position:fixed!important;
+    left:16px!important;
+    right:16px!important;
+    bottom:16px!important;
+    width:auto!important;
+    max-width:none!important;
+    transform:translateY(8px)!important;
+  }
+  body.course-page.course-portal-aligned .course-term-tooltip:hover .course-term-tooltip__bubble,
+  body.course-page.course-portal-aligned .course-term-tooltip:focus .course-term-tooltip__bubble,
+  body.course-page.course-portal-aligned .course-term-tooltip:focus-visible .course-term-tooltip__bubble{
+    transform:translateY(0)!important;
+  }
+
+  body.course-page.course-portal-aligned .course-main{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    padding:24px clamp(16px,2.2vw,26px) 82px!important;
+  }
+  body.course-page.course-portal-aligned .course-module{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin-inline:0!important;
+  }
+  body.course-page.course-portal-aligned .module-reading-progress{
+    position:relative!important;
+    top:auto!important;
+  }
+
+  /* Kluczowa naprawa: brak jednostronnego wcięcia 58-60 px z dawnych reguł iPad. */
+  body.course-page.course-portal-aligned .course-section{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    padding:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    padding-left:22px!important;
+    padding-right:22px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body,
+  body.course-page.course-portal-aligned .course-section--exercise .course-section-body{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    padding-left:22px!important;
+    padding-right:22px!important;
+  }
+
+  body.course-page.course-portal-aligned :where(
+    .course-section-body>p,
+    .course-section-body>ul,
+    .course-section-body>ol,
+    .v149-editorial-paragraph,
+    .v148-editorial-insert>p,
+    .course-narrator-v150
+  ){
+    max-width:none!important;
+  }
+
+  /* Wszystkie większe bloki mają ten sam punkt odniesienia. */
+  body.course-page.course-portal-aligned :where(
+    .course-callout,
+    .course-figure,
+    .course-infographic-figure,
+    .course-audio-infographic,
+    .course-supplementary-visual,
+    .course-video-feature,
+    .course-learning-diagram,
+    .course-bonus-game,
+    .course-deep-dive,
+    .course-glossary-details,
+    .v155-popularity-exercise,
+    .sift-simulation,
+    .v163-scenario,
+    .everyday-tools,
+    .course-tool-hint,
+    .course-evaluation-v153,
+    .course-finalization,
+    .course-workspace,
+    .course-form,
+    .course-table-wrap
+  ){
+    min-width:0!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  body.course-page.course-portal-aligned :where(
+    .v163-evidence-grid,
+    .v163-evidence-grid article,
+    .v163-question-list,
+    .v163-question-list fieldset,
+    .v163-question-list label,
+    .sift-sim__stage,
+    .sift-sim__results article,
+    .sift-sim__choices,
+    .sift-sim__choices label,
+    .everyday-tools__grid,
+    .everyday-tools__grid article,
+    .m2-system-infographic,
+    .m2-system-pillar,
+    .v155-choice-set,
+    .v155-choice-set label
+  ){
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  /* Tabele zachowują czytelność przez lokalne przewijanie, nie przez poszerzanie strony. */
+  body.course-page.course-portal-aligned .course-table-wrap{
+    width:100%!important;
+    overflow-x:auto!important;
+    overscroll-behavior-inline:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+@media(max-width:900px){
+  body.course-page.course-portal-aligned .course-main{
+    padding:20px 14px 80px!important;
+  }
+
+  body.course-page.course-portal-aligned .module-hero{
+    grid-template-columns:1fr!important;
+    gap:20px!important;
+    padding:24px 20px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    max-width:none!important;
+    font-size:clamp(38px,6.5vw,54px)!important;
+    line-height:1.01!important;
+  }
+  body.course-page.course-portal-aligned .module-meta{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+
+  /* Tabletowy nagłówek kursu: bez niepotrzebnych bocznych pasów. */
+  body.course-page.course-portal-aligned .course-topbar--portal .course-topbar-inner{
+    width:100%!important;
+    max-width:none!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:8px 14px!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto auto!important;
+    grid-template-areas:"brand lang plan" "nav nav nav"!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;
+    gap:6px 8px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-branding{
+    grid-area:brand!important;
+    width:auto!important;
+    min-width:0!important;
+    align-self:center!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-language-switch{
+    grid-area:lang!important;
+    order:initial!important;
+    margin:0!important;
+    align-self:center!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
+    grid-area:plan!important;
+    margin:0!important;
+    align-self:center!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav{
+    grid-area:nav!important;
+    order:initial!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    align-self:stretch!important;
+    align-items:center!important;
+    flex-wrap:nowrap!important;
+    justify-content:flex-start!important;
+    gap:2px!important;
+    padding:0 0 2px!important;
+    overflow-x:auto!important;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:none;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav::-webkit-scrollbar{display:none;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{
+    flex:0 0 auto!important;
+    min-height:38px!important;
+    padding:8px 10px!important;
+    font-size:12px!important;
+    white-space:nowrap!important;
+  }
+
+  body.course-page.course-portal-aligned .course-intro.course-intro--classic{
+    padding:34px 16px 32px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro-content.course-intro-content--classic{
+    width:100%!important;
+    max-width:none!important;
+    gap:22px!important;
+  }
+
+  body.course-page.course-portal-aligned .course-section-header{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body,
+  body.course-page.course-portal-aligned .course-section--exercise .course-section-body{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  body.course-page.course-portal-aligned .v163-evidence-grid{
+    grid-template-columns:1fr!important;
+  }
+  body.course-page.course-portal-aligned .course-evaluation-v153__facts{
+    grid-template-columns:1fr!important;
+  }
+}
+
+@media(max-width:600px){
+  :root{--v164-phone-gutter:8px;--v164-card-pad:10px;}
+
+  body.course-page.course-portal-aligned .course-main{
+    padding:14px var(--v164-phone-gutter) 88px!important;
+  }
+  body.course-page.course-portal-aligned .course-module{
+    width:100%!important;
+  }
+
+  /* Nagłówek portalu - kompaktowo. Finansowanie pozostaje w hero i stopce. */
+  body.course-page.course-portal-aligned .course-topbar--portal .course-topbar-inner{
+    width:100%!important;
+    min-height:0!important;
+    padding:7px 8px!important;
+    grid-template-columns:minmax(0,1fr) auto auto!important;
+    grid-template-areas:"brand lang plan" "nav nav nav"!important;
+    grid-template-rows:auto auto!important;
+    gap:5px 6px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-branding{
+    width:auto!important;
+    flex-direction:row!important;
+    align-items:center!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{
+    width:112px!important;
+    height:42px!important;
+    padding:0!important;
+    object-fit:contain!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-funding-logos{
+    display:none!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{
+    min-height:42px!important;
+    margin:0!important;
+    padding:8px 10px!important;
+    font-size:13px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav{
+    margin:0 -8px -7px!important;
+    width:calc(100% + 16px)!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:2px 8px 7px!important;
+  }
+  body.course-page.course-portal-aligned .course-topbar--portal .course-site-nav a{
+    min-height:34px!important;
+    padding:7px 9px!important;
+    font-size:11.5px!important;
+  }
+
+  /* Hero: więcej tekstu w wierszu, bez wielkich bocznych marginesów. */
+  body.course-page.course-portal-aligned .course-intro.course-intro--classic{
+    padding:28px 10px 26px!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy h1{
+    max-width:none!important;
+    font-size:clamp(34px,10.2vw,41px)!important;
+    line-height:1.01!important;
+    letter-spacing:-.04em!important;
+  }
+  body.course-page.course-portal-aligned .course-intro--classic .intro-copy>p:not(.intro-kicker){
+    font-size:16px!important;
+    line-height:1.56!important;
+  }
+  body.course-page.course-portal-aligned .course-hero-partnership{
+    padding:13px!important;
+  }
+  body.course-page.course-portal-aligned .course-meta-disclosures--strip{
+    gap:12px!important;
+  }
+
+  body.course-page.course-portal-aligned .course-start-compact,
+  body.course-page.course-portal-aligned .course-tools-compact{
+    padding-left:10px!important;
+    padding-right:10px!important;
+  }
+
+  body.course-page.course-portal-aligned .module-hero{
+    padding:18px 12px!important;
+    gap:16px!important;
+    border-radius:14px!important;
+  }
+  body.course-page.course-portal-aligned .module-hero h1{
+    font-size:clamp(32px,9vw,40px)!important;
+    line-height:1.01!important;
+  }
+  body.course-page.course-portal-aligned .module-meta{
+    grid-template-columns:1fr!important;
+  }
+
+  /* Sekcja: realny margines od krawędzi tekstu ~18 px (8 + 10), nie 30+ px. */
+  body.course-page.course-portal-aligned .course-section{
+    margin-top:12px!important;
+    border-radius:13px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header{
+    grid-template-columns:36px minmax(0,1fr)!important;
+    grid-template-areas:"index eyebrow" "title title" "check check"!important;
+    gap:7px 9px!important;
+    padding:16px var(--v164-card-pad) 13px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header>div:nth-child(2){display:contents!important;}
+  body.course-page.course-portal-aligned .section-index{
+    grid-area:index!important;
+    width:34px!important;
+    height:34px!important;
+  }
+  body.course-page.course-portal-aligned .section-eyebrow{
+    grid-area:eyebrow!important;
+    align-self:center!important;
+    margin:0!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header h2{
+    grid-area:title!important;
+    max-width:none!important;
+    margin-top:3px!important;
+    font-size:clamp(24px,7.3vw,31px)!important;
+    line-height:1.07!important;
+  }
+  body.course-page.course-portal-aligned .course-section-header .section-check{
+    grid-area:check!important;
+    grid-column:1/-1!important;
+    justify-self:start!important;
+    width:auto!important;
+    min-width:0!important;
+    min-height:40px!important;
+    margin-top:3px!important;
+    padding:0 11px!important;
+    border-radius:9px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body,
+  body.course-page.course-portal-aligned .course-section--exercise .course-section-body{
+    padding:15px var(--v164-card-pad) 21px!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body>p,
+  body.course-page.course-portal-aligned .v149-editorial-paragraph,
+  body.course-page.course-portal-aligned .v148-editorial-insert>p{
+    font-size:16px!important;
+    line-height:1.62!important;
+  }
+  body.course-page.course-portal-aligned .course-section-body>ul,
+  body.course-page.course-portal-aligned .course-section-body>ol{
+    padding-left:1.18rem!important;
+    line-height:1.58!important;
+  }
+  body.course-page.course-portal-aligned .course-narrator-v150{
+    padding-left:.75rem!important;
+  }
+
+  /* Równe bloki wewnętrzne. */
+  body.course-page.course-portal-aligned :where(
+    .course-callout,
+    .course-figure,
+    .course-infographic-figure,
+    .course-audio-infographic,
+    .course-supplementary-visual,
+    .course-video-feature,
+    .course-learning-diagram,
+    .course-bonus-game,
+    .v155-popularity-exercise,
+    .sift-simulation,
+    .v163-scenario,
+    .everyday-tools,
+    .course-tool-hint
+  ){
+    width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  body.course-page.course-portal-aligned .course-callout{padding:14px!important;border-radius:12px!important;}
+  body.course-page.course-portal-aligned .course-infographic-figure{padding:6px!important;border-radius:12px!important;}
+  body.course-page.course-portal-aligned .course-video-feature{padding:11px!important;border-radius:13px!important;}
+  body.course-page.course-portal-aligned .course-learning-diagram{padding:12px!important;border-radius:13px!important;}
+  body.course-page.course-portal-aligned .course-learning-diagram__steps>li{padding:12px!important;}
+  body.course-page.course-portal-aligned .course-bonus-game{padding:18px 12px!important;border-radius:14px!important;}
+
+  /* V163 - zwarte, równe scenariusze. */
+  body.course-page.course-portal-aligned .v163-scenario{gap:.85rem!important;}
+  body.course-page.course-portal-aligned .v163-case-post{
+    padding:.9rem .85rem!important;
+    border-radius:13px!important;
+  }
+  body.course-page.course-portal-aligned .v163-evidence-grid{gap:.6rem!important;}
+  body.course-page.course-portal-aligned .v163-evidence-grid article{
+    grid-template-columns:1.9rem minmax(0,1fr)!important;
+    gap:.62rem!important;
+    padding:.78rem!important;
+    border-radius:12px!important;
+  }
+  body.course-page.course-portal-aligned .v163-evidence-grid article>span{
+    min-width:1.9rem!important;
+    width:1.9rem!important;
+    height:1.9rem!important;
+  }
+  body.course-page.course-portal-aligned .v163-question-list{gap:.65rem!important;}
+  body.course-page.course-portal-aligned .v163-question-list fieldset{
+    width:100%!important;
+    padding:.72rem!important;
+    border-radius:12px!important;
+  }
+  body.course-page.course-portal-aligned .v163-question-list label{
+    width:100%!important;
+    gap:.58rem!important;
+    margin:.35rem 0!important;
+    padding:.62rem .64rem!important;
+    border-radius:10px!important;
+  }
+  body.course-page.course-portal-aligned .v163-question-feedback{padding:.65rem!important;}
+
+  /* SIFT: pięć równych kroków również na telefonie. */
+  body.course-page.course-portal-aligned .sift-simulation{gap:.75rem!important;}
+  body.course-page.course-portal-aligned .sift-sim__progress{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:4px!important;
+  }
+  body.course-page.course-portal-aligned .sift-sim__progress span,
+  body.course-page.course-portal-aligned .sift-sim__progress span:last-child{
+    grid-column:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:34px!important;
+    padding:.32rem .15rem!important;
+    border-radius:8px!important;
+    font-size:.7rem!important;
+  }
+  body.course-page.course-portal-aligned .sift-sim__stage{
+    padding:.72rem!important;
+    border-radius:12px!important;
+  }
+  body.course-page.course-portal-aligned .sift-sim__choices label{
+    gap:.58rem!important;
+    padding:.62rem .64rem!important;
+    border-radius:10px!important;
+  }
+  body.course-page.course-portal-aligned .sift-sim__evidence{padding:.75rem!important;}
+  body.course-page.course-portal-aligned .sift-sim__results article{
+    grid-template-columns:30px minmax(0,1fr)!important;
+    gap:.58rem!important;
+    padding:.62rem!important;
+  }
+
+  /* Pozostałe nowe ćwiczenia i narzędzia. */
+  body.course-page.course-portal-aligned .v155-popularity-exercise{padding:12px 10px!important;border-radius:13px!important;}
+  body.course-page.course-portal-aligned .v155-social-post>div:first-child{padding:12px 11px 8px!important;}
+  body.course-page.course-portal-aligned .v155-social-post>p{padding:0 11px 12px!important;}
+  body.course-page.course-portal-aligned .v155-social-metrics{padding:10px 11px!important;}
+  body.course-page.course-portal-aligned .v155-choice-set label{padding:10px!important;}
+
+  body.course-page.course-portal-aligned .everyday-tools{padding:.72rem!important;border-radius:13px!important;}
+  body.course-page.course-portal-aligned .everyday-tools__grid{gap:.58rem!important;}
+  body.course-page.course-portal-aligned .everyday-tools__grid article{padding:.68rem!important;border-radius:11px!important;}
+  body.course-page.course-portal-aligned .everyday-tools__grid article a,
+  body.course-page.course-portal-aligned .course-tool-link{
+    width:100%!important;
+    max-width:100%!important;
+  }
+  body.course-page.course-portal-aligned .course-tool-hint{
+    gap:.7rem!important;
+    padding:.78rem!important;
+    border-radius:12px!important;
+  }
+
+  body.course-page.course-portal-aligned :is(.course-deep-dive,.course-glossary-details)>summary{
+    padding:12px 10px!important;
+  }
+  body.course-page.course-portal-aligned :is(.course-deep-dive__content,.course-glossary-details__content){
+    padding:13px 10px 4px!important;
+  }
+
+  /* Finał, formularze i przyciski nie mogą być szersze/węższe niż karta. */
+  body.course-page.course-portal-aligned .course-evaluation-v153{
+    padding:1rem!important;
+    border-radius:14px!important;
+  }
+  body.course-page.course-portal-aligned :where(
+    .course-evaluation-v153__action,
+    .course-tool-link,
+    .everyday-tools__grid article a,
+    .module-bottom-nav button,
+    .course-certificate-actions button
+  ){
+    max-width:100%!important;
+  }
+
+  body.course-page.course-portal-aligned :where(input,select,textarea){
+    max-width:100%!important;
+    font-size:16px!important;
+  }
+  body.course-page.course-portal-aligned input:is([type="radio"],[type="checkbox"]){
+    font-size:initial!important;
+  }
+
+  /* Tooltip mobilny zostaje przy dolnej krawędzi, ale nie dotyka boków. */
+  body.course-page.course-portal-aligned .course-term-tooltip__bubble{
+    left:8px!important;
+    right:8px!important;
+    bottom:12px!important;
+  }
+
+  body.course-page.course-portal-aligned .course-footer{
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+}
+
+@media(max-width:360px){
+  :root{--v164-phone-gutter:6px;--v164-card-pad:9px;}
+  body.course-page.course-portal-aligned .course-intro.course-intro--classic{padding-left:8px!important;padding-right:8px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .course-project-wordmark{width:102px!important;height:40px!important;}
+  body.course-page.course-portal-aligned .course-topbar--portal .sidebar-open{padding:7px 9px!important;}
+  body.course-page.course-portal-aligned .sift-sim__progress span{font-size:.66rem!important;}
+}
