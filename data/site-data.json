@@ -5,6 +5,71 @@
   },
   "news": [
     {
+      "id": "storytelling-ktory-zostaje-2026-11-17",
+      "date": "2026-11-17",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Mówić tak, żeby coś zostało - wystąpienia i storytelling",
+      "titleEn": "Speaking so that something remains - public speaking and storytelling",
+      "lead": "17 listopada podczas szkolenia z wystąpień publicznych i storytellingu skupiliśmy się na tym, jak zbudować wypowiedź, która jest jasna, naturalna i zostaje z odbiorcą dłużej niż sama prezentacja.",
+      "leadEn": "On 17 November, during a public speaking and storytelling session, we focused on building messages that are clear, natural and memorable beyond the presentation itself.",
+      "body": "Rozmawialiśmy o tym, jak porządkować treść, wybierać najważniejszą myśl i prowadzić odbiorcę przez wypowiedź bez przeładowania informacjami.\n\nStorytelling był dla nas przede wszystkim narzędziem komunikacji. Dobrze dobrany przykład, doświadczenie lub krótka historia mogą pomóc wyjaśnić złożony temat i sprawić, że przekaz staje się bliższy odbiorcy.\n\nWażnym elementem spotkania była również praca nad swobodą wypowiedzi i kontaktem z grupą. Nie chodzi o idealne wystąpienie, ale o komunikat, który jest wiarygodny, uporządkowany i dopasowany do ludzi, do których mówimy.\n\nDziękujemy uczestnikom za otwartość, zaangażowanie i wspólnie spędzony czas. Listopadowe działania projektu „Edukacja bez granic” trwają dalej.",
+      "bodyEn": "We discussed how to structure content, choose the key message and guide an audience without overloading them with information. Storytelling was treated as a communication tool: a well-chosen example or short story can make complex topics clearer and more memorable. Thank you to all participants for your openness and engagement.",
+      "image": "grafiki/aktualnosci/2026-11-17-storytelling/wystapienia-storytelling.webp",
+      "imageAlt": "Szkolenie z wystąpień publicznych i storytellingu 17 listopada 2026",
+      "imageAltEn": "Public speaking and storytelling training on 17 November 2026",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
+      "id": "informacja-pod-lupa-fake-news-2026-11-16",
+      "date": "2026-11-16",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Informacja pod lupą - fakt, fałsz i kontekst",
+      "titleEn": "Information under scrutiny - fact, falsehood and context",
+      "lead": "16 listopada podczas szkolenia z edukacji medialnej, fake news i krytycznego myślenia przyglądaliśmy się temu, dlaczego ocena informacji rzadko sprowadza się do prostego pytania: prawda czy fałsz?",
+      "leadEn": "On 16 November, during a media literacy, fake news and critical thinking session, we looked at why judging information rarely comes down to a simple true-or-false question.",
+      "body": "Rozmawialiśmy o różnicy między dezinformacją, misinformacją i malinformacją oraz o tym, jak intencja, kontekst i sposób przedstawienia treści wpływają na jej odbiór.\n\nDużo uwagi poświęciliśmy źródłom informacji. Samo znalezienie publikacji w internecie nie oznacza jeszcze, że znamy jej pochodzenie, autora ani pełny kontekst. Dlatego ważne jest cofanie się do źródła pierwotnego, porównywanie informacji i sprawdzanie, co naprawdę wynika z dostępnych danych.\n\nPrzyglądaliśmy się również temu, jak internet i media społecznościowe zmieniły obieg informacji. Dziś treść może bardzo szybko dotrzeć do tysięcy odbiorców, zanim ktokolwiek zdąży ją zweryfikować.\n\nKrytyczne myślenie nie oznacza nieufności wobec wszystkiego. To raczej umiejętność rozpoznania momentu, w którym warto zatrzymać się, zadać dodatkowe pytanie i sprawdzić więcej.\n\nDziękujemy uczestnikom za aktywność, pytania i wspólną pracę.",
+      "bodyEn": "We discussed the differences between disinformation, misinformation and malinformation and how intention, context and presentation shape how content is received. We focused on tracing information back to primary sources, comparing evidence and recognising when a message needs further verification. Critical thinking is not distrust of everything, but knowing when to stop and check more.",
+      "image": "grafiki/aktualnosci/2026-11-16-fake-news/sala-i-prowadzacy.webp",
+      "imageAlt": "Szkolenie z edukacji medialnej, fake news i krytycznego myślenia 16 listopada 2026",
+      "imageAltEn": "Media literacy, fake news and critical thinking training on 16 November 2026",
+      "showImageCaptions": false,
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-11-16-fake-news/uczestnicy-i-dyskusja.webp",
+          "alt": "Uczestnicy podczas szkolenia z edukacji medialnej",
+          "altEn": "Participants during media literacy training"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-11-16-fake-news/analiza-zrodel.webp",
+          "alt": "Analiza źródeł i informacji podczas szkolenia",
+          "altEn": "Analysing sources and information during training"
+        }
+      ]
+    },
+    {
+      "id": "gra-jako-narzedzie-grywalizacja-2026-11-09",
+      "date": "2026-11-09",
+      "published": true,
+      "category": "Z życia projektu",
+      "categoryEn": "Project news",
+      "title": "Gra może być narzędziem, nie tylko rozrywką",
+      "titleEn": "A game can be a tool, not only entertainment",
+      "lead": "9 listopada wróciliśmy do tematu grywalizacji i Game-Based Learning. Tym razem punktem wyjścia było pytanie: co sprawia, że uczestnik chce wejść w zadanie, zostać w nim dłużej i naprawdę się zaangażować?",
+      "leadEn": "On 9 November, we returned to gamification and Game-Based Learning, asking what makes participants engage with a task and stay involved.",
+      "body": "Podczas szkolenia przyglądaliśmy się temu, jak odpowiednio zaprojektowany cel, zasady, wyzwanie i informacja zwrotna mogą zmienić zwykłe zadanie w bardziej angażujące doświadczenie.\n\nRozmawialiśmy również o tym, że grywalizacja nie musi oznaczać rozbudowanych systemów punktów i rankingów. Często wystarczą proste mechanizmy, które porządkują działanie, uruchamiają ciekawość albo zachęcają do współpracy.\n\nWażnym elementem było rozróżnienie grywalizacji i Game-Based Learning. Pierwsze podejście wykorzystuje mechanizmy znane z gier, drugie opiera proces uczenia bezpośrednio na grze lub doświadczeniu podobnym do gry.\n\nNajważniejsze pozostaje jednak to, aby forma służyła celowi. Gra nie jest dodatkiem dla efektu. Dobrze użyta może pomóc uczestnikom wejść w temat, podejmować decyzje, testować rozwiązania i uczyć się poprzez działanie.\n\nDziękujemy uczestnikom za energię, pomysły i aktywny udział w listopadowym spotkaniu w ramach projektu „Edukacja bez granic”.",
+      "bodyEn": "During the training, we looked at how goals, rules, challenges and feedback can turn an ordinary task into a more engaging experience. We also distinguished gamification from Game-Based Learning and discussed how game mechanisms can support learning when they serve a clear purpose. Thank you to all participants for your energy and ideas.",
+      "image": "grafiki/gamifikacja.jpg",
+      "imageAlt": "Grafika szkolenia z grywalizacji i Game-Based Learning",
+      "imageAltEn": "Gamification and Game-Based Learning training graphic",
+      "showImageCaptions": false,
+      "gallery": []
+    },
+    {
       "id": "dobra-historia-wystapienia-storytelling-2026-11-05",
       "date": "2026-11-05",
       "published": true,
@@ -1009,11 +1074,13 @@
       "color": "#0d4f96",
       "image": "grafiki/gamifikacja.jpg",
       "logo": "grafiki/logo-projektu-symbol-transparent.png",
-      "open": true,
-      "registrationClosed": false,
+      "open": false,
+      "registrationClosed": true,
       "link": "https://forms.gle/svrn5qa7knqMSKQ67",
       "button": "Zapisz się",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "completed": true,
+      "newsId": "gra-jako-narzedzie-grywalizacja-2026-11-09"
     },
     {
       "id": "fake-news-2026-11-16",
@@ -1039,7 +1106,9 @@
       "registrationClosed": true,
       "link": "https://forms.gle/WWNtKnDuEWGLpBvQA",
       "button": "Zapisz się",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "completed": true,
+      "newsId": "informacja-pod-lupa-fake-news-2026-11-16"
     },
     {
       "id": "grywalizacja-2026-11-27",
@@ -1091,7 +1160,9 @@
       "registrationClosed": true,
       "link": "https://forms.gle/TvahbwB33tTdWEr1A",
       "button": "Zapisz się",
-      "calendarOnly": true
+      "calendarOnly": true,
+      "completed": true,
+      "newsId": "storytelling-ktory-zostaje-2026-11-17"
     }
   ]
 }
