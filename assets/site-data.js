@@ -63,11 +63,22 @@ window.portalSiteData = {
       "leadEn": "On 9 November, we returned to gamification and Game-Based Learning, asking what makes participants engage with a task and stay involved.",
       "body": "Podczas szkolenia przyglądaliśmy się temu, jak odpowiednio zaprojektowany cel, zasady, wyzwanie i informacja zwrotna mogą zmienić zwykłe zadanie w bardziej angażujące doświadczenie.\n\nRozmawialiśmy również o tym, że grywalizacja nie musi oznaczać rozbudowanych systemów punktów i rankingów. Często wystarczą proste mechanizmy, które porządkują działanie, uruchamiają ciekawość albo zachęcają do współpracy.\n\nWażnym elementem było rozróżnienie grywalizacji i Game-Based Learning. Pierwsze podejście wykorzystuje mechanizmy znane z gier, drugie opiera proces uczenia bezpośrednio na grze lub doświadczeniu podobnym do gry.\n\nNajważniejsze pozostaje jednak to, aby forma służyła celowi. Gra nie jest dodatkiem dla efektu. Dobrze użyta może pomóc uczestnikom wejść w temat, podejmować decyzje, testować rozwiązania i uczyć się poprzez działanie.\n\nDziękujemy uczestnikom za energię, pomysły i aktywny udział w listopadowym spotkaniu w ramach projektu „Edukacja bez granic”.",
       "bodyEn": "During the training, we looked at how goals, rules, challenges and feedback can turn an ordinary task into a more engaging experience. We also distinguished gamification from Game-Based Learning and discussed how game mechanisms can support learning when they serve a clear purpose. Thank you to all participants for your energy and ideas.",
-      "image": "grafiki/gamifikacja.jpg",
-      "imageAlt": "Grafika szkolenia z grywalizacji i Game-Based Learning",
-      "imageAltEn": "Gamification and Game-Based Learning training graphic",
+      "image": "grafiki/aktualnosci/2026-11-09-grywalizacja/grywalizacja-cwiczenie.webp",
+      "imageAlt": "Uczestniczki wykonują ćwiczenie podczas szkolenia z grywalizacji",
+      "imageAltEn": "Participants completing an exercise during a gamification training session",
       "showImageCaptions": false,
-      "gallery": []
+      "gallery": [
+        {
+          "src": "grafiki/aktualnosci/2026-11-09-grywalizacja/grywalizacja-bratnia-dusza.webp",
+          "alt": "Ćwiczenie grupowe podczas szkolenia z grywalizacji i Game-Based Learning",
+          "altEn": "Group exercise during a gamification and Game-Based Learning training session"
+        },
+        {
+          "src": "grafiki/aktualnosci/2026-11-09-grywalizacja/grywalizacja-game-based-learning.webp",
+          "alt": "Prezentacja dotycząca Game-Based Learning podczas szkolenia",
+          "altEn": "Game-Based Learning presentation during the training session"
+        }
+      ]
     },
     {
       "id": "dobra-historia-wystapienia-storytelling-2026-11-05",
@@ -1163,6 +1174,30 @@ window.portalSiteData = {
       "calendarOnly": true,
       "completed": true,
       "newsId": "storytelling-ktory-zostaje-2026-11-17"
+    },
+    {
+      "id": "media-literacy-kadra-kierownicza-2026-12-08",
+      "group": "new",
+      "source": "Projekt Edukacja bez granic",
+      "title": "Edukacja medialna, fake news i krytyczne myślenie",
+      "shortTitle": "Media Literacy",
+      "date": "2026-12-08",
+      "calendarColor": "#16877f",
+      "tone": "cyan",
+      "time": "09:00 - 14:00",
+      "audience": "Szkolenie dla kadry kierowniczej WUP Katowice",
+      "audienceTag": "WUP",
+      "description": [
+        "Szkolenie poświęcone świadomemu korzystaniu z informacji, rozpoznawaniu mechanizmów dezinformacji i ocenie wiarygodności źródeł.",
+        "Program obejmuje również rolę emocji i kontekstu w odbiorze treści oraz zasady krytycznego myślenia w środowisku informacyjnym."
+      ],
+      "color": "#16877f",
+      "image": "grafiki/fake-news.jpg",
+      "logo": "grafiki/logo-projektu-symbol-transparent.png",
+      "open": false,
+      "registrationClosed": true,
+      "button": "Zapisy zamknięte",
+      "calendarOnly": true
     }
   ]
 };
